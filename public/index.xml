@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ErrorPro</title>
+    <link>http://example.org/</link>
+    <description>Recent content on ErrorPro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>我是誰 </description>
+    </item>
+    
+    <item>
+      <title>算法筆記-基本/初階資料結構</title>
+      <link>http://example.org/posts/2021/algo/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2021/algo/</guid>
+      <description>基礎資料結構 我們程式想儲存東西有很多種方式，而資料結構就像一種容器，
+可以儲存或拿取需要的東西，每種資料結構都有不同的複雜度，
+如果用得好，效率就會高。
+以下都是最基本的資料結構
+1.Vector - 向量 in &amp;lt;vector&amp;gt; vector&amp;lt;int&amp;gt; v; 向量可當成陣列來用，應該說它就是更強的陣列，而且易維護。
+比起原本陣列，它可以自動擴大容量，
+能用的空間也比陣列還多。但要注意的是，如果使用operator[]存取了未配置的記憶體位置，
+會導致Segmentation Fault。
+以下為vector的功能： -- vector[n] 存取索引值為n的元素 -- vector.at(n) 存取索引值為n的元素(較安全) -- vector.begin() 回傳指向vector第一個元素的疊代器 -- vector.end() 回傳指向vector最後一個元素再下一個的疊代器 -- vector.front() 回傳vector[0] -- vector.back() 回傳vector最後一個元素的值 -- vector.size() 回傳目前vector儲存了多少元素 -- vector.resize(n) 修改vector大小 -- vector.capacity() 存取可容納最大個數 -- vector.empty() 回傳布林值表示vector是不是空的 -- vector.reserve(n) 配置更多記憶體以容納更多元素 -- vector.push_back(n) 把n放到vector最尾端 -- vector.pop_back() 把vector最尾端元素取出 -- vector.insert(it,n) 在疊代器it後插入元素n -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 -- vector.clear() 刪除所有元素 -- vector.swap(vector2) 交換兩個vector 功能是不是看起來超多？</description>
+    </item>
+    
+    <item>
+      <title>算法筆記-排序</title>
+      <link>http://example.org/posts/2021/algo-sorting/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2021/algo-sorting/</guid>
+      <description>排序 排序是將一串資料依優先度排列，通常是遞增、遞減、字典序排列，
+可以自訂順序，這裡直接使用快速排序法，後面分治會提到合併排序，
+快慢隨題目而變動。
+我們學校會學到最經典的氣泡排序法，其實是個很不好的排序法，
+它最差情況的時間複雜度會炸到$O(n^2)$。
+在C++，有函數 sort() 可以直接排序，
+以遞增排序為例，原理是先從資料群選一個基準點，
+然後從資料兩邊往中間搜，若右邊比基準點小且左邊比基準點大，就將左右邊互換，
+直到左右邊相遇，將相遇的點與基準點互換。
+複雜度是$O(nlogn)$。
+想體驗sort()的力量，我們用random_shuffle()這個函數來打亂區間。
+#include&amp;lt;bits/stdc++.h&amp;gt;using namespace std; signed main(){ vector&amp;lt;int&amp;gt; a={9,8,7,6,5,4,3,2,1}; for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; random_shuffle(a.begin(),a.end()); for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; sort(a.begin(),a.end()); for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; return 0; } sort()預設是遞增排列，如果想遞減排列，可以在第三個引數加上 less&amp;lt;型態&amp;gt;()，
+而遞增就是 greater&amp;lt;型態&amp;gt;()。
+想要自訂排列方式，只要寫一個bool函式，並在第三個引數加上函數名字即可：
+bool cmp(int i,int j){ return i &amp;gt; j; } .</description>
+    </item>
+    
+    <item>
+      <title>算法筆記-時間複雜度概述</title>
+      <link>http://example.org/posts/2021/algo-runtime/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2021/algo-runtime/</guid>
+      <description>時間複雜度在競程中是個非常重要且最基本的工具，
+係用於估算程式執行N次，大概需要花多久時間。
+我們在程式中做的任何事情可能都需要花費1單位時間，
+比如五則運算、條件判斷、變數存賦等。
+而我們通常會使用函式$O(Big-O)$ 來表示程式的複雜度。
+對於$O()$，有以下定義：
+$$ Def:\
+\qquad	If\ f(x) = O(g(x)),\ ∃M,x_0 &amp;gt; 0,\ such \ that \ ∀x&amp;gt;=x_0,then \ |f(x)| &amp;lt;= M|g(x)| $$
+為什麼我們需要估時間複雜度？
+因為我們在寫程式追求的是速度！當你的演算法太慢(時間複雜度太大)時，
+就算結果是對的，但你會在Online Judge上或APCS得到一個TLE(Time Limit Exceeded)，
+即若將測資丟到你的程式，會超出該題目所規定的執行時間。
+要如何估自己的程式會跑幾秒？
+通常，Judge的執行速度大約是1e8筆/秒，因此只要將題目的範圍限制代入所估複雜度，
+然後除以1e8，就能大概知道自己程式會不會TLE了。
+常見的複雜度有： $1,n,n^2,n^3,nlogn,2^n$。 而log通常以2為底但我們不太會去明指以誰為底。
+以下是複雜度計算的原則：
+&amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
+&amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
+即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
+&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description>
+    </item>
+    
+    <item>
+      <title>算法筆記-進階資料結構-線段樹</title>
+      <link>http://example.org/posts/2021/algo-segtree/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2021/algo-segtree/</guid>
+      <description>回到算法筆記-進階資料結構
+線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，
+左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
+通常，線段樹會開4倍大
+int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 	build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); 	build(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) int query(int ql,int qr,int l,int r,int index){ if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description>
+    </item>
+    
+    <item>
+      <title>算法筆記-關於優化</title>
+      <link>http://example.org/posts/2021/algo-io/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2021/algo-io/</guid>
+      <description>編譯器優化 我們的程式變成執行檔時需要經過一連串的轉譯與運算，
+如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。
+一般的Judge編譯器模式都是O2，是個比較安全的運算方式。
+但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。
+#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) //以較不安全的運算來編譯程式 #pragma loop_opt(on) //迴圈優化 #pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;) //更改最大堆疊數 以上是我常用的編譯器優化指令，
+請注意不是所有OJ都支援pragma優化。
+I/O優化 當我們比較cout、cin與printf、scanf時，會發現後者比前者快非常多。
+這是因為每次在輸入輸出前，程式會將資料放進一個緩衝區(內存)，然後再從內存裡拿出。
+我們應該減少拿取的動作，因為這非常耗時。
+如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，
+否則它可能要等到程式結束後才輸出。
+cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，
+這就讓拿取的動作暴增了，解決方法是加上 cin.tie(0);
+讓內存強制釋放掉。
+C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題
+，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了
+加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，
+再混用的話它們會生氣
+C++的換行可以是endl或&#39;\n&#39;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; &#39;\n&#39; &amp;lt;&amp;lt; flush
+也就是它順便把內存清空了，做了多餘的動作。
+之後記得要換行的話就用&#39;\n&amp;rsquo;別再用endl了。 或放個 #define endl &#39;\n&#39;
+ </description>
+    </item>
+    
+  </channel>
+</rss>

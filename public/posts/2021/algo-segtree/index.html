@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "算法筆記-進階資料結構-線段樹",
+  
+  "datePublished": "2021-09-11T00:00:00Z",
+  "dateModified": "2021-09-11T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "Firstname Lastname",
+    
+    "image": "https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "http:\/\/example.org\/posts\/2021\/algo-segtree\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ErrorPro",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3"
+    }
+    
+  },
+  "description": "回到算法筆記-進階資料結構\n線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。\n成功實現Sparse Table做不到的事。\n每個節點可以存一種區間的數據(比如區間和)，\n根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，\n左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。\n通常，線段樹會開4倍大\nint T[4*N],a[N]; // int T[N\u0026lt;\u0026lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併\nvoid build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 \tbuild(index*2,l,mid); // build(index\u0026lt;\u0026lt;1,l,mid); \tbuild(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) int query(int ql,int qr,int l,int r,int index){ if(ql\u0026lt;=l \u0026amp;\u0026amp; qr\u0026gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql\u0026gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr\u0026lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos\u0026lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Firstname Lastname">
+<meta name="keywords" content="">
+<meta name="description" content="回到算法筆記-進階資料結構
+線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2&#43;1，
+左邊紀錄[l,(l&#43;r)/2)，右邊紀錄[(l&#43;r)/2&#43;1,r]。
+通常，線段樹會開4倍大
+int T[4*N],a[N]; // int T[N&lt;&lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l&#43;(r-l)/2; // 避免 (l&#43;r)/2 溢位 	build(index*2,l,mid); // build(index&lt;&lt;1,l,mid); 	build(index*2&#43;1,mid&#43;1,r); T[index] = T[index*2] &#43; T[index*2&#43;1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) int query(int ql,int qr,int l,int r,int index){ if(ql&lt;=l &amp;&amp; qr&gt;=r) return T[index]; int mid = l&#43;(r-l)/2; int rt=0; if(ql&gt;mid) rt&#43;=query(ql,qr,mid&#43;1,r,index*2&#43;1); if(qr&lt;=mid) rt&#43;=query(ql,qr,l,mid,index*2); return rt; } 單點修改 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l&#43;(r-l)/2; if(pos&lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid&#43;1,r,pos,index*2&#43;1,val); T[index] = T[index*2]&#43;T[index*2&#43;1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。">
+
+
+<meta property="og:description" content="回到算法筆記-進階資料結構
+線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2&#43;1，
+左邊紀錄[l,(l&#43;r)/2)，右邊紀錄[(l&#43;r)/2&#43;1,r]。
+通常，線段樹會開4倍大
+int T[4*N],a[N]; // int T[N&lt;&lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l&#43;(r-l)/2; // 避免 (l&#43;r)/2 溢位 	build(index*2,l,mid); // build(index&lt;&lt;1,l,mid); 	build(index*2&#43;1,mid&#43;1,r); T[index] = T[index*2] &#43; T[index*2&#43;1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) int query(int ql,int qr,int l,int r,int index){ if(ql&lt;=l &amp;&amp; qr&gt;=r) return T[index]; int mid = l&#43;(r-l)/2; int rt=0; if(ql&gt;mid) rt&#43;=query(ql,qr,mid&#43;1,r,index*2&#43;1); if(qr&lt;=mid) rt&#43;=query(ql,qr,l,mid,index*2); return rt; } 單點修改 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l&#43;(r-l)/2; if(pos&lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid&#43;1,r,pos,index*2&#43;1,val); T[index] = T[index*2]&#43;T[index*2&#43;1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法筆記-進階資料結構-線段樹">
+<meta name="twitter:title" content="算法筆記-進階資料結構-線段樹">
+<meta property="og:url" content="http://example.org/posts/2021/algo-segtree/">
+<meta property="twitter:url" content="http://example.org/posts/2021/algo-segtree/">
+<meta property="og:site_name" content="ErrorPro">
+<meta property="og:description" content="回到算法筆記-進階資料結構
+線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2&#43;1，
+左邊紀錄[l,(l&#43;r)/2)，右邊紀錄[(l&#43;r)/2&#43;1,r]。
+通常，線段樹會開4倍大
+int T[4*N],a[N]; // int T[N&lt;&lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l&#43;(r-l)/2; // 避免 (l&#43;r)/2 溢位 	build(index*2,l,mid); // build(index&lt;&lt;1,l,mid); 	build(index*2&#43;1,mid&#43;1,r); T[index] = T[index*2] &#43; T[index*2&#43;1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) int query(int ql,int qr,int l,int r,int index){ if(ql&lt;=l &amp;&amp; qr&gt;=r) return T[index]; int mid = l&#43;(r-l)/2; int rt=0; if(ql&gt;mid) rt&#43;=query(ql,qr,mid&#43;1,r,index*2&#43;1); if(qr&lt;=mid) rt&#43;=query(ql,qr,l,mid,index*2); return rt; } 單點修改 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l&#43;(r-l)/2; if(pos&lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid&#43;1,r,pos,index*2&#43;1,val); T[index] = T[index*2]&#43;T[index*2&#43;1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。">
+<meta name="twitter:description" content="回到算法筆記-進階資料結構
+線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2&#43;1，
+左邊紀錄[l,(l&#43;r)/2)，右邊紀錄[(l&#43;r)/2&#43;1,r]。
+通常，線段樹會開4倍大
+int T[4*N],a[N]; // int T[N&lt;&lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l&#43;(r-l)/2; // 避免 (l&#43;r)/2 溢位 	build(index*2,l,mid); // build(index&lt;&lt;1,l,mid); 	build(index*2&#43;1,mid&#43;1,r); T[index] = T[index*2] &#43; T[index*2&#43;1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) int query(int ql,int qr,int l,int r,int index){ if(ql&lt;=l &amp;&amp; qr&gt;=r) return T[index]; int mid = l&#43;(r-l)/2; int rt=0; if(ql&gt;mid) rt&#43;=query(ql,qr,mid&#43;1,r,index*2&#43;1); if(qr&lt;=mid) rt&#43;=query(ql,qr,l,mid,index*2); return rt; } 單點修改 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l&#43;(r-l)/2; if(pos&lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid&#43;1,r,pos,index*2&#43;1,val); T[index] = T[index*2]&#43;T[index*2&#43;1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。">
+<meta property="og:locale" content="en">
+
+  
+    <meta property="article:published_time" content="2021-09-11T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2021-09-11T00:00:00">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3?s=640">
+
+
+
+
+
+
+    <title>算法筆記-進階資料結構-線段樹</title>
+
+    <link rel="icon" href="http://example.org/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="http://example.org/posts/2021/algo-segtree/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="http://example.org/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="http://example.org/" aria-label="">ErrorPro</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="http://example.org/#about" aria-label="">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3?s=90" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="http://example.org/#about" aria-label="">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3?s=110" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
+        
+          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://example.org/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://example.org/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://example.org/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://example.org/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://example.org/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/ja-errorpro/" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://example.org/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      算法筆記-進階資料結構-線段樹
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-09-11T00:00:00Z">
+        
+   11, 2021
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p><a href="../algo#%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B">回到算法筆記-進階資料結構</a></p>
+<h1 id="線段樹">線段樹</h1>
+<p>Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 
+適合用於單點修改、區間修改。<br>
+成功實現Sparse Table做不到的事。</p>
+<p>每個節點可以存一種區間的數據(比如區間和)，<br>
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，<br>
+左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。</p>
+<p>通常，線段樹會開4倍大</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> T[<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>N],a[N]; <span style="color:#75715e">// int T[N&lt;&lt;2];
+</span></code></pre></div><h3 id="建立線段樹若lr此節點即al">建立線段樹，若l==r，此節點即a[l]</h3>
+<p>子樹建完後就把資料合併</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">build</span>(<span style="color:#66d9ef">int</span> l,<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> index){
+	<span style="color:#66d9ef">if</span>(l<span style="color:#f92672">==</span>r){
+		T[l] <span style="color:#f92672">=</span> a[l];
+	}
+	<span style="color:#66d9ef">else</span>{
+		<span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l<span style="color:#f92672">+</span>(r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>; <span style="color:#75715e">// 避免 (l+r)/2 溢位 
+</span><span style="color:#75715e"></span>		build(index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,l,mid); <span style="color:#75715e">// build(index&lt;&lt;1,l,mid);
+</span><span style="color:#75715e"></span>		build(index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r);
+		T[index] <span style="color:#f92672">=</span> T[index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> T[index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] ;
+	}
+}
+</code></pre></div><h3 id="詢問區間qlqr要查的區間-lr此節點儲存的左右界">詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">query</span>(<span style="color:#66d9ef">int</span> ql,<span style="color:#66d9ef">int</span> qr,<span style="color:#66d9ef">int</span> l,<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> index){
+	<span style="color:#66d9ef">if</span>(ql<span style="color:#f92672">&lt;=</span>l <span style="color:#f92672">&amp;&amp;</span> qr<span style="color:#f92672">&gt;=</span>r) <span style="color:#66d9ef">return</span> T[index];
+	<span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l<span style="color:#f92672">+</span>(r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+	<span style="color:#66d9ef">int</span> rt<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">if</span>(ql<span style="color:#f92672">&gt;</span>mid) rt<span style="color:#f92672">+=</span>query(ql,qr,mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r,index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+	<span style="color:#66d9ef">if</span>(qr<span style="color:#f92672">&lt;=</span>mid) rt<span style="color:#f92672">+=</span>query(ql,qr,l,mid,index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>);
+	<span style="color:#66d9ef">return</span> rt;
+}
+</code></pre></div><h3 id="單點修改">單點修改</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">modify</span>(<span style="color:#66d9ef">int</span> l,<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> pos,<span style="color:#66d9ef">int</span> index,<span style="color:#66d9ef">int</span> val){
+	<span style="color:#66d9ef">if</span>(l<span style="color:#f92672">==</span>r){
+		T[index] <span style="color:#f92672">=</span> val;<span style="color:#66d9ef">return</span>;
+	}
+	<span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l<span style="color:#f92672">+</span>(r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+	<span style="color:#66d9ef">if</span>(pos<span style="color:#f92672">&lt;=</span>mid) modify(l,mid,pos,index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,val);
+	<span style="color:#66d9ef">else</span> modify(mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r,pos,index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,val);
+	T[index] <span style="color:#f92672">=</span> T[index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>]<span style="color:#f92672">+</span>T[index<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>];
+}
+</code></pre></div><h3 id="懶人標記">懶人標記</h3>
+<p>如果想在[l,r]中的所有元素加值怎麼辦？
+不可能一個一個呼叫modify吧。</p>
+<p>我們可以先在要加的區間內貼標籤，最後要查詢時再加上去就好</p>
+<ul>
+<li>這裡用了更多變數，建議改用結構體來實作可以減少程式碼</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">int</span> l,<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> idx){
+	Tag[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>idx] <span style="color:#f92672">+=</span> Tag[idx]; <span style="color:#75715e">// 左子節點貼標籤
+</span><span style="color:#75715e"></span>	Tag[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>idx<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+=</span> Tag[idx]; <span style="color:#75715e">// 右子節點貼標籤
+</span><span style="color:#75715e"></span>	T[idx] <span style="color:#f92672">=</span> T[idx] <span style="color:#f92672">+</span> Tag[idx] <span style="color:#f92672">*</span> (r<span style="color:#f92672">-</span>l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">// 最後的答案
+</span><span style="color:#75715e"></span>	Tag[idx] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">modify</span>(<span style="color:#66d9ef">int</span> ql,<span style="color:#66d9ef">int</span> qr,<span style="color:#66d9ef">int</span> l,<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> index,<span style="color:#66d9ef">int</span> val){
+	<span style="color:#66d9ef">if</span>(ql<span style="color:#f92672">&lt;=</span>l<span style="color:#f92672">&amp;&amp;</span>r<span style="color:#f92672">&gt;=</span>qr){
+		Tag[index] <span style="color:#f92672">+=</span> val; <span style="color:#75715e">// 在這個節點貼上標籤
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span>;
+	}
+	<span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l<span style="color:#f92672">+</span>(r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+	<span style="color:#66d9ef">if</span>(ql<span style="color:#f92672">&gt;</span>mid) modify(ql,qr,mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,val);
+	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(qr<span style="color:#f92672">&lt;=</span>mid) modify(ql,qr,l,mid,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,val);
+	<span style="color:#66d9ef">else</span>{
+		modify(ql,qr,l,mid,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>);
+		modify(ql,qr,mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+	}
+	T[idx] <span style="color:#f92672">=</span> T[idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> Tag[idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">*</span> (mid<span style="color:#f92672">-</span>l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> T[idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> Tag[idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> (r<span style="color:#f92672">-</span>mid);
+}
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">query</span>(<span style="color:#66d9ef">int</span> ql,<span style="color:#66d9ef">int</span> qr,<span style="color:#66d9ef">int</span> l,<span style="color:#66d9ef">int</span> r,<span style="color:#66d9ef">int</span> idx){
+	<span style="color:#66d9ef">if</span>(ql<span style="color:#f92672">&lt;=</span>l<span style="color:#f92672">&amp;&amp;</span>r<span style="color:#f92672">&lt;=</span>qr) <span style="color:#66d9ef">return</span> T[idx] <span style="color:#f92672">+</span> Tag[idx]<span style="color:#f92672">*</span>(r<span style="color:#f92672">-</span>l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+	push(l,r,idx);
+	<span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l<span style="color:#f92672">+</span>(r<span style="color:#f92672">-</span>l)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+	
+	<span style="color:#66d9ef">if</span>(ql<span style="color:#f92672">&gt;</span>mid) <span style="color:#66d9ef">return</span> query(ql,qr,mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(qr<span style="color:#f92672">&lt;=</span>mid) <span style="color:#66d9ef">return</span> query(ql,qr,l,mid,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>);
+	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> query(ql,qr,l,mid,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> query(ql,qr,mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,r,idx<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><h3 id="練習">練習：</h3>
+<pre><code>ZeroJudge d539
+ZeroJudge d668
+ZeroJudge d799
+</code></pre>
+
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://example.org/posts/2021/algo-runtime/" data-tooltip="算法筆記-時間複雜度概述" aria-label=": 算法筆記-時間複雜度概述">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml"></span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://example.org/posts/2021/algo-io/" data-tooltip="算法筆記-關於優化" aria-label=": 算法筆記-關於優化">
+          
+              <span class="hide-xs hide-sm text-small icon-mr"></span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.org/posts/2021/algo-segtree/" title="" aria-label="">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://example.org/posts/2021/algo-segtree/" title="" aria-label="">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=http://example.org/posts/2021/algo-segtree/" title="" aria-label="">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'http:\/\/example.org\/posts\/2021\/algo-segtree\/';
+        
+          this.page.identifier = '\/posts\/2021\/algo-segtree\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Firstname Lastname. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://example.org/posts/2021/algo-runtime/" data-tooltip="算法筆記-時間複雜度概述" aria-label=": 算法筆記-時間複雜度概述">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml"></span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://example.org/posts/2021/algo-io/" data-tooltip="算法筆記-關於優化" aria-label=": 算法筆記-關於優化">
+          
+              <span class="hide-xs hide-sm text-small icon-mr"></span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.org/posts/2021/algo-segtree/" title="" aria-label="">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://example.org/posts/2021/algo-segtree/" title="" aria-label="">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=http://example.org/posts/2021/algo-segtree/" title="" aria-label="">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.org%2Fposts%2F2021%2Falgo-segtree%2F" aria-label="">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span></span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3A%2F%2Fexample.org%2Fposts%2F2021%2Falgo-segtree%2F" aria-label="">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span></span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fexample.org%2Fposts%2F2021%2Falgo-segtree%2F" aria-label="">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span></span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/db22e646ed51998773bcd7ab606ba6e3?s=110" alt="" />
+    
+    <h4 id="about-card-name">Firstname Lastname</h4>
+    
+      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('http://example.org/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="http://example.org/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
