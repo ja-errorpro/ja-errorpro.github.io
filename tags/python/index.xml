@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on ErrorPro(黃乙家)</title><link>http://example.org/tags/python/</link><description>Recent content in python on ErrorPro(黃乙家)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python遊戲設計</title><link>http://example.org/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate><guid>http://example.org/posts/2021/pythongame/</guid><description>FOR Python遊戲設計 檔案庫: Here
+Python程式列表(全自寫): LIST
+Cocos2d: Docs
+第一堂: IDE: pycharm CE, Module: cocos2d 彭彭-Python程式設計入門
+Colab
+CBE30338
+記得寫程式可放個小抄在旁邊&amp;hellip;
+有問題請點這個
+作業: 遊玩CodeCombat
+第二堂 安裝Pycharm : Pycharm
+Community版為開源,免費 / Professional為完整版(30天免費試用)
+需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: ($ apt update &amp;amp;&amp;amp; apt install python3)
+安裝方式: Here
+設定: here
+安裝Cocos2d: Files&amp;gt;Setting&amp;gt;Project: Inter..&amp;gt;(+)&amp;gt;搜尋cocos2d&amp;gt;安裝
+學程式的技巧: 先抄再讀 不懂可Google
+Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
+命令模式: 為預設模式,在任何模式中按下Esc即可到此模式,可按下某些鍵來切換模式
+插入模式: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字
+底線命令模式: 切換方式:按下:,可輸入指令操作內容,
+離開: :q
+強制離開: :q!
+存檔不離開: :w</description></item></channel></rss>
