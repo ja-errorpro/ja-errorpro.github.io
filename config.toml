@@ -86,10 +86,10 @@ weight = 5
 
     [[params.social]]
     name = "facebook"
-    link = "test"
+    link = "https://www.facebook.com/errorpro05"
     [[params.social]]
-    name = "github"
-    link = "test"
+    name = "ice-cream"
+    link = "https://shorturl.at/mzCNS"
     [[params.social]]
     name = "email"
     link = "u810025@gmail.com"  # no need for "mailto:" in the head
