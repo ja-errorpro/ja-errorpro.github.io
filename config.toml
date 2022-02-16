@@ -1,4 +1,4 @@
-baseURL = 'https://blog.ja-errorpro.cf/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'ErrorPro(黃乙家)'
 theme = "cactus"
