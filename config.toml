@@ -53,7 +53,7 @@ weight = 5
 
 [params]
 
-    colortheme = "white" # dark, light, white, or classic
+    colortheme = "dark" # dark, light, white, or classic
 	googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
   
     # Home page settings
