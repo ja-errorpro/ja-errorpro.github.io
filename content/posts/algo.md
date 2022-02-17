@@ -42,9 +42,7 @@ vector<int> v;
 -- vector.clear() 刪除所有元素  
 -- vector.swap(vector2) 交換兩個vector  
 ```
-功能是不是看起來超多？  
-不必慌張，常用的真的沒幾個，  
-而且多用很快就記起來了，以下是一個使用vector的範例：  
+以下是一個使用vector的範例：  
 
 ```cpp
 #include<bits/stdc++.h>
@@ -85,7 +83,7 @@ signed main(){
 
 ## 2.Pair - 值對 in \<utility>
 
-就是把兩個變數綁成一個變數的結構。  
+把兩個變數綁成一個變數的結構。  
 而且不一定要一樣的型態才能綁。  
 可以使用make_pair(x,y) 來綁變數。  
 ```cpp
@@ -183,9 +181,9 @@ priority_queue<T,vector<T>,cmp> pq4;
 ```
 ## 7.Set - 集合 in \<set>
 
-有自動排序的功能，是一棵紅黑樹，複雜度為O(logN)。
+有自動排序的功能，是一棵紅黑樹，插入元素複雜度為O(logN)。
 但沒有operator[]跟.at()能使用，必須用疊代器存取元素。  
-而且元素不能重複，也不能修改。
+而且元素不能重複(會自動合併)，也不能修改。
 ```
 以下為set的成員函式：  
 -- set.insert(n) 新增n到set
@@ -211,13 +209,13 @@ priority_queue<T,vector<T>,cmp> pq4;
 
 其他類似資料結構：  
 -- multiset 可儲存重複元素。  
--- unordered_set hash結構，沒有排序功能但複雜度低到O(1)，同時也消耗更多記憶體。
+-- unordered_set hash結構，沒有排序功能但複雜度可到O(1)，同時也消耗更多記憶體。
 
 ## 8.Map - 映射 in \<map>
 
 一樣可以自動排序，一個鍵值對應一個值，  
 而鍵值不可重複。    
-它是一棵紅黑樹，複雜度O(logN)。
+它是一棵紅黑樹，插入元素複雜度O(logN)。
 
 ```cpp
 	map<string,int> mp; // 一個string映射到int
@@ -256,8 +254,8 @@ void Union(int a,int b){
 
 ## 10.BitSet - 位元集  
 
-你可以把它當成一個bool array，也可以直接用它把數值轉成二進位形式，  
-也就是說它只能由0/1組成。  
+可以把它當成一個bool array，也可以直接用它把數值轉成二進位形式，  
+它只能由0/1組成。  
 
 宣告的方式是 `bitset<N> bs` ，表示N位數的位元集，  
 初始化可以 `bitset<N> bs(X)`，表示將X轉成N位數的二進位型態。  
