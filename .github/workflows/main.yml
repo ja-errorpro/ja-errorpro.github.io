@@ -22,7 +22,11 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
+      
+      - name: Setdomain
+        run: echo blog.ja-errorpro.cf > ./public/CNAME
+      
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
