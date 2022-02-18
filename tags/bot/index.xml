@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bot on ErrorPro</title><link>/tags/bot/</link><description>Recent content in Bot on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 11 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/bot/index.xml" rel="self" type="application/rss+xml"/><item><title>Farmbot歷程</title><link>/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>/posts/2021/farmbot/</guid><description>FBTUG共筆資料
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bot on ErrorPro</title><link>/tags/bot/</link><description>Recent content in Bot on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 11 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/bot/index.xml" rel="self" type="application/rss+xml"/><item><title>Farmbot歷程</title><link>/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>/posts/2021/farmbot/</guid><description>Farmbot
+(本頁面在舊版網站發布，會有不少顯示問題)
+FBTUG共筆資料
 什麼是Farmbot? 一個機器人開放式系統，可通過土地種植，澆水，土壤測試和除草為所有需要耕種小土地跟想種糧食的人提供幫助
 使用Raspberry Pi(樹莓派)，Arduino以及其他優良組件
 1.碳足跡 製造 目前看重環保議題,Farmbot使用最普遍的材料:
-材料 用途 重量(kg) kg CO2/物料 kg CO2(kg) 鋁 擠壓板 9.5 8.24 78.3 不鏽鋼 硬件，軸承，驅動軸，絲槓 1.4 6.15 8.6 塑料 拖鏈，3D列印[CAD]，輪子，電子設備，管材，電路板 2.8 2.53 7.1 銅 電，佈線，電動機繞組 0.3 2.60 0.8 橡膠 皮帶，電線，墊片 0.2 3.18 0.6 合計 95.4 每生產Farmbot排放的理論量約 95.4 kg，但實際上較接近 150 kg</description></item></channel></rss>
+材料 用途 重量(kg) kg CO2/物料 kg CO2(kg) 鋁 擠壓板 9.5 8.24 78.3 不鏽鋼 硬件，軸承，驅動軸，絲槓 1.4 6.15 8.6 塑料 拖鏈，3D列印[CAD]，輪子，電子設備，管材，電路板 2.8 2.53 7.1 銅 電，佈線，電動機繞組 0.3 2.60 0.8 橡膠 皮帶，電線，墊片 0.2 3.18 0.6 合計 95.4 每生產Farmbot排放的理論量約 95.</description></item></channel></rss>
