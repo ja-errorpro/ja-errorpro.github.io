@@ -2,4 +2,4 @@
 Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~</description></item><item><title>About</title><link>/about/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>/about/</guid><description>我是誰 黃乙家
 我站在雲林，正心高中生
 很愛亂玩資訊(黑)科技
-IG: cannot.load_connection.refused</description></item></channel></rss>
+IG: cannot.load_connection.refused</description></item><item><title>留言區</title><link>/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/comment/</guid><description> initComments({ node: document.getElementById("comment-section"), defaultHomeserverUrl: "https://matrix.cactus.chat:8448", serverName: "cactus.chat", siteName: "errorpro", commentSectionId: "website" })</description></item></channel></rss>

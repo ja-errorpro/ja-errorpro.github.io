@@ -175,7 +175,7 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 底線命令模式: 切換方式:按下:,可輸入指令操作內容,
 離開: :q
 強制離開: :q!
-存檔不離開: :w</description></item><item><title>資源</title><link>/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/resources/</guid><description>解題系統：
+存檔不離開: :w</description></item><item><title>留言區</title><link>/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/comment/</guid><description> initComments({ node: document.getElementById("comment-section"), defaultHomeserverUrl: "https://matrix.cactus.chat:8448", serverName: "cactus.chat", siteName: "errorpro", commentSectionId: "website" })</description></item><item><title>資源</title><link>/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/resources/</guid><description>解題系統：
 TIOJ
 CSES
 ZeroJudge
