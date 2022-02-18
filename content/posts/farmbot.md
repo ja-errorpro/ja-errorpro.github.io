@@ -4,13 +4,11 @@ date: 2021-02-11
 tags:
   - Bot
 ---
-<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
 
 
+{{< align center "Farmbot" >}}
 
-
-
-<center><h1> Farmbot </h1></center>
+(本頁面在舊版網站發布，會有不少顯示問題)
 
 [FBTUG共筆資料](https://paper.dropbox.com/doc/FarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA)
 
@@ -64,13 +62,13 @@ tags:
 
 > ![Data](https://cdn.shopify.com/s/files/1/2040/0289/files/FoodkCal.png?16362500919546419487)
 
-> ---
+---
 
-<center> 
-<h2>Farmbot種植的蔬菜比商店購買的少25-30%</h2>
-</center>
 
-> ---
+{{< align center "Farmbot種植的蔬菜比商店購買的少25-30%" >}}
+
+
+---
 
 > ### 2.客製化
 
@@ -106,46 +104,46 @@ tags:
 
 >> 由24V真空泵提供動力，將種子精確定位在地面上，精度為毫米
 
-![seeder](https://cdn.shopify.com/s/files/1/2040/0289/files/Seeder_1.jpg?12723977322247612640){ width=100% height="300px" }
-![seeder2](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/FarmBot_Genesis_Seed_Injector_Assembly.png/270px-FarmBot_Genesis_Seed_Injector_Assembly.png){: width=device-width height="300px"}
+![seeder](https://cdn.shopify.com/s/files/1/2040/0289/files/Seeder_1.jpg?12723977322247612640)
+![seeder2](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/FarmBot_Genesis_Seed_Injector_Assembly.png/270px-FarmBot_Genesis_Seed_Injector_Assembly.png)
 
 > #### 噴水嘴 [[CAD]](https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3f379dda94032bbfb6429694) :
 
 >> 結合電磁閥，用溫和的淋浴器為植物精確澆水，允許使用3D列印下半部來定制噴霧樣式
 
-![water](https://cdn.shopify.com/s/files/1/2040/0289/files/Water_1.jpg?12723977322247612640){: width=device-width height="300px"}
-![water2](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/FarmBot_Genesis_Watering_Tool_Assembly.png/270px-FarmBot_Genesis_Watering_Tool_Assembly.png){: width=device-width height="300px"}
+![water](https://cdn.shopify.com/s/files/1/2040/0289/files/Water_1.jpg?12723977322247612640)
+![water2](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/FarmBot_Genesis_Watering_Tool_Assembly.png/270px-FarmBot_Genesis_Watering_Tool_Assembly.png)
 
 > #### 除草機 [[CAD]](https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/d8f735e3055725dc0155a480) :
 
 >> 使用自定義的除草工具將雜草連根拔除，避免它們成為問題
 
-![weeder](https://cdn.shopify.com/s/files/1/2040/0289/files/Weeder_1.jpg?12723977322247612640){: width=device-width height="300px"}
-![weeder1](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FarmBot_Genesis_Weed_Suppressor_Assembly.png/270px-FarmBot_Genesis_Weed_Suppressor_Assembly.png){: width=device-width height="300px"}
+![weeder](https://cdn.shopify.com/s/files/1/2040/0289/files/Weeder_1.jpg?12723977322247612640)
+![weeder1](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/FarmBot_Genesis_Weed_Suppressor_Assembly.png/270px-FarmBot_Genesis_Weed_Suppressor_Assembly.png)
 
 > #### 土壤傳感器 [[CAD]](https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/6ca8f07ff28a92ec08c70e71) :
 
 >> 透過測量土壤濕度來更有效地為農作物澆水，同時可測量土壤溫度幫助檢測發芽失敗的風險
 
-![sensor](https://cdn.shopify.com/s/files/1/2040/0289/files/Soil-Sensor_1.jpg?12723977322247612640){: width=device-width height="300px"}
-![sensor2](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/FarmBot_Genesis_Soil_Sensor_Assembly.png/270px-FarmBot_Genesis_Soil_Sensor_Assembly.png){: width=device-width height="300px"}
+![sensor](https://cdn.shopify.com/s/files/1/2040/0289/files/Soil-Sensor_1.jpg?12723977322247612640)
+![sensor2](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/FarmBot_Genesis_Soil_Sensor_Assembly.png/270px-FarmBot_Genesis_Soil_Sensor_Assembly.png)
 
 > #### 種子容器 [[CAD(種子分類盤)]](https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/ba2cf5c1c9299c7597d773d1) [[CAD(種子槽)]](https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/752fa7f2bba8b0042c906b5d) [[CAD(容器]](https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/15a8803a30f567a3061ece42) :
 
 >> 可容納大量一種種子，托盤則適合種植許多不同的農作物或嚴格控制每個孔的種子數
 
-![seeds](https://cdn.shopify.com/s/files/1/2040/0289/files/Seed-Bin_1.jpg?12723977322247612640){: width=device-width height="300px"}
+![seeds](https://cdn.shopify.com/s/files/1/2040/0289/files/Seed-Bin_1.jpg?12723977322247612640)
 
 
 > #### 相機 :
 
 >> 防水相機為植物和土壤拍照，跟蹤植物生長，檢測雜草，蟲害和疾病跟果實成熟度
 
-![camera](https://cdn.shopify.com/s/files/1/2040/0289/files/Camera-2.jpg?12723977322247612640){: width=device-width height="300px"}
+![camera](https://cdn.shopify.com/s/files/1/2040/0289/files/Camera-2.jpg?12723977322247612640)
 
 > #### 樹莓派簡介 :
 
-> <img src="./images/raspberrypi4.jpg" />
+![rb](/images/raspberrypi4.jpg)
 
 > ### 5.探索領域
 
@@ -179,7 +177,7 @@ tags:
 
 >> 可直接在網頁上控制和配置Farmbot，能夠實時手動控制跟記錄，用於創建自定義例程的序列生成器及拖放式農場設計器，因此可圖形化設計自己的田地
 
-> ![appdemo](./assets/images/farmbot_appdemo.png){: width=device-width height=device-height}
+> ![appdemo](/images/farmbot_appdemo.png)
 
 > #### 作業系統:
 
@@ -187,7 +185,7 @@ tags:
 
 >> 透過USB傳輸或序列連接發送指令，在第一次使用時，可透過configurator應用程式連接家中Wifi及Web應用程序
 
-> ![raspberrypi](./assets/images/raspberrypi4.jpg){: width=device-width height="300px"}
+> ![raspberrypi](/images/raspberrypi4.jpg)
 
 > #### Arduino:
 
@@ -248,9 +246,9 @@ tags:
 
 > ---
 
- <center> 
- <h2> 投資回報期不到兩年 </h2>
- </center>
+
+{{< align center "投資回報期不到兩年" >}} 
+
 
 > ---
 
@@ -258,95 +256,9 @@ tags:
 
 
 
-## [開發文件](https://developer.farm.bot/v12/Documentation/farmbot-software-development)
-## [操作文件](https://software.farm.bot/v12/FarmBot-Software/intro)
-## [Github](https://github.com/FarmBot)
+## [開發文件連結](https://developer.farm.bot/v12/Documentation/farmbot-software-development)
+## [操作文件連結](https://software.farm.bot/v12/FarmBot-Software/intro)
+## [Github連結](https://github.com/FarmBot)
 
 
-<style>
 
-.back-to-top {
-
-display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
-
-position: fixed; /* 位置是固定的 */
-
-bottom: 20px; /* 顯示在頁面底部 */
-
-right: 30px; /* 顯示在頁面的右邊 */
-
-z-index: 99; /* 確保不被其他功能覆蓋 */
-
-border: 1px solid #5cb85c; /* 顯示邊框 */
-
-outline: none; /* 不顯示外框 */
-
-background-color: #fff; /* 設置背景背景顏色 */
-
-color: #5cb85c; /* 設置文本顏色 */
-
-cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
-
-padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
-
-border-radius: 10px; /* 增加圓角 */
-
-}
-
-.back-to-top:hover {
-
-background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
-
-color: #fff;
-
-}
-
-</style>
-
-<button class="js-back-to-top back-to-top" title="回到頭部">&#65085;</button>
-
-<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
-
-<script>
-
-$(function () {
-
-var $win = $(window);
-
-var $backToTop = $('.js-back-to-top');
-
-// 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
-
-$win.scroll(function () {
-
-if ($win.scrollTop() > 100) {
-
-$backToTop.show();
-
-} else {
-
-$backToTop.hide();
-
-}
-
-});
-
-// 當用戶點擊按鈕時，通過動畫效果返回頭部
-
-$backToTop.click(function () {
-
-$('html, body').animate({scrollTop: 0}, 200);
-
-});
-
-});
-
-</script>
-<script type="text/javascript">
-	$(document).ready(function() {
-	    //所有連結會在新分頁開啟
-		$('a[href^="http"]').each(function() {
-			$(this).attr('target', '_blank');
-		});
-	});
-</script>
