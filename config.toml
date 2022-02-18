@@ -31,9 +31,14 @@ url = "/tags"
 weight = 4
 
 [[menu.main]]
+name = "留言區"
+url = "/comment"
+weight = 5
+
+[[menu.main]]
 name = "關於本人"
 url = "/about"
-weight = 5
+weight = 6
 
 [markup]
   [markup.tableOfContents]
@@ -77,7 +82,7 @@ weight = 5
     css = ["css/highlight.css", "css/style-dark.css", "css/search.css"]
   
     [params.comments]
-      enabled = true # default
+      enabled = false # default
       engine = "cactus_comments" # more supported engines will be added.
       [params.comments.cactuscomments]
         siteName = "errorpro" # see https://cactus.chat/ on how to register your site name
