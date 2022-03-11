@@ -108,6 +108,6 @@ C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混�
 ，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了
 加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，
 再混用的話它們會生氣
-C++的換行可以是endl或'\n'，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
+C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
 也就是它順便把內存清空了，做了多餘的動作。
-之後記得要換行的話就用'\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item></channel></rss>
+之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item></channel></rss>
