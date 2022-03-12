@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 16 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>網站搬家~</title><link>/posts/2022/newborn/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/newborn/</guid><description>我把網站從Jekyll改到Hugo了 因為111學測已經很久沒更新了，今天終於把網站搬遷成功，整個網站比以前看起來更舒服~
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>/posts/2022/ctf_easyctf_adder/</guid><description>題目：
+給你一個加法程式，找出Flag adder
+概念： 反編譯 題解 在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。
+開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，
+而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 $0x539$ 即可。
+透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$
+開啟程式輸入1337 0 0 就可以拿到flag了~</description></item><item><title>網站搬家~</title><link>/posts/2022/newborn/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/newborn/</guid><description>我把網站從Jekyll改到Hugo了 因為111學測已經很久沒更新了，今天終於把網站搬遷成功，整個網站比以前看起來更舒服~
 Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/codeserver/</guid><description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~
 先備條件： 會用Windows跟Ubuntu Docker以及容器的基礎操作 參考資源： codercom/Code-server
 本文所用配備及版本： 物理機環境： Windows 11 Pro 21H2 Code Server版本： v4.0.2 步驟 (這裡省略前面Docker的安裝步驟)
