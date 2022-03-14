@@ -2,7 +2,7 @@
 title: "資源"
 ---
 
-* [C++語法筆記](/posts/2021/cpp/)
+* [C++語法筆記](/posts/1/cpp/)
 * [算法筆記](/posts/1/algo-index/)
 
 解題系統：
