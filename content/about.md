@@ -8,10 +8,10 @@ keywords:
 
 # 我是誰
 
-黃乙家
+黃乙家 weak
 
-我站在雲林，正心高中生
+來自雲林的普通人
 
-很愛亂玩資訊(黑)科技
+DP好難哦
 
 IG: cannot.load_connection.refused

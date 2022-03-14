@@ -62,7 +62,7 @@ weight = 6
 	googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
   
     # Home page settings
-    description = "站在雲林打魚打程式的普通高中生"
+    description = "我覺得現在在看這句話的人超電"
     mainSection = "posts" # your main section
     showAllPostsOnHomePage = false
     postsOnHomePage = 10

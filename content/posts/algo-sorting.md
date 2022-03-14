@@ -1,11 +1,10 @@
 ---
 title: 算法筆記-排序
-date: 2021-09-11
 tags: 
   - algorithms
 ---
 
-
+* [算法筆記目錄](/posts/1/algo-index/)
 
 # 排序
 
