@@ -2,7 +2,7 @@
 給你一個加法程式，找出Flag adder
 概念： 反編譯 題解 在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。
 開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，
-而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 $0x539$ 即可。
+而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 0x539 即可。
 透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$
 開啟程式輸入1337 0 0 就可以拿到flag了~</description></item><item><title>網站搬家~</title><link>/posts/2022/newborn/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/newborn/</guid><description>我把網站從Jekyll改到Hugo了 因為111學測已經很久沒更新了，今天終於把網站搬遷成功，整個網站比以前看起來更舒服~
 Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/codeserver/</guid><description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~
@@ -66,89 +66,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。
 而步數就是上一個點的步數再+1
 上程式碼(當然你可以用struct建立點佇列，就不用宣告那麼多queue跟陣列了)：
 1#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 2#pragma loop_opt(on) 3#include&amp;lt;bits/stdc++.h&amp;gt;4using namespace std; 5template&amp;lt;class T&amp;gt; long long Mod(T a,T b){return ((a%b)+b)%b;} 6#define endl &amp;#39;\n&amp;#39; 7#define ll long long 8#define IO ios_base::sync_with_stdio(0); cin.</description></item><item><title>108年彰雲嘉下午P10 - Huffman</title><link>/posts/2021/mtwcp108_2_10/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/mtwcp108_2_10/</guid><description>題目： Huffman ： 維基百科
-霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下： (1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。 (2) 每次從尚無父節點的所有節點中，尋找值最小（出現次數最少）的兩個節點來建立霍夫曼樹， 產生其父節點的值為兩個節點值相加的和。最後只剩下根節點沒有父節點。 (3) 從根節點開始往下編碼，左分支為 0，右分支為 1，每個葉節點的字母元素會產生一個霍夫 曼碼（由 0 和 1 所組成），字母元素出現的頻率越高則霍夫曼碼越短。 我們這題需要計算一個字串轉成霍夫曼碼的壓縮率。假設有個字串&amp;quot;queue&amp;quot;，則此字串會佔5 bytes = 40bits空間， 轉成霍夫曼碼後應為&amp;quot;00011011&amp;quot;，只需要8個bits就可儲存，因此壓縮率為(40-8)/40 * 100% = 80%。 輸入： 輸入一列字串(長度最多100字元，且不含空格)。 輸出： 依序輸出此字串壓縮前的bit數、壓縮後的bit數、壓縮率百分比(格式為⌊n⌋%，即n向下取整)。 Ex 1 Input: queue Ex 2 Input: abadcafcabfdec Ex 3 Input: aaaaaaamcmhhhhhmkkkkkkkkmbbmdddddddmyymppppp Ex 4 Input: BCBBB Ex 1 Output: 40 8 80% Ex 2 Output: 112 35 68% Ex 3 Output: 352 132 62% Ex 4 Output: 40 5 87% 題解： 題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。</description></item><item><title>算法筆記-基本/初階資料結構</title><link>/posts/2021/algo/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/algo/</guid><description>基礎資料結構 我們程式想儲存東西有很多種方式，而資料結構就像一種容器，
-可以儲存或拿取需要的東西，每種資料結構都有不同的複雜度，
-如果用得好，效率就會高。
-以下都是最基本的資料結構
-1.Vector - 向量 in &amp;lt;vector&amp;gt; 1vector&amp;lt;int&amp;gt; v; 向量可當成陣列來用，應該說它就是更強的陣列，而且易維護。
-比起原本陣列，它可以自動擴大容量，
-能用的空間也比陣列還多。但要注意的是，如果使用operator[]存取了未配置的記憶體位置，
-會導致Segmentation Fault。
-以下為vector的功能： -- vector[n] 存取索引值為n的元素 -- vector.at(n) 存取索引值為n的元素(較安全) -- vector.begin() 回傳指向vector第一個元素的疊代器 -- vector.end() 回傳指向vector最後一個元素再下一個的疊代器 -- vector.front() 回傳vector[0] -- vector.back() 回傳vector最後一個元素的值 -- vector.size() 回傳目前vector儲存了多少元素 -- vector.resize(n) 修改vector大小 -- vector.capacity() 存取可容納最大個數 -- vector.empty() 回傳布林值表示vector是不是空的 -- vector.reserve(n) 配置更多記憶體以容納更多元素 -- vector.push_back(n) 把n放到vector最尾端 -- vector.pop_back() 把vector最尾端元素取出 -- vector.insert(it,n) 在疊代器it後插入元素n -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 -- vector.clear() 刪除所有元素 -- vector.swap(vector2) 交換兩個vector 以下是一個使用vector的範例：</description></item><item><title>算法筆記-排序</title><link>/posts/2021/algo-sorting/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/algo-sorting/</guid><description>排序 排序是將一串資料依優先度排列，通常是遞增、遞減、字典序排列，
-可以自訂順序，這裡直接使用快速排序法，後面分治會提到合併排序，
-快慢隨題目而變動。
-我們學校會學到最經典的氣泡排序法，其實是個很不好的排序法，
-它最差情況的時間複雜度會炸到$O(n^2)$。
-在C++，有函數 sort() 可以直接排序，
-以遞增排序為例，原理是先從資料群選一個基準點，
-然後從資料兩邊往中間搜，若右邊比基準點小且左邊比基準點大，就將左右邊互換，
-直到左右邊相遇，將相遇的點與基準點互換。
-複雜度是$O(nlogn)$。
-想體驗sort()的力量，我們用random_shuffle()這個函數來打亂區間。
-1#include&amp;lt;bits/stdc++.h&amp;gt;2using namespace std; 3signed main(){ 4 vector&amp;lt;int&amp;gt; a={9,8,7,6,5,4,3,2,1}; 5 for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; 6 cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; 7 8 random_shuffle(a.begin(),a.end()); 9 for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; 10 cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; 11 12 sort(a.begin(),a.end()); 13 for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; 14 cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; 15 16 return 0; 17} sort()預設是遞增排列，如果想遞減排列，可以在第三個引數加上 less&amp;lt;型態&amp;gt;()，</description></item><item><title>算法筆記-時間複雜度概述</title><link>/posts/2021/algo-runtime/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/algo-runtime/</guid><description>時間複雜度在競程中是個非常重要且最基本的工具，
-係用於估算程式執行N次，大概需要花多久時間。
-我們在程式中做的任何事情可能都需要花費1單位時間，
-比如五則運算、條件判斷、變數存賦等。
-而我們通常會使用函式$O(Big-O)$ 來表示程式的複雜度。
-對於$O()$，有以下定義：
-$$ Def:\
-\qquad If\ f(x) = O(g(x)),\ ∃M,x_0 &amp;gt; 0,\ such \ that \ ∀x&amp;gt;=x_0,then \ |f(x)| &amp;lt;= M|g(x)| $$
-為什麼我們需要估時間複雜度？
-因為我們在寫程式追求的是速度！當你的演算法太慢(時間複雜度太大)時，
-就算結果是對的，但你會在Online Judge上或APCS得到一個TLE(Time Limit Exceeded)，
-即若將測資丟到你的程式，會超出該題目所規定的執行時間。
-要如何估自己的程式會跑幾秒？
-通常，Judge的執行速度大約是1e8筆/秒，因此只要將題目的範圍限制代入所估複雜度，
-然後除以1e8，就能大概知道自己程式會不會TLE了。
-常見的複雜度有： $1,n,n^2,n^3,nlogn,2^n$。 而log通常以2為底但我們不太會去明指以誰為底。
-以下是複雜度計算的原則：
-&amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
-&amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
-即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
-&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/2021/algo-segtree/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/algo-segtree/</guid><description>回到算法筆記-進階資料結構
-線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
-成功實現Sparse Table做不到的事。
-每個節點可以存一種區間的數據(比如區間和)，
-根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，
-左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
-通常，線段樹會開4倍大
-1int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
-1void build(int l,int r,int index){ 2 if(l==r){ 3 T[l] = a[l]; 4 } 5 else{ 6 int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 7 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); 8 build(index*2+1,mid+1,r); 9 T[index] = T[index*2] + T[index*2+1] ; 10 } 11} 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1int query(int ql,int qr,int l,int r,int index){ 2 if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; 3 int mid = l+(r-l)/2; 4 int rt=0; 5 if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); 6 if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); 7 return rt; 8} 單點修改 1void modify(int l,int r,int pos,int index,int val){ 2 if(l==r){ 3 T[index] = val;return; 4 } 5 int mid = l+(r-l)/2; 6 if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); 7 else modify(mid+1,r,pos,index*2+1,val); 8 T[index] = T[index*2]+T[index*2+1]; 9} 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>算法筆記-關於優化</title><link>/posts/2021/algo-io/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/algo-io/</guid><description>編譯器優化 我們的程式變成執行檔時需要經過一連串的轉譯與運算，
-如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。
-一般的Judge編譯器模式都是O2，是個比較安全的運算方式。
-但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。
-1#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 2//以較不安全的運算來編譯程式 3#pragma loop_opt(on) 4//迴圈優化 5#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;) 6//更改最大堆疊數 以上是我常用的編譯器優化指令，
-請注意不是所有OJ都支援pragma優化。
-I/O優化 當我們比較cout、cin與printf、scanf時，會發現後者比前者快非常多。
-這是因為每次在輸入輸出前，程式會將資料放進一個緩衝區(內存)，然後再從內存裡拿出。
-我們應該減少拿取的動作，因為這非常耗時。
-如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，
-否則它可能要等到程式結束後才輸出。
-cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，
-這就讓拿取的動作暴增了，解決方法是加上 cin.tie(0);
-讓內存強制釋放掉。
-C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題
-，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了
-加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，
-再混用的話它們會生氣
-C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
-也就是它順便把內存清空了，做了多餘的動作。
-之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item><item><title>C++筆記-語法</title><link>/posts/2021/cpp/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>/posts/2021/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
-基礎C++模板 附上STL標頭檔：
-1#include&amp;lt;bits/stdc++.h&amp;gt;注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
-這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的__gcd(計算最大公因數)
-不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。
-有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
-為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那std就是你想找的書。
-而每個程式都會需要一個叫做main的主函式，這個函式就是整個程式的起點跟終點：
-1int main(){ 2 return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 3} 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。
-注意到，有些程式句後面加了分號有些卻沒有，這是C++中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。
-總結程式碼(模板)： 1#include&amp;lt;bits/stdc++.h&amp;gt;2using namespace std; 3int main(){ 4 cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World 5 return 0; 6} 變數概論 當我們要進行複雜運算時，變數成為很重要的東西，你可以用變數儲存各種資料，讓電腦記住它。
-要如何宣告一個變數？格式為 (變數型態) (變數名稱)，我們可以一次宣告很多變數： (型態) (名稱),(名稱),(名稱)...;
-ex: int a,b,c;
-要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C++裡面已經定義的名稱(ex:int,char,double,long&amp;hellip;)
-變數型態： 根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用sizeof()， 以下所提的空間都是在多數32位元機器上佔有空間
-一、整數 每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯 而signed/unsigned表示型態含不含符號，而負數前面都會有一個 &amp;ldquo;-&amp;rdquo; ，因此當型態為unsigned時，是將所有負值的空間加到正值，讓正值值域更大</description></item><item><title>Farmbot歷程</title><link>/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>/posts/2021/farmbot/</guid><description>Farmbot
+霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下： (1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。 (2) 每次從尚無父節點的所有節點中，尋找值最小（出現次數最少）的兩個節點來建立霍夫曼樹， 產生其父節點的值為兩個節點值相加的和。最後只剩下根節點沒有父節點。 (3) 從根節點開始往下編碼，左分支為 0，右分支為 1，每個葉節點的字母元素會產生一個霍夫 曼碼（由 0 和 1 所組成），字母元素出現的頻率越高則霍夫曼碼越短。 我們這題需要計算一個字串轉成霍夫曼碼的壓縮率。假設有個字串&amp;quot;queue&amp;quot;，則此字串會佔5 bytes = 40bits空間， 轉成霍夫曼碼後應為&amp;quot;00011011&amp;quot;，只需要8個bits就可儲存，因此壓縮率為(40-8)/40 * 100% = 80%。 輸入： 輸入一列字串(長度最多100字元，且不含空格)。 輸出： 依序輸出此字串壓縮前的bit數、壓縮後的bit數、壓縮率百分比(格式為⌊n⌋%，即n向下取整)。 Ex 1 Input: queue Ex 2 Input: abadcafcabfdec Ex 3 Input: aaaaaaamcmhhhhhmkkkkkkkkmbbmdddddddmyymppppp Ex 4 Input: BCBBB Ex 1 Output: 40 8 80% Ex 2 Output: 112 35 68% Ex 3 Output: 352 132 62% Ex 4 Output: 40 5 87% 題解： 題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。</description></item><item><title>Farmbot歷程</title><link>/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate><guid>/posts/2021/farmbot/</guid><description>Farmbot
 (本頁面在舊版網站發布，會有不少顯示問題)
 FBTUG共筆資料
 什麼是Farmbot? 一個機器人開放式系統，可通過土地種植，澆水，土壤測試和除草為所有需要耕種小土地跟想種糧食的人提供幫助
@@ -176,4 +94,86 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 底線命令模式: 切換方式:按下:,可輸入指令操作內容,
 離開: :q
 強制離開: :q!
-存檔不離開: :w</description></item></channel></rss>
+存檔不離開: :w</description></item><item><title>C++筆記-語法</title><link>/posts/1/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
+基礎C++模板 附上STL標頭檔：
+1#include&amp;lt;bits/stdc++.h&amp;gt;注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
+這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的__gcd(計算最大公因數)
+不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。
+有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
+為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那std就是你想找的書。
+而每個程式都會需要一個叫做main的主函式，這個函式就是整個程式的起點跟終點：
+1int main(){ 2 return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 3} 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。
+注意到，有些程式句後面加了分號有些卻沒有，這是C++中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。
+總結程式碼(模板)： 1#include&amp;lt;bits/stdc++.h&amp;gt;2using namespace std; 3int main(){ 4 cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World 5 return 0; 6} 變數概論 當我們要進行複雜運算時，變數成為很重要的東西，你可以用變數儲存各種資料，讓電腦記住它。
+要如何宣告一個變數？格式為 (變數型態) (變數名稱)，我們可以一次宣告很多變數： (型態) (名稱),(名稱),(名稱)...;
+ex: int a,b,c;
+要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C++裡面已經定義的名稱(ex:int,char,double,long&amp;hellip;)
+變數型態： 根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用sizeof()， 以下所提的空間都是在多數32位元機器上佔有空間
+一、整數 每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯 而signed/unsigned表示型態含不含符號，而負數前面都會有一個 &amp;ldquo;-&amp;rdquo; ，因此當型態為unsigned時，是將所有負值的空間加到正值，讓正值值域更大</description></item><item><title>算法筆記-基本/初階資料結構</title><link>/posts/1/algo-basic-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-basic-structure/</guid><description>算法筆記目錄 基礎資料結構 我們程式想儲存東西有很多種方式，而資料結構就像一種容器，
+可以儲存或拿取需要的東西，每種資料結構都有不同的複雜度，
+如果用得好，效率就會高。
+以下都是最基本的資料結構
+1.Vector - 向量 in &amp;lt;vector&amp;gt; 1vector&amp;lt;int&amp;gt; v; 向量可當成陣列來用，應該說它就是更強的陣列，而且易維護。
+比起原本陣列，它可以自動擴大容量，
+能用的空間也比陣列還多。但要注意的是，如果使用operator[]存取了未配置的記憶體位置，
+會導致Segmentation Fault。
+以下為vector的功能： -- vector[n] 存取索引值為n的元素 -- vector.at(n) 存取索引值為n的元素(較安全) -- vector.begin() 回傳指向vector第一個元素的疊代器 -- vector.end() 回傳指向vector最後一個元素再下一個的疊代器 -- vector.front() 回傳vector[0] -- vector.back() 回傳vector最後一個元素的值 -- vector.size() 回傳目前vector儲存了多少元素 -- vector.resize(n) 修改vector大小 -- vector.capacity() 存取可容納最大個數 -- vector.empty() 回傳布林值表示vector是不是空的 -- vector.reserve(n) 配置更多記憶體以容納更多元素 -- vector.push_back(n) 把n放到vector最尾端 -- vector.pop_back() 把vector最尾端元素取出 -- vector.insert(it,n) 在疊代器it後插入元素n -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 -- vector.clear() 刪除所有元素 -- vector.</description></item><item><title>算法筆記-排序</title><link>/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-sorting/</guid><description>算法筆記目錄 排序 排序是將一串資料依優先度排列，通常是遞增、遞減、字典序排列，
+可以自訂順序，這裡直接使用快速排序法，後面分治會提到合併排序，
+快慢隨題目而變動。
+我們學校會學到最經典的氣泡排序法，其實是個很不好的排序法，
+它最差情況的時間複雜度會炸到$O(n^2)$。
+在C++，有函數 sort() 可以直接排序，
+以遞增排序為例，原理是先從資料群選一個基準點，
+然後從資料兩邊往中間搜，若右邊比基準點小且左邊比基準點大，就將左右邊互換，
+直到左右邊相遇，將相遇的點與基準點互換。
+複雜度是$O(nlogn)$。
+想體驗sort()的力量，我們用random_shuffle()這個函數來打亂區間。
+1#include&amp;lt;bits/stdc++.h&amp;gt;2using namespace std; 3signed main(){ 4 vector&amp;lt;int&amp;gt; a={9,8,7,6,5,4,3,2,1}; 5 for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; 6 cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; 7 8 random_shuffle(a.begin(),a.end()); 9 for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; 10 cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; 11 12 sort(a.begin(),a.end()); 13 for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; 14 cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; 15 16 return 0; 17} sort()預設是遞增排列，如果想遞減排列，可以在第三個引數加上 less&amp;lt;型態&amp;gt;()，</description></item><item><title>算法筆記-時間複雜度概述</title><link>/posts/1/algo-runtime/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-runtime/</guid><description>算法筆記目錄 時間複雜度在競程中是個非常重要且最基本的工具，
+係用於估算程式執行N次，大概需要花多久時間。
+我們在程式中做的任何事情可能都需要花費1單位時間，
+比如五則運算、條件判斷、變數存賦等。
+而我們通常會使用函式$O(Big-O)$ 來表示程式的複雜度。
+對於$O()$，有以下定義：
+$$ Def:\
+\qquad If\ f(x) = O(g(x)),\ ∃M,x_0 &amp;gt; 0,\ such \ that \ ∀x&amp;gt;=x_0,then \ |f(x)| &amp;lt;= M|g(x)| $$
+為什麼我們需要估時間複雜度？
+因為我們在寫程式追求的是速度！當你的演算法太慢(時間複雜度太大)時，
+就算結果是對的，但你會在Online Judge上或APCS得到一個TLE(Time Limit Exceeded)，
+即若將測資丟到你的程式，會超出該題目所規定的執行時間。
+要如何估自己的程式會跑幾秒？
+通常，Judge的執行速度大約是1e8筆/秒，因此只要將題目的範圍限制代入所估複雜度，
+然後除以1e8，就能大概知道自己程式會不會TLE了。
+常見的複雜度有： $1,n,n^2,n^3,nlogn,2^n$。 而log通常以2為底但我們不太會去明指以誰為底。
+以下是複雜度計算的原則：
+&amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
+&amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
+即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
+&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-目錄</title><link>/posts/1/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-index/</guid><description> 時間複雜度概述 基礎/初階資料結構 速度優化 排序</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/1/algo-segtree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-segtree/</guid><description>回到算法筆記-進階資料結構
+線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，
+左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
+通常，線段樹會開4倍大
+1int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+1void build(int l,int r,int index){ 2 if(l==r){ 3 T[l] = a[l]; 4 } 5 else{ 6 int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 7 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); 8 build(index*2+1,mid+1,r); 9 T[index] = T[index*2] + T[index*2+1] ; 10 } 11} 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1int query(int ql,int qr,int l,int r,int index){ 2 if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; 3 int mid = l+(r-l)/2; 4 int rt=0; 5 if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); 6 if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); 7 return rt; 8} 單點修改 1void modify(int l,int r,int pos,int index,int val){ 2 if(l==r){ 3 T[index] = val;return; 4 } 5 int mid = l+(r-l)/2; 6 if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); 7 else modify(mid+1,r,pos,index*2+1,val); 8 T[index] = T[index*2]+T[index*2+1]; 9} 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>算法筆記-關於優化</title><link>/posts/1/algo-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-io/</guid><description> 算法筆記目錄 編譯器優化 我們的程式變成執行檔時需要經過一連串的轉譯與運算，
+如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。
+一般的Judge編譯器模式都是O2，是個比較安全的運算方式。
+但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。
+1#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 2//以較不安全的運算來編譯程式 3#pragma loop_opt(on) 4//迴圈優化 5#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;) 6//更改最大堆疊數 以上是我常用的編譯器優化指令，
+請注意不是所有OJ都支援pragma優化。
+I/O優化 當我們比較cout、cin與printf、scanf時，會發現後者比前者快非常多。
+這是因為每次在輸入輸出前，程式會將資料放進一個緩衝區(內存)，然後再從內存裡拿出。
+我們應該減少拿取的動作，因為這非常耗時。
+如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，
+否則它可能要等到程式結束後才輸出。
+cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，
+這就讓拿取的動作暴增了，解決方法是加上 cin.tie(0);
+讓內存強制釋放掉。
+C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題
+，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了
+加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，
+再混用的話它們會生氣
+C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
+也就是它順便把內存清空了，做了多餘的動作。
+之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item></channel></rss>
