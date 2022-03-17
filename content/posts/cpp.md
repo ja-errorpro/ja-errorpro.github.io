@@ -1041,7 +1041,7 @@ for(int i=0;i<10;i++) arr[i] = new int[12]{1};
 
 ---
 
-## 物件
+## 物件(結構體)
 
 ### Struct
 
@@ -1089,6 +1089,136 @@ struct point{
     int distance(int _x,int _y){ return hypot(x-_x,y-_y); }
 };
 ```
+
+### 建構與解構
+
+Struct有很特別的初始化方式，稱為建構子，我們只要使用跟Struct相同名稱加上括號。
+
+```cpp
+struct Account{
+    Account(){
+	    cout << "開了新的帳戶" << endl;
+    }
+};
+```
+
+當後面宣告了新的Struct，就會觸發建構函式，由此進行初始化各種東西。
+
+初始化Struct的成員變數可以這樣寫
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+struct Account{
+    bool gender;
+    int balance;
+	string name;
+	// 根據常數初始化
+    Account(): gender(0),balance(0),name("") {}
+	// 根據參數初始化
+	Account(bool gender_,int bal_,string Na_): gender(gender_),balance(bal_),name(Na_){}
+};
+int main(){
+   Account *A = new Account(1,10000,"Bob");
+   Account *B = new Account();
+   cout << A->gender << " " << A->balance << " " << A->name << endl;
+   // 可以把 p->x 當成 (*p).x 
+   cout << B->gender << " " << B->balance << " " << B->name << endl;
+}
+```
+
+而解構函式就是建構函式前面加上 ~，當遇到delete的動作時就會觸發。
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+struct Account{
+    bool gender;
+    int balance;
+	string name;
+	// 根據常數初始化
+    Account(): gender(0),balance(0),name("") {}
+	// 根據參數初始化
+	Account(bool gender_,int bal_,string Na_): gender(gender_),balance(bal_),name(Na_){}
+	~Account(){
+	    cout << "已刪除帳戶" << endl;
+	}
+};
+int main(){
+   Account *A = new Account(1,10000,"Bob");
+   Account *B = new Account();
+   cout << A->gender << " " << A->balance << " " << A->name << endl;
+   // 可以把 p->x 當成 (*p).x 
+   cout << B->gender << " " << B->balance << " " << B->name << endl;
+   delete A;
+   delete B;
+}
+```
+
+### 重載運算子
+
+有時候我們要直接輸出輸入自訂型態、做五則運算時，可以透過重載運算子(operator)實現。
+
+比如高中所學的矩陣加法，可以重載加號運算符，即"讓程式知道自訂型態的加法要如何加"
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+struct Matrix{
+    int val[2][2]; // 二階矩陣
+    /*
+	(返回型態) operator 運算子(參數){
+	    各種操作;
+	}
+	*/
+	Matrix operator+(const Matrix &B) const{ // 加const就能避免不小心改到資料
+	    Matrix ret;
+		for(int i=0;i<2;i++){
+		    for(int j=0;j<2;j++){
+			    ret.val[i][j] = val[i][j] + B.val[i][j];
+			}
+		}
+		return ret;
+	} // 重載 加號運算子，讓我可以在後面程式直接將Struct相加
+};
+int main(){
+    Matrix A,B;
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+			cin >> A.val[i][j];
+		}
+	}
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+			cin >> B.val[i][j];
+		}
+	}
+	
+    Matrix Ret = A+B; // *
+	
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+			cout << Ret.val[i][j];
+		}
+		cout << endl;
+	}
+}
+```
+
+當然也能實作看看 +=、-、\*、\/ 等各種運算子。 
+
+如果要對自訂型態排序(排序在算法筆記)，可以重載 < 運算子。
+
+```cpp
+struct dat{
+   int a,b;
+   bool const operator < (dat &y){
+       return b < y.b;
+   }
+};
+```
+
+到這裡，其實你已經學會基礎的物件導向了！
 
 ---
 
