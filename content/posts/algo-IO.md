@@ -1,5 +1,5 @@
 ---
-title: 算法筆記-關於優化
+title: 算法筆記-常數優化
 tags: 
   - algorithms
 ---
@@ -42,7 +42,7 @@ cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看�
 C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題  
 ，使得效率變差，這時就加上 `ios_base::sync_with_stdio(false);` 就解決了  
 加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，  
-~~再混用的話它們會生氣~~
+絕對不要再混用。
 
 C++的換行可以是endl或'\n'，而其實 `cout << endl` 相當於 `cout << '\n' << flush`  
 也就是它順便把內存清空了，做了多餘的動作。  
