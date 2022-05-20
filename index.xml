@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>/</link><description>Recent content on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>/posts/2022/ctf_easyctf_adder/</guid><description>題目：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>/</link><description>Recent content on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>大學面試心得</title><link>/posts/2022/college_interview/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>/posts/2022/college_interview/</guid><description>申請入學(新課綱第一屆白老鼠) 身為2003/9月出生的我，變成教育部爆改課綱的頭一批白老鼠orz&amp;hellip;，可謂生於SARS，死於武漢！
+以為今年數學會比110簡單，結果更難😠，我的學測直接燒到只剩43級分。
+聽到這成績後我還是硬著頭皮把六個志願全都填電資/資工，
+以下是我的一階正取校系以及二階面試狀況：
+中原資工 - 疫情取消面試 中原資電不分系 - 疫情取消面試 逢甲資電不分系 - 521面試結束 元智資工 - 無面試 東海資工 - 待面試 哭啊只剩兩間面試，飯店都訂好了，直接噴掉1000
+面試過程 逢甲資電不分系: 印象不錯，有熱情的學長姊(?，進去前會一直跟我們聊天(降低緊張感？
+而且教授非常友善、和藹(幸運遇到白臉)~ 聽說另一間試場是黑臉教授
+面試方式是一次六個人對三位教授，大概是這樣坐的：
+教授 教授 教授
+------長桌------
+1(沒來) 2 3 4 5 我(6) 門
+一開始教授讓我們輪流自我介紹，
+而當右邊的教授聽到我參加APCS跟能競就問學過什麼語言，然後從我開始倒序輪流回答(我忘了講資奧初選被旁邊講走orz&amp;hellip;。
+接著教授就問還有什麼問題
+我問了有關往國外發展的條件，然後其他人也都問一問時間就到了。
+整場就像是跟教授在聊天而已，真的不用太緊張，
+第一天面試感覺非常好，希望第二天東海也能順利~
+東海資工資電組: 待補</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>/posts/2022/tioj1903/</link><pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate><guid>/posts/2022/tioj1903/</guid><description>題目： 給一張$N$個點的無向圖，一開始有$M$條邊。 接著$Q$個操作，有以下兩種：
+增加一條連著$A_i$、$B_i$的邊。 刪除一條連著$A_i$、$B_i$的邊(保證這條邊存在)。 每次操作完後輸出當前連通塊數量。
+$1 \le N \le 5e5$ $M+Q \le 5e5$ $0 \le A_i,B_i \le N-1$ $A_i \neq B_i$ 輸入： 第一行有一個數字T代表測資筆數。
+每筆測資第1行有3個整數N、M、Q。
+接下來M行每行兩個整數Ai、Bi，代表Ai和Bi這兩個人目標相同。
+接下來Q行，每行有一個字元 c 和兩個整數Ai、Bi，代表修改一個紀錄。
+如果 c 是 N，代表增加一筆 Ai、Bi 兩人目標相同的紀錄；
+如果 c 是 D，代表要刪除一筆 Ai、Bi 目標相同的紀錄，所有刪除都是合法的。
+輸出： 對於每筆測資的Q筆修改，每次修改完輸出一行代表連通塊數量。
+Ex 1 Input: 2 3 0 3 N 0 1 N 1 2 N 2 1 3 3 3 0 1 1 2 2 1 D 2 1 D 0 1 D 2 1 Ex 1 Output: 2 1 1 1 2 3 題解： 動態維護連通塊數量可以使用並查集(DSU)，但多了刪除的操作。</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>/posts/2022/ctf_easyctf_adder/</guid><description>題目：
 給你一個加法程式，找出Flag adder
 概念： 反編譯 題解 在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。
 開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，
@@ -120,7 +146,27 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 比起原本陣列，它可以自動擴大容量，
 能用的空間也比陣列還多。但要注意的是，如果使用operator[]存取了未配置的記憶體位置，
 會導致Segmentation Fault。
-以下為vector的功能： -- vector[n] 存取索引值為n的元素 -- vector.at(n) 存取索引值為n的元素(較安全) -- vector.begin() 回傳指向vector第一個元素的疊代器 -- vector.end() 回傳指向vector最後一個元素再下一個的疊代器 -- vector.front() 回傳vector[0] -- vector.back() 回傳vector最後一個元素的值 -- vector.size() 回傳目前vector儲存了多少元素 -- vector.resize(n) 修改vector大小 -- vector.capacity() 存取可容納最大個數 -- vector.empty() 回傳布林值表示vector是不是空的 -- vector.reserve(n) 配置更多記憶體以容納更多元素 -- vector.push_back(n) 把n放到vector最尾端 -- vector.pop_back() 把vector最尾端元素取出 -- vector.insert(it,n) 在疊代器it後插入元素n -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 -- vector.clear() 刪除所有元素 -- vector.</description></item><item><title>算法筆記-排序</title><link>/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-sorting/</guid><description>算法筆記目錄 排序 排序是將一串資料依優先度排列，通常是遞增、遞減、字典序排列，
+以下為vector的功能： -- vector[n] 存取索引值為n的元素 -- vector.at(n) 存取索引值為n的元素(較安全) -- vector.begin() 回傳指向vector第一個元素的疊代器 -- vector.end() 回傳指向vector最後一個元素再下一個的疊代器 -- vector.front() 回傳vector[0] -- vector.back() 回傳vector最後一個元素的值 -- vector.size() 回傳目前vector儲存了多少元素 -- vector.resize(n) 修改vector大小 -- vector.capacity() 存取可容納最大個數 -- vector.empty() 回傳布林值表示vector是不是空的 -- vector.reserve(n) 配置更多記憶體以容納更多元素 -- vector.push_back(n) 把n放到vector最尾端 -- vector.pop_back() 把vector最尾端元素取出 -- vector.insert(it,n) 在疊代器it後插入元素n -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 -- vector.clear() 刪除所有元素 -- vector.</description></item><item><title>算法筆記-常數優化</title><link>/posts/1/algo-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-io/</guid><description> 算法筆記目錄 編譯器優化 我們的程式變成執行檔時需要經過一連串的轉譯與運算，
+如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。
+一般的Judge編譯器模式都是O2，是個比較安全的運算方式。
+但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。
+1#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 2//以較不安全的運算來編譯程式 3#pragma loop_opt(on) 4//迴圈優化 5#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;) 6//更改最大堆疊數 以上是我常用的編譯器優化指令，
+請注意不是所有OJ都支援pragma優化。
+I/O優化 當我們比較cout、cin與printf、scanf時，會發現後者比前者快非常多。
+這是因為每次在輸入輸出前，程式會將資料放進一個緩衝區(內存)，然後再從內存裡拿出。
+我們應該減少拿取的動作，因為這非常耗時。
+如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，
+否則它可能要等到程式結束後才輸出。
+cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，
+這就讓拿取的動作暴增了，解決方法是加上 cin.tie(0);
+讓內存強制釋放掉。
+C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題
+，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了
+加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，
+絕對不要再混用。
+C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
+也就是它順便把內存清空了，做了多餘的動作。
+之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item><item><title>算法筆記-排序</title><link>/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-sorting/</guid><description>算法筆記目錄 排序 排序是將一串資料依優先度排列，通常是遞增、遞減、字典序排列，
 可以自訂順序，這裡直接使用快速排序法，後面分治會提到合併排序，
 快慢隨題目而變動。
 我們學校會學到最經典的氣泡排序法，其實是個很不好的排序法，
@@ -159,27 +205,7 @@ $$ Def:\
 左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
 通常，線段樹會開4倍大
 1int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
-1void build(int l,int r,int index){ 2 if(l==r){ 3 T[l] = a[l]; 4 } 5 else{ 6 int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 7 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); 8 build(index*2+1,mid+1,r); 9 T[index] = T[index*2] + T[index*2+1] ; 10 } 11} 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1int query(int ql,int qr,int l,int r,int index){ 2 if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; 3 int mid = l+(r-l)/2; 4 int rt=0; 5 if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); 6 if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); 7 return rt; 8} 單點修改 1void modify(int l,int r,int pos,int index,int val){ 2 if(l==r){ 3 T[index] = val;return; 4 } 5 int mid = l+(r-l)/2; 6 if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); 7 else modify(mid+1,r,pos,index*2+1,val); 8 T[index] = T[index*2]+T[index*2+1]; 9} 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>算法筆記-關於優化</title><link>/posts/1/algo-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-io/</guid><description> 算法筆記目錄 編譯器優化 我們的程式變成執行檔時需要經過一連串的轉譯與運算，
-如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。
-一般的Judge編譯器模式都是O2，是個比較安全的運算方式。
-但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。
-1#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 2//以較不安全的運算來編譯程式 3#pragma loop_opt(on) 4//迴圈優化 5#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;) 6//更改最大堆疊數 以上是我常用的編譯器優化指令，
-請注意不是所有OJ都支援pragma優化。
-I/O優化 當我們比較cout、cin與printf、scanf時，會發現後者比前者快非常多。
-這是因為每次在輸入輸出前，程式會將資料放進一個緩衝區(內存)，然後再從內存裡拿出。
-我們應該減少拿取的動作，因為這非常耗時。
-如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，
-否則它可能要等到程式結束後才輸出。
-cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，
-這就讓拿取的動作暴增了，解決方法是加上 cin.tie(0);
-讓內存強制釋放掉。
-C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題
-，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了
-加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，
-再混用的話它們會生氣
-C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
-也就是它順便把內存清空了，做了多餘的動作。
-之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item><item><title>資源</title><link>/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/resources/</guid><description> C++語法筆記 算法筆記 解題系統：
+1void build(int l,int r,int index){ 2 if(l==r){ 3 T[l] = a[l]; 4 } 5 else{ 6 int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 7 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); 8 build(index*2+1,mid+1,r); 9 T[index] = T[index*2] + T[index*2+1] ; 10 } 11} 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1int query(int ql,int qr,int l,int r,int index){ 2 if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; 3 int mid = l+(r-l)/2; 4 int rt=0; 5 if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); 6 if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); 7 return rt; 8} 單點修改 1void modify(int l,int r,int pos,int index,int val){ 2 if(l==r){ 3 T[index] = val;return; 4 } 5 int mid = l+(r-l)/2; 6 if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); 7 else modify(mid+1,r,pos,index*2+1,val); 8 T[index] = T[index*2]+T[index*2+1]; 9} 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>資源</title><link>/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/resources/</guid><description> C++語法筆記 算法筆記 解題系統：
 TIOJ
 CSES
 ZeroJudge
