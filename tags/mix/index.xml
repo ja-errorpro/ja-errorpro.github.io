@@ -15,7 +15,20 @@
 我問了有關往國外發展的條件，然後其他人也都問一問時間就到了。
 整場就像是跟教授在聊天而已，真的不用太緊張，
 第一天面試感覺非常好，希望第二天東海也能順利~
-東海資工資電組: 待補</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/codeserver/</guid><description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~
+東海資工資電組: 一人對三個教授，而且也非常友善不用緊張
+首先自我介紹，然後
+教授(簡稱P): 你的經歷滿豐富的，分享一件你印象深刻的歷程跟收穫
+我說了Farmbot(點我查看)的事
+P: 你APCS考得不錯為什麼不填APCS組
+我: 我認為APCS就是測驗自己的程式能力，沒有把他當我的入學管道
+P: 我覺得你備審用Linux介面當封面的想法很有創意，而且你也有提到之前參加我們學校的AI營隊&amp;hellip;
+P: 你還有報哪些科系，如果都上會選哪間
+我回答比較保守，把每間優點都講出來後說再考慮
+P: 好那你再好好考慮
+P: 你比較喜歡資訊還電機
+我: 資訊
+P: 還有什麼想問的
+我問了關於國外交換跟企業實習的條件</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/codeserver/</guid><description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~
 先備條件： 會用Windows跟Ubuntu Docker以及容器的基礎操作 參考資源： codercom/Code-server
 本文所用配備及版本： 物理機環境： Windows 11 Pro 21H2 Code Server版本： v4.0.2 步驟 (這裡省略前面Docker的安裝步驟)
 先開一個資料夾名為CodeServer，這是伺服器的根目錄 新增一個檔案，檔名為docker-compose.yml 編輯檔案，貼上這些： 1version: &amp;#34;2.1&amp;#34; 2services: 3 code-server: 4 image: codercom/code-server 5 container_name: code-server 6 environment: 7 - TZ=ASIA/TAIPEI 8 - PASSWORD=&amp;lt;設定進入伺服器的密碼&amp;gt; 9 - SUDO_PASSWORD=&amp;lt;設定Root權限的密碼&amp;gt; 10 volumes: 11 - ./appdata/code-server/project:/home/coder/project 12 - ./appdata/code-server/.local:/home/coder/.local 13 ports: 14 - &amp;lt;PORT&amp;gt;:8080 15 restart: always (1) version: 不用動他
