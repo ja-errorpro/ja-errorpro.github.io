@@ -1090,9 +1090,10 @@ struct point{
 };
 ```
 
+
 ### 建構與解構
 
-Struct有很特別的初始化方式，稱為建構子，我們只要使用跟Struct相同名稱加上括號。
+Struct有很特別的初始化方式，稱為建構子，我們只要使用跟該struct相同名稱加上括號。
 
 ```cpp
 struct Account{
@@ -1218,7 +1219,68 @@ struct dat{
 };
 ```
 
-到這裡，其實你已經學會基礎的物件導向了！
+### 型態參數化
+
+有時候我們需要使用兩個不同型態的變數加法器
+
+```cpp
+int a = 1;
+double b = 2;
+cout << sum(a,b) << endl;// Compile Error 
+```
+
+但這些型態都是我們已經指定好了，如果兩個交換或要其他型態就又要再寫一個，
+於是C++提供了template樣板工具
+
+```cpp 
+template<class T,class T1,...>
+T max(T a,T b){
+    return (a>b?a:b);
+}
+```
+
+這樣一來這個T就會自動換成我們輸入的型態
+Template也可以用於自訂類別/型態
+
+```cpp
+template<class T>
+struct B{
+    T a;
+	T output(){
+	  cout << a << endl;
+	  return a;
+	}
+};
+
+```
+
+而如果要對特定型態指定不同行為，可以這樣寫 
+
+```cpp
+#include<iostream>
+using namespace std;
+
+template<class T>
+struct B{
+	B(T a){
+	  cout << a << " is not a char" << endl;
+	}
+};
+
+template< > //裡面放空格
+struct B<char>{ // 如果宣告類別是char
+    B(char k){
+	  cout << k << " is a char" << endl;
+    }
+};
+
+int main(){
+    B<int> o1(3);
+	B<char> o2('s');
+}
+
+```
+
 
 ---
 
