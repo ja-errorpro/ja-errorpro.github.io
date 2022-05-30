@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>/</link><description>Recent content on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>大學面試心得</title><link>/posts/2022/college_interview/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>/posts/2022/college_interview/</guid><description>申請入學(新課綱第一屆白老鼠) 身為2003/9月出生的我，變成教育部爆改課綱的頭一批白老鼠orz&amp;hellip;，可謂生於SARS，死於武漢！
 以為今年數學會比110簡單，結果更難😠，我的學測直接燒到只剩43級分。
 聽到這成績後我還是硬著頭皮把六個志願全都填電資/資工，
-以下是我的一階正取校系以及二階面試狀況：
-中原資工 - 疫情取消面試 中原資電不分系 - 疫情取消面試 逢甲資電不分系 - 521面試結束 元智資工 - 無面試 東海資工 - 522面試結束 哭啊只剩兩間面試，飯店都訂好了，直接噴掉1000
+以下是我的一階正取校系以及二階面試狀況(20220530更新: 穩到不行欸好讚)：
+中原資工 - 疫情取消面試 - 備14 中原資電不分系 - 疫情取消面試 -正8 逢甲資電不分系 - 521面試結束 - 正30 元智資工 - 無面試 - 正76 東海資工 - 522面試結束 - 正3 哭啊只剩兩間面試，飯店都訂好了，直接噴掉1000
 面試過程 逢甲資電不分系: 印象不錯，有熱情的學長姊(?，進去前會一直跟我們聊天(降低緊張感？
 而且教授非常友善、和藹(幸運遇到白臉)~ 聽說另一間試場是黑臉教授
 面試方式是一次六個人對三位教授，大概是這樣坐的：
@@ -23,12 +23,7 @@ P: 你APCS考得不錯為什麼不填APCS組
 我: 我認為APCS就是測驗自己的程式能力，沒有把他當我的入學管道
 P: 我覺得你備審用Linux介面當封面的想法很有創意，而且你也有提到之前參加我們學校的AI營隊&amp;hellip;
 ^當事封面
-P: 你還有報哪些科系，如果都上會選哪間
-我回答比較保守，把每間優點都講出來後說再考慮
-P: 好那你再好好考慮
-P: 你比較喜歡資訊還電機
-我: 資訊
-P: 還有什麼想問的</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>/posts/2022/tioj1903/</link><pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate><guid>/posts/2022/tioj1903/</guid><description>題目： 給一張$N$個點的無向圖，一開始有$M$條邊。 接著$Q$個操作，有以下兩種：
+P: 你還有報哪些科系，如果都上會選哪間</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>/posts/2022/tioj1903/</link><pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate><guid>/posts/2022/tioj1903/</guid><description>題目： 給一張$N$個點的無向圖，一開始有$M$條邊。 接著$Q$個操作，有以下兩種：
 增加一條連著$A_i$、$B_i$的邊。 刪除一條連著$A_i$、$B_i$的邊(保證這條邊存在)。 每次操作完後輸出當前連通塊數量。
 $1 \le N \le 5e5$ $M+Q \le 5e5$ $0 \le A_i,B_i \le N-1$ $A_i \neq B_i$ 輸入： 第一行有一個數字T代表測資筆數。
 每筆測資第1行有3個整數N、M、Q。
