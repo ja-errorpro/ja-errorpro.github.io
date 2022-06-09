@@ -20,4 +20,6 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 底線命令模式: 切換方式:按下:,可輸入指令操作內容,
 離開: :q
 強制離開: :q!
-存檔不離開: :w</description></item></channel></rss>
+存檔不離開: :w
+強制存檔不離開: :w!
+存檔並離開: :wq</description></item></channel></rss>
