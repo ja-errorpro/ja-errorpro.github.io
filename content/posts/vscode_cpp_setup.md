@@ -48,7 +48,7 @@ Windows設定 -> 系統 -> 裝置規格 -> 進階系統設定 -> 環境變數 ->
 "code-runner.executorMap":{
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
 	"cpp": "cd $dir && g++ -std=c++20 -Ofast $fileName  -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-},
+}, // 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,...)
 "code-runner.runInTerminal": true, //此行決定是否讓code runner在終端機執行，沒有這行的話會無法讓使用者輸入任何東西
 "code-runner.saveFileBeforeRun": true, //是否在執行前先存檔
 "C_Cpp.default.compilerPath": "<編譯器路徑/bin/g++.exe>", // 請修改成g++.exe的路徑
