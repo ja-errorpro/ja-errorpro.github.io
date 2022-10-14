@@ -68,8 +68,9 @@ Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就�
 (3) container_name: 給容器隨便取一個名字
 (4) TZ: Timezone時區</description></item><item><title>About</title><link>/about/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>/about/</guid><description>我是誰 黃乙家 weak
 來自雲林的普通人
-DP好難哦
-IG: cannot.load_connection.refused</description></item><item><title>區間詢問比K小的數量</title><link>/posts/2021/mergesorttree/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/mergesorttree/</guid><description>今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
+資工小廢物
+IG: cannot.load_connection.refused
+神秘的終端</description></item><item><title>區間詢問比K小的數量</title><link>/posts/2021/mergesorttree/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/mergesorttree/</guid><description>今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
 所以來刻點線段樹緩下心情(?
 順便測試一下在網站中使用 $ \LaTeX $
 先要基礎： 線段樹、二分搜、排序
