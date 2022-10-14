@@ -25,7 +25,7 @@ IG: cannot.load_connection.refused
 
 {{< adiv >}}
 <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/base64.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script src="/js/a_secret_script.js"></script>
 <input type="text" id="input" name="input" maxlength="100" size="30">
 <input type="button" value="送出" id="submit" onclick="on_bt_clicked()">
