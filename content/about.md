@@ -12,6 +12,21 @@ keywords:
 
 來自雲林的普通人
 
-DP好難哦
+資工小廢物
+
+
 
 IG: cannot.load_connection.refused
+
+
+---
+
+神秘的終端
+
+{{< adiv >}}
+<script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/base64.min.js"></script>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+<script src="/js/a_secret_script.js"></script>
+<input type="text" id="input" name="input" maxlength="100" size="30">
+<input type="button" value="送出" id="submit" onclick="on_bt_clicked()">
+{{< /adiv >}}
