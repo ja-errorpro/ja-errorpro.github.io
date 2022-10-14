@@ -4,9 +4,7 @@ function on_bt_clicked() {
 	var input = document.getElementsByName("input")[0];
 	let text = input.value;
 	text = Base64.encode(text);
-	console.log(text);
 	text = md5(text);
-	console.log(text);
 	
 	if(text==encryptedflag){
 		alert("Congrats! You got the flag!");
