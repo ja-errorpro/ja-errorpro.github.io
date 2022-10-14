@@ -9,7 +9,7 @@ function on_bt_clicked() {
 	if(text==encryptedflag){
 		alert("Congrats! You got the flag!");
 	}else{
-		alert("Wrong!");
+		alert("no such file, directory, or command ...");
 	}
 	
 
