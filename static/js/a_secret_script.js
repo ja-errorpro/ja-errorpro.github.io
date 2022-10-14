@@ -7,7 +7,8 @@ function on_bt_clicked() {
 	text = md5(text);
 	
 	if(text==encryptedflag){
-		alert("Congrats! You got the flag!");
+		
+		alert("Cool! You find a flag!");
 	}else{
 		alert("no such file, directory, or command ...");
 	}
