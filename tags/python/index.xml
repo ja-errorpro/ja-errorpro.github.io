@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on ErrorPro</title><link>/tags/python/</link><description>Recent content in python on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python遊戲設計</title><link>/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate><guid>/posts/2021/pythongame/</guid><description>FOR Python遊戲設計 檔案庫: Here
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on ErrorPro</title><link>/tags/python/</link><description>Recent content in python on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
+簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。
+先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)
+Python官網
+安裝 dcpi(以編寫此篇文時的版本為主)
+dcpi Pypi
+1$ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
+我們先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人
+然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。
+1# 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 2import interactions 3 4# 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token 5bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) 6 7# 啟動機器人 8bot.start() 接著執行它
+1$ python3 bot.py 這樣我們的機器人就成功上線了
+第一個斜線指令 修改程式碼
+1import interactions 2 3bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) 4 5@bot.command( # 這個在Python中被稱為 decorator，它會告訴Discord API需要創建一個指令 6 name = &amp;#34;sayHello&amp;#34;, # 指令的名字，會決定 (/) 後面要接什麼 7 description=&amp;#34;說你好&amp;#34; # 描述這個指令的功能 8) 9# 函數前面加個async就叫命令協程，必須放在decorator下面， 10# 如果decorator從DiscordAPI收到相關事件就會呼叫 11async def say_Hello(ctx: interactions.</description></item><item><title>Python遊戲設計</title><link>/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate><guid>/posts/2021/pythongame/</guid><description>FOR Python遊戲設計 檔案庫: Here
 Python程式列表(全自寫): LIST
 Cocos2d: Docs
 第一堂: IDE: pycharm CE, Module: cocos2d 彭彭-Python程式設計入門
