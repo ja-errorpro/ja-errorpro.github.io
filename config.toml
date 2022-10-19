@@ -96,8 +96,14 @@ weight = 6
     [[params.social]]
     name = "facebook"
     link = "https://www.facebook.com/errorpro05"
+	[[params.social]]
+    name = "instagram"
+    link = "https://www.instagram.com/cannot.load_connection.refused/"
+	[[params.social]]
+	name = "github"
+	link = "https://github.com/ja-errorpro"
     [[params.social]]
-    name = "ice-cream"
+    name = "question"
     link = "https://bit.ly/3D66h7j"
     [[params.social]]
     name = "email"
