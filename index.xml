@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>/</link><description>Recent content on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>/</link><description>Recent content on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 21 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>/about/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>/about/</guid><description>我是誰 黃乙家 weak
+現在是待在CYCU ICE的
+小廢物
+IG: cannot.load_connection.refused
+神秘的終端
+你可以試試輸入 YI_JIA{this_is_so_cool}
+沒用嗎？要不要換個瀏覽器試試看？</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
 簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。
 先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)
 Python官網
@@ -78,13 +84,7 @@ Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就�
 先開一個資料夾名為CodeServer，這是伺服器的根目錄 新增一個檔案，檔名為docker-compose.yml 編輯檔案，貼上這些： 1version: &amp;#34;2.1&amp;#34; 2services: 3 code-server: 4 image: codercom/code-server 5 container_name: code-server 6 environment: 7 - TZ=ASIA/TAIPEI 8 - PASSWORD=&amp;lt;設定進入伺服器的密碼&amp;gt; 9 - SUDO_PASSWORD=&amp;lt;設定Root權限的密碼&amp;gt; 10 volumes: 11 - ./appdata/code-server/project:/home/coder/project 12 - ./appdata/code-server/.local:/home/coder/.local 13 ports: 14 - &amp;lt;PORT&amp;gt;:8080 15 restart: always (1) version: 不用動他
 (2) image: 指定目標映像，Docker會試著到上面給的網站找尋映像檔
 (3) container_name: 給容器隨便取一個名字
-(4) TZ: Timezone時區</description></item><item><title>About</title><link>/about/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>/about/</guid><description>我是誰 黃乙家 weak
-來自雲林的普通人
-資工小廢物
-IG: cannot.load_connection.refused
-神秘的終端
-你可以試試輸入 YI_JIA{this_is_so_cool}
-沒用嗎？要不要換個瀏覽器試試看？</description></item><item><title>區間詢問比K小的數量</title><link>/posts/2021/mergesorttree/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/mergesorttree/</guid><description>今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
+(4) TZ: Timezone時區</description></item><item><title>區間詢問比K小的數量</title><link>/posts/2021/mergesorttree/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/2021/mergesorttree/</guid><description>今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
 所以來刻點線段樹緩下心情(?
 順便測試一下在網站中使用 $ \LaTeX $
 先要基礎： 線段樹、二分搜、排序
