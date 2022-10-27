@@ -30,13 +30,13 @@ tags:
 
 [請到這個網站](https://winlibs.com/)
 
-下載編譯器(視個人需求選擇一種編譯器)，並解壓到任意空間
+下載編譯器(視個人需求選擇一種編譯器)，並解壓到任意空間，(ex: `C:/`)
 
 ### 三、設定環境變數
 
-Windows設定 -> 系統 -> 裝置規格 -> 進階系統設定 -> 環境變數 -> 系統變數
+Windows設定 -> 系統 -> 裝置規格 -> 進階系統設定 -> 環境變數 -> 系統變數(使用者環境變數)
 
-在變數名 Path 中添加路徑(剛剛載的編譯器路徑/bin/)
+在變數名 Path 中添加路徑(剛剛解壓到的路徑/bin/)
 
 完成後打開cmd(命令提示字元)或Terminal，輸入 `gcc -v`，如果成功的話就會在最後一行看到 `gcc version 12.1.0` 字樣。
 
@@ -47,7 +47,7 @@ Windows設定 -> 系統 -> 裝置規格 -> 進階系統設定 -> 環境變數 ->
 ```json
 "code-runner.executorMap":{
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-	"cpp": "cd $dir && g++ -std=c++20 -Ofast $fileName  -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+	"cpp": "cd $dir && g++ -std=c++11 -O2 $fileName  -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
 }, // 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,...)
 "code-runner.runInTerminal": true, //此行決定是否讓code runner在終端機執行，沒有這行的話會無法讓使用者輸入任何東西
 "code-runner.saveFileBeforeRun": true, //是否在執行前先存檔
