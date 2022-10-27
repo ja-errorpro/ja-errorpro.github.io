@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C-Cpp on ErrorPro</title><link>/tags/c-cpp/</link><description>Recent content in C-Cpp on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 11 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/c-cpp/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode設定C++教學(Code Runner)</title><link>/posts/2022/vscode_cpp_setup/</link><pubDate>Sun, 11 Sep 2022 00:00:00 +0000</pubDate><guid>/posts/2022/vscode_cpp_setup/</guid><description>遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。
 前置 環境(以撰寫此篇文時的環境為主)： Windows 11(64 bit) 22H2 Visual Studio Code 1.71 7-Zip 目標 配置GCC 12 MinGW-w64 不含Clang 之編譯器 成功在VSCode裡編譯並執行一支C/C++程式 過程 一、安裝延伸模組： C/C++、Code Runner 二、下載編譯器：範例為GCC 12.2.0 + MinGW-w64 10.0.0 without Clang 請到這個網站
-下載編譯器(視個人需求選擇一種編譯器)，並解壓到任意空間
-三、設定環境變數 Windows設定 -&amp;gt; 系統 -&amp;gt; 裝置規格 -&amp;gt; 進階系統設定 -&amp;gt; 環境變數 -&amp;gt; 系統變數
-在變數名 Path 中添加路徑(剛剛載的編譯器路徑/bin/)
+下載編譯器(視個人需求選擇一種編譯器)，並解壓到任意空間，(ex: C:/)
+三、設定環境變數 Windows設定 -&amp;gt; 系統 -&amp;gt; 裝置規格 -&amp;gt; 進階系統設定 -&amp;gt; 環境變數 -&amp;gt; 系統變數(使用者環境變數)
+在變數名 Path 中添加路徑(剛剛解壓到的路徑/bin/)
 完成後打開cmd(命令提示字元)或Terminal，輸入 gcc -v，如果成功的話就會在最後一行看到 gcc version 12.1.0 字樣。
 四、設定VSCode 打開VSCode，點擊左下角齒輪，然後找到右上角功能欄中的 開啟設定(JSON)，在最外面的{}裡貼上以下範例設定
-1&amp;#34;code-runner.executorMap&amp;#34;:{ 2 &amp;#34;c&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; gcc $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34;, 3 &amp;#34;cpp&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; g++ -std=c++20 -Ofast $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34; 4}, // 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,.</description></item><item><title>C++筆記-語法</title><link>/posts/1/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
+1&amp;#34;code-runner.executorMap&amp;#34;:{ 2 &amp;#34;c&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; gcc $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34;, 3 &amp;#34;cpp&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; g++ -std=c++11 -O2 $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34; 4}, // 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,.</description></item><item><title>C++筆記-語法</title><link>/posts/1/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
 程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
 在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
 要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
