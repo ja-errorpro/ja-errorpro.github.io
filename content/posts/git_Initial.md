@@ -45,19 +45,19 @@ $ sudo apt install git -y
 ```bash
 $ git config --global user.name "你的名字"
 $ git config --global user.email "你的Email"
-$ git config --global core.editor "你的編輯器" ## 預設為vim
+$ git config --global core.editor "你的編輯器" # 預設為vim
 
-## --global 如果省略，將只對這個Repo有效
+# --global 如果省略，將只對這個Repo有效
 ```
 
 ## 建立全新的Repo
 我們一步一步慢慢來，先在家目錄建立一個空的資料夾
 
 ```bash
-$ cd ~ ## 切換到家目錄
-$ mkdir git-test ## 建立資料夾名為git-test
-$ cd git-test ## 切換到git-test資料夾
-$ git init ## 初始化，讓Git對這個目錄進行版本控制
+$ cd ~ # 切換到家目錄
+$ mkdir git-test # 建立資料夾名為git-test
+$ cd git-test # 切換到git-test資料夾
+$ git init # 初始化，讓Git對這個目錄進行版本控制
 ```
 
 沒有問題的話你應該會看到
@@ -91,7 +91,7 @@ nothing to commit
 
 ### 編輯檔案
 ```bash
-$ touch README.md  ## 建立一個名為README.md的檔案
+$ touch README.md  # 建立一個名為README.md的檔案
 ```
 
 接著看自己習慣想用什麼編輯器編輯(Linux可用 vi/vim/nano)，以vim為例
@@ -133,7 +133,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### 給Git管理檔案
 ```bash
-$ git add README.md ## 將README.md加入暫存區
+$ git add README.md # 將README.md加入暫存區
 ```
 
 如果想要一次加入大量.md檔案，可以使用`git add *.md`
@@ -160,7 +160,7 @@ Changes to be committed:
 
 ### 存檔
 ```bash
-$ git commit -m "Initial commit" ## 將檔案提交到Local Repo，-m後面是備註
+$ git commit -m "Initial commit" # 將檔案提交到Local Repo，-m後面是備註
 ```
 
 注意備註內容如果要給別人看，盡量簡潔明瞭，讓別人能快速理解這個commit的目的。
