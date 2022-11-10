@@ -9,4 +9,4 @@ unlisted: true
 * [基礎/初階資料結構](/posts/1/algo-basic-structure/)
 * [速度優化](/posts/1/algo-io/)
 * [排序](/posts/1/algo-sorting/)
-
+* [數論](/posts/1/algo-number-theory/)
