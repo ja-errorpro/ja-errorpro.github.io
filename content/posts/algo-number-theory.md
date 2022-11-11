@@ -124,7 +124,7 @@ tuple<int,int,int> ExtGcd(int a,int b){
 }
 ```
 
-如果怕麻煩當然也可以寫成迴圈，或是用 reference 傳x,y
+如果怕麻煩當然也可以寫成迴圈，或是用 reference 傳 x,y
 
 ### 質數
 
