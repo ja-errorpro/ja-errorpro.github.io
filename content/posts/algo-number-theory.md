@@ -117,7 +117,7 @@ $(x_1,y_1)=(y_2,x_2 - \lfloor \frac{a}{b} \rfloor y_2)$
 ```cpp
 // 回傳 (d,x,y) 滿足 ax+by=gcd(a,b) = d
 tuple<int,int,int> ExtGcd(int a,int b){
-    if(!b) return make_tuple(a,1,0)
+    if(!b) return make_tuple(a,1,0);
     int d,x,y;
     tie(d,x,y) = ExtGcd(b,a%b);
     return make_tuple(d,y,x-(a/b)*y);
