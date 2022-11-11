@@ -4,13 +4,13 @@
 Python官網
 安裝 dcpi(以編寫此篇文時的版本為主)
 dcpi Pypi
-1$ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
+1 $ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
 我們先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人
 然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。
-1# 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 2import interactions 3 4# 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token 5bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) 6 7# 啟動機器人 8bot.start() 接著執行它
-1$ python3 bot.py 這樣我們的機器人就成功上線了
+1 2 3 4 5 6 7 8 # 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 import interactions # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) # 啟動機器人 bot.start() 接著執行它
+1 $ python3 bot.py 這樣我們的機器人就成功上線了
 第一個斜線指令 修改程式碼
-1import interactions 2 3bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) 4 5@bot.command( # 這個在Python中被稱為 decorator，它會告訴Discord API需要創建一個指令 6 name = &amp;#34;sayHello&amp;#34;, # 指令的名字，會決定 (/) 後面要接什麼 7 description=&amp;#34;說你好&amp;#34; # 描述這個指令的功能 8) 9# 函數前面加個async就叫命令協程，必須放在decorator下面， 10# 如果decorator從DiscordAPI收到相關事件就會呼叫 11async def say_Hello(ctx: interactions.</description></item><item><title>Python遊戲設計</title><link>/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate><guid>/posts/2021/pythongame/</guid><description>FOR Python遊戲設計 檔案庫: Here
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import interactions bot = interactions.</description></item><item><title>Python遊戲設計</title><link>/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate><guid>/posts/2021/pythongame/</guid><description>FOR Python遊戲設計 檔案庫: Here
 Python程式列表(全自寫): LIST
 Cocos2d: Docs
 第一堂: IDE: pycharm CE, Module: cocos2d 彭彭-Python程式設計入門

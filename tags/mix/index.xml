@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mix on ErrorPro</title><link>/tags/mix/</link><description>Recent content in mix on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/mix/index.xml" rel="self" type="application/rss+xml"/><item><title>中原111資工計概上學期期中機測</title><link>/posts/2022/cycu_cal111_midterm/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate><guid>/posts/2022/cycu_cal111_midterm/</guid><description>(本人已放棄思考) 答案僅供參考 答案僅供參考 答案僅供參考 鬼才知道是不是正解 pA 實作NotLetter(char ch) function，如果ch不是字母就回傳true，反則false。
-1bool NotLetter(char ch){ 2 if(ch &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;z&amp;#39;) 3 return false; 4 if(ch &amp;gt;= &amp;#39;A&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;Z&amp;#39;) 5 return false; 6 return true; 7} 補：事實上在 ctype.h已經有 isalpha() 可使用，但這裡不允許include其他東西。
+1 2 3 4 5 6 7 bool NotLetter(char ch){ if(ch &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;z&amp;#39;) return false; if(ch &amp;gt;= &amp;#39;A&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;Z&amp;#39;) return false; return true; } 補：事實上在 ctype.h已經有 isalpha() 可使用，但這裡不允許include其他東西。
 pB 實作MonotonicIncreasing() function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增則回傳false，否則或如果只有一個數則回傳true。
-1bool MonotonicIncreasing(){ 2 int n; 3 scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); 4 while(n!=-99999){ 5 int m; 6 scanf(&amp;#34;%d&amp;#34;, &amp;amp;m); 7 if(m &amp;lt; n &amp;amp;&amp;amp; m != -99999) 8 return false; 9 n = m; 10 } 11 return true; 12} pC 實作MonotonicSeries() function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。</description></item><item><title>【Git】Git分支的打開方式</title><link>/posts/2022/git_branch/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/git_branch/</guid><description>當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。
+1 2 3 4 5 6 7 8 9 10 11 12 bool MonotonicIncreasing(){ int n; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); while(n!=-99999){ int m; scanf(&amp;#34;%d&amp;#34;, &amp;amp;m); if(m &amp;lt; n &amp;amp;&amp;amp; m !</description></item><item><title>【Git】Git分支的打開方式</title><link>/posts/2022/git_branch/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/git_branch/</guid><description>當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。
 初始化Local Repo 詳見 上一篇文章
-查看現在有哪些分支 1$ git branch Output:
-1* master 新增分支 1$ git branch main 這樣就會新增一個名為main的分支，但是還沒有切換到該分支，所以還是在master分支上。
-重新命名分支 1$ git branch -M cool # 將目前分支重新命名為cool 或者
-1$ git branch -m main cool # 將main分支重新命名為cool分支 刪除分支 1$ git branch -d main # 刪除main分支 這時候可能會看到 error: The branch 'main' is not fully merged，因為main還沒被合併，不給刪除
+查看現在有哪些分支 1 $ git branch Output:
+1 * master 新增分支 1 $ git branch main 這樣就會新增一個名為main的分支，但是還沒有切換到該分支，所以還是在master分支上。
+重新命名分支 1 $ git branch -M cool # 將目前分支重新命名為cool 或者
+1 $ git branch -m main cool # 將main分支重新命名為cool分支 刪除分支 1 $ git branch -d main # 刪除main分支 這時候可能會看到 error: The branch 'main' is not fully merged，因為main還沒被合併，不給刪除
 可以使用 -D 強制刪除
-1$ git branch -D main 切換分支 1$ git checkout main 如果分支不存在，可以使用 -b 來建立並切換到該分支
-1$ git checkout -b main 合併分支 假設在main分支上做了修改並commit後，要合併到master分支上</description></item><item><title>【Git】Git初始設定與環境</title><link>/posts/2022/git_initial/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/git_initial/</guid><description>What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。
+1 $ git branch -D main 切換分支 1 $ git checkout main 如果分支不存在，可以使用 -b 來建立並切換到該分支</description></item><item><title>【Git】Git初始設定與環境</title><link>/posts/2022/git_initial/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/git_initial/</guid><description>What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。
 分散式與中央式版控系統 中央式版控系統 需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用
 分散式版控系統 即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。
 Git環境 Local Repo 我們在修改完檔案後，透過git add 將檔案加入暫存區，再透過git commit將檔案加入Local Repo。
@@ -19,19 +18,19 @@ Git for Windows
 安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
 這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
 Linux 非常簡單，打開你的終端機
-1$ sudo apt update 2$ sudo apt install git -y 初始設定 1$ git config --global user.name &amp;#34;你的名字&amp;#34; 2$ git config --global user.email &amp;#34;你的Email&amp;#34; 3$ git config --global core.</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
+1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
 簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。
 先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)
 Python官網
 安裝 dcpi(以編寫此篇文時的版本為主)
 dcpi Pypi
-1$ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
+1 $ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
 我們先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人
 然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。
-1# 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 2import interactions 3 4# 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token 5bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) 6 7# 啟動機器人 8bot.start() 接著執行它
-1$ python3 bot.py 這樣我們的機器人就成功上線了
+1 2 3 4 5 6 7 8 # 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 import interactions # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) # 啟動機器人 bot.start() 接著執行它
+1 $ python3 bot.py 這樣我們的機器人就成功上線了
 第一個斜線指令 修改程式碼
-1import interactions 2 3bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;) 4 5@bot.command( # 這個在Python中被稱為 decorator，它會告訴Discord API需要創建一個指令 6 name = &amp;#34;sayHello&amp;#34;, # 指令的名字，會決定 (/) 後面要接什麼 7 description=&amp;#34;說你好&amp;#34; # 描述這個指令的功能 8) 9# 函數前面加個async就叫命令協程，必須放在decorator下面， 10# 如果decorator從DiscordAPI收到相關事件就會呼叫 11async def say_Hello(ctx: interactions.</description></item><item><title>Vim 極簡教學</title><link>/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>/posts/2022/vim_simple_tutorial/</guid><description>簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import interactions bot = interactions.</description></item><item><title>Vim 極簡教學</title><link>/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>/posts/2022/vim_simple_tutorial/</guid><description>簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
 起步 若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；
 如果不存在，就會在儲存後新建一個。
 模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式
@@ -68,7 +67,7 @@ P: 你還有報哪些科系，如果都上會選哪間
 我回答比較保守，把每間優點都講出來後說再考慮</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>/posts/2022/codeserver/</guid><description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~
 先備條件： 會用Windows跟Ubuntu Docker以及容器的基礎操作 參考資源： codercom/Code-server
 本文所用配備及版本： 物理機環境： Windows 11 Pro 21H2 Code Server版本： v4.0.2 步驟 (這裡省略前面Docker的安裝步驟)
-先開一個資料夾名為CodeServer，這是伺服器的根目錄 新增一個檔案，檔名為docker-compose.yml 編輯檔案，貼上這些： 1version: &amp;#34;2.1&amp;#34; 2services: 3 code-server: 4 image: codercom/code-server 5 container_name: code-server 6 environment: 7 - TZ=ASIA/TAIPEI 8 - PASSWORD=&amp;lt;設定進入伺服器的密碼&amp;gt; 9 - SUDO_PASSWORD=&amp;lt;設定Root權限的密碼&amp;gt; 10 volumes: 11 - ./appdata/code-server/project:/home/coder/project 12 - ./appdata/code-server/.local:/home/coder/.local 13 ports: 14 - &amp;lt;PORT&amp;gt;:8080 15 restart: always (1) version: 不用動他
+先開一個資料夾名為CodeServer，這是伺服器的根目錄 新增一個檔案，檔名為docker-compose.yml 編輯檔案，貼上這些： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 version: &amp;#34;2.1&amp;#34; services: code-server: image: codercom/code-server container_name: code-server environment: - TZ=ASIA/TAIPEI - PASSWORD=&amp;lt;設定進入伺服器的密碼&amp;gt; - SUDO_PASSWORD=&amp;lt;設定Root權限的密碼&amp;gt; volumes: - ./appdata/code-server/project:/home/coder/project - ./appdata/code-server/.local:/home/coder/.local ports: - &amp;lt;PORT&amp;gt;:8080 restart: always (1) version: 不用動他
 (2) image: 指定目標映像，Docker會試著到上面給的網站找尋映像檔
 (3) container_name: 給容器隨便取一個名字
 (4) TZ: Timezone時區</description></item></channel></rss>
