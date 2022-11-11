@@ -64,8 +64,65 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 
 另外要注意的則是溢值，如果有加法或乘法時建議先mod後再加乘。
 
+## 快速幂取模
 
-## 最大公因數與質數
+當我們想快速計算 $a^n\ mod\ m$ 時，利用快速冪可以在 $O(logn)$ 的時間內完成。
+
+### 快速冪
+
+在計算 $a^n$ 時，可以透過遞迴的概念，先算出 $a^n-1$ ，然後乘上 $a$，
+
+而快速冪是將 $a^n$ 拆成 $a^\frac{n}{2} \times a^\frac{n}{2}$，如果 $n$ 是奇數就拆成 $a * a^{\lfloor \frac{n}{2}\rfloor } \times a^{\lfloor \frac{n}{2}\rfloor }$，這樣下去遞迴，便可以從 $O(n)$ 降到 $O(log\ n)$
+
+#### 遞迴版本
+
+```cpp
+#define ll long long
+// 快速冪(不取模)
+ll fast_pow(ll a, ll n){ // 遞迴版
+    if(!n) return 1;
+    if(n&1) return fast_pow(a,n-1) * a;
+    else {
+        ll r = fast_pow(a,n/2);
+        return r * r; 
+    }
+    // 注意不要直接return fast_pow() * fast_pow();
+    // 否則會多算一次讓複雜度退化為 O(n)
+}
+ll fast_pow2(ll a, ll n){ // 迴圈版
+    ll ret = 1;
+    while(n){
+        if(n&1) ret *= a;
+        n >>= 1;
+        a *= a;
+    }
+}
+```
+
+而為了防止溢位，我們先模再乘然後再模
+
+```cpp
+#define ll long long
+// 快速冪取模
+ll fast_pow_mod(ll a, ll n, ll m){ // 遞迴版
+    if(!n) return 1;
+    if(n&1) return fast_pow(a,n-1) * a % m;
+    else {
+        ll r = fast_pow(a,n/2) % m;
+        return r * r % m; 
+    }
+}
+ll fast_pow_mod2(ll a, ll n, ll m){ // 迴圈版
+    ll ret = 1;
+    while(n){
+        if(n&1) ret = ret * a % m;
+        n >>= 1;
+        a = a * a % m;
+    }
+}
+```
+
+## 最大公因數
 
 ### 因數
 
@@ -124,10 +181,110 @@ tuple<int,int,int> ExtGcd(int a,int b){
 }
 ```
 
-如果怕麻煩當然也可以寫成迴圈，或是用 reference 傳 x,y
+如果怕麻煩當然也可以寫成迴圈，或是用 reference 傳 $x,y$
 
-### 質數
+## 質數
 
 如果 $p$ 的正因數只有 $1$ 和 $p$，則可說 $p$ 為質數。
 
-...以下未完成
+現在我們寫一個很基本但暴力的質數判斷，複雜度 $O(n)$
+
+```cpp
+bool isPrime(int n){
+    if(n<2) return false;
+    for(int i=2;i<=n;i++)
+        if(n%i==0) return false;
+    return true;
+}
+```
+
+為了提高效率，其實只要判斷到 $\sqrt{n}$ 就好，複雜度 $O(\sqrt{n})$
+
+```cpp
+bool isPrime(int n){
+    if(n<2) return false;
+    for(int i=2;i*i<=n;i++)
+        if(n%i==0) return false;
+    return true;
+}
+```
+
+而另一種經典寫法就是 埃拉托斯特尼篩法(Eratosthenes)，複雜度 $O(n\log\log n)$
+
+```cpp
+bool isPrime[N];
+void eratosthenes(){
+    fill(isPrime,isPrime+N,true);
+    isPrime[0] = isPrime[1] = false;
+    for(int i=2;i*i<N;i++){
+        if(isPrime[i]){
+            for(int j=i*i;j<N;j+=i)
+                isPrime[j] = false;
+        }
+    }
+}
+```
+
+但埃氏篩法有個問題是一個合數可能會被很多質數檢查，我們想要它只會被最小的質因數篩到。我們枚舉每個數，如果它沒被篩掉，就丟進質數表，然後枚舉質數表，把質數表的每個質數乘上這個數，並且把它標記為已經被篩掉，這樣就可以保證每個合數只會被最小的質因數篩到。
+
+此算法的複雜度為 $O(n)$，而且可以順便算出每個數的最小質因數，
+
+稱為線性篩法，在之後的歐拉函數與Mobius函數之類的積性函數可以使用。
+
+```cpp
+int minPrime[N];
+vector<int> primes;
+void linearSieve(){
+    for(int i=2;i<N;i++){
+        if(!minPrime[i]){
+          primes.push_back(i);
+          minPrime[i] = i;
+        }
+        for(int p:primes){
+            if(i*p>=N) break;
+            minPrime[i*p] = p;
+            if(i%p==0) break;
+        }
+    }
+}
+```
+
+## 中國剩餘定理
+
+<<孫子算經>>：`有物不知其數，三三數之賸二，五五數之賸三，七七數之賸二，問物幾何？` 
+
+翻成白話文就是求 $x$ 滿足 
+
+$$ \left\\{ \begin{aligned} x \equiv 2 \pmod 3 \\\ x \equiv 3 \pmod 5 \\\ x \equiv 2 \pmod 7 \end{aligned} \right. $$
+
+而這題不只有一個答案
+
+### 解法
+
+假設 $x = a + b + c$，滿足
+
+$$ \left\\{ \begin{aligned} a \equiv 2 \pmod 3 \\\ a \equiv 0 \pmod 5 \\\ a \equiv 0 \pmod 7 \end{aligned} \right. $$
+
+$$ \left\\{ \begin{aligned} b \equiv 0 \pmod 3 \\\ b \equiv 3 \pmod 5 \\\ b \equiv 0 \pmod 7 \end{aligned} \right. $$
+
+$$ \left\\{ \begin{aligned} c \equiv 0 \pmod 3 \\\ c \equiv 0 \pmod 5 \\\ c \equiv 2 \pmod 7 \end{aligned} \right. $$
+
+可以發現 $a$ 是 $5$ 跟 $7$ 的公倍數，
+$b$ 是 $3$ 跟 $7$ 的公倍數，
+$c$ 是 $3$ 跟 $5$ 的公倍數，
+
+$a = 35p \equiv 2 \pmod 3$，$p$ 可為 $1$，
+$b = 21q \equiv 3 \pmod 5$，$q$ 可為 $3$，
+$c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
+
+因此 $x$ 其中一解為 $35 \times 1 + 21 \times 3 + 15 \times 2 = 128$，
+
+而我們想找通解，就取 3 5 7 的最小公倍數 105 乘上參數 t，
+
+通解為 $128+105t$，
+
+當 t=-1 時，$x = 23$ 為最小解。
+
+### 主定理
+
+如果 $m = m_1m_2...m_n$ 且 $m_1$ 到 $m_n$ 兩兩互質，而一定有 $x$ 滿足 $x \equiv x_i \pmod {m_i}, \forall 1 \le i \le k$
