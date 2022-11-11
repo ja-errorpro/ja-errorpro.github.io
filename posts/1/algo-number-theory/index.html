@@ -87,6 +87,7 @@
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff79c6>#define ll long long
 </span></span></span><span style=display:flex><span><span style=color:#ff79c6></span><span style=color:#6272a4>// 快速冪取模
 </span></span></span><span style=display:flex><span><span style=color:#6272a4></span>ll <span style=color:#50fa7b>fast_pow_mod</span>(ll a, ll n, ll m){ <span style=color:#6272a4>// 遞迴版
@@ -104,6 +105,7 @@
 </span></span><span style=display:flex><span>        n <span style=color:#ff79c6>&gt;&gt;=</span> <span style=color:#bd93f9>1</span>;
 </span></span><span style=display:flex><span>        a <span style=color:#ff79c6>=</span> a <span style=color:#ff79c6>*</span> a <span style=color:#ff79c6>%</span> m;
 </span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> ret;
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></td></tr></table></div></div><h2 id=最大公因數>最大公因數</h2><h3 id=因數>因數</h3><p>如果 $ a\ |\ b $，稱 $a$ 為 $b$ 的因數。</p><h3 id=公因數與最大公因數gcd>公因數與最大公因數(GCD)</h3><p>如果 $k\ |\ a$ 且 $k\ |\ b$，則 $k$ 為 $a$ 和 $b$ 的公因數。</p><p>而如果這個 $k$ 是最大的就稱 $k$ 為最大公因數，記為 $gcd(a,b)$ 。</p><h3 id=最大公因數性質>最大公因數性質</h3><ol><li>結合律 $gcd(a,gcd(b,c)) = gcd(gcd(a,b),c)$</li><li>交換律 $gcd(a,b) = gcd(b,a)$</li><li>$gcd(a,0) = |a|$</li><li>$gcd(a,b) = gcd(a,b-a) = gcd(a,b\ mod\ a)$</li></ol><h3 id=找到最大公因數>找到最大公因數</h3><p>利用上面GCD性質的3,4，可以輕鬆算出最大公因數，即歐幾里得算法，或稱輾轉相除法，複雜度 $O(log(min(a,b)))$</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
