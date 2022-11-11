@@ -108,7 +108,7 @@ int gcd(int a,int b){
 
 改寫成 $ax_1 + by_1 = bx_2 + (a - \lfloor \frac{a}{b} \rfloor b )y_2$，
 
-化簡後得 $ax_1 + by_1 = ay_2 + b(x_2 - \lfloor \frac{a}{b} \rfloor y_2 )$，
+化簡後得 $ax_1 + by_1 = ay_2 + b(x_2 - \lfloor \frac{a}{b} \rfloor y_2 ) $，
 
 $(x_1,y_1)=(y_2,x_2 - \lfloor \frac{a}{b} \rfloor y_2)$
 
