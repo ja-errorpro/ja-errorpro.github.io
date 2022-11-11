@@ -120,6 +120,7 @@ ll fast_pow_mod2(ll a, ll n, ll m){ // 迴圈版
         n >>= 1;
         a = a * a % m;
     }
+    return ret;
 }
 ```
 
