@@ -96,6 +96,7 @@ ll fast_pow2(ll a, ll n){ // 迴圈版
         n >>= 1;
         a *= a;
     }
+    return ret;
 }
 ```
 
