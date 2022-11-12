@@ -375,7 +375,7 @@ $c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
 
 #### 證明：
 
-反證法，如果有 $ar_i + b \equiv ar_j + b \pmod n$，那麼 $n | a(c_i-c_j)$ ，但 $gcd(a,n)=1$，出現矛盾。
+反證法，如果有 $ar_i + b \equiv ar_j + b \pmod n$，那麼 $n | a(r_i-r_j)$ ，但 $gcd(a,n)=1$，出現矛盾。
 
 ### 簡約(既約)剩餘系 (縮系)
 
