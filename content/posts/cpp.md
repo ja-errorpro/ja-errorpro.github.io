@@ -2,6 +2,7 @@
 title: C++筆記-語法
 tags:
   - C-Cpp
+url: "/posts/cpp/"
 ---
 
 *所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主

@@ -3,6 +3,7 @@ title: 算法筆記-目錄
 tags: 
   - algorithms
 unlisted: true
+url: "/posts/algo-index/"
 ---
 
 * [時間複雜度概述](/posts/1/algo-runtime/)

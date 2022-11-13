@@ -2,8 +2,9 @@
 title: "資源"
 ---
 
-* [C++語法筆記](/posts/1/cpp/)
-* [算法筆記](/posts/1/algo-index/)
+* [C++語法筆記](/posts/cpp/)
+* [算法筆記](/posts/algo-index/)
+* [線性代數筆記](/posts/LinearAlgebra/index/)
 
 解題系統：
 
