@@ -130,7 +130,7 @@ $$ Def:\
 &amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
 &amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
 即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
-&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-目錄</title><link>/posts/1/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-index/</guid><description> 時間複雜度概述 基礎/初階資料結構 速度優化 排序 數論</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/1/algo-segtree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-segtree/</guid><description>回到算法筆記-進階資料結構
+&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-目錄</title><link>/posts/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/algo-index/</guid><description> 時間複雜度概述 基礎/初階資料結構 速度優化 排序 數論</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/1/algo-segtree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-segtree/</guid><description>回到算法筆記-進階資料結構
 線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
 成功實現Sparse Table做不到的事。
 每個節點可以存一種區間的數據(比如區間和)，

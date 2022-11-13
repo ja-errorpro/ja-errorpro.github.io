@@ -194,7 +194,7 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 強制離開: :q!
 存檔不離開: :w
 強制存檔不離開: :w!
-存檔並離開: :wq</description></item><item><title>C++筆記-語法</title><link>/posts/1/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
+存檔並離開: :wq</description></item><item><title>C++筆記-語法</title><link>/posts/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
 程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
 在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
 要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
@@ -282,7 +282,7 @@ $$ Def:\
 &amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
 &amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
 即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
-&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-目錄</title><link>/posts/1/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-index/</guid><description> 時間複雜度概述 基礎/初階資料結構 速度優化 排序 數論</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/1/algo-segtree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-segtree/</guid><description>回到算法筆記-進階資料結構
+&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-目錄</title><link>/posts/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/algo-index/</guid><description> 時間複雜度概述 基礎/初階資料結構 速度優化 排序 數論</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/1/algo-segtree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-segtree/</guid><description>回到算法筆記-進階資料結構
 線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
 成功實現Sparse Table做不到的事。
 每個節點可以存一種區間的數據(比如區間和)，
@@ -290,7 +290,21 @@ $$ Def:\
 左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
 通常，線段樹會開4倍大
 1 int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
-1 2 3 4 5 6 7 8 9 10 11 void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); build(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1 2 3 4 5 6 7 8 int query(int ql,int qr,int l,int r,int index){ if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 1 2 3 4 5 6 7 8 9 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>資源</title><link>/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/resources/</guid><description>C++語法筆記 算法筆記 解題系統：
+1 2 3 4 5 6 7 8 9 10 11 void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); build(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1 2 3 4 5 6 7 8 int query(int ql,int qr,int l,int r,int index){ if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 1 2 3 4 5 6 7 8 9 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>線性代數筆記-消去法</title><link>/posts/LinearAlgebra/linear-elimination-methods/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/LinearAlgebra/linear-elimination-methods/</guid><description>線性代數筆記-目錄
+上一篇-線性方程系統簡介
+高斯消去法(Gaussian elimination) 梯形(Echelon form) 如果有以下性質，稱為簡化列梯形(reduced row-echeleon form)： 若該列並非全為 $0$，則該列第一個非零元素為 $1$(leading 1)。 若該列全為 $0$，則必須被放在矩陣的最下方。 對於連續兩個非零列，較低列的 leading 1 必須在較高列的 leading 1 的右邊。 每一行除了 leading 1 之外，其餘元素皆為 $0$。 如果只滿足前三項，稱為列梯形(row-echeleon form)。 簡化列梯形有列梯形的性質，但不一定相反。 以下為簡化列梯形的例子：
+$ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} $ $ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; a \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; b \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; c \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \end{bmatrix} $</description></item><item><title>線性代數筆記-目錄</title><link>/posts/LinearAlgebra/linear-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/LinearAlgebra/linear-index/</guid><description> 線性方程系統簡介 消去法</description></item><item><title>線性代數筆記-矩陣與矩陣運算</title><link>/posts/LinearAlgebra/linear-matrix-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/LinearAlgebra/linear-matrix-operations/</guid><description>線性代數筆記-目錄
+上一篇-消去法
+矩陣與矩陣運算(Matrices and Matrix Operations) 定義與表示法 矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。 一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n} \\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mn} \end{bmatrix}$。 也可寫成 $[a_{ij}]_{m \times n}$。 $a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。 加減法 如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。 乘法 如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。 如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。 換句話說， $AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]， $AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。 如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。 線性系統的矩陣形式 $$\begin{array}{} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\end{array}$$</description></item><item><title>線性代數筆記-線性方程系統簡介</title><link>/posts/LinearAlgebra/linear-intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/LinearAlgebra/linear-intro/</guid><description>線性代數筆記-目錄
+注意：以下所有行(columns)、列(rows)的定義皆以台灣的表示法為主，即行為直向，列為橫向
+線性方程式 線性方程式 在二維直角座標系中，一個直線方程式可表示為 $ax+by=c$ ($a$, $b$ 不全為 $0$)
+而在三維直角座標系中，一個平面方程式可表示為 $ax+by+cz=d$ ($a$, $b$, $c$ 不全為 $0$)
+所以我們可以將線性方程式一般化，為了表示 $n$ 維 ($n$ 個變數) 的線性方程式，
+將 $n$ 個變數分別表示為 $x_1, x_2, \cdots, x_n$，並將 $n$ 個係數分別表示為 $a_1, a_2, \cdots, a_n$，
+則 $n$ 維線性方程式可表示為 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)
+或是 $ \sum^n_{i=1} a_i x_i = c$。
+如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的齊次線性方程式。
+線性方程系統 線性方程系統 有限個數的線性方程式集合，稱為線性方程系統(system of linear equations)或線性系統(linear system)。</description></item><item><title>資源</title><link>/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/resources/</guid><description>C++語法筆記 算法筆記 線性代數筆記 解題系統：
 TIOJ
 CSES
 ZeroJudge
