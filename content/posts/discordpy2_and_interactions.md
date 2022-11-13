@@ -52,7 +52,8 @@ $ pip3 install discord-py-interactions==4.3.4
 import interactions
 
 # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token
-bot = interactions.Client(token="your-bot-token")
+# 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成
+bot = interactions.Client(token="your-bot-token",intents=interactions.flags.Intents.ALL)
 
 # 啟動機器人
 bot.start()
@@ -75,7 +76,7 @@ $ python3 bot.py
 ```py
 import interactions
 
-bot = interactions.Client(token="your-bot-token")
+bot = interactions.Client(token="your-bot-token",intents=interactions.flags.Intents.ALL)
 
 @bot.command(  # 這個在Python中被稱為 decorator，它會告訴Discord API需要創建一個指令
   name = "sayHello",  # 指令的名字，會決定 (/) 後面要接什麼
@@ -101,7 +102,7 @@ bot.start()
 ```py
 import interactions
 
-bot = interactions.Client(token="your-bot-token")
+bot = interactions.Client(token="your-bot-token",intents=interactions.flags.Intents.ALL)
 
 @bot.command( 
   name = "saySomething", 
@@ -127,7 +128,7 @@ bot.start()
 ```py
 import interactions
 
-bot = interactions.Client(token="your-bot-token")
+bot = interactions.Client(token="your-bot-token",intents=interactions.flags.Intents.ALL)
 
 @interactions.option()
 # 協程名稱會直接當成指令名稱
