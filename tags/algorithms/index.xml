@@ -61,7 +61,14 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。
 定義狀態： $dp_i$ 代表掃到第$i$個數時的LIS長度
 轉移式： $dp_i = max(dp_j\ | j&amp;lt;i \land a_j&amp;lt;i) + 1$ 表示當發現$a_j &amp;lt; a_i$，則LIS長度+1
 邊界狀況： 最小的遞增子列至少為1
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // Top-Down #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int MAXN = 1005 int a[MAXN],dp[MAXN]; int DP(int i){ if(dp[i]&amp;gt;0) return dp[i]; dp[i] = 1; for(int j=0;j&amp;lt;i;++j) if(a[j]&amp;lt;a[i]) dp[i] = max(dp[i],DP(j)+1); return dp[i]; } int main(){ int n; cin &amp;gt;&amp;gt; n; for(int i=0;i&amp;lt;n;++i) cin &amp;gt;&amp;gt; a[i]; int ans = 0; for(int i=0;i&amp;lt;n;++i) ans = max(ans,DP(i)); cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; return 0; } 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 // Buttom-Up #include&amp;lt;bits/stdc++.</description></item><item><title>算法筆記-基本/初階資料結構</title><link>/posts/1/algo-basic-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-basic-structure/</guid><description>算法筆記目錄 基礎資料結構 我們程式想儲存東西有很多種方式，而資料結構就像一種容器，
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // Top-Down #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int MAXN = 1005 int a[MAXN],dp[MAXN]; int DP(int i){ if(dp[i]&amp;gt;0) return dp[i]; dp[i] = 1; for(int j=0;j&amp;lt;i;++j) if(a[j]&amp;lt;a[i]) dp[i] = max(dp[i],DP(j)+1); return dp[i]; } int main(){ int n; cin &amp;gt;&amp;gt; n; for(int i=0;i&amp;lt;n;++i) cin &amp;gt;&amp;gt; a[i]; int ans = 0; for(int i=0;i&amp;lt;n;++i) ans = max(ans,DP(i)); cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; return 0; } 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 // Buttom-Up #include&amp;lt;bits/stdc++.</description></item><item><title>算法筆記-初階資料結構</title><link>/posts/1/algo-primary-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-primary-structure/</guid><description>算法筆記目錄 初階資料結構 1.Segment Tree - 線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，
+左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
+通常，線段樹會開4倍大
+1 int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
+1 2 3 4 5 6 7 8 9 10 11 void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); build(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1 2 3 4 5 6 7 8 int query(int ql,int qr,int l,int r,int index){ if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 1 2 3 4 5 6 7 8 9 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item><item><title>算法筆記-基本資料結構</title><link>/posts/1/algo-basic-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-basic-structure/</guid><description>算法筆記目錄 基礎資料結構 我們程式想儲存東西有很多種方式，而資料結構就像一種容器，
 可以儲存或拿取需要的東西，每種資料結構都有不同的複雜度，
 如果用得好，效率就會高。
 以下都是最基本的資料結構
@@ -130,12 +137,9 @@ $$ Def:\
 &amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
 &amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
 即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
-&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-目錄</title><link>/posts/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/algo-index/</guid><description> 時間複雜度概述 基礎/初階資料結構 速度優化 排序 數論</description></item><item><title>算法筆記-進階資料結構-線段樹</title><link>/posts/1/algo-segtree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-segtree/</guid><description>回到算法筆記-進階資料結構
-線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。
-成功實現Sparse Table做不到的事。
-每個節點可以存一種區間的數據(比如區間和)，
-根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，
-左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。
-通常，線段樹會開4倍大
-1 int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併
-1 2 3 4 5 6 7 8 9 10 11 void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); build(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1 2 3 4 5 6 7 8 int query(int ql,int qr,int l,int r,int index){ if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 1 2 3 4 5 6 7 8 9 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description></item></channel></rss>
+&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-枚舉與搜尋</title><link>/posts/1/algo-enum-and-searching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-enum-and-searching/</guid><description>算法筆記目錄 枚舉與搜尋 枚舉 枚舉，就是把全部或部分可能的情況都列出來，然後一個一個檢查是否符合條件。
+雖然枚舉通常沒辦法在短時間內解決整個問題，但可以透過解決小問題來找到大問題的規律，或是用於檢驗時間複雜度較低的做法是否正確。
+例題 給一正整數 $n$，求 $n$ 的所有因數。
+我們枚舉所有不超過 $n$ 的正整數，檢查每個數字是否為 $n$ 的因數，時間複雜度為 $O(n)$。
+1 2 3 4 5 6 7 long long n; cin &amp;gt;&amp;gt; n; for (long long i = 1; i &amp;lt;= n; i++) { if (n % i == 0) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl; } } 這個方法雖然確實可以求出所有因數，但效率不夠好，考慮 $n$ 的因數都不會超過 $\sqrt{n}$，所以我們只需要枚舉到 $\sqrt{n}$ 即可，時間複雜度 $O(log\ n)$。
+1 2 3 4 5 6 7 8 9 10 long long n; cin &amp;gt;&amp;gt; n; for (long long i = 1; i * i &amp;lt;= n; i++) { if (n % i == 0) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl; if (i * i !</description></item><item><title>算法筆記-目錄</title><link>/posts/algo-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/algo-index/</guid><description> 時間複雜度概述 速度優化 排序 基礎資料結構 枚舉與搜尋 數論 初階資料結構</description></item></channel></rss>
