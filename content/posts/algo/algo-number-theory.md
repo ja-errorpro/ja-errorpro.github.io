@@ -408,6 +408,7 @@ $c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
   1. 如果 $p$ 是質數，則 $\varphi(p) = p-1$。
   2. 如果 $p$ 是質數，則 $\varphi(p^k) = p^{k-1}(p-1)$。
   3. 如果 $m$ 與 $n$ 互質，則 $\varphi(mn) = \varphi(m)\varphi(n)$。
+  4. 模 $n$ 的既約剩餘系大小就是 $\varphi(n)$。
 
 現在把正整數 $n$ 做質因數分解
 
@@ -426,3 +427,8 @@ $$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = 
 # 歐拉定理與費馬小定理皆可處理大數問題
 
 ---
+
+## 原根
+
+對於 gcd(a,n)=1 的正整數 a，如果 d 是最小的正整數，使得 $a^d \equiv 1 \pmod n$，則稱 d 是 a 在模 n 下的階，記做 $ord_n(a)$，且 $ord_n(a)$ 一定 $\le \varphi(n)$，而如果 $ord_n(a) = \varphi(n)$，則稱 a 為模 n 的原根。
+
