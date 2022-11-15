@@ -15,6 +15,3 @@ title: "資源"
 * [Uva](https://onlinejudge.org)
 * [洛谷](https://www.luogu.com.cn)
 
-
-* [自己亂搞的OJ](http://erpro.serveftp.com:180)
-

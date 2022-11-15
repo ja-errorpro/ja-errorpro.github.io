@@ -1,5 +1,5 @@
 ---
-title: 算法筆記-基本/初階資料結構
+title: 算法筆記-基本資料結構
 tags: 
   - algorithms
 keywords:
@@ -254,6 +254,28 @@ void Union(int a,int b){
 }
 ```
 
+最後整個結構程式長這樣：
+```cpp
+const int MAX_N = 1e6+5;
+struct DSU{
+	int dsu[MAX_N];
+	void init(int n){
+		for(int i=0;i<n;i++){
+			dsu[i] = i;
+		}
+	}
+	int query(int index){
+		if(dsu[index] != index){
+			return dsu[index] = query(dsu[index]);
+		}
+		return index;
+	}
+	void Union(int a,int b){
+		dsu[query(a)] = query(b);
+	}
+};
+```
+
 ## 10.BitSet - 位元集  
 
 可以把它當成一個bool array，也可以直接用它把數值轉成二進位形式，  
@@ -283,70 +305,6 @@ void Union(int a,int b){
 如果不填n，則設成1
 ```
 
----
 
-
-# 初階資料結構  
-
-## 1.Segment Tree - 線段樹  
-用法很多，請見[此頁](../algo-segtree)
-
-
-## 2.Fenwick Tree(BIT) - 樹狀數組
-大家都說他是線段樹的精簡版本，因為他實作比較簡單，也更省空間，支援單點加值、前綴求和。
-
-
-時間複雜度為 $O(log(N))$
-
-空間複雜度為 $O(N)$
-
-其運用了一個數字都可以寫成好幾個2的n次方之和，將數進行分段。
-
-BIT最重要的是$lowbit()$函式，表示把某數寫成二進位後，最低位的1所代表的數，
-
-例如： $lowbit(6_{10}) = lowbit(110_2) = 10_2 = 2_{10}$，$lowbit(20_{10}) = lowbit(10100_2) = 100_2 = 4_{10}$
-
-要計算lowbit，可以用 $x \\& (-x)$ 得到，
-
-要計算 $lowbit(20_{10})$，$20$ 寫成二進位為 $10100_2$，$-20_{10}$ 寫成二進位為 $01011_2 + 1_2 = 01100_2$，$20_{10}\\& (-20_{10}) = 10100_2 \\& 01100_2 = 00100_2 = 4_{10}$。
-
-現在我們有一個陣列 $a[1...n]$，我們再建另一個陣列 $T[i] = \sum^i_{j=i-lowbit(i)+1} a[j] $
-
-### 前綴和
-
-想計算 $a[1...20]$ 的和，因為 $T[20] = a[17...20]$，可以遞迴算出 $a[1...16]$ 的和，加上 $T[20]$ 就是答案了。
-
-要算出 $a[1...16]$ 的和，$T[16] = a[1...16]$，是我們已經算好的答案，
-
-最後看起來 $sum(x) = T[x] + sum(x-lowbit(x))$。
-
-
-### 單點加值
-
-如果想在 $a[12]$ 加上 $x$ ，那直接 $T[12] += x$ 就好了，但是 $T[12]$ 會影響到 $T[13...20]$，所以要把 $T[13...20]$ 都更新一次。
-
-最後就是實作了，為了方便，包成struct
-
-```cpp
-struct BIT{
-    int sz;
-    vector<int> T;
-	BIT(int n){
-		sz = n;
-		T.assign(n+1,0);
-	}
-    void update(int i,int x){
-		for(;i<=sz;i+=i&-i) T[i]+=x;
-	}
-	int query(int i){
-		int ans = 0;
-		for(;i;i-=i&-i) ans+=T[i];
-		return ans;
-	}
-
-};
-```
-
-如果要初始化，直接把原陣列一個一個update進去就可以了，時間複雜度為 $O(Nlog(N))$。
 
 
