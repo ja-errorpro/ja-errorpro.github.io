@@ -518,7 +518,9 @@ $$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = 
 
 因為函數可以分解成奇偶函數的和，現在有一個由多個 $cos(x)$ 函數與 $sin(x)$ 函數疊合而成的函數
 
-$T(x) = c_0 + c_1cos(x) + c_2cos(2x) + \cdots + c_n cos(nx) + d_1 sin(x) + d_2 sin(2x) + \cdots + d_n sin(nx)$
+$T(x) = c_0 + c_1cos(x) + c_2cos(2x) + \cdots + c_n cos(nx) + $
+
+$d_1 sin(x) + d_2 sin(2x) + \cdots + d_n sin(nx)$
 
 這種形式的函數稱為三角多項式(trigonometric polynomial)，如果 $c_n, d_n \neq 0$，則 $T(x)$ 為 $n$ 階。
 
@@ -528,7 +530,9 @@ $ proj_{W} f = \langle f,g_0 \rangle g_0 + \langle f,g_1 \rangle g_1 + \cdots + 
 
 $W$ 的正則基底可以對 $1,cos(x),cos(2x),\cdots,cos(nx),sin(x),sin(2x),\cdots,sin(nx)$ 進行正交化，得到正則基底 
 
-$$ g_0 = \frac{1}{\sqrt{2\pi}}, g_1 = \frac{1}{\sqrt{\pi}} cos(x), g_2 = \frac{1}{\sqrt{\pi}} cos(2x), \cdots, g_n = \frac{1}{\sqrt{\pi}} cos(nx), g_{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$
+$$ g_0 = \frac{1}{\sqrt{2\pi}}, g_1 = \frac{1}{\sqrt{\pi}} cos(x), g_2 = \frac{1}{\sqrt{\pi}} cos(2x), \cdots, $$
+
+$$ g_n = \frac{1}{\sqrt{\pi}} cos(nx), g_{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$
 
 定義係數 
 
@@ -600,7 +604,7 @@ $$ \left\\{ \begin{align} & y_0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\
 
 假設 $n = 2^k$，我們可以把函式拆成奇偶項，
 
-$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) + (a_1x + a_3x^3 + \cdots + a_n-1x^{n-1})$
+$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) + (a_1x + a_3x^3 + \cdots + a_{n-1}x^{n-1})$
 
 設 $A_0 = (a_0 + a_2x + \cdots + a_{n-2}x^{\frac{n}{2}-1}),A_1 = (a_1 + a_3x + \cdots + a_{n-1}x^{\frac{n}{2}-1})$
 
