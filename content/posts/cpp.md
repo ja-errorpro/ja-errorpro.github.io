@@ -1326,3 +1326,9 @@ int main(){
 * 可以在每次操作完輸出變數檢查
 * 避免跳來跳去的結構，像是goto
 * 重複的程式碼可以濃縮成函式或迴圈
+
+---
+
+# Reference
+
+  * [Openhome](http://openhome.cc/Gossip/CppGossip/)

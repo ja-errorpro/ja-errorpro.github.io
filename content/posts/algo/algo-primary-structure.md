@@ -4,7 +4,7 @@ tags:
   - algorithms
 ---
 
-* [算法筆記目錄](/posts/1/algo-index/)
+* [算法筆記目錄](/posts/algo-index/)
 
 # 初階資料結構  
 

@@ -5,7 +5,7 @@ tags:
 keywords:
 ---
 
-* [算法筆記目錄](/posts/1/algo-index/)
+* [算法筆記目錄](/posts/algo-index/)
 
 # 基礎資料結構
 

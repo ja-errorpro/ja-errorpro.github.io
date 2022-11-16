@@ -4,7 +4,7 @@ tags:
   - algorithms
 ---
 
-* [算法筆記目錄](/posts/1/algo-index/)
+* [算法筆記目錄](/posts/algo-index/)
 
 ## 什麼是數論
 
@@ -432,3 +432,224 @@ $$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = 
 
 對於 gcd(a,n)=1 的正整數 a，如果 d 是最小的正整數，使得 $a^d \equiv 1 \pmod n$，則稱 d 是 a 在模 n 下的階，記做 $ord_n(a)$，且 $ord_n(a)$ 一定 $\le \varphi(n)$，而如果 $ord_n(a) = \varphi(n)$，則稱 a 為模 n 的原根。
 
+---
+
+## 多項式與卷積
+
+### 波動
+
+波動無時無刻都在我們身邊，所有的東西都在振動，振動可以用連續函數表示，
+最平穩的振動就是正弦波，表示為 $sin(x)$，畫到圖上以 y 軸表示振福，x 軸表示時間。
+
+### 波動快慢
+
+我們用頻率來表示波動的快慢，頻率越高，波動越快。
+
+比如聲音的頻率，人類聽覺能聽到的頻率範圍是 20Hz 到 20kHz，也就是 20 到 20000 個振動。
+
+### 波動大小
+
+我們用振幅來表示波動的大小，振幅越大，波動越大。
+
+### 波動起點
+
+我們用相位(Phase)來表示波動的起點。
+
+### 波動疊加性
+
+所有的波動都可以疊加，相同方向的波會相加，反則抵銷。
+
+寫成數學式就是多個函數相加。
+
+### 傅立葉轉換
+
+此部分與 線性代數 較為相關，在 OI 上通常用於解多項式乘法問題。
+
+[線性代數筆記](/posts/LinearAlgebra/linear-index)
+
+由於波可以以時間角度來看，即以橫軸為時間，縱軸為振幅，但是也可以以頻率角度來看，即以橫軸為頻率，縱軸為振幅。
+
+把時域轉換到頻域的過程就是傅立葉轉換，而我們也能反向轉換。
+
+在了解傅立葉轉換前，需要了解一些先備知識。
+
+### 單位根
+
+假設我們已經知道複數。
+
+對於 $x^n = 1$，則稱 $x$ 為 $n$ 次單位根。
+
+對於一個 $n$ 次單位根，在複數平面就是把複數單位圓切成 $n$ 份，每個數 $w^k_n (k \in \left[ 0, n-1 \right])$
+
+### 奇偶函數
+
+  * 奇函數：$f(x) = -f(-x)$，比如 $sin(x)$
+  * 偶函數：$f(x) = f(-x)$，比如 $cos(x)$
+
+### 三角函數正交性
+
+  * $sin(x)cos(x) = \frac{1}{2}sin(2x)$
+  * $sin^2(x) + cos^2(x) = 1$
+  * $sin(x)sin(y) + cos(x)cos(y) = \frac{1}{2}sin(x+y) + \frac{1}{2}sin(x-y)$
+  * $sin(x)cos(y) - cos(x)sin(y) = \frac{1}{2}sin(x+y) - \frac{1}{2}sin(x-y)$
+  * $sin(mx)cos(nx) = \frac{1}{2}sin(m+n)x + \frac{1}{2}sin(m-n)x$
+  * $sin(mx)sin(nx) = -(\frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x)$
+  * $cos(mx)cos(nx) = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$
+  * $e^{ix} = cos(x) + isin(x)$
+  * $\int_{-\pi}^{\pi}sin(mx)cos(nx)dx = 0 (m \neq \pm n)$
+  * $\int_{-\pi}^{\pi}sin(mx)sin(nx)dx = 0 (m \neq \pm n)$
+  * $\int_{-\pi}^{\pi}cos(mx)cos(nx)dx = 0 (m \neq \pm n)$
+  * $\int_{-\pi}^{\pi}sin(mx)cos(mx)dx = 0$
+  * $\int_{-\pi}^{\pi}sin(mx)sin(mx)dx = \pi $
+  * $\int_{-\pi}^{\pi}cos(mx)cos(mx)dx = \pi $
+
+### 傅立葉級數
+
+法國數學家、物理學家傅立葉宣稱任何週期函數 $f(x+T) = f(x)$ 皆可用傅立葉級數表示。(不正確)
+
+而德國的數學家狄利克雷給了週期函數可轉成傅立葉級數的條件(Dirichelet's theorem)：
+
+  * 函數必須有界，即 $\forall x, |f(x)| \le M$，其中 $M$ 為正實數。
+  * 任意閉區間內除了有限個點外，函數必須連續。
+  * 任意閉區間內，函數必須僅包含有限個極值。
+  * 一週期內，$|f(x)|$ 積分必須收斂。
+
+設週期函數 $f(x)$，週期為 $2\pi$。對任意整數 $n$，$f(x) = f(x+2n\pi)$，我們可以選擇考慮區間 $\left[ 0,2\pi \right]$，也可以考慮 $\left[ -\pi,\pi \right]$。
+
+因為函數可以分解成奇偶函數的和，現在有一個由多個 $cos(x)$ 函數與 $sin(x)$ 函數疊合而成的函數
+
+$T(x) = c_0 + c_1cos(x) + c_2cos(2x) + \cdots + c_n cos(nx) + d_1 sin(x) + d_2 sin(2x) + \cdots + d_n sin(nx)$
+
+這種形式的函數稱為三角多項式(trigonometric polynomial)，如果 $c_n, d_n \neq 0$，則 $T(x)$ 為 $n$ 階。
+
+接著我們考慮區間 $\left[ 0,2\pi \right]$，$W$ 為 $C\left[a,b\right]$ 中有限維度的子空間，對連續函數 $f$ 做近似，即 $f$ 在 $W$ 的正交投影，設 $W$ 的正則基底為 $\left\\{ g_0,g_1,\cdots,g_n \right\\}$，則 $f$ 在 $W$ 的正交投影為 
+
+$ proj_{W} f = \langle f,g_0 \rangle g_0 + \langle f,g_1 \rangle g_1 + \cdots + \langle f,g_n \rangle g_n$。
+
+$W$ 的正則基底可以對 $1,cos(x),cos(2x),\cdots,cos(nx),sin(x),sin(2x),\cdots,sin(nx)$ 進行正交化，得到正則基底 
+
+$$ g_0 = \frac{1}{\sqrt{2\pi}}, g_1 = \frac{1}{\sqrt{\pi}} cos(x), g_2 = \frac{1}{\sqrt{\pi}} cos(2x), \cdots, g_n = \frac{1}{\sqrt{\pi}} cos(nx), g_{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$
+
+定義係數 
+
+$a_0 = \frac{2}{\sqrt{2\pi}}\langle f,g_0 \rangle, a_1 = \frac{1}{\sqrt{\pi}}\langle f,g_1 \rangle , \cdots , a_n = \frac{1}{\sqrt{\pi}}\langle f,g_n \rangle$
+
+$b_1 = \frac{1}{\sqrt{\pi}}\langle f,g_{n+1} \rangle , \cdots , b_n = \frac{1}{\sqrt{\pi}}\langle f,g_{2n} \rangle$
+
+代入原正交投影式，得
+
+$ proj_{W} f = \frac{a_0}{2} + \left\[ a_1 cos(x) + \cdots + a_n cos(nx) \right\] + \left\[ b_1 sin(x) + \cdots + b_n sin(nx) \right\]$
+
+就是我們常看到的 $F_n(x) = \frac{a_0}{2} + \sum_{k=1}^{n} (a_k cos(kx) + b_k sin(kx))$
+
+其中 $a_k,b_k$ 稱為傅立葉係數，
+
+$a_k = \frac{2}{\pi}\int_{0}^{2\pi} f(x) cos(kx) dx$
+
+$b_k = \frac{2}{\pi}\int_{0}^{2\pi} f(x) sin(kx) dx$
+
+$F_n(x)$ 稱為傅立葉級數。
+
+剛剛我們將函數的週期設為 $2\pi$，現在我們將週期設為 $2\pi T$，考慮區間 $\left\[ \frac{-T}{2}, \frac{T}{2} \right\]$，變數變換 $\frac{t}{T} = \frac{x}{2\pi}$，
+
+$x = \frac{2\pi t}{T}$，代入傅立葉級數 $F(x)$，得
+
+$\large{F(x) = \frac{a_0}{2} + \sum_{k=1}^{\infty} (a_k cos(k\frac{2\pi t}{T}) + b_k sin(k\frac{2\pi t}{T}))}$
+
+$\large{a_k = \frac{2}{T} \int_\frac{-T}{2}^\frac{T}{2} f(t) cos(\frac{2\pi kt}{T}) dt, k=0,1,2,\cdots }$
+
+$\large{b_k = \frac{2}{T} \int_\frac{-T}{2}^\frac{T}{2} f(t) sin(\frac{2\pi kt}{T}) dt, k=1,2,\cdots }$
+
+我們進一步利用歐拉公式 $e^{ix} = cos(x) + isin(x)$，將傅立葉級數改寫，
+
+$\large{F(x) = \sum_{k=-\infty}^{\infty} c_k e^{ikx}}$
+
+$\large{c_k = \frac{1}{T} \int_\frac{-T}{2}^\frac{T}{2} f(t) e^{\frac{-2\pi ikt}{T}} dt, k \in \mathbb{Z}}$
+
+### 離散傅立葉轉換(DFT)
+
+因為電腦只能處理離散的資料，所以要將連續的傅立葉級數轉換成離散的傅立葉級數，也就是積分變成求和，為了跟 $c_k$ 區分，用 $y_k$ 表示離散傅立葉轉換的結果
+
+$\large{y_k = \sum_{j=0}^{n-1}x_j e^{\frac{-2\pi ikj}{n}}}$
+
+回顧之前的單位根，可以將原根寫成
+
+$\large{w_n^k = e^\frac{-2\pi ik}{n} = cos(\frac{2k\pi}{n}) + isin(\frac{2k\pi}{n})}$
+
+將離散傅立葉轉換表示成矩陣形式 $y = Fx$，
+
+$$ \left\[ \begin{matrix} y_0 \\\ y_1 \\\ y2 \\\ \vdots \\\ y_{n-1} \end{matrix} \right\] = \left\[ \begin{matrix} 1 & 1 & 1 & \cdots & 1 \\\ 1 & w_n^1 & w_n^2 & \cdots & w_n^{n-1} \\\ 1 & w_n^2 & w_n^4 & \cdots & w_n^{2(n-1)} \\\ \vdots & \vdots & \vdots & \ddots & \vdots \\\ 1 & w_n^{n-1} & w_n^{2(n-1)} & \cdots & w_{n}^{(n-1)^2} \end{matrix} \right\] \left\[ \begin{matrix} x_0 \\\ x_1 \\\ x_2 \\\ \vdots \\\ x_{n-1} \end{matrix} \right\]$$
+
+$F$ 稱為傅立葉矩陣，而要逆變換時其實就是算 $F^{-1}y = x$，而接下來我們最後的目標就是要能快速算出矩陣乘法
+
+### 多項式點值表示法
+
+設一堆多項式
+
+$$ \left\\{ \begin{align} & y_0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\\ & y1 = a_0 + a_1x_1 + a_2x_1^2 + \cdots + a_nx_1^n \\\ & y2 = a_0 + a_1x_2 + a_2x_2^2 + \cdots + a_nx_2^n \\\ \vdots \\\ & y_{n-1} = a_0 + a_1x_{n-1} + a_2x_{n-1}^2 + \cdots + a_nx_{n-1}^{n-1} \end{align} \right. $$
+
+我們知道兩點構成一次函數，三點構成二次函數，所以 $n+1$ 個點構成 $n$ 次函數。
+
+我們把 $x^n = 1$ 的單位根都代入多項式，看起來不就像剛剛的傅立葉矩陣嗎？
+
+# 我們成功把物理的傅立葉轉換跟 OI 上的結合了！
+
+### 快速傅立葉轉換
+
+然而如果直接計算乘法的話，複雜度是 $O(n^2)$，
+
+假設 $n = 2^k$，我們可以把函式拆成奇偶項，
+
+$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) + (a_1x + a_3x^3 + \cdots + a_n-1x^{n-1})$
+
+設 $A_0 = (a_0 + a_2x + \cdots + a_{n-2}x^{\frac{n}{2}-1}),A_1 = (a_1 + a_3x + \cdots + a_{n-1}x^{\frac{n}{2}-1})$
+
+得 $A(x) = A_0(x^2) + xA_1(x^2)$
+
+寫成單位根的形式
+
+$A(w_n^k) = A_0(w_n^{2k}) + w_n^kA_1(w_n^{2k})$
+
+成功把計算量縮小一半，同理將 $A_0$ 和 $A_1$ 也拆成奇偶項，再用同樣的方法，在遞迴的底層(一個點)用 $O(n)$ 計算後往上合併，計算量縮小到 $O(nlogn)$。
+
+```cpp
+const double pi = acos(-1);
+typedef complex<double> cd;
+struct FFT{
+    int n,rev[1<<20];
+    cd w[1<<20];
+    void init(int _n){
+        this->n = _n;
+        for(int i=0;i<_n;i++){
+            w[i] = cd(cos(2*pi/_n*i),sin(2*pi/_n*i));
+        }
+        int lgn = __lg(_n);
+        for(int i=0;i<_n;i++){
+            int tmp = 0;
+            for(int j=0;j<lgn;j++){
+                if(i&(1<<j)) tmp |= (1<<(lgn-j-1));
+            }
+            rev[i] = tmp;
+        }
+    }
+    void trans(vector<cd>& a, cd* w){
+        for(int i=0;i<n;i++){
+            if(i<rev[i]) swap(a[i],a[rev[i]]);
+        }
+        for(int i=2;i<=n;i<<=1){
+            int mid = i>>1;
+            int r = n/i;
+            for(int j=0;j<n;j+=i){
+                for(int k=0;k<mid;k++){
+                    cd t = a[j+k+mid]*w;
+                    a[j+k+mid] = a[j+k]-t;
+                    a[j+k] += t;
+                }
+            }
+        }
+    }
+    void fft(vector<cd>& a){
+        trans(a,w);
+    }
+}
+```

@@ -4,7 +4,7 @@ tags:
   - algorithms
 ---
 
-* [算法筆記目錄](/posts/1/algo-index/)
+* [算法筆記目錄](/posts/algo-index/)
 
 時間複雜度在競程中是個非常重要且最基本的工具，  
 係用於估算程式執行N次，大概需要花多久時間。

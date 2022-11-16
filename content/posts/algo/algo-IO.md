@@ -4,7 +4,7 @@ tags:
   - algorithms
 ---
 
-* [算法筆記目錄](/posts/1/algo-index/)
+* [算法筆記目錄](/posts/algo-index/)
 
 ## 編譯器優化
 我們的程式變成執行檔時需要經過一連串的轉譯與運算，  

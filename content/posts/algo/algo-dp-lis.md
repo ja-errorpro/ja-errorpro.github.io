@@ -4,7 +4,7 @@ tags:
   - algorithms
 ---
 
-* [算法筆記目錄](/posts/1/algo-index/)
+* [算法筆記目錄](/posts/algo-index/)
 
 ## 最長遞增子列(Longest Increasing Subsequence)
 
