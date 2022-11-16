@@ -416,7 +416,9 @@ $c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
 
 ，根據引理得 
 
-$$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = p_1^{c_1-1}(p_1-1)p_2^{c_2-1}(p_2-1) \cdots p_k^{c_k-1}(p_k-1) = n \prod_{p | n}(1-\frac{1}{p})$$。
+$$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = p_1^{c_1-1}(p_1-1)p_2^{c_2-1}(p_2-1) \cdots p_k^{c_k-1}(p_k-1)$$
+
+$$= n \prod_{p | n}(1-\frac{1}{p})$$。
 
 ### 歐拉定理
 
@@ -604,9 +606,13 @@ $$ \left\\{ \begin{align} & y_0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\
 
 假設 $n = 2^k$，我們可以把函式拆成奇偶項，
 
-$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) + (a_1x + a_3x^3 + \cdots + a_{n-1}x^{n-1})$
+$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) $
 
-設 $A_0 = (a_0 + a_2x + \cdots + a_{n-2}x^{\frac{n}{2}-1}),A_1 = (a_1 + a_3x + \cdots + a_{n-1}x^{\frac{n}{2}-1})$
+$+ (a_1x + a_3x^3 + \cdots + a_{n-1}x^{n-1})$
+
+設 $A_0 = (a_0 + a_2x + \cdots + a_{n-2}x^{\frac{n}{2}-1}),$
+
+$A_1 = (a_1 + a_3x + \cdots + a_{n-1}x^{\frac{n}{2}-1})$
 
 得 $A(x) = A_0(x^2) + xA_1(x^2)$
 
