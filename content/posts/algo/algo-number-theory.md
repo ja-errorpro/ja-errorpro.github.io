@@ -416,9 +416,9 @@ $c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
 
 ，根據引理得 
 
-$$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = p_1^{c_1-1}(p_1-1)p_2^{c_2-1}(p_2-1) \cdots p_k^{c_k-1}(p_k-1)$$
+$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = p_1^{c_1-1}(p_1-1)p_2^{c_2-1}(p_2-1) \cdots p_k^{c_k-1}(p_k-1)$
 
-$$= n \prod_{p | n}(1-\frac{1}{p})$$。
+$= n \prod_{p | n}(1-\frac{1}{p})$。
 
 ### 歐拉定理
 
