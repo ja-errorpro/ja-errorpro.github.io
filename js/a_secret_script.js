@@ -7,7 +7,7 @@ var encryptedflag5 = "28e6896d057b97f27806242066373f7c";
 
 function on_bt_clicked() {
 	var input = document.getElementsByName("input")[0];
-	let text = input.value.replace(/\s/g, '').toLowerCase();
+	let text = input.value.replace(/\s/g, '');
 	text = Base64.encode(text);
 	text = md5(text);
 	console.log(text);
