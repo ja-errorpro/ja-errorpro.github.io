@@ -18,7 +18,13 @@ Git for Windows
 安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
 這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
 Linux 非常簡單，打開你的終端機
-1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
+1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>About</title><link>/posts/2022/about/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/about/</guid><description>我是誰 黃乙家
+A common student studying in Chung Yuan Christian University Department of Information and Computer Engineering
+IG: cannot.load_connection.refused
+I want to learn&amp;hellip; and more&amp;hellip;
+I use these OS 神秘的終端
+你可以試試輸入 YI_JIA{this_is_so_cool}
+沒用嗎？要不要換個瀏覽器試試看？</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
 簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。
 先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)
 Python官網
@@ -242,18 +248,14 @@ C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混�
 絕對不要再混用。
 C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush
 也就是它順便把內存清空了，做了多餘的動作。
-之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item><item><title>算法筆記-排序</title><link>/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-sorting/</guid><description>算法筆記目錄 排序 排序是將一串資料依優先度排列，通常是遞增、遞減、字典序排列，
-可以自訂順序，這裡直接使用快速排序法，後面分治會提到合併排序，
-快慢隨題目而變動。
-我們學校會學到最經典的氣泡排序法，其實是個很不好的排序法，
-它最差情況的時間複雜度會炸到$O(n^2)$。
-在C++，有函數 sort() 可以直接排序，
-以遞增排序為例，原理是先從資料群選一個基準點，
-然後從資料兩邊往中間搜，若右邊比基準點小且左邊比基準點大，就將左右邊互換，
-直到左右邊相遇，將相遇的點與基準點互換。
-複雜度是$O(nlogn)$。
-想體驗sort()的力量，我們用random_shuffle()這個函數來打亂區間。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; signed main(){ vector&amp;lt;int&amp;gt; a={9,8,7,6,5,4,3,2,1}; for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; random_shuffle(a.begin(),a.end()); for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; sort(a.begin(),a.end()); for(auto i:a) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#39; &amp;#39;; cout &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; return 0; } sort()預設是遞增排列，如果想遞減排列，可以在第三個引數加上 less&amp;lt;型態&amp;gt;()，</description></item><item><title>算法筆記-數論</title><link>/posts/1/algo-number-theory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-number-theory/</guid><description>算法筆記目錄 什麼是數論 數學的分支，專門研究整數的性質。
+之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl '\n'</description></item><item><title>算法筆記-排序</title><link>/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-sorting/</guid><description>算法筆記目錄 排序 排序是將一串資料依優先度排列，是電腦工程最常見且最基本的算法，將資料排序後，可以更有效率的搜尋資料，也可以更有效率的處理資料，利於統計。
+氣泡排序(Bubble Sort) 氣泡排序通常是我們在學校會學到的第一種排序法，原因是其簡單易懂，
+原理是逐一比較相鄰兩元素，若順序錯誤則交換。
+每一輪都確保最後一筆資料在正確的位置。
+因此我們需要跑好幾輪，直到整個數組都是正確的順序。
+如果數組長度為 $n$，則需要跑 $n-1$ 輪、每輪跑 $n-i$ 次，總共跑 $n(n-1)/2$ 次。
+因此時間複雜度為 $O(n^2)$。
+1 2 3 4 5 6 7 8 9 void bubbleSort(int arr[], int n) { for (int i = 0; i &amp;lt; n - 1; i++) { for (int j = 0; j &amp;lt; n - i - 1; j++) { if (arr[j] &amp;gt; arr[j + 1]) { swap(arr[j], arr[j + 1]); } } } } 然而氣泡排序法的時間複雜度太高了(成本太高)，如果資料達到數百萬筆就不適合使用此排序法。</description></item><item><title>算法筆記-數論</title><link>/posts/1/algo-number-theory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-number-theory/</guid><description>算法筆記目錄 什麼是數論 數學的分支，專門研究整數的性質。
 模運算 同餘 $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b$ 模 $n$ 同餘。
 比如
 7 除以 3 餘 1
@@ -283,7 +285,7 @@ $$ Def:\
 &amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
 &amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
 即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$
-&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-枚舉與二分搜尋</title><link>/posts/1/algo-enum-and-searching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-enum-and-searching/</guid><description>算法筆記目錄 枚舉與搜尋 枚舉 枚舉，就是把全部或部分可能的情況都列出來，然後一個一個檢查是否符合條件，又稱窮舉。
+&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description></item><item><title>算法筆記-枚舉與搜尋</title><link>/posts/1/algo-enum-and-searching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-enum-and-searching/</guid><description>算法筆記目錄 枚舉與搜尋 枚舉(Enumeration) 枚舉，就是把全部或部分可能的情況都列出來，然後一個一個檢查是否符合條件，又稱窮舉。
 雖然枚舉通常沒辦法在短時間內解決整個問題，但可以透過解決小問題來找到大問題的規律，或是用於檢驗時間複雜度較低的做法是否正確。
 例題一 給一正整數 $n$，求 $n$ 的所有因數。
 我們枚舉所有不超過 $n$ 的正整數，檢查每個數字是否為 $n$ 的因數，時間複雜度為 $O(n)$。
