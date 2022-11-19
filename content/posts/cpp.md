@@ -954,6 +954,8 @@ int *b = &a; // *放在靠int或是靠變數名稱都可以
 
 上面程式代表b是a的指標
 
+![anya](/images/cpp/anya_pointer.jpg)
+
 如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果
 
 ```cpp
