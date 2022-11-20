@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: 2022-10-21
 tags:
   - Idx
 

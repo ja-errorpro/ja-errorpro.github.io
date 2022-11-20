@@ -2,7 +2,7 @@
 title: "資源"
 ---
 
-* [C++語法筆記](/posts/cpp/)
+* [C++語法筆記](/posts/cpp-index/)
 * [算法筆記](/posts/algo-index/)
 * [線性代數筆記](/posts/LinearAlgebra/linear-index/)
 

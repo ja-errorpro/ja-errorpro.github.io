@@ -34,6 +34,12 @@ url: "/posts/cpp/"
 
 不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。
 
+而在只有輸入輸出這些簡單的程式中，我們使用 ``<iostream>`` 就好
+
+```cpp
+#include <iostream>
+```
+
 有時候看別人的Code還會看到一個標頭檔 ``<bits/extc++.h>`` ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
 
 為了方便，會在下面定義名稱空間 ``using namespace std;`` ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時
@@ -53,7 +59,7 @@ int main(){
 
 ### 總結程式碼(模板)：
 ```cpp
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 int main(){
 	cout << "Hello World"; // 你會看到電腦跟你說Hello World
@@ -154,7 +160,7 @@ string 其實可以說是字元的組合，在c++它是比char好用的東西，
 這樣說可能還是有點模糊，看看這個程式碼：
 
 ```cpp
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 const int s=0; //s是常數，如果在程式的某個地方修改它的值，會報錯
 int a; // a是全域變數，可以在f函式也可以在main裡使用
@@ -177,7 +183,7 @@ int main(){
 試試這支有bug的乘法程式，看看它有沒有符合想要的結果：
 
 ```cpp
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 int main(){
     int a = 100000;
