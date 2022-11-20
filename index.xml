@@ -18,13 +18,7 @@ Git for Windows
 安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
 這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
 Linux 非常簡單，打開你的終端機
-1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>About</title><link>/about/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>/about/</guid><description>我是誰 黃乙家
-A common student studying in Chung Yuan Christian University Department of Information and Computer Engineering
-IG: cannot.load_connection.refused
-I want to learn&amp;hellip; and more&amp;hellip;
-I use these OS 神秘的終端
-你可以試試輸入 YI_JIA{this_is_so_cool}
-沒用嗎？要不要換個瀏覽器試試看？</description></item><item><title>About</title><link>/posts/2022/about/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/about/</guid><description>我是誰 黃乙家
+1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>About</title><link>/posts/2022/about/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/about/</guid><description>我是誰 黃乙家
 A common student studying in Chung Yuan Christian University Department of Information and Computer Engineering
 IG: cannot.load_connection.refused
 I want to learn&amp;hellip; and more&amp;hellip;
@@ -200,7 +194,84 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 強制離開: :q!
 存檔不離開: :w
 強制存檔不離開: :w!
-存檔並離開: :wq</description></item><item><title>C++筆記-語法</title><link>/posts/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
+存檔並離開: :wq</description></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description>我是誰 黃乙家
+A common student studying in Chung Yuan Christian University Department of Information and Computer Engineering
+IG: cannot.load_connection.refused
+I want to learn&amp;hellip; and more&amp;hellip;
+I use these OS 神秘的終端
+你可以試試輸入 YI_JIA{this_is_so_cool}
+沒用嗎？要不要換個瀏覽器試試看？</description></item><item><title>C++筆記-(補充)巨集</title><link>/posts/cpp/cpp-macro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-macro/</guid><description> C++筆記-目錄 補充 - 巨集： 有時候，我們不想打那麼多字，為節省時間，可以在前面先定義
+一個巨集： #define
+1 2 3 4 #define int long long //讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long #define pb push_back //把指令縮短，之後要用就打pb就好 有時候如果定義的巨集是變數型態也可以用typedef
+1 2 typedef long long ll //之後宣告long long就打ll就好</description></item><item><title>C++筆記-IO</title><link>/posts/cpp/cpp-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-io/</guid><description>C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
+C++這個語言本來是沒有IO功能的，
+基本的輸入輸出定義於&amp;lt;iostream&amp;gt;與&amp;lt;fstream&amp;gt;這兩個標準模板庫(std)裡，
+它們被分成了三個標準：
+istream/ cin、wcin ： 標準輸入流
+ostream/ cout、wcout ： 標準輸出流
+ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)
+ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
+輸入的方式，是使用(&amp;raquo;)從輸入流中擷取資料，而輸出則是用(&amp;laquo;)將資料擷取到輸出流。
+這就是一開始學校在教程式時會說輸入就是 cin &amp;gt;&amp;gt; x;，輸出是 cout &amp;lt;&amp;lt; x;，箭號方向不能交換。
+緩衝區 緩衝區的定義是 用作中介的內存塊，這樣說可能沒人懂，
+它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。
+因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，
+也就是當程式頻繁進行IO操作，會頻繁把高速的部分打斷，
+造成性能下降。
+緩衝區的功用就在於避開頻繁操作，只要讀取緩衝區的資料就好。
+只有需要時再刷新緩衝區進行IO操作，讓程式性能提升。
+以下狀況會刷新緩衝區：
+使用cin 釋放cout的資源 使用endl、fflush 程式正常結束 關於IO優化等操作，可查閱算法筆記
+輸入 在C++，我們使用cin(音：西印)輸入文字，
+方法很簡單，不像C語言還要指定型別， cin &amp;gt;&amp;gt; x; 就是輸入資料到x。
+當要輸入多筆資料，只要在後面繼續加就好 cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; z;。
+如果不想使用bits/stdc++.h，需要include &amp;lt;iostream&amp;gt;
+範例程式：
+1 2 3 4 5 6 7 8 9 #include&amp;lt;bits/stdc++.</description></item><item><title>C++筆記-函式與遞迴</title><link>/posts/cpp/cpp-function/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-function/</guid><description>C++筆記-目錄 函式與遞迴 之前有在講變數作用範圍時偷偷寫了一個函式，現在將會說明如何使用。
+到目前，我們都只用到main函式而已，假設我們有需要重複使用的程式碼，可以寫成函式，
+只要丟參數進去，就能得到傳回值。
+先以最基礎的線性函數(y=ax+b)開始，可以這樣寫
+1 2 3 int f(int x){ return a*x+b; } 只要我們帶x進去，函式就會傳回計算後的值，使用函式的過程稱為呼叫
+1 2 3 cout &amp;lt;&amp;lt; f(0) &amp;lt;&amp;lt; endl; int y = f(2); cout &amp;lt;&amp;lt; y &amp;lt;&amp;lt; endl; 而函式可以選擇接受或不接受參數，也能自訂型態
+1 2 3 4 void f(){ // 不接受參數 可以做任何事; return; // 使用void就不會回傳值 } 而上一章字串介紹的empty()，其實也是一個布林函式
+1 2 3 4 bool empty(){ if (字串沒東西) return true; else return false; } 而遞迴就是函式自己呼叫自己而已，
+現在利用遞迴概念，我們試著寫寫看計算階乘(n乘到1)的函式
+1 2 3 4 5 long long f(int n){ //計算 n!</description></item><item><title>C++筆記-增加程式可讀性</title><link>/posts/cpp/cpp-simplify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-simplify/</guid><description> C++筆記-目錄 簡化程式可讀性 現在基礎語法已經學得差不多了，現在來談談如何讓別人更容易看懂自己的程式，之後若跟別人合寫也讓人比較容易除錯。
+我認為要讓人容易看懂自己的程式碼，有以下幾點需要注意
+善用註解，說明邏輯 變數名稱取名有意義的文字會更好 如果有沒有用到的函式、變數就不用多寫 可以在每次操作完輸出變數檢查 避免跳來跳去的結構，像是goto 重複的程式碼可以濃縮成函式或迴圈</description></item><item><title>C++筆記-字元字串</title><link>/posts/cpp/cpp-string/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-string/</guid><description>C++筆記-目錄 字元字串 之前提到了字元宣告，但未提及如何利用，現在我們試試這個程式碼：
+1 2 3 4 5 6 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int a=&amp;#39;a&amp;#39;,b=&amp;#39;z&amp;#39;; for(int i=a;i&amp;lt;=b;i++) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl; } 你會發現它輸出了97~122，注意我使用了整數型態，卻用字元初始化，
+沒錯，經過型態轉換，&amp;lsquo;a&amp;rsquo;會變成97，&amp;lsquo;z&amp;rsquo;會變成122，其實這就是ascii碼，因此我們其實可以用字元做計算， 現在可以試試看如果改成&amp;rsquo;A&amp;rsquo;~&amp;lsquo;Z&amp;rsquo;會對應到哪些ascii碼呢。
+字元的宣告要用char，而字串就是字元型態的陣列啦~
+，不過這次我們使用在C++比較常用的string(字串)來講解，
+如果不使用萬能函式庫，必須include &amp;lt;string&amp;gt;。
+string可以這樣宣告
+1 2 3 4 string s1; //空字串 string s2(&amp;#34;abcde&amp;#34;); //用字面常量宣告初始化 string s3(s2); // 複製s2 string s4 = &amp;#34;edasd&amp;#34;; // 用字面常量宣告初始化 string可以用size()或length()直接查看字數(字串長度)，用empty()確認是否是空字串，甚至可以直接用==比較字串內容是否相同，
+1 2 3 4 5 6 7 8 9 10 string s1 = &amp;#34;abcde&amp;#34;; string s2; cout &amp;lt;&amp;lt; s1 &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;字串1長度=&amp;#34;&amp;lt;&amp;lt;s1.</description></item><item><title>C++筆記-字面常數</title><link>/posts/cpp/cpp-literal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-literal/</guid><description>C++筆記-目錄 字面常數 程式中的0,1,1.1都叫字面常數，代表程式的符號，
+整型字面常數包含2,8,10,16進位，其中2進位是C++14才加入的
+1 2 3 4 5 6 7 8 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int base10 = 1234; // 十進位 int base8 = 0373; // 八進位 int base16 = 0xf1; // 十六進位 int base2 = 0b1010; // 二進位 } 對於整數，cout都會以十進位輸出，試試看輸出上面程式中的變數會出現什麼數值。
+有時要做運算時可能發現直接使用數字計算，編譯器會報錯，比如要某個型態為long long的值加上10，這時可以在10後面加上LL，編譯器就會把10看作long long型態計算了。
+對於浮點數，有很方便的科學記號，1000000000可以寫成1e9，0.0008可以寫成8e-4。
+如果要表示字元，可以使用單引號，像是&amp;rsquo;a&amp;rsquo;,&amp;lsquo;1&amp;rsquo;，而如果需要用到引號或反斜線的字元時，在前面再加上一條反斜線即可。
+字串的字面常量是雙引號，像 &amp;ldquo;Hello World&amp;rdquo; 整句是一個字串。
+這裡提供一些常用的字元常量：
+字面常量 功能 \n 換行 \t 水平定位 \v 垂直定位 \b 退回 \r 回到行首 \\\ 反斜線 \? 問號 \&amp;rsquo; 單引號 \&amp;quot; 雙引號 C++換行有兩種方式，一是使用\n，另一種則是endl，而布林值中的true, false也是字面常量。</description></item><item><title>C++筆記-指標</title><link>/posts/cpp/cpp-pointer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-pointer/</guid><description>C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
+1 2 3 4 5 6 7 8 9 10 11 12 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; void swap(int x,int y){ int t=x;x=y;y=t; } int main(){ int a=1,b=2; swap(a,b); cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34; &amp;#34; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl; return 0; } Output: 1 2
+奇怪，ab沒有被交換，
+其實，這程式相當於我們又宣告了xy並交換xy，ab跟xy並沒有關係，這時我們就需要用到指標了。
+要取得變數的指標，只需在它前面加上 &amp;amp; 就好，如果我們輸出 &amp;amp;a，會得到它的記憶體位址。
+而指標的型態，取決於它從哪種變數取得指標，int指標型別就是 int*，double指標型別是double*
+宣告指標的方式也很簡單
+1 2 int a; int *b = &amp;amp;a; // *放在靠int或是靠變數名稱都可以 上面程式代表b是a的指標
+如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果</description></item><item><title>C++筆記-流程控制</title><link>/posts/cpp/cpp-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-process/</guid><description>C++筆記-目錄 流程控制 選擇結構 藉由前面那些知識，可以做出基本的運算跟輸出輸入了，現在我們可以給程式&amp;quot;做選擇&amp;quot;，實現更多功能。
+題目：
+輸入一個正整數，如果他是偶數則輸出Yes，否則輸出No。 這時我們可以使用 if(如果)， 用法：
+1 2 3 if(條件式(condition) ){ //當條件成立要做的事 } 而這題的寫法如：
+1 2 3 4 5 6 7 8 9 10 11 12 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int n; cin &amp;gt;&amp;gt; n; if(n%2==0){ // 當 n 除以 2 的餘數為0 cout &amp;lt;&amp;lt; &amp;#34;Yes&amp;#34; &amp;lt;&amp;lt; endl; } if(n%2!=0){ // 當 n 除以 2 的餘數不為0 cout &amp;lt;&amp;lt; &amp;#34;No&amp;#34; &amp;lt;&amp;lt; endl; } } 在條件式中，我們判斷 n % 2 是否等於 0，% 是取模運算符號，又稱取餘數， n % 2 意思是 n 除以 2 的餘數。</description></item><item><title>C++筆記-物件(結構體)</title><link>/posts/cpp/cpp-struct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-struct/</guid><description>C++筆記-目錄 物件(結構體) Struct 現在我們要幫銀行寫一個管理系統，管理每個帳戶的資料，資料要含有：名字、身分證號、戶籍地、性別、出生年月日、存額。
+我們發現每個資料需要的型態好像不一樣，不適合用陣列，但要存的資料數量卻都一樣， 這時我們可以建立一種物件了，其實就是自訂資料型態！
+1 2 3 4 5 6 7 8 struct Account{ // 建立&amp;#34;帳戶&amp;#34;這個型態 string name; // 名字 string ID; // 身分證號 string Living; // 戶籍地 bool gender; // 性別(大多數情況就男女之分(? 所以用bool) long long birthday; // 出生日期 long long balance; // 帳戶餘額 }; //要分號 這樣，我們就能把它當成一種型態來操作了，假設要開新帳戶：
+1 Account a; 如果要存取帳戶內容，
+1 2 3 a.name = &amp;#34;吉娃娃&amp;#34;; a.ID = &amp;#34;A12345678&amp;#34;; ... 當然如果有很多帳戶，也能直接宣告陣列
+1 2 Account Arr[100]; Arr[0].name = &amp;#34;吉娃娃&amp;#34;; 我們也可以在結構體裡宣告函式，比如計算一點跟它自己的距離：</description></item><item><title>C++筆記-目錄</title><link>/posts/cpp-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp-index/</guid><description>所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主 運作原理與基礎模板 變數 邏輯與運算子 巨集(補充) IO 字面常數 流程控制 陣列 字串 函式與遞迴 指標 物件(結構體) 簡化程式可讀性 Reference Openhome</description></item><item><title>C++筆記-語法</title><link>/posts/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
 程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
 在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
 要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
@@ -209,12 +280,47 @@ Vim: 分為命令模式,插入模式,底線命令模式,視覺模式
 1 #include&amp;lt;bits/stdc++.h&amp;gt; 注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
 這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的__gcd(計算最大公因數)
 不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。
-有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
+而在只有輸入輸出這些簡單的程式中，我們使用 &amp;lt;iostream&amp;gt; 就好
+1 #include &amp;lt;iostream&amp;gt; 有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
 為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那std就是你想找的書。
 而每個程式都會需要一個叫做main的主函式，這個函式就是整個程式的起點跟終點：
 1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。
 注意到，有些程式句後面加了分號有些卻沒有，這是C++中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。
-總結程式碼(模板)： 1 2 3 4 5 6 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World return 0; } 註解 在上面兩個程式碼中，會看到裡面寫了 // 後面接上說明，稱為&amp;quot;註解&amp;rdquo;，註解的內容不會被編譯器讀取，註解有兩種模式： 單行註解及多行註解，在C++裡的語法是這樣的</description></item><item><title>You are Rickrolled</title><link>/embed/rickroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/embed/rickroll/</guid><description/></item><item><title>留言區</title><link>/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/comment/</guid><description/></item><item><title>算法筆記-DP-LIS</title><link>/posts/1/algo-dp-lis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-dp-lis/</guid><description>算法筆記目錄 最長遞增子列(Longest Increasing Subsequence) 考慮以下問題：
+總結程式碼(模板)： 1 2 3 4 5 6 #include&amp;lt;iostream&amp;gt; using namespace std; int main(){ cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World return 0; } 註解 在上面兩個程式碼中，會看到裡面寫了 // 後面接上說明，稱為&amp;quot;註解&amp;rdquo;，註解的內容不會被編譯器讀取，註解有兩種模式： 單行註解及多行註解，在C++裡的語法是這樣的</description></item><item><title>C++筆記-變數</title><link>/posts/cpp/cpp-variable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-variable/</guid><description>C++筆記-目錄 變數概論 當我們要進行複雜運算時，變數成為很重要的東西，你可以用變數儲存各種資料，讓電腦記住它。
+要如何宣告一個變數？格式為 (變數型態) (變數名稱)，我們可以一次宣告很多變數： (型態) (名稱),(名稱),(名稱)...;
+ex: int a,b,c;
+要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C++裡面已經定義的名稱(ex:int,char,double,long&amp;hellip;)
+變數型態： 根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用sizeof()， 以下所提的空間都是在多數32位元機器上佔有空間
+一、整數 每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯 而signed/unsigned表示型態含不含符號，而負數前面都會有一個 &amp;ldquo;-&amp;rdquo; ，因此當型態為unsigned時，是將所有負值的空間加到正值，讓正值值域更大
+型態 空間 範圍 描述 short/short int 2 Bytes -2^15~2^15-1 短整數 unsigned short/unsigned short int 2 Bytes 0~2^16-1 無符號短整數 int/long int/signed/signed long int/long 4 Bytes -2^31~2^31-1 整數 unsigned int/unsigned long int/unsigned 4 Bytes 0~2^32-1 無符號整數 long long/long long int 8 Bytes -2^63~2^63-1 長整數 unsigned long long/unsigned long long int 8 Bytes 0~2^64-1 無符號長整數 二、浮點數 就是有小數點的變數</description></item><item><title>C++筆記-運作原理與基礎模板</title><link>/posts/cpp/cpp-init/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-init/</guid><description>C++筆記-目錄 程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
+在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
+要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
+就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。
+基礎C++模板 附上STL標頭檔：
+1 #include&amp;lt;bits/stdc++.h&amp;gt; 注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
+這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的__gcd(計算最大公因數)
+不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。
+而在只有輸入輸出這些簡單的程式中，我們使用 &amp;lt;iostream&amp;gt; 就好
+1 #include &amp;lt;iostream&amp;gt; 有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
+為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那std就是你想找的書。
+而每個程式都會需要一個叫做main的主函式，這個函式就是整個程式的起點跟終點：
+1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。
+注意到，有些程式句後面加了分號有些卻沒有，這是C++中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。
+總結程式碼(模板)： 1 2 3 4 5 6 #include&amp;lt;iostream&amp;gt; using namespace std; int main(){ cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World return 0; } 註解 在上面兩個程式碼中，會看到裡面寫了 // 後面接上說明，稱為&amp;quot;註解&amp;rdquo;，註解的內容不會被編譯器讀取，註解有兩種模式： 單行註解及多行註解，在C++裡的語法是這樣的</description></item><item><title>C++筆記-邏輯與運算子</title><link>/posts/cpp/cpp-operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-operator/</guid><description>C++筆記-目錄 邏輯與運算子 學程式語言，必定要會的是邏輯與位元運算，
+以下是之後會超常使用的運算子，請熟記它們的功能。
+優先度 運算子 描述 閱讀順序 例子 1 :: 作用域 -&amp;gt; std::cout &amp;laquo; endl; 2 ++/-- () [] . -&amp;gt; 先回傳再加減1 \ 函式呼叫 \ 陣列存取 \ 物件存取成員 \ 指標存取成員 -&amp;gt; i++/i--; int a = f(x); int a[10]; obj.cmp = 0; ptr-&amp;gt;val = 0; 3 ++/-- +/- ! ~ (Type) * &amp;amp; sizeof 先加/減1再回傳 \ 正負號 \ 邏輯NOT \ 位元取反 \ 強轉類型 \ 指標取值 \ 取址 \ 佔用位元組大小 &amp;lt;- ++i/--i +/-1 if(!</description></item><item><title>C++筆記-陣列</title><link>/posts/cpp/cpp-array/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-array/</guid><description>C++筆記-目錄 陣列 現在寫個小程式，輸入N，然後輸入N個數字，最後把N個數字顛倒輸出，
+如果我們輸入的N達到幾千幾萬，那宣告幾千幾萬個變數太不切實際了。我們其實可以一次宣告很多變數，
+宣告方式： 資料型態 名稱[長度];
+這裡的長度需要是編譯時期的常數，像是
+1 2 int a[100]; double b[100]; 只有在GCC的編譯環境我們可以使用
+1 int a[n]; 如果要動態宣告，要用到其他資料結構跟動態記憶體宣告，之後會在講指標提到。
+再來我們就能使用a[0],a[1],a[2]&amp;hellip;a[n-1]當作每個變數了，
+在[ ]中的數字，我們稱之為&amp;quot;索引值&amp;quot;，索引值對應的值，稱為&amp;quot;元素&amp;quot;，特別注意，
+索引值是從0開始的，即0代表第1個變數，1代表第2個變數 宣告完的陣列是沒有初始化的，
+如果貿然存取未初始化或超出陣列索引範圍的地方會出現無法預測的情況， 因此我們可以一次初始化全部元素，
+1 int a[100]={0}; // 將這100個元素全部初始化為0 或者直接初始化每個陣列值
+1 int a[5]={1,5,4,3,2}; 最後我們可以寫出剛剛那題的程式了
+1 2 3 4 5 6 7 8 9 10 11 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int n; cin &amp;gt;&amp;gt; n; int a[n]; // GCC for(int i=0;i&amp;lt;n;i++) cin &amp;gt;&amp;gt; a[i]; //利用上次講的for迴圈輸入每個變數值，注意從0開始 for(int i=n-1;i&amp;gt;=0;i--) cout &amp;lt;&amp;lt; a[i] &amp;lt;&amp;lt; endl; //倒序輸出，注意最後一個索引值是n-1 } 如果要宣告二維陣列存更多東西，其實就是每個元素都是一個陣列</description></item><item><title>You are Rickrolled</title><link>/embed/rickroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/embed/rickroll/</guid><description/></item><item><title>留言區</title><link>/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/comment/</guid><description/></item><item><title>算法筆記-DP-LIS</title><link>/posts/1/algo-dp-lis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-dp-lis/</guid><description>算法筆記目錄 最長遞增子列(Longest Increasing Subsequence) 考慮以下問題：
 給一個序列，求一個最長的遞增子序列，如 [1,3,2,2,4,0] 中，最長的遞增子序列為 [1,3,4] 或 [1,2,4]。
 定義狀態： $dp_i$ 代表掃到第$i$個數時的LIS長度
 轉移式： $dp_i = max(dp_j\ | j&amp;lt;i \land a_j&amp;lt;i) + 1$ 表示當發現$a_j &amp;lt; a_i$，則LIS長度+1
