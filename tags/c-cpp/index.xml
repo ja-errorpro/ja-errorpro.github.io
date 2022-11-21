@@ -10,8 +10,10 @@ pB 實作MonotonicIncreasing() function，讀入若干個整數，直到-99999�
 四、設定VSCode 打開VSCode，點擊左下角齒輪，然後找到右上角功能欄中的 開啟設定(JSON)，在最外面的{}裡貼上以下範例設定
 1 2 3 4 5 6 7 &amp;#34;code-runner.executorMap&amp;#34;:{ &amp;#34;c&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; gcc $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34;, &amp;#34;cpp&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; g++ -std=c++11 -O2 $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34; }, // 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,.</description></item><item><title>C++筆記-(補充)巨集</title><link>/posts/cpp/cpp-macro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-macro/</guid><description> C++筆記-目錄 補充 - 巨集： 有時候，我們不想打那麼多字，為節省時間，可以在前面先定義
 一個巨集： #define
-1 2 3 4 #define int long long //讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long #define pb push_back //把指令縮短，之後要用就打pb就好 有時候如果定義的巨集是變數型態也可以用typedef
-1 2 typedef long long ll //之後宣告long long就打ll就好</description></item><item><title>C++筆記-IO</title><link>/posts/cpp/cpp-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-io/</guid><description>C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
+1 2 3 4 #define int long long //讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long #define pb push_back //把指令縮短，之後要用就打pb就好 我們也可以用巨集來定義函式：
+1 2 #define add(a,b) a+b //定義一個函式，參數為a,b，回傳a+b 有時候如果定義的巨集是變數型態也可以用typedef
+1 2 typedef long long ll //之後宣告long long就打ll就好 定義陣列巨集：
+1 2 3 4 typedef char str[100]; //之後宣告字串就打str就好 str s; // 宣告 char 陣列</description></item><item><title>C++筆記-IO</title><link>/posts/cpp/cpp-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-io/</guid><description>C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
 C++這個語言本來是沒有IO功能的，
 基本的輸入輸出定義於&amp;lt;iostream&amp;gt;與&amp;lt;fstream&amp;gt;這兩個標準模板庫(std)裡，
 它們被分成了三個標準：
