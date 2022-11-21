@@ -14,3 +14,4 @@ url: "/posts/algo-index/"
 * [群論](/posts/1/algo-group-theory/)
 * [數論](/posts/1/algo-number-theory/)
 * [初階資料結構](/posts/1/algo-primary-structure/)
+* [貪心](/posts/1/algo-greedy/)

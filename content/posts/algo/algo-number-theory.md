@@ -416,7 +416,9 @@ $c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
 
 ，根據引理得 
 
-$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) \\\ = p_1^{c_1-1}(p_1-1)p_2^{c_2-1}(p_2-1) \cdots p_k^{c_k-1}(p_k-1)$
+$\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) $
+
+$ = p_1^{c_1-1}(p_1-1)p_2^{c_2-1}(p_2-1) \cdots p_k^{c_k-1}(p_k-1)$
 
 $= n \prod_{p | n}(1-\frac{1}{p})$。
 
@@ -492,11 +494,16 @@ $= n \prod_{p | n}(1-\frac{1}{p})$。
 
   * $sin(x)cos(x) = \frac{1}{2}sin(2x)$
   * $sin^2(x) + cos^2(x) = 1$
-  * $sin(x)sin(y) + cos(x)cos(y) = \frac{1}{2}sin(x+y) + \frac{1}{2}sin(x-y)$
-  * $sin(x)cos(y) - cos(x)sin(y) = \frac{1}{2}sin(x+y) - \frac{1}{2}sin(x-y)$
-  * $sin(mx)cos(nx) = \frac{1}{2}sin(m+n)x + \frac{1}{2}sin(m-n)x$
-  * $sin(mx)sin(nx) = -(\frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x)$
-  * $cos(mx)cos(nx) = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$
+  * $sin(x)sin(y) + cos(x)cos(y) $ \
+    $ = \frac{1}{2}sin(x+y) + \frac{1}{2}sin(x-y)$
+  * $sin(x)cos(y) - cos(x)sin(y) $ \
+    $ = \frac{1}{2}sin(x+y) - \frac{1}{2}sin(x-y)$
+  * $sin(mx)cos(nx) $ \
+    $ = \frac{1}{2}sin(m+n)x + \frac{1}{2}sin(m-n)x$
+  * $sin(mx)sin(nx) $ \
+    $= -(\frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x)$
+  * $cos(mx)cos(nx) $ \
+    $ = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$
   * $e^{ix} = cos(x) + isin(x)$
   * $\int_{-\pi}^{\pi}sin(mx)cos(nx)dx = 0 (m \neq \pm n)$
   * $\int_{-\pi}^{\pi}sin(mx)sin(nx)dx = 0 (m \neq \pm n)$
@@ -544,7 +551,9 @@ $b_1 = \frac{1}{\sqrt{\pi}}\langle f,g_{n+1} \rangle , \cdots , b_n = \frac{1}{\
 
 代入原正交投影式，得
 
-$ proj_{W} f = \frac{a_0}{2} + \left\[ a_1 cos(x) + \cdots + a_n cos(nx) \right\] + \left\[ b_1 sin(x) + \cdots + b_n sin(nx) \right\]$
+$ proj_{W} f = \frac{a_0}{2} + \left\[ a_1 cos(x) + \cdots + a_n cos(nx) \right\] + $
+
+$\left\[ b_1 sin(x) + \cdots + b_n sin(nx) \right\]$
 
 就是我們常看到的 $F_n(x) = \frac{a_0}{2} + \sum_{k=1}^{n} (a_k cos(kx) + b_k sin(kx))$
 
@@ -631,10 +640,10 @@ struct FFT{
     void init(int _n){
         this->n = _n;
         for(int i=0;i<_n;i++){
-            w[i] = cd(cos(2*pi/_n*i),sin(2*pi/_n*i));
+            w[i] = cd(cos(2*pi/_n*i),sin(2*pi/_n*i)); // 單位根
         }
         int lgn = __lg(_n);
-        for(int i=0;i<_n;i++){
+        for(int i=0;i<_n;i++){ // 位元反轉
             int tmp = 0;
             for(int j=0;j<lgn;j++){
                 if(i&(1<<j)) tmp |= (1<<(lgn-j-1));
@@ -663,3 +672,4 @@ struct FFT{
     }
 }
 ```
+

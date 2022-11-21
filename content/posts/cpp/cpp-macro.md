@@ -17,8 +17,22 @@ url: "/posts/cpp/cpp-macro"
 //把指令縮短，之後要用就打pb就好
 ```
 
+我們也可以用巨集來定義函式：
+```cpp
+#define add(a,b) a+b
+//定義一個函式，參數為a,b，回傳a+b
+```
+
 有時候如果定義的巨集是變數型態也可以用`typedef`
 ```cpp
 typedef long long ll
 //之後宣告long long就打ll就好
+```
+
+定義陣列巨集：
+```cpp
+typedef char str[100];
+//之後宣告字串就打str就好
+
+str s; // 宣告 char 陣列
 ```
