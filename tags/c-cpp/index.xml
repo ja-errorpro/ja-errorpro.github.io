@@ -23,7 +23,7 @@ ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)
 ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
 輸入的方式，是使用(&amp;raquo;)從輸入流中擷取資料，而輸出則是用(&amp;laquo;)將資料擷取到輸出流。
 這就是一開始學校在教程式時會說輸入就是 cin &amp;gt;&amp;gt; x;，輸出是 cout &amp;lt;&amp;lt; x;，箭號方向不能交換。
-緩衝區 緩衝區的定義是 用作中介的內存塊，這樣說可能沒人懂，
+緩衝區 緩衝區的定義是 用作中介的內存塊，簡單來說，
 它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。
 因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，
 也就是當程式頻繁進行IO操作，會頻繁把高速的部分打斷，
@@ -72,7 +72,12 @@ string可以這樣宣告
 而指標的型態，取決於它從哪種變數取得指標，int指標型別就是 int*，double指標型別是double*
 宣告指標的方式也很簡單
 1 2 int a; int *b = &amp;amp;a; // *放在靠int或是靠變數名稱都可以 上面程式代表b是a的指標
-如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果</description></item><item><title>C++筆記-流程控制</title><link>/posts/cpp/cpp-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-process/</guid><description>C++筆記-目錄 流程控制 選擇結構 藉由前面那些知識，可以做出基本的運算跟輸出輸入了，現在我們可以給程式&amp;quot;做選擇&amp;quot;，實現更多功能。
+如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果</description></item><item><title>C++筆記-未定義行為</title><link>/posts/cpp/cpp-ub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-ub/</guid><description>C++筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
+一些例子 1. 順序未定義 考慮以下程式碼：
+1 2 int i = 10; i = i++ + ++i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i++ 和 ++i 哪個先執行，不一樣的編譯器可能會有不同的結果。
+而像以下程式碼也是錯誤的寫法
+1 2 3 int arr[10]; int i = 0; arr[i] = i++; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。
+3. 溢值 1 2 int x = 2147483647; // 假設 32 位元 int y = x + 1; 4.</description></item><item><title>C++筆記-流程控制</title><link>/posts/cpp/cpp-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-process/</guid><description>C++筆記-目錄 流程控制 選擇結構 藉由前面那些知識，可以做出基本的運算跟輸出輸入了，現在我們可以給程式&amp;quot;做選擇&amp;quot;，實現更多功能。
 題目：
 輸入一個正整數，如果他是偶數則輸出Yes，否則輸出No。 這時我們可以使用 if(如果)， 用法：
 1 2 3 if(條件式(condition) ){ //當條件成立要做的事 } 而這題的寫法如：
@@ -81,7 +86,7 @@ string可以這樣宣告
 1 2 3 4 5 6 7 8 struct Account{ // 建立&amp;#34;帳戶&amp;#34;這個型態 string name; // 名字 string ID; // 身分證號 string Living; // 戶籍地 bool gender; // 性別(大多數情況就男女之分(? 所以用bool) long long birthday; // 出生日期 long long balance; // 帳戶餘額 }; //要分號 這樣，我們就能把它當成一種型態來操作了，假設要開新帳戶：
 1 Account a; 如果要存取帳戶內容，
 1 2 3 a.name = &amp;#34;吉娃娃&amp;#34;; a.ID = &amp;#34;A12345678&amp;#34;; ... 當然如果有很多帳戶，也能直接宣告陣列
-1 2 Account Arr[100]; Arr[0].name = &amp;#34;吉娃娃&amp;#34;; 我們也可以在結構體裡宣告函式，比如計算一點跟它自己的距離：</description></item><item><title>C++筆記-目錄</title><link>/posts/cpp-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp-index/</guid><description>所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主 運作原理與基礎模板 變數 邏輯與運算子 巨集(補充) IO 字面常數 流程控制 陣列 字串 函式與遞迴 指標 物件(結構體) 簡化程式可讀性 Reference Openhome</description></item><item><title>C++筆記-語法</title><link>/posts/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
+1 2 Account Arr[100]; Arr[0].name = &amp;#34;吉娃娃&amp;#34;; 我們也可以在結構體裡宣告函式，比如計算一點跟它自己的距離：</description></item><item><title>C++筆記-目錄</title><link>/posts/cpp-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp-index/</guid><description>所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主 運作原理與基礎模板 變數 邏輯與運算子 巨集(補充) IO 字面常數 流程控制 陣列 字串 函式與遞迴 指標 物件(結構體) 簡化程式可讀性 未定義行為 Reference Openhome</description></item><item><title>C++筆記-語法</title><link>/posts/cpp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/</guid><description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主
 程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
 在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
 要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
@@ -126,8 +131,11 @@ ex: int a,b,c;
 1 int a[n]; 如果要動態宣告，要用到其他資料結構跟動態記憶體宣告，之後會在講指標提到。
 再來我們就能使用a[0],a[1],a[2]&amp;hellip;a[n-1]當作每個變數了，
 在[ ]中的數字，我們稱之為&amp;quot;索引值&amp;quot;，索引值對應的值，稱為&amp;quot;元素&amp;quot;，特別注意，
-索引值是從0開始的，即0代表第1個變數，1代表第2個變數 宣告完的陣列是沒有初始化的，
-如果貿然存取未初始化或超出陣列索引範圍的地方會出現無法預測的情況， 因此我們可以一次初始化全部元素，
+索引值是從0開始的，即0代表第1個元素，1代表第2個元素，n-1代表第n個元素 如果貿然存取未初始化或超出陣列索引範圍的地方會出現無法預測的情況
+參考：C++筆記-未定義行為
+剛剛宣告完的陣列是沒有初始化的，
+我們可以一次初始化全部元素，
 1 int a[100]={0}; // 將這100個元素全部初始化為0 或者直接初始化每個陣列值
-1 int a[5]={1,5,4,3,2}; 最後我們可以寫出剛剛那題的程式了
+1 int a[5]={1,5,4,3,2}; 如果我們只初始化前面幾個元素，剩下的元素會自動初始化為0
+1 2 int a[5]={1,5,4}; // a[0]=1,a[1]=5,a[2]=4,a[3]=0,a[4]=0 最後我們可以寫出剛剛那題的程式了
 1 2 3 4 5 6 7 8 9 10 11 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int n; cin &amp;gt;&amp;gt; n; int a[n]; // GCC for(int i=0;i&amp;lt;n;i++) cin &amp;gt;&amp;gt; a[i]; //利用上次講的for迴圈輸入每個變數值，注意從0開始 for(int i=n-1;i&amp;gt;=0;i--) cout &amp;lt;&amp;lt; a[i] &amp;lt;&amp;lt; endl; //倒序輸出，注意最後一個索引值是n-1 } 如果要宣告二維陣列存更多東西，其實就是每個元素都是一個陣列</description></item></channel></rss>
