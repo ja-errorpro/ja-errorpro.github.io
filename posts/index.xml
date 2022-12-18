@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 29 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>【CTF】Metasploitable3 環境建置(Windows VMware)</title><link>/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0000</pubDate><guid>/posts/2022/metasploitable3_installation/</guid><description>需求 Windows 10 up VMware Workstation Pro 良好的網路環境 1. 下載並安裝 Vagrant &amp;amp; Vagrant VMware Utility Vagrant 是建置虛擬機的工具，透過 Vagrantfile 來設定虛擬機。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 18 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL 基本語法(sqlite3 in python)</title><link>/posts/2022/sql_basic/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate><guid>/posts/2022/sql_basic/</guid><description>環境 市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：
+SQLite MySQL PostgreSQL SQL Server 在這裡使用 SQLite 來說明，在 Python 中可以直接使用 SQLite3 來操作。
+安裝套件 1 pip install sqlite3 與資料庫連線 1 2 import sqlite3 conn = sqlite3.connect(&amp;#39;example.db&amp;#39;) 當此程式執行時，如果與程式同一個資料夾下有 example.db 檔案，則會連線到該檔案，如果沒有，則會建立一個新的 example.db 檔案。
+並且 conn 將被建立為 Connection 物件表示資料庫。
+建立表格 在建立表格前，需要一個 Cursor 來執行 SQL 各種指令。
+1 cur = conn.cursor() 建立表格的語法如下：
+1 2 3 4 5 6 CREATE TABLE 表格名稱 ( 第一欄名稱 資料類型, 第二欄名稱 資料類型, 第三欄名稱 資料類型, .... ); 在 SQLite 中，資料類型有以下幾種：</description></item><item><title>【CTF】Metasploitable3 環境建置(Windows VMware)</title><link>/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0000</pubDate><guid>/posts/2022/metasploitable3_installation/</guid><description>需求 Windows 10 up VMware Workstation Pro 良好的網路環境 1. 下載並安裝 Vagrant &amp;amp; Vagrant VMware Utility Vagrant 是建置虛擬機的工具，透過 Vagrantfile 來設定虛擬機。
 Download Vagrant
 Download Vagrant VMware Utility
 2. 快速建置 打開 PowerShell，cd 到適當的資料夾，依序輸入
@@ -30,13 +36,7 @@ Git for Windows
 安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
 這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
 Linux 非常簡單，打開你的終端機
-1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>About</title><link>/posts/2022/about/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/about/</guid><description>我是誰 黃乙家
-A common student studying in Chung Yuan Christian University Department of Information and Computer Engineering
-IG: cannot.load_connection.refused
-I want to learn&amp;hellip; and more&amp;hellip;
-I use these OS 神秘的終端
-你可以試試輸入 YI_JIA{this_is_so_cool}
-沒用嗎？要不要換個瀏覽器試試看？</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
+1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
 簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。
 先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)
 Python官網
