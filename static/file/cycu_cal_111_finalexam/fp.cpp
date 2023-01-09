@@ -1,24 +1,3 @@
----
-title: 中原111資工計概上學期期末機測
-date: 2023-01-09
-tags:
-  - C-Cpp
-  - mix
-  - algorithms
----
-
-# 答案僅供參考
-
-# 答案僅供參考
-
-# 答案僅供參考
-
-# 我看起來像標準答案嗎
-
-## Pre
-題目提供以下資料結構與函式
-
-```cpp
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
@@ -106,60 +85,7 @@ int gNumOfErrors = 0 ;                // gErrors[]之中總共有多少幾筆Err
 
 Statistics gStat = { 0, 0, 0 } ;
 
-/** 
-* 讀入一個輸入的字串 
-* @param str 成功讀到字串的話會存在這裡面
-* @return 如果有讀到字串就回傳true，否則回傳false
-*/
-bool GetNextInputStr30Succeeded( Str30 & str ) ;
-
-/** 
-* 讀入一筆進貨資訊，分析後加入庫存 
-* @param barCode 一個已經讀到的條碼字串
-*/
-void GetAndProcessOnePurchasedItem( Str30 barCode ) ;
-
-/** 
-* 讀入一筆銷貨資訊，分析後更新庫存
-* @param barCode 一個已經讀到的條碼字串
-*/
-void GetAndProcessOneSoldItem( Str30 barCode ) ;
-
-/** 
-* 檢查單一銷貨商品是否沒有任何錯誤 
-* @param item 一個已經整理好的銷售商品資訊
-* @return 如果商品可以銷售就回傳true
-*/
-bool CheckSoldItemOK( SoldItem item ) ;
-
-/** 
-* 檢查庫存清單裡面有沒有指定的條碼 
-* @param barCode 要檢查的條碼
-* @return 找不到商品的話就回傳true
-*/
-bool NoSuchProduct( Str30 barCode ) ;
-
-/** 
-* 用於紀錄錯誤，負責把傳入的資訊寫進 gErrors[] 裡，
-* 同時會更新 gNumOfErrors 的值 
-* @param err 錯誤的類型
-* @param info 額外的錯誤資訊
-*/
-void WriteErrors(ErrorType err, Str50 info) {
-  gErrors[gNumOfErrors].type = err;
-  strcpy(gErrors[gNumOfErrors].info, info);
-  gNumOfErrors = gNumOfErrors + 1;
-}
-
-```
-
-## pA (10%)
-實作`bool CheckBarCodeFormatOK( Str30 barCode )` function，如果barCode符合條碼格式則回傳true，反則false。
-
-條碼格式必須為 1 個大寫英文 + 5 個數字
-
-```cpp
-bool CheckBarCodeFormatOK( Str30 barCode ) {
+bool CheckBarCodeFormatOK( Str30 barCode ) { // 10%
     if (strlen(barCode) != 6) return false;
     if(barCode[0] < 'A' || barCode[0] > 'Z') return false;
     for(int i = 1; i < 6; i++){
@@ -167,17 +93,8 @@ bool CheckBarCodeFormatOK( Str30 barCode ) {
     }
     return true;
 }
-```
 
----
-
-## pB (11%)
-實作`bool CheckBarCodeNameCorrect(PurchasedItem item)` function，
-檢查item是否跟所有庫存
-有條碼相同但商品名稱不同的狀況，若有，return false，反則true。
-
-```cpp
-bool CheckBarCodeNameCorrect(PurchasedItem item) {
+bool CheckBarCodeNameCorrect(PurchasedItem item) { // 11%
     for (int i = 0; i < gNumOfProducts; i++) {
         if (strcmp(item.barCode, gInventory[i].barCode) == 0) {
             if (strcmp(item.name, gInventory[i].name) != 0) {
@@ -187,22 +104,10 @@ bool CheckBarCodeNameCorrect(PurchasedItem item) {
     }
     return true;
 }
-```
 
----
+ // 後來才看到有WriteError()能用，多寫了orz
 
-## pC (11%)
-實作`bool CheckPurchasedItemOK( PurchasedItem item )` function，
-依順序檢查是否有以下錯誤，並記錄錯誤資訊，同時不再往下檢查：
-1. 條碼格式錯誤：只需要紀錄條碼內容
-2. 商品名稱錯誤：紀錄條碼內容跟商品名稱，中間用,隔開
-3. 負數錯誤：只需要紀錄條碼內容
-4. 資本不足：條碼內容、名稱、單價、購買數量，中間用,隔開
-
-有錯誤的話回傳false，反則true。
-
-```cpp
-bool CheckPurchasedItemOK( PurchasedItem item ) {
+bool CheckPurchasedItemOK( PurchasedItem item ) { // 11%
     if (!CheckBarCodeFormatOK(item.barCode)){
         gErrors[gNumOfErrors].type = BAR_CODE_FORMAT_ERROR;
         strcpy(gErrors[gNumOfErrors].info, item.barCode);
@@ -244,40 +149,22 @@ bool CheckPurchasedItemOK( PurchasedItem item ) {
     }
     return true;
 }
-```
 
-補：我全部寫完才看到有WriteError()能用，多寫了orz...
-
----
-
-## pD (12%)
-實作`bool NotEnoughMerchandize( Str30 barCode, int amountNeeded )` function，
-barCode 為讀入條碼，必存在於庫存，amountNeeded 為需要賣到的數量，檢查庫存是否足夠，若不足，回傳true，反則false。
-
-規則：此進價商品存貨不足就不賣，就算有不同進價的相同商品，加起來庫存大於需要賣的數量也賣不了。
-
-```cpp
-bool NotEnoughMerchandize( Str30 barCode, int amountNeeded ) {
+bool NotEnoughMerchandize( Str30 barCode, int amountNeeded ) { // 12%
     for (int i = 0; i < gNumOfProducts; i++) {
         if (strcmp(barCode, gInventory[i].barCode) == 0) {
             if(gInventory[i].amountLeft < amountNeeded){
+                // gErrors[gNumOfErrors].type = NOT_ENOUGH_MERCHANDISE;
+                // strcpy(gErrors[gNumOfErrors].info, barCode);
+                // gNumOfErrors++;
                 return true;
             }
         }
     }
     return false;
 }
-```
 
----
-
-## pE (15%)
-實作`bool CheckDateContentOK( Str30 dateStr, Date & date )` function，
-dateStr 格式必定正確(YYYY/MM/DD)，檢查是否為合法的日期，year必須介於 1900~9999 之間，若是，回傳true 
-並且將日期存到date，反則false。
-
-```cpp
-bool CheckDateContentOK( Str30 dateStr, Date & date ){
+bool CheckDateContentOK( Str30 dateStr, Date & date ) { // 15%
     int slashpos[2];
     int len = strlen(dateStr);
     int slashcount = 0;
@@ -328,16 +215,8 @@ bool CheckDateContentOK( Str30 dateStr, Date & date ){
     date.day = dayint;
     return true;
 }
-```
 
----
-
-## pF (13%)
-實作`AddToInventory( PurchasedItem item)` function，
-如果是新商品就push back到庫存，如果是現存商品但進價不同視為新商品，如果是現存商品進價相同就更新庫存。
-
-```cpp
-void AddToInventory( PurchasedItem item ) {
+void AddToInventory( PurchasedItem item ) { // 13%
     bool found = false;
     for (int i = 0; i < gNumOfProducts; i++) {
         if (strcmp(item.barCode, gInventory[i].barCode) == 0) {
@@ -356,16 +235,8 @@ void AddToInventory( PurchasedItem item ) {
         gNumOfProducts++;
     }
 }
-```
 
----
-
-## pG (13%)
-實作`void SubtractFromInventory( SoldItem item )` function，
-保證item賣得掉，若有多筆貨品在庫存但價錢不同，先出現者先賣，並更新庫存與獲利，庫存變為0不需移除此商品。
-
-```cpp
-void SubtractFromInventory( SoldItem item ) {
+void SubtractFromInventory( SoldItem item ) { // 13%
     int sameBarCodeidx[100];
     int sameBarCodeCount = 0;
     for (int i = 0; i < gNumOfProducts; i++) {
@@ -393,16 +264,8 @@ void SubtractFromInventory( SoldItem item ) {
         }
     }
 }
-```
 
----
-
-## pH (15%)
-實作`void SortInventory()` function，
-對庫存依條碼字典序遞增排序，若條碼相同則依進價遞增排序。
-
-```cpp
-void SortInventory() {
+void SortInventory() { // 15%
     for(int i = 0; i < gNumOfProducts; i++){
         for(int j = 0; j < gNumOfProducts - 1; j++){
             if(strcmp(gInventory[j].barCode, gInventory[j + 1].barCode) == 0){
@@ -419,32 +282,8 @@ void SortInventory() {
         }
     }
 }
-```
 
----
-
-## pI (5%, bonus)
-實作`bool ProcessDateStr( Str30 dateStr, bool & wrongDateFormat, bool & wrongDateContent, bool & wrongDateSequence ) ` function，
-先檢查日期格式是否正確，再檢查日期內容是否正確，最後檢查日期是否遞增，如果有錯就不再往下檢查。
-
-格式檢查：日期的格式必須是 xxxx/xx/xx，只要不是長這樣就把wrongDateFormat設為true
-內容檢查：日期必須符合真正的日期，如果內容錯誤就把wrongDateContent設為true
-順序錯誤：要處理的日期必須要在目前的日期(也就是gCurrentDate)之後(包含這個日期)。
-
-注意：
-
-wrongDateSequence與wrongDateFormat與wrongDateContent頂多只有一個會被設為true。
-
-若無錯誤，就用分析出來的年、月、日設定gCurrentDate (而三個參數也都被設為false)、並return true，
-
-否則return false (所以當return false的時候必然三個參數有一個為true)。 
-
-注意：如果日期格式、內容、順序有錯，必須記錄下錯誤(實際上是記錄到gErrors[]裡面)。 
-
-要記錄的錯誤資訊是ErrorType跟info。info紀錄的內容是錯誤的日期字串。
-
-```cpp
-void AddError(ErrorType et, Str50 info) { // 其實有 WriteErrors()
+void AddError(ErrorType et, Str50 info) {
     gErrors[gNumOfErrors].type = et;
     strcpy(gErrors[gNumOfErrors].info, info);
     gNumOfErrors++;
@@ -452,7 +291,7 @@ void AddError(ErrorType et, Str50 info) { // 其實有 WriteErrors()
 
 bool ProcessDateStr( Str30 dateStr, bool & wrongDateFormat, 
                                     bool & wrongDateContent, 
-                                    bool & wrongDateSequence ) {
+                                    bool & wrongDateSequence ) { // 5%
     int len = strlen(dateStr);
     if(len != 10){
         AddError(DATE_FORMAT_ERROR, dateStr);
@@ -549,11 +388,20 @@ bool ProcessDateStr( Str30 dateStr, bool & wrongDateFormat,
     gCurrentDate.day = dayint;
     return true;
 }
-```
+int main(){
+  // test
+  char dateStr[30];
 
----
+  while(cin >> dateStr){
+    bool wrongDateFormat = false;
+    bool wrongDateContent = false;
+    bool wrongDateSequence = false;
+    ProcessDateStr(dateStr, wrongDateFormat, wrongDateContent, wrongDateSequence);
+    
 
-## 總程式碼(main為測試Code)
-
-[FinalExam.cpp](/file/cycu_cal_111_finalexam/fp.cpp)
-
+  }
+  cout << "Date: " << gCurrentDate.year << "/" << gCurrentDate.month << "/" << gCurrentDate.day << endl;
+  for(int i = 0 ; i < gNumOfErrors ; i++){
+    cout << "Error: " << TO_STR(gErrors[i].type) << " " << gErrors[i].info << endl;
+  }
+}
