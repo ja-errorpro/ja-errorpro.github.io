@@ -13,7 +13,7 @@ tags:
 
 A common student studying in [Chung Yuan Christian University](https://www1.cycu.edu.tw/) Department of Information and Computer Engineering
 
-IG: cannot.load_connection.refused
+{{< social >}}
 
 ---
 
