@@ -42,7 +42,7 @@ $ pip3 install discord-py-interactions==4.3.4
 
 根據這份[API文件](https://interactionspy.readthedocs.io/en/latest/quickstart.html)
 
-我們先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為`bot.py`，
+先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為`bot.py`，
 並在DC的開發應用頁面創建好機器人
 
 然後複製以下code，將`your-bot-token`換成機器人的token，注意不要將token公開給別人。
@@ -66,7 +66,7 @@ bot.start()
 $ python3 bot.py
 ```
 
-這樣我們的機器人就成功上線了
+這樣機器人就成功上線了
 
 
 ## 第一個斜線指令
@@ -91,13 +91,13 @@ async def say_Hello(ctx: interactions.CommandContext):
 bot.start()
 ```
 
-接著我們在discord中輸入`/`後應該可以看到剛剛新增的指令，
+接著在discord中輸入`/`後應該可以看到剛剛新增的指令，
 
 * 建議使用電腦版Discord，手機版可能需要稍等片刻才會更新指令
 
 ## 第一個有可選參數的斜線指令
 
-當我們需要讓使用者輸入東西來執行指令，那Option是不錯的方案，來試試以下程式碼
+當需要讓使用者輸入東西來執行指令，那Option是不錯的方案，來試試以下程式碼
 
 ```py
 import interactions
