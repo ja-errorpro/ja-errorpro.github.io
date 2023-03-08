@@ -49,10 +49,10 @@ Python官網
 安裝 dcpi(以編寫此篇文時的版本為主)
 dcpi Pypi
 1 $ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
-我們先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人
+先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人
 然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。
 1 2 3 4 5 6 7 8 9 # 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 import interactions # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token # 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成 bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;,intents=interactions.flags.Intents.ALL) # 啟動機器人 bot.start() 接著執行它
-1 $ python3 bot.py 這樣我們的機器人就成功上線了
+1 $ python3 bot.py 這樣機器人就成功上線了
 第一個斜線指令 修改程式碼
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import interactions bot = interactions.</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate><guid>/posts/2022/ctf_picoctf_file_run2/</guid><description>題目：
 給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。 概念： 逆向工程 Linux 指令操作 Linux 權限控制 題解 丟進IDA看看，發現確實只要輸入Hello!就能跑出Flag，
