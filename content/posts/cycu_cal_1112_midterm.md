@@ -182,7 +182,7 @@ void WriteErrors(ErrorType err, Str50 info) { // pA 10%
 }
 ```
 
-時間複雜度 $O(1)$
+時間複雜度 $O(n)$
 
 ---
 
