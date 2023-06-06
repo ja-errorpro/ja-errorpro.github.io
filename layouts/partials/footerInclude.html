@@ -1,2 +1,21 @@
 <script type="text/javascript" src={{ "/js/nest.js" | relURL }} count=150 color="4,238,81" opacity=0.5>
 </script>
+
+{{ if .Page.Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+{{ end }}
+
+{{ if .Page.Store.Get "hasABC" }}
+  <script type="text/javascript" src={{ "/js/abcjs-basic-min.js" | relURL }} >
+  </script>
+  <script type="text/javascript" >
+    var e = document.getElementById("paper");
+	var tune = e.innerHTML;
+	ABCJS.renderAbc("paper", tune, { scale: 0.9 });
+	e.className = "renderABC";
+	e.id = "rendered";
+  </script>
+{{ end }}
