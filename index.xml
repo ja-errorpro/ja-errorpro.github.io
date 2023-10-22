@@ -8,7 +8,13 @@ PIE(Position Independent Executable): 記憶體隨機化，跟ASLR很像，但�
 繞過：讓程式執行的過程中洩露記憶體然後就能推算
 程式實際位址 = 程式加載位址 + 偏移位址
 Fortify Source: 在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()
-RELRO(RELocation Read-Only): 在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate><guid>/posts/2023/ctf_picoctf_heresalibc/</guid><description>題目：
+RELRO(RELocation Read-Only): 在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section</description></item><item><title>【系統安全】組合語言</title><link>/posts/2023/asm/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate><guid>/posts/2023/asm/</guid><description>組合語言 編譯流程 詞法分析 (Lexical Analysis) 切token -&amp;gt; 詞素 (Lexeme)
+語法分析 (Syntax Analysis) 建立語法樹 (Syntax Tree)
+語意分析 (Semantic Analysis) 用語法樹跟符號表 (Symbol Table) 來檢查語意
+中間碼產生 (Intermediate Code Generation)
+最佳化 (Optimization)
+目標碼產生 (Code Generation)
+GCC編譯流程 前置處理 (Preprocessing) -&amp;gt; 編譯 (Compilation) -&amp;gt; 組譯 (Assembly) -&amp;gt; 連結 (Linking) 檔案副檔名 (.i) (.s) (.o) (.out) 指令參數 -E -S -c 前置處理 (Preprocessing) 遞迴處理所有 #include 遞迴展開所有 #define 刪除所有註解 處理所有 #if #ifdef #ifndef #else #endif 行號記錄 編譯 (Compilation) 組語格式：預設 AT&amp;amp;T 語法，可用 -masm=intel 改成 Intel 語法</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate><guid>/posts/2023/ctf_picoctf_heresalibc/</guid><description>題目：
 給你指定的libc與elf file請pwn掉它 概念： 組合語言課學的各種東西 逆向工程 Little endian stack frame ELF format ret2libc 題解： 執行 file 查看檔案屬性 這是一個64位ELF格式可執行檔
 執行 checksec 查看安全屬性 只開了 NX(No-Execute, 堆疊不可執行)
 拿去Ghidra或IDA逆向 看起來會用到的函式：
