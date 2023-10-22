@@ -72,6 +72,8 @@ printf()：只有一個參數會換成 `puts()`
 - 精簡指令集：RISC(Reduced Instruction Set Computer)
     - ARM, MIPS
 
+以下以 x86 與 x86-64 為主
+
 ## 語法風格
 
 | AT&T | Intel |
