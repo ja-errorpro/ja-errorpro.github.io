@@ -59,12 +59,6 @@ printf()：只有一個參數會換成 `puts()`
 - 預設動態連結 (Dynamic Linking)，可用 `-static` 改成靜態連結 (Static Linking)
 - 把所有不確定的位址都修正
 
----
-
-待補：ELF檔案格式
-
----
-
 ## 指令集
 
 - 複雜指令集：CISC(Complex Instruction Set Computer)
