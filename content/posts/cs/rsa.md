@@ -1,5 +1,5 @@
 ---
-title: 【系統安全】RSA加密演算法
+title: 【CTF】密碼學-RSA加密演算法
 date: 2023-11-03
 tags:
   - ctf
@@ -38,6 +38,7 @@ tags:
 
 [gmpy2](https://github.com/aleaxit/gmpy)
 [線上分解n](http://factordb.com)
+[RSACTFTool](https://github.com/RsaCtfTool/RsaCtfTool)
 
 ### 餘數分解
 * 已知$e$、$p$、$q$，求 $d$
@@ -47,7 +48,7 @@ import gmpy2
 d = gmpy2.invert(e, (p-1)*(q-1))
 ```
 
-* 已知$e$、$p$、$q$、$c$，求 $m$
+* 已知$e$、$p$、$q$、$c$ (密文)，求 $m$
 
 ```py
 import gmpy2
@@ -60,13 +61,21 @@ m = pow(c, d, p*q)
 * 如果 $n$ 可以輕易被因數分解，就算得出 $d$，私鑰可破解。(p, q差太多或太小)
 
 ### 共模攻擊
-* 明文相同，$e$ 不同，$n$ 相同，可以直接解明文，不用分解 $n$、求 $d$。
+* 明文、$n$ 相同，$e$、$c$ 不同，兩個 $e$ 互質，可以直接解明文。
+```py
+# gcd(e1, e2) = 1
+# => e1*x + e2*y = 1
+m = pow(c1, x, n) * pow(c2, y, n) % n
+```
+
+### 廣播攻擊
+* 明文、$e$ 相同，$n$ 不同，使用中國剩餘定理求明文。
 
 ### 小指數攻擊
 * $e$ 太小(=3)，可以直接開 $e$ 次根號，得到明文。
 * $n$ 不同，$e$ 相同且太小，使用中國剩餘定理後，可以直接開 $e$ 次根號，得到明文，或是直接爆破求解。
 
-### 低解密指數攻擊
+### 低解密指數攻擊(Wiener's attack)
 * $e$ 太大或太小，可以快速求 $d$。
 
 ### dp, dq
@@ -87,6 +96,33 @@ m = m2 + h*q
 
 ### 部分私鑰已知攻擊
 
+### 選擇密文攻擊
+
+### 量子演算法爆破(Shor's algorithm)
+* 加速因數分解
+
+## 傳統作法(Pollard Rho)
+1. 選一個數 $a$，$a<n$
+2. 計算 $gcd(a,n)$，如果 $gcd(a,n) \neq 1$，找到因數，分解結束。
+3. 否則找函數 $f(x) = a^x\ mod\ n$ 的週期
+4. 如果週期是奇數，回到步驟1
+5. 如果 $a^{週期/2} \equiv -1 \pmod{n}$，回到步驟1
+6. $gcd(a^{週期/2}+1,n)$ 和 $gcd(a^{週期/2}-1,n)$ 至少有一個是 $n$ 的非平凡因數，分解結束。
+
+## 量子作法
+* Pollard Rho 的量子特化版本
+* 可以同時算 $a^x$，會得到很多餘數相同的疊加態，且每個之間相差一定週期
+* 用傅立葉轉換觀察頻率(1/週期)，破解加密。
+
+---
+
+## 參考資料
+
+[CTF wiki](https://ctf-wiki.org/crypto/asymmetric/rsa/rsa_theory/)
+
+[Wikipedia - Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm)
+
+[OI Wiki](https://oi-wiki.org/math/number-theory/pollard-rho/)
 
 
 
