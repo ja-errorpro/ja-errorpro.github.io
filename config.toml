@@ -81,7 +81,7 @@ weight = 6
     defaultAuthor = "ErrorPro"
 
     mathjax = true
-    css = ["css/highlight.css", "css/style-dark.css", "css/search.css"]
+    css = ["css/highlight.css", "css/style-dark.css", "css/search.css", "css/cursor.css"]
   
     [params.comments]
       enabled = false # default
@@ -100,7 +100,7 @@ weight = 6
     link = "https://www.facebook.com/errorpro05"
 	[[params.social]]
     name = "instagram"
-    link = "https://www.instagram.com/cannot.load_connection.refused/"
+    link = "https://www.instagram.com/compile.err0r"
 	[[params.social]]
 	name = "github"
 	link = "https://github.com/ja-errorpro"
@@ -118,6 +118,6 @@ weight = 6
 	link = "https://twitter.com/CompileErr0r"
     [[params.social]]
     name = "email"
-    link = "yijiahuang@ja-errorpro.cf"  # no need for "mailto:" in the head
+    link = "yijiahuang@ja-errorpro.codes"  # no need for "mailto:" in the head
 [outputs]
     home = ["HTML", "RSS", "JSON"]
