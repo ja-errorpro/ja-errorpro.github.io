@@ -24,7 +24,7 @@ jobs:
         run: hugo --minify
       
       - name: Setdomain
-        run: echo ja-errorpro.cf > ./public/CNAME
+        run: echo ja-errorpro.codes > ./public/CNAME
       
       
       - name: Deploy
