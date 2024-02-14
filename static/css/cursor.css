@@ -1,3 +1,16 @@
+* {
+	cursor: none;
+	
+}
+
 body{
-	cursor: auto;
+	cursor: none;
+}
+
+#Cursor{
+	cursor: none;
+	width: 32px;
+	height: 32px;
+	position: fixed;
+	pointer-events: none;
 }
