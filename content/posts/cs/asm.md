@@ -130,4 +130,131 @@ sub dest, src ; dest -= src
 jmp label ; 無條件跳躍
 ```
 
-以下待補
+## Stack
+
+如同資料結構所學的堆疊，LIFO。
+
+特性是由高位址往低位址長。
+
+### 暫存器
+
+* ESP(32), RSP(64) -> 堆疊頂端
+
+### 操作
+
+- push
+
+這個指令會對堆疊暫存器減掉 4(32) 或 8(64)，然後寫資料到暫存器所指的記憶體
+
+```asm
+push eax ; 把 eax 的值 push 進堆疊
+```
+
+- pop
+
+這個指令會先把堆疊暫存器所指的記憶體的內容寫到其他位址或暫存器，然後把暫存器加 4 或 8。
+
+```asm
+pop eax ; eax = stack.top(), stack.pop()
+```
+
+### 呼叫函式
+
+用 call 讓程式跳到其他位址，先把 return address push 到堆疊，然後做 jmp。
+
+結束時用 ret 根據 return address 跳回去。即先 pop return address 後做 jmp。
+
+虛擬指令 PROC, ENDP 用來定義子函式，並且要給有效的 Identifier。
+
+除了 main 以外都需要 ret 做返回。
+
+```asm
+main PROC
+...
+call Foo
+...
+main ENDP
+...
+Foo PROC
+...
+ret
+Foo ENDP
+```
+
+
+## Stack Frame(Activation Record)
+
+- ebp(rbp)
+
+用在堆疊上劃分函式、函式內的區域變數。
+
+
+## Calling Convention
+
+x86 使用 cdecl(C declaration)。
+
+x86-64 參考 System V AMD64 ABI。
+
+### Caller
+
+* 參數從右到左丟堆疊
+* 前六個參數(由左到右)依序放 edi(rdi), esi(rsi), edx(rdx), ecx(rcx), r8, r9，多的丟堆疊
+* 浮點數丟 st0-st7
+* Return Result 丟 eax(rax)，如果是浮點數丟 st0
+* eax, ecx, edx, st0-st7 會被影響，要自己備份(放堆疊)
+* 先做完參數再 call，返回後要自己清堆疊
+
+### Callee
+
+* 備份 ebp(rbp)，然後 ebp(rbp) 指到 esp(rbp)
+
+```asm
+push ebp
+mov ebp, esp
+```
+
+* 備份 ebx(rbx), edi(rdi), esi(rsi)
+* 返回時
+	* 把 eax(rax) 設 return result
+	* 恢復 edi(rdi), esi(rsi)
+	* 把堆疊空間還給系統 ( mov esp, ebp )
+	* 恢復 ebp
+	* 做 ret
+
+### 微軟的 x86-64
+
+* 前四個參數(由左到右)依序放 rcx, rdx, r8, r9，多的丟堆疊(由右到左)
+* 浮點數丟 XMM0-XMM3
+* Return Result 丟 rax，如果是浮點數丟 XMM0
+
+## System Call
+
+* System Call number 放 eax(rax)
+* 前六個參數(由左到右)依序放 edi(rdi), esi(rsi), edx(rdx), ecx(r10), r8, r9，多的丟堆疊
+	* x64 的 rcx 要換成 r10，因為 rcx 被拿去存 return address
+* Return Result 會在 eax(rax)
+* x86 用 `int 0x80` 做軟體中斷，x64 用 `syscall`
+
+```asm
+section .text
+    global _start
+
+_start:
+mov edx,len ;length
+mov ecx,msg ;message
+mov ebx,1   ;stdout
+mov eax,4   ;sys_write
+int 0x80
+mov eax,1   ;exit
+int 0x80
+
+section .data
+
+msg     db      'Hello, world!',0xa,0xd,0
+len       equ     $ - msg
+```
+
+```c
+sys_write(STDOUT, "Hello, world!", len);
+sys_exit();
+```

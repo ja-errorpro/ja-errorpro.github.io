@@ -1,5 +1,5 @@
 baseURL = '/'
-languageCode = 'en-us'
+languageCode = 'zh-Hant-TW'
 title = 'ErrorPro'
 theme = "cactus"
 timeZone = "Asia/Taipei"
