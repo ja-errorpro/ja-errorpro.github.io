@@ -10,6 +10,7 @@ url: "/posts/cpp-index"
 * [運作原理與基礎模板](/posts/cpp/cpp-init/)
 * [變數](/posts/cpp/cpp-variable/)
 * [邏輯與運算子](/posts/cpp/cpp-operator/)
+* [浮點數](/posts/cpp/cpp-float/)
 * [巨集(補充)](/posts/cpp/cpp-macro/)
 * [IO](/posts/cpp/cpp-io/)
 * [字面常數](/posts/cpp/cpp-literal/)
