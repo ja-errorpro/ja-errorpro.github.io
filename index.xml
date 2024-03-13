@@ -264,18 +264,15 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
 緩衝區 緩衝區的定義是 用作中介的內存塊，簡單來說，
 它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。
 因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，
-也就是當程式頻繁進行IO操作，會頻繁把高速的部分打斷，
+也就是當程式頻繁進行 IO 操作，會頻繁把高速的部分打斷，
 造成性能下降。
 緩衝區的功用就在於避開頻繁操作，只要讀取緩衝區的資料就好。
-只有需要時再刷新緩衝區進行IO操作，讓程式性能提升。
+只有需要時再刷新緩衝區進行 IO 操作，讓程式性能提升。
 以下狀況會刷新緩衝區：
-使用cin 釋放cout的資源 使用endl、fflush 程式正常結束 關於IO優化等操作，可查閱算法筆記
-輸入 在C++，我們使用cin(音：西印)輸入文字，
-方法很簡單，不像C語言還要指定型別， cin &amp;gt;&amp;gt; x; 就是輸入資料到x。
-當要輸入多筆資料，只要在後面繼續加就好 cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; z;。
-如果不想使用bits/stdc++.h，需要include &amp;lt;iostream&amp;gt;
-範例程式：
-1 2 3 4 5 6 7 8 9 #include&amp;lt;bits/stdc++.</description></item><item><title>C++筆記-函式與遞迴</title><link>/posts/cpp/cpp-function/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-function/</guid><description>C++筆記-目錄 函式與遞迴 之前有在講變數作用範圍時偷偷寫了一個函式，現在將會說明如何使用。
+使用cin 釋放cout的資源 使用endl、fflush 程式正常結束 關於 IO 優化等操作，可查閱算法筆記
+輸入 在 C++，我們使用 cin(音：西印) 輸入文字，
+方法很簡單，不像 C 語言還要指定型別， cin &amp;gt;&amp;gt; x; 就是輸入資料到x。
+當要輸入多筆資料，只要在後面繼續加就好 cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; z;。</description></item><item><title>C++筆記-函式與遞迴</title><link>/posts/cpp/cpp-function/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-function/</guid><description>C++筆記-目錄 函式與遞迴 之前有在講變數作用範圍時偷偷寫了一個函式，現在將會說明如何使用。
 到目前，我們都只用到main函式而已，假設我們有需要重複使用的程式碼，可以寫成函式，
 只要丟參數進去，就能得到傳回值。
 先以最基礎的線性函數(y=ax+b)開始，可以這樣寫
@@ -294,15 +291,10 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
 如果不使用萬能函式庫，必須include &amp;lt;string&amp;gt;。
 string可以這樣宣告
 1 2 3 4 string s1; //空字串 string s2(&amp;#34;abcde&amp;#34;); //用字面常量宣告初始化 string s3(s2); // 複製s2 string s4 = &amp;#34;edasd&amp;#34;; // 用字面常量宣告初始化 string可以用size()或length()直接查看字數(字串長度)，用empty()確認是否是空字串，甚至可以直接用==比較字串內容是否相同，
-1 2 3 4 5 6 7 8 9 10 string s1 = &amp;#34;abcde&amp;#34;; string s2; cout &amp;lt;&amp;lt; s1 &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;字串1長度=&amp;#34;&amp;lt;&amp;lt;s1.</description></item><item><title>C++筆記-字面常數</title><link>/posts/cpp/cpp-literal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-literal/</guid><description>C++筆記-目錄 字面常數 程式中的0,1,1.1都叫字面常數，代表程式的符號，
-整型字面常數包含2,8,10,16進位，其中2進位是C++14才加入的
-1 2 3 4 5 6 7 8 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int base10 = 1234; // 十進位 int base8 = 0373; // 八進位 int base16 = 0xf1; // 十六進位 int base2 = 0b1010; // 二進位 } 對於整數，cout都會以十進位輸出，試試看輸出上面程式中的變數會出現什麼數值。
-有時要做運算時可能發現直接使用數字計算，編譯器會報錯，比如要某個型態為long long的值加上10，這時可以在10後面加上LL，編譯器就會把10看作long long型態計算了。
-對於浮點數，有很方便的科學記號，1000000000可以寫成1e9，0.0008可以寫成8e-4。
-如果要表示字元，可以使用單引號，像是&amp;rsquo;a&amp;rsquo;,&amp;lsquo;1&amp;rsquo;，而如果需要用到引號或反斜線的字元時，在前面再加上一條反斜線即可。
-字串的字面常量是雙引號，像 &amp;ldquo;Hello World&amp;rdquo; 整句是一個字串。
-這裡提供一些常用的字元常量：
-字面常量 功能 \n 換行 \t 水平定位 \v 垂直定位 \b 退回 \r 回到行首 \\\ 反斜線 \? 問號 \&amp;rsquo; 單引號 \&amp;quot; 雙引號 C++換行有兩種方式，一是使用\n，另一種則是endl，而布林值中的true, false也是字面常量。</description></item><item><title>C++筆記-指標</title><link>/posts/cpp/cpp-pointer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-pointer/</guid><description>C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
+1 2 3 4 5 6 7 8 9 10 string s1 = &amp;#34;abcde&amp;#34;; string s2; cout &amp;lt;&amp;lt; s1 &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;字串1長度=&amp;#34;&amp;lt;&amp;lt;s1.</description></item><item><title>C++筆記-字面常數</title><link>/posts/cpp/cpp-literal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-literal/</guid><description>C++筆記-目錄 字面常數 程式中的 0, 1, 1.1 都叫字面常數，代表程式的符號，
+整型字面常數包含 2, 8, 10, 16 進位，其中 2 進位是 C++14 才加入的
+1 2 3 4 5 6 7 8 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int base10 = 1234; // 十進位 int base8 = 0373; // 八進位 int base16 = 0xf1; // 十六進位 int base2 = 0b1010; // 二進位 } 對於整數，cout 都會以十進位輸出，試試看輸出上面程式中的變數會出現什麼數值。
+有時要做運算時可能發現直接使用數字計算，編譯器會報錯，比如要某個型態為 long long 的值加上 10，這時可以在 10 後面加上 LL，編譯器就會把 10 看作 long long 型態計算了。</description></item><item><title>C++筆記-指標</title><link>/posts/cpp/cpp-pointer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-pointer/</guid><description>C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
 1 2 3 4 5 6 7 8 9 10 11 12 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; void swap(int x,int y){ int t=x;x=y;y=t; } int main(){ int a=1,b=2; swap(a,b); cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34; &amp;#34; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl; return 0; } Output: 1 2
 奇怪，ab沒有被交換，
 其實，這程式相當於我們又宣告了xy並交換xy，ab跟xy並沒有關係，這時我們就需要用到指標了。
@@ -327,10 +319,9 @@ IEEE 754
 IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算標準，除了浮點數的表示以外，它還定義了關於負0、反常值以及其運算子與例外情況，像是inf(Infinite)、nan(Not A Number)這些特殊數值。
 我們要先知道如何做進制轉換， 欲將十進位轉成二進位，對於整數部分，就是一直除以2直到商數為0，再依序由下往上取出餘數：
 而小數則相反，需要一直乘以2直到變成0為止，且每次的運算都只取小數部分，再依序由上往下取出整數。
-假設要轉換432.1為二進制，
+假設要轉換 432.1 為二進制，
 計算 結果 餘數 432/2 216 0 216/2 108 0 108/2 54 0 54/2 27 0 27/2 13 1 13/2 6 1 6/2 3 0 3/2 1 1 1/2 0 1 由下往上寫結果就是 110110000
-對小數部分
-計算 結果 整數部分 0.</description></item><item><title>C++筆記-物件(結構體)</title><link>/posts/cpp/cpp-struct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-struct/</guid><description>C++筆記-目錄 物件(結構體) Struct 現在我們要幫銀行寫一個管理系統，管理每個帳戶的資料，資料要含有：名字、身分證號、戶籍地、性別、出生年月日、存額。
+對小數部分</description></item><item><title>C++筆記-物件(結構體)</title><link>/posts/cpp/cpp-struct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-struct/</guid><description>C++筆記-目錄 物件(結構體) Struct 現在我們要幫銀行寫一個管理系統，管理每個帳戶的資料，資料要含有：名字、身分證號、戶籍地、性別、出生年月日、存額。
 我們發現每個資料需要的型態好像不一樣，不適合用陣列，但要存的資料數量卻都一樣， 這時我們可以建立一種物件了，其實就是自訂資料型態！
 1 2 3 4 5 6 7 8 struct Account{ // 建立&amp;#34;帳戶&amp;#34;這個型態 string name; // 名字 string ID; // 身分證號 string Living; // 戶籍地 bool gender; // 性別(大多數情況就男女之分(? 所以用bool) long long birthday; // 出生日期 long long balance; // 帳戶餘額 }; //要分號 這樣，我們就能把它當成一種型態來操作了，假設要開新帳戶：
 1 Account a; 如果要存取帳戶內容，
@@ -353,24 +344,24 @@ IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算
 總結程式碼(模板)： 1 2 3 4 5 6 #include&amp;lt;iostream&amp;gt; using namespace std; int main(){ cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World return 0; } 註解 在上面兩個程式碼中，會看到裡面寫了 // 後面接上說明，稱為&amp;quot;註解&amp;rdquo;，註解的內容不會被編譯器讀取，註解有兩種模式： 單行註解及多行註解，在C++裡的語法是這樣的</description></item><item><title>C++筆記-變數</title><link>/posts/cpp/cpp-variable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-variable/</guid><description>C++筆記-目錄 變數概論 當我們要進行複雜運算時，變數成為很重要的東西，你可以用變數儲存各種資料，讓電腦記住它。
 要如何宣告一個變數？格式為 (變數型態) (變數名稱)，我們可以一次宣告很多變數： (型態) (名稱),(名稱),(名稱)...;
 ex: int a,b,c;
-要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C++裡面已經定義的名稱(ex:int,char,double,long&amp;hellip;)
-變數型態： 根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用sizeof()， 以下所提的空間都是在多數32位元機器上佔有空間
-一、整數 每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯 而signed/unsigned表示型態含不含符號，而負數前面都會有一個 &amp;ldquo;-&amp;rdquo; ，因此當型態為unsigned時，是將所有負值的空間加到正值，讓正值值域更大
-型態 空間 範圍 描述 short/short int 2 Bytes -2^15~2^15-1 短整數 unsigned short/unsigned short int 2 Bytes 0~2^16-1 無符號短整數 int/long int/signed/signed long int/long 4 Bytes -2^31~2^31-1 整數 unsigned int/unsigned long int/unsigned 4 Bytes 0~2^32-1 無符號整數 long long/long long int 8 Bytes -2^63~2^63-1 長整數 unsigned long long/unsigned long long int 8 Bytes 0~2^64-1 無符號長整數 二、浮點數 就是有小數點的變數</description></item><item><title>C++筆記-運作原理與基礎模板</title><link>/posts/cpp/cpp-init/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-init/</guid><description>C++筆記-目錄 程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
-在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
+要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C++裡面已經定義的名稱(ex:int, char, double, long&amp;hellip;)
+變數型態： 根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用 sizeof()， 以下所提的空間都是在多數 32 位元機器上佔有空間
+一、整數 integer 每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯 而 signed/unsigned 表示型態含不含符號，而負數前面都會有一個 &amp;ldquo;-&amp;rdquo; ，因此當型態為 unsigned 時，是將所有負值的空間加到正值，讓正值值域更大
+型態 空間 範圍 描述 short/short int 2 Bytes -2^15~2^15-1 短整數 unsigned short/unsigned short int 2 Bytes 0~2^16-1 無符號短整數 int/long int/signed/signed long int/long 4 Bytes -2^31~2^31-1 整數 unsigned int/unsigned long int/unsigned 4 Bytes 0~2^32-1 無符號整數 long long/long long int 8 Bytes -2^63~2^63-1 長整數 unsigned long long/unsigned long long int 8 Bytes 0~2^64-1 無符號長整數 二、浮點數 float 就是有小數點的變數</description></item><item><title>C++筆記-運作原理與基礎模板</title><link>/posts/cpp/cpp-init/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-init/</guid><description>C++筆記-目錄 程式碼運作原理 我們知道其實電腦只懂 0 與 1，因此想跟電腦溝通就需要透過一些轉譯，
+在人類的世界中所使用的語言叫高階語言，而只由 0 與 1 數字組成的語言稱為機器語言，我們很難看懂，
 要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
 就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。
 基礎C++模板 附上STL標頭檔：
 1 #include&amp;lt;bits/stdc++.h&amp;gt; 注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
-這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的__gcd(計算最大公因數)
-不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。
+這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的 __gcd(計算最大公因數)
+不過有些編譯器不包含這個標頭檔，可以自己 Google 找到對應的解決方法。
 而在只有輸入輸出這些簡單的程式中，我們使用 &amp;lt;iostream&amp;gt; 就好
 1 #include &amp;lt;iostream&amp;gt; 有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
-為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那std就是你想找的書。
-而每個程式都會需要一個叫做main的主函式，這個函式就是整個程式的起點跟終點：
+為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫 std 的名稱空間裡，這樣在做像是輸入輸出 (cin, cout) 等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那 std 就是你想找的書。
+而每個程式都會需要一個叫做 main 的主函式，這個函式就是整個程式的起點跟終點：
 1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。
-注意到，有些程式句後面加了分號有些卻沒有，這是C++中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。
-總結程式碼(模板)： 1 2 3 4 5 6 #include&amp;lt;iostream&amp;gt; using namespace std; int main(){ cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World return 0; } 註解 在上面兩個程式碼中，會看到裡面寫了 // 後面接上說明，稱為&amp;quot;註解&amp;rdquo;，註解的內容不會被編譯器讀取，註解有兩種模式： 單行註解及多行註解，在C++裡的語法是這樣的</description></item><item><title>C++筆記-邏輯與運算子</title><link>/posts/cpp/cpp-operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-operator/</guid><description>C++筆記-目錄 表達式 Expression 有人常言道：「表達式(計算式)的天職，就是得到一個值。」
+注意到，有些程式句後面加了分號有些卻沒有，這是 C++ 中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在 C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。
+Cout cout 是程式的嘴巴，負責讓電腦說話，只要使用 &amp;lt;&amp;lt; 把文字傳給 cout 後，程式就會說出你給的台詞！</description></item><item><title>C++筆記-邏輯與運算子</title><link>/posts/cpp/cpp-operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/cpp/cpp-operator/</guid><description>C++筆記-目錄 表達式 Expression 有人常言道：「表達式(計算式)的天職，就是得到一個值。」
 1 + 2 是一個表達式，其中 1 是一個運算元，2 是另一個運算元，而 + 是運算子。
 1 + ( 2 - 3 ) 也是一個表達式，這個表達式裡還有一個表達式 ( 2 - 3 )，稱為複合表達式(Compound Expression)
 而等等會看到的 a = 5，其實也是一個表達式，將 5 賦值給 a，那麼這個表達式得到的值當然就是最後賦值給 a 的數值。
