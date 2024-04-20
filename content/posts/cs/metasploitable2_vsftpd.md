@@ -1,5 +1,5 @@
 ---
-title: 【CTF】Metasploitable2 滲透測試實作(筆記)
+title: 【資訊安全】Metasploitable2 滲透測試實作(筆記)
 date: 2022-11-23
 tags:
   - ctf
