@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithms on ErrorPro</title><link>/tags/algorithms/</link><description>Recent content in Algorithms on ErrorPro</description><generator>Hugo -- gohugo.io</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 25 May 2023 00:00:00 +0800</lastBuildDate><atom:link href="/tags/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>【CPE】2023-05-23 紀錄</title><link>/posts/2023/cpe_20230523/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>/posts/2023/cpe_20230523/</guid><description>CPE(大學程式能力檢定) 第一次考CPE，考前沒時間準備所以基本上就是裸考。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithms on ErrorPro</title><link>/tags/algorithms/</link><description>Recent content in Algorithms on ErrorPro</description><generator>Hugo 0.125.1</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 25 May 2023 00:00:00 +0800</lastBuildDate><atom:link href="/tags/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>【CPE】2023-05-23 紀錄</title><link>/posts/2023/cpe_20230523/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>/posts/2023/cpe_20230523/</guid><description>CPE(大學程式能力檢定) 第一次考CPE，考前沒時間準備所以基本上就是裸考。
 隨便寫寫，做了4題
 pA - UVA11934 題意： 給你一個二次函數、一個除數 $d$ 及 $L$，求 $f(0)$ 到 $f(L)$ 的值有幾個可被 $d$ 整除
 $-1000 \le a,b,c \le 1000, 1&amp;lt;d&amp;lt;10^6, 0 \le L &amp;lt; 1000$
@@ -151,4 +151,8 @@ $$ Def:\
 加法的逆元是負號，乘法的逆元是倒數。
 如果 $G$ 中存在一個元素 $g$ 使得對 $G$ 中的任意元素 $a$ 都有 $a = g^n $，則稱 $(G,\cdot)$ 為循環群，也說 $G$ 由 $g$ 生成、$g$ 是 $G$ 的生成元，記作 $G = \langle g \rangle$，其中 $\langle g \rangle$ 稱為 $g$ 的生成集合(Span)。</description></item><item><title>算法筆記-貪心</title><link>/posts/1/algo-greedy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-greedy/</guid><description>算法筆記目錄 貪心 貪心就是在每一步都選擇當下看起來最好的選擇，直到結束。
 經典題如：換錢問題、排程問題都是貪心的典型題目。
-在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。</description></item></channel></rss>
+在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。</description></item><item><title>算法筆記-進階資料結構</title><link>/posts/1/algo-advanced-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/posts/1/algo-advanced-structure/</guid><description>算法筆記目錄 進階資料結構 二元搜尋樹 某棵樹滿足以下條件可稱為二元搜尋樹 * 為一棵 Binary Tree * 對任一節點 $i$，其左子樹所有值小於它，且右子樹所有值大於它 * 沒有鍵值相同的節點 實作 插入節點 如果 root 為空就填進去 跟 root 比較，如果比較小就往左，比較大就往右 搜尋 跟新增差不多，比較小往左，比較大往右，經過的時候順便檢查當前是否為搜尋目標
+刪除節點 先找到要刪的節點
+如果它沒有子節點，直接刪掉就好
+如果它只有一個子節點，把該子節點跟親代節點連起來就好
+如果它有兩個子節點，找到右子節點的最小值(或左子節點的最大值)替補上去就好。</description></item></channel></rss>
