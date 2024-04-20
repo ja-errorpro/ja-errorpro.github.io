@@ -61,7 +61,7 @@ weight = 6
 
     colortheme = "dark" # dark, light, white, or classic
 	googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
-  
+    googleAnalytics = "G-LP899FV1TS"
     # Home page settings
     description = "我覺得現在在看這句話的人超電"
     mainSection = "posts" # your main section
