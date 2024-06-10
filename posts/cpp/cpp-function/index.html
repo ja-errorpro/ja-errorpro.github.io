@@ -4,11 +4,11 @@
 只要丟參數進去，就能得到傳回值。
 先以最基礎的線性函數(y=ax+b)開始，可以這樣寫
 1 2 3 int f(int x){ return a*x+b; } 只要我們帶x進去，函式就會傳回計算後的值，使用函式的過程稱為呼叫
-1 2 3 cout &amp;lt;&amp;lt; f(0) &amp;lt;&amp;lt; endl; int y = f(2); cout &amp;lt;&amp;lt; y &amp;lt;&amp;lt; endl; 而函式可以選擇接受或不接受參數，也能自訂型態
+1 2 3 cout << f(0) << endl; int y = f(2); cout << y << endl; 而函式可以選擇接受或不接受參數，也能自訂型態
 1 2 3 4 void f(){ // 不接受參數 可以做任何事; return; // 使用void就不會回傳值 } 而上一章字串介紹的empty()，其實也是一個布林函式
 1 2 3 4 bool empty(){ if (字串沒東西) return true; else return false; } 而遞迴就是函式自己呼叫自己而已，
 現在利用遞迴概念，我們試著寫寫看計算階乘(n乘到1)的函式
-1 2 3 4 5 long long f(int n){ //計算 n!"><meta property="og:locale" content="zh-Hant-TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-函式與遞迴"><meta name=twitter:description content="C++筆記-目錄 函式與遞迴 之前有在講變數作用範圍時偷偷寫了一個函式，現在將會說明如何使用。
+1 2 3 4 5 long long f(int n){ //計算 n!"><meta property="og:locale" content="zh_Hant_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-函式與遞迴"><meta name=twitter:description content="C++筆記-目錄 函式與遞迴 之前有在講變數作用範圍時偷偷寫了一個函式，現在將會說明如何使用。
 到目前，我們都只用到main函式而已，假設我們有需要重複使用的程式碼，可以寫成函式，
 只要丟參數進去，就能得到傳回值。
 先以最基礎的線性函數(y=ax+b)開始，可以這樣寫

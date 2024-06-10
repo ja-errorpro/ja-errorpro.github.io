@@ -4,7 +4,7 @@
 1 2 int i = 10; i = i++ + ++i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i++ 和 ++i 哪個先執行，不一樣的編譯器可能會有不同的結果。
 而像以下程式碼也是錯誤的寫法
 1 2 3 int arr[10]; int i = 0; arr[i] = i++; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。
-3. 溢值 1 2 int x = 2147483647; // 假設 32 位元 int y = x + 1; 4."><meta property="og:locale" content="zh-Hant-TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-未定義行為"><meta name=twitter:description content="C++筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
+3. 溢值 1 2 int x = 2147483647; // 假設 32 位元 int y = x + 1; 4."><meta property="og:locale" content="zh_Hant_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-未定義行為"><meta name=twitter:description content="C++筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
 一些例子 1. 順序未定義 考慮以下程式碼：
 1 2 int i = 10; i = i++ + ++i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i++ 和 ++i 哪個先執行，不一樣的編譯器可能會有不同的結果。
 而像以下程式碼也是錯誤的寫法

@@ -1,13 +1,13 @@
 <!doctype html><html lang=zh-Hant-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><script type=text/javascript src=https://latest.cactus.chat/cactus.js></script><link rel=stylesheet href=https://latest.cactus.chat/style.css type=text/css><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-指標 | ErrorPro</title>
-<link rel=canonical href=/posts/cpp/cpp-pointer/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="/posts/cpp/cpp-pointer/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-指標"><meta property="og:description" content="C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
-1 2 3 4 5 6 7 8 9 10 11 12 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; void swap(int x,int y){ int t=x;x=y;y=t; } int main(){ int a=1,b=2; swap(a,b); cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34; &amp;#34; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl; return 0; } Output: 1 2
+<link rel=canonical href=/posts/cpp/cpp-pointer/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="/posts/cpp/cpp-pointer/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-指標"><meta property="og:description" content='C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
+1 2 3 4 5 6 7 8 9 10 11 12 #include<bits/stdc++.h> using namespace std; void swap(int x,int y){ int t=x;x=y;y=t; } int main(){ int a=1,b=2; swap(a,b); cout << a << " " << b << endl; return 0; } Output: 1 2
 奇怪，ab沒有被交換，
 其實，這程式相當於我們又宣告了xy並交換xy，ab跟xy並沒有關係，這時我們就需要用到指標了。
-要取得變數的指標，只需在它前面加上 &amp;amp; 就好，如果我們輸出 &amp;amp;a，會得到它的記憶體位址。
+要取得變數的指標，只需在它前面加上 & 就好，如果我們輸出 &amp;a，會得到它的記憶體位址。
 而指標的型態，取決於它從哪種變數取得指標，int指標型別就是 int*，double指標型別是double*
 宣告指標的方式也很簡單
-1 2 int a; int *b = &amp;amp;a; // *放在靠int或是靠變數名稱都可以 上面程式代表b是a的指標
-如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果"><meta property="og:locale" content="zh-Hant-TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-指標"><meta name=twitter:description content='C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
+1 2 int a; int *b = &amp;a; // *放在靠int或是靠變數名稱都可以 上面程式代表b是a的指標
+如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果'><meta property="og:locale" content="zh_Hant_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-指標"><meta name=twitter:description content='C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
 1 2 3 4 5 6 7 8 9 10 11 12 #include<bits/stdc++.h> using namespace std; void swap(int x,int y){ int t=x;x=y;y=t; } int main(){ int a=1,b=2; swap(a,b); cout << a << " " << b << endl; return 0; } Output: 1 2
 奇怪，ab沒有被交換，
 其實，這程式相當於我們又宣告了xy並交換xy，ab跟xy並沒有關係，這時我們就需要用到指標了。

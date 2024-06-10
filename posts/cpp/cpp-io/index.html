@@ -1,14 +1,14 @@
 <!doctype html><html lang=zh-Hant-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><script type=text/javascript src=https://latest.cactus.chat/cactus.js></script><link rel=stylesheet href=https://latest.cactus.chat/style.css type=text/css><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-IO | ErrorPro</title>
 <link rel=canonical href=/posts/cpp/cpp-io/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="/posts/cpp/cpp-io/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-IO"><meta property="og:description" content="C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
 C++這個語言本來是沒有IO功能的，
-基本的輸入輸出定義於&amp;lt;iostream&amp;gt;與&amp;lt;fstream&amp;gt;這兩個標準模板庫(std)裡，
+基本的輸入輸出定義於<iostream>與<fstream>這兩個標準模板庫(std)裡，
 它們被分成了三個標準：
 istream/ cin、wcin ： 標準輸入流
 ostream/ cout、wcout ： 標準輸出流
 ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)
 ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
-輸入的方式，是使用(&amp;raquo;)從輸入流中擷取資料，而輸出則是用(&amp;laquo;)將資料擷取到輸出流。
-這就是一開始學校在教程式時會說輸入就是 cin &amp;gt;&amp;gt; x;，輸出是 cout &amp;lt;&amp;lt; x;，箭號方向不能交換。
+輸入的方式，是使用(»)從輸入流中擷取資料，而輸出則是用(«)將資料擷取到輸出流。
+這就是一開始學校在教程式時會說輸入就是 cin >> x;，輸出是 cout << x;，箭號方向不能交換。
 緩衝區 緩衝區的定義是 用作中介的內存塊，簡單來說，
 它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。
 因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，
@@ -19,8 +19,8 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
 以下狀況會刷新緩衝區：
 使用cin 釋放cout的資源 使用endl、fflush 程式正常結束 關於 IO 優化等操作，可查閱算法筆記
 輸入 在 C++，我們使用 cin(音：西印) 輸入文字，
-方法很簡單，不像 C 語言還要指定型別， cin &amp;gt;&amp;gt; x; 就是輸入資料到x。
-當要輸入多筆資料，只要在後面繼續加就好 cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; z;。"><meta property="og:locale" content="zh-Hant-TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-IO"><meta name=twitter:description content="C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
+方法很簡單，不像 C 語言還要指定型別， cin >> x; 就是輸入資料到x。
+當要輸入多筆資料，只要在後面繼續加就好 cin >> x >> y >> z;。"><meta property="og:locale" content="zh_Hant_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:tag" content="C-Cpp"><meta name=twitter:card content="summary"><meta name=twitter:title content="C++筆記-IO"><meta name=twitter:description content="C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
 C++這個語言本來是沒有IO功能的，
 基本的輸入輸出定義於<iostream>與<fstream>這兩個標準模板庫(std)裡，
 它們被分成了三個標準：
@@ -28,7 +28,7 @@ istream/ cin、wcin ： 標準輸入流
 ostream/ cout、wcout ： 標準輸出流
 ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)
 ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
-輸入的方式，是使用(&#187;)從輸入流中擷取資料，而輸出則是用(&#171;)將資料擷取到輸出流。
+輸入的方式，是使用(»)從輸入流中擷取資料，而輸出則是用(«)將資料擷取到輸出流。
 這就是一開始學校在教程式時會說輸入就是 cin >> x;，輸出是 cout << x;，箭號方向不能交換。
 緩衝區 緩衝區的定義是 用作中介的內存塊，簡單來說，
 它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。

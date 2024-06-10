@@ -5,9 +5,9 @@
 模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式
 普通模式 初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行
 以下是常用的編輯指令
-dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl+r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) &amp;gt;&amp;gt; - 縮排 &amp;lt;&amp;lt; - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯
+dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl+r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) >> - 縮排 << - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯
 按下 Esc 即可回到普通模式，此時 -- INSERT -- 會消失
-視覺(選取)模式 在普通模式按下 v 即可進入視覺模式，此時可以看到視窗最下方出現 -- VISUAL --，可以使用方向鍵選取文字，並使用 w 選取下一個單字的開頭或 $ 選取後面整行。"><meta property="og:locale" content="zh-Hant-TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-09-13T00:00:00+08:00"><meta property="article:modified_time" content="2022-09-13T00:00:00+08:00"><meta property="article:tag" content="Mix"><meta property="article:tag" content="Linux"><meta name=twitter:card content="summary"><meta name=twitter:title content="Vim 極簡教學"><meta name=twitter:description content="簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
+視覺(選取)模式 在普通模式按下 v 即可進入視覺模式，此時可以看到視窗最下方出現 -- VISUAL --，可以使用方向鍵選取文字，並使用 w 選取下一個單字的開頭或 $ 選取後面整行。"><meta property="og:locale" content="zh_Hant_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-09-13T00:00:00+08:00"><meta property="article:modified_time" content="2022-09-13T00:00:00+08:00"><meta property="article:tag" content="Mix"><meta property="article:tag" content="Linux"><meta name=twitter:card content="summary"><meta name=twitter:title content="Vim 極簡教學"><meta name=twitter:description content="簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
 起步 若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；
 如果不存在，就會在儲存後新建一個。
 模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式
