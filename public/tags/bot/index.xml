@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bot on ErrorPro</title>
+    <link>//localhost:1313/tags/bot/</link>
+    <description>Recent content in Bot on ErrorPro</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/bot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title>
+      <link>//localhost:1313/posts/2022/discordpy2_and_interactions/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2022/discordpy2_and_interactions/</guid>
+      <description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂&#xA;簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。&#xA;先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)&#xA;Python官網&#xA;安裝 dcpi(以編寫此篇文時的版本為主)&#xA;dcpi Pypi&#xA;1 $ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件&#xA;先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人&#xA;然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。&#xA;1 2 3 4 5 6 7 8 9 # 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 import interactions # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token # 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成 bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;,intents=interactions.flags.Intents.ALL) # 啟動機器人 bot.start() 接著執行它&#xA;1 $ python3 bot.py 這樣機器人就成功上線了&#xA;第一個斜線指令 修改程式碼&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import interactions bot = interactions.</description>
+    </item>
+    <item>
+      <title>Farmbot歷程</title>
+      <link>//localhost:1313/posts/2021/farmbot/</link>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2021/farmbot/</guid>
+      <description>Farmbot&#xA;(本頁面在舊版網站發布，會有不少顯示問題)&#xA;FBTUG共筆資料&#xA;什麼是Farmbot? 一個機器人開放式系統，可通過土地種植，澆水，土壤測試和除草為所有需要耕種小土地跟想種糧食的人提供幫助&#xA;使用Raspberry Pi(樹莓派)，Arduino以及其他優良組件&#xA;1.碳足跡 製造 目前看重環保議題,Farmbot使用最普遍的材料:&#xA;材料 用途 重量(kg) kg CO2/物料 kg CO2(kg) 鋁 擠壓板 9.5 8.24 78.3 不鏽鋼 硬件，軸承，驅動軸，絲槓 1.4 6.15 8.6 塑料 拖鏈，3D列印[CAD]，輪子，電子設備，管材，電路板 2.8 2.53 7.1 銅 電，佈線，電動機繞組 0.3 2.60 0.8 橡膠 皮帶，電線，墊片 0.2 3.18 0.6 合計 95.4 每生產Farmbot排放的理論量約 95.4 kg，但實際上較接近 150 kg&#xA;使用 在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&#xA;零件 功率(W) 佔空比(%) 使用時間(h/d) kWh/day kWh/year kg CO2/day kg CO2/year 樹莓派2 3.0 100% 24.00 0.072 26.3 0.040 14.56 樹莓派相機 1.</description>
+    </item>
+  </channel>
+</rss>

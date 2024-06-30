@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on ErrorPro</title>
+    <link>//localhost:1313/tags/crypto/</link>
+    <description>Recent content in Crypto on ErrorPro</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【CTF】密碼學-RSA加密演算法</title>
+      <link>//localhost:1313/posts/2023/rsa/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2023/rsa/</guid>
+      <description>RSA加密演算法 簡介 由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。 非對稱加密演算法(公鑰加密演算法)。 一般有1024、2048、4096位的金鑰長度，位是二進位位元數 生成金鑰過程 選兩個質數$p$、$q$，$p\neq q$。 算 $\phi(pq) $，其中 $\phi(n)$ 為歐拉函數，表示小於 $n$ 且與 $n$ 互質的正整數個數，歐拉定理 $\phi(pq) = (p-1)(q-1)$。 選一個數 $e$，使 $1 \leq e \leq \phi(pq)$ 且 $e$ 與 $\phi(pq)$ 互質。 找一個數 $d$，使 $ed \equiv 1 \pmod{\phi(pq)}$，即 $ed$ 除以 $phi(pq)$ 的餘數 $ = 1$。 4-1. 這步就是在求 $e$ 關於 $\phi(pq)$ 的模逆元，可以用擴展歐幾里得法求，參考：算法筆記-數論 $p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。 加密過程 將明文字串 $m$ 轉換成數字(ASCII)陣列。 一個數一個數加密，設數字為 $x$，計算 $x^e\ mod\ n$，得到密文。 把這些密文再組合起來 解密過程 把密文拆開，一個數一個數解密，設數字為 $y$，計算 $y^d\ mod\ n$，得到明文。 把這些明文再組合起來 攻擊 gmpy2 線上分解n RSACTFTool</description>
+    </item>
+  </channel>
+</rss>

