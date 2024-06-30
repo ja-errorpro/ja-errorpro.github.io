@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>/posts/2024/ais3_pre_exam_2024/</guid><description>AIS3 Pre-Exam 2024 先放結果
 My First CTF：潛力獎
-心得 第一次參加 My First CTF 跟 AIS3 Pre-Exam，而且這次為了專心比賽還跟學校請假，最後有幾題到比賽結束才解出來，覺得滿可惜的，
+心得 第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，
 希望下次能通靈出更多題目。
-Write Up 6/30 後才能公開</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>/posts/2024/metasploitable3_writeup/</guid><description>先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable3 良好的網路環境 確認 IP Win2k8:
+Write Up Misc Welcome 簽到題
+FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}
+Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，
+這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。
+看到 server.py
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&amp;#39;what would you like to do?</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>/posts/2024/metasploitable3_writeup/</guid><description>先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable3 良好的網路環境 確認 IP Win2k8:
 1 ipconfig ub1404:
 1 ifconfig 弱點掃描 使用 Nmap 將所有 port 掃描一遍，查看主機上開啟的 Service
 1 sudo nmap -sV -sS -n -v --reason --open -p- &amp;lt;Metasploitable3 IP&amp;gt; &amp;lt;Metasploitable3 IP&amp;gt; 請替換成靶機 IP
