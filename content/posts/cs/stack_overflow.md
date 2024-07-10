@@ -35,6 +35,11 @@ tags:
 
 ## ROP
 
+* 用於繞過 NX 保護的漏洞利用技術
+* 利用程式碼已有的片段，拼出想要的功能，而控制程式執行流程
+* 這些片段稱為 gadget，通常以 ret 結尾
+* 可使用 ROPgadget, ropper, pwntools 來找 gadget
+
 ## ret2win
 
 ## ret2shellcode
