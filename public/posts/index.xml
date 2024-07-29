@@ -23,6 +23,13 @@
       <description>威脅情資＆機器學習 -奧義智慧科技 資安研究處長 陳仲寬 ＆ 資安研究員 陳憶賢 ＆ 資安研究員 黃俊嘉 ＆ 資安研究員 陳勝舢&#xA;About the Course We believe AI will change the landscape of cybersecurity, therefore, in this course, we would like to combine the AI and CTI applications.&#xA;Goal: Understand the basic concept of CTI Apply ML/AI to solve CTI problems 威脅情資概述 What is Threat Intelligence? 知己知彼，百戰不殆 Every contact leaves a trace Actionable Threat Intelligence 情資有相當多呈現方式，不是每種場域都適合 有什麼樣的情資 如何使用情資 情資可應用程度 「公部門易受外網攻擊，成功阻擋的防禦率高」 == 屁話</description>
     </item>
     <item>
+      <title>【AIS3】面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防</title>
+      <link>//localhost:1313/posts/2024/ais3_d1_3/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d1_3/</guid>
+      <description>面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防 </description>
+    </item>
+    <item>
       <title>【Pico】Pwn 系列解題紀錄</title>
       <link>//localhost:1313/posts/picoctf/pwn/</link>
       <pubDate>Tue, 16 Jul 2024 00:00:00 +0800</pubDate>
