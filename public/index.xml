@@ -6,8 +6,15 @@
     <description>Recent content on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
-    <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0800</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【AIS3】資安倫理</title>
+      <link>//localhost:1313/posts/2024/ais3_d2_1/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d2_1/</guid>
+      <description>資安倫理 -法務部調查局 調查官 陳彥后&#xA;前言 去年資安人力吃緊，今年沒有改善。&#xA;資安事件回應、情資分析佔最多缺額&#xA;企業資安預算逐年提高&#xA;這是最好的時代，也是最壞的時代&#xA;認清工作現實 資安的工作，絕大多數絕非學生時期的 CTF 及各式競賽 更多的是產品的開發及服務的提供 平凡到超絕 人力 -&amp;gt; 人才 -&amp;gt; 人物 基本法律觀念 前科 個人資料保護法施行細則第 4 條第 6 項 警察刑事紀錄證明核發條例第 6 條但書另規定 無法申請良民證 無法出入境某些國家 從事公職及特定部分工作 刑事流程 妨害電腦使用罪 刑法第 358 條至第 363 條 358 - 無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦 359 - 無故取得、刪除或變更他人之電腦資料 360 - 無故以電腦程式或其他電磁方式干擾他人電腦或其相關設備，致生損害於公眾或他人者，處三年以下有期徒刑、拘役或科或併科十萬元以下罰金。 361 - 對於公務機關之電腦或其相關設備犯前三條之罪者，加重其刑至二分之一 362 - 製作專供犯本章之罪之電腦程式，而供自己或他人犯本章之罪，致生損害於公眾或他人者，處五年以下有期徒刑、拘役或科或併科二十萬元以下罰金。 製作 malware 363 - 第 358 條至第 360 條須告訴乃論。 361, 362 非告訴乃論 實際案例 自架 DDoS 提供網站，以政府單位為目標，錄製攻擊過程並放在 YT 上招攬生意 拿女友帳號改感情狀況 打進校務系統改全校成績 與公司人員相處不睦離職，將公司配發於公務使用電腦，私人檔案及公司相關檔案刪除 個人資料保護法 個資</description>
+    </item>
     <item>
       <title>【AIS3】The Journey of Becoming a Vulnerability Researcher</title>
       <link>//localhost:1313/posts/2024/ais3_d1_1/</link>
