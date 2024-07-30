@@ -9,6 +9,13 @@
     <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0800</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title>
+      <link>//localhost:1313/posts/2024/ais3_d2_2/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d2_2/</guid>
+      <description>IDA 不只有 F5 可以按 IDA 101, Reverse 101 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&#xA;IDA 介紹 IDAFree/IDAPro/IDATeam 如何使用 IDA(新手) 開 binary 一路按 ok F5 沒反應 IDA Free@ubuntu Fix Qt套件更新&#xA;sudo apt install libxcb-xinerama0 IDA Free - load ELF/PE/MachO hex view disassemble decompile function 藍 library func 紫 external symbol 白 regular func 搜尋:&#xA;直接輸入:從頭匹配 [ctrl+f5]:模糊搜尋 option-&amp;gt; general disassembly view (graph) 圖形化 若case夠多，會變成 jump table&#xA;disassembly view (text) 優點:</description>
+    </item>
+    <item>
       <title>【AIS3】資安倫理</title>
       <link>//localhost:1313/posts/2024/ais3_d2_1/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
