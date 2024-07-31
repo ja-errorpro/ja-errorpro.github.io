@@ -6,14 +6,42 @@
     <description>Recent content on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0800</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</title>
+      <link>//localhost:1313/posts/2024/ais3_d3_1/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d3_1/</guid>
+      <description>深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen&#xA;教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.</description>
+    </item>
+    <item>
+      <title>【AIS3】網頁動態安全檢測與報戶 (RASP)</title>
+      <link>//localhost:1313/posts/2024/ais3_d3_2/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d3_2/</guid>
+      <description>網頁動態安全檢測與報戶 (RASP) -中華資安國際 資安研究員 zodius&#xA;Lab: https://github.com/zodius/rasp-lab&#xA;Introduction 防護邊界 firewall WAF IPS 攻擊 內部攻擊 感染設備 雲端服務 傳統網路防護模型 外部檢查 DDOS IPS/IDS WAF firewall 應用程式 code effort 端點防護 EDR/MDR SOC 預防 vs 偵測 prevention 偵測特徵 缺點：混淆、新型態攻擊 detection 發生傷害 應變 RASP Real-time Application Self-Protection hook 系統底層的 instruction 執行前做檢核 四個特性 避免混淆或序列化 精準阻擋 - 執行前先判斷，避免誤殺 偵測未知漏洞 - 不使用特徵偵測 結合 SIEM 回顧計算機組織 Source -&amp;gt; Transform -&amp;gt; Intermediate -&amp;gt; Execution&#xA;Source Source Code Serialized code Transform Compile Interpret bytecode Intermediate IL(中間碼) &amp;lt;- RASP Execution VM JIT Machine code &amp;lt;- RASP 偵測 IL、Machine code</description>
+    </item>
     <item>
       <title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title>
       <link>//localhost:1313/posts/2024/ais3_d2_2/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
       <guid>//localhost:1313/posts/2024/ais3_d2_2/</guid>
       <description>IDA 不只有 F5 可以按 IDA 101, Reverse 101 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&#xA;IDA 介紹 IDAFree/IDAPro/IDATeam 如何使用 IDA(新手) 開 binary 一路按 ok F5 沒反應 IDA Free@ubuntu Fix Qt套件更新&#xA;sudo apt install libxcb-xinerama0 IDA Free - load ELF/PE/MachO hex view disassemble decompile function 藍 library func 紫 external symbol 白 regular func 搜尋:&#xA;直接輸入:從頭匹配 [ctrl+f5]:模糊搜尋 option-&amp;gt; general disassembly view (graph) 圖形化 若case夠多，會變成 jump table&#xA;disassembly view (text) 優點:</description>
+    </item>
+    <item>
+      <title>【AIS3】IoT 檢測實務</title>
+      <link>//localhost:1313/posts/2024/ais3_d2_3/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d2_3/</guid>
+      <description>IoT 檢測實務 -中華資安國際 副理 王凱慶 Keniver&#xA;Introduction IoT 拿不到韌體 -&amp;gt; 不能逆向 IoT 在哪裡 關鍵基礎設施 環境監測 控制關鍵設施 商業 廣告系統 生產自動化 門禁系統 社會安全 科技執法 交通控制 家中 智慧家庭 醫療照顧 IoT 設備、惡意程式數量持續增加&#xA;IoT 生態系 設備產業生態系 由於硬體與其程式可以被重複利用與整合於其他產品中，因此ODM 廠商可能會與多間OEM 廠商合作，進而拓展經濟規模。 這樣的架構下ODM 的硬體與軟體會被複製到多個OEM 產品上，若ODM 廠商未建立良善的安全開發流程，而OEM 廠商也只改個Logo 就將其出品，那就可能導致一家烤肉萬家香一個漏洞萬家通用的現象發生。&#xA;華為 -&amp;gt; 海康衛視 -&amp;gt; SOC -&amp;gt; 雄邁 -&amp;gt; OVM 監視器廠商&#xA;登入頁面差不多 外觀 為何研究 IoT 數量多, 通用性高, 洞好找 效能要求 廠商方便，不加保護 OWASP IoT Top 10 I1 Weak Guessable, or Hardcoded Passwords 弱密碼 I2 Insecure Network Services 運行不必要甚至不安全的網路服務 ex: open 7000 port -&amp;gt; 一直拿到 GPS 資訊</description>
+    </item>
+    <item>
+      <title>【AIS3】從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招</title>
+      <link>//localhost:1313/posts/2024/ais3_d2_4/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d2_4/</guid>
+      <description>從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&#xA;Link Start! 分析目標的五個階段 理想 執行方式 -&amp;gt; 分析方式 -&amp;gt; 觀察目標 -&amp;gt; 理解邏輯 -&amp;gt; 寫腳本 現實 跳來跳去 執行方式(Debug 能力) 作業系統版本、架構不對 執行環境架不起來 缺少相依套件 相依套件版本不對 分析方式(Survey 能力) 找不到適合分析目標的工具 不知道目標如何實作 ex: IDA 分析 C#&#xA;觀察目標(觀察力) golang, rust 找不到關鍵處 IDA 一堆 Function 理解邏輯(逆向能力) 看 Code 速度 理解程式在做什麼 猜出題者想做什麼 寫腳本(程式、工具使用) 不會寫程式 工具不熟悉 ex: z3, pwntools, gdb script&amp;hellip; 資料結構、演算法不熟 ex: 有向循環圖找一條路徑滿足特定條件 CTF Reverse 做以下假設幫助思考 題目一定有 flag -&amp;gt; 出題者用某種方式把 flag 藏起來 達到某個條件會觸發計算或驗證 flag 的操作 驗證類型：輸入正確時輸出 correct，反之 wrong 計算類型：執行到特定程式碼解密出 flag 出題者通常基於什麼做出題目的 ex: 某專案、工具、論文 工具 Detect It Easy 確認 binary 類型 如何實作 是否加殼 CFF Explorer 觀察 PE 結構 更改結構設定 Cheat Engine 記憶體掃描 Process Monitor Sysinternals kit 監控紀錄系統行為 CTF 看到以下事件可多關注 network file write process create IDA Pro 反組譯、反編譯 idapython plugin x64dbg x64dbgpy 不能 debug windows kernel -&amp;gt; windbg PACMAN - 2023 AIS3 Pre-exam 觀察 DIE 取得 PE 檔案資訊</description>
     </item>
     <item>
       <title>【AIS3】資安倫理</title>
