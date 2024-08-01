@@ -23,6 +23,13 @@
       <description>Cloud Security -中華資安國際 資安研究員 黃聖筌 Husky&#xA;雲端基本介紹 為啥上雲 實現靈活的資應用 幫助企業降低成本支出 按一按就可以升級 資安沒做好還是會噴$$&#xA;降低行業入門門檻 節省實體硬體成本 專注於業務發展 不須管理硬體與伺服器維運 故障機率低 除了前幾天的 Azure 安全? 不安全 雲端介紹 責任 出問題時可以踢皮球&#xA;責任歸屬 使用者永遠保有下面責任 資料 CSA Top11 Insufficient identity, credentials, access, and key Management Insecure interfaces and application programming interfaces (APIs) Misconfiguration and inadequate change control Lack of cloud security architecture and strategy Insecure software development Unsecured third-party resources System vulnerabilities Accidental cloud data disclosure Misconfiguration and exploitation of serverless and container workloads Organized crime/hackers/advanced persistent threats (APTs) Cloud storage data exfiltration https://blog.</description>
     </item>
     <item>
+      <title>【AIS3】前端不只有 alert 可以彈</title>
+      <link>//localhost:1313/posts/2024/ais3_d4_3/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate>
+      <guid>//localhost:1313/posts/2024/ais3_d4_3/</guid>
+      <description>前端不只有 alert 可以彈 -DEVCORE 資安研究員 黃志仁 splitline&#xA;安全原則 同源政策 A 網站不能讀 B 網站的東西(Browser 層限制) 可能可以寫 CSRF(Cross-Site Request Forgery) superlogout.com 點進去會把一堆服務登出，按進去請小心 偽造 client 端的惡意請求 即使使用 POST 也有機會被攻擊 CSRF Token 使用者訪問網站時被設定一個 token 放在 cookie 發送請求需同時送出 token 不能 CSRF 的情況 非 GET 或 POST 請求 特殊 HTTP header Samesite Cookie Lax 只有 &amp;lt;a&amp;gt;、&amp;lt;link&amp;gt;、&amp;lt;form method=&amp;quot;GET&amp;quot;&amp;gt; 會帶 cookie 在 Chrome、Edge 上預設 Strict 不論如何都不會從其他地方把 cookie 帶過來 None 不論如何都會帶 cookie 新版標準需要帶 Secure XSS Cross-Site Scripting 讓使用者瀏覽器執行駭客給的任意 Script Self-XSS 自己手動把 Script 跑起來 XSS Category Reflected XSS 惡意輸入一次性的映射 (Reflect) 到網頁上 ex: 搜尋欄輸入 &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; 後按下搜尋彈出 alert Stored XSS 伺服器會儲存 (store) 駭客的惡意輸入 ex: 留言板有惡意腳本，所有人看到都會執行 DOM-based XSS JavaScript 讀取惡意輸入造成 XSS Event Handler &amp;lt;svg/onload=alert(1)&amp;gt; &amp;lt;img src=x onerror=alert(1)&amp;gt; &amp;lt;input onfocus=alert(1)&amp;gt; </description>
+    </item>
+    <item>
       <title>【AIS3】Gadget 不只有 POP 可以用</title>
       <link>//localhost:1313/posts/2024/ais3_d3_3/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
