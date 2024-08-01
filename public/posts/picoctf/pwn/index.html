@@ -10,12 +10,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> 【Pico】Pwn 系列解題紀錄 | ErrorPro</title>
-  <link rel = 'canonical' href = '//localhost:1313/posts/picoctf/pwn/'>
+  <link rel = 'canonical' href = 'http://localhost:1313/posts/picoctf/pwn/'>
   <meta name="description" content="我覺得現在在看這句話的人超電">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="//localhost:1313/posts/picoctf/pwn/">
+  <meta property="og:url" content="http://localhost:1313/posts/picoctf/pwn/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="【Pico】Pwn 系列解題紀錄">
   <meta property="og:description" content="【Pico】Pwn 系列解題紀錄 這篇只是用來放解題的程式碼，之後再補解題過程。
@@ -38,10 +38,10 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
     
   
   
-  <link rel="stylesheet" href="//localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
-   <link rel="stylesheet" href="//localhost:1313/css/highlight.css">  <link rel="stylesheet" href="//localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="//localhost:1313/css/search.css">  <link rel="stylesheet" href="//localhost:1313/css/cursor.css"> 
+   <link rel="stylesheet" href="http://localhost:1313/css/highlight.css">  <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="http://localhost:1313/css/search.css">  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -50,7 +50,7 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
   
 
   
-<link rel="icon" type="image/png" href="//localhost:1313/images/favicon.ico" />
+<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
 
   
   
@@ -86,14 +86,14 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
       <ul>
         
         <li>
-          <a class="icon" href=" //localhost:1313/posts/2024/stack_overflow/" aria-label="Previous">
+          <a class="icon" href=" http://localhost:1313/posts/2024/stack_overflow/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="//localhost:1313/posts/2024/ais3_d1_3/" aria-label="Next">
+          <a class="icon" href="http://localhost:1313/posts/2024/ais3_d1_3/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -124,47 +124,47 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&text=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&text=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&is_video=false&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&is_video=false&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%20%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%0aheap0%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%20%23%21%2fusr%2fbin%2fenv%20python3%20from%20pwn%20import%20%2a%20context.binary%20%3d%20%26%2339%3b.%2fchall%26%2339%3b%20context.os%20%3d%20%26%2339%3blinux%26%2339%3b%20context.arch%20%3d%20%26%2339%3bamd64%26%2339%3b%20context.log_level%20%3d%20%26%2339%3bDEBUG%26%2339%3b%20if%20args.REMOTE%3a%20ip%20%3d%20%26%2339%3btethys.picoctf.net%26%2339%3b%20port%20%3d%2049849%20p%20%3d%20remote%28ip%2c%20port%29%20else%3a%20p%20%3d%20process%28%29%20p.sendline%28%26%2334%3b2%26%2334%3b%29%20p.sendline%28b%26%2334%3ba%26%2334%3b%2a50%29%20p.sendline%28b%26%2334%3b4%26%2334%3b%29%20p.interactive%28%29%20heap1%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%20%23%21" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%20%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%0aheap0%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%20%23%21%2fusr%2fbin%2fenv%20python3%20from%20pwn%20import%20%2a%20context.binary%20%3d%20%26%2339%3b.%2fchall%26%2339%3b%20context.os%20%3d%20%26%2339%3blinux%26%2339%3b%20context.arch%20%3d%20%26%2339%3bamd64%26%2339%3b%20context.log_level%20%3d%20%26%2339%3bDEBUG%26%2339%3b%20if%20args.REMOTE%3a%20ip%20%3d%20%26%2339%3btethys.picoctf.net%26%2339%3b%20port%20%3d%2049849%20p%20%3d%20remote%28ip%2c%20port%29%20else%3a%20p%20%3d%20process%28%29%20p.sendline%28%26%2334%3b2%26%2334%3b%29%20p.sendline%28b%26%2334%3ba%26%2334%3b%2a50%29%20p.sendline%28b%26%2334%3b4%26%2334%3b%29%20p.interactive%28%29%20heap1%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%20%23%21" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&t=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&t=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -635,47 +635,47 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&text=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&text=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&is_video=false&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&is_video=false&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&title=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%20%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%0aheap0%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%20%23%21%2fusr%2fbin%2fenv%20python3%20from%20pwn%20import%20%2a%20context.binary%20%3d%20%26%2339%3b.%2fchall%26%2339%3b%20context.os%20%3d%20%26%2339%3blinux%26%2339%3b%20context.arch%20%3d%20%26%2339%3bamd64%26%2339%3b%20context.log_level%20%3d%20%26%2339%3bDEBUG%26%2339%3b%20if%20args.REMOTE%3a%20ip%20%3d%20%26%2339%3btethys.picoctf.net%26%2339%3b%20port%20%3d%2049849%20p%20%3d%20remote%28ip%2c%20port%29%20else%3a%20p%20%3d%20process%28%29%20p.sendline%28%26%2334%3b2%26%2334%3b%29%20p.sendline%28b%26%2334%3ba%26%2334%3b%2a50%29%20p.sendline%28b%26%2334%3b4%26%2334%3b%29%20p.interactive%28%29%20heap1%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%20%23%21" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%20%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%0aheap0%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%20%23%21%2fusr%2fbin%2fenv%20python3%20from%20pwn%20import%20%2a%20context.binary%20%3d%20%26%2339%3b.%2fchall%26%2339%3b%20context.os%20%3d%20%26%2339%3blinux%26%2339%3b%20context.arch%20%3d%20%26%2339%3bamd64%26%2339%3b%20context.log_level%20%3d%20%26%2339%3bDEBUG%26%2339%3b%20if%20args.REMOTE%3a%20ip%20%3d%20%26%2339%3btethys.picoctf.net%26%2339%3b%20port%20%3d%2049849%20p%20%3d%20remote%28ip%2c%20port%29%20else%3a%20p%20%3d%20process%28%29%20p.sendline%28%26%2334%3b2%26%2334%3b%29%20p.sendline%28b%26%2334%3ba%26%2334%3b%2a50%29%20p.sendline%28b%26%2334%3b4%26%2334%3b%29%20p.interactive%28%29%20heap1%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%20%23%21" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&t=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&t=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

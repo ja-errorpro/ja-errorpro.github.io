@@ -1,4 +1,4 @@
-baseURL = 'ja-errorpro.codes'
+baseURL = 'https://ja-errorpro.codes/'
 languageCode = 'zh-Hant-TW'
 title = 'ErrorPro'
 theme = "cactus"

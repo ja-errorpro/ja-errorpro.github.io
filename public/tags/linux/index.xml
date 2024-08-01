@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on ErrorPro</title>
-    <link>//localhost:1313/tags/linux/</link>
+    <link>http://localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
     <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vim 極簡教學</title>
-      <link>//localhost:1313/posts/2022/vim_simple_tutorial/</link>
+      <link>http://localhost:1313/posts/2022/vim_simple_tutorial/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/vim_simple_tutorial/</guid>
+      <guid>http://localhost:1313/posts/2022/vim_simple_tutorial/</guid>
       <description>簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。&#xA;起步 若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；&#xA;如果不存在，就會在儲存後新建一個。&#xA;模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式&#xA;普通模式 初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行&#xA;以下是常用的編輯指令&#xA;dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl+r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) &amp;gt;&amp;gt; - 縮排 &amp;lt;&amp;lt; - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯&#xA;按下 Esc 即可回到普通模式，此時 -- INSERT -- 會消失&#xA;視覺(選取)模式 在普通模式按下 v 即可進入視覺模式，此時可以看到視窗最下方出現 -- VISUAL --，可以使用方向鍵選取文字，並使用 w 選取下一個單字的開頭或 $ 選取後面整行。</description>
     </item>
   </channel>

@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ErrorPro</title>
-    <link>//localhost:1313/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
     <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ctf</title>
-      <link>//localhost:1313/tags/ctf/</link>
+      <link>http://localhost:1313/tags/ctf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/ctf/</guid>
+      <guid>http://localhost:1313/tags/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Crypto</title>
-      <link>//localhost:1313/tags/crypto/</link>
+      <link>http://localhost:1313/tags/crypto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/crypto/</guid>
+      <guid>http://localhost:1313/tags/crypto/</guid>
       <description></description>
     </item>
     <item>
       <title>Algorithms</title>
-      <link>//localhost:1313/tags/algorithms/</link>
+      <link>http://localhost:1313/tags/algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/algorithms/</guid>
+      <guid>http://localhost:1313/tags/algorithms/</guid>
       <description></description>
     </item>
     <item>
       <title>C-Cpp</title>
-      <link>//localhost:1313/tags/c-cpp/</link>
+      <link>http://localhost:1313/tags/c-cpp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/c-cpp/</guid>
+      <guid>http://localhost:1313/tags/c-cpp/</guid>
       <description></description>
     </item>
     <item>
       <title>Mix</title>
-      <link>//localhost:1313/tags/mix/</link>
+      <link>http://localhost:1313/tags/mix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/mix/</guid>
+      <guid>http://localhost:1313/tags/mix/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>//localhost:1313/tags/python/</link>
+      <link>http://localhost:1313/tags/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/python/</guid>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>//localhost:1313/tags/git/</link>
+      <link>http://localhost:1313/tags/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/git/</guid>
+      <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Bot</title>
-      <link>//localhost:1313/tags/bot/</link>
+      <link>http://localhost:1313/tags/bot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/bot/</guid>
+      <guid>http://localhost:1313/tags/bot/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>//localhost:1313/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Idx</title>
-      <link>//localhost:1313/tags/idx/</link>
+      <link>http://localhost:1313/tags/idx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/idx/</guid>
+      <guid>http://localhost:1313/tags/idx/</guid>
       <description></description>
     </item>
     <item>
       <title>Linear Algebra</title>
-      <link>//localhost:1313/tags/linear-algebra/</link>
+      <link>http://localhost:1313/tags/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/linear-algebra/</guid>
+      <guid>http://localhost:1313/tags/linear-algebra/</guid>
       <description></description>
     </item>
   </channel>

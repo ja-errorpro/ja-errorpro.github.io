@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on ErrorPro</title>
-    <link>//localhost:1313/tags/git/</link>
+    <link>http://localhost:1313/tags/git/</link>
     <description>Recent content in Git on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
     <lastBuildDate>Thu, 27 Oct 2022 00:00:00 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【Git】Git分支的打開方式</title>
-      <link>//localhost:1313/posts/2022/git_branch/</link>
+      <link>http://localhost:1313/posts/2022/git_branch/</link>
       <pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/git_branch/</guid>
+      <guid>http://localhost:1313/posts/2022/git_branch/</guid>
       <description>當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。&#xA;初始化Local Repo 詳見 上一篇文章&#xA;查看現在有哪些分支 1 $ git branch Output:&#xA;1 * master 新增分支 1 $ git branch main 這樣就會新增一個名為main的分支，但是還沒有切換到該分支，所以還是在master分支上。&#xA;重新命名分支 1 $ git branch -M cool # 將目前分支重新命名為cool 或者&#xA;1 $ git branch -m main cool # 將main分支重新命名為cool分支 刪除分支 1 $ git branch -d main # 刪除main分支 這時候可能會看到 error: The branch &#39;main&#39; is not fully merged，因為main還沒被合併，不給刪除&#xA;可以使用 -D 強制刪除&#xA;1 $ git branch -D main 切換分支 1 $ git checkout main 如果分支不存在，可以使用 -b 來建立並切換到該分支</description>
     </item>
     <item>
       <title>【Git】Git初始設定與環境</title>
-      <link>//localhost:1313/posts/2022/git_initial/</link>
+      <link>http://localhost:1313/posts/2022/git_initial/</link>
       <pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate>
-      <guid>//localhost:1313/posts/2022/git_initial/</guid>
+      <guid>http://localhost:1313/posts/2022/git_initial/</guid>
       <description>What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。&#xA;分散式與中央式版控系統 中央式版控系統 需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用&#xA;分散式版控系統 即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。&#xA;Git環境 Local Repo 我們在修改完檔案後，透過git add 將檔案加入暫存區，再透過git commit將檔案加入Local Repo。&#xA;Remote Repo Remote Repo是一個遠端的Git伺服器，我們可以將Local Repo push 到 Remote Repo，也可以從Remote Repo pull 到 Local Repo。&#xA;Git安裝 Windows 到以下網址下載合適的版本並進行安裝&#xA;Git for Windows&#xA;安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。&#xA;這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。&#xA;Linux 非常簡單，打開你的終端機&#xA;1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description>
     </item>
   </channel>
