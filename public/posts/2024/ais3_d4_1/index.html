@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> 【AIS3】API 安全 | ErrorPro</title>
+  <link rel = 'canonical' href = '//localhost:1313/posts/2024/ais3_d4_1/'>
+  <meta name="description" content="我覺得現在在看這句話的人超電">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="//localhost:1313/posts/2024/ais3_d4_1/">
+  <meta property="og:site_name" content="ErrorPro">
+  <meta property="og:title" content="【AIS3】API 安全">
+  <meta property="og:description" content="API 安全 -中華資安國際 資安研究員 zodius
+技術簡介 What is API? 點炒飯 跟廚師說一份炒飯 叫廚師打蛋切菜… 好處 把商業邏輯或業務邏輯封裝成簡單邏輯
+本質：封裝 無需關注細節，專注自己業務邏輯 透過介面溝通，可同時開發 前後端邏輯分離，減少流量與資料相依性 API 發展 RPC 跨電腦溝通, ex: 轉帳、查詢 隨 http 發展演變成 Web service 專注於特定任務 SOAP 傳輸 XML 格式協議 WSDL 約定 interface web service 提供參數 缺點 - GetFile() 可能很多種定義 範圍混亂，如何拆分沒有統一標準 SOAP header - 方法 body - 正式請求 Google hacking wsdl 可能可以找到很多酷東西
+可從中獲得網站資訊
+RESTful API 解決範圍定義問題
+Header
+method GET POST PUT DELETE HEAD OPTIONS CONNECT TRACE URL version Representational State Transfer 狀態轉移">
+  <meta property="og:locale" content="zh_Hant_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-01T00:00:00+08:00">
+    <meta property="article:modified_time" content="2024-08-01T00:00:00+08:00">
+    <meta property="article:tag" content="Ctf">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="【AIS3】API 安全">
+  <meta name="twitter:description" content="API 安全 -中華資安國際 資安研究員 zodius
+技術簡介 What is API? 點炒飯 跟廚師說一份炒飯 叫廚師打蛋切菜… 好處 把商業邏輯或業務邏輯封裝成簡單邏輯
+本質：封裝 無需關注細節，專注自己業務邏輯 透過介面溝通，可同時開發 前後端邏輯分離，減少流量與資料相依性 API 發展 RPC 跨電腦溝通, ex: 轉帳、查詢 隨 http 發展演變成 Web service 專注於特定任務 SOAP 傳輸 XML 格式協議 WSDL 約定 interface web service 提供參數 缺點 - GetFile() 可能很多種定義 範圍混亂，如何拆分沒有統一標準 SOAP header - 方法 body - 正式請求 Google hacking wsdl 可能可以找到很多酷東西
+可從中獲得網站資訊
+RESTful API 解決範圍定義問題
+Header
+method GET POST PUT DELETE HEAD OPTIONS CONNECT TRACE URL version Representational State Transfer 狀態轉移">
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="//localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+
+  
+   <link rel="stylesheet" href="//localhost:1313/css/highlight.css">  <link rel="stylesheet" href="//localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="//localhost:1313/css/search.css">  <link rel="stylesheet" href="//localhost:1313/css/cursor.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="//localhost:1313/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" //localhost:1313/posts/2024/ais3_d4_2/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&text=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&title=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&is_video=false&description=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&title=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&title=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&name=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8&description=API%20%e5%ae%89%e5%85%a8%20-%e4%b8%ad%e8%8f%af%e8%b3%87%e5%ae%89%e5%9c%8b%e9%9a%9b%20%e8%b3%87%e5%ae%89%e7%a0%94%e7%a9%b6%e5%93%a1%20zodius%0a%e6%8a%80%e8%a1%93%e7%b0%a1%e4%bb%8b%20What%20is%20API%3f%20%e9%bb%9e%e7%82%92%e9%a3%af%20%e8%b7%9f%e5%bb%9a%e5%b8%ab%e8%aa%aa%e4%b8%80%e4%bb%bd%e7%82%92%e9%a3%af%20%e5%8f%ab%e5%bb%9a%e5%b8%ab%e6%89%93%e8%9b%8b%e5%88%87%e8%8f%9c%26hellip%3b%20%e5%a5%bd%e8%99%95%20%e6%8a%8a%e5%95%86%e6%a5%ad%e9%82%8f%e8%bc%af%e6%88%96%e6%a5%ad%e5%8b%99%e9%82%8f%e8%bc%af%e5%b0%81%e8%a3%9d%e6%88%90%e7%b0%a1%e5%96%ae%e9%82%8f%e8%bc%af%0a%e6%9c%ac%e8%b3%aa%ef%bc%9a%e5%b0%81%e8%a3%9d%20%e7%84%a1%e9%9c%80%e9%97%9c%e6%b3%a8%e7%b4%b0%e7%af%80%ef%bc%8c%e5%b0%88%e6%b3%a8%e8%87%aa%e5%b7%b1%e6%a5%ad%e5%8b%99%e9%82%8f%e8%bc%af%20%e9%80%8f%e9%81%8e%e4%bb%8b%e9%9d%a2%e6%ba%9d%e9%80%9a%ef%bc%8c%e5%8f%af%e5%90%8c%e6%99%82%e9%96%8b%e7%99%bc%20%e5%89%8d%e5%be%8c%e7%ab%af%e9%82%8f%e8%bc%af%e5%88%86%e9%9b%a2%ef%bc%8c%e6%b8%9b%e5%b0%91%e6%b5%81%e9%87%8f%e8%88%87%e8%b3%87%e6%96%99%e7%9b%b8%e4%be%9d%e6%80%a7%20API%20%e7%99%bc%e5%b1%95%20RPC%20%e8%b7%a8%e9%9b%bb%e8%85%a6%e6%ba%9d%e9%80%9a%2c%20ex%3a%20%e8%bd%89%e5%b8%b3%e3%80%81%e6%9f%a5%e8%a9%a2%20%e9%9a%a8%20http%20%e7%99%bc%e5%b1%95%e6%bc%94%e8%ae%8a%e6%88%90%20Web%20service%20%e5%b0%88%e6%b3%a8%e6%96%bc%e7%89%b9%e5%ae%9a%e4%bb%bb%e5%8b%99%20SOAP%20%e5%82%b3%e8%bc%b8%20XML%20%e6%a0%bc%e5%bc%8f%e5%8d%94%e8%ad%b0%20WSDL%20%e7%b4%84%e5%ae%9a%20interface%20web%20service%20%e6%8f%90%e4%be%9b%e5%8f%83%e6%95%b8%20%e7%bc%ba%e9%bb%9e%20-%20GetFile%28%29%20%e5%8f%af%e8%83%bd%e5%be%88%e5%a4%9a%e7%a8%ae%e5%ae%9a%e7%be%a9%20%e7%af%84%e5%9c%8d%e6%b7%b7%e4%ba%82%ef%bc%8c%e5%a6%82%e4%bd%95%e6%8b%86%e5%88%86%e6%b2%92%e6%9c%89%e7%b5%b1%e4%b8%80%e6%a8%99%e6%ba%96%20SOAP%20header%20-%20%e6%96%b9%e6%b3%95%20body%20-%20%e6%ad%a3%e5%bc%8f%e8%ab%8b%e6%b1%82%20Google%20hacking%20wsdl%20%e5%8f%af%e8%83%bd%e5%8f%af%e4%bb%a5%e6%89%be%e5%88%b0%e5%be%88%e5%a4%9a%e9%85%b7%e6%9d%b1%e8%a5%bf%0a%e5%8f%af%e5%be%9e%e4%b8%ad%e7%8d%b2%e5%be%97%e7%b6%b2%e7%ab%99%e8%b3%87%e8%a8%8a%0aRESTful%20API%20%e8%a7%a3%e6%b1%ba%e7%af%84%e5%9c%8d%e5%ae%9a%e7%be%a9%e5%95%8f%e9%a1%8c%0aHeader%0amethod%20GET%20POST%20PUT%20DELETE%20HEAD%20OPTIONS%20CONNECT%20TRACE%20URL%20version%20Representational%20State%20Transfer%20%e7%8b%80%e6%85%8b%e8%bd%89%e7%a7%bb" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&t=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#技術簡介">技術簡介</a>
+      <ul>
+        <li><a href="#what-is-api">What is API?</a></li>
+        <li><a href="#好處">好處</a></li>
+        <li><a href="#api-發展">API 發展</a></li>
+        <li><a href="#soap">SOAP</a></li>
+        <li><a href="#restful-api">RESTful API</a>
+          <ul>
+            <li><a href="#openapi">OpenAPI</a></li>
+            <li><a href="#n1-problem">n+1 problem</a></li>
+          </ul>
+        </li>
+        <li><a href="#graphql">GraphQL</a></li>
+        <li><a href="#grpc">grpc</a></li>
+        <li><a href="#microservice">microservice</a></li>
+        <li><a href="#共同概念">共同概念</a></li>
+      </ul>
+    </li>
+    <li><a href="#安全檢測">安全檢測</a></li>
+    <li><a href="#共通檢測方式---參數探測">共通檢測方式 - 參數探測</a></li>
+    <li><a href="#api-大戰">API 大戰</a></li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        【AIS3】API 安全
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2024-08-01 00:00:00 &#43;0800 CST" itemprop="datePublished">2024-08-01</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/ctf" rel="tag">CTF</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <h1 id="api-安全">API 安全</h1>
+<p><code>-中華資安國際 資安研究員 zodius</code></p>
+<h2 id="技術簡介">技術簡介</h2>
+<h3 id="what-is-api">What is API?</h3>
+<ul>
+<li>點炒飯
+<ul>
+<li>跟廚師說一份炒飯</li>
+<li>叫廚師打蛋切菜&hellip;</li>
+</ul>
+</li>
+</ul>
+<h3 id="好處">好處</h3>
+<blockquote>
+<p>把商業邏輯或業務邏輯封裝成簡單邏輯</p>
+</blockquote>
+<ul>
+<li>本質：封裝
+<ul>
+<li>無需關注細節，專注自己業務邏輯</li>
+<li>透過介面溝通，可同時開發</li>
+<li>前後端邏輯分離，減少流量與資料相依性</li>
+</ul>
+</li>
+</ul>
+<h3 id="api-發展">API 發展</h3>
+<ul>
+<li>RPC
+<ul>
+<li>跨電腦溝通, ex: 轉帳、查詢</li>
+<li>隨 http 發展演變成 Web service</li>
+<li>專注於特定任務</li>
+</ul>
+</li>
+<li>SOAP 傳輸
+<ul>
+<li>XML 格式協議</li>
+</ul>
+</li>
+<li>WSDL 約定 interface
+<ul>
+<li>web service</li>
+<li>提供參數</li>
+<li>缺點 - GetFile() 可能很多種定義</li>
+</ul>
+</li>
+<li>範圍混亂，如何拆分沒有統一標準</li>
+</ul>
+<h3 id="soap">SOAP</h3>
+<ul>
+<li>header - 方法</li>
+<li>body - 正式請求</li>
+</ul>
+<p>Google hacking wsdl 可能可以找到很多酷東西</p>
+<p>可從中獲得網站資訊</p>
+<h3 id="restful-api">RESTful API</h3>
+<ul>
+<li>
+<p>解決範圍定義問題</p>
+</li>
+<li>
+<p>Header</p>
+<ul>
+<li>method
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>CONNECT</li>
+<li>TRACE</li>
+</ul>
+</li>
+<li>URL</li>
+<li>version
+<img src="https://www.cloud4y.ru/upload/medialibrary/4c0/hn5x5w7tx2pa0t3m1us71vh51dthf4kg/2.jpg" alt="image"></li>
+</ul>
+</li>
+<li>
+<p>Representational State Transfer 狀態轉移</p>
+<ul>
+<li>認為 API 最小單位是物件</li>
+</ul>
+</li>
+<li>
+<p>沒有標準規範，是一種設計風格</p>
+</li>
+<li>
+<p>動詞 -&gt; 資源，解決範圍規範問題</p>
+</li>
+<li>
+<p>Body 沒有規定，但通常是 JSON</p>
+</li>
+</ul>
+<h4 id="openapi">OpenAPI</h4>
+<ul>
+<li>統一標準語法描述 RESTful API</li>
+<li>可透過 <a href="https://swagger.io/">swagger</a> 產生文件頁面</li>
+</ul>
+<h4 id="n1-problem">n+1 problem</h4>
+<ul>
+<li>以資源為主體，複雜商業邏輯易造成 n+1 問題</li>
+</ul>
+<h3 id="graphql">GraphQL</h3>
+<ul>
+<li>2015 年由 Facebook 提出</li>
+<li>類 SQL Query 查詢</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">query</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">user</span>(id: <span style="color:#50fa7b">1</span>) {
+</span></span><span style="display:flex;"><span>    account(id: <span style="color:#50fa7b">1</span>) {
+</span></span><span style="display:flex;"><span>      name
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="grpc">grpc</h3>
+<ul>
+<li>2016 年由 Google 提出</li>
+<li>binary encode 減少封包體積</li>
+<li>HTTP 2 底層協議加速傳輸標準</li>
+</ul>
+<h3 id="microservice">microservice</h3>
+<ul>
+<li>把功能切成獨立的小 server</li>
+</ul>
+<h3 id="共同概念">共同概念</h3>
+<ul>
+<li>身分驗證
+<ul>
+<li>Session-based
+<ul>
+<li>Session-Cookie</li>
+<li>難以儲存使用者資訊</li>
+<li>microservice 太多 server 不知道存哪個</li>
+</ul>
+</li>
+<li>Token-based
+<ul>
+<li>Pre-shared token
+<ul>
+<li>問題：如何重簽 token、銷毀 token</li>
+</ul>
+</li>
+<li>JWT
+<ul>
+<li>Client-side</li>
+<li>伺服器不需要儲存，減少資源使用量</li>
+<li>使用者登入 -&gt; Server 給 JWT token -&gt; 下次帶 token 寫資料</li>
+<li>簽章安全機制，防竄改</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Client-side TLS(mTLS)
+<ul>
+<li>TCP Connection(SYN, SYN/ACK, ACK) -&gt; mTLS(簽章) -&gt; 取得資料(不驗證)</li>
+<li>保證兩邊都是正確的目的地，知道彼此是誰</li>
+<li>確保只有經過驗證的人可以連線</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="安全檢測">安全檢測</h2>
+<ul>
+<li>
+<p>OWASP API Top 10</p>
+<ul>
+<li>四年更新一次，目前最新版是 2023 年</li>
+<li>API1:2023 - Broken Object Level Authorization
+<ul>
+<li>缺乏妥善權限檢查機制，導致攻擊者可透過修改物件 ID 直接存取資源</li>
+<li>修改參數，如 GET /users/id=1 -&gt; GET /users/id=2</li>
+<li>修改 HTTP Method，如 GET -&gt; POST</li>
+</ul>
+</li>
+<li>API2:2023 - Broken Authentication
+<ul>
+<li>身分驗證瑕疵
+<ul>
+<li>使用者帳密/API Token 洩漏</li>
+<li>JWT Key 洩漏
+<ul>
+<li>JWT Attack
+<ul>
+<li>Key 暴力破解</li>
+<li>竄改加密演算法
+<ul>
+<li>非對稱改對稱</li>
+</ul>
+</li>
+<li>竄改 kid
+<ul>
+<li>路徑遍歷</li>
+<li>指向大家都知道的檔案 ex: wp-config</li>
+<li>Bypass ASLR</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>暴力破解</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API3:2023 - Broken Object Property Level Authorization
+<ul>
+<li>未驗證物件屬性是否合法</li>
+<li>資料外洩
+<ul>
+<li>查詢使用者，回傳包含明文密碼</li>
+</ul>
+</li>
+<li>竄改屬性
+<ul>
+<li>建立使用者時設定初始帳戶餘額</li>
+<li>購物車修改金額</li>
+</ul>
+</li>
+<li>API2:2023 vs API3:2023
+<ul>
+<li>API2:2023 關注物件 id</li>
+<li>API3:2023 關注物件屬性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API4:2023 - Unrestricted Resource Consumption
+<ul>
+<li>未限制存取頻率、次數限制</li>
+<li>DoS、資源消耗
+<ul>
+<li>SMS 認證
+<ul>
+<li>瘋狂送簡訊，耗簡訊費</li>
+</ul>
+</li>
+<li>graphql DoS
+<ul>
+<li>單一查詢加入大量條件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API5:2023 - Broken Function Level Authorization
+<ul>
+<li>API Endpoint 未驗證使用者權限</li>
+<li>一般使用者呼叫管理 API</li>
+<li>垂直權限跨越</li>
+</ul>
+</li>
+<li>API6:2023 - Unrestricted Access To Sensitive Business Flows
+<ul>
+<li>未對敏感功能進行限制控管，攻擊者可以自動化方式影響業務流程</li>
+<li>高鐵 API 自動訂票</li>
+</ul>
+</li>
+<li>API7:2023 - Service Side Request Forgery
+<ul>
+<li>未驗證使用者參數，根據參數存取遠端資源</li>
+<li>GET /server-health?ip=&hellip;</li>
+</ul>
+</li>
+<li>API8:2023 - Sercurity Misconfiguration
+<ul>
+<li>安全性組態設定錯誤</li>
+<li>CORS
+<ul>
+<li>CSRF</li>
+<li>瀏覽器發現圖片來自受害網站時，會發送請求詢問是否可以發送封包</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: &lt;origin&gt;
+Access-Control-Allow-Origin: null
+</code></pre><ul>
+<li>API9:2023 - Improper Inventory Management
+<ul>
+<li>沒有妥善版本、文件管理</li>
+<li>沒有人知道的 Shadow API</li>
+<li>沒有人知道的 Shadow Parameters</li>
+</ul>
+</li>
+<li>API10:2023 - Unsafe Consumption of APIs
+<ul>
+<li>開發人員通常信任 API 所回傳的資料</li>
+<li>API Server 被攻擊或竄改，會影響到所有使用者</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="共通檢測方式---參數探測">共通檢測方式 - 參數探測</h2>
+<ul>
+<li>無法得知 API 參數通常無法順利與 Server 建立溝通
+<ul>
+<li>API 文件洩漏
+<ul>
+<li>WSDL</li>
+<li>RESTful SwaggerUI</li>
+<li>GraphQL
+<ul>
+<li>經常透過程式碼產生遺留在正式環境</li>
+<li>常見路徑
+<ul>
+<li>/graphql</li>
+<li>/graphiql/playground</li>
+<li>/graphiql/console</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parameter Fuzzing
+<ul>
+<li>ffuf
+<ul>
+<li>爆破工具</li>
+<li>蒐集字典檔</li>
+</ul>
+</li>
+<li>arjun</li>
+<li>schemathesis
+<ul>
+<li>壓力測試</li>
+<li>匯入 open api 文件</li>
+<li>對每個 api 端點做亂數 fuzzing 看 server 會不會崩潰</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="api-大戰">API 大戰</h2>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主頁</a></li>
+         
+          <li><a href="/posts">廢文區</a></li>
+         
+          <li><a href="/resources">資源</a></li>
+         
+          <li><a href="/tags">標籤</a></li>
+         
+          <li><a href="/comment">留言區</a></li>
+         
+          <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#技術簡介">技術簡介</a>
+      <ul>
+        <li><a href="#what-is-api">What is API?</a></li>
+        <li><a href="#好處">好處</a></li>
+        <li><a href="#api-發展">API 發展</a></li>
+        <li><a href="#soap">SOAP</a></li>
+        <li><a href="#restful-api">RESTful API</a>
+          <ul>
+            <li><a href="#openapi">OpenAPI</a></li>
+            <li><a href="#n1-problem">n+1 problem</a></li>
+          </ul>
+        </li>
+        <li><a href="#graphql">GraphQL</a></li>
+        <li><a href="#grpc">grpc</a></li>
+        <li><a href="#microservice">microservice</a></li>
+        <li><a href="#共同概念">共同概念</a></li>
+      </ul>
+    </li>
+    <li><a href="#安全檢測">安全檢測</a></li>
+    <li><a href="#共通檢測方式---參數探測">共通檢測方式 - 參數探測</a></li>
+    <li><a href="#api-大戰">API 大戰</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&text=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&title=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&is_video=false&description=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8&body=Check out this article: %2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&title=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&title=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&name=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8&description=API%20%e5%ae%89%e5%85%a8%20-%e4%b8%ad%e8%8f%af%e8%b3%87%e5%ae%89%e5%9c%8b%e9%9a%9b%20%e8%b3%87%e5%ae%89%e7%a0%94%e7%a9%b6%e5%93%a1%20zodius%0a%e6%8a%80%e8%a1%93%e7%b0%a1%e4%bb%8b%20What%20is%20API%3f%20%e9%bb%9e%e7%82%92%e9%a3%af%20%e8%b7%9f%e5%bb%9a%e5%b8%ab%e8%aa%aa%e4%b8%80%e4%bb%bd%e7%82%92%e9%a3%af%20%e5%8f%ab%e5%bb%9a%e5%b8%ab%e6%89%93%e8%9b%8b%e5%88%87%e8%8f%9c%26hellip%3b%20%e5%a5%bd%e8%99%95%20%e6%8a%8a%e5%95%86%e6%a5%ad%e9%82%8f%e8%bc%af%e6%88%96%e6%a5%ad%e5%8b%99%e9%82%8f%e8%bc%af%e5%b0%81%e8%a3%9d%e6%88%90%e7%b0%a1%e5%96%ae%e9%82%8f%e8%bc%af%0a%e6%9c%ac%e8%b3%aa%ef%bc%9a%e5%b0%81%e8%a3%9d%20%e7%84%a1%e9%9c%80%e9%97%9c%e6%b3%a8%e7%b4%b0%e7%af%80%ef%bc%8c%e5%b0%88%e6%b3%a8%e8%87%aa%e5%b7%b1%e6%a5%ad%e5%8b%99%e9%82%8f%e8%bc%af%20%e9%80%8f%e9%81%8e%e4%bb%8b%e9%9d%a2%e6%ba%9d%e9%80%9a%ef%bc%8c%e5%8f%af%e5%90%8c%e6%99%82%e9%96%8b%e7%99%bc%20%e5%89%8d%e5%be%8c%e7%ab%af%e9%82%8f%e8%bc%af%e5%88%86%e9%9b%a2%ef%bc%8c%e6%b8%9b%e5%b0%91%e6%b5%81%e9%87%8f%e8%88%87%e8%b3%87%e6%96%99%e7%9b%b8%e4%be%9d%e6%80%a7%20API%20%e7%99%bc%e5%b1%95%20RPC%20%e8%b7%a8%e9%9b%bb%e8%85%a6%e6%ba%9d%e9%80%9a%2c%20ex%3a%20%e8%bd%89%e5%b8%b3%e3%80%81%e6%9f%a5%e8%a9%a2%20%e9%9a%a8%20http%20%e7%99%bc%e5%b1%95%e6%bc%94%e8%ae%8a%e6%88%90%20Web%20service%20%e5%b0%88%e6%b3%a8%e6%96%bc%e7%89%b9%e5%ae%9a%e4%bb%bb%e5%8b%99%20SOAP%20%e5%82%b3%e8%bc%b8%20XML%20%e6%a0%bc%e5%bc%8f%e5%8d%94%e8%ad%b0%20WSDL%20%e7%b4%84%e5%ae%9a%20interface%20web%20service%20%e6%8f%90%e4%be%9b%e5%8f%83%e6%95%b8%20%e7%bc%ba%e9%bb%9e%20-%20GetFile%28%29%20%e5%8f%af%e8%83%bd%e5%be%88%e5%a4%9a%e7%a8%ae%e5%ae%9a%e7%be%a9%20%e7%af%84%e5%9c%8d%e6%b7%b7%e4%ba%82%ef%bc%8c%e5%a6%82%e4%bd%95%e6%8b%86%e5%88%86%e6%b2%92%e6%9c%89%e7%b5%b1%e4%b8%80%e6%a8%99%e6%ba%96%20SOAP%20header%20-%20%e6%96%b9%e6%b3%95%20body%20-%20%e6%ad%a3%e5%bc%8f%e8%ab%8b%e6%b1%82%20Google%20hacking%20wsdl%20%e5%8f%af%e8%83%bd%e5%8f%af%e4%bb%a5%e6%89%be%e5%88%b0%e5%be%88%e5%a4%9a%e9%85%b7%e6%9d%b1%e8%a5%bf%0a%e5%8f%af%e5%be%9e%e4%b8%ad%e7%8d%b2%e5%be%97%e7%b6%b2%e7%ab%99%e8%b3%87%e8%a8%8a%0aRESTful%20API%20%e8%a7%a3%e6%b1%ba%e7%af%84%e5%9c%8d%e5%ae%9a%e7%be%a9%e5%95%8f%e9%a1%8c%0aHeader%0amethod%20GET%20POST%20PUT%20DELETE%20HEAD%20OPTIONS%20CONNECT%20TRACE%20URL%20version%20Representational%20State%20Transfer%20%e7%8b%80%e6%85%8b%e8%bd%89%e7%a7%bb" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d4_1%2f&t=%e3%80%90AIS3%e3%80%91API%20%e5%ae%89%e5%85%a8" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2024  ErrorPro 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script type="text/javascript" src=/js/nest.js count=150 color="255,255,255" opacity=1>
+</script>
+
+<img id="Cursor" src="/images/cursor/silverwolf/01-Normal.gif">
+
+<script type="text/javascript" src=/js/cursor.js>
+</script>
+
+
+
+
+</html>
