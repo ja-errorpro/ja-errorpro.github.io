@@ -1,12 +1,12 @@
 ---
-title: "【HTB】Sacred Scrolls: Revenge"
+title: "【HTB Challenge】Sacred Scrolls: Revenge"
 date: 2024-03-05
 tags:
   - ctf
 url: "/posts/HTB/Sacred-Scrolls-Revenge/"
 ---
 
-# 【HTB】Sacred Scrolls: Revenge
+# 【HTB Challenge】Sacred Scrolls: Revenge
 
 ## Description
 
