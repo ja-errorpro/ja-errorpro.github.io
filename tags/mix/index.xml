@@ -1,86 +1,515 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mix on ErrorPro</title><link>https://ja-errorpro.codes/tags/mix/</link><description>Recent content in Mix on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/mix/index.xml" rel="self" type="application/rss+xml"/><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</guid><description>Pre 題目提供以下資料結構與函式
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 #include &amp;lt;ctype.</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</guid><description>答案僅供參考 答案僅供參考 答案僅供參考 我看起來像標準答案嗎 Pre 題目提供以下資料結構與函式
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 # include &amp;lt;stdlib.</description></item><item><title>【普物】 Schrodinger Equation Derivation</title><link>https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/</guid><description>薛丁格方程 試著找到一方程式描述能量與波函數的關係。
-波函數 已知波函數應形如 $$ \psi(x,t) = A e^{i(kx-\omega t)} $$ 的形式
-若波函數對時間微分，則有 $$ \frac{\partial \psi}{\partial t} = -i \omega A e^{i(kx-\omega t)} = -i \omega \psi $$
-若波函數對位置微分，則有 $$ \frac{\partial \psi}{\partial x} = i k A e^{i(kx-\omega t)} = i k \psi $$
-對位置的二次微分，則有 $$ \frac{\partial^2 \psi}{\partial x^2} = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$
-寫成三維空間形式為 $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$</description></item><item><title>SQL 基本語法(sqlite3 in python)</title><link>https://ja-errorpro.codes/posts/2022/sql_basic/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/sql_basic/</guid><description>環境 市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：
-SQLite MySQL PostgreSQL SQL Server 在這裡使用 SQLite 來說明，在 Python 中可以直接使用 SQLite3 來操作。
-安裝套件 1 pip install sqlite3 與資料庫連線 1 2 import sqlite3 conn = sqlite3.connect(&amp;#39;example.db&amp;#39;) 當此程式執行時，如果與程式同一個資料夾下有 example.db 檔案，則會連線到該檔案，如果沒有，則會建立一個新的 example.db 檔案。
-並且 conn 將被建立為 Connection 物件表示資料庫。
-建立表格 在建立表格前，需要一個 Cursor 來執行 SQL 各種指令。
-1 cur = conn.cursor() 建立表格的語法如下：
-1 2 3 4 5 6 CREATE TABLE 表格名稱 ( 第一欄名稱 資料類型, 第二欄名稱 資料類型, 第三欄名稱 資料類型, .... ); 在 SQLite 中，資料類型有以下幾種：</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</guid><description>(本人已放棄思考) 答案僅供參考 答案僅供參考 答案僅供參考 鬼才知道是不是正解 pA 實作NotLetter(char ch) function，如果ch不是字母就回傳true，反則false。
-1 2 3 4 5 6 7 bool NotLetter(char ch){ if(ch &amp;gt;= &amp;#39;a&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;z&amp;#39;) return false; if(ch &amp;gt;= &amp;#39;A&amp;#39; &amp;amp;&amp;amp; ch &amp;lt;= &amp;#39;Z&amp;#39;) return false; return true; } 補：事實上在 ctype.h已經有 isalpha() 可使用，但這裡不允許include其他東西。
-pB 實作MonotonicIncreasing() function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增則回傳false，否則或如果只有一個數則回傳true。
-1 2 3 4 5 6 7 8 9 10 11 12 bool MonotonicIncreasing(){ int n; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); while(n!=-99999){ int m; scanf(&amp;#34;%d&amp;#34;, &amp;amp;m); if(m &amp;lt; n &amp;amp;&amp;amp; m !</description></item><item><title>【Git】Git分支的打開方式</title><link>https://ja-errorpro.codes/posts/2022/git_branch/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/git_branch/</guid><description>當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。
-初始化Local Repo 詳見 上一篇文章
-查看現在有哪些分支 1 $ git branch Output:
-1 * master 新增分支 1 $ git branch main 這樣就會新增一個名為main的分支，但是還沒有切換到該分支，所以還是在master分支上。
-重新命名分支 1 $ git branch -M cool # 將目前分支重新命名為cool 或者
-1 $ git branch -m main cool # 將main分支重新命名為cool分支 刪除分支 1 $ git branch -d main # 刪除main分支 這時候可能會看到 error: The branch 'main' is not fully merged，因為main還沒被合併，不給刪除
-可以使用 -D 強制刪除
-1 $ git branch -D main 切換分支 1 $ git checkout main 如果分支不存在，可以使用 -b 來建立並切換到該分支</description></item><item><title>【Git】Git初始設定與環境</title><link>https://ja-errorpro.codes/posts/2022/git_initial/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/git_initial/</guid><description>What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。
-分散式與中央式版控系統 中央式版控系統 需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用
-分散式版控系統 即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。
-Git環境 Local Repo 我們在修改完檔案後，透過git add 將檔案加入暫存區，再透過git commit將檔案加入Local Repo。
-Remote Repo Remote Repo是一個遠端的Git伺服器，我們可以將Local Repo push 到 Remote Repo，也可以從Remote Repo pull 到 Local Repo。
-Git安裝 Windows 到以下網址下載合適的版本並進行安裝
-Git for Windows
-安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
-這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
-Linux 非常簡單，打開你的終端機
-1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name &amp;#34;你的名字&amp;#34; $ git config --global user.</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>Why discord-py-interactions(以下簡稱 dcpi)? 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
-簡介 經過大量搜尋資料，發現dcpi的介紹特別少， 因此閱讀完官方API後想記錄下來翻成中文並做個整理。
-先備知識 需知道如何在 Discord Developers Applications 裡創建機器人 需知道命令列的基本操作 環境建置 既然是py當然要安裝Python(目前已測試3.8~3.10可用)
-Python官網
-安裝 dcpi(以編寫此篇文時的版本為主)
-dcpi Pypi
-1 $ pip3 install discord-py-interactions==4.3.4 Quick Start 根據這份API文件
-先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為bot.py， 並在DC的開發應用頁面創建好機器人
-然後複製以下code，將your-bot-token換成機器人的token，注意不要將token公開給別人。
-1 2 3 4 5 6 7 8 9 # 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題 import interactions # 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token # 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成 bot = interactions.Client(token=&amp;#34;your-bot-token&amp;#34;,intents=interactions.flags.Intents.ALL) # 啟動機器人 bot.start() 接著執行它
-1 $ python3 bot.py 這樣機器人就成功上線了
-第一個斜線指令 修改程式碼
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import interactions bot = interactions.</description></item><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</guid><description>簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
-起步 若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；
-如果不存在，就會在儲存後新建一個。
-模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式
-普通模式 初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行
-以下是常用的編輯指令
-dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl+r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) &amp;gt;&amp;gt; - 縮排 &amp;lt;&amp;lt; - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯
-按下 Esc 即可回到普通模式，此時 -- INSERT -- 會消失
-視覺(選取)模式 在普通模式按下 v 即可進入視覺模式，此時可以看到視窗最下方出現 -- VISUAL --，可以使用方向鍵選取文字，並使用 w 選取下一個單字的開頭或 $ 選取後面整行。</description></item><item><title>大學面試心得</title><link>https://ja-errorpro.codes/posts/2022/college_interview/</link><pubDate>Fri, 20 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/college_interview/</guid><description>申請入學(新課綱第一屆白老鼠) 身為2003/9月出生的我，變成教育部爆改課綱的頭一批白老鼠orz&amp;hellip;，可謂生於SARS，死於武漢！
-以為今年數學會比110簡單，結果更難😠，我的學測直接燒到只剩43級分。
-聽到這成績後我還是硬著頭皮把六個志願全都填電資/資工，
-以下是我的一階正取校系以及二階面試狀況(20220530更新: 穩到不行欸好讚)：
-中原資工 - 疫情取消面試 - 備14 中原資電不分系 - 疫情取消面試 -正8 逢甲資電不分系 - 521面試結束 - 正30 元智資工 - 無面試 - 正76 東海資工 - 522面試結束 - 正3 哭啊只剩兩間面試，飯店都訂好了，直接噴掉1000
-面試過程 逢甲資電不分系: 印象不錯，有熱情的學長姊(?，進去前會一直跟我們聊天(降低緊張感？
-而且教授非常友善、和藹(幸運遇到白臉)~ 聽說另一間試場是黑臉教授
-面試方式是一次六個人對三位教授，大概是這樣坐的：
-教授 教授 教授
-------長桌------
-1(沒來) 2 3 4 5 我(6) 門
-一開始教授讓我們輪流自我介紹，
-而當右邊的教授聽到我參加APCS跟能競就問學過什麼語言，然後從我開始倒序輪流回答(我忘了講資奧初選被旁邊講走orz&amp;hellip;。
-接著教授就問還有什麼問題
-我問了有關往國外發展的條件，然後其他人也都問一問時間就到了。
-整場就像是跟教授在聊天而已，真的不用太緊張，
-第一天面試感覺非常好，希望第二天東海也能順利~
-東海資工資電組: 一人對三個教授，而且也非常友善不用緊張
-首先自我介紹，然後
-教授(簡稱P): 你的經歷滿豐富的，分享一件你印象深刻的歷程跟收穫
-我說了Farmbot(點我查看)的事
-P: 你APCS考得不錯為什麼不填APCS組
-我: 我認為APCS就是測驗自己的程式能力，沒有把他當我的入學管道
-P: 我覺得你備審用Linux介面當封面的想法很有創意，而且你也有提到之前參加我們學校的AI營隊&amp;hellip;
-^當事封面
-P: 你還有報哪些科系，如果都上會選哪間
-我回答比較保守，把每間優點都講出來後說再考慮</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>https://ja-errorpro.codes/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/codeserver/</guid><description>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~
-先備條件： 會用Windows跟Ubuntu Docker以及容器的基礎操作 參考資源： codercom/Code-server
-本文所用配備及版本： 物理機環境： Windows 11 Pro 21H2 Code Server版本： v4.0.2 步驟 (這裡省略前面Docker的安裝步驟)
-先開一個資料夾名為CodeServer，這是伺服器的根目錄 新增一個檔案，檔名為docker-compose.yml 編輯檔案，貼上這些： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 version: &amp;#34;2.1&amp;#34; services: code-server: image: codercom/code-server container_name: code-server environment: - TZ=ASIA/TAIPEI - PASSWORD=&amp;lt;設定進入伺服器的密碼&amp;gt; - SUDO_PASSWORD=&amp;lt;設定Root權限的密碼&amp;gt; volumes: - ./appdata/code-server/project:/home/coder/project - ./appdata/code-server/.local:/home/coder/.local ports: - &amp;lt;PORT&amp;gt;:8080 restart: always (1) version: 不用動他
-(2) image: 指定目標映像，Docker會試著到上面給的網站找尋映像檔
-(3) container_name: 給容器隨便取一個名字
-(4) TZ: Timezone時區</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mix on ErrorPro</title><link>https://ja-errorpro.codes/tags/mix/</link><description>Recent content in Mix on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/mix/index.xml" rel="self" type="application/rss+xml"/><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</guid><description>&lt;h2 id="pre">Pre&lt;/h2>
+&lt;p>題目提供以下資料結構與函式&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</guid><description>&lt;h1 id="答案僅供參考">答案僅供參考&lt;/h1>
+&lt;h1 id="答案僅供參考-1">答案僅供參考&lt;/h1>
+&lt;h1 id="答案僅供參考-2">答案僅供參考&lt;/h1>
+&lt;h1 id="我看起來像標準答案嗎">我看起來像標準答案嗎&lt;/h1>
+&lt;h2 id="pre">Pre&lt;/h2>
+&lt;p>題目提供以下資料結構與函式&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【普物】 Schrodinger Equation Derivation</title><link>https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/</guid><description>&lt;h1 id="薛丁格方程">薛丁格方程&lt;/h1>
+&lt;p>試著找到一方程式描述能量與波函數的關係。&lt;/p>
+&lt;h2 id="波函數">波函數&lt;/h2>
+&lt;p>已知波函數應形如
+$$ \psi(x,t) = A e^{i(kx-\omega t)} $$
+的形式&lt;/p>
+&lt;p>若波函數對時間微分，則有
+$$ \frac{\partial \psi}{\partial t} = -i \omega A e^{i(kx-\omega t)} = -i \omega \psi $$&lt;/p>
+&lt;p>若波函數對位置微分，則有
+$$ \frac{\partial \psi}{\partial x} = i k A e^{i(kx-\omega t)} = i k \psi $$&lt;/p>
+&lt;p>對位置的二次微分，則有
+$$ \frac{\partial^2 \psi}{\partial x^2} = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p>
+&lt;p>寫成三維空間形式為
+$$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p></description></item><item><title>SQL 基本語法(sqlite3 in python)</title><link>https://ja-errorpro.codes/posts/2022/sql_basic/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/sql_basic/</guid><description>&lt;h1 id="環境">環境&lt;/h1>
+&lt;p>市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：&lt;/p>
+&lt;ul>
+&lt;li>SQLite&lt;/li>
+&lt;li>MySQL&lt;/li>
+&lt;li>PostgreSQL&lt;/li>
+&lt;li>SQL Server&lt;/li>
+&lt;/ul>
+&lt;p>在這裡使用 SQLite 來說明，在 Python 中可以直接使用 SQLite3 來操作。&lt;/p>
+&lt;h1 id="安裝套件">安裝套件&lt;/h1>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install sqlite3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="與資料庫連線">與資料庫連線&lt;/h1>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</guid><description>&lt;h1 id="本人已放棄思考">(本人已放棄思考)&lt;/h1>
+&lt;h1 id="答案僅供參考">答案僅供參考&lt;/h1>
+&lt;h1 id="答案僅供參考-1">答案僅供參考&lt;/h1>
+&lt;h1 id="答案僅供參考-2">答案僅供參考&lt;/h1>
+&lt;h1 id="鬼才知道是不是正解">鬼才知道是不是正解&lt;/h1>
+&lt;h2 id="pa">pA&lt;/h2>
+&lt;p>實作&lt;code>NotLetter(char ch)&lt;/code> function，如果ch不是字母就回傳true，反則false。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">bool&lt;/span> &lt;span style="color:#50fa7b">NotLetter&lt;/span>(&lt;span style="color:#8be9fd">char&lt;/span> ch){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span>(ch &lt;span style="color:#ff79c6">&amp;gt;=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;a&amp;#39;&lt;/span> &lt;span style="color:#ff79c6">&amp;amp;&amp;amp;&lt;/span> ch &lt;span style="color:#ff79c6">&amp;lt;=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;z&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">false&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span>(ch &lt;span style="color:#ff79c6">&amp;gt;=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;A&amp;#39;&lt;/span> &lt;span style="color:#ff79c6">&amp;amp;&amp;amp;&lt;/span> ch &lt;span style="color:#ff79c6">&amp;lt;=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;Z&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">false&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">true&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【Git】Git分支的打開方式</title><link>https://ja-errorpro.codes/posts/2022/git_branch/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/git_branch/</guid><description>&lt;p>當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。&lt;/p>
+&lt;h2 id="初始化local-repo">初始化Local Repo&lt;/h2>
+&lt;p>詳見 &lt;a href="https://ja-errorpro.codes/posts/2022/git_initial/">上一篇文章&lt;/a>&lt;/p>
+&lt;h2 id="查看現在有哪些分支">查看現在有哪些分支&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git branch
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Output:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>* master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="新增分支">新增分支&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【Git】Git初始設定與環境</title><link>https://ja-errorpro.codes/posts/2022/git_initial/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/git_initial/</guid><description>&lt;h2 id="what-is-git">What is Git?&lt;/h2>
+&lt;p>能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。
+讓開發者(群)能夠更好管理專案。&lt;/p>
+&lt;h2 id="分散式與中央式版控系統">分散式與中央式版控系統&lt;/h2>
+&lt;h3 id="中央式版控系統">中央式版控系統&lt;/h3>
+&lt;p>需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用&lt;/p>
+&lt;h3 id="分散式版控系統">分散式版控系統&lt;/h3>
+&lt;p>即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。&lt;/p>
+&lt;h2 id="git環境">Git環境&lt;/h2>
+&lt;h3 id="local-repo">Local Repo&lt;/h3>
+&lt;p>我們在修改完檔案後，透過&lt;code>git add&lt;/code> 將檔案加入暫存區，再透過&lt;code>git commit&lt;/code>將檔案加入Local Repo。&lt;/p>
+&lt;h3 id="remote-repo">Remote Repo&lt;/h3>
+&lt;p>Remote Repo是一個遠端的Git伺服器，我們可以將Local Repo push 到 Remote Repo，也可以從Remote Repo pull 到 Local Repo。&lt;/p>
+&lt;h2 id="git安裝">Git安裝&lt;/h2>
+&lt;h3 id="windows">Windows&lt;/h3>
+&lt;p>到以下網址下載合適的版本並進行安裝&lt;/p>
+&lt;p>&lt;a href="https://gitforwindows.org/">Git for Windows&lt;/a>&lt;/p>
+&lt;p>安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。&lt;/p>
+&lt;p>這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。&lt;/p>
+&lt;h3 id="linux">Linux&lt;/h3>
+&lt;p>非常簡單，打開你的終端機&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi">Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1>
+&lt;p>支援更多操作如斜線指令、按鈕、選單，且簡單易懂&lt;/p>
+&lt;h1 id="簡介">簡介&lt;/h1>
+&lt;p>經過大量搜尋資料，發現dcpi的介紹特別少，
+因此閱讀完官方API後想記錄下來翻成中文並做個整理。&lt;/p>
+&lt;h1 id="先備知識">先備知識&lt;/h1>
+&lt;ul>
+&lt;li>需知道如何在 &lt;a href="https://discord.com/developers/applications">Discord Developers Applications&lt;/a> 裡創建機器人&lt;/li>
+&lt;li>需知道命令列的基本操作&lt;/li>
+&lt;/ul>
+&lt;h1 id="環境建置">環境建置&lt;/h1>
+&lt;p>既然是py當然要安裝Python(目前已測試3.8~3.10可用)&lt;/p>
+&lt;p>&lt;a href="https://www.python.org">Python官網&lt;/a>&lt;/p>
+&lt;p>安裝 dcpi(以編寫此篇文時的版本為主)&lt;/p>
+&lt;p>&lt;a href="https://pypi.org/project/discord-py-interactions/">dcpi Pypi&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ pip3 install discord-py-interactions&lt;span style="color:#ff79c6">==&lt;/span>4.3.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="quick-start">Quick Start&lt;/h1>
+&lt;p>根據這份&lt;a href="https://interactionspy.readthedocs.io/en/latest/quickstart.html">API文件&lt;/a>&lt;/p></description></item><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</guid><description>&lt;h2 id="簡介">簡介&lt;/h2>
+&lt;p>Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。&lt;/p>
+&lt;h2 id="起步">起步&lt;/h2>
+&lt;p>若要使用vim編輯檔案，請在命令列中輸入 &lt;code>vim xxx.yyy&lt;/code>，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；&lt;/p>
+&lt;p>如果不存在，就會在儲存後新建一個。&lt;/p>
+&lt;h2 id="模式">模式&lt;/h2>
+&lt;p>Vim主要有四種模式： &lt;strong>普通模式、編輯模式、視覺模式、指令模式&lt;/strong>&lt;/p>
+&lt;h3 id="普通模式">普通模式&lt;/h3>
+&lt;p>初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行&lt;/p>
+&lt;p>以下是常用的編輯指令&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>dd&lt;/code> - 刪除整行&lt;/li>
+&lt;li>&lt;code>(n)dd&lt;/code> - 刪除從游標往下數n行&lt;/li>
+&lt;li>&lt;code>yy&lt;/code> - 複製整行&lt;/li>
+&lt;li>&lt;code>(n)yy&lt;/code> - 複製從游標往下數n行&lt;/li>
+&lt;li>&lt;code>u&lt;/code> - 復原(undo)動作&lt;/li>
+&lt;li>&lt;code>Ctrl+r&lt;/code> - 重做(redo)動作&lt;/li>
+&lt;li>&lt;code>.&lt;/code> - 重複上一個動作&lt;/li>
+&lt;li>&lt;code>x&lt;/code> - 刪除字元&lt;/li>
+&lt;li>&lt;code>X&lt;/code> - 刪除前一個字元(Backspace)&lt;/li>
+&lt;li>&lt;code>&amp;gt;&amp;gt;&lt;/code> - 縮排&lt;/li>
+&lt;li>&lt;code>&amp;lt;&amp;lt;&lt;/code> - 反向縮排&lt;/li>
+&lt;/ul>
+&lt;h3 id="編輯模式">編輯模式&lt;/h3>
+&lt;p>在普通模式按下 &lt;code>i(Insert), o(Open), a(Append)&lt;/code> 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 &lt;code>-- INSERT --&lt;/code>，即可對檔案編輯&lt;/p></description></item><item><title>大學面試心得</title><link>https://ja-errorpro.codes/posts/2022/college_interview/</link><pubDate>Fri, 20 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/college_interview/</guid><description>&lt;h2 id="申請入學新課綱第一屆白老鼠">申請入學(新課綱第一屆白老鼠)&lt;/h2>
+&lt;p>身為2003/9月出生的我，變成教育部爆改課綱的頭一批白老鼠orz&amp;hellip;，可謂生於SARS，死於武漢！&lt;/p>
+&lt;p>以為今年數學會比110簡單，結果更難😠，我的學測直接燒到只剩43級分。&lt;/p>
+&lt;p>聽到這成績後我還是硬著頭皮把六個志願全都填電資/資工，&lt;/p>
+&lt;p>以下是我的一階正取校系以及二階面試狀況(20220530更新: 穩到不行欸好讚)：&lt;/p>
+&lt;ul>
+&lt;li>中原資工 - &lt;strong>疫情取消面試&lt;/strong> - 備14&lt;/li>
+&lt;li>中原資電不分系 - &lt;strong>疫情取消面試&lt;/strong> -正8&lt;/li>
+&lt;li>逢甲資電不分系 - &lt;strong>521面試結束&lt;/strong> - 正30&lt;/li>
+&lt;li>元智資工 - &lt;strong>無面試&lt;/strong> - 正76&lt;/li>
+&lt;li>東海資工 - &lt;strong>522面試結束&lt;/strong> - 正3&lt;/li>
+&lt;/ul>
+&lt;p>哭啊只剩兩間面試，飯店都訂好了，直接噴掉1000&lt;/p>
+&lt;h2 id="面試過程">面試過程&lt;/h2>
+&lt;h3 id="逢甲資電不分系">逢甲資電不分系:&lt;/h3>
+&lt;p>印象不錯，有熱情的學長姊(?，進去前會一直跟我們聊天(降低緊張感？&lt;/p>
+&lt;p>而且教授非常友善、和藹(幸運遇到白臉)~ 聽說另一間試場是黑臉教授&lt;/p>
+&lt;p>面試方式是一次六個人對三位教授，大概是這樣坐的：&lt;/p>
+&lt;p>教授 教授 教授&lt;/p>
+&lt;p>------長桌------&lt;/p>
+&lt;p>1(沒來) 2 3 4 5 我(6) 門&lt;/p></description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>https://ja-errorpro.codes/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/codeserver/</guid><description>&lt;p>最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~&lt;/p>
+&lt;h1 id="先備條件">先備條件：&lt;/h1>
+&lt;ul>
+&lt;li>會用Windows跟Ubuntu&lt;/li>
+&lt;li>Docker以及容器的基礎操作&lt;/li>
+&lt;/ul>
+&lt;h1 id="參考資源">參考資源：&lt;/h1>
+&lt;p>&lt;a href="https://hub.docker.com/r/codercom/code-server">codercom/Code-server&lt;/a>&lt;/p>
+&lt;h1 id="本文所用配備及版本">本文所用配備及版本：&lt;/h1>
+&lt;ul>
+&lt;li>物理機環境： Windows 11 Pro 21H2&lt;/li>
+&lt;li>Code Server版本： v4.0.2&lt;/li>
+&lt;/ul>
+&lt;h1 id="步驟">步驟&lt;/h1>
+&lt;p>(這裡省略前面Docker的安裝步驟)&lt;/p>
+&lt;ol>
+&lt;li>先開一個資料夾名為CodeServer，這是伺服器的根目錄&lt;/li>
+&lt;li>新增一個檔案，檔名為docker-compose.yml&lt;/li>
+&lt;li>編輯檔案，貼上這些：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;/code>&lt;/pr</description></item></channel></rss>

