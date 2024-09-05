@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> 【CTF-WriteUp】AIS3 Pre-Exam 2024 | ErrorPro</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/2024/ais3_pre_exam_2024/'>
-  <meta name="description" content="我覺得現在在看這句話的人超電">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/2024/ais3_pre_exam_2024/">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 【CTF-WriteUp】AIS3 Pre-Exam 2024 | ErrorPro</title>
+    <link rel='canonical' href='http://localhost:1313/posts/2024/ais3_pre_exam_2024/'>
+    
+    <meta name="description" content="我覺得現在在看這句話的人超電">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta property="og:url" content="http://localhost:1313/posts/2024/ais3_pre_exam_2024/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="【CTF-WriteUp】AIS3 Pre-Exam 2024">
   <meta property="og:description" content="AIS3 Pre-Exam 2024 先放結果
@@ -24,10 +29,7 @@ My First CTF：潛力獎
 希望下次能通靈出更多題目。
 Write Up Misc Welcome 簽到題
 FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}
-Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，
-這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。
-看到 server.py
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&#39;what would you like to do?">
+Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. ">
   <meta property="og:locale" content="zh_Hant_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -35,7 +37,7 @@ Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic inte
     <meta property="article:modified_time" content="2024-06-11T00:00:00+08:00">
     <meta property="article:tag" content="Ctf">
 
-  
+    
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【CTF-WriteUp】AIS3 Pre-Exam 2024">
   <meta name="twitter:description" content="AIS3 Pre-Exam 2024 先放結果
@@ -44,34 +46,46 @@ My First CTF：潛力獎
 希望下次能通靈出更多題目。
 Write Up Misc Welcome 簽到題
 FLAG: AIS3{Welc0me_to_AIS3_PreExam_2o24!}
-Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. 跟電腦玩 Nim 遊戲，Wiki - Nim，
-這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。
-看到 server.py
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 def menu(): print_main_menu() choice = input(&#39;what would you like to do?">
+Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other. ">
 
-  
-  
     
-  
-  
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
 
-  
-   <link rel="stylesheet" href="http://localhost:1313/css/highlight.css">  <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="http://localhost:1313/css/search.css">  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-  
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
+    
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+    
 
-  
+    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
 
-  
-  
-</head>
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-LP899FV1TS');
+</script>
+    
+    
+</head>
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
@@ -175,7 +189,7 @@ Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic inte
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&name=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&description=AIS3%20Pre-Exam%202024%20%e5%85%88%e6%94%be%e7%b5%90%e6%9e%9c%0aMy%20First%20CTF%ef%bc%9a%e6%bd%9b%e5%8a%9b%e7%8d%8e%0a%e5%bf%83%e5%be%97%20%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%8f%83%e5%8a%a0%20My%20First%20CTF%20%e8%b7%9f%20AIS3%20Pre-Exam%ef%bc%8c%e6%9c%80%e5%be%8c%e6%9c%89%e5%b9%be%e9%a1%8c%e5%88%b0%e6%af%94%e8%b3%bd%e7%b5%90%e6%9d%9f%e6%89%8d%e8%a7%a3%e5%87%ba%e4%be%86%ef%bc%8c%e8%a6%ba%e5%be%97%e6%bb%bf%e5%8f%af%e6%83%9c%e7%9a%84%ef%bc%8c%0a%e5%b8%8c%e6%9c%9b%e4%b8%8b%e6%ac%a1%e8%83%bd%e9%80%9a%e9%9d%88%e5%87%ba%e6%9b%b4%e5%a4%9a%e9%a1%8c%e7%9b%ae%e3%80%82%0aWrite%20Up%20Misc%20Welcome%20%e7%b0%bd%e5%88%b0%e9%a1%8c%0aFLAG%3a%20AIS3%7bWelc0me_to_AIS3_PreExam_2o24%21%7d%0aQuantum%20Nim%20Heist%20Welcome%20to%20the%20Quantum%20Nim%20Heist%2c%20where%20traditional%20logic%20intertwines%20with%20the%20enigmatic%20realm%20of%20quantum%20mechanics%20to%20create%20a%20Nim%20game%20like%20no%20other.%20%e8%b7%9f%e9%9b%bb%e8%85%a6%e7%8e%a9%20Nim%20%e9%81%8a%e6%88%b2%ef%bc%8cWiki%20-%20Nim%ef%bc%8c%0a%e9%80%99%e8%a3%a1%e7%9a%84%e8%a6%8f%e5%89%87%e6%98%af%e6%8b%bf%e8%b5%b0%e6%9c%80%e5%be%8c%e4%b8%80%e6%a3%b5%e7%9f%b3%e9%a0%ad%e7%9a%84%e4%ba%ba%e7%8d%b2%e5%8b%9d%ef%bc%8c%e8%80%8c%e6%a0%b9%e6%93%9a%e7%b5%84%e5%90%88%e8%b3%bd%e5%b1%80%e7%90%86%e8%ab%96%ef%bc%8c%e6%8a%8a%e6%af%8f%e5%a0%86%e7%9f%b3%e9%a0%ad%e6%95%b8%20XOR%20%e5%be%8c%e8%8b%a5%e7%82%ba%200%20%e5%89%87%e5%be%8c%e6%89%8b%e5%bf%85%e5%8b%9d%ef%bc%8c%e5%90%a6%e5%89%87%e5%85%88%e6%89%8b%e5%bf%85%e5%8b%9d%e3%80%82%0a%e7%9c%8b%e5%88%b0%20server.py%0a1%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%2024%2025%20def%20menu%28%29%3a%20print_main_menu%28%29%20choice%20%3d%20input%28%26%2339%3bwhat%20would%20you%20like%20to%20do%3f" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&name=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&description=%3ch1%20id%3d%22ais3-pre-exam-2024%22%3eAIS3%20Pre-Exam%202024%3c%2fh1%3e%0a%3cp%3e%e5%85%88%e6%94%be%e7%b5%90%e6%9e%9c%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fresult.png%22%20alt%3d%22result%22%3e%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fresult2.png%22%20alt%3d%22result2%22%3e%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fresult3.png%22%20alt%3d%22result3%22%3e%3c%2fp%3e%0a%3cp%3eMy%20First%20CTF%ef%bc%9a%e6%bd%9b%e5%8a%9b%e7%8d%8e%3c%2fp%3e%0a%3ch2%20id%3d%22%e5%bf%83%e5%be%97%22%3e%e5%bf%83%e5%be%97%3c%2fh2%3e%0a%3cp%3e%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%8f%83%e5%8a%a0%20My%20First%20CTF%20%e8%b7%9f%20AIS3%20Pre-Exam%ef%bc%8c%e6%9c%80%e5%be%8c%e6%9c%89%e5%b9%be%e9%a1%8c%e5%88%b0%e6%af%94%e8%b3%bd%e7%b5%90%e6%9d%9f%e6%89%8d%e8%a7%a3%e5%87%ba%e4%be%86%ef%bc%8c%e8%a6%ba%e5%be%97%e6%bb%bf%e5%8f%af%e6%83%9c%e7%9a%84%ef%bc%8c%3c%2fp%3e%0a%3cp%3e%e5%b8%8c%e6%9c%9b%e4%b8%8b%e6%ac%a1%e8%83%bd%3cdel%3e%e9%80%9a%e9%9d%88%3c%2fdel%3e%e5%87%ba%e6%9b%b4%e5%a4%9a%e9%a1%8c%e7%9b%ae%e3%80%82%3c%2fp%3e%0a%3ch1%20id%3d%22write-up%22%3eWrite%20Up%3c%2fh1%3e%0a%3ch2%20id%3d%22misc%22%3eMisc%3c%2fh2%3e%0a%3ch3%20id%3d%22welcome%22%3eWelcome%3c%2fh3%3e%0a%3cp%3e%e7%b0%bd%e5%88%b0%e9%a1%8c%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fwelcome.png%22%20alt%3d%22image%22%3e%3c%2fp%3e%0a%3ch4%20id%3d%22flag%22%3eFLAG%3a%3c%2fh4%3e%0a%3cp%3eAIS3%7bWelc0me_to_AIS3_PreExam_2o24%21%7d%3c%2fp%3e%0a%3ch3%20id%3d%22quantum-nim-heist%22%3eQuantum%20Nim%20Heist%3c%2fh3%3e%0a%3cpre%20tabindex%3d%220%22%3e%3ccode%3eWelcome%20to%20the%20Quantum%20Nim%20Heist%2c%20where%20traditional%20logic%20intertwines%20with%20the%20enigmatic%20realm%20of%20quantum%20mechanics%20to%20create%20a%20Nim%20game%20like%20no%20other.%0a%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -1210,7 +1224,7 @@ Author: Kazma
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&name=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&description=AIS3%20Pre-Exam%202024%20%e5%85%88%e6%94%be%e7%b5%90%e6%9e%9c%0aMy%20First%20CTF%ef%bc%9a%e6%bd%9b%e5%8a%9b%e7%8d%8e%0a%e5%bf%83%e5%be%97%20%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%8f%83%e5%8a%a0%20My%20First%20CTF%20%e8%b7%9f%20AIS3%20Pre-Exam%ef%bc%8c%e6%9c%80%e5%be%8c%e6%9c%89%e5%b9%be%e9%a1%8c%e5%88%b0%e6%af%94%e8%b3%bd%e7%b5%90%e6%9d%9f%e6%89%8d%e8%a7%a3%e5%87%ba%e4%be%86%ef%bc%8c%e8%a6%ba%e5%be%97%e6%bb%bf%e5%8f%af%e6%83%9c%e7%9a%84%ef%bc%8c%0a%e5%b8%8c%e6%9c%9b%e4%b8%8b%e6%ac%a1%e8%83%bd%e9%80%9a%e9%9d%88%e5%87%ba%e6%9b%b4%e5%a4%9a%e9%a1%8c%e7%9b%ae%e3%80%82%0aWrite%20Up%20Misc%20Welcome%20%e7%b0%bd%e5%88%b0%e9%a1%8c%0aFLAG%3a%20AIS3%7bWelc0me_to_AIS3_PreExam_2o24%21%7d%0aQuantum%20Nim%20Heist%20Welcome%20to%20the%20Quantum%20Nim%20Heist%2c%20where%20traditional%20logic%20intertwines%20with%20the%20enigmatic%20realm%20of%20quantum%20mechanics%20to%20create%20a%20Nim%20game%20like%20no%20other.%20%e8%b7%9f%e9%9b%bb%e8%85%a6%e7%8e%a9%20Nim%20%e9%81%8a%e6%88%b2%ef%bc%8cWiki%20-%20Nim%ef%bc%8c%0a%e9%80%99%e8%a3%a1%e7%9a%84%e8%a6%8f%e5%89%87%e6%98%af%e6%8b%bf%e8%b5%b0%e6%9c%80%e5%be%8c%e4%b8%80%e6%a3%b5%e7%9f%b3%e9%a0%ad%e7%9a%84%e4%ba%ba%e7%8d%b2%e5%8b%9d%ef%bc%8c%e8%80%8c%e6%a0%b9%e6%93%9a%e7%b5%84%e5%90%88%e8%b3%bd%e5%b1%80%e7%90%86%e8%ab%96%ef%bc%8c%e6%8a%8a%e6%af%8f%e5%a0%86%e7%9f%b3%e9%a0%ad%e6%95%b8%20XOR%20%e5%be%8c%e8%8b%a5%e7%82%ba%200%20%e5%89%87%e5%be%8c%e6%89%8b%e5%bf%85%e5%8b%9d%ef%bc%8c%e5%90%a6%e5%89%87%e5%85%88%e6%89%8b%e5%bf%85%e5%8b%9d%e3%80%82%0a%e7%9c%8b%e5%88%b0%20server.py%0a1%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%2024%2025%20def%20menu%28%29%3a%20print_main_menu%28%29%20choice%20%3d%20input%28%26%2339%3bwhat%20would%20you%20like%20to%20do%3f" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_pre_exam_2024%2f&name=%e3%80%90CTF-WriteUp%e3%80%91AIS3%20Pre-Exam%202024&description=%3ch1%20id%3d%22ais3-pre-exam-2024%22%3eAIS3%20Pre-Exam%202024%3c%2fh1%3e%0a%3cp%3e%e5%85%88%e6%94%be%e7%b5%90%e6%9e%9c%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fresult.png%22%20alt%3d%22result%22%3e%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fresult2.png%22%20alt%3d%22result2%22%3e%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fresult3.png%22%20alt%3d%22result3%22%3e%3c%2fp%3e%0a%3cp%3eMy%20First%20CTF%ef%bc%9a%e6%bd%9b%e5%8a%9b%e7%8d%8e%3c%2fp%3e%0a%3ch2%20id%3d%22%e5%bf%83%e5%be%97%22%3e%e5%bf%83%e5%be%97%3c%2fh2%3e%0a%3cp%3e%e7%ac%ac%e4%b8%80%e6%ac%a1%e5%8f%83%e5%8a%a0%20My%20First%20CTF%20%e8%b7%9f%20AIS3%20Pre-Exam%ef%bc%8c%e6%9c%80%e5%be%8c%e6%9c%89%e5%b9%be%e9%a1%8c%e5%88%b0%e6%af%94%e8%b3%bd%e7%b5%90%e6%9d%9f%e6%89%8d%e8%a7%a3%e5%87%ba%e4%be%86%ef%bc%8c%e8%a6%ba%e5%be%97%e6%bb%bf%e5%8f%af%e6%83%9c%e7%9a%84%ef%bc%8c%3c%2fp%3e%0a%3cp%3e%e5%b8%8c%e6%9c%9b%e4%b8%8b%e6%ac%a1%e8%83%bd%3cdel%3e%e9%80%9a%e9%9d%88%3c%2fdel%3e%e5%87%ba%e6%9b%b4%e5%a4%9a%e9%a1%8c%e7%9b%ae%e3%80%82%3c%2fp%3e%0a%3ch1%20id%3d%22write-up%22%3eWrite%20Up%3c%2fh1%3e%0a%3ch2%20id%3d%22misc%22%3eMisc%3c%2fh2%3e%0a%3ch3%20id%3d%22welcome%22%3eWelcome%3c%2fh3%3e%0a%3cp%3e%e7%b0%bd%e5%88%b0%e9%a1%8c%3c%2fp%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fais3_pre_exam_2024%2fwelcome.png%22%20alt%3d%22image%22%3e%3c%2fp%3e%0a%3ch4%20id%3d%22flag%22%3eFLAG%3a%3c%2fh4%3e%0a%3cp%3eAIS3%7bWelc0me_to_AIS3_PreExam_2o24%21%7d%3c%2fp%3e%0a%3ch3%20id%3d%22quantum-nim-heist%22%3eQuantum%20Nim%20Heist%3c%2fh3%3e%0a%3cpre%20tabindex%3d%220%22%3e%3ccode%3eWelcome%20to%20the%20Quantum%20Nim%20Heist%2c%20where%20traditional%20logic%20intertwines%20with%20the%20enigmatic%20realm%20of%20quantum%20mechanics%20to%20create%20a%20Nim%20game%20like%20no%20other.%0a%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>

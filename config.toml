@@ -57,6 +57,10 @@ weight = 6
     style = "dracula"
     tabWidth = 4
 
+[services]
+    [services.googleAnalytics]
+      id = "G-LP899FV1TS"
+
 [params]
 
     colortheme = "dark" # dark, light, white, or classic

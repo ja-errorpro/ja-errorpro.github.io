@@ -1,67 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> C&#43;&#43;筆記-未定義行為 | ErrorPro</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/cpp/cpp-ub/'>
-  <meta name="description" content="我覺得現在在看這句話的人超電">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/cpp/cpp-ub/">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> C&#43;&#43;筆記-未定義行為 | ErrorPro</title>
+    <link rel='canonical' href='http://localhost:1313/posts/cpp/cpp-ub/'>
+    
+    <meta name="description" content="我覺得現在在看這句話的人超電">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta property="og:url" content="http://localhost:1313/posts/cpp/cpp-ub/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="C&#43;&#43;筆記-未定義行為">
-  <meta property="og:description" content="C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
+  <meta property="og:description" content=" C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
 一些例子 1. 順序未定義 考慮以下程式碼：
-1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。
-而像以下程式碼也是錯誤的寫法
-1 2 3 int arr[10]; int i = 0; arr[i] = i&#43;&#43;; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。
-3. 溢值 1 2 int x = 2147483647; // 假設 32 位元 int y = x &#43; 1; 4.">
+1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。">
   <meta property="og:locale" content="zh_Hant_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:tag" content="C-Cpp">
 
-  
+    
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="C&#43;&#43;筆記-未定義行為">
-  <meta name="twitter:description" content="C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
+  <meta name="twitter:description" content=" C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
 一些例子 1. 順序未定義 考慮以下程式碼：
-1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。
-而像以下程式碼也是錯誤的寫法
-1 2 3 int arr[10]; int i = 0; arr[i] = i&#43;&#43;; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。
-3. 溢值 1 2 int x = 2147483647; // 假設 32 位元 int y = x &#43; 1; 4.">
+1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。">
 
-  
-  
     
-  
-  
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
 
-  
-   <link rel="stylesheet" href="http://localhost:1313/css/highlight.css">  <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="http://localhost:1313/css/search.css">  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-  
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
+    
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+    
 
-  
+    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
 
-  
-  
-</head>
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-LP899FV1TS');
+</script>
+    
+    
+</head>
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
@@ -165,7 +179,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=C%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%20%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%20%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%0a%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%201.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%20%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%0a1%202%20int%20i%20%3d%2010%3b%20i%20%3d%20i%2b%2b%20%2b%20%2b%2bi%3b%20%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%0a%e8%80%8c%e5%83%8f%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%e4%b9%9f%e6%98%af%e9%8c%af%e8%aa%a4%e7%9a%84%e5%af%ab%e6%b3%95%0a1%202%203%20int%20arr%5b10%5d%3b%20int%20i%20%3d%200%3b%20arr%5bi%5d%20%3d%20i%2b%2b%3b%202.%20%e9%99%a4%e4%bb%a5%e9%9b%b6%201%202%20int%20a%20%3d%205%3b%20int%20q%20%3d%20a%20%2f%200%3b%20%e9%99%a4%e4%bb%a5%e9%9b%b6%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%ef%bc%8c%e8%80%8c%e5%9c%a8%20float%e3%80%81double%e3%80%81long%20double%20%e9%a1%9e%e5%9e%8b%e9%99%a4%e4%bb%a5%e9%9b%b6%e7%9a%84%e7%b5%90%e6%9e%9c%ef%bc%8c%e6%a0%b9%e6%93%9a%20IEEE%20754%ef%bc%8c%e5%8f%af%e8%83%bd%e6%98%af%20inf%20%e6%88%96%20nan%28Not%20A%20Number%29%e3%80%82%0a3.%20%e6%ba%a2%e5%80%bc%201%202%20int%20x%20%3d%202147483647%3b%20%2f%2f%20%e5%81%87%e8%a8%ad%2032%20%e4%bd%8d%e5%85%83%20int%20y%20%3d%20x%20%2b%201%3b%204." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2fcpp-index%22%3eC%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%baunde%ef%ac%81ned-behavior%e7%b0%a1%e7%a8%b1-ub%22%3e%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%22%3e%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%3c%2fh2%3e%0a%3ch3%20id%3d%221-%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%22%3e1.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%3c%2fh3%3e%0a%3cp%3e%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-c%22%20data-lang%3d%22c%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ei%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3ei%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -453,7 +467,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=C%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%20%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%20%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%0a%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%201.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%20%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%0a1%202%20int%20i%20%3d%2010%3b%20i%20%3d%20i%2b%2b%20%2b%20%2b%2bi%3b%20%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%0a%e8%80%8c%e5%83%8f%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%e4%b9%9f%e6%98%af%e9%8c%af%e8%aa%a4%e7%9a%84%e5%af%ab%e6%b3%95%0a1%202%203%20int%20arr%5b10%5d%3b%20int%20i%20%3d%200%3b%20arr%5bi%5d%20%3d%20i%2b%2b%3b%202.%20%e9%99%a4%e4%bb%a5%e9%9b%b6%201%202%20int%20a%20%3d%205%3b%20int%20q%20%3d%20a%20%2f%200%3b%20%e9%99%a4%e4%bb%a5%e9%9b%b6%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%ef%bc%8c%e8%80%8c%e5%9c%a8%20float%e3%80%81double%e3%80%81long%20double%20%e9%a1%9e%e5%9e%8b%e9%99%a4%e4%bb%a5%e9%9b%b6%e7%9a%84%e7%b5%90%e6%9e%9c%ef%bc%8c%e6%a0%b9%e6%93%9a%20IEEE%20754%ef%bc%8c%e5%8f%af%e8%83%bd%e6%98%af%20inf%20%e6%88%96%20nan%28Not%20A%20Number%29%e3%80%82%0a3.%20%e6%ba%a2%e5%80%bc%201%202%20int%20x%20%3d%202147483647%3b%20%2f%2f%20%e5%81%87%e8%a8%ad%2032%20%e4%bd%8d%e5%85%83%20int%20y%20%3d%20x%20%2b%201%3b%204." aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2fcpp-index%22%3eC%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%baunde%ef%ac%81ned-behavior%e7%b0%a1%e7%a8%b1-ub%22%3e%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%22%3e%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%3c%2fh2%3e%0a%3ch3%20id%3d%221-%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%22%3e1.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%3c%2fh3%3e%0a%3cp%3e%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-c%22%20data-lang%3d%22c%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ei%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3ei%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>

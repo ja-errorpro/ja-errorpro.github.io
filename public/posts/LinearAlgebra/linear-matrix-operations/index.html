@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> 線性代數筆記-矩陣與矩陣運算 | ErrorPro</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/'>
-  <meta name="description" content="我覺得現在在看這句話的人超電">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 線性代數筆記-矩陣與矩陣運算 | ErrorPro</title>
+    <link rel='canonical' href='http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/'>
+    
+    <meta name="description" content="我覺得現在在看這句話的人超電">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta property="og:url" content="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="線性代數筆記-矩陣與矩陣運算">
   <meta property="og:description" content="線性代數筆記-目錄
@@ -26,36 +31,51 @@
     <meta property="article:section" content="posts">
     <meta property="article:tag" content="Linear Algebra">
 
-  
+    
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="線性代數筆記-矩陣與矩陣運算">
   <meta name="twitter:description" content="線性代數筆記-目錄
 上一篇-消去法
 矩陣與矩陣運算(Matrices and Matrix Operations) 定義與表示法 矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。 一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix}$。 也可寫成 $[a_{ij}]_{m \times n}$。 $a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。 加減法 如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。 乘法 如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。 如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。 換句話說， $AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]， $AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。 如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。 線性系統的矩陣形式 $$\begin{array}{} a_{11}x_1 &#43; a_{12}x_2 &#43; \cdots &#43; a_{1n}x_n = b_1 \\ a_{21}x_1 &#43; a_{22}x_2 &#43; \cdots &#43; a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 &#43; a_{m2}x_2 &#43; \cdots &#43; a_{mn}x_n = b_m\end{array}$$">
 
-  
-  
     
-  
-  
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
 
-  
-   <link rel="stylesheet" href="http://localhost:1313/css/highlight.css">  <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="http://localhost:1313/css/search.css">  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-  
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
+    
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+    
 
-  
+    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
 
-  
-  
-</head>
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-LP899FV1TS');
+</script>
+    
+    
+</head>
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
@@ -159,7 +179,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fLinearAlgebra%2flinear-matrix-operations%2f&name=%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97&description=%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%0a%e4%b8%8a%e4%b8%80%e7%af%87-%e6%b6%88%e5%8e%bb%e6%b3%95%0a%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97%28Matrices%20and%20Matrix%20Operations%29%20%e5%ae%9a%e7%be%a9%e8%88%87%e8%a1%a8%e7%a4%ba%e6%b3%95%20%e7%9f%a9%e9%99%a3%e6%98%af%e4%b8%80%e5%a0%86%e6%95%b8%e5%ad%97%e7%9a%84%e7%9f%a9%e5%bd%a2%e9%99%a3%e5%88%97%ef%bc%8c%e9%99%a3%e5%88%97%e4%b8%ad%e7%9a%84%e6%95%b8%e5%ad%97%e7%a8%b1%e7%82%ba%e7%9f%a9%e9%99%a3%e7%9a%84%e5%85%83%e7%b4%a0%28entry%29%e3%80%82%20%e4%b8%80%e5%80%8b%20%24m%20%5ctimes%20n%24%20%e7%9a%84%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%8f%af%e8%a1%a8%e7%a4%ba%e7%82%ba%20%24A%20%3d%20%5cbegin%7bbmatrix%7d%20a_%7b11%7d%20%26amp%3b%20a_%7b12%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b1n%7d%20%5c%5c%20a_%7b21%7d%20%26amp%3b%20a_%7b22%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b2n%7d%20%5c%5c%20%5cvdots%20%26amp%3b%20%5cvdots%20%26amp%3b%20%5cddots%20%26amp%3b%20%5cvdots%20%5c%5c%20a_%7bm1%7d%20%26amp%3b%20a_%7bm2%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7bmn%7d%20%5cend%7bbmatrix%7d%24%e3%80%82%20%e4%b9%9f%e5%8f%af%e5%af%ab%e6%88%90%20%24%5ba_%7bij%7d%5d_%7bm%20%5ctimes%20n%7d%24%e3%80%82%20%24a_%7bij%7d%24%20%e8%a1%a8%e7%82%ba%e7%9f%a9%e9%99%a3%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e3%80%82%20%e5%8a%a0%e6%b8%9b%e6%b3%95%20%e5%a6%82%e6%9e%9c%e7%9f%a9%e9%99%a3%e5%a4%a7%e5%b0%8f%e7%9b%b8%e5%90%8c%ef%bc%8c%e5%89%87%e5%8f%af%e9%80%b2%e8%a1%8c%e5%8a%a0%e6%b8%9b%e6%b3%95%ef%bc%8c%e5%b0%87%e5%b0%8d%e6%87%89%e4%bd%8d%e7%bd%ae%e7%9a%84%e5%85%83%e7%b4%a0%e7%9b%b8%e5%8a%a0%e6%b8%9b%e3%80%82%20%e4%b9%98%e6%b3%95%20%e5%a6%82%e6%9e%9c%e6%98%af%e7%b4%94%e9%87%8f%e4%b9%98%e4%b8%8a%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%e5%b0%87%e7%9f%a9%e9%99%a3%e4%b8%ad%e7%9a%84%e6%af%8f%e5%80%8b%e5%85%83%e7%b4%a0%e4%b9%98%e4%b8%8a%e7%b4%94%e9%87%8f%e3%80%82%20%e5%a6%82%e6%9e%9c%e6%98%af%20%24A%24%20%e6%98%af%20%24m%20%5ctimes%20r%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24B%24%20%e6%98%af%20%24r%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%20%24AB%24%20%e6%98%af%20%24m%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e7%82%ba%20%24%20%5csum_%7bk%3d1%7d%5er%20a_%7bik%7db_%7bkj%7d%24%e3%80%82%20%e6%8f%9b%e5%8f%a5%e8%a9%b1%e8%aa%aa%ef%bc%8c%20%24AB%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%20%24%20%3d%20A%20%24%20%5b%20%24B%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%5d%ef%bc%8c%20%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%20%24%20%3d%20%24%20%5b%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%5d%20%24B%24%e3%80%82%20%e5%a6%82%e6%9e%9c%20%24A%24%20%e8%88%87%20%24B%24%20%e7%9a%84%e5%a4%a7%e5%b0%8f%e4%b8%8d%e6%98%af%e5%a6%82%e5%90%8c%20%24m%20%5ctimes%20r%24%20%e8%88%87%20%24r%20%5ctimes%20n%20%24%20%e7%9a%84%e5%bd%a2%e5%bc%8f%ef%bc%8c%e5%89%87%24AB%24%e4%b8%8d%e5%ad%98%e5%9c%a8%e3%80%82%20%e7%b7%9a%e6%80%a7%e7%b3%bb%e7%b5%b1%e7%9a%84%e7%9f%a9%e9%99%a3%e5%bd%a2%e5%bc%8f%20%24%24%5cbegin%7barray%7d%7b%7d%20a_%7b11%7dx_1%20%2b%20a_%7b12%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b1n%7dx_n%20%3d%20b_1%20%5c%5c%20a_%7b21%7dx_1%20%2b%20a_%7b22%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b2n%7dx_n%20%3d%20b_2%20%5c%5c%20%5cvdots%20%5c%5c%20a_%7bm1%7dx_1%20%2b%20a_%7bm2%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7bmn%7dx_n%20%3d%20b_m%5cend%7barray%7d%24%24" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fLinearAlgebra%2flinear-matrix-operations%2f&name=%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97&description=%3cp%3e%3ca%20href%3d%22%2fposts%2fLinearAlgebra%2findex%2f%22%3e%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22%2fposts%2fLinearAlgebra%2flinear-elimination-methods%2f%22%3e%e4%b8%8a%e4%b8%80%e7%af%87-%e6%b6%88%e5%8e%bb%e6%b3%95%3c%2fa%3e%3c%2fp%3e%0a%3ch1%20id%3d%22%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97matrices-and-matrix-operations%22%3e%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97%28Matrices%20and%20Matrix%20Operations%29%3c%2fh1%3e%0a%3ch2%20id%3d%22%e5%ae%9a%e7%be%a9%e8%88%87%e8%a1%a8%e7%a4%ba%e6%b3%95%22%3e%e5%ae%9a%e7%be%a9%e8%88%87%e8%a1%a8%e7%a4%ba%e6%b3%95%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e7%9f%a9%e9%99%a3%e6%98%af%e4%b8%80%e5%a0%86%e6%95%b8%e5%ad%97%e7%9a%84%e7%9f%a9%e5%bd%a2%e9%99%a3%e5%88%97%ef%bc%8c%e9%99%a3%e5%88%97%e4%b8%ad%e7%9a%84%e6%95%b8%e5%ad%97%e7%a8%b1%e7%82%ba%e7%9f%a9%e9%99%a3%e7%9a%84%e5%85%83%e7%b4%a0%28entry%29%e3%80%82%3c%2fli%3e%0a%3cli%3e%e4%b8%80%e5%80%8b%20%24m%20%5ctimes%20n%24%20%e7%9a%84%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%8f%af%e8%a1%a8%e7%a4%ba%e7%82%ba%20%24A%20%3d%20%5cbegin%7bbmatrix%7d%20a_%7b11%7d%20%26amp%3b%20a_%7b12%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b1n%7d%20%5c%5c%20a_%7b21%7d%20%26amp%3b%20a_%7b22%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b2n%7d%20%5c%5c%20%5cvdots%20%26amp%3b%20%5cvdots%20%26amp%3b%20%5cddots%20%26amp%3b%20%5cvdots%20%5c%5c%20a_%7bm1%7d%20%26amp%3b%20a_%7bm2%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7bmn%7d%20%5cend%7bbmatrix%7d%24%e3%80%82%3c%2fli%3e%0a%3cli%3e%e4%b9%9f%e5%8f%af%e5%af%ab%e6%88%90%20%24%5ba_%7bij%7d%5d_%7bm%20%5ctimes%20n%7d%24%e3%80%82%3c%2fli%3e%0a%3cli%3e%24a_%7bij%7d%24%20%e8%a1%a8%e7%82%ba%e7%9f%a9%e9%99%a3%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e5%8a%a0%e6%b8%9b%e6%b3%95%22%3e%e5%8a%a0%e6%b8%9b%e6%b3%95%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e7%9f%a9%e9%99%a3%e5%a4%a7%e5%b0%8f%e7%9b%b8%e5%90%8c%ef%bc%8c%e5%89%87%e5%8f%af%e9%80%b2%e8%a1%8c%e5%8a%a0%e6%b8%9b%e6%b3%95%ef%bc%8c%e5%b0%87%e5%b0%8d%e6%87%89%e4%bd%8d%e7%bd%ae%e7%9a%84%e5%85%83%e7%b4%a0%e7%9b%b8%e5%8a%a0%e6%b8%9b%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e4%b9%98%e6%b3%95%22%3e%e4%b9%98%e6%b3%95%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e6%98%af%e7%b4%94%e9%87%8f%e4%b9%98%e4%b8%8a%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%e5%b0%87%e7%9f%a9%e9%99%a3%e4%b8%ad%e7%9a%84%e6%af%8f%e5%80%8b%e5%85%83%e7%b4%a0%e4%b9%98%e4%b8%8a%e7%b4%94%e9%87%8f%e3%80%82%3c%2fli%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e6%98%af%20%24A%24%20%e6%98%af%20%24m%20%5ctimes%20r%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24B%24%20%e6%98%af%20%24r%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%20%24AB%24%20%e6%98%af%20%24m%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e7%82%ba%20%24%20%5csum_%7bk%3d1%7d%5er%20a_%7bik%7db_%7bkj%7d%24%e3%80%82%3c%2fli%3e%0a%3cli%3e%e6%8f%9b%e5%8f%a5%e8%a9%b1%e8%aa%aa%ef%bc%8c%0a%3cul%3e%0a%3cli%3e%24AB%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%20%24%20%3d%20A%20%24%20%5b%20%24B%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%5d%ef%bc%8c%3c%2fli%3e%0a%3cli%3e%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%20%24%20%3d%20%24%20%5b%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%5d%20%24B%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%20%24A%24%20%e8%88%87%20%24B%24%20%e7%9a%84%e5%a4%a7%e5%b0%8f%e4%b8%8d%e6%98%af%e5%a6%82%e5%90%8c%20%24m%20%5ctimes%20r%24%20%e8%88%87%20%24r%20%5ctimes%20n%20%24%20%e7%9a%84%e5%bd%a2%e5%bc%8f%ef%bc%8c%e5%89%87%24AB%24%e4%b8%8d%e5%ad%98%e5%9c%a8%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e7%b7%9a%e6%80%a7%e7%b3%bb%e7%b5%b1%e7%9a%84%e7%9f%a9%e9%99%a3%e5%bd%a2%e5%bc%8f%22%3e%e7%b7%9a%e6%80%a7%e7%b3%bb%e7%b5%b1%e7%9a%84%e7%9f%a9%e9%99%a3%e5%bd%a2%e5%bc%8f%3c%2fh2%3e%0a%3cp%3e%24%24%5cbegin%7barray%7d%7b%7d%20a_%7b11%7dx_1%20%2b%20a_%7b12%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b1n%7dx_n%20%3d%20b_1%20%5c%5c%20a_%7b21%7dx_1%20%2b%20a_%7b22%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b2n%7dx_n%20%3d%20b_2%20%5c%5c%20%5cvdots%20%5c%5c%20a_%7bm1%7dx_1%20%2b%20a_%7bm2%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7bmn%7dx_n%20%3d%20b_m%5cend%7barray%7d%24%24%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -505,7 +525,7 @@
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fLinearAlgebra%2flinear-matrix-operations%2f&name=%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97&description=%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%0a%e4%b8%8a%e4%b8%80%e7%af%87-%e6%b6%88%e5%8e%bb%e6%b3%95%0a%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97%28Matrices%20and%20Matrix%20Operations%29%20%e5%ae%9a%e7%be%a9%e8%88%87%e8%a1%a8%e7%a4%ba%e6%b3%95%20%e7%9f%a9%e9%99%a3%e6%98%af%e4%b8%80%e5%a0%86%e6%95%b8%e5%ad%97%e7%9a%84%e7%9f%a9%e5%bd%a2%e9%99%a3%e5%88%97%ef%bc%8c%e9%99%a3%e5%88%97%e4%b8%ad%e7%9a%84%e6%95%b8%e5%ad%97%e7%a8%b1%e7%82%ba%e7%9f%a9%e9%99%a3%e7%9a%84%e5%85%83%e7%b4%a0%28entry%29%e3%80%82%20%e4%b8%80%e5%80%8b%20%24m%20%5ctimes%20n%24%20%e7%9a%84%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%8f%af%e8%a1%a8%e7%a4%ba%e7%82%ba%20%24A%20%3d%20%5cbegin%7bbmatrix%7d%20a_%7b11%7d%20%26amp%3b%20a_%7b12%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b1n%7d%20%5c%5c%20a_%7b21%7d%20%26amp%3b%20a_%7b22%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b2n%7d%20%5c%5c%20%5cvdots%20%26amp%3b%20%5cvdots%20%26amp%3b%20%5cddots%20%26amp%3b%20%5cvdots%20%5c%5c%20a_%7bm1%7d%20%26amp%3b%20a_%7bm2%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7bmn%7d%20%5cend%7bbmatrix%7d%24%e3%80%82%20%e4%b9%9f%e5%8f%af%e5%af%ab%e6%88%90%20%24%5ba_%7bij%7d%5d_%7bm%20%5ctimes%20n%7d%24%e3%80%82%20%24a_%7bij%7d%24%20%e8%a1%a8%e7%82%ba%e7%9f%a9%e9%99%a3%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e3%80%82%20%e5%8a%a0%e6%b8%9b%e6%b3%95%20%e5%a6%82%e6%9e%9c%e7%9f%a9%e9%99%a3%e5%a4%a7%e5%b0%8f%e7%9b%b8%e5%90%8c%ef%bc%8c%e5%89%87%e5%8f%af%e9%80%b2%e8%a1%8c%e5%8a%a0%e6%b8%9b%e6%b3%95%ef%bc%8c%e5%b0%87%e5%b0%8d%e6%87%89%e4%bd%8d%e7%bd%ae%e7%9a%84%e5%85%83%e7%b4%a0%e7%9b%b8%e5%8a%a0%e6%b8%9b%e3%80%82%20%e4%b9%98%e6%b3%95%20%e5%a6%82%e6%9e%9c%e6%98%af%e7%b4%94%e9%87%8f%e4%b9%98%e4%b8%8a%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%e5%b0%87%e7%9f%a9%e9%99%a3%e4%b8%ad%e7%9a%84%e6%af%8f%e5%80%8b%e5%85%83%e7%b4%a0%e4%b9%98%e4%b8%8a%e7%b4%94%e9%87%8f%e3%80%82%20%e5%a6%82%e6%9e%9c%e6%98%af%20%24A%24%20%e6%98%af%20%24m%20%5ctimes%20r%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24B%24%20%e6%98%af%20%24r%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%20%24AB%24%20%e6%98%af%20%24m%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e7%82%ba%20%24%20%5csum_%7bk%3d1%7d%5er%20a_%7bik%7db_%7bkj%7d%24%e3%80%82%20%e6%8f%9b%e5%8f%a5%e8%a9%b1%e8%aa%aa%ef%bc%8c%20%24AB%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%20%24%20%3d%20A%20%24%20%5b%20%24B%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%5d%ef%bc%8c%20%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%20%24%20%3d%20%24%20%5b%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%5d%20%24B%24%e3%80%82%20%e5%a6%82%e6%9e%9c%20%24A%24%20%e8%88%87%20%24B%24%20%e7%9a%84%e5%a4%a7%e5%b0%8f%e4%b8%8d%e6%98%af%e5%a6%82%e5%90%8c%20%24m%20%5ctimes%20r%24%20%e8%88%87%20%24r%20%5ctimes%20n%20%24%20%e7%9a%84%e5%bd%a2%e5%bc%8f%ef%bc%8c%e5%89%87%24AB%24%e4%b8%8d%e5%ad%98%e5%9c%a8%e3%80%82%20%e7%b7%9a%e6%80%a7%e7%b3%bb%e7%b5%b1%e7%9a%84%e7%9f%a9%e9%99%a3%e5%bd%a2%e5%bc%8f%20%24%24%5cbegin%7barray%7d%7b%7d%20a_%7b11%7dx_1%20%2b%20a_%7b12%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b1n%7dx_n%20%3d%20b_1%20%5c%5c%20a_%7b21%7dx_1%20%2b%20a_%7b22%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b2n%7dx_n%20%3d%20b_2%20%5c%5c%20%5cvdots%20%5c%5c%20a_%7bm1%7dx_1%20%2b%20a_%7bm2%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7bmn%7dx_n%20%3d%20b_m%5cend%7barray%7d%24%24" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fLinearAlgebra%2flinear-matrix-operations%2f&name=%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97&description=%3cp%3e%3ca%20href%3d%22%2fposts%2fLinearAlgebra%2findex%2f%22%3e%e7%b7%9a%e6%80%a7%e4%bb%a3%e6%95%b8%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22%2fposts%2fLinearAlgebra%2flinear-elimination-methods%2f%22%3e%e4%b8%8a%e4%b8%80%e7%af%87-%e6%b6%88%e5%8e%bb%e6%b3%95%3c%2fa%3e%3c%2fp%3e%0a%3ch1%20id%3d%22%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97matrices-and-matrix-operations%22%3e%e7%9f%a9%e9%99%a3%e8%88%87%e7%9f%a9%e9%99%a3%e9%81%8b%e7%ae%97%28Matrices%20and%20Matrix%20Operations%29%3c%2fh1%3e%0a%3ch2%20id%3d%22%e5%ae%9a%e7%be%a9%e8%88%87%e8%a1%a8%e7%a4%ba%e6%b3%95%22%3e%e5%ae%9a%e7%be%a9%e8%88%87%e8%a1%a8%e7%a4%ba%e6%b3%95%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e7%9f%a9%e9%99%a3%e6%98%af%e4%b8%80%e5%a0%86%e6%95%b8%e5%ad%97%e7%9a%84%e7%9f%a9%e5%bd%a2%e9%99%a3%e5%88%97%ef%bc%8c%e9%99%a3%e5%88%97%e4%b8%ad%e7%9a%84%e6%95%b8%e5%ad%97%e7%a8%b1%e7%82%ba%e7%9f%a9%e9%99%a3%e7%9a%84%e5%85%83%e7%b4%a0%28entry%29%e3%80%82%3c%2fli%3e%0a%3cli%3e%e4%b8%80%e5%80%8b%20%24m%20%5ctimes%20n%24%20%e7%9a%84%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%8f%af%e8%a1%a8%e7%a4%ba%e7%82%ba%20%24A%20%3d%20%5cbegin%7bbmatrix%7d%20a_%7b11%7d%20%26amp%3b%20a_%7b12%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b1n%7d%20%5c%5c%20a_%7b21%7d%20%26amp%3b%20a_%7b22%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7b2n%7d%20%5c%5c%20%5cvdots%20%26amp%3b%20%5cvdots%20%26amp%3b%20%5cddots%20%26amp%3b%20%5cvdots%20%5c%5c%20a_%7bm1%7d%20%26amp%3b%20a_%7bm2%7d%20%26amp%3b%20%5ccdots%20%26amp%3b%20a_%7bmn%7d%20%5cend%7bbmatrix%7d%24%e3%80%82%3c%2fli%3e%0a%3cli%3e%e4%b9%9f%e5%8f%af%e5%af%ab%e6%88%90%20%24%5ba_%7bij%7d%5d_%7bm%20%5ctimes%20n%7d%24%e3%80%82%3c%2fli%3e%0a%3cli%3e%24a_%7bij%7d%24%20%e8%a1%a8%e7%82%ba%e7%9f%a9%e9%99%a3%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e5%8a%a0%e6%b8%9b%e6%b3%95%22%3e%e5%8a%a0%e6%b8%9b%e6%b3%95%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e7%9f%a9%e9%99%a3%e5%a4%a7%e5%b0%8f%e7%9b%b8%e5%90%8c%ef%bc%8c%e5%89%87%e5%8f%af%e9%80%b2%e8%a1%8c%e5%8a%a0%e6%b8%9b%e6%b3%95%ef%bc%8c%e5%b0%87%e5%b0%8d%e6%87%89%e4%bd%8d%e7%bd%ae%e7%9a%84%e5%85%83%e7%b4%a0%e7%9b%b8%e5%8a%a0%e6%b8%9b%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e4%b9%98%e6%b3%95%22%3e%e4%b9%98%e6%b3%95%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e6%98%af%e7%b4%94%e9%87%8f%e4%b9%98%e4%b8%8a%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%e5%b0%87%e7%9f%a9%e9%99%a3%e4%b8%ad%e7%9a%84%e6%af%8f%e5%80%8b%e5%85%83%e7%b4%a0%e4%b9%98%e4%b8%8a%e7%b4%94%e9%87%8f%e3%80%82%3c%2fli%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e6%98%af%20%24A%24%20%e6%98%af%20%24m%20%5ctimes%20r%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24B%24%20%e6%98%af%20%24r%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%e5%89%87%20%24AB%24%20%e6%98%af%20%24m%20%5ctimes%20n%24%20%e7%9f%a9%e9%99%a3%ef%bc%8c%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%e7%ac%ac%20%24j%24%20%e8%a1%8c%e7%9a%84%e5%85%83%e7%b4%a0%e7%82%ba%20%24%20%5csum_%7bk%3d1%7d%5er%20a_%7bik%7db_%7bkj%7d%24%e3%80%82%3c%2fli%3e%0a%3cli%3e%e6%8f%9b%e5%8f%a5%e8%a9%b1%e8%aa%aa%ef%bc%8c%0a%3cul%3e%0a%3cli%3e%24AB%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%20%24%20%3d%20A%20%24%20%5b%20%24B%24%20%e7%9a%84%e7%ac%ac%20%24j%24%20%e8%a1%8c%5d%ef%bc%8c%3c%2fli%3e%0a%3cli%3e%24AB%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%20%24%20%3d%20%24%20%5b%20%24A%24%20%e7%9a%84%e7%ac%ac%20%24i%24%20%e5%88%97%5d%20%24B%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%20%24A%24%20%e8%88%87%20%24B%24%20%e7%9a%84%e5%a4%a7%e5%b0%8f%e4%b8%8d%e6%98%af%e5%a6%82%e5%90%8c%20%24m%20%5ctimes%20r%24%20%e8%88%87%20%24r%20%5ctimes%20n%20%24%20%e7%9a%84%e5%bd%a2%e5%bc%8f%ef%bc%8c%e5%89%87%24AB%24%e4%b8%8d%e5%ad%98%e5%9c%a8%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e7%b7%9a%e6%80%a7%e7%b3%bb%e7%b5%b1%e7%9a%84%e7%9f%a9%e9%99%a3%e5%bd%a2%e5%bc%8f%22%3e%e7%b7%9a%e6%80%a7%e7%b3%bb%e7%b5%b1%e7%9a%84%e7%9f%a9%e9%99%a3%e5%bd%a2%e5%bc%8f%3c%2fh2%3e%0a%3cp%3e%24%24%5cbegin%7barray%7d%7b%7d%20a_%7b11%7dx_1%20%2b%20a_%7b12%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b1n%7dx_n%20%3d%20b_1%20%5c%5c%20a_%7b21%7dx_1%20%2b%20a_%7b22%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7b2n%7dx_n%20%3d%20b_2%20%5c%5c%20%5cvdots%20%5c%5c%20a_%7bm1%7dx_1%20%2b%20a_%7bm2%7dx_2%20%2b%20%5ccdots%20%2b%20a_%7bmn%7dx_n%20%3d%20b_m%5cend%7barray%7d%24%24%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>

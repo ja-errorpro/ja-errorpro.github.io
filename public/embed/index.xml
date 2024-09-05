@@ -12,7 +12,7 @@
       <link>http://localhost:1313/embed/rickroll/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/embed/rickroll/</guid>
-      <description>&#xD;</description>
+      <description>&lt;div&gt;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

