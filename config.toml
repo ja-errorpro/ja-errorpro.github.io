@@ -57,6 +57,11 @@ weight = 6
     style = "dracula"
     tabWidth = 4
 
+[config]
+    [config.services]
+    [config.services.googleAnalytics]
+      id = "G-LP899FV1TS"
+
 [services]
     [services.googleAnalytics]
       id = "G-LP899FV1TS"
