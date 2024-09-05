@@ -1,6 +1,6 @@
 ---
 title: "【HTB Machine】Valentine"
-date: 2024-03-05
+date: 2024-09-05
 tags:
   - ctf
 url: "/posts/HTB/Valentine/"
