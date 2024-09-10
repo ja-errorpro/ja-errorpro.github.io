@@ -6,8 +6,15 @@
     <description>Recent content in Posts on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
-    <lastBuildDate>Thu, 05 Sep 2024 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【HTB Machine】Curling</title>
+      <link>http://localhost:1313/posts/HTB/Curling/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/HTB/Curling/</guid>
+      <description>&lt;h1 id=&#34;curling&#34;&gt;Curling&lt;/h1&gt;&#xA;&lt;h2 id=&#34;掃描&#34;&gt;掃描&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image1.png&#34; alt=&#34;image1&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;web&#34;&gt;Web&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image2.png&#34; alt=&#34;image2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;使用 Joomla CMS&lt;/p&gt;&#xA;&lt;p&gt;從 Source Code 看到 &lt;code&gt;secret.txt&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image3.png&#34; alt=&#34;image3&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;從第一篇文推測 Super User 名稱是 &lt;code&gt;Floris&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image4.png&#34; alt=&#34;image4&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;&amp;lt;url&amp;gt;/secret.txt&lt;/code&gt; 有密碼&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image5.png&#34; alt=&#34;image5&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;&amp;lt;url&amp;gt;/administrator&lt;/code&gt; 登入&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image6.png&#34; alt=&#34;image6&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在 template 新增利用 SSTI RCE&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image7.png&#34; alt=&#34;image7&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image8.png&#34; alt=&#34;image8&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在家目錄有三個東西&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb/curling/image9.png&#34; alt=&#34;image9&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>【HTB Machine】Valentine</title>
       <link>http://localhost:1313/posts/HTB/Valentine/</link>
