@@ -22,4 +22,7 @@
 &lt;li>&lt;code>&amp;lt;&amp;lt;&lt;/code> - 反向縮排&lt;/li>
 &lt;/ul>
 &lt;h3 id="編輯模式">編輯模式&lt;/h3>
-&lt;p>在普通模式按下 &lt;code>i(Insert), o(Open), a(Append)&lt;/code> 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 &lt;code>-- INSERT --&lt;/code>，即可對檔案編輯&lt;/p></description></item></channel></rss>
+&lt;p>在普通模式按下 &lt;code>i(Insert), o(Open), a(Append)&lt;/code> 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 &lt;code>-- INSERT --&lt;/code>，即可對檔案編輯&lt;/p>
+&lt;p>按下 &lt;code>Esc&lt;/code> 即可回到普通模式，此時 &lt;code>-- INSERT --&lt;/code> 會消失&lt;/p>
+&lt;h3 id="視覺選取模式">視覺(選取)模式&lt;/h3>
+&lt;p>在普通模式按下 &lt;code>v&lt;/code> 即可進入視覺模式，此時可以看到視窗最下方出現 &lt;code>-- VISUAL --&lt;/code>，可以使用方向鍵選取文字，並使用 &lt;code>w&lt;/code> 選取下一個單字的開頭或 &lt;code>$&lt;/code> 選取後面整行。&lt;/p></description></item></channel></rss>

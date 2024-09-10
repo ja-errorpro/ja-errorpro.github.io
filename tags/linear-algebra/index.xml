@@ -57,4 +57,8 @@ $ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; a \\ 0 &amp;amp; 1 &amp;am
 &lt;p>將 $n$ 個變數分別表示為 $x_1, x_2, \cdots, x_n$，並將 $n$ 個係數分別表示為 $a_1, a_2, \cdots, a_n$，&lt;/p>
 &lt;p>則 $n$ 維線性方程式可表示為 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)&lt;/p>
 &lt;p>或是 $ \sum^n_{i=1} a_i x_i = c$。&lt;/p>
-&lt;p>如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的&lt;strong>齊次線性方程式&lt;/strong>。&lt;/p></description></item></channel></rss>
+&lt;p>如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的&lt;strong>齊次線性方程式&lt;/strong>。&lt;/p>
+&lt;hr>
+&lt;h1 id="線性方程系統">線性方程系統&lt;/h1>
+&lt;h2 id="線性方程系統-1">線性方程系統&lt;/h2>
+&lt;p>有限個數的線性方程式集合，稱為線性方程系統(system of linear equations)或線性系統(linear system)。&lt;/p></description></item></channel></rss>

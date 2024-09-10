@@ -21,7 +21,44 @@
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi">Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">import&lt;/span> sqlite3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>conn &lt;span style="color:#ff79c6">=&lt;/span> sqlite3&lt;span style="color:#ff79c6">.&lt;/span>connect(&lt;span style="color:#f1fa8c">&amp;#39;example.db&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>當此程式執行時，如果與程式同一個資料夾下有 &lt;code>example.db&lt;/code> 檔案，則會連線到該檔案，如果沒有，則會建立一個新的 &lt;code>example.db&lt;/code> 檔案。&lt;/p>
+&lt;p>並且 conn 將被建立為 Connection 物件表示資料庫。&lt;/p>
+&lt;h1 id="建立表格">建立表格&lt;/h1>
+&lt;p>在建立表格前，需要一個 Cursor 來執行 SQL 各種指令。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>cur &lt;span style="color:#ff79c6">=&lt;/span> conn&lt;span style="color:#ff79c6">.&lt;/span>cursor()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>建立表格的語法如下：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">CREATE&lt;/span> &lt;span style="color:#ff79c6">TABLE&lt;/span> 表格名稱 (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 第一欄名稱 資料類型,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 第二欄名稱 資料類型,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 第三欄名稱 資料類型,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ....
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在 SQLite 中，資料類型有以下幾種：&lt;/p></description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi">Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1>
 &lt;p>支援更多操作如斜線指令、按鈕、選單，且簡單易懂&lt;/p>
 &lt;h1 id="簡介">簡介&lt;/h1>
 &lt;p>經過大量搜尋資料，發現dcpi的介紹特別少，
@@ -45,7 +82,35 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="quick-start">Quick Start&lt;/h1>
-&lt;p>根據這份&lt;a href="https://interactionspy.readthedocs.io/en/latest/quickstart.html">API文件&lt;/a>&lt;/p></description></item><item><title>Python遊戲設計</title><link>https://ja-errorpro.codes/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/pythongame/</guid><description>&lt;!-- raw HTML omitted -->
+&lt;p>根據這份&lt;a href="https://interactionspy.readthedocs.io/en/latest/quickstart.html">API文件&lt;/a>&lt;/p>
+&lt;p>先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為&lt;code>bot.py&lt;/code>，
+並在DC的開發應用頁面創建好機器人&lt;/p>
+&lt;p>然後複製以下code，將&lt;code>your-bot-token&lt;/code>換成機器人的token，注意不要將token公開給別人。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">import&lt;/span> interactions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bot &lt;span style="color:#ff79c6">=&lt;/span> interactions&lt;span style="color:#ff79c6">.&lt;/span>Client(token&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;your-bot-token&amp;#34;&lt;/span>,intents&lt;span style="color:#ff79c6">=&lt;/span>interactions&lt;span style="color:#ff79c6">.&lt;/span>flags&lt;span style="color:#ff79c6">.&lt;/span>Intents&lt;span style="color:#ff79c6">.&lt;/span>ALL)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 啟動機器人&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bot&lt;span style="color:#ff79c6">.&lt;/span>start()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接著執行它&lt;/p></description></item><item><title>Python遊戲設計</title><link>https://ja-errorpro.codes/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/pythongame/</guid><description>&lt;!-- raw HTML omitted -->
 &lt;h1 id="for-python遊戲設計">FOR Python遊戲設計&lt;/h1>
 &lt;p>檔案庫: &lt;a href="https://drive.google.com/drive/folders/1MlQkB7COIBu_EZDFaYExBuVVb_FxZpiW?usp=sharing">Here&lt;/a>&lt;/p>
 &lt;p>Python程式列表(全自寫): &lt;a href="./pythonprograms/list">LIST&lt;/a>&lt;/p>
@@ -64,4 +129,16 @@
 &lt;p>&lt;strong>&lt;!-- raw HTML omitted -->Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted -->&lt;/strong>&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
-&lt;p>需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code>$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code>)&lt;/p></description></item></channel></rss>
+&lt;p>需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code>$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code>)&lt;/p>
+&lt;/blockquote>
+&lt;p>安裝方式: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_install.html">Here&lt;/a>&lt;/p>
+&lt;p>設定: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_config.html">here&lt;/a>&lt;/p>
+&lt;p>安裝Cocos2d: Files&amp;gt;Setting&amp;gt;Project: Inter..&amp;gt;(+)&amp;gt;搜尋cocos2d&amp;gt;安裝&lt;/p>
+&lt;p>學程式的技巧: 先抄再讀 不懂可Google&lt;/p>
+&lt;h4 id="vim">Vim:&lt;/h4>
+&lt;p>分為&lt;strong>命令模式,插入模式,底線命令模式,視覺模式&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>命令模式&lt;/strong>: 為預設模式,在任何模式中按下Esc即可到此模式,可按下某些鍵來切換模式&lt;/p>
+&lt;p>&lt;strong>插入模式&lt;/strong>: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&lt;/p>
+&lt;p>&lt;strong>底線命令模式&lt;/strong>: 切換方式:按下:,可輸入指令操作內容,&lt;/p>
+&lt;p>離開: :q&lt;/p>
+&lt;p>強制離開: :q!&lt;/p></description></item></channel></rss>
