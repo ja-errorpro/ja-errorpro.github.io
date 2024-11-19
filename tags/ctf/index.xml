@@ -2419,96 +2419,96 @@ combine the AI and CTI applications.&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">工具名稱&lt;/th>
- &lt;th style="text-align: left">種類&lt;/th>
- &lt;th style="text-align: left">說明&lt;/th>
+ &lt;th>工具名稱&lt;/th>
+ &lt;th>種類&lt;/th>
+ &lt;th>說明&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://ja-errorpro.codes/posts/2023/nmap">nmap&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">弱點掃描&lt;/td>
+ &lt;td>&lt;a href="https://ja-errorpro.codes/posts/2023/nmap">nmap&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>弱點掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/maurosoria/dirsearch">dirsearch&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">網站目錄掃描&lt;/td>
+ &lt;td>&lt;a href="https://github.com/maurosoria/dirsearch">dirsearch&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>網站目錄掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/sullo/nikto">nikto&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">Web server漏洞掃描&lt;/td>
+ &lt;td>&lt;a href="https://github.com/sullo/nikto">nikto&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>Web server漏洞掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://tools.kali.org/web-applications/dirb">dirb&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">網站目錄掃描&lt;/td>
+ &lt;td>&lt;a href="https://tools.kali.org/web-applications/dirb">dirb&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>網站目錄掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/sqlmapproject/sqlmap">sqlmap&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">SQL Injection 測試&lt;/td>
+ &lt;td>&lt;a href="https://github.com/sqlmapproject/sqlmap">sqlmap&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>SQL Injection 測試&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/wpscanteam/wpscan">wpscan&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">WordPress漏洞掃描&lt;/td>
+ &lt;td>&lt;a href="https://github.com/wpscanteam/wpscan">wpscan&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>WordPress漏洞掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://gchq.github.io/CyberChef/">CyberChef&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">線上多功能解 Code 工具&lt;/td>
+ &lt;td>&lt;a href="https://gchq.github.io/CyberChef/">CyberChef&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>線上多功能解 Code 工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://portswigger.net/burp">Burp Suite&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">Web 測試工具&lt;/td>
+ &lt;td>&lt;a href="https://portswigger.net/burp">Burp Suite&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>Web 測試工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://www.wireshark.org/">WireShark&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">封包分析&lt;/td>
+ &lt;td>&lt;a href="https://www.wireshark.org/">WireShark&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>封包分析&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://ghidra-sre.org/">Ghidra&lt;/a>&lt;/td>
- &lt;td style="text-align: left">reverse&lt;/td>
- &lt;td style="text-align: left">逆向工具&lt;/td>
+ &lt;td>&lt;a href="https://ghidra-sre.org/">Ghidra&lt;/a>&lt;/td>
+ &lt;td>reverse&lt;/td>
+ &lt;td>逆向工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://www.hex-rays.com/products/ida/">IDA Pro&lt;/a>&lt;/td>
- &lt;td style="text-align: left">reverse&lt;/td>
- &lt;td style="text-align: left">逆向工具&lt;/td>
+ &lt;td>&lt;a href="https://www.hex-rays.com/products/ida/">IDA Pro&lt;/a>&lt;/td>
+ &lt;td>reverse&lt;/td>
+ &lt;td>逆向工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">crypto&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>crypto&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">stego&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>stego&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">misc&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>misc&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">forensics&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>forensics&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">android&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>android&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">windows&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>windows&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/nmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/nmap/</guid><description>&lt;h1 id="nmap">Nmap&lt;/h1>
@@ -2681,27 +2681,27 @@ combine the AI and CTI applications.&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">&lt;/th>
- &lt;th style="text-align: left">前置處理 (Preprocessing)&lt;/th>
- &lt;th style="text-align: left">-&amp;gt; 編譯 (Compilation)&lt;/th>
- &lt;th style="text-align: left">-&amp;gt; 組譯 (Assembly)&lt;/th>
- &lt;th style="text-align: left">-&amp;gt; 連結 (Linking)&lt;/th>
+ &lt;th>&lt;/th>
+ &lt;th>前置處理 (Preprocessing)&lt;/th>
+ &lt;th>-&amp;gt; 編譯 (Compilation)&lt;/th>
+ &lt;th>-&amp;gt; 組譯 (Assembly)&lt;/th>
+ &lt;th>-&amp;gt; 連結 (Linking)&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">檔案副檔名&lt;/td>
- &lt;td style="text-align: left">(.i)&lt;/td>
- &lt;td style="text-align: left">(.s)&lt;/td>
- &lt;td style="text-align: left">(.o)&lt;/td>
- &lt;td style="text-align: left">(.out)&lt;/td>
+ &lt;td>檔案副檔名&lt;/td>
+ &lt;td>(.i)&lt;/td>
+ &lt;td>(.s)&lt;/td>
+ &lt;td>(.o)&lt;/td>
+ &lt;td>(.out)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">指令參數&lt;/td>
- &lt;td style="text-align: left">-E&lt;/td>
- &lt;td style="text-align: left">-S&lt;/td>
- &lt;td style="text-align: left">-c&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>指令參數&lt;/td>
+ &lt;td>-E&lt;/td>
+ &lt;td>-S&lt;/td>
+ &lt;td>-c&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -2987,81 +2987,81 @@ combine the AI and CTI applications.&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">指令&lt;/th>
- &lt;th style="text-align: left">簡寫&lt;/th>
- &lt;th style="text-align: left">簡述&lt;/th>
+ &lt;th>指令&lt;/th>
+ &lt;th>簡寫&lt;/th>
+ &lt;th>簡述&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">help&lt;/td>
- &lt;td style="text-align: left">h&lt;/td>
- &lt;td style="text-align: left">查看指令說明&lt;/td>
+ &lt;td>help&lt;/td>
+ &lt;td>h&lt;/td>
+ &lt;td>查看指令說明&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">list&lt;/td>
- &lt;td style="text-align: left">l&lt;/td>
- &lt;td style="text-align: left">印出程式碼&lt;/td>
+ &lt;td>list&lt;/td>
+ &lt;td>l&lt;/td>
+ &lt;td>印出程式碼&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">file&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">開啟檔案&lt;/td>
+ &lt;td>file&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>開啟檔案&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">run&lt;/td>
- &lt;td style="text-align: left">r&lt;/td>
- &lt;td style="text-align: left">執行程式&lt;/td>
+ &lt;td>run&lt;/td>
+ &lt;td>r&lt;/td>
+ &lt;td>執行程式&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">kill&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">停止程式&lt;/td>
+ &lt;td>kill&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>停止程式&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">breakpoint&lt;/td>
- &lt;td style="text-align: left">b, bre, break&lt;/td>
- &lt;td style="text-align: left">設定斷點 &lt;code>ex: b 15&lt;/code>表示執行到第15行&lt;/td>
+ &lt;td>breakpoint&lt;/td>
+ &lt;td>b, bre, break&lt;/td>
+ &lt;td>設定斷點 &lt;code>ex: b 15&lt;/code>表示執行到第15行&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">continue&lt;/td>
- &lt;td style="text-align: left">c, cont&lt;/td>
- &lt;td style="text-align: left">繼續執行&lt;/td>
+ &lt;td>continue&lt;/td>
+ &lt;td>c, cont&lt;/td>
+ &lt;td>繼續執行&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">next&lt;/td>
- &lt;td style="text-align: left">n&lt;/td>
- &lt;td style="text-align: left">步過(遇到呼叫函式會將該函式當成一條指令執行)&lt;/td>
+ &lt;td>next&lt;/td>
+ &lt;td>n&lt;/td>
+ &lt;td>步過(遇到呼叫函式會將該函式當成一條指令執行)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">step&lt;/td>
- &lt;td style="text-align: left">s&lt;/td>
- &lt;td style="text-align: left">步入(遇到呼叫函式會進入函式一步一步執行)&lt;/td>
+ &lt;td>step&lt;/td>
+ &lt;td>s&lt;/td>
+ &lt;td>步入(遇到呼叫函式會進入函式一步一步執行)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">print&lt;/td>
- &lt;td style="text-align: left">p&lt;/td>
- &lt;td style="text-align: left">印出變數的值 &lt;code>ex: p num&lt;/code>&lt;/td>
+ &lt;td>print&lt;/td>
+ &lt;td>p&lt;/td>
+ &lt;td>印出變數的值 &lt;code>ex: p num&lt;/code>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">display&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">每次步過/入後印出變數值 &lt;code>ex: display num&lt;/code>&lt;/td>
+ &lt;td>display&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>每次步過/入後印出變數值 &lt;code>ex: display num&lt;/code>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">info&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">查看特定資訊 &lt;code>ex: info break&lt;/code>查看設了哪些斷點，不輸入參數可查詢指令&lt;/td>
+ &lt;td>info&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>查看特定資訊 &lt;code>ex: info break&lt;/code>查看設了哪些斷點，不輸入參數可查詢指令&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">quit&lt;/td>
- &lt;td style="text-align: left">q&lt;/td>
- &lt;td style="text-align: left">離開gdb，或按Ctrl+C&lt;/td>
+ &lt;td>quit&lt;/td>
+ &lt;td>q&lt;/td>
+ &lt;td>離開gdb，或按Ctrl+C&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&amp;lt;Click&amp;gt; Enter&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">執行上一條指令&lt;/td>
+ &lt;td>&amp;lt;Click&amp;gt; Enter&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>執行上一條指令&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>&lt;p>題目：&lt;/p>

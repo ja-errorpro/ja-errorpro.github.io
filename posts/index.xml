@@ -2419,96 +2419,96 @@ combine the AI and CTI applications.&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">工具名稱&lt;/th>
- &lt;th style="text-align: left">種類&lt;/th>
- &lt;th style="text-align: left">說明&lt;/th>
+ &lt;th>工具名稱&lt;/th>
+ &lt;th>種類&lt;/th>
+ &lt;th>說明&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://ja-errorpro.codes/posts/2023/nmap">nmap&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">弱點掃描&lt;/td>
+ &lt;td>&lt;a href="https://ja-errorpro.codes/posts/2023/nmap">nmap&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>弱點掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/maurosoria/dirsearch">dirsearch&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">網站目錄掃描&lt;/td>
+ &lt;td>&lt;a href="https://github.com/maurosoria/dirsearch">dirsearch&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>網站目錄掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/sullo/nikto">nikto&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">Web server漏洞掃描&lt;/td>
+ &lt;td>&lt;a href="https://github.com/sullo/nikto">nikto&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>Web server漏洞掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://tools.kali.org/web-applications/dirb">dirb&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">網站目錄掃描&lt;/td>
+ &lt;td>&lt;a href="https://tools.kali.org/web-applications/dirb">dirb&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>網站目錄掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/sqlmapproject/sqlmap">sqlmap&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">SQL Injection 測試&lt;/td>
+ &lt;td>&lt;a href="https://github.com/sqlmapproject/sqlmap">sqlmap&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>SQL Injection 測試&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://github.com/wpscanteam/wpscan">wpscan&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">WordPress漏洞掃描&lt;/td>
+ &lt;td>&lt;a href="https://github.com/wpscanteam/wpscan">wpscan&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>WordPress漏洞掃描&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://gchq.github.io/CyberChef/">CyberChef&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">線上多功能解 Code 工具&lt;/td>
+ &lt;td>&lt;a href="https://gchq.github.io/CyberChef/">CyberChef&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>線上多功能解 Code 工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://portswigger.net/burp">Burp Suite&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">Web 測試工具&lt;/td>
+ &lt;td>&lt;a href="https://portswigger.net/burp">Burp Suite&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>Web 測試工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://www.wireshark.org/">WireShark&lt;/a>&lt;/td>
- &lt;td style="text-align: left">web&lt;/td>
- &lt;td style="text-align: left">封包分析&lt;/td>
+ &lt;td>&lt;a href="https://www.wireshark.org/">WireShark&lt;/a>&lt;/td>
+ &lt;td>web&lt;/td>
+ &lt;td>封包分析&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://ghidra-sre.org/">Ghidra&lt;/a>&lt;/td>
- &lt;td style="text-align: left">reverse&lt;/td>
- &lt;td style="text-align: left">逆向工具&lt;/td>
+ &lt;td>&lt;a href="https://ghidra-sre.org/">Ghidra&lt;/a>&lt;/td>
+ &lt;td>reverse&lt;/td>
+ &lt;td>逆向工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://www.hex-rays.com/products/ida/">IDA Pro&lt;/a>&lt;/td>
- &lt;td style="text-align: left">reverse&lt;/td>
- &lt;td style="text-align: left">逆向工具&lt;/td>
+ &lt;td>&lt;a href="https://www.hex-rays.com/products/ida/">IDA Pro&lt;/a>&lt;/td>
+ &lt;td>reverse&lt;/td>
+ &lt;td>逆向工具&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">crypto&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>crypto&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">stego&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>stego&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">misc&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>misc&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">forensics&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>forensics&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">android&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>android&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">windows&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>windows&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/nmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/nmap/</guid><description>&lt;h1 id="nmap">Nmap&lt;/h1>
@@ -2681,27 +2681,27 @@ combine the AI and CTI applications.&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">&lt;/th>
- &lt;th style="text-align: left">前置處理 (Preprocessing)&lt;/th>
- &lt;th style="text-align: left">-&amp;gt; 編譯 (Compilation)&lt;/th>
- &lt;th style="text-align: left">-&amp;gt; 組譯 (Assembly)&lt;/th>
- &lt;th style="text-align: left">-&amp;gt; 連結 (Linking)&lt;/th>
+ &lt;th>&lt;/th>
+ &lt;th>前置處理 (Preprocessing)&lt;/th>
+ &lt;th>-&amp;gt; 編譯 (Compilation)&lt;/th>
+ &lt;th>-&amp;gt; 組譯 (Assembly)&lt;/th>
+ &lt;th>-&amp;gt; 連結 (Linking)&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">檔案副檔名&lt;/td>
- &lt;td style="text-align: left">(.i)&lt;/td>
- &lt;td style="text-align: left">(.s)&lt;/td>
- &lt;td style="text-align: left">(.o)&lt;/td>
- &lt;td style="text-align: left">(.out)&lt;/td>
+ &lt;td>檔案副檔名&lt;/td>
+ &lt;td>(.i)&lt;/td>
+ &lt;td>(.s)&lt;/td>
+ &lt;td>(.o)&lt;/td>
+ &lt;td>(.out)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">指令參數&lt;/td>
- &lt;td style="text-align: left">-E&lt;/td>
- &lt;td style="text-align: left">-S&lt;/td>
- &lt;td style="text-align: left">-c&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>指令參數&lt;/td>
+ &lt;td>-E&lt;/td>
+ &lt;td>-S&lt;/td>
+ &lt;td>-c&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -3951,81 +3951,81 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p></description>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">指令&lt;/th>
- &lt;th style="text-align: left">簡寫&lt;/th>
- &lt;th style="text-align: left">簡述&lt;/th>
+ &lt;th>指令&lt;/th>
+ &lt;th>簡寫&lt;/th>
+ &lt;th>簡述&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">help&lt;/td>
- &lt;td style="text-align: left">h&lt;/td>
- &lt;td style="text-align: left">查看指令說明&lt;/td>
+ &lt;td>help&lt;/td>
+ &lt;td>h&lt;/td>
+ &lt;td>查看指令說明&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">list&lt;/td>
- &lt;td style="text-align: left">l&lt;/td>
- &lt;td style="text-align: left">印出程式碼&lt;/td>
+ &lt;td>list&lt;/td>
+ &lt;td>l&lt;/td>
+ &lt;td>印出程式碼&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">file&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">開啟檔案&lt;/td>
+ &lt;td>file&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>開啟檔案&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">run&lt;/td>
- &lt;td style="text-align: left">r&lt;/td>
- &lt;td style="text-align: left">執行程式&lt;/td>
+ &lt;td>run&lt;/td>
+ &lt;td>r&lt;/td>
+ &lt;td>執行程式&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">kill&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">停止程式&lt;/td>
+ &lt;td>kill&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>停止程式&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">breakpoint&lt;/td>
- &lt;td style="text-align: left">b, bre, break&lt;/td>
- &lt;td style="text-align: left">設定斷點 &lt;code>ex: b 15&lt;/code>表示執行到第15行&lt;/td>
+ &lt;td>breakpoint&lt;/td>
+ &lt;td>b, bre, break&lt;/td>
+ &lt;td>設定斷點 &lt;code>ex: b 15&lt;/code>表示執行到第15行&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">continue&lt;/td>
- &lt;td style="text-align: left">c, cont&lt;/td>
- &lt;td style="text-align: left">繼續執行&lt;/td>
+ &lt;td>continue&lt;/td>
+ &lt;td>c, cont&lt;/td>
+ &lt;td>繼續執行&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">next&lt;/td>
- &lt;td style="text-align: left">n&lt;/td>
- &lt;td style="text-align: left">步過(遇到呼叫函式會將該函式當成一條指令執行)&lt;/td>
+ &lt;td>next&lt;/td>
+ &lt;td>n&lt;/td>
+ &lt;td>步過(遇到呼叫函式會將該函式當成一條指令執行)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">step&lt;/td>
- &lt;td style="text-align: left">s&lt;/td>
- &lt;td style="text-align: left">步入(遇到呼叫函式會進入函式一步一步執行)&lt;/td>
+ &lt;td>step&lt;/td>
+ &lt;td>s&lt;/td>
+ &lt;td>步入(遇到呼叫函式會進入函式一步一步執行)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">print&lt;/td>
- &lt;td style="text-align: left">p&lt;/td>
- &lt;td style="text-align: left">印出變數的值 &lt;code>ex: p num&lt;/code>&lt;/td>
+ &lt;td>print&lt;/td>
+ &lt;td>p&lt;/td>
+ &lt;td>印出變數的值 &lt;code>ex: p num&lt;/code>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">display&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">每次步過/入後印出變數值 &lt;code>ex: display num&lt;/code>&lt;/td>
+ &lt;td>display&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>每次步過/入後印出變數值 &lt;code>ex: display num&lt;/code>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">info&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">查看特定資訊 &lt;code>ex: info break&lt;/code>查看設了哪些斷點，不輸入參數可查詢指令&lt;/td>
+ &lt;td>info&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>查看特定資訊 &lt;code>ex: info break&lt;/code>查看設了哪些斷點，不輸入參數可查詢指令&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">quit&lt;/td>
- &lt;td style="text-align: left">q&lt;/td>
- &lt;td style="text-align: left">離開gdb，或按Ctrl+C&lt;/td>
+ &lt;td>quit&lt;/td>
+ &lt;td>q&lt;/td>
+ &lt;td>離開gdb，或按Ctrl+C&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&amp;lt;Click&amp;gt; Enter&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">執行上一條指令&lt;/td>
+ &lt;td>&amp;lt;Click&amp;gt; Enter&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>執行上一條指令&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</guid><description>&lt;h2 id="簡介">簡介&lt;/h2>
@@ -5153,55 +5153,55 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">材料&lt;/th>
- &lt;th style="text-align: left">用途&lt;/th>
- &lt;th style="text-align: left">重量(kg)&lt;/th>
- &lt;th style="text-align: left">kg CO2/物料 kg&lt;/th>
- &lt;th style="text-align: left">CO2(kg)&lt;/th>
+ &lt;th>材料&lt;/th>
+ &lt;th>用途&lt;/th>
+ &lt;th>重量(kg)&lt;/th>
+ &lt;th>kg CO2/物料 kg&lt;/th>
+ &lt;th>CO2(kg)&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">鋁&lt;/td>
- &lt;td style="text-align: left">擠壓板&lt;/td>
- &lt;td style="text-align: left">9.5&lt;/td>
- &lt;td style="text-align: left">8.24&lt;/td>
- &lt;td style="text-align: left">78.3&lt;/td>
+ &lt;td>鋁&lt;/td>
+ &lt;td>擠壓板&lt;/td>
+ &lt;td>9.5&lt;/td>
+ &lt;td>8.24&lt;/td>
+ &lt;td>78.3&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">不鏽鋼&lt;/td>
- &lt;td style="text-align: left">硬件，軸承，驅動軸，絲槓&lt;/td>
- &lt;td style="text-align: left">1.4&lt;/td>
- &lt;td style="text-align: left">6.15&lt;/td>
- &lt;td style="text-align: left">8.6&lt;/td>
+ &lt;td>不鏽鋼&lt;/td>
+ &lt;td>硬件，軸承，驅動軸，絲槓&lt;/td>
+ &lt;td>1.4&lt;/td>
+ &lt;td>6.15&lt;/td>
+ &lt;td>8.6&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">塑料&lt;/td>
- &lt;td style="text-align: left">拖鏈，3D列印&lt;a href="https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3a231755273e980d277c3a4c">[CAD]&lt;/a>，輪子，電子設備，管材，電路板&lt;/td>
- &lt;td style="text-align: left">2.8&lt;/td>
- &lt;td style="text-align: left">2.53&lt;/td>
- &lt;td style="text-align: left">7.1&lt;/td>
+ &lt;td>塑料&lt;/td>
+ &lt;td>拖鏈，3D列印&lt;a href="https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3a231755273e980d277c3a4c">[CAD]&lt;/a>，輪子，電子設備，管材，電路板&lt;/td>
+ &lt;td>2.8&lt;/td>
+ &lt;td>2.53&lt;/td>
+ &lt;td>7.1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">銅&lt;/td>
- &lt;td style="text-align: left">電，佈線，電動機繞組&lt;/td>
- &lt;td style="text-align: left">0.3&lt;/td>
- &lt;td style="text-align: left">2.60&lt;/td>
- &lt;td style="text-align: left">0.8&lt;/td>
+ &lt;td>銅&lt;/td>
+ &lt;td>電，佈線，電動機繞組&lt;/td>
+ &lt;td>0.3&lt;/td>
+ &lt;td>2.60&lt;/td>
+ &lt;td>0.8&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">橡膠&lt;/td>
- &lt;td style="text-align: left">皮帶，電線，墊片&lt;/td>
- &lt;td style="text-align: left">0.2&lt;/td>
- &lt;td style="text-align: left">3.18&lt;/td>
- &lt;td style="text-align: left">0.6&lt;/td>
+ &lt;td>橡膠&lt;/td>
+ &lt;td>皮帶，電線，墊片&lt;/td>
+ &lt;td>0.2&lt;/td>
+ &lt;td>3.18&lt;/td>
+ &lt;td>0.6&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">合計&lt;/td>
- &lt;td style="text-align: left">95.4&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>合計&lt;/td>
+ &lt;td>95.4&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -5215,116 +5215,116 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">零件&lt;/th>
- &lt;th style="text-align: left">功率(W)&lt;/th>
- &lt;th style="text-align: left">佔空比(%)&lt;/th>
- &lt;th style="text-align: left">使用時間(h/d)&lt;/th>
- &lt;th style="text-align: left">kWh/day&lt;/th>
- &lt;th style="text-align: left">kWh/year&lt;/th>
- &lt;th style="text-align: left">kg CO2/day&lt;/th>
- &lt;th style="text-align: left">kg CO2/year&lt;/th>
+ &lt;th>零件&lt;/th>
+ &lt;th>功率(W)&lt;/th>
+ &lt;th>佔空比(%)&lt;/th>
+ &lt;th>使用時間(h/d)&lt;/th>
+ &lt;th>kWh/day&lt;/th>
+ &lt;th>kWh/year&lt;/th>
+ &lt;th>kg CO2/day&lt;/th>
+ &lt;th>kg CO2/year&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">樹莓派2&lt;/td>
- &lt;td style="text-align: left">3.0&lt;/td>
- &lt;td style="text-align: left">100%&lt;/td>
- &lt;td style="text-align: left">24.00&lt;/td>
- &lt;td style="text-align: left">0.072&lt;/td>
- &lt;td style="text-align: left">26.3&lt;/td>
- &lt;td style="text-align: left">0.040&lt;/td>
- &lt;td style="text-align: left">14.56&lt;/td>
+ &lt;td>樹莓派2&lt;/td>
+ &lt;td>3.0&lt;/td>
+ &lt;td>100%&lt;/td>
+ &lt;td>24.00&lt;/td>
+ &lt;td>0.072&lt;/td>
+ &lt;td>26.3&lt;/td>
+ &lt;td>0.040&lt;/td>
+ &lt;td>14.56&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">樹莓派相機&lt;/td>
- &lt;td style="text-align: left">1.5&lt;/td>
- &lt;td style="text-align: left">100%&lt;/td>
- &lt;td style="text-align: left">24.00&lt;/td>
- &lt;td style="text-align: left">0.036&lt;/td>
- &lt;td style="text-align: left">13.1&lt;/td>
- &lt;td style="text-align: left">0.020&lt;/td>
- &lt;td style="text-align: left">7.28&lt;/td>
+ &lt;td>樹莓派相機&lt;/td>
+ &lt;td>1.5&lt;/td>
+ &lt;td>100%&lt;/td>
+ &lt;td>24.00&lt;/td>
+ &lt;td>0.036&lt;/td>
+ &lt;td>13.1&lt;/td>
+ &lt;td>0.020&lt;/td>
+ &lt;td>7.28&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Arduino Mega 2560&lt;/td>
- &lt;td style="text-align: left">1.0&lt;/td>
- &lt;td style="text-align: left">100%&lt;/td>
- &lt;td style="text-align: left">24.00&lt;/td>
- &lt;td style="text-align: left">0.024&lt;/td>
- &lt;td style="text-align: left">8.8&lt;/td>
- &lt;td style="text-align: left">0.013&lt;/td>
- &lt;td style="text-align: left">4.85&lt;/td>
+ &lt;td>Arduino Mega 2560&lt;/td>
+ &lt;td>1.0&lt;/td>
+ &lt;td>100%&lt;/td>
+ &lt;td>24.00&lt;/td>
+ &lt;td>0.024&lt;/td>
+ &lt;td>8.8&lt;/td>
+ &lt;td>0.013&lt;/td>
+ &lt;td>4.85&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">NEMA 17步進馬達*3&lt;/td>
- &lt;td style="text-align: left">30.0&lt;/td>
- &lt;td style="text-align: left">5%&lt;/td>
- &lt;td style="text-align: left">1.20&lt;/td>
- &lt;td style="text-align: left">0.036&lt;/td>
- &lt;td style="text-align: left">13.1&lt;/td>
- &lt;td style="text-align: left">0.020&lt;/td>
- &lt;td style="text-align: left">7.28&lt;/td>
+ &lt;td>NEMA 17步進馬達*3&lt;/td>
+ &lt;td>30.0&lt;/td>
+ &lt;td>5%&lt;/td>
+ &lt;td>1.20&lt;/td>
+ &lt;td>0.036&lt;/td>
+ &lt;td>13.1&lt;/td>
+ &lt;td>0.020&lt;/td>
+ &lt;td>7.28&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">12V工具&lt;/td>
- &lt;td style="text-align: left">132.0&lt;/td>
- &lt;td style="text-align: left">2%&lt;/td>
- &lt;td style="text-align: left">0.48&lt;/td>
- &lt;td style="text-align: left">0.063&lt;/td>
- &lt;td style="text-align: left">23.1&lt;/td>
- &lt;td style="text-align: left">0.035&lt;/td>
- &lt;td style="text-align: left">12.81&lt;/td>
+ &lt;td>12V工具&lt;/td>
+ &lt;td>132.0&lt;/td>
+ &lt;td>2%&lt;/td>
+ &lt;td>0.48&lt;/td>
+ &lt;td>0.063&lt;/td>
+ &lt;td>23.1&lt;/td>
+ &lt;td>0.035&lt;/td>
+ &lt;td>12.81&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">電磁閥&lt;/td>
- &lt;td style="text-align: left">30.0&lt;/td>
- &lt;td style="text-align: left">2%&lt;/td>
- &lt;td style="text-align: left">0.48&lt;/td>
- &lt;td style="text-align: left">0.014&lt;/td>
- &lt;td style="text-align: left">5.3&lt;/td>
- &lt;td style="text-align: left">0.008&lt;/td>
- &lt;td style="text-align: left">2.91&lt;/td>
+ &lt;td>電磁閥&lt;/td>
+ &lt;td>30.0&lt;/td>
+ &lt;td>2%&lt;/td>
+ &lt;td>0.48&lt;/td>
+ &lt;td>0.014&lt;/td>
+ &lt;td>5.3&lt;/td>
+ &lt;td>0.008&lt;/td>
+ &lt;td>2.91&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">真空泵&lt;/td>
- &lt;td style="text-align: left">186.0&lt;/td>
- &lt;td style="text-align: left">0.5%&lt;/td>
- &lt;td style="text-align: left">0.012&lt;/td>
- &lt;td style="text-align: left">0.022&lt;/td>
- &lt;td style="text-align: left">8.1&lt;/td>
- &lt;td style="text-align: left">0.012&lt;/td>
- &lt;td style="text-align: left">4.51&lt;/td>
+ &lt;td>真空泵&lt;/td>
+ &lt;td>186.0&lt;/td>
+ &lt;td>0.5%&lt;/td>
+ &lt;td>0.012&lt;/td>
+ &lt;td>0.022&lt;/td>
+ &lt;td>8.1&lt;/td>
+ &lt;td>0.012&lt;/td>
+ &lt;td>4.51&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Web App服務器/用戶&lt;/td>
- &lt;td style="text-align: left">20.0&lt;/td>
- &lt;td style="text-align: left">1%&lt;/td>
- &lt;td style="text-align: left">0.24&lt;/td>
- &lt;td style="text-align: left">0.005&lt;/td>
- &lt;td style="text-align: left">1.8&lt;/td>
- &lt;td style="text-align: left">0.003&lt;/td>
- &lt;td style="text-align: left">0.97&lt;/td>
+ &lt;td>Web App服務器/用戶&lt;/td>
+ &lt;td>20.0&lt;/td>
+ &lt;td>1%&lt;/td>
+ &lt;td>0.24&lt;/td>
+ &lt;td>0.005&lt;/td>
+ &lt;td>1.8&lt;/td>
+ &lt;td>0.003&lt;/td>
+ &lt;td>0.97&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">設備(筆電)&lt;/td>
- &lt;td style="text-align: left">60.0&lt;/td>
- &lt;td style="text-align: left">1%&lt;/td>
- &lt;td style="text-align: left">0.24&lt;/td>
- &lt;td style="text-align: left">0.014&lt;/td>
- &lt;td style="text-align: left">5.3&lt;/td>
- &lt;td style="text-align: left">0.008&lt;/td>
- &lt;td style="text-align: left">2.91&lt;/td>
+ &lt;td>設備(筆電)&lt;/td>
+ &lt;td>60.0&lt;/td>
+ &lt;td>1%&lt;/td>
+ &lt;td>0.24&lt;/td>
+ &lt;td>0.014&lt;/td>
+ &lt;td>5.3&lt;/td>
+ &lt;td>0.008&lt;/td>
+ &lt;td>2.91&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">合計&lt;/td>
- &lt;td style="text-align: left">0.287&lt;/td>
- &lt;td style="text-align: left">104.9&lt;/td>
- &lt;td style="text-align: left">0.159&lt;/td>
- &lt;td style="text-align: left">58.09&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>合計&lt;/td>
+ &lt;td>0.287&lt;/td>
+ &lt;td>104.9&lt;/td>
+ &lt;td>0.159&lt;/td>
+ &lt;td>58.09&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -5741,56 +5741,56 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">計算&lt;/th>
- &lt;th style="text-align: left">結果&lt;/th>
- &lt;th style="text-align: left">餘數&lt;/th>
+ &lt;th>計算&lt;/th>
+ &lt;th>結果&lt;/th>
+ &lt;th>餘數&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">432/2&lt;/td>
- &lt;td style="text-align: left">216&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>432/2&lt;/td>
+ &lt;td>216&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">216/2&lt;/td>
- &lt;td style="text-align: left">108&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>216/2&lt;/td>
+ &lt;td>108&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">108/2&lt;/td>
- &lt;td style="text-align: left">54&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>108/2&lt;/td>
+ &lt;td>54&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">54/2&lt;/td>
- &lt;td style="text-align: left">27&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>54/2&lt;/td>
+ &lt;td>27&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">27/2&lt;/td>
- &lt;td style="text-align: left">13&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>27/2&lt;/td>
+ &lt;td>13&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">13/2&lt;/td>
- &lt;td style="text-align: left">6&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>13/2&lt;/td>
+ &lt;td>6&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">6/2&lt;/td>
- &lt;td style="text-align: left">3&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>6/2&lt;/td>
+ &lt;td>3&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">3/2&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>3/2&lt;/td>
+ &lt;td>1&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">1/2&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>1/2&lt;/td>
+ &lt;td>0&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -5799,56 +5799,56 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">計算&lt;/th>
- &lt;th style="text-align: left">結果&lt;/th>
- &lt;th style="text-align: left">整數部分&lt;/th>
+ &lt;th>計算&lt;/th>
+ &lt;th>結果&lt;/th>
+ &lt;th>整數部分&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">0.1*2&lt;/td>
- &lt;td style="text-align: left">0.2&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>0.1*2&lt;/td>
+ &lt;td>0.2&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.2*2&lt;/td>
- &lt;td style="text-align: left">0.4&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>0.2*2&lt;/td>
+ &lt;td>0.4&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.4*2&lt;/td>
- &lt;td style="text-align: left">0.8&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>0.4*2&lt;/td>
+ &lt;td>0.8&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.8*2&lt;/td>
- &lt;td style="text-align: left">1.6&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>0.8*2&lt;/td>
+ &lt;td>1.6&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.6*2&lt;/td>
- &lt;td style="text-align: left">1.2&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>0.6*2&lt;/td>
+ &lt;td>1.2&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.2*2&lt;/td>
- &lt;td style="text-align: left">0.4&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>0.2*2&lt;/td>
+ &lt;td>0.4&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.4*2&lt;/td>
- &lt;td style="text-align: left">0.8&lt;/td>
- &lt;td style="text-align: left">0&lt;/td>
+ &lt;td>0.4*2&lt;/td>
+ &lt;td>0.8&lt;/td>
+ &lt;td>0&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.8*2&lt;/td>
- &lt;td style="text-align: left">1.6&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>0.8*2&lt;/td>
+ &lt;td>1.6&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">0.6*2&lt;/td>
- &lt;td style="text-align: left">1.2&lt;/td>
- &lt;td style="text-align: left">1&lt;/td>
+ &lt;td>0.6*2&lt;/td>
+ &lt;td>1.2&lt;/td>
+ &lt;td>1&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -5997,48 +5997,48 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">型態&lt;/th>
- &lt;th style="text-align: left">空間&lt;/th>
- &lt;th style="text-align: left">範圍&lt;/th>
- &lt;th style="text-align: left">描述&lt;/th>
+ &lt;th>型態&lt;/th>
+ &lt;th>空間&lt;/th>
+ &lt;th>範圍&lt;/th>
+ &lt;th>描述&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">short/short int&lt;/td>
- &lt;td style="text-align: left">2 Bytes&lt;/td>
- &lt;td style="text-align: left">-2^15~2^15-1&lt;/td>
- &lt;td style="text-align: left">短整數&lt;/td>
+ &lt;td>short/short int&lt;/td>
+ &lt;td>2 Bytes&lt;/td>
+ &lt;td>-2^15~2^15-1&lt;/td>
+ &lt;td>短整數&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">unsigned short/unsigned short int&lt;/td>
- &lt;td style="text-align: left">2 Bytes&lt;/td>
- &lt;td style="text-align: left">0~2^16-1&lt;/td>
- &lt;td style="text-align: left">無符號短整數&lt;/td>
+ &lt;td>unsigned short/unsigned short int&lt;/td>
+ &lt;td>2 Bytes&lt;/td>
+ &lt;td>0~2^16-1&lt;/td>
+ &lt;td>無符號短整數&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">int/long int/signed/signed long int/long&lt;/td>
- &lt;td style="text-align: left">4 Bytes&lt;/td>
- &lt;td style="text-align: left">-2^31~2^31-1&lt;/td>
- &lt;td style="text-align: left">整數&lt;/td>
+ &lt;td>int/long int/signed/signed long int/long&lt;/td>
+ &lt;td>4 Bytes&lt;/td>
+ &lt;td>-2^31~2^31-1&lt;/td>
+ &lt;td>整數&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">unsigned int/unsigned long int/unsigned&lt;/td>
- &lt;td style="text-align: left">4 Bytes&lt;/td>
- &lt;td style="text-align: left">0~2^32-1&lt;/td>
- &lt;td style="text-align: left">無符號整數&lt;/td>
+ &lt;td>unsigned int/unsigned long int/unsigned&lt;/td>
+ &lt;td>4 Bytes&lt;/td>
+ &lt;td>0~2^32-1&lt;/td>
+ &lt;td>無符號整數&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">long long/long long int&lt;/td>
- &lt;td style="text-align: left">8 Bytes&lt;/td>
- &lt;td style="text-align: left">-2^63~2^63-1&lt;/td>
- &lt;td style="text-align: left">長整數&lt;/td>
+ &lt;td>long long/long long int&lt;/td>
+ &lt;td>8 Bytes&lt;/td>
+ &lt;td>-2^63~2^63-1&lt;/td>
+ &lt;td>長整數&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">unsigned long long/unsigned long long int&lt;/td>
- &lt;td style="text-align: left">8 Bytes&lt;/td>
- &lt;td style="text-align: left">0~2^64-1&lt;/td>
- &lt;td style="text-align: left">無符號長整數&lt;/td>
+ &lt;td>unsigned long long/unsigned long long int&lt;/td>
+ &lt;td>8 Bytes&lt;/td>
+ &lt;td>0~2^64-1&lt;/td>
+ &lt;td>無符號長整數&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -6104,125 +6104,125 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">優先度&lt;/th>
- &lt;th style="text-align: left">運算子&lt;/th>
- &lt;th style="text-align: left">描述&lt;/th>
- &lt;th style="text-align: left">閱讀順序&lt;/th>
- &lt;th style="text-align: left">例子&lt;/th>
+ &lt;th>優先度&lt;/th>
+ &lt;th>運算子&lt;/th>
+ &lt;th>描述&lt;/th>
+ &lt;th>閱讀順序&lt;/th>
+ &lt;th>例子&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">1&lt;/td>
- &lt;td style="text-align: left">::&lt;/td>
- &lt;td style="text-align: left">作用域&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">std::cout &amp;laquo; endl;&lt;/td>
+ &lt;td>1&lt;/td>
+ &lt;td>::&lt;/td>
+ &lt;td>作用域&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>std::cout &amp;laquo; endl;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">2&lt;/td>
- &lt;td style="text-align: left">++/-- () [] . -&amp;gt;&lt;/td>
- &lt;td style="text-align: left">先回傳再加減1 \ 函式呼叫 \ 陣列存取 \ 物件存取成員 \ 指標存取成員&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">i++/i--; int a = f(x); int a[10]; obj.cmp = 0; ptr-&amp;gt;val = 0;&lt;/td>
+ &lt;td>2&lt;/td>
+ &lt;td>++/-- () [] . -&amp;gt;&lt;/td>
+ &lt;td>先回傳再加減1 \ 函式呼叫 \ 陣列存取 \ 物件存取成員 \ 指標存取成員&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>i++/i--; int a = f(x); int a[10]; obj.cmp = 0; ptr-&amp;gt;val = 0;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">3&lt;/td>
- &lt;td style="text-align: left">++/-- +/- ! ~ (Type) * &amp;amp; sizeof&lt;/td>
- &lt;td style="text-align: left">先加/減1再回傳 \ 正負號 \ 邏輯NOT \ 位元取反 \ 強轉類型 \ 指標取值 \ 取址 \ 佔用位元組大小&lt;/td>
- &lt;td style="text-align: left">&amp;lt;-&lt;/td>
- &lt;td style="text-align: left">++i/--i +/-1 if(!true) a = ~a; int i=int(doublex); int k = *a; int *k = &amp;amp;a; cout &amp;laquo; sizeof(int);//4&lt;/td>
+ &lt;td>3&lt;/td>
+ &lt;td>++/-- +/- ! ~ (Type) * &amp;amp; sizeof&lt;/td>
+ &lt;td>先加/減1再回傳 \ 正負號 \ 邏輯NOT \ 位元取反 \ 強轉類型 \ 指標取值 \ 取址 \ 佔用位元組大小&lt;/td>
+ &lt;td>&amp;lt;-&lt;/td>
+ &lt;td>++i/--i +/-1 if(!true) a = ~a; int i=int(doublex); int k = *a; int *k = &amp;amp;a; cout &amp;laquo; sizeof(int);//4&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">4&lt;/td>
- &lt;td style="text-align: left">* / %&lt;/td>
- &lt;td style="text-align: left">乘 \ 除 \ 取模&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">int a = 8*8; int a = 20/6; int a = 6%4;&lt;/td>
+ &lt;td>4&lt;/td>
+ &lt;td>* / %&lt;/td>
+ &lt;td>乘 \ 除 \ 取模&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>int a = 8*8; int a = 20/6; int a = 6%4;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">5&lt;/td>
- &lt;td style="text-align: left">+/-&lt;/td>
- &lt;td style="text-align: left">加 \ 減&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">int a = 6+4;&lt;/td>
+ &lt;td>5&lt;/td>
+ &lt;td>+/-&lt;/td>
+ &lt;td>加 \ 減&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>int a = 6+4;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">6&lt;/td>
- &lt;td style="text-align: left">&amp;raquo;/&amp;laquo;&lt;/td>
- &lt;td style="text-align: left">位元右 \ 左移&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">int a = 4 &amp;raquo; 3;&lt;/td>
+ &lt;td>6&lt;/td>
+ &lt;td>&amp;raquo;/&amp;laquo;&lt;/td>
+ &lt;td>位元右 \ 左移&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>int a = 4 &amp;raquo; 3;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">7&lt;/td>
- &lt;td style="text-align: left">&amp;lt;/&amp;lt;=/&amp;gt;/&amp;gt;=&lt;/td>
- &lt;td style="text-align: left">大小等於&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">if(a &amp;lt; 0)&lt;/td>
+ &lt;td>7&lt;/td>
+ &lt;td>&amp;lt;/&amp;lt;=/&amp;gt;/&amp;gt;=&lt;/td>
+ &lt;td>大小等於&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>if(a &amp;lt; 0)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">8&lt;/td>
- &lt;td style="text-align: left">==/!=&lt;/td>
- &lt;td style="text-align: left">等於/不等於&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">while(a!=0)&lt;/td>
+ &lt;td>8&lt;/td>
+ &lt;td>==/!=&lt;/td>
+ &lt;td>等於/不等於&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>while(a!=0)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">9&lt;/td>
- &lt;td style="text-align: left">&amp;amp;&lt;/td>
- &lt;td style="text-align: left">位元AND運算&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">n = x&amp;amp;1&lt;/td>
+ &lt;td>9&lt;/td>
+ &lt;td>&amp;amp;&lt;/td>
+ &lt;td>位元AND運算&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>n = x&amp;amp;1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">10&lt;/td>
- &lt;td style="text-align: left">^&lt;/td>
- &lt;td style="text-align: left">位元XOR運算&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">n = x^1&lt;/td>
+ &lt;td>10&lt;/td>
+ &lt;td>^&lt;/td>
+ &lt;td>位元XOR運算&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>n = x^1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">11&lt;/td>
- &lt;td style="text-align: left">|&lt;/td>
- &lt;td style="text-align: left">位元OR運算&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">n = x|1&lt;/td>
+ &lt;td>11&lt;/td>
+ &lt;td>|&lt;/td>
+ &lt;td>位元OR運算&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>n = x|1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">12&lt;/td>
- &lt;td style="text-align: left">&amp;amp;&amp;amp;&lt;/td>
- &lt;td style="text-align: left">邏輯AND&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">if(1==3 &amp;amp;&amp;amp; 2==2)&lt;/td>
+ &lt;td>12&lt;/td>
+ &lt;td>&amp;amp;&amp;amp;&lt;/td>
+ &lt;td>邏輯AND&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>if(1==3 &amp;amp;&amp;amp; 2==2)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">13&lt;/td>
- &lt;td style="text-align: left">||&lt;/td>
- &lt;td style="text-align: left">邏輯OR&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">if(1==3 || 2==2)&lt;/td>
+ &lt;td>13&lt;/td>
+ &lt;td>||&lt;/td>
+ &lt;td>邏輯OR&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>if(1==3 || 2==2)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">14&lt;/td>
- &lt;td style="text-align: left">c?p1:p2&lt;/td>
- &lt;td style="text-align: left">三元條件運算(可當成if-else)&lt;/td>
- &lt;td style="text-align: left">&amp;lt;-&lt;/td>
- &lt;td style="text-align: left">int i = a&amp;gt;b?a:b;&lt;/td>
+ &lt;td>14&lt;/td>
+ &lt;td>c?p1:p2&lt;/td>
+ &lt;td>三元條件運算(可當成if-else)&lt;/td>
+ &lt;td>&amp;lt;-&lt;/td>
+ &lt;td>int i = a&amp;gt;b?a:b;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">15&lt;/td>
- &lt;td style="text-align: left">=/+=/-=/*=//=/%=/&amp;laquo;=/&amp;raquo;=/&amp;amp;=/^=/|=&lt;/td>
- &lt;td style="text-align: left">賦值&lt;/td>
- &lt;td style="text-align: left">&amp;lt;-&lt;/td>
- &lt;td style="text-align: left">a+=3;b&amp;amp;=1;&lt;/td>
+ &lt;td>15&lt;/td>
+ &lt;td>=/+=/-=/*=//=/%=/&amp;laquo;=/&amp;raquo;=/&amp;amp;=/^=/|=&lt;/td>
+ &lt;td>賦值&lt;/td>
+ &lt;td>&amp;lt;-&lt;/td>
+ &lt;td>a+=3;b&amp;amp;=1;&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">16&lt;/td>
- &lt;td style="text-align: left">,&lt;/td>
- &lt;td style="text-align: left">逗號&lt;/td>
- &lt;td style="text-align: left">-&amp;gt;&lt;/td>
- &lt;td style="text-align: left">int i,j,k;&lt;/td>
+ &lt;td>16&lt;/td>
+ &lt;td>,&lt;/td>
+ &lt;td>逗號&lt;/td>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>int i,j,k;&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>

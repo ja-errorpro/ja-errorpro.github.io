@@ -64,55 +64,55 @@
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">材料&lt;/th>
- &lt;th style="text-align: left">用途&lt;/th>
- &lt;th style="text-align: left">重量(kg)&lt;/th>
- &lt;th style="text-align: left">kg CO2/物料 kg&lt;/th>
- &lt;th style="text-align: left">CO2(kg)&lt;/th>
+ &lt;th>材料&lt;/th>
+ &lt;th>用途&lt;/th>
+ &lt;th>重量(kg)&lt;/th>
+ &lt;th>kg CO2/物料 kg&lt;/th>
+ &lt;th>CO2(kg)&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">鋁&lt;/td>
- &lt;td style="text-align: left">擠壓板&lt;/td>
- &lt;td style="text-align: left">9.5&lt;/td>
- &lt;td style="text-align: left">8.24&lt;/td>
- &lt;td style="text-align: left">78.3&lt;/td>
+ &lt;td>鋁&lt;/td>
+ &lt;td>擠壓板&lt;/td>
+ &lt;td>9.5&lt;/td>
+ &lt;td>8.24&lt;/td>
+ &lt;td>78.3&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">不鏽鋼&lt;/td>
- &lt;td style="text-align: left">硬件，軸承，驅動軸，絲槓&lt;/td>
- &lt;td style="text-align: left">1.4&lt;/td>
- &lt;td style="text-align: left">6.15&lt;/td>
- &lt;td style="text-align: left">8.6&lt;/td>
+ &lt;td>不鏽鋼&lt;/td>
+ &lt;td>硬件，軸承，驅動軸，絲槓&lt;/td>
+ &lt;td>1.4&lt;/td>
+ &lt;td>6.15&lt;/td>
+ &lt;td>8.6&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">塑料&lt;/td>
- &lt;td style="text-align: left">拖鏈，3D列印&lt;a href="https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3a231755273e980d277c3a4c">[CAD]&lt;/a>，輪子，電子設備，管材，電路板&lt;/td>
- &lt;td style="text-align: left">2.8&lt;/td>
- &lt;td style="text-align: left">2.53&lt;/td>
- &lt;td style="text-align: left">7.1&lt;/td>
+ &lt;td>塑料&lt;/td>
+ &lt;td>拖鏈，3D列印&lt;a href="https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3a231755273e980d277c3a4c">[CAD]&lt;/a>，輪子，電子設備，管材，電路板&lt;/td>
+ &lt;td>2.8&lt;/td>
+ &lt;td>2.53&lt;/td>
+ &lt;td>7.1&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">銅&lt;/td>
- &lt;td style="text-align: left">電，佈線，電動機繞組&lt;/td>
- &lt;td style="text-align: left">0.3&lt;/td>
- &lt;td style="text-align: left">2.60&lt;/td>
- &lt;td style="text-align: left">0.8&lt;/td>
+ &lt;td>銅&lt;/td>
+ &lt;td>電，佈線，電動機繞組&lt;/td>
+ &lt;td>0.3&lt;/td>
+ &lt;td>2.60&lt;/td>
+ &lt;td>0.8&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">橡膠&lt;/td>
- &lt;td style="text-align: left">皮帶，電線，墊片&lt;/td>
- &lt;td style="text-align: left">0.2&lt;/td>
- &lt;td style="text-align: left">3.18&lt;/td>
- &lt;td style="text-align: left">0.6&lt;/td>
+ &lt;td>橡膠&lt;/td>
+ &lt;td>皮帶，電線，墊片&lt;/td>
+ &lt;td>0.2&lt;/td>
+ &lt;td>3.18&lt;/td>
+ &lt;td>0.6&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">合計&lt;/td>
- &lt;td style="text-align: left">95.4&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>合計&lt;/td>
+ &lt;td>95.4&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -126,116 +126,116 @@
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">零件&lt;/th>
- &lt;th style="text-align: left">功率(W)&lt;/th>
- &lt;th style="text-align: left">佔空比(%)&lt;/th>
- &lt;th style="text-align: left">使用時間(h/d)&lt;/th>
- &lt;th style="text-align: left">kWh/day&lt;/th>
- &lt;th style="text-align: left">kWh/year&lt;/th>
- &lt;th style="text-align: left">kg CO2/day&lt;/th>
- &lt;th style="text-align: left">kg CO2/year&lt;/th>
+ &lt;th>零件&lt;/th>
+ &lt;th>功率(W)&lt;/th>
+ &lt;th>佔空比(%)&lt;/th>
+ &lt;th>使用時間(h/d)&lt;/th>
+ &lt;th>kWh/day&lt;/th>
+ &lt;th>kWh/year&lt;/th>
+ &lt;th>kg CO2/day&lt;/th>
+ &lt;th>kg CO2/year&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">樹莓派2&lt;/td>
- &lt;td style="text-align: left">3.0&lt;/td>
- &lt;td style="text-align: left">100%&lt;/td>
- &lt;td style="text-align: left">24.00&lt;/td>
- &lt;td style="text-align: left">0.072&lt;/td>
- &lt;td style="text-align: left">26.3&lt;/td>
- &lt;td style="text-align: left">0.040&lt;/td>
- &lt;td style="text-align: left">14.56&lt;/td>
+ &lt;td>樹莓派2&lt;/td>
+ &lt;td>3.0&lt;/td>
+ &lt;td>100%&lt;/td>
+ &lt;td>24.00&lt;/td>
+ &lt;td>0.072&lt;/td>
+ &lt;td>26.3&lt;/td>
+ &lt;td>0.040&lt;/td>
+ &lt;td>14.56&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">樹莓派相機&lt;/td>
- &lt;td style="text-align: left">1.5&lt;/td>
- &lt;td style="text-align: left">100%&lt;/td>
- &lt;td style="text-align: left">24.00&lt;/td>
- &lt;td style="text-align: left">0.036&lt;/td>
- &lt;td style="text-align: left">13.1&lt;/td>
- &lt;td style="text-align: left">0.020&lt;/td>
- &lt;td style="text-align: left">7.28&lt;/td>
+ &lt;td>樹莓派相機&lt;/td>
+ &lt;td>1.5&lt;/td>
+ &lt;td>100%&lt;/td>
+ &lt;td>24.00&lt;/td>
+ &lt;td>0.036&lt;/td>
+ &lt;td>13.1&lt;/td>
+ &lt;td>0.020&lt;/td>
+ &lt;td>7.28&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Arduino Mega 2560&lt;/td>
- &lt;td style="text-align: left">1.0&lt;/td>
- &lt;td style="text-align: left">100%&lt;/td>
- &lt;td style="text-align: left">24.00&lt;/td>
- &lt;td style="text-align: left">0.024&lt;/td>
- &lt;td style="text-align: left">8.8&lt;/td>
- &lt;td style="text-align: left">0.013&lt;/td>
- &lt;td style="text-align: left">4.85&lt;/td>
+ &lt;td>Arduino Mega 2560&lt;/td>
+ &lt;td>1.0&lt;/td>
+ &lt;td>100%&lt;/td>
+ &lt;td>24.00&lt;/td>
+ &lt;td>0.024&lt;/td>
+ &lt;td>8.8&lt;/td>
+ &lt;td>0.013&lt;/td>
+ &lt;td>4.85&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">NEMA 17步進馬達*3&lt;/td>
- &lt;td style="text-align: left">30.0&lt;/td>
- &lt;td style="text-align: left">5%&lt;/td>
- &lt;td style="text-align: left">1.20&lt;/td>
- &lt;td style="text-align: left">0.036&lt;/td>
- &lt;td style="text-align: left">13.1&lt;/td>
- &lt;td style="text-align: left">0.020&lt;/td>
- &lt;td style="text-align: left">7.28&lt;/td>
+ &lt;td>NEMA 17步進馬達*3&lt;/td>
+ &lt;td>30.0&lt;/td>
+ &lt;td>5%&lt;/td>
+ &lt;td>1.20&lt;/td>
+ &lt;td>0.036&lt;/td>
+ &lt;td>13.1&lt;/td>
+ &lt;td>0.020&lt;/td>
+ &lt;td>7.28&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">12V工具&lt;/td>
- &lt;td style="text-align: left">132.0&lt;/td>
- &lt;td style="text-align: left">2%&lt;/td>
- &lt;td style="text-align: left">0.48&lt;/td>
- &lt;td style="text-align: left">0.063&lt;/td>
- &lt;td style="text-align: left">23.1&lt;/td>
- &lt;td style="text-align: left">0.035&lt;/td>
- &lt;td style="text-align: left">12.81&lt;/td>
+ &lt;td>12V工具&lt;/td>
+ &lt;td>132.0&lt;/td>
+ &lt;td>2%&lt;/td>
+ &lt;td>0.48&lt;/td>
+ &lt;td>0.063&lt;/td>
+ &lt;td>23.1&lt;/td>
+ &lt;td>0.035&lt;/td>
+ &lt;td>12.81&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">電磁閥&lt;/td>
- &lt;td style="text-align: left">30.0&lt;/td>
- &lt;td style="text-align: left">2%&lt;/td>
- &lt;td style="text-align: left">0.48&lt;/td>
- &lt;td style="text-align: left">0.014&lt;/td>
- &lt;td style="text-align: left">5.3&lt;/td>
- &lt;td style="text-align: left">0.008&lt;/td>
- &lt;td style="text-align: left">2.91&lt;/td>
+ &lt;td>電磁閥&lt;/td>
+ &lt;td>30.0&lt;/td>
+ &lt;td>2%&lt;/td>
+ &lt;td>0.48&lt;/td>
+ &lt;td>0.014&lt;/td>
+ &lt;td>5.3&lt;/td>
+ &lt;td>0.008&lt;/td>
+ &lt;td>2.91&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">真空泵&lt;/td>
- &lt;td style="text-align: left">186.0&lt;/td>
- &lt;td style="text-align: left">0.5%&lt;/td>
- &lt;td style="text-align: left">0.012&lt;/td>
- &lt;td style="text-align: left">0.022&lt;/td>
- &lt;td style="text-align: left">8.1&lt;/td>
- &lt;td style="text-align: left">0.012&lt;/td>
- &lt;td style="text-align: left">4.51&lt;/td>
+ &lt;td>真空泵&lt;/td>
+ &lt;td>186.0&lt;/td>
+ &lt;td>0.5%&lt;/td>
+ &lt;td>0.012&lt;/td>
+ &lt;td>0.022&lt;/td>
+ &lt;td>8.1&lt;/td>
+ &lt;td>0.012&lt;/td>
+ &lt;td>4.51&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Web App服務器/用戶&lt;/td>
- &lt;td style="text-align: left">20.0&lt;/td>
- &lt;td style="text-align: left">1%&lt;/td>
- &lt;td style="text-align: left">0.24&lt;/td>
- &lt;td style="text-align: left">0.005&lt;/td>
- &lt;td style="text-align: left">1.8&lt;/td>
- &lt;td style="text-align: left">0.003&lt;/td>
- &lt;td style="text-align: left">0.97&lt;/td>
+ &lt;td>Web App服務器/用戶&lt;/td>
+ &lt;td>20.0&lt;/td>
+ &lt;td>1%&lt;/td>
+ &lt;td>0.24&lt;/td>
+ &lt;td>0.005&lt;/td>
+ &lt;td>1.8&lt;/td>
+ &lt;td>0.003&lt;/td>
+ &lt;td>0.97&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">設備(筆電)&lt;/td>
- &lt;td style="text-align: left">60.0&lt;/td>
- &lt;td style="text-align: left">1%&lt;/td>
- &lt;td style="text-align: left">0.24&lt;/td>
- &lt;td style="text-align: left">0.014&lt;/td>
- &lt;td style="text-align: left">5.3&lt;/td>
- &lt;td style="text-align: left">0.008&lt;/td>
- &lt;td style="text-align: left">2.91&lt;/td>
+ &lt;td>設備(筆電)&lt;/td>
+ &lt;td>60.0&lt;/td>
+ &lt;td>1%&lt;/td>
+ &lt;td>0.24&lt;/td>
+ &lt;td>0.014&lt;/td>
+ &lt;td>5.3&lt;/td>
+ &lt;td>0.008&lt;/td>
+ &lt;td>2.91&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">合計&lt;/td>
- &lt;td style="text-align: left">0.287&lt;/td>
- &lt;td style="text-align: left">104.9&lt;/td>
- &lt;td style="text-align: left">0.159&lt;/td>
- &lt;td style="text-align: left">58.09&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>合計&lt;/td>
+ &lt;td>0.287&lt;/td>
+ &lt;td>104.9&lt;/td>
+ &lt;td>0.159&lt;/td>
+ &lt;td>58.09&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
