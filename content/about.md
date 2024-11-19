@@ -2,7 +2,6 @@
 title: "About"
 tags:
   - Idx
-
 ---
 
 # 我是誰
@@ -14,6 +13,26 @@ tags:
 A common student studying in [Chung Yuan Christian University](https://www1.cycu.edu.tw/) Department of Information and Computer Engineering
 
 {{< social >}}
+
+---
+
+### Experience
+
+- AIS3 Camp 2024
+- TaiwanHolyHigh 2021
+- First Robot Competition 8176 Programmer 2021
+- SITCON 2024 Volunteer
+- Google Developer Groups On Campus CYCU Organizer 2024
+- Google Developer Student Clubs CYCU Core Member 2022-2024
+- Cybersecurity Competition 2023-2024
+- HITCON CTF 2022 attendee
+- AIS3 EOF 2024 attendee
+- Google CTF 2023-2024 attendee
+- HITCON Cyber Range 2024 Student 7th
+- AEGIS 2024 attendee
+- CYBERSEC 2022-2024 attendee
+- HITCON 2022-2024 attendee
+- SITCON 2021-2024 attendee
 
 ---
 
@@ -55,6 +74,7 @@ YI_JIA{this_is_so_cool}
 沒用嗎？要不要換個瀏覽器試試看？
 
 {{< adiv >}}
+
 <script src="/js/base64.js"></script>
 <script src="/js/md5.js"></script>
 <script src="/js/a_secret_script.js"></script>
