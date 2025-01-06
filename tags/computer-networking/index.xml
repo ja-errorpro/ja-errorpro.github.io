@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Networking on ErrorPro</title><link>https://ja-errorpro.codes/tags/computer-networking/</link><description>Recent content in Computer Networking on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><atom:link href="https://ja-errorpro.codes/tags/computer-networking/index.xml" rel="self" type="application/rss+xml"/><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p>Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p>
+&lt;h1 id="此頁面中答案不保證為正確答案僅供參考">此頁面中答案不保證為正確答案，僅供參考。&lt;/h1>
+&lt;h1 id="ch1-作業">CH1 作業&lt;/h1>
+&lt;h2 id="review">Review&lt;/h2>
+&lt;h3 id="r1-what-is-the-difference-between-a-host-and-an-end-system-list-several-different-types-of-end-systems-is-a-web-server-an-end-system">R1. What is the difference between a host and an end system? List several different types of end systems. Is a Web server an end system?&lt;/h3>
+&lt;h4 id="host-跟-end-system-差別是什麼列出幾種不同類型的-end-systemweb-server-是-end-system-嗎">Host 跟 End system 差別是什麼？列出幾種不同類型的 End system。Web Server 是 End system 嗎？&lt;/h4>
+&lt;ul>
+&lt;li>沒有差別，Host 跟 End system 是同義詞。End system 包括 PC、Work Station、Web Server、Mail Server 等等。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r2-describe-the-protocol-that-might-be-used-by-two-people-having-a-telephonic-conversation-to-initiate-and-end-the-conversation-ie-the-way-that-they-talk">R2. Describe the protocol that might be used by two people having a telephonic conversation to initiate and end the conversation, i.e., the way that they talk.&lt;/h3>
+&lt;h4 id="描述兩個人進行電話對話時可能使用的協定即他們交談的方式">描述兩個人進行電話對話時可能使用的協定，即他們交談的方式。&lt;/h4>
+&lt;ul>
+&lt;li>協議是兩個人、政府、甚至國家在進行溝通時制定的一套溝通方式。以人為例，A 欲與 B 對話，他需要先向 B 說「你好」，而 B 也需要回應他「你好」，接著 A 把
+他想傳達的內容給 B，B 再回應他「收到」，最後 A 向 B 說「再見」表示結束這次溝通。而如果 A 不照協議規定進行，一開始直接把訊息丟給 B，B 可能會選擇不理 A 而無法順利溝通。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r3-why-are-standards-important-for-protocols">R3. Why are standards important for protocols?&lt;/h3>
+&lt;h4 id="為什麼標準對於協議來說很重要">為什麼標準對於協議來說很重要？&lt;/h4>
+&lt;ul>
+&lt;li>標準定義了協議具體要做什麼、內容，以便創建可溝通的網路系統。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r4-list-four-access-technologies-classify-each-one-as-home-access-enterprise-access-or-wide-area-wireless-access">R4. List four access technologies. Classify each one as home access, enterprise access, or wide-area wireless access.&lt;/h3>
+&lt;h4 id="列出四種存取技術將每一種分類為家庭存取企業存取或廣域無線存取">列出四種存取技術。將每一種分類為家庭存取、企業存取或廣域無線存取。&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;ul>
+&lt;li>家庭存取：DSL、光纖&lt;/li>
+&lt;li>企業存取：Ethernet&lt;/li>
+&lt;li>廣域無線存取：3G/4G&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="r5-is-hfc-transmission-rate-dedicated-or-shared-among-users-are-collisions-possible-in-a-downstream-hfc-channel-why-or-why-not">R5. Is HFC transmission rate dedicated or shared among users? Are collisions possible in a downstream HFC channel? Why or why not?&lt;/h3>
+&lt;h4 id="hfc-傳輸速率是專用還是共享給使用者在下行-hfc-頻道中可能發生碰撞嗎為什麼">HFC 傳輸速率是專用還是共享給使用者？在下行 HFC 頻道中可能發生碰撞嗎？為什麼？&lt;/h4>
+&lt;ul>
+&lt;li>HFC 傳輸速率是共享給使用者的。下行 HFC 不會碰撞，因為 HFC 是由單源點發出，不會有碰撞的問題。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r6-what-access-network-technologies-would-be-most-suitable-for-providing-internet-access-in-rural-areas">R6. What access network technologies would be most suitable for providing internet access in rural areas?&lt;/h3>
+&lt;h4 id="什麼存取網路技術最適合在鄉村地區提供互聯網存取">什麼存取網路技術最適合在鄉村地區提供互聯網存取？&lt;/h4>
+&lt;ul>
+&lt;li>DSL、光纖到戶&lt;/li>
+&lt;/ul>
+&lt;h3 id="r7-dial-up-modems-and-dsl-both-use-the-telephone-line-a-twisted-pair-copper-cabble-as-their-transmission-medium-why-then-is-dsl-much-faster-than-dial-up-access">R7. Dial-up modems and DSL both use the telephone line (a twisted-pair copper cabble) as their transmission medium. Why then is DSL much faster than dial-up access?&lt;/h3>
+&lt;h4 id="撥號數據機和-dsl-都使用電話線雙絞線銅電纜作為傳輸媒介為什麼-dsl-比撥號訪問還快">撥號數據機和 DSL 都使用電話線（雙絞線銅電纜）作為傳輸媒介。為什麼 DSL 比撥號訪問還快？&lt;/h4>
+&lt;ul>
+&lt;li>撥接連線跟處理電話通過一樣的基礎設施。電話的頻寬很低(56 Kbps)，而 DSL 使用從家中到 DSLAM 的電話線路，不經過電信公司處理電話的基礎設施，而且 DSL 使用高頻段，所以速度比較快（24 Mbps）。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r8-what-are-some-of-the-physical-media-that-ethernet-can-run-over">R8. What are some of the physical media that Ethernet can run over?&lt;/h3>
+&lt;h4 id="以太網可以運行在哪些物理媒介上">以太網可以運行在哪些物理媒介上？&lt;/h4>
+&lt;ul>
+&lt;li>同軸電纜、光纖、雙絞線&lt;/li>
+&lt;/ul>
+&lt;h3 id="r9-hfc-dsl-and-ftth-are-all-used-for-residential-access-for-each-of-these-access-technologies-provide-a-range-of-transmission-rates-and-comment-on-whether-the-transmission-rate-is-dedicated-or-shared">R9. HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is dedicated or shared.&lt;/h3>
+&lt;h4 id="hfcdsl-和-ftth-都用於住宅接入對於這些接入技術提供一個傳輸速率範圍並討論傳輸速率是專用還是共享">HFC、DSL 和 FTTH 都用於住宅接入。對於這些接入技術，提供一個傳輸速率範圍，並討論傳輸速率是專用還是共享。&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;ul>
+&lt;li>HFC：下行 42.8 Mbps，上行 30.7 Mbps，共享&lt;/li>
+&lt;li>DSL：下行 24 Mbps，上行 3 Mbps，專用&lt;/li>
+&lt;li>FTTH：下行 100 Mbps，上行 100 Mbps，專用&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="r10-describe-the-different-wireless-technologies-you-use-during-the-day-and-their-characteristics-if-you-have-a-choice-between-multiple-technologies-why-do-you-prefer-one-over-another">R10. Describe the different wireless technologies you use during the day and their characteristics. If you have a choice between multiple technologies, why do you prefer one over another?&lt;/h3>
+&lt;h4 id="描述您在一天中使用的不同無線技術及其特性如果您可以選擇多種技術為什麼您更喜歡一種而不是另一種">描述您在一天中使用的不同無線技術及其特性。如果您可以選擇多種技術，為什麼您更喜歡一種而不是另一種？&lt;/h4>
+&lt;ul>
+&lt;li>WiFi、4G、乙太網路，WiFi 速度快，但距離短。4G 速度慢但距離遠。乙太網路速度快，但需要有線連接。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r11-suppose-there-is-exactly-one-packet-switch-between-a-sending-host-and-a-receiving-host-the-transmission-rates-between-the-sending-host-and-the-switch-and-between-the-switch-and-the-receiving-host-are-r_1-and-r_2-respectively-assuming-that-the-switch-uses-store-and-forward-packet-switching-what-is-the-total-end-to-end-delay-to-send-a-packet-of-length-l-ignore-queuing-propagation-delay-and-processing-delay">R11. Suppose there is exactly one packet switch between a sending host and a receiving host. The transmission rates between the sending host and the switch and between the switch and the receiving host are $R_1$ and $R_2$, respectively. Assuming that the switch uses store-and-forward packet switching, what is the total end-to-end delay to send a packet of length $L$? (Ignore queuing, propagation delay, and processing delay.)&lt;/h3>
+&lt;h4 id="假設在發送主機和接收主機之間有一個封包交換機發送主機和交換機之間的傳輸速率為-r_1交換機和接收主機之間的傳輸速率為-r_2假設交換機使用存儲轉發封包交換發送長度為-l-的封包的總端到端延遲是多少忽略排隊傳播延遲和處理延遲">假設在發送主機和接收主機之間有一個封包交換機。發送主機和交換機之間的傳輸速率為 $R_1$，交換機和接收主機之間的傳輸速率為 $R_2$。假設交換機使用存儲轉發封包交換，發送長度為 $L$ 的封包的總端到端延遲是多少？（忽略排隊、傳播延遲和處理延遲。）&lt;/h4>
+&lt;ul>
+&lt;li>一開始發送主機開始傳輸。在 $\frac{L}{R_1}$ 後，發送主機完成傳輸，且 router 接收到整個封包(無傳播延遲)。因為 router 已經有完整的封包了，他可以開始傳輸到接收主機，在 $\frac{L}{R_2}$ 後，接收主機接收到封包。所以總延遲為 $\frac{L}{R_1} + \frac{L}{R_2}$。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r12-what-advantage-does-a-circuit-switched-network-have-over-a-packet-switched-network-what-advantages-does-tdm-have-over-fdm-in-a-circuit-switched-network">R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network?&lt;/h3>
+&lt;h4 id="電路交換網絡相對於封包交換網絡有什麼優勢在電路交換網絡中tdm-相對於-fdm-有什麼優勢">電路交換網絡相對於封包交換網絡有什麼優勢？在電路交換網絡中，TDM 相對於 FDM 有什麼優勢？&lt;/h4>
+&lt;ul>
+&lt;li>電路交換網路保證端對端的頻寬，而封包交換網路不保證。&lt;/li>
+&lt;li>如果發生擁塞，TDM 可能只會 loss 一些資料，而 FDM 可能會 loss 全部。&lt;/li>
+&lt;li>FDM 建立連線後，占用的頻寬不能被其他連線使用，可能存在浪費的情況。&lt;/li>
+&lt;/ul>
+&lt;h3 id="r13-suppose-users-share-a-2-mbps-link-also-suppose-each-user-transmits-continuously-at-1-mbps-when-transmitting-but-each-user-transmits-only-20-percent-of-the-time-see-the-discussion-of-statistical-multiplexing-in-section-13">R13. Suppose users share a $2$ Mbps link. Also suppose each user transmits continuously at $1$ Mbps when transmitting, but each user transmits only 20 percent of the time. (See the discussion of statistical multiplexing in Section 1.3.)&lt;/h3>
+&lt;h4 id="假設用戶共用一個-2-mbps-的連線同時假設每個用戶在傳輸時連續傳輸-1-mbps但每個用戶只在-20-的時間內傳輸-參見第-13-節中對統計多路復用的討論">假設用戶共用一個 $2$ Mbps 的連線。同時假設每個用戶在傳輸時連續傳輸 $1$ Mbps，但每個用戶只在 $20$% 的時間內傳輸。 (參見第 1.3 節中對統計多路復用的討論。)&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>a. When circuit switching is used, how many users can be supported?&lt;/p></description></item></channel></rss>
