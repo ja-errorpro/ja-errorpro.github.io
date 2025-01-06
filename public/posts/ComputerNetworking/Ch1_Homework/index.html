@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 【計算機網路】CH1 作業 | ErrorPro</title>
+    <link rel='canonical' href='http://localhost:1313/posts/ComputerNetworking/Ch1_Homework/'>
+    
+    <meta name="description" content="我覺得現在在看這句話的人超電">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta property="og:url" content="http://localhost:1313/posts/ComputerNetworking/Ch1_Homework/">
+  <meta property="og:site_name" content="ErrorPro">
+  <meta property="og:title" content="【計算機網路】CH1 作業">
+  <meta property="og:description" content="Reference: Computer Networking: A Top-Down Approach, 8th Edition
+此頁面中答案不保證為正確答案，僅供參考。 CH1 作業 Review R1. What is the difference between a host and an end system? List several different types of end systems. Is a Web server an end system? Host 跟 End system 差別是什麼？列出幾種不同類型的 End system。Web Server 是 End system 嗎？ 沒有差別，Host 跟 End system 是同義詞。End system 包括 PC、Work Station、Web Server、Mail Server 等等。 R2. Describe the protocol that might be used by two people having a telephonic conversation to initiate and end the conversation, i.e., the way that they talk. 描述兩個人進行電話對話時可能使用的協定，即他們交談的方式。 協議是兩個人、政府、甚至國家在進行溝通時制定的一套溝通方式。以人為例，A 欲與 B 對話，他需要先向 B 說「你好」，而 B 也需要回應他「你好」，接著 A 把 他想傳達的內容給 B，B 再回應他「收到」，最後 A 向 B 說「再見」表示結束這次溝通。而如果 A 不照協議規定進行，一開始直接把訊息丟給 B，B 可能會選擇不理 A 而無法順利溝通。 R3. Why are standards important for protocols? 為什麼標準對於協議來說很重要？ 標準定義了協議具體要做什麼、內容，以便創建可溝通的網路系統。 R4. List four access technologies. Classify each one as home access, enterprise access, or wide-area wireless access. 列出四種存取技術。將每一種分類為家庭存取、企業存取或廣域無線存取。 家庭存取：DSL、光纖 企業存取：Ethernet 廣域無線存取：3G/4G R5. Is HFC transmission rate dedicated or shared among users? Are collisions possible in a downstream HFC channel? Why or why not? HFC 傳輸速率是專用還是共享給使用者？在下行 HFC 頻道中可能發生碰撞嗎？為什麼？ HFC 傳輸速率是共享給使用者的。下行 HFC 不會碰撞，因為 HFC 是由單源點發出，不會有碰撞的問題。 R6. What access network technologies would be most suitable for providing internet access in rural areas? 什麼存取網路技術最適合在鄉村地區提供互聯網存取？ DSL、光纖到戶 R7. Dial-up modems and DSL both use the telephone line (a twisted-pair copper cabble) as their transmission medium. Why then is DSL much faster than dial-up access? 撥號數據機和 DSL 都使用電話線（雙絞線銅電纜）作為傳輸媒介。為什麼 DSL 比撥號訪問還快？ 撥接連線跟處理電話通過一樣的基礎設施。電話的頻寬很低(56 Kbps)，而 DSL 使用從家中到 DSLAM 的電話線路，不經過電信公司處理電話的基礎設施，而且 DSL 使用高頻段，所以速度比較快（24 Mbps）。 R8. What are some of the physical media that Ethernet can run over? 以太網可以運行在哪些物理媒介上？ 同軸電纜、光纖、雙絞線 R9. HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is dedicated or shared. HFC、DSL 和 FTTH 都用於住宅接入。對於這些接入技術，提供一個傳輸速率範圍，並討論傳輸速率是專用還是共享。 HFC：下行 42.8 Mbps，上行 30.7 Mbps，共享 DSL：下行 24 Mbps，上行 3 Mbps，專用 FTTH：下行 100 Mbps，上行 100 Mbps，專用 R10. Describe the different wireless technologies you use during the day and their characteristics. If you have a choice between multiple technologies, why do you prefer one over another? 描述您在一天中使用的不同無線技術及其特性。如果您可以選擇多種技術，為什麼您更喜歡一種而不是另一種？ WiFi、4G、乙太網路，WiFi 速度快，但距離短。4G 速度慢但距離遠。乙太網路速度快，但需要有線連接。 R11. Suppose there is exactly one packet switch between a sending host and a receiving host. The transmission rates between the sending host and the switch and between the switch and the receiving host are $R_1$ and $R_2$, respectively. Assuming that the switch uses store-and-forward packet switching, what is the total end-to-end delay to send a packet of length $L$? (Ignore queuing, propagation delay, and processing delay.) 假設在發送主機和接收主機之間有一個封包交換機。發送主機和交換機之間的傳輸速率為 $R_1$，交換機和接收主機之間的傳輸速率為 $R_2$。假設交換機使用存儲轉發封包交換，發送長度為 $L$ 的封包的總端到端延遲是多少？（忽略排隊、傳播延遲和處理延遲。） 一開始發送主機開始傳輸。在 $\frac{L}{R_1}$ 後，發送主機完成傳輸，且 router 接收到整個封包(無傳播延遲)。因為 router 已經有完整的封包了，他可以開始傳輸到接收主機，在 $\frac{L}{R_2}$ 後，接收主機接收到封包。所以總延遲為 $\frac{L}{R_1} &#43; \frac{L}{R_2}$。 R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network? 電路交換網絡相對於封包交換網絡有什麼優勢？在電路交換網絡中，TDM 相對於 FDM 有什麼優勢？ 電路交換網路保證端對端的頻寬，而封包交換網路不保證。 如果發生擁塞，TDM 可能只會 loss 一些資料，而 FDM 可能會 loss 全部。 FDM 建立連線後，占用的頻寬不能被其他連線使用，可能存在浪費的情況。 R13. Suppose users share a $2$ Mbps link. Also suppose each user transmits continuously at $1$ Mbps when transmitting, but each user transmits only 20 percent of the time. (See the discussion of statistical multiplexing in Section 1.3.) 假設用戶共用一個 $2$ Mbps 的連線。同時假設每個用戶在傳輸時連續傳輸 $1$ Mbps，但每個用戶只在 $20$% 的時間內傳輸。 (參見第 1.3 節中對統計多路復用的討論。) a. When circuit switching is used, how many users can be supported?">
+  <meta property="og:locale" content="zh_Hant_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:tag" content="Computer Networking">
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="【計算機網路】CH1 作業">
+  <meta name="twitter:description" content="Reference: Computer Networking: A Top-Down Approach, 8th Edition
+此頁面中答案不保證為正確答案，僅供參考。 CH1 作業 Review R1. What is the difference between a host and an end system? List several different types of end systems. Is a Web server an end system? Host 跟 End system 差別是什麼？列出幾種不同類型的 End system。Web Server 是 End system 嗎？ 沒有差別，Host 跟 End system 是同義詞。End system 包括 PC、Work Station、Web Server、Mail Server 等等。 R2. Describe the protocol that might be used by two people having a telephonic conversation to initiate and end the conversation, i.e., the way that they talk. 描述兩個人進行電話對話時可能使用的協定，即他們交談的方式。 協議是兩個人、政府、甚至國家在進行溝通時制定的一套溝通方式。以人為例，A 欲與 B 對話，他需要先向 B 說「你好」，而 B 也需要回應他「你好」，接著 A 把 他想傳達的內容給 B，B 再回應他「收到」，最後 A 向 B 說「再見」表示結束這次溝通。而如果 A 不照協議規定進行，一開始直接把訊息丟給 B，B 可能會選擇不理 A 而無法順利溝通。 R3. Why are standards important for protocols? 為什麼標準對於協議來說很重要？ 標準定義了協議具體要做什麼、內容，以便創建可溝通的網路系統。 R4. List four access technologies. Classify each one as home access, enterprise access, or wide-area wireless access. 列出四種存取技術。將每一種分類為家庭存取、企業存取或廣域無線存取。 家庭存取：DSL、光纖 企業存取：Ethernet 廣域無線存取：3G/4G R5. Is HFC transmission rate dedicated or shared among users? Are collisions possible in a downstream HFC channel? Why or why not? HFC 傳輸速率是專用還是共享給使用者？在下行 HFC 頻道中可能發生碰撞嗎？為什麼？ HFC 傳輸速率是共享給使用者的。下行 HFC 不會碰撞，因為 HFC 是由單源點發出，不會有碰撞的問題。 R6. What access network technologies would be most suitable for providing internet access in rural areas? 什麼存取網路技術最適合在鄉村地區提供互聯網存取？ DSL、光纖到戶 R7. Dial-up modems and DSL both use the telephone line (a twisted-pair copper cabble) as their transmission medium. Why then is DSL much faster than dial-up access? 撥號數據機和 DSL 都使用電話線（雙絞線銅電纜）作為傳輸媒介。為什麼 DSL 比撥號訪問還快？ 撥接連線跟處理電話通過一樣的基礎設施。電話的頻寬很低(56 Kbps)，而 DSL 使用從家中到 DSLAM 的電話線路，不經過電信公司處理電話的基礎設施，而且 DSL 使用高頻段，所以速度比較快（24 Mbps）。 R8. What are some of the physical media that Ethernet can run over? 以太網可以運行在哪些物理媒介上？ 同軸電纜、光纖、雙絞線 R9. HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is dedicated or shared. HFC、DSL 和 FTTH 都用於住宅接入。對於這些接入技術，提供一個傳輸速率範圍，並討論傳輸速率是專用還是共享。 HFC：下行 42.8 Mbps，上行 30.7 Mbps，共享 DSL：下行 24 Mbps，上行 3 Mbps，專用 FTTH：下行 100 Mbps，上行 100 Mbps，專用 R10. Describe the different wireless technologies you use during the day and their characteristics. If you have a choice between multiple technologies, why do you prefer one over another? 描述您在一天中使用的不同無線技術及其特性。如果您可以選擇多種技術，為什麼您更喜歡一種而不是另一種？ WiFi、4G、乙太網路，WiFi 速度快，但距離短。4G 速度慢但距離遠。乙太網路速度快，但需要有線連接。 R11. Suppose there is exactly one packet switch between a sending host and a receiving host. The transmission rates between the sending host and the switch and between the switch and the receiving host are $R_1$ and $R_2$, respectively. Assuming that the switch uses store-and-forward packet switching, what is the total end-to-end delay to send a packet of length $L$? (Ignore queuing, propagation delay, and processing delay.) 假設在發送主機和接收主機之間有一個封包交換機。發送主機和交換機之間的傳輸速率為 $R_1$，交換機和接收主機之間的傳輸速率為 $R_2$。假設交換機使用存儲轉發封包交換，發送長度為 $L$ 的封包的總端到端延遲是多少？（忽略排隊、傳播延遲和處理延遲。） 一開始發送主機開始傳輸。在 $\frac{L}{R_1}$ 後，發送主機完成傳輸，且 router 接收到整個封包(無傳播延遲)。因為 router 已經有完整的封包了，他可以開始傳輸到接收主機，在 $\frac{L}{R_2}$ 後，接收主機接收到封包。所以總延遲為 $\frac{L}{R_1} &#43; \frac{L}{R_2}$。 R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network? 電路交換網絡相對於封包交換網絡有什麼優勢？在電路交換網絡中，TDM 相對於 FDM 有什麼優勢？ 電路交換網路保證端對端的頻寬，而封包交換網路不保證。 如果發生擁塞，TDM 可能只會 loss 一些資料，而 FDM 可能會 loss 全部。 FDM 建立連線後，占用的頻寬不能被其他連線使用，可能存在浪費的情況。 R13. Suppose users share a $2$ Mbps link. Also suppose each user transmits continuously at $1$ Mbps when transmitting, but each user transmits only 20 percent of the time. (See the discussion of statistical multiplexing in Section 1.3.) 假設用戶共用一個 $2$ Mbps 的連線。同時假設每個用戶在傳輸時連續傳輸 $1$ Mbps，但每個用戶只在 $20$% 的時間內傳輸。 (參見第 1.3 節中對統計多路復用的討論。) a. When circuit switching is used, how many users can be supported?">
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg==">
+
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/style-dark.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
+    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+    
+<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LP899FV1TS');
+</script>
+    
+    
+</head>
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" http://localhost:1313/about/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="http://localhost:1313/posts/2021/pythongame/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&text=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&title=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&is_video=false&description=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&title=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&title=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&name=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad&description=%3cp%3eReference%3a%20Computer%20Networking%3a%20A%20Top-Down%20Approach%2c%208th%20Edition%3c%2fp%3e%0a%3ch1%20id%3d%22%e6%ad%a4%e9%a0%81%e9%9d%a2%e4%b8%ad%e7%ad%94%e6%a1%88%e4%b8%8d%e4%bf%9d%e8%ad%89%e7%82%ba%e6%ad%a3%e7%a2%ba%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%22%3e%e6%ad%a4%e9%a0%81%e9%9d%a2%e4%b8%ad%e7%ad%94%e6%a1%88%e4%b8%8d%e4%bf%9d%e8%ad%89%e7%82%ba%e6%ad%a3%e7%a2%ba%e7%ad%94%e6%a1%88%ef%bc%8c%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%e3%80%82%3c%2fh1%3e%0a%3ch1%20id%3d%22ch1-%e4%bd%9c%e6%a5%ad%22%3eCH1%20%e4%bd%9c%e6%a5%ad%3c%2fh1%3e%0a%3ch2%20id%3d%22review%22%3eReview%3c%2fh2%3e%0a%3ch3%20id%3d%22r1-what-is-the-difference-between-a-host-and-an-end-system-list-several-different-types-of-end-systems-is-a-web-server-an-end-system%22%3eR1.%20What%20is%20the%20difference%20between%20a%20host%20and%20an%20end%20system%3f%20List%20several%20different%20types%20of%20end%20systems.%20Is%20a%20Web%20server%20an%20end%20system%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22host-%e8%b7%9f-end-system-%e5%b7%ae%e5%88%a5%e6%98%af%e4%bb%80%e9%ba%bc%e5%88%97%e5%87%ba%e5%b9%be%e7%a8%ae%e4%b8%8d%e5%90%8c%e9%a1%9e%e5%9e%8b%e7%9a%84-end-systemweb-server-%e6%98%af-end-system-%e5%97%8e%22%3eHost%20%e8%b7%9f%20End%20system%20%e5%b7%ae%e5%88%a5%e6%98%af%e4%bb%80%e9%ba%bc%ef%bc%9f%e5%88%97%e5%87%ba%e5%b9%be%e7%a8%ae%e4%b8%8d%e5%90%8c%e9%a1%9e%e5%9e%8b%e7%9a%84%20End%20system%e3%80%82Web%20Server%20%e6%98%af%20End%20system%20%e5%97%8e%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e6%b2%92%e6%9c%89%e5%b7%ae%e5%88%a5%ef%bc%8cHost%20%e8%b7%9f%20End%20system%20%e6%98%af%e5%90%8c%e7%be%a9%e8%a9%9e%e3%80%82End%20system%20%e5%8c%85%e6%8b%ac%20PC%e3%80%81Work%20Station%e3%80%81Web%20Server%e3%80%81Mail%20Server%20%e7%ad%89%e7%ad%89%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r2-describe-the-protocol-that-might-be-used-by-two-people-having-a-telephonic-conversation-to-initiate-and-end-the-conversation-ie-the-way-that-they-talk%22%3eR2.%20Describe%20the%20protocol%20that%20might%20be%20used%20by%20two%20people%20having%20a%20telephonic%20conversation%20to%20initiate%20and%20end%20the%20conversation%2c%20i.e.%2c%20the%20way%20that%20they%20talk.%3c%2fh3%3e%0a%3ch4%20id%3d%22%e6%8f%8f%e8%bf%b0%e5%85%a9%e5%80%8b%e4%ba%ba%e9%80%b2%e8%a1%8c%e9%9b%bb%e8%a9%b1%e5%b0%8d%e8%a9%b1%e6%99%82%e5%8f%af%e8%83%bd%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8d%94%e5%ae%9a%e5%8d%b3%e4%bb%96%e5%80%91%e4%ba%a4%e8%ab%87%e7%9a%84%e6%96%b9%e5%bc%8f%22%3e%e6%8f%8f%e8%bf%b0%e5%85%a9%e5%80%8b%e4%ba%ba%e9%80%b2%e8%a1%8c%e9%9b%bb%e8%a9%b1%e5%b0%8d%e8%a9%b1%e6%99%82%e5%8f%af%e8%83%bd%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8d%94%e5%ae%9a%ef%bc%8c%e5%8d%b3%e4%bb%96%e5%80%91%e4%ba%a4%e8%ab%87%e7%9a%84%e6%96%b9%e5%bc%8f%e3%80%82%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e5%8d%94%e8%ad%b0%e6%98%af%e5%85%a9%e5%80%8b%e4%ba%ba%e3%80%81%e6%94%bf%e5%ba%9c%e3%80%81%e7%94%9a%e8%87%b3%e5%9c%8b%e5%ae%b6%e5%9c%a8%e9%80%b2%e8%a1%8c%e6%ba%9d%e9%80%9a%e6%99%82%e5%88%b6%e5%ae%9a%e7%9a%84%e4%b8%80%e5%a5%97%e6%ba%9d%e9%80%9a%e6%96%b9%e5%bc%8f%e3%80%82%e4%bb%a5%e4%ba%ba%e7%82%ba%e4%be%8b%ef%bc%8cA%20%e6%ac%b2%e8%88%87%20B%20%e5%b0%8d%e8%a9%b1%ef%bc%8c%e4%bb%96%e9%9c%80%e8%a6%81%e5%85%88%e5%90%91%20B%20%e8%aa%aa%e3%80%8c%e4%bd%a0%e5%a5%bd%e3%80%8d%ef%bc%8c%e8%80%8c%20B%20%e4%b9%9f%e9%9c%80%e8%a6%81%e5%9b%9e%e6%87%89%e4%bb%96%e3%80%8c%e4%bd%a0%e5%a5%bd%e3%80%8d%ef%bc%8c%e6%8e%a5%e8%91%97%20A%20%e6%8a%8a%0a%e4%bb%96%e6%83%b3%e5%82%b3%e9%81%94%e7%9a%84%e5%85%a7%e5%ae%b9%e7%b5%a6%20B%ef%bc%8cB%20%e5%86%8d%e5%9b%9e%e6%87%89%e4%bb%96%e3%80%8c%e6%94%b6%e5%88%b0%e3%80%8d%ef%bc%8c%e6%9c%80%e5%be%8c%20A%20%e5%90%91%20B%20%e8%aa%aa%e3%80%8c%e5%86%8d%e8%a6%8b%e3%80%8d%e8%a1%a8%e7%a4%ba%e7%b5%90%e6%9d%9f%e9%80%99%e6%ac%a1%e6%ba%9d%e9%80%9a%e3%80%82%e8%80%8c%e5%a6%82%e6%9e%9c%20A%20%e4%b8%8d%e7%85%a7%e5%8d%94%e8%ad%b0%e8%a6%8f%e5%ae%9a%e9%80%b2%e8%a1%8c%ef%bc%8c%e4%b8%80%e9%96%8b%e5%a7%8b%e7%9b%b4%e6%8e%a5%e6%8a%8a%e8%a8%8a%e6%81%af%e4%b8%9f%e7%b5%a6%20B%ef%bc%8cB%20%e5%8f%af%e8%83%bd%e6%9c%83%e9%81%b8%e6%93%87%e4%b8%8d%e7%90%86%20A%20%e8%80%8c%e7%84%a1%e6%b3%95%e9%a0%86%e5%88%a9%e6%ba%9d%e9%80%9a%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r3-why-are-standards-important-for-protocols%22%3eR3.%20Why%20are%20standards%20important%20for%20protocols%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e7%82%ba%e4%bb%80%e9%ba%bc%e6%a8%99%e6%ba%96%e5%b0%8d%e6%96%bc%e5%8d%94%e8%ad%b0%e4%be%86%e8%aa%aa%e5%be%88%e9%87%8d%e8%a6%81%22%3e%e7%82%ba%e4%bb%80%e9%ba%bc%e6%a8%99%e6%ba%96%e5%b0%8d%e6%96%bc%e5%8d%94%e8%ad%b0%e4%be%86%e8%aa%aa%e5%be%88%e9%87%8d%e8%a6%81%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e6%a8%99%e6%ba%96%e5%ae%9a%e7%be%a9%e4%ba%86%e5%8d%94%e8%ad%b0%e5%85%b7%e9%ab%94%e8%a6%81%e5%81%9a%e4%bb%80%e9%ba%bc%e3%80%81%e5%85%a7%e5%ae%b9%ef%bc%8c%e4%bb%a5%e4%be%bf%e5%89%b5%e5%bb%ba%e5%8f%af%e6%ba%9d%e9%80%9a%e7%9a%84%e7%b6%b2%e8%b7%af%e7%b3%bb%e7%b5%b1%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r4-list-four-access-technologies-classify-each-one-as-home-access-enterprise-access-or-wide-area-wireless-access%22%3eR4.%20List%20four%20access%20technologies.%20Classify%20each%20one%20as%20home%20access%2c%20enterprise%20access%2c%20or%20wide-area%20wireless%20access.%3c%2fh3%3e%0a%3ch4%20id%3d%22%e5%88%97%e5%87%ba%e5%9b%9b%e7%a8%ae%e5%ad%98%e5%8f%96%e6%8a%80%e8%a1%93%e5%b0%87%e6%af%8f%e4%b8%80%e7%a8%ae%e5%88%86%e9%a1%9e%e7%82%ba%e5%ae%b6%e5%ba%ad%e5%ad%98%e5%8f%96%e4%bc%81%e6%a5%ad%e5%ad%98%e5%8f%96%e6%88%96%e5%bb%a3%e5%9f%9f%e7%84%a1%e7%b7%9a%e5%ad%98%e5%8f%96%22%3e%e5%88%97%e5%87%ba%e5%9b%9b%e7%a8%ae%e5%ad%98%e5%8f%96%e6%8a%80%e8%a1%93%e3%80%82%e5%b0%87%e6%af%8f%e4%b8%80%e7%a8%ae%e5%88%86%e9%a1%9e%e7%82%ba%e5%ae%b6%e5%ba%ad%e5%ad%98%e5%8f%96%e3%80%81%e4%bc%81%e6%a5%ad%e5%ad%98%e5%8f%96%e6%88%96%e5%bb%a3%e5%9f%9f%e7%84%a1%e7%b7%9a%e5%ad%98%e5%8f%96%e3%80%82%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%0a%3cul%3e%0a%3cli%3e%e5%ae%b6%e5%ba%ad%e5%ad%98%e5%8f%96%ef%bc%9aDSL%e3%80%81%e5%85%89%e7%ba%96%3c%2fli%3e%0a%3cli%3e%e4%bc%81%e6%a5%ad%e5%ad%98%e5%8f%96%ef%bc%9aEthernet%3c%2fli%3e%0a%3cli%3e%e5%bb%a3%e5%9f%9f%e7%84%a1%e7%b7%9a%e5%ad%98%e5%8f%96%ef%bc%9a3G%2f4G%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r5-is-hfc-transmission-rate-dedicated-or-shared-among-users-are-collisions-possible-in-a-downstream-hfc-channel-why-or-why-not%22%3eR5.%20Is%20HFC%20transmission%20rate%20dedicated%20or%20shared%20among%20users%3f%20Are%20collisions%20possible%20in%20a%20downstream%20HFC%20channel%3f%20Why%20or%20why%20not%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22hfc-%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%e7%b5%a6%e4%bd%bf%e7%94%a8%e8%80%85%e5%9c%a8%e4%b8%8b%e8%a1%8c-hfc-%e9%a0%bb%e9%81%93%e4%b8%ad%e5%8f%af%e8%83%bd%e7%99%bc%e7%94%9f%e7%a2%b0%e6%92%9e%e5%97%8e%e7%82%ba%e4%bb%80%e9%ba%bc%22%3eHFC%20%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%e7%b5%a6%e4%bd%bf%e7%94%a8%e8%80%85%ef%bc%9f%e5%9c%a8%e4%b8%8b%e8%a1%8c%20HFC%20%e9%a0%bb%e9%81%93%e4%b8%ad%e5%8f%af%e8%83%bd%e7%99%bc%e7%94%9f%e7%a2%b0%e6%92%9e%e5%97%8e%ef%bc%9f%e7%82%ba%e4%bb%80%e9%ba%bc%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3eHFC%20%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%85%b1%e4%ba%ab%e7%b5%a6%e4%bd%bf%e7%94%a8%e8%80%85%e7%9a%84%e3%80%82%e4%b8%8b%e8%a1%8c%20HFC%20%e4%b8%8d%e6%9c%83%e7%a2%b0%e6%92%9e%ef%bc%8c%e5%9b%a0%e7%82%ba%20HFC%20%e6%98%af%e7%94%b1%e5%96%ae%e6%ba%90%e9%bb%9e%e7%99%bc%e5%87%ba%ef%bc%8c%e4%b8%8d%e6%9c%83%e6%9c%89%e7%a2%b0%e6%92%9e%e7%9a%84%e5%95%8f%e9%a1%8c%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r6-what-access-network-technologies-would-be-most-suitable-for-providing-internet-access-in-rural-areas%22%3eR6.%20What%20access%20network%20technologies%20would%20be%20most%20suitable%20for%20providing%20internet%20access%20in%20rural%20areas%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e4%bb%80%e9%ba%bc%e5%ad%98%e5%8f%96%e7%b6%b2%e8%b7%af%e6%8a%80%e8%a1%93%e6%9c%80%e9%81%a9%e5%90%88%e5%9c%a8%e9%84%89%e6%9d%91%e5%9c%b0%e5%8d%80%e6%8f%90%e4%be%9b%e4%ba%92%e8%81%af%e7%b6%b2%e5%ad%98%e5%8f%96%22%3e%e4%bb%80%e9%ba%bc%e5%ad%98%e5%8f%96%e7%b6%b2%e8%b7%af%e6%8a%80%e8%a1%93%e6%9c%80%e9%81%a9%e5%90%88%e5%9c%a8%e9%84%89%e6%9d%91%e5%9c%b0%e5%8d%80%e6%8f%90%e4%be%9b%e4%ba%92%e8%81%af%e7%b6%b2%e5%ad%98%e5%8f%96%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3eDSL%e3%80%81%e5%85%89%e7%ba%96%e5%88%b0%e6%88%b6%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r7-dial-up-modems-and-dsl-both-use-the-telephone-line-a-twisted-pair-copper-cabble-as-their-transmission-medium-why-then-is-dsl-much-faster-than-dial-up-access%22%3eR7.%20Dial-up%20modems%20and%20DSL%20both%20use%20the%20telephone%20line%20%28a%20twisted-pair%20copper%20cabble%29%20as%20their%20transmission%20medium.%20Why%20then%20is%20DSL%20much%20faster%20than%20dial-up%20access%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e6%92%a5%e8%99%9f%e6%95%b8%e6%93%9a%e6%a9%9f%e5%92%8c-dsl-%e9%83%bd%e4%bd%bf%e7%94%a8%e9%9b%bb%e8%a9%b1%e7%b7%9a%e9%9b%99%e7%b5%9e%e7%b7%9a%e9%8a%85%e9%9b%bb%e7%ba%9c%e4%bd%9c%e7%82%ba%e5%82%b3%e8%bc%b8%e5%aa%92%e4%bb%8b%e7%82%ba%e4%bb%80%e9%ba%bc-dsl-%e6%af%94%e6%92%a5%e8%99%9f%e8%a8%aa%e5%95%8f%e9%82%84%e5%bf%ab%22%3e%e6%92%a5%e8%99%9f%e6%95%b8%e6%93%9a%e6%a9%9f%e5%92%8c%20DSL%20%e9%83%bd%e4%bd%bf%e7%94%a8%e9%9b%bb%e8%a9%b1%e7%b7%9a%ef%bc%88%e9%9b%99%e7%b5%9e%e7%b7%9a%e9%8a%85%e9%9b%bb%e7%ba%9c%ef%bc%89%e4%bd%9c%e7%82%ba%e5%82%b3%e8%bc%b8%e5%aa%92%e4%bb%8b%e3%80%82%e7%82%ba%e4%bb%80%e9%ba%bc%20DSL%20%e6%af%94%e6%92%a5%e8%99%9f%e8%a8%aa%e5%95%8f%e9%82%84%e5%bf%ab%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e6%92%a5%e6%8e%a5%e9%80%a3%e7%b7%9a%e8%b7%9f%e8%99%95%e7%90%86%e9%9b%bb%e8%a9%b1%e9%80%9a%e9%81%8e%e4%b8%80%e6%a8%a3%e7%9a%84%e5%9f%ba%e7%a4%8e%e8%a8%ad%e6%96%bd%e3%80%82%e9%9b%bb%e8%a9%b1%e7%9a%84%e9%a0%bb%e5%af%ac%e5%be%88%e4%bd%8e%2856%20Kbps%29%ef%bc%8c%e8%80%8c%20DSL%20%e4%bd%bf%e7%94%a8%e5%be%9e%e5%ae%b6%e4%b8%ad%e5%88%b0%20DSLAM%20%e7%9a%84%e9%9b%bb%e8%a9%b1%e7%b7%9a%e8%b7%af%ef%bc%8c%e4%b8%8d%e7%b6%93%e9%81%8e%e9%9b%bb%e4%bf%a1%e5%85%ac%e5%8f%b8%e8%99%95%e7%90%86%e9%9b%bb%e8%a9%b1%e7%9a%84%e5%9f%ba%e7%a4%8e%e8%a8%ad%e6%96%bd%ef%bc%8c%e8%80%8c%e4%b8%94%20DSL%20%e4%bd%bf%e7%94%a8%e9%ab%98%e9%a0%bb%e6%ae%b5%ef%bc%8c%e6%89%80%e4%bb%a5%e9%80%9f%e5%ba%a6%e6%af%94%e8%bc%83%e5%bf%ab%ef%bc%8824%20Mbps%ef%bc%89%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r8-what-are-some-of-the-physical-media-that-ethernet-can-run-over%22%3eR8.%20What%20are%20some%20of%20the%20physical%20media%20that%20Ethernet%20can%20run%20over%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e4%bb%a5%e5%a4%aa%e7%b6%b2%e5%8f%af%e4%bb%a5%e9%81%8b%e8%a1%8c%e5%9c%a8%e5%93%aa%e4%ba%9b%e7%89%a9%e7%90%86%e5%aa%92%e4%bb%8b%e4%b8%8a%22%3e%e4%bb%a5%e5%a4%aa%e7%b6%b2%e5%8f%af%e4%bb%a5%e9%81%8b%e8%a1%8c%e5%9c%a8%e5%93%aa%e4%ba%9b%e7%89%a9%e7%90%86%e5%aa%92%e4%bb%8b%e4%b8%8a%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e5%90%8c%e8%bb%b8%e9%9b%bb%e7%ba%9c%e3%80%81%e5%85%89%e7%ba%96%e3%80%81%e9%9b%99%e7%b5%9e%e7%b7%9a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r9-hfc-dsl-and-ftth-are-all-used-for-residential-access-for-each-of-these-access-technologies-provide-a-range-of-transmission-rates-and-comment-on-whether-the-transmission-rate-is-dedicated-or-shared%22%3eR9.%20HFC%2c%20DSL%2c%20and%20FTTH%20are%20all%20used%20for%20residential%20access.%20For%20each%20of%20these%20access%20technologies%2c%20provide%20a%20range%20of%20transmission%20rates%20and%20comment%20on%20whether%20the%20transmission%20rate%20is%20dedicated%20or%20shared.%3c%2fh3%3e%0a%3ch4%20id%3d%22hfcdsl-%e5%92%8c-ftth-%e9%83%bd%e7%94%a8%e6%96%bc%e4%bd%8f%e5%ae%85%e6%8e%a5%e5%85%a5%e5%b0%8d%e6%96%bc%e9%80%99%e4%ba%9b%e6%8e%a5%e5%85%a5%e6%8a%80%e8%a1%93%e6%8f%90%e4%be%9b%e4%b8%80%e5%80%8b%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%af%84%e5%9c%8d%e4%b8%a6%e8%a8%8e%e8%ab%96%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%22%3eHFC%e3%80%81DSL%20%e5%92%8c%20FTTH%20%e9%83%bd%e7%94%a8%e6%96%bc%e4%bd%8f%e5%ae%85%e6%8e%a5%e5%85%a5%e3%80%82%e5%b0%8d%e6%96%bc%e9%80%99%e4%ba%9b%e6%8e%a5%e5%85%a5%e6%8a%80%e8%a1%93%ef%bc%8c%e6%8f%90%e4%be%9b%e4%b8%80%e5%80%8b%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%af%84%e5%9c%8d%ef%bc%8c%e4%b8%a6%e8%a8%8e%e8%ab%96%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%e3%80%82%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%0a%3cul%3e%0a%3cli%3eHFC%ef%bc%9a%e4%b8%8b%e8%a1%8c%2042.8%20Mbps%ef%bc%8c%e4%b8%8a%e8%a1%8c%2030.7%20Mbps%ef%bc%8c%e5%85%b1%e4%ba%ab%3c%2fli%3e%0a%3cli%3eDSL%ef%bc%9a%e4%b8%8b%e8%a1%8c%2024%20Mbps%ef%bc%8c%e4%b8%8a%e8%a1%8c%203%20Mbps%ef%bc%8c%e5%b0%88%e7%94%a8%3c%2fli%3e%0a%3cli%3eFTTH%ef%bc%9a%e4%b8%8b%e8%a1%8c%20100%20Mbps%ef%bc%8c%e4%b8%8a%e8%a1%8c%20100%20Mbps%ef%bc%8c%e5%b0%88%e7%94%a8%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r10-describe-the-different-wireless-technologies-you-use-during-the-day-and-their-characteristics-if-you-have-a-choice-between-multiple-technologies-why-do-you-prefer-one-over-another%22%3eR10.%20Describe%20the%20different%20wireless%20technologies%20you%20use%20during%20the%20day%20and%20their%20characteristics.%20If%20you%20have%20a%20choice%20between%20multiple%20technologies%2c%20why%20do%20you%20prefer%20one%20over%20another%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e6%8f%8f%e8%bf%b0%e6%82%a8%e5%9c%a8%e4%b8%80%e5%a4%a9%e4%b8%ad%e4%bd%bf%e7%94%a8%e7%9a%84%e4%b8%8d%e5%90%8c%e7%84%a1%e7%b7%9a%e6%8a%80%e8%a1%93%e5%8f%8a%e5%85%b6%e7%89%b9%e6%80%a7%e5%a6%82%e6%9e%9c%e6%82%a8%e5%8f%af%e4%bb%a5%e9%81%b8%e6%93%87%e5%a4%9a%e7%a8%ae%e6%8a%80%e8%a1%93%e7%82%ba%e4%bb%80%e9%ba%bc%e6%82%a8%e6%9b%b4%e5%96%9c%e6%ad%a1%e4%b8%80%e7%a8%ae%e8%80%8c%e4%b8%8d%e6%98%af%e5%8f%a6%e4%b8%80%e7%a8%ae%22%3e%e6%8f%8f%e8%bf%b0%e6%82%a8%e5%9c%a8%e4%b8%80%e5%a4%a9%e4%b8%ad%e4%bd%bf%e7%94%a8%e7%9a%84%e4%b8%8d%e5%90%8c%e7%84%a1%e7%b7%9a%e6%8a%80%e8%a1%93%e5%8f%8a%e5%85%b6%e7%89%b9%e6%80%a7%e3%80%82%e5%a6%82%e6%9e%9c%e6%82%a8%e5%8f%af%e4%bb%a5%e9%81%b8%e6%93%87%e5%a4%9a%e7%a8%ae%e6%8a%80%e8%a1%93%ef%bc%8c%e7%82%ba%e4%bb%80%e9%ba%bc%e6%82%a8%e6%9b%b4%e5%96%9c%e6%ad%a1%e4%b8%80%e7%a8%ae%e8%80%8c%e4%b8%8d%e6%98%af%e5%8f%a6%e4%b8%80%e7%a8%ae%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3eWiFi%e3%80%814G%e3%80%81%e4%b9%99%e5%a4%aa%e7%b6%b2%e8%b7%af%ef%bc%8cWiFi%20%e9%80%9f%e5%ba%a6%e5%bf%ab%ef%bc%8c%e4%bd%86%e8%b7%9d%e9%9b%a2%e7%9f%ad%e3%80%824G%20%e9%80%9f%e5%ba%a6%e6%85%a2%e4%bd%86%e8%b7%9d%e9%9b%a2%e9%81%a0%e3%80%82%e4%b9%99%e5%a4%aa%e7%b6%b2%e8%b7%af%e9%80%9f%e5%ba%a6%e5%bf%ab%ef%bc%8c%e4%bd%86%e9%9c%80%e8%a6%81%e6%9c%89%e7%b7%9a%e9%80%a3%e6%8e%a5%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r11-suppose-there-is-exactly-one-packet-switch-between-a-sending-host-and-a-receiving-host-the-transmission-rates-between-the-sending-host-and-the-switch-and-between-the-switch-and-the-receiving-host-are-r_1-and-r_2-respectively-assuming-that-the-switch-uses-store-and-forward-packet-switching-what-is-the-total-end-to-end-delay-to-send-a-packet-of-length-l-ignore-queuing-propagation-delay-and-processing-delay%22%3eR11.%20Suppose%20there%20is%20exactly%20one%20packet%20switch%20between%20a%20sending%20host%20and%20a%20receiving%20host.%20The%20transmission%20rates%20between%20the%20sending%20host%20and%20the%20switch%20and%20between%20the%20switch%20and%20the%20receiving%20host%20are%20%24R_1%24%20and%20%24R_2%24%2c%20respectively.%20Assuming%20that%20the%20switch%20uses%20store-and-forward%20packet%20switching%2c%20what%20is%20the%20total%20end-to-end%20delay%20to%20send%20a%20packet%20of%20length%20%24L%24%3f%20%28Ignore%20queuing%2c%20propagation%20delay%2c%20and%20processing%20delay.%29%3c%2fh3%3e%0a%3ch4%20id%3d%22%e5%81%87%e8%a8%ad%e5%9c%a8%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e6%9c%89%e4%b8%80%e5%80%8b%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e6%a9%9f%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba-r_1%e4%ba%a4%e6%8f%9b%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba-r_2%e5%81%87%e8%a8%ad%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%bd%bf%e7%94%a8%e5%ad%98%e5%84%b2%e8%bd%89%e7%99%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%99%bc%e9%80%81%e9%95%b7%e5%ba%a6%e7%82%ba-l-%e7%9a%84%e5%b0%81%e5%8c%85%e7%9a%84%e7%b8%bd%e7%ab%af%e5%88%b0%e7%ab%af%e5%bb%b6%e9%81%b2%e6%98%af%e5%a4%9a%e5%b0%91%e5%bf%bd%e7%95%a5%e6%8e%92%e9%9a%8a%e5%82%b3%e6%92%ad%e5%bb%b6%e9%81%b2%e5%92%8c%e8%99%95%e7%90%86%e5%bb%b6%e9%81%b2%22%3e%e5%81%87%e8%a8%ad%e5%9c%a8%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e6%9c%89%e4%b8%80%e5%80%8b%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e6%a9%9f%e3%80%82%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba%20%24R_1%24%ef%bc%8c%e4%ba%a4%e6%8f%9b%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba%20%24R_2%24%e3%80%82%e5%81%87%e8%a8%ad%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%bd%bf%e7%94%a8%e5%ad%98%e5%84%b2%e8%bd%89%e7%99%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%ef%bc%8c%e7%99%bc%e9%80%81%e9%95%b7%e5%ba%a6%e7%82%ba%20%24L%24%20%e7%9a%84%e5%b0%81%e5%8c%85%e7%9a%84%e7%b8%bd%e7%ab%af%e5%88%b0%e7%ab%af%e5%bb%b6%e9%81%b2%e6%98%af%e5%a4%9a%e5%b0%91%ef%bc%9f%ef%bc%88%e5%bf%bd%e7%95%a5%e6%8e%92%e9%9a%8a%e3%80%81%e5%82%b3%e6%92%ad%e5%bb%b6%e9%81%b2%e5%92%8c%e8%99%95%e7%90%86%e5%bb%b6%e9%81%b2%e3%80%82%ef%bc%89%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e4%b8%80%e9%96%8b%e5%a7%8b%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e9%96%8b%e5%a7%8b%e5%82%b3%e8%bc%b8%e3%80%82%e5%9c%a8%20%24%5cfrac%7bL%7d%7bR_1%7d%24%20%e5%be%8c%ef%bc%8c%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%ae%8c%e6%88%90%e5%82%b3%e8%bc%b8%ef%bc%8c%e4%b8%94%20router%20%e6%8e%a5%e6%94%b6%e5%88%b0%e6%95%b4%e5%80%8b%e5%b0%81%e5%8c%85%28%e7%84%a1%e5%82%b3%e6%92%ad%e5%bb%b6%e9%81%b2%29%e3%80%82%e5%9b%a0%e7%82%ba%20router%20%e5%b7%b2%e7%b6%93%e6%9c%89%e5%ae%8c%e6%95%b4%e7%9a%84%e5%b0%81%e5%8c%85%e4%ba%86%ef%bc%8c%e4%bb%96%e5%8f%af%e4%bb%a5%e9%96%8b%e5%a7%8b%e5%82%b3%e8%bc%b8%e5%88%b0%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%ef%bc%8c%e5%9c%a8%20%24%5cfrac%7bL%7d%7bR_2%7d%24%20%e5%be%8c%ef%bc%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e6%8e%a5%e6%94%b6%e5%88%b0%e5%b0%81%e5%8c%85%e3%80%82%e6%89%80%e4%bb%a5%e7%b8%bd%e5%bb%b6%e9%81%b2%e7%82%ba%20%24%5cfrac%7bL%7d%7bR_1%7d%20%2b%20%5cfrac%7bL%7d%7bR_2%7d%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r12-what-advantage-does-a-circuit-switched-network-have-over-a-packet-switched-network-what-advantages-does-tdm-have-over-fdm-in-a-circuit-switched-network%22%3eR12.%20What%20advantage%20does%20a%20circuit-switched%20network%20have%20over%20a%20packet-switched%20network%3f%20What%20advantages%20does%20TDM%20have%20over%20FDM%20in%20a%20circuit-switched%20network%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e7%9b%b8%e5%b0%8d%e6%96%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%e5%9c%a8%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e4%b8%adtdm-%e7%9b%b8%e5%b0%8d%e6%96%bc-fdm-%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%22%3e%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e7%9b%b8%e5%b0%8d%e6%96%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%ef%bc%9f%e5%9c%a8%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e4%b8%ad%ef%bc%8cTDM%20%e7%9b%b8%e5%b0%8d%e6%96%bc%20FDM%20%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e8%b7%af%e4%bf%9d%e8%ad%89%e7%ab%af%e5%b0%8d%e7%ab%af%e7%9a%84%e9%a0%bb%e5%af%ac%ef%bc%8c%e8%80%8c%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%b6%b2%e8%b7%af%e4%b8%8d%e4%bf%9d%e8%ad%89%e3%80%82%3c%2fli%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e7%99%bc%e7%94%9f%e6%93%81%e5%a1%9e%ef%bc%8cTDM%20%e5%8f%af%e8%83%bd%e5%8f%aa%e6%9c%83%20loss%20%e4%b8%80%e4%ba%9b%e8%b3%87%e6%96%99%ef%bc%8c%e8%80%8c%20FDM%20%e5%8f%af%e8%83%bd%e6%9c%83%20loss%20%e5%85%a8%e9%83%a8%e3%80%82%3c%2fli%3e%0a%3cli%3eFDM%20%e5%bb%ba%e7%ab%8b%e9%80%a3%e7%b7%9a%e5%be%8c%ef%bc%8c%e5%8d%a0%e7%94%a8%e7%9a%84%e9%a0%bb%e5%af%ac%e4%b8%8d%e8%83%bd%e8%a2%ab%e5%85%b6%e4%bb%96%e9%80%a3%e7%b7%9a%e4%bd%bf%e7%94%a8%ef%bc%8c%e5%8f%af%e8%83%bd%e5%ad%98%e5%9c%a8%e6%b5%aa%e8%b2%bb%e7%9a%84%e6%83%85%e6%b3%81%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r13-suppose-users-share-a-2-mbps-link-also-suppose-each-user-transmits-continuously-at-1-mbps-when-transmitting-but-each-user-transmits-only-20-percent-of-the-time-see-the-discussion-of-statistical-multiplexing-in-section-13%22%3eR13.%20Suppose%20users%20share%20a%20%242%24%20Mbps%20link.%20Also%20suppose%20each%20user%20transmits%20continuously%20at%20%241%24%20Mbps%20when%20transmitting%2c%20but%20each%20user%20transmits%20only%2020%20percent%20of%20the%20time.%20%28See%20the%20discussion%20of%20statistical%20multiplexing%20in%20Section%201.3.%29%3c%2fh3%3e%0a%3ch4%20id%3d%22%e5%81%87%e8%a8%ad%e7%94%a8%e6%88%b6%e5%85%b1%e7%94%a8%e4%b8%80%e5%80%8b-2-mbps-%e7%9a%84%e9%80%a3%e7%b7%9a%e5%90%8c%e6%99%82%e5%81%87%e8%a8%ad%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%9c%a8%e5%82%b3%e8%bc%b8%e6%99%82%e9%80%a3%e7%ba%8c%e5%82%b3%e8%bc%b8-1-mbps%e4%bd%86%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%8f%aa%e5%9c%a8-20-%e7%9a%84%e6%99%82%e9%96%93%e5%85%a7%e5%82%b3%e8%bc%b8-%e5%8f%83%e8%a6%8b%e7%ac%ac-13-%e7%af%80%e4%b8%ad%e5%b0%8d%e7%b5%b1%e8%a8%88%e5%a4%9a%e8%b7%af%e5%be%a9%e7%94%a8%e7%9a%84%e8%a8%8e%e8%ab%96%22%3e%e5%81%87%e8%a8%ad%e7%94%a8%e6%88%b6%e5%85%b1%e7%94%a8%e4%b8%80%e5%80%8b%20%242%24%20Mbps%20%e7%9a%84%e9%80%a3%e7%b7%9a%e3%80%82%e5%90%8c%e6%99%82%e5%81%87%e8%a8%ad%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%9c%a8%e5%82%b3%e8%bc%b8%e6%99%82%e9%80%a3%e7%ba%8c%e5%82%b3%e8%bc%b8%20%241%24%20Mbps%ef%bc%8c%e4%bd%86%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%8f%aa%e5%9c%a8%20%2420%24%25%20%e7%9a%84%e6%99%82%e9%96%93%e5%85%a7%e5%82%b3%e8%bc%b8%e3%80%82%20%28%e5%8f%83%e8%a6%8b%e7%ac%ac%201.3%20%e7%af%80%e4%b8%ad%e5%b0%8d%e7%b5%b1%e8%a8%88%e5%a4%9a%e8%b7%af%e5%be%a9%e7%94%a8%e7%9a%84%e8%a8%8e%e8%ab%96%e3%80%82%29%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%0a%3cp%3ea.%20When%20circuit%20switching%20is%20used%2c%20how%20many%20users%20can%20be%20supported%3f%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&t=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#review">Review</a>
+      <ul>
+        <li><a href="#r1-what-is-the-difference-between-a-host-and-an-end-system-list-several-different-types-of-end-systems-is-a-web-server-an-end-system">R1. What is the difference between a host and an end system? List several different types of end systems. Is a Web server an end system?</a>
+          <ul>
+            <li><a href="#host-跟-end-system-差別是什麼列出幾種不同類型的-end-systemweb-server-是-end-system-嗎">Host 跟 End system 差別是什麼？列出幾種不同類型的 End system。Web Server 是 End system 嗎？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r2-describe-the-protocol-that-might-be-used-by-two-people-having-a-telephonic-conversation-to-initiate-and-end-the-conversation-ie-the-way-that-they-talk">R2. Describe the protocol that might be used by two people having a telephonic conversation to initiate and end the conversation, i.e., the way that they talk.</a>
+          <ul>
+            <li><a href="#描述兩個人進行電話對話時可能使用的協定即他們交談的方式">描述兩個人進行電話對話時可能使用的協定，即他們交談的方式。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r3-why-are-standards-important-for-protocols">R3. Why are standards important for protocols?</a>
+          <ul>
+            <li><a href="#為什麼標準對於協議來說很重要">為什麼標準對於協議來說很重要？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r4-list-four-access-technologies-classify-each-one-as-home-access-enterprise-access-or-wide-area-wireless-access">R4. List four access technologies. Classify each one as home access, enterprise access, or wide-area wireless access.</a>
+          <ul>
+            <li><a href="#列出四種存取技術將每一種分類為家庭存取企業存取或廣域無線存取">列出四種存取技術。將每一種分類為家庭存取、企業存取或廣域無線存取。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r5-is-hfc-transmission-rate-dedicated-or-shared-among-users-are-collisions-possible-in-a-downstream-hfc-channel-why-or-why-not">R5. Is HFC transmission rate dedicated or shared among users? Are collisions possible in a downstream HFC channel? Why or why not?</a>
+          <ul>
+            <li><a href="#hfc-傳輸速率是專用還是共享給使用者在下行-hfc-頻道中可能發生碰撞嗎為什麼">HFC 傳輸速率是專用還是共享給使用者？在下行 HFC 頻道中可能發生碰撞嗎？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r6-what-access-network-technologies-would-be-most-suitable-for-providing-internet-access-in-rural-areas">R6. What access network technologies would be most suitable for providing internet access in rural areas?</a>
+          <ul>
+            <li><a href="#什麼存取網路技術最適合在鄉村地區提供互聯網存取">什麼存取網路技術最適合在鄉村地區提供互聯網存取？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r7-dial-up-modems-and-dsl-both-use-the-telephone-line-a-twisted-pair-copper-cabble-as-their-transmission-medium-why-then-is-dsl-much-faster-than-dial-up-access">R7. Dial-up modems and DSL both use the telephone line (a twisted-pair copper cabble) as their transmission medium. Why then is DSL much faster than dial-up access?</a>
+          <ul>
+            <li><a href="#撥號數據機和-dsl-都使用電話線雙絞線銅電纜作為傳輸媒介為什麼-dsl-比撥號訪問還快">撥號數據機和 DSL 都使用電話線（雙絞線銅電纜）作為傳輸媒介。為什麼 DSL 比撥號訪問還快？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r8-what-are-some-of-the-physical-media-that-ethernet-can-run-over">R8. What are some of the physical media that Ethernet can run over?</a>
+          <ul>
+            <li><a href="#以太網可以運行在哪些物理媒介上">以太網可以運行在哪些物理媒介上？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r9-hfc-dsl-and-ftth-are-all-used-for-residential-access-for-each-of-these-access-technologies-provide-a-range-of-transmission-rates-and-comment-on-whether-the-transmission-rate-is-dedicated-or-shared">R9. HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is dedicated or shared.</a>
+          <ul>
+            <li><a href="#hfcdsl-和-ftth-都用於住宅接入對於這些接入技術提供一個傳輸速率範圍並討論傳輸速率是專用還是共享">HFC、DSL 和 FTTH 都用於住宅接入。對於這些接入技術，提供一個傳輸速率範圍，並討論傳輸速率是專用還是共享。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r10-describe-the-different-wireless-technologies-you-use-during-the-day-and-their-characteristics-if-you-have-a-choice-between-multiple-technologies-why-do-you-prefer-one-over-another">R10. Describe the different wireless technologies you use during the day and their characteristics. If you have a choice between multiple technologies, why do you prefer one over another?</a>
+          <ul>
+            <li><a href="#描述您在一天中使用的不同無線技術及其特性如果您可以選擇多種技術為什麼您更喜歡一種而不是另一種">描述您在一天中使用的不同無線技術及其特性。如果您可以選擇多種技術，為什麼您更喜歡一種而不是另一種？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r11-suppose-there-is-exactly-one-packet-switch-between-a-sending-host-and-a-receiving-host-the-transmission-rates-between-the-sending-host-and-the-switch-and-between-the-switch-and-the-receiving-host-are-r_1-and-r_2-respectively-assuming-that-the-switch-uses-store-and-forward-packet-switching-what-is-the-total-end-to-end-delay-to-send-a-packet-of-length-l-ignore-queuing-propagation-delay-and-processing-delay">R11. Suppose there is exactly one packet switch between a sending host and a receiving host. The transmission rates between the sending host and the switch and between the switch and the receiving host are $R_1$ and $R_2$, respectively. Assuming that the switch uses store-and-forward packet switching, what is the total end-to-end delay to send a packet of length $L$? (Ignore queuing, propagation delay, and processing delay.)</a>
+          <ul>
+            <li><a href="#假設在發送主機和接收主機之間有一個封包交換機發送主機和交換機之間的傳輸速率為-r_1交換機和接收主機之間的傳輸速率為-r_2假設交換機使用存儲轉發封包交換發送長度為-l-的封包的總端到端延遲是多少忽略排隊傳播延遲和處理延遲">假設在發送主機和接收主機之間有一個封包交換機。發送主機和交換機之間的傳輸速率為 $R_1$，交換機和接收主機之間的傳輸速率為 $R_2$。假設交換機使用存儲轉發封包交換，發送長度為 $L$ 的封包的總端到端延遲是多少？（忽略排隊、傳播延遲和處理延遲。）</a></li>
+          </ul>
+        </li>
+        <li><a href="#r12-what-advantage-does-a-circuit-switched-network-have-over-a-packet-switched-network-what-advantages-does-tdm-have-over-fdm-in-a-circuit-switched-network">R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network?</a>
+          <ul>
+            <li><a href="#電路交換網絡相對於封包交換網絡有什麼優勢在電路交換網絡中tdm-相對於-fdm-有什麼優勢">電路交換網絡相對於封包交換網絡有什麼優勢？在電路交換網絡中，TDM 相對於 FDM 有什麼優勢？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r13-suppose-users-share-a-2-mbps-link-also-suppose-each-user-transmits-continuously-at-1-mbps-when-transmitting-but-each-user-transmits-only-20-percent-of-the-time-see-the-discussion-of-statistical-multiplexing-in-section-13">R13. Suppose users share a $2$ Mbps link. Also suppose each user transmits continuously at $1$ Mbps when transmitting, but each user transmits only 20 percent of the time. (See the discussion of statistical multiplexing in Section 1.3.)</a>
+          <ul>
+            <li><a href="#假設用戶共用一個-2-mbps-的連線同時假設每個用戶在傳輸時連續傳輸-1-mbps但每個用戶只在-20-的時間內傳輸-參見第-13-節中對統計多路復用的討論">假設用戶共用一個 $2$ Mbps 的連線。同時假設每個用戶在傳輸時連續傳輸 $1$ Mbps，但每個用戶只在 $20$% 的時間內傳輸。 (參見第 1.3 節中對統計多路復用的討論。)</a></li>
+          </ul>
+        </li>
+        <li><a href="#r14-why-will-two-isps-at-the-same-level-of-the-hierarchy-often-peer-with-each-other-how-does-an-ixp-earn-money">R14. Why will two ISPs at the same level of the hierarchy often peer with each other? How does an IXP earn money?</a>
+          <ul>
+            <li><a href="#為什麼位於層次結構相同級別的兩個-isp-經常互相對等ixp-如何賺錢">為什麼位於層次結構相同級別的兩個 ISP 經常互相對等？IXP 如何賺錢？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r15-why-is-a-content-provider-considered-a-different-internet-entity-today-how-does-a-content-provider-connect-to-other-isps-why">R15. Why is a content provider considered a different Internet entity today? How does a content provider connect to other ISPs? Why?</a>
+          <ul>
+            <li><a href="#為什麼內容提供商今天被認為是一個不同的互聯網實體內容提供商如何連接到其他-isp為什麼">為什麼內容提供商今天被認為是一個不同的互聯網實體？內容提供商如何連接到其他 ISP？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r16-consider-sending-a-packet-from-a-source-host-to-a-destination-host-over-a-fixed-route-list-the-delay-components-in-the-end-to-end-delay-which-of-these-delays-are-constant-and-which-are-variable">R16. Consider sending a packet from a source host to a destination host over a fixed route. List the delay components in the end-to-end delay. Which of these delays are constant and which are variable?</a>
+          <ul>
+            <li><a href="#考慮在固定路由上從來源主機發送封包到目的主機列出端到端延遲中的延遲因子這些延遲中哪些是恆定的哪些是變化的">考慮在固定路由上從來源主機發送封包到目的主機。列出端到端延遲中的延遲因子。這些延遲中哪些是恆定的，哪些是變化的？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r17-visit-the-transmission-versus-propagation-delay-applet-at-the-companion-website-among-the-rates-propagation-delay-and-packet-sizes-available-find-a-combination-for-which-the-sender-finishes-transmitting-before-the-first-bit-of-the-packet-reaches-the-receiver-find-another-combination-for-which-the-first-bit-of-the-packet-reaches-the-receiver-before-the-sender-finishes-transmitting">R17. Visit the Transmission Versus Propagation Delay applet at the companion Website. Among the rates, propagation delay, and packet sizes available, find a combination for which the sender finishes transmitting before the first bit of the packet reaches the receiver. Find another combination for which the first bit of the packet reaches the receiver before the sender finishes transmitting.</a>
+          <ul>
+            <li><a href="#訪問伴隨網站的傳輸與傳播延遲-applet在可用的速率傳播延遲和封包大小中找到一個組合使發送方在第一個位元到達接收方之前完成傳輸找到另一個組合使封包的第一個位元在發送方完成傳輸之前到達接收方">訪問伴隨網站的傳輸與傳播延遲 applet。在可用的速率、傳播延遲和封包大小中，找到一個組合，使發送方在第一個位元到達接收方之前完成傳輸。找到另一個組合，使封包的第一個位元在發送方完成傳輸之前到達接收方。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r18-a-user-can-directly-connect-to-a-server-through-either-long-range-wireless-or-a-twisted-pair-cable-for-transmitting-a-1500-bytes-file-the-transmission-rates-of-the-wireless-and-wired-media-are-2-and-100-mbps-respectively-assume-that-the-propagation-speed-in-air-is-3-times-108-ms-while-the-speed-in-the-twisted-pair-is-2-times-108-ms-if-the-user-is-located-1-km-away-from-the-server-what-is-the-nodal-delay-when-using-each-of-the-two-technologies">R18. A user can directly connect to a server through either long-range wireless or a twisted-pair cable for transmitting a 1500-bytes file. The transmission rates of the wireless and wired media are 2 and 100 Mbps, respectively. Assume that the propagation speed in air is $3 \times 10^8$ m/s, while the speed in the twisted pair is $2 \times 10^8$ m/s. If the user is located 1 km away from the server, what is the nodal delay when using each of the two technologies?</a>
+          <ul>
+            <li><a href="#用戶可以通過長距離無線或雙絞線纜線直接連接到服務器用於傳輸一個-1500-字節的文件無線和有線媒介的傳輸速率分別為-2-和-100-mbps假設空氣中的傳播速度為-3-times-108-ms而雙絞線中的速度為-2-times-108-ms如果用戶距離服務器-1-公里使用這兩種技術時的節點延遲是多少">用戶可以通過長距離無線或雙絞線纜線直接連接到服務器，用於傳輸一個 1500 字節的文件。無線和有線媒介的傳輸速率分別為 2 和 100 Mbps。假設空氣中的傳播速度為 $3 \times 10^8$ m/s，而雙絞線中的速度為 $2 \times 10^8$ m/s。如果用戶距離服務器 1 公里，使用這兩種技術時的節點延遲是多少？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r19-suppose-host-a-wants-to-send-a-large-file-to-host-b-the-path-from-host-a-to-host-b-has-three-links-of-rates-r_1--500-kbps-r_2--2-mbps-and-r_3--1-mbps">R19. Suppose Host A wants to send a large file to Host B. The path from Host A to Host B has three links, of rates $R_1$ = 500 kbps, $R_2$ = 2 Mbps, and $R_3$ = 1 Mbps.</a>
+          <ul>
+            <li><a href="#假設主機-a-想要將一個大文件發送給主機-b從主機-a-到主機-b-的路徑有三個連接速率分別為-r_1--500-kbpsr_2--2-mbps-和-r_3--1-mbps">假設主機 A 想要將一個大文件發送給主機 B。從主機 A 到主機 B 的路徑有三個連接，速率分別為 $R_1$ = 500 kbps、$R_2$ = 2 Mbps 和 $R_3$ = 1 Mbps。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r20-suppose-end-system-a-wants-to-send-a-large-file-to-end-system-b-at-a-very-high-level-describe-how-end-system-a-creates-packets-from-the-file-when-one-of-these-packets-arrives-to-a-router-what-information-in-the-packet-does-the-router-use-to-determine-the-link-onto-which-the-packet-is-forwarded-why-is-packet-switching-in-the-internet-analogous-to-driving-from-one-city-to-another-and-asking-directions-along-the-way">R20. Suppose end system A wants to send a large file to end system B. At a very high level, describe how end system A creates packets from the file. When one of these packets arrives to a router, what information in the packet does the router use to determine the link onto which the packet is forwarded? Why is packet switching in the Internet analogous to driving from one city to another and asking directions along the way?</a>
+          <ul>
+            <li><a href="#假設終端系統-a-想要將一個大文件發送給終端系統-b在非常高的層次上描述終端系統-a-如何從文件中創建封包當這些封包中的一個到達路由器時路由器使用封包中的哪些訊息來確定將封包轉發到哪個連接為什麼互聯網中的封包交換類似於從一個城市開車到另一個城市並在途中詢問方向">假設終端系統 A 想要將一個大文件發送給終端系統 B。在非常高的層次上，描述終端系統 A 如何從文件中創建封包。當這些封包中的一個到達路由器時，路由器使用封包中的哪些訊息來確定將封包轉發到哪個連接？為什麼互聯網中的封包交換類似於從一個城市開車到另一個城市並在途中詢問方向？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r21-visit-the-queuing-and-loss-applet-at-the-companion-web-site-what-is-the-maximum-emission-rate-and-the-minimum-transmission-rate-with-those-rates-what-is-the-traffic-intensity-run-the-applet-with-these-rates-and-determine-how-long-it-takes-for-packet-loss-to-occur-then-repeat-the-experiment-a-second-time-and-determine-again-how-long-it-takes-for-packet-loss-to-occur-are-the-values-different-why-or-why-not">R21. Visit the Queuing and Loss applet at the companion Web site. What is the maximum emission rate and the minimum transmission rate? With those rates, what is the traffic intensity? Run the applet with these rates and determine how long it takes for packet loss to occur. Then repeat the experiment a second time and determine again how long it takes for packet loss to occur. Are the values different? Why or Why not?</a>
+          <ul>
+            <li><a href="#訪問伴隨網站的-queuing-and-loss-applet最大發射速率和最小傳輸速率是多少使用這些速率流量強度是多少使用這些速率運行-applet並確定發生封包丟失需要多長時間然後再次重複實驗並再次確定發生封包丟失需要多長時間這些值是否不同為什麼">訪問伴隨網站的 Queuing and Loss applet。最大發射速率和最小傳輸速率是多少？使用這些速率，流量強度是多少？使用這些速率運行 applet，並確定發生封包丟失需要多長時間。然後再次重複實驗，並再次確定發生封包丟失需要多長時間。這些值是否不同？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r22-if-two-end-systems-are-connected-through-multiple-routers-and-the-data-link-level-between-them-ensures-reliable-data-delivery-is-a-transport-protocol-offering-reliable-data-delivery-between-these-two-end-systems-necessary-why">R22. If two end-systems are connected through multiple routers and the data-link level between them ensures reliable data delivery, is a transport protocol offering reliable data delivery between these two end-systems necessary? Why?</a>
+          <ul>
+            <li><a href="#如果兩個終端系統通過多個路由器連接並且它們之間的數據鏈路級確保可靠的數據傳遞那麼在這兩個終端系統之間提供可靠的數據傳遞的傳輸協議是必要的嗎為什麼">如果兩個終端系統通過多個路由器連接，並且它們之間的數據鏈路級確保可靠的數據傳遞，那麼在這兩個終端系統之間提供可靠的數據傳遞的傳輸協議是必要的嗎？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r23-what-are-the-five-layers-in-the-internet-protocol-stack-what-are-the-principal-responsibilities-of-each-of-these-layers">R23. What are the five layers in the Internet protocol stack? What are the principal responsibilities of each of these layers?</a>
+          <ul>
+            <li><a href="#互聯網協議棧中的五層是什麼這些層的主要責任是什麼">互聯網協議棧中的五層是什麼？這些層的主要責任是什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r24-what-do-encapsulation-and-de-encapsulation-mean-why-are-they-needed-in-a-layered-protocol-stack">R24. What do encapsulation and de-encapsulation mean? Why are they needed in a layered protocol stack?</a>
+          <ul>
+            <li><a href="#封裝和解封裝是什麼意思為什麼在分層協議堆疊中需要它們">封裝和解封裝是什麼意思？為什麼在分層協議堆疊中需要它們？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r25-which-layers-in-the-internet-protocol-stack-does-a-router-process-which-layers-does-a-link-layer-switch-process-which-layers-does-a-host-process">R25. Which layers in the Internet protocol stack does a router process? Which layers does a link-layer switch process? Which layers does a host process?</a>
+          <ul>
+            <li><a href="#互聯網協議堆疊中的哪些層由路由器處理交換機處理哪些層主機處理哪些層">互聯網協議堆疊中的哪些層由路由器處理？交換機處理哪些層？主機處理哪些層？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r26-what-is-self-replicating-malware">R26. What is self-replicating malware?</a>
+          <ul>
+            <li><a href="#什麼是自我複製的惡意軟體">什麼是自我複製的惡意軟體？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r27-describe-how-a-botnet-can-be-created-and-how-it-can-be-used-for-a-ddos-attack">R27. Describe how a botnet can be created and how it can be used for a DDoS attack</a>
+          <ul>
+            <li><a href="#描述如何創建-botnet-以及如何將其用於-ddos-攻擊">描述如何創建 botnet 以及如何將其用於 DDoS 攻擊</a></li>
+          </ul>
+        </li>
+        <li><a href="#r28-suppose-alice-and-bob-are-sending-packets-to-each-other-over-a-computer-network-suppose-trudy-positions-herself-in-the-network-so-that-she-can-capture-all-the-packets-sent-by-alice-and-send-whatever-she-wants-to-alice-list-some-of-the-malicious-things-trudy-can-do-from-this-position">R28. Suppose Alice and Bob are sending packets to each other over a computer network. Suppose Trudy positions herself in the network so that she can capture all the packets sent by Alice and send whatever she wants to Alice. List some of the malicious things Trudy can do from this position.</a>
+          <ul>
+            <li><a href="#假設-alice-和-bob-通過計算機網路互相發送封包假設-trudy-將自己放在網路中以便她可以捕獲-alice-發送的所有封包並向-alice-發送她想要的任何東西列出-trudy-可以從這個位置做的一些惡意事情">假設 Alice 和 Bob 通過計算機網路互相發送封包。假設 Trudy 將自己放在網路中，以便她可以捕獲 Alice 發送的所有封包並向 Alice 發送她想要的任何東西。列出 Trudy 可以從這個位置做的一些惡意事情。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        【計算機網路】CH1 作業
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/computer-networking" rel="tag">Computer Networking</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <p>Reference: Computer Networking: A Top-Down Approach, 8th Edition</p>
+<h1 id="此頁面中答案不保證為正確答案僅供參考">此頁面中答案不保證為正確答案，僅供參考。</h1>
+<h1 id="ch1-作業">CH1 作業</h1>
+<h2 id="review">Review</h2>
+<h3 id="r1-what-is-the-difference-between-a-host-and-an-end-system-list-several-different-types-of-end-systems-is-a-web-server-an-end-system">R1. What is the difference between a host and an end system? List several different types of end systems. Is a Web server an end system?</h3>
+<h4 id="host-跟-end-system-差別是什麼列出幾種不同類型的-end-systemweb-server-是-end-system-嗎">Host 跟 End system 差別是什麼？列出幾種不同類型的 End system。Web Server 是 End system 嗎？</h4>
+<ul>
+<li>沒有差別，Host 跟 End system 是同義詞。End system 包括 PC、Work Station、Web Server、Mail Server 等等。</li>
+</ul>
+<h3 id="r2-describe-the-protocol-that-might-be-used-by-two-people-having-a-telephonic-conversation-to-initiate-and-end-the-conversation-ie-the-way-that-they-talk">R2. Describe the protocol that might be used by two people having a telephonic conversation to initiate and end the conversation, i.e., the way that they talk.</h3>
+<h4 id="描述兩個人進行電話對話時可能使用的協定即他們交談的方式">描述兩個人進行電話對話時可能使用的協定，即他們交談的方式。</h4>
+<ul>
+<li>協議是兩個人、政府、甚至國家在進行溝通時制定的一套溝通方式。以人為例，A 欲與 B 對話，他需要先向 B 說「你好」，而 B 也需要回應他「你好」，接著 A 把
+他想傳達的內容給 B，B 再回應他「收到」，最後 A 向 B 說「再見」表示結束這次溝通。而如果 A 不照協議規定進行，一開始直接把訊息丟給 B，B 可能會選擇不理 A 而無法順利溝通。</li>
+</ul>
+<h3 id="r3-why-are-standards-important-for-protocols">R3. Why are standards important for protocols?</h3>
+<h4 id="為什麼標準對於協議來說很重要">為什麼標準對於協議來說很重要？</h4>
+<ul>
+<li>標準定義了協議具體要做什麼、內容，以便創建可溝通的網路系統。</li>
+</ul>
+<h3 id="r4-list-four-access-technologies-classify-each-one-as-home-access-enterprise-access-or-wide-area-wireless-access">R4. List four access technologies. Classify each one as home access, enterprise access, or wide-area wireless access.</h3>
+<h4 id="列出四種存取技術將每一種分類為家庭存取企業存取或廣域無線存取">列出四種存取技術。將每一種分類為家庭存取、企業存取或廣域無線存取。</h4>
+<ul>
+<li>
+<ul>
+<li>家庭存取：DSL、光纖</li>
+<li>企業存取：Ethernet</li>
+<li>廣域無線存取：3G/4G</li>
+</ul>
+</li>
+</ul>
+<h3 id="r5-is-hfc-transmission-rate-dedicated-or-shared-among-users-are-collisions-possible-in-a-downstream-hfc-channel-why-or-why-not">R5. Is HFC transmission rate dedicated or shared among users? Are collisions possible in a downstream HFC channel? Why or why not?</h3>
+<h4 id="hfc-傳輸速率是專用還是共享給使用者在下行-hfc-頻道中可能發生碰撞嗎為什麼">HFC 傳輸速率是專用還是共享給使用者？在下行 HFC 頻道中可能發生碰撞嗎？為什麼？</h4>
+<ul>
+<li>HFC 傳輸速率是共享給使用者的。下行 HFC 不會碰撞，因為 HFC 是由單源點發出，不會有碰撞的問題。</li>
+</ul>
+<h3 id="r6-what-access-network-technologies-would-be-most-suitable-for-providing-internet-access-in-rural-areas">R6. What access network technologies would be most suitable for providing internet access in rural areas?</h3>
+<h4 id="什麼存取網路技術最適合在鄉村地區提供互聯網存取">什麼存取網路技術最適合在鄉村地區提供互聯網存取？</h4>
+<ul>
+<li>DSL、光纖到戶</li>
+</ul>
+<h3 id="r7-dial-up-modems-and-dsl-both-use-the-telephone-line-a-twisted-pair-copper-cabble-as-their-transmission-medium-why-then-is-dsl-much-faster-than-dial-up-access">R7. Dial-up modems and DSL both use the telephone line (a twisted-pair copper cabble) as their transmission medium. Why then is DSL much faster than dial-up access?</h3>
+<h4 id="撥號數據機和-dsl-都使用電話線雙絞線銅電纜作為傳輸媒介為什麼-dsl-比撥號訪問還快">撥號數據機和 DSL 都使用電話線（雙絞線銅電纜）作為傳輸媒介。為什麼 DSL 比撥號訪問還快？</h4>
+<ul>
+<li>撥接連線跟處理電話通過一樣的基礎設施。電話的頻寬很低(56 Kbps)，而 DSL 使用從家中到 DSLAM 的電話線路，不經過電信公司處理電話的基礎設施，而且 DSL 使用高頻段，所以速度比較快（24 Mbps）。</li>
+</ul>
+<h3 id="r8-what-are-some-of-the-physical-media-that-ethernet-can-run-over">R8. What are some of the physical media that Ethernet can run over?</h3>
+<h4 id="以太網可以運行在哪些物理媒介上">以太網可以運行在哪些物理媒介上？</h4>
+<ul>
+<li>同軸電纜、光纖、雙絞線</li>
+</ul>
+<h3 id="r9-hfc-dsl-and-ftth-are-all-used-for-residential-access-for-each-of-these-access-technologies-provide-a-range-of-transmission-rates-and-comment-on-whether-the-transmission-rate-is-dedicated-or-shared">R9. HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is dedicated or shared.</h3>
+<h4 id="hfcdsl-和-ftth-都用於住宅接入對於這些接入技術提供一個傳輸速率範圍並討論傳輸速率是專用還是共享">HFC、DSL 和 FTTH 都用於住宅接入。對於這些接入技術，提供一個傳輸速率範圍，並討論傳輸速率是專用還是共享。</h4>
+<ul>
+<li>
+<ul>
+<li>HFC：下行 42.8 Mbps，上行 30.7 Mbps，共享</li>
+<li>DSL：下行 24 Mbps，上行 3 Mbps，專用</li>
+<li>FTTH：下行 100 Mbps，上行 100 Mbps，專用</li>
+</ul>
+</li>
+</ul>
+<h3 id="r10-describe-the-different-wireless-technologies-you-use-during-the-day-and-their-characteristics-if-you-have-a-choice-between-multiple-technologies-why-do-you-prefer-one-over-another">R10. Describe the different wireless technologies you use during the day and their characteristics. If you have a choice between multiple technologies, why do you prefer one over another?</h3>
+<h4 id="描述您在一天中使用的不同無線技術及其特性如果您可以選擇多種技術為什麼您更喜歡一種而不是另一種">描述您在一天中使用的不同無線技術及其特性。如果您可以選擇多種技術，為什麼您更喜歡一種而不是另一種？</h4>
+<ul>
+<li>WiFi、4G、乙太網路，WiFi 速度快，但距離短。4G 速度慢但距離遠。乙太網路速度快，但需要有線連接。</li>
+</ul>
+<h3 id="r11-suppose-there-is-exactly-one-packet-switch-between-a-sending-host-and-a-receiving-host-the-transmission-rates-between-the-sending-host-and-the-switch-and-between-the-switch-and-the-receiving-host-are-r_1-and-r_2-respectively-assuming-that-the-switch-uses-store-and-forward-packet-switching-what-is-the-total-end-to-end-delay-to-send-a-packet-of-length-l-ignore-queuing-propagation-delay-and-processing-delay">R11. Suppose there is exactly one packet switch between a sending host and a receiving host. The transmission rates between the sending host and the switch and between the switch and the receiving host are $R_1$ and $R_2$, respectively. Assuming that the switch uses store-and-forward packet switching, what is the total end-to-end delay to send a packet of length $L$? (Ignore queuing, propagation delay, and processing delay.)</h3>
+<h4 id="假設在發送主機和接收主機之間有一個封包交換機發送主機和交換機之間的傳輸速率為-r_1交換機和接收主機之間的傳輸速率為-r_2假設交換機使用存儲轉發封包交換發送長度為-l-的封包的總端到端延遲是多少忽略排隊傳播延遲和處理延遲">假設在發送主機和接收主機之間有一個封包交換機。發送主機和交換機之間的傳輸速率為 $R_1$，交換機和接收主機之間的傳輸速率為 $R_2$。假設交換機使用存儲轉發封包交換，發送長度為 $L$ 的封包的總端到端延遲是多少？（忽略排隊、傳播延遲和處理延遲。）</h4>
+<ul>
+<li>一開始發送主機開始傳輸。在 $\frac{L}{R_1}$ 後，發送主機完成傳輸，且 router 接收到整個封包(無傳播延遲)。因為 router 已經有完整的封包了，他可以開始傳輸到接收主機，在 $\frac{L}{R_2}$ 後，接收主機接收到封包。所以總延遲為 $\frac{L}{R_1} + \frac{L}{R_2}$。</li>
+</ul>
+<h3 id="r12-what-advantage-does-a-circuit-switched-network-have-over-a-packet-switched-network-what-advantages-does-tdm-have-over-fdm-in-a-circuit-switched-network">R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network?</h3>
+<h4 id="電路交換網絡相對於封包交換網絡有什麼優勢在電路交換網絡中tdm-相對於-fdm-有什麼優勢">電路交換網絡相對於封包交換網絡有什麼優勢？在電路交換網絡中，TDM 相對於 FDM 有什麼優勢？</h4>
+<ul>
+<li>電路交換網路保證端對端的頻寬，而封包交換網路不保證。</li>
+<li>如果發生擁塞，TDM 可能只會 loss 一些資料，而 FDM 可能會 loss 全部。</li>
+<li>FDM 建立連線後，占用的頻寬不能被其他連線使用，可能存在浪費的情況。</li>
+</ul>
+<h3 id="r13-suppose-users-share-a-2-mbps-link-also-suppose-each-user-transmits-continuously-at-1-mbps-when-transmitting-but-each-user-transmits-only-20-percent-of-the-time-see-the-discussion-of-statistical-multiplexing-in-section-13">R13. Suppose users share a $2$ Mbps link. Also suppose each user transmits continuously at $1$ Mbps when transmitting, but each user transmits only 20 percent of the time. (See the discussion of statistical multiplexing in Section 1.3.)</h3>
+<h4 id="假設用戶共用一個-2-mbps-的連線同時假設每個用戶在傳輸時連續傳輸-1-mbps但每個用戶只在-20-的時間內傳輸-參見第-13-節中對統計多路復用的討論">假設用戶共用一個 $2$ Mbps 的連線。同時假設每個用戶在傳輸時連續傳輸 $1$ Mbps，但每個用戶只在 $20$% 的時間內傳輸。 (參見第 1.3 節中對統計多路復用的討論。)</h4>
+<ul>
+<li>
+<p>a. When circuit switching is used, how many users can be supported?</p>
+<ul>
+<li>當使用電路交換時，可以支持多少用戶？
+<ul>
+<li>2 個用戶，每個用戶各使用一半的頻寬。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>b. For the remainder of this problem, suppose packet switching is used. Why will there be essentially no queuing delay before the link if two or fewer users transmit at the same time? Why will there be a queuing delay if three users transmit at the same time?</p>
+<ul>
+<li>在這個問題的其餘部分，假設使用封包交換。如果兩個或更少的用戶同時傳輸，為什麼在連接之前基本上不會有排隊延遲？如果三個用戶同時傳輸，為什麼會有排隊延遲？
+<ul>
+<li>如果兩個或更少的用戶同時傳輸，那麼他們的傳輸速率不會超過 $2$ Mbps，所以不會有排隊延遲。如果三個用戶同時傳輸，那麼他們的傳輸速率會超過 $2$ Mbps，所以會有排隊延遲。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>c. Find the probability that a given user is transmitting.</p>
+<ul>
+<li>找到特定用戶正在傳輸的概率。
+<ul>
+<li>0.2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>d. Suppose now there are three users. Find the probability that at any given time, all three users are transmitting simultaneously. Find the fraction of time during which the queue grows.</p>
+<ul>
+<li>現在假設有三個用戶。找到在任何給定時間，所有三個用戶同時傳輸的概率。找到隊列增長的時間比。
+<ul>
+<li>$\binom{3}{3} p^3 (1-p)^{3-3} = (0.2)^3$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="r14-why-will-two-isps-at-the-same-level-of-the-hierarchy-often-peer-with-each-other-how-does-an-ixp-earn-money">R14. Why will two ISPs at the same level of the hierarchy often peer with each other? How does an IXP earn money?</h3>
+<h4 id="為什麼位於層次結構相同級別的兩個-isp-經常互相對等ixp-如何賺錢">為什麼位於層次結構相同級別的兩個 ISP 經常互相對等？IXP 如何賺錢？</h4>
+<ul>
+<li>如果兩個 ISP 不互相對等，當他們向彼此發送流量時，必須經過中間的 ISP 而增加成本。互相對等可以減少成本。IXP 可以向 ISP 收取更低價的費用來賺錢，費用可能取決於流量大小。</li>
+</ul>
+<h3 id="r15-why-is-a-content-provider-considered-a-different-internet-entity-today-how-does-a-content-provider-connect-to-other-isps-why">R15. Why is a content provider considered a different Internet entity today? How does a content provider connect to other ISPs? Why?</h3>
+<h4 id="為什麼內容提供商今天被認為是一個不同的互聯網實體內容提供商如何連接到其他-isp為什麼">為什麼內容提供商今天被認為是一個不同的互聯網實體？內容提供商如何連接到其他 ISP？為什麼？</h4>
+<ul>
+<li>內容提供商提供內容，而不是提供連線。除非內容提供商有自己的網路，否則他們需要連接到其他 ISP 來提供服務。內容提供商可能會連接到更低層的 ISP 來提供服務，因為這樣可以減少成本。</li>
+</ul>
+<h3 id="r16-consider-sending-a-packet-from-a-source-host-to-a-destination-host-over-a-fixed-route-list-the-delay-components-in-the-end-to-end-delay-which-of-these-delays-are-constant-and-which-are-variable">R16. Consider sending a packet from a source host to a destination host over a fixed route. List the delay components in the end-to-end delay. Which of these delays are constant and which are variable?</h3>
+<h4 id="考慮在固定路由上從來源主機發送封包到目的主機列出端到端延遲中的延遲因子這些延遲中哪些是恆定的哪些是變化的">考慮在固定路由上從來源主機發送封包到目的主機。列出端到端延遲中的延遲因子。這些延遲中哪些是恆定的，哪些是變化的？</h4>
+<ul>
+<li>
+<ul>
+<li>Processing delay：變化(有爭議，原版解答為恆定)</li>
+<li>Queuing delay：變化</li>
+<li>Transmission delay：恆定</li>
+<li>Propagation delay：恆定</li>
+</ul>
+</li>
+</ul>
+<h3 id="r17-visit-the-transmission-versus-propagation-delay-applet-at-the-companion-website-among-the-rates-propagation-delay-and-packet-sizes-available-find-a-combination-for-which-the-sender-finishes-transmitting-before-the-first-bit-of-the-packet-reaches-the-receiver-find-another-combination-for-which-the-first-bit-of-the-packet-reaches-the-receiver-before-the-sender-finishes-transmitting">R17. Visit the Transmission Versus Propagation Delay applet at the companion Website. Among the rates, propagation delay, and packet sizes available, find a combination for which the sender finishes transmitting before the first bit of the packet reaches the receiver. Find another combination for which the first bit of the packet reaches the receiver before the sender finishes transmitting.</h3>
+<h4 id="訪問伴隨網站的傳輸與傳播延遲-applet在可用的速率傳播延遲和封包大小中找到一個組合使發送方在第一個位元到達接收方之前完成傳輸找到另一個組合使封包的第一個位元在發送方完成傳輸之前到達接收方">訪問伴隨網站的傳輸與傳播延遲 applet。在可用的速率、傳播延遲和封包大小中，找到一個組合，使發送方在第一個位元到達接收方之前完成傳輸。找到另一個組合，使封包的第一個位元在發送方完成傳輸之前到達接收方。</h4>
+<ul>
+<li>這裡僅列出關係式，令傳輸速率為 $R$，傳播延遲為 $d_{prop}$，封包大小為 $L$。
+<ul>
+<li>在第一個位元到達接收方之前完成傳輸：$\frac{L}{R} &lt; d_{prop}$</li>
+<li>在發送方完成傳輸之前到達接收方：$\frac{L}{R} &gt; d_{prop}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="r18-a-user-can-directly-connect-to-a-server-through-either-long-range-wireless-or-a-twisted-pair-cable-for-transmitting-a-1500-bytes-file-the-transmission-rates-of-the-wireless-and-wired-media-are-2-and-100-mbps-respectively-assume-that-the-propagation-speed-in-air-is-3-times-108-ms-while-the-speed-in-the-twisted-pair-is-2-times-108-ms-if-the-user-is-located-1-km-away-from-the-server-what-is-the-nodal-delay-when-using-each-of-the-two-technologies">R18. A user can directly connect to a server through either long-range wireless or a twisted-pair cable for transmitting a 1500-bytes file. The transmission rates of the wireless and wired media are 2 and 100 Mbps, respectively. Assume that the propagation speed in air is $3 \times 10^8$ m/s, while the speed in the twisted pair is $2 \times 10^8$ m/s. If the user is located 1 km away from the server, what is the nodal delay when using each of the two technologies?</h3>
+<h4 id="用戶可以通過長距離無線或雙絞線纜線直接連接到服務器用於傳輸一個-1500-字節的文件無線和有線媒介的傳輸速率分別為-2-和-100-mbps假設空氣中的傳播速度為-3-times-108-ms而雙絞線中的速度為-2-times-108-ms如果用戶距離服務器-1-公里使用這兩種技術時的節點延遲是多少">用戶可以通過長距離無線或雙絞線纜線直接連接到服務器，用於傳輸一個 1500 字節的文件。無線和有線媒介的傳輸速率分別為 2 和 100 Mbps。假設空氣中的傳播速度為 $3 \times 10^8$ m/s，而雙絞線中的速度為 $2 \times 10^8$ m/s。如果用戶距離服務器 1 公里，使用這兩種技術時的節點延遲是多少？</h4>
+<ul>
+<li>無線：$\frac{1500 \times 8\ Kb}{2000\ Kbps} + \frac{1000\ m}{3 \times 10^8\ m/s} = 6s$</li>
+<li>有線：$\frac{1500 \times 8\ Kb}{100000\ Kbps} + \frac{1000\ m}{2 \times 10^8\ m/s} = 0.12s$</li>
+</ul>
+<h3 id="r19-suppose-host-a-wants-to-send-a-large-file-to-host-b-the-path-from-host-a-to-host-b-has-three-links-of-rates-r_1--500-kbps-r_2--2-mbps-and-r_3--1-mbps">R19. Suppose Host A wants to send a large file to Host B. The path from Host A to Host B has three links, of rates $R_1$ = 500 kbps, $R_2$ = 2 Mbps, and $R_3$ = 1 Mbps.</h3>
+<h4 id="假設主機-a-想要將一個大文件發送給主機-b從主機-a-到主機-b-的路徑有三個連接速率分別為-r_1--500-kbpsr_2--2-mbps-和-r_3--1-mbps">假設主機 A 想要將一個大文件發送給主機 B。從主機 A 到主機 B 的路徑有三個連接，速率分別為 $R_1$ = 500 kbps、$R_2$ = 2 Mbps 和 $R_3$ = 1 Mbps。</h4>
+<ul>
+<li>
+<p>a. Assuming no other traffic in the network, what is the throughput for the file transfer?</p>
+<ul>
+<li>假設網絡中沒有其他流量，文件傳輸的吞吐量是多少？
+<ul>
+<li>因為 $R_1$ 最慢，他是 bottleneck，所以吞吐量為 500 kbps。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>b. Suppose the file is 4 million bytes. Dividing the file size by the throughput, roughly how long will it take to transfer the file to Host B?</p>
+<ul>
+<li>假設文件大小為 4 百萬字節。將文件大小除以吞吐量，大約需要多長時間將文件傳輸到主機 B？
+<ul>
+<li>$\frac{4 \times 10^6\ \times 8\ bits}{500 \times 10^3\ Kbps} = 64s$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>c. Repeat (a) and (b), but now with $R_2$ reduced to 100 kbps.</p>
+<ul>
+<li>重複 (a) 和 (b)，但現在將 $R_2$ 降低到 100 kbps。
+<ul>
+<li>a. 因為 $R_2$ 是最慢的，吞吐量為 100 kbps。</li>
+<li>b. $\frac{4 \times 10^6\ \times 8\ bits}{100 \times 10^3\ Kbps} = 320s$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="r20-suppose-end-system-a-wants-to-send-a-large-file-to-end-system-b-at-a-very-high-level-describe-how-end-system-a-creates-packets-from-the-file-when-one-of-these-packets-arrives-to-a-router-what-information-in-the-packet-does-the-router-use-to-determine-the-link-onto-which-the-packet-is-forwarded-why-is-packet-switching-in-the-internet-analogous-to-driving-from-one-city-to-another-and-asking-directions-along-the-way">R20. Suppose end system A wants to send a large file to end system B. At a very high level, describe how end system A creates packets from the file. When one of these packets arrives to a router, what information in the packet does the router use to determine the link onto which the packet is forwarded? Why is packet switching in the Internet analogous to driving from one city to another and asking directions along the way?</h3>
+<h4 id="假設終端系統-a-想要將一個大文件發送給終端系統-b在非常高的層次上描述終端系統-a-如何從文件中創建封包當這些封包中的一個到達路由器時路由器使用封包中的哪些訊息來確定將封包轉發到哪個連接為什麼互聯網中的封包交換類似於從一個城市開車到另一個城市並在途中詢問方向">假設終端系統 A 想要將一個大文件發送給終端系統 B。在非常高的層次上，描述終端系統 A 如何從文件中創建封包。當這些封包中的一個到達路由器時，路由器使用封包中的哪些訊息來確定將封包轉發到哪個連接？為什麼互聯網中的封包交換類似於從一個城市開車到另一個城市並在途中詢問方向？</h4>
+<ul>
+<li>終端系統 A 會將大檔案分成很多個 chunks，並向每個 chunks 加上 header，就可以生成封包。這些 header 包括目的地(終端系統 B)的 IP 位址。封包交換器使用這個目標 IP 位址確定將封包轉發到哪個連接。封包交換類似於開車詢問方向，因為封包交換器在轉發封包時，會根據封包中的目標 IP 位址來決定轉發的連接。</li>
+</ul>
+<h3 id="r21-visit-the-queuing-and-loss-applet-at-the-companion-web-site-what-is-the-maximum-emission-rate-and-the-minimum-transmission-rate-with-those-rates-what-is-the-traffic-intensity-run-the-applet-with-these-rates-and-determine-how-long-it-takes-for-packet-loss-to-occur-then-repeat-the-experiment-a-second-time-and-determine-again-how-long-it-takes-for-packet-loss-to-occur-are-the-values-different-why-or-why-not">R21. Visit the Queuing and Loss applet at the companion Web site. What is the maximum emission rate and the minimum transmission rate? With those rates, what is the traffic intensity? Run the applet with these rates and determine how long it takes for packet loss to occur. Then repeat the experiment a second time and determine again how long it takes for packet loss to occur. Are the values different? Why or Why not?</h3>
+<h4 id="訪問伴隨網站的-queuing-and-loss-applet最大發射速率和最小傳輸速率是多少使用這些速率流量強度是多少使用這些速率運行-applet並確定發生封包丟失需要多長時間然後再次重複實驗並再次確定發生封包丟失需要多長時間這些值是否不同為什麼">訪問伴隨網站的 Queuing and Loss applet。最大發射速率和最小傳輸速率是多少？使用這些速率，流量強度是多少？使用這些速率運行 applet，並確定發生封包丟失需要多長時間。然後再次重複實驗，並再次確定發生封包丟失需要多長時間。這些值是否不同？為什麼？</h4>
+<ul>
+<li>最大發射速率：$R_1$，最小傳輸速率：$R_2$，流量強度：$R = \frac{R_1}{R_2}$。因為 $R_1$ 是最大發射速率，所以當 $R &gt; 1$ 時，封包會丟失。</li>
+</ul>
+<h3 id="r22-if-two-end-systems-are-connected-through-multiple-routers-and-the-data-link-level-between-them-ensures-reliable-data-delivery-is-a-transport-protocol-offering-reliable-data-delivery-between-these-two-end-systems-necessary-why">R22. If two end-systems are connected through multiple routers and the data-link level between them ensures reliable data delivery, is a transport protocol offering reliable data delivery between these two end-systems necessary? Why?</h3>
+<h4 id="如果兩個終端系統通過多個路由器連接並且它們之間的數據鏈路級確保可靠的數據傳遞那麼在這兩個終端系統之間提供可靠的數據傳遞的傳輸協議是必要的嗎為什麼">如果兩個終端系統通過多個路由器連接，並且它們之間的數據鏈路級確保可靠的數據傳遞，那麼在這兩個終端系統之間提供可靠的數據傳遞的傳輸協議是必要的嗎？為什麼？</h4>
+<ul>
+<li>可靠的資料鏈路協定可以從影響各個鏈路的錯誤中恢復，但中間可能會經過很多路由器，這些路由器都有可能發生錯誤，比如緩衝區滿了所以封包被丟棄。而且路由器可能故障，所以使用可靠的傳輸協議會更有意義。</li>
+</ul>
+<h3 id="r23-what-are-the-five-layers-in-the-internet-protocol-stack-what-are-the-principal-responsibilities-of-each-of-these-layers">R23. What are the five layers in the Internet protocol stack? What are the principal responsibilities of each of these layers?</h3>
+<h4 id="互聯網協議棧中的五層是什麼這些層的主要責任是什麼">互聯網協議棧中的五層是什麼？這些層的主要責任是什麼？</h4>
+<ul>
+<li>
+<ul>
+<li>Application：會實作在終端系統的應用程式中，負責解封裝較低層的資料，使得封包可以被應用程式使用，如 HTTP、FTP、SMTP。</li>
+<li>Transport：封裝 Application 層的封包，並制定一套傳輸協議給 Network 層，如 TCP、UDP。</li>
+<li>Network：封裝 Application, Transport 層的封包，加上目的地的 IP 位址，決定封包的路徑，如 IP。</li>
+<li>Link：封裝 Application, Transport, Network 層的封包，加上 MAC 位址，負責將封包傳送到下一個節點，如 ARP。</li>
+<li>Physical：將封包轉換成訊號傳遞，如 RJ45。</li>
+</ul>
+</li>
+</ul>
+<h3 id="r24-what-do-encapsulation-and-de-encapsulation-mean-why-are-they-needed-in-a-layered-protocol-stack">R24. What do encapsulation and de-encapsulation mean? Why are they needed in a layered protocol stack?</h3>
+<h4 id="封裝和解封裝是什麼意思為什麼在分層協議堆疊中需要它們">封裝和解封裝是什麼意思？為什麼在分層協議堆疊中需要它們？</h4>
+<ul>
+<li>封裝是將較低層的資料加上 header，使得資料可以被傳送到下一層。解封裝是將 header 從資料中移除，使得資料可以被應用程式使用。分層協議堆疊需要封裝和解封裝，因為每一層的資料都需要加上 header，使得資料可以被下一層使用。</li>
+</ul>
+<h3 id="r25-which-layers-in-the-internet-protocol-stack-does-a-router-process-which-layers-does-a-link-layer-switch-process-which-layers-does-a-host-process">R25. Which layers in the Internet protocol stack does a router process? Which layers does a link-layer switch process? Which layers does a host process?</h3>
+<h4 id="互聯網協議堆疊中的哪些層由路由器處理交換機處理哪些層主機處理哪些層">互聯網協議堆疊中的哪些層由路由器處理？交換機處理哪些層？主機處理哪些層？</h4>
+<ul>
+<li>
+<ul>
+<li>Router：Network、Link、Physical</li>
+<li>Link-layer switch：Link、Physical</li>
+<li>Host：Application、Transport、Network、Link、Physical</li>
+</ul>
+</li>
+</ul>
+<h3 id="r26-what-is-self-replicating-malware">R26. What is self-replicating malware?</h3>
+<h4 id="什麼是自我複製的惡意軟體">什麼是自我複製的惡意軟體？</h4>
+<ul>
+<li>可以複製自己的惡意軟體，並透過網路或其他方式，利用漏洞感染其他電腦。</li>
+</ul>
+<h3 id="r27-describe-how-a-botnet-can-be-created-and-how-it-can-be-used-for-a-ddos-attack">R27. Describe how a botnet can be created and how it can be used for a DDoS attack</h3>
+<h4 id="描述如何創建-botnet-以及如何將其用於-ddos-攻擊">描述如何創建 botnet 以及如何將其用於 DDoS 攻擊</h4>
+<ul>
+<li>Botnet 是由攻擊者找到漏洞感染了大量電腦並組成的網路，攻擊者可以透過 C2 伺服器向 botnet 中所有節點發出指令，並針對某個目標發動大量封包使其癱瘓。如：TCP SYN 攻擊。</li>
+</ul>
+<h3 id="r28-suppose-alice-and-bob-are-sending-packets-to-each-other-over-a-computer-network-suppose-trudy-positions-herself-in-the-network-so-that-she-can-capture-all-the-packets-sent-by-alice-and-send-whatever-she-wants-to-alice-list-some-of-the-malicious-things-trudy-can-do-from-this-position">R28. Suppose Alice and Bob are sending packets to each other over a computer network. Suppose Trudy positions herself in the network so that she can capture all the packets sent by Alice and send whatever she wants to Alice. List some of the malicious things Trudy can do from this position.</h3>
+<h4 id="假設-alice-和-bob-通過計算機網路互相發送封包假設-trudy-將自己放在網路中以便她可以捕獲-alice-發送的所有封包並向-alice-發送她想要的任何東西列出-trudy-可以從這個位置做的一些惡意事情">假設 Alice 和 Bob 通過計算機網路互相發送封包。假設 Trudy 將自己放在網路中，以便她可以捕獲 Alice 發送的所有封包並向 Alice 發送她想要的任何東西。列出 Trudy 可以從這個位置做的一些惡意事情。</h4>
+<ul>
+<li>Trudy 可以假扮成 Bob，並向 Alice 發送假封包。或者丟棄 Bob 給 Alice 的封包，即使已加密。</li>
+</ul>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主頁</a></li>
+         
+          <li><a href="/posts">廢文區</a></li>
+         
+          <li><a href="/resources">資源</a></li>
+         
+          <li><a href="/tags">標籤</a></li>
+         
+          <li><a href="/comment">留言區</a></li>
+         
+          <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#review">Review</a>
+      <ul>
+        <li><a href="#r1-what-is-the-difference-between-a-host-and-an-end-system-list-several-different-types-of-end-systems-is-a-web-server-an-end-system">R1. What is the difference between a host and an end system? List several different types of end systems. Is a Web server an end system?</a>
+          <ul>
+            <li><a href="#host-跟-end-system-差別是什麼列出幾種不同類型的-end-systemweb-server-是-end-system-嗎">Host 跟 End system 差別是什麼？列出幾種不同類型的 End system。Web Server 是 End system 嗎？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r2-describe-the-protocol-that-might-be-used-by-two-people-having-a-telephonic-conversation-to-initiate-and-end-the-conversation-ie-the-way-that-they-talk">R2. Describe the protocol that might be used by two people having a telephonic conversation to initiate and end the conversation, i.e., the way that they talk.</a>
+          <ul>
+            <li><a href="#描述兩個人進行電話對話時可能使用的協定即他們交談的方式">描述兩個人進行電話對話時可能使用的協定，即他們交談的方式。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r3-why-are-standards-important-for-protocols">R3. Why are standards important for protocols?</a>
+          <ul>
+            <li><a href="#為什麼標準對於協議來說很重要">為什麼標準對於協議來說很重要？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r4-list-four-access-technologies-classify-each-one-as-home-access-enterprise-access-or-wide-area-wireless-access">R4. List four access technologies. Classify each one as home access, enterprise access, or wide-area wireless access.</a>
+          <ul>
+            <li><a href="#列出四種存取技術將每一種分類為家庭存取企業存取或廣域無線存取">列出四種存取技術。將每一種分類為家庭存取、企業存取或廣域無線存取。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r5-is-hfc-transmission-rate-dedicated-or-shared-among-users-are-collisions-possible-in-a-downstream-hfc-channel-why-or-why-not">R5. Is HFC transmission rate dedicated or shared among users? Are collisions possible in a downstream HFC channel? Why or why not?</a>
+          <ul>
+            <li><a href="#hfc-傳輸速率是專用還是共享給使用者在下行-hfc-頻道中可能發生碰撞嗎為什麼">HFC 傳輸速率是專用還是共享給使用者？在下行 HFC 頻道中可能發生碰撞嗎？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r6-what-access-network-technologies-would-be-most-suitable-for-providing-internet-access-in-rural-areas">R6. What access network technologies would be most suitable for providing internet access in rural areas?</a>
+          <ul>
+            <li><a href="#什麼存取網路技術最適合在鄉村地區提供互聯網存取">什麼存取網路技術最適合在鄉村地區提供互聯網存取？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r7-dial-up-modems-and-dsl-both-use-the-telephone-line-a-twisted-pair-copper-cabble-as-their-transmission-medium-why-then-is-dsl-much-faster-than-dial-up-access">R7. Dial-up modems and DSL both use the telephone line (a twisted-pair copper cabble) as their transmission medium. Why then is DSL much faster than dial-up access?</a>
+          <ul>
+            <li><a href="#撥號數據機和-dsl-都使用電話線雙絞線銅電纜作為傳輸媒介為什麼-dsl-比撥號訪問還快">撥號數據機和 DSL 都使用電話線（雙絞線銅電纜）作為傳輸媒介。為什麼 DSL 比撥號訪問還快？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r8-what-are-some-of-the-physical-media-that-ethernet-can-run-over">R8. What are some of the physical media that Ethernet can run over?</a>
+          <ul>
+            <li><a href="#以太網可以運行在哪些物理媒介上">以太網可以運行在哪些物理媒介上？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r9-hfc-dsl-and-ftth-are-all-used-for-residential-access-for-each-of-these-access-technologies-provide-a-range-of-transmission-rates-and-comment-on-whether-the-transmission-rate-is-dedicated-or-shared">R9. HFC, DSL, and FTTH are all used for residential access. For each of these access technologies, provide a range of transmission rates and comment on whether the transmission rate is dedicated or shared.</a>
+          <ul>
+            <li><a href="#hfcdsl-和-ftth-都用於住宅接入對於這些接入技術提供一個傳輸速率範圍並討論傳輸速率是專用還是共享">HFC、DSL 和 FTTH 都用於住宅接入。對於這些接入技術，提供一個傳輸速率範圍，並討論傳輸速率是專用還是共享。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r10-describe-the-different-wireless-technologies-you-use-during-the-day-and-their-characteristics-if-you-have-a-choice-between-multiple-technologies-why-do-you-prefer-one-over-another">R10. Describe the different wireless technologies you use during the day and their characteristics. If you have a choice between multiple technologies, why do you prefer one over another?</a>
+          <ul>
+            <li><a href="#描述您在一天中使用的不同無線技術及其特性如果您可以選擇多種技術為什麼您更喜歡一種而不是另一種">描述您在一天中使用的不同無線技術及其特性。如果您可以選擇多種技術，為什麼您更喜歡一種而不是另一種？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r11-suppose-there-is-exactly-one-packet-switch-between-a-sending-host-and-a-receiving-host-the-transmission-rates-between-the-sending-host-and-the-switch-and-between-the-switch-and-the-receiving-host-are-r_1-and-r_2-respectively-assuming-that-the-switch-uses-store-and-forward-packet-switching-what-is-the-total-end-to-end-delay-to-send-a-packet-of-length-l-ignore-queuing-propagation-delay-and-processing-delay">R11. Suppose there is exactly one packet switch between a sending host and a receiving host. The transmission rates between the sending host and the switch and between the switch and the receiving host are $R_1$ and $R_2$, respectively. Assuming that the switch uses store-and-forward packet switching, what is the total end-to-end delay to send a packet of length $L$? (Ignore queuing, propagation delay, and processing delay.)</a>
+          <ul>
+            <li><a href="#假設在發送主機和接收主機之間有一個封包交換機發送主機和交換機之間的傳輸速率為-r_1交換機和接收主機之間的傳輸速率為-r_2假設交換機使用存儲轉發封包交換發送長度為-l-的封包的總端到端延遲是多少忽略排隊傳播延遲和處理延遲">假設在發送主機和接收主機之間有一個封包交換機。發送主機和交換機之間的傳輸速率為 $R_1$，交換機和接收主機之間的傳輸速率為 $R_2$。假設交換機使用存儲轉發封包交換，發送長度為 $L$ 的封包的總端到端延遲是多少？（忽略排隊、傳播延遲和處理延遲。）</a></li>
+          </ul>
+        </li>
+        <li><a href="#r12-what-advantage-does-a-circuit-switched-network-have-over-a-packet-switched-network-what-advantages-does-tdm-have-over-fdm-in-a-circuit-switched-network">R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network?</a>
+          <ul>
+            <li><a href="#電路交換網絡相對於封包交換網絡有什麼優勢在電路交換網絡中tdm-相對於-fdm-有什麼優勢">電路交換網絡相對於封包交換網絡有什麼優勢？在電路交換網絡中，TDM 相對於 FDM 有什麼優勢？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r13-suppose-users-share-a-2-mbps-link-also-suppose-each-user-transmits-continuously-at-1-mbps-when-transmitting-but-each-user-transmits-only-20-percent-of-the-time-see-the-discussion-of-statistical-multiplexing-in-section-13">R13. Suppose users share a $2$ Mbps link. Also suppose each user transmits continuously at $1$ Mbps when transmitting, but each user transmits only 20 percent of the time. (See the discussion of statistical multiplexing in Section 1.3.)</a>
+          <ul>
+            <li><a href="#假設用戶共用一個-2-mbps-的連線同時假設每個用戶在傳輸時連續傳輸-1-mbps但每個用戶只在-20-的時間內傳輸-參見第-13-節中對統計多路復用的討論">假設用戶共用一個 $2$ Mbps 的連線。同時假設每個用戶在傳輸時連續傳輸 $1$ Mbps，但每個用戶只在 $20$% 的時間內傳輸。 (參見第 1.3 節中對統計多路復用的討論。)</a></li>
+          </ul>
+        </li>
+        <li><a href="#r14-why-will-two-isps-at-the-same-level-of-the-hierarchy-often-peer-with-each-other-how-does-an-ixp-earn-money">R14. Why will two ISPs at the same level of the hierarchy often peer with each other? How does an IXP earn money?</a>
+          <ul>
+            <li><a href="#為什麼位於層次結構相同級別的兩個-isp-經常互相對等ixp-如何賺錢">為什麼位於層次結構相同級別的兩個 ISP 經常互相對等？IXP 如何賺錢？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r15-why-is-a-content-provider-considered-a-different-internet-entity-today-how-does-a-content-provider-connect-to-other-isps-why">R15. Why is a content provider considered a different Internet entity today? How does a content provider connect to other ISPs? Why?</a>
+          <ul>
+            <li><a href="#為什麼內容提供商今天被認為是一個不同的互聯網實體內容提供商如何連接到其他-isp為什麼">為什麼內容提供商今天被認為是一個不同的互聯網實體？內容提供商如何連接到其他 ISP？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r16-consider-sending-a-packet-from-a-source-host-to-a-destination-host-over-a-fixed-route-list-the-delay-components-in-the-end-to-end-delay-which-of-these-delays-are-constant-and-which-are-variable">R16. Consider sending a packet from a source host to a destination host over a fixed route. List the delay components in the end-to-end delay. Which of these delays are constant and which are variable?</a>
+          <ul>
+            <li><a href="#考慮在固定路由上從來源主機發送封包到目的主機列出端到端延遲中的延遲因子這些延遲中哪些是恆定的哪些是變化的">考慮在固定路由上從來源主機發送封包到目的主機。列出端到端延遲中的延遲因子。這些延遲中哪些是恆定的，哪些是變化的？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r17-visit-the-transmission-versus-propagation-delay-applet-at-the-companion-website-among-the-rates-propagation-delay-and-packet-sizes-available-find-a-combination-for-which-the-sender-finishes-transmitting-before-the-first-bit-of-the-packet-reaches-the-receiver-find-another-combination-for-which-the-first-bit-of-the-packet-reaches-the-receiver-before-the-sender-finishes-transmitting">R17. Visit the Transmission Versus Propagation Delay applet at the companion Website. Among the rates, propagation delay, and packet sizes available, find a combination for which the sender finishes transmitting before the first bit of the packet reaches the receiver. Find another combination for which the first bit of the packet reaches the receiver before the sender finishes transmitting.</a>
+          <ul>
+            <li><a href="#訪問伴隨網站的傳輸與傳播延遲-applet在可用的速率傳播延遲和封包大小中找到一個組合使發送方在第一個位元到達接收方之前完成傳輸找到另一個組合使封包的第一個位元在發送方完成傳輸之前到達接收方">訪問伴隨網站的傳輸與傳播延遲 applet。在可用的速率、傳播延遲和封包大小中，找到一個組合，使發送方在第一個位元到達接收方之前完成傳輸。找到另一個組合，使封包的第一個位元在發送方完成傳輸之前到達接收方。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r18-a-user-can-directly-connect-to-a-server-through-either-long-range-wireless-or-a-twisted-pair-cable-for-transmitting-a-1500-bytes-file-the-transmission-rates-of-the-wireless-and-wired-media-are-2-and-100-mbps-respectively-assume-that-the-propagation-speed-in-air-is-3-times-108-ms-while-the-speed-in-the-twisted-pair-is-2-times-108-ms-if-the-user-is-located-1-km-away-from-the-server-what-is-the-nodal-delay-when-using-each-of-the-two-technologies">R18. A user can directly connect to a server through either long-range wireless or a twisted-pair cable for transmitting a 1500-bytes file. The transmission rates of the wireless and wired media are 2 and 100 Mbps, respectively. Assume that the propagation speed in air is $3 \times 10^8$ m/s, while the speed in the twisted pair is $2 \times 10^8$ m/s. If the user is located 1 km away from the server, what is the nodal delay when using each of the two technologies?</a>
+          <ul>
+            <li><a href="#用戶可以通過長距離無線或雙絞線纜線直接連接到服務器用於傳輸一個-1500-字節的文件無線和有線媒介的傳輸速率分別為-2-和-100-mbps假設空氣中的傳播速度為-3-times-108-ms而雙絞線中的速度為-2-times-108-ms如果用戶距離服務器-1-公里使用這兩種技術時的節點延遲是多少">用戶可以通過長距離無線或雙絞線纜線直接連接到服務器，用於傳輸一個 1500 字節的文件。無線和有線媒介的傳輸速率分別為 2 和 100 Mbps。假設空氣中的傳播速度為 $3 \times 10^8$ m/s，而雙絞線中的速度為 $2 \times 10^8$ m/s。如果用戶距離服務器 1 公里，使用這兩種技術時的節點延遲是多少？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r19-suppose-host-a-wants-to-send-a-large-file-to-host-b-the-path-from-host-a-to-host-b-has-three-links-of-rates-r_1--500-kbps-r_2--2-mbps-and-r_3--1-mbps">R19. Suppose Host A wants to send a large file to Host B. The path from Host A to Host B has three links, of rates $R_1$ = 500 kbps, $R_2$ = 2 Mbps, and $R_3$ = 1 Mbps.</a>
+          <ul>
+            <li><a href="#假設主機-a-想要將一個大文件發送給主機-b從主機-a-到主機-b-的路徑有三個連接速率分別為-r_1--500-kbpsr_2--2-mbps-和-r_3--1-mbps">假設主機 A 想要將一個大文件發送給主機 B。從主機 A 到主機 B 的路徑有三個連接，速率分別為 $R_1$ = 500 kbps、$R_2$ = 2 Mbps 和 $R_3$ = 1 Mbps。</a></li>
+          </ul>
+        </li>
+        <li><a href="#r20-suppose-end-system-a-wants-to-send-a-large-file-to-end-system-b-at-a-very-high-level-describe-how-end-system-a-creates-packets-from-the-file-when-one-of-these-packets-arrives-to-a-router-what-information-in-the-packet-does-the-router-use-to-determine-the-link-onto-which-the-packet-is-forwarded-why-is-packet-switching-in-the-internet-analogous-to-driving-from-one-city-to-another-and-asking-directions-along-the-way">R20. Suppose end system A wants to send a large file to end system B. At a very high level, describe how end system A creates packets from the file. When one of these packets arrives to a router, what information in the packet does the router use to determine the link onto which the packet is forwarded? Why is packet switching in the Internet analogous to driving from one city to another and asking directions along the way?</a>
+          <ul>
+            <li><a href="#假設終端系統-a-想要將一個大文件發送給終端系統-b在非常高的層次上描述終端系統-a-如何從文件中創建封包當這些封包中的一個到達路由器時路由器使用封包中的哪些訊息來確定將封包轉發到哪個連接為什麼互聯網中的封包交換類似於從一個城市開車到另一個城市並在途中詢問方向">假設終端系統 A 想要將一個大文件發送給終端系統 B。在非常高的層次上，描述終端系統 A 如何從文件中創建封包。當這些封包中的一個到達路由器時，路由器使用封包中的哪些訊息來確定將封包轉發到哪個連接？為什麼互聯網中的封包交換類似於從一個城市開車到另一個城市並在途中詢問方向？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r21-visit-the-queuing-and-loss-applet-at-the-companion-web-site-what-is-the-maximum-emission-rate-and-the-minimum-transmission-rate-with-those-rates-what-is-the-traffic-intensity-run-the-applet-with-these-rates-and-determine-how-long-it-takes-for-packet-loss-to-occur-then-repeat-the-experiment-a-second-time-and-determine-again-how-long-it-takes-for-packet-loss-to-occur-are-the-values-different-why-or-why-not">R21. Visit the Queuing and Loss applet at the companion Web site. What is the maximum emission rate and the minimum transmission rate? With those rates, what is the traffic intensity? Run the applet with these rates and determine how long it takes for packet loss to occur. Then repeat the experiment a second time and determine again how long it takes for packet loss to occur. Are the values different? Why or Why not?</a>
+          <ul>
+            <li><a href="#訪問伴隨網站的-queuing-and-loss-applet最大發射速率和最小傳輸速率是多少使用這些速率流量強度是多少使用這些速率運行-applet並確定發生封包丟失需要多長時間然後再次重複實驗並再次確定發生封包丟失需要多長時間這些值是否不同為什麼">訪問伴隨網站的 Queuing and Loss applet。最大發射速率和最小傳輸速率是多少？使用這些速率，流量強度是多少？使用這些速率運行 applet，並確定發生封包丟失需要多長時間。然後再次重複實驗，並再次確定發生封包丟失需要多長時間。這些值是否不同？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r22-if-two-end-systems-are-connected-through-multiple-routers-and-the-data-link-level-between-them-ensures-reliable-data-delivery-is-a-transport-protocol-offering-reliable-data-delivery-between-these-two-end-systems-necessary-why">R22. If two end-systems are connected through multiple routers and the data-link level between them ensures reliable data delivery, is a transport protocol offering reliable data delivery between these two end-systems necessary? Why?</a>
+          <ul>
+            <li><a href="#如果兩個終端系統通過多個路由器連接並且它們之間的數據鏈路級確保可靠的數據傳遞那麼在這兩個終端系統之間提供可靠的數據傳遞的傳輸協議是必要的嗎為什麼">如果兩個終端系統通過多個路由器連接，並且它們之間的數據鏈路級確保可靠的數據傳遞，那麼在這兩個終端系統之間提供可靠的數據傳遞的傳輸協議是必要的嗎？為什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r23-what-are-the-five-layers-in-the-internet-protocol-stack-what-are-the-principal-responsibilities-of-each-of-these-layers">R23. What are the five layers in the Internet protocol stack? What are the principal responsibilities of each of these layers?</a>
+          <ul>
+            <li><a href="#互聯網協議棧中的五層是什麼這些層的主要責任是什麼">互聯網協議棧中的五層是什麼？這些層的主要責任是什麼？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r24-what-do-encapsulation-and-de-encapsulation-mean-why-are-they-needed-in-a-layered-protocol-stack">R24. What do encapsulation and de-encapsulation mean? Why are they needed in a layered protocol stack?</a>
+          <ul>
+            <li><a href="#封裝和解封裝是什麼意思為什麼在分層協議堆疊中需要它們">封裝和解封裝是什麼意思？為什麼在分層協議堆疊中需要它們？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r25-which-layers-in-the-internet-protocol-stack-does-a-router-process-which-layers-does-a-link-layer-switch-process-which-layers-does-a-host-process">R25. Which layers in the Internet protocol stack does a router process? Which layers does a link-layer switch process? Which layers does a host process?</a>
+          <ul>
+            <li><a href="#互聯網協議堆疊中的哪些層由路由器處理交換機處理哪些層主機處理哪些層">互聯網協議堆疊中的哪些層由路由器處理？交換機處理哪些層？主機處理哪些層？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r26-what-is-self-replicating-malware">R26. What is self-replicating malware?</a>
+          <ul>
+            <li><a href="#什麼是自我複製的惡意軟體">什麼是自我複製的惡意軟體？</a></li>
+          </ul>
+        </li>
+        <li><a href="#r27-describe-how-a-botnet-can-be-created-and-how-it-can-be-used-for-a-ddos-attack">R27. Describe how a botnet can be created and how it can be used for a DDoS attack</a>
+          <ul>
+            <li><a href="#描述如何創建-botnet-以及如何將其用於-ddos-攻擊">描述如何創建 botnet 以及如何將其用於 DDoS 攻擊</a></li>
+          </ul>
+        </li>
+        <li><a href="#r28-suppose-alice-and-bob-are-sending-packets-to-each-other-over-a-computer-network-suppose-trudy-positions-herself-in-the-network-so-that-she-can-capture-all-the-packets-sent-by-alice-and-send-whatever-she-wants-to-alice-list-some-of-the-malicious-things-trudy-can-do-from-this-position">R28. Suppose Alice and Bob are sending packets to each other over a computer network. Suppose Trudy positions herself in the network so that she can capture all the packets sent by Alice and send whatever she wants to Alice. List some of the malicious things Trudy can do from this position.</a>
+          <ul>
+            <li><a href="#假設-alice-和-bob-通過計算機網路互相發送封包假設-trudy-將自己放在網路中以便她可以捕獲-alice-發送的所有封包並向-alice-發送她想要的任何東西列出-trudy-可以從這個位置做的一些惡意事情">假設 Alice 和 Bob 通過計算機網路互相發送封包。假設 Trudy 將自己放在網路中，以便她可以捕獲 Alice 發送的所有封包並向 Alice 發送她想要的任何東西。列出 Trudy 可以從這個位置做的一些惡意事情。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&text=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&title=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&is_video=false&description=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&title=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&title=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&name=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad&description=%3cp%3eReference%3a%20Computer%20Networking%3a%20A%20Top-Down%20Approach%2c%208th%20Edition%3c%2fp%3e%0a%3ch1%20id%3d%22%e6%ad%a4%e9%a0%81%e9%9d%a2%e4%b8%ad%e7%ad%94%e6%a1%88%e4%b8%8d%e4%bf%9d%e8%ad%89%e7%82%ba%e6%ad%a3%e7%a2%ba%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%22%3e%e6%ad%a4%e9%a0%81%e9%9d%a2%e4%b8%ad%e7%ad%94%e6%a1%88%e4%b8%8d%e4%bf%9d%e8%ad%89%e7%82%ba%e6%ad%a3%e7%a2%ba%e7%ad%94%e6%a1%88%ef%bc%8c%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%e3%80%82%3c%2fh1%3e%0a%3ch1%20id%3d%22ch1-%e4%bd%9c%e6%a5%ad%22%3eCH1%20%e4%bd%9c%e6%a5%ad%3c%2fh1%3e%0a%3ch2%20id%3d%22review%22%3eReview%3c%2fh2%3e%0a%3ch3%20id%3d%22r1-what-is-the-difference-between-a-host-and-an-end-system-list-several-different-types-of-end-systems-is-a-web-server-an-end-system%22%3eR1.%20What%20is%20the%20difference%20between%20a%20host%20and%20an%20end%20system%3f%20List%20several%20different%20types%20of%20end%20systems.%20Is%20a%20Web%20server%20an%20end%20system%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22host-%e8%b7%9f-end-system-%e5%b7%ae%e5%88%a5%e6%98%af%e4%bb%80%e9%ba%bc%e5%88%97%e5%87%ba%e5%b9%be%e7%a8%ae%e4%b8%8d%e5%90%8c%e9%a1%9e%e5%9e%8b%e7%9a%84-end-systemweb-server-%e6%98%af-end-system-%e5%97%8e%22%3eHost%20%e8%b7%9f%20End%20system%20%e5%b7%ae%e5%88%a5%e6%98%af%e4%bb%80%e9%ba%bc%ef%bc%9f%e5%88%97%e5%87%ba%e5%b9%be%e7%a8%ae%e4%b8%8d%e5%90%8c%e9%a1%9e%e5%9e%8b%e7%9a%84%20End%20system%e3%80%82Web%20Server%20%e6%98%af%20End%20system%20%e5%97%8e%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e6%b2%92%e6%9c%89%e5%b7%ae%e5%88%a5%ef%bc%8cHost%20%e8%b7%9f%20End%20system%20%e6%98%af%e5%90%8c%e7%be%a9%e8%a9%9e%e3%80%82End%20system%20%e5%8c%85%e6%8b%ac%20PC%e3%80%81Work%20Station%e3%80%81Web%20Server%e3%80%81Mail%20Server%20%e7%ad%89%e7%ad%89%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r2-describe-the-protocol-that-might-be-used-by-two-people-having-a-telephonic-conversation-to-initiate-and-end-the-conversation-ie-the-way-that-they-talk%22%3eR2.%20Describe%20the%20protocol%20that%20might%20be%20used%20by%20two%20people%20having%20a%20telephonic%20conversation%20to%20initiate%20and%20end%20the%20conversation%2c%20i.e.%2c%20the%20way%20that%20they%20talk.%3c%2fh3%3e%0a%3ch4%20id%3d%22%e6%8f%8f%e8%bf%b0%e5%85%a9%e5%80%8b%e4%ba%ba%e9%80%b2%e8%a1%8c%e9%9b%bb%e8%a9%b1%e5%b0%8d%e8%a9%b1%e6%99%82%e5%8f%af%e8%83%bd%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8d%94%e5%ae%9a%e5%8d%b3%e4%bb%96%e5%80%91%e4%ba%a4%e8%ab%87%e7%9a%84%e6%96%b9%e5%bc%8f%22%3e%e6%8f%8f%e8%bf%b0%e5%85%a9%e5%80%8b%e4%ba%ba%e9%80%b2%e8%a1%8c%e9%9b%bb%e8%a9%b1%e5%b0%8d%e8%a9%b1%e6%99%82%e5%8f%af%e8%83%bd%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8d%94%e5%ae%9a%ef%bc%8c%e5%8d%b3%e4%bb%96%e5%80%91%e4%ba%a4%e8%ab%87%e7%9a%84%e6%96%b9%e5%bc%8f%e3%80%82%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e5%8d%94%e8%ad%b0%e6%98%af%e5%85%a9%e5%80%8b%e4%ba%ba%e3%80%81%e6%94%bf%e5%ba%9c%e3%80%81%e7%94%9a%e8%87%b3%e5%9c%8b%e5%ae%b6%e5%9c%a8%e9%80%b2%e8%a1%8c%e6%ba%9d%e9%80%9a%e6%99%82%e5%88%b6%e5%ae%9a%e7%9a%84%e4%b8%80%e5%a5%97%e6%ba%9d%e9%80%9a%e6%96%b9%e5%bc%8f%e3%80%82%e4%bb%a5%e4%ba%ba%e7%82%ba%e4%be%8b%ef%bc%8cA%20%e6%ac%b2%e8%88%87%20B%20%e5%b0%8d%e8%a9%b1%ef%bc%8c%e4%bb%96%e9%9c%80%e8%a6%81%e5%85%88%e5%90%91%20B%20%e8%aa%aa%e3%80%8c%e4%bd%a0%e5%a5%bd%e3%80%8d%ef%bc%8c%e8%80%8c%20B%20%e4%b9%9f%e9%9c%80%e8%a6%81%e5%9b%9e%e6%87%89%e4%bb%96%e3%80%8c%e4%bd%a0%e5%a5%bd%e3%80%8d%ef%bc%8c%e6%8e%a5%e8%91%97%20A%20%e6%8a%8a%0a%e4%bb%96%e6%83%b3%e5%82%b3%e9%81%94%e7%9a%84%e5%85%a7%e5%ae%b9%e7%b5%a6%20B%ef%bc%8cB%20%e5%86%8d%e5%9b%9e%e6%87%89%e4%bb%96%e3%80%8c%e6%94%b6%e5%88%b0%e3%80%8d%ef%bc%8c%e6%9c%80%e5%be%8c%20A%20%e5%90%91%20B%20%e8%aa%aa%e3%80%8c%e5%86%8d%e8%a6%8b%e3%80%8d%e8%a1%a8%e7%a4%ba%e7%b5%90%e6%9d%9f%e9%80%99%e6%ac%a1%e6%ba%9d%e9%80%9a%e3%80%82%e8%80%8c%e5%a6%82%e6%9e%9c%20A%20%e4%b8%8d%e7%85%a7%e5%8d%94%e8%ad%b0%e8%a6%8f%e5%ae%9a%e9%80%b2%e8%a1%8c%ef%bc%8c%e4%b8%80%e9%96%8b%e5%a7%8b%e7%9b%b4%e6%8e%a5%e6%8a%8a%e8%a8%8a%e6%81%af%e4%b8%9f%e7%b5%a6%20B%ef%bc%8cB%20%e5%8f%af%e8%83%bd%e6%9c%83%e9%81%b8%e6%93%87%e4%b8%8d%e7%90%86%20A%20%e8%80%8c%e7%84%a1%e6%b3%95%e9%a0%86%e5%88%a9%e6%ba%9d%e9%80%9a%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r3-why-are-standards-important-for-protocols%22%3eR3.%20Why%20are%20standards%20important%20for%20protocols%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e7%82%ba%e4%bb%80%e9%ba%bc%e6%a8%99%e6%ba%96%e5%b0%8d%e6%96%bc%e5%8d%94%e8%ad%b0%e4%be%86%e8%aa%aa%e5%be%88%e9%87%8d%e8%a6%81%22%3e%e7%82%ba%e4%bb%80%e9%ba%bc%e6%a8%99%e6%ba%96%e5%b0%8d%e6%96%bc%e5%8d%94%e8%ad%b0%e4%be%86%e8%aa%aa%e5%be%88%e9%87%8d%e8%a6%81%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e6%a8%99%e6%ba%96%e5%ae%9a%e7%be%a9%e4%ba%86%e5%8d%94%e8%ad%b0%e5%85%b7%e9%ab%94%e8%a6%81%e5%81%9a%e4%bb%80%e9%ba%bc%e3%80%81%e5%85%a7%e5%ae%b9%ef%bc%8c%e4%bb%a5%e4%be%bf%e5%89%b5%e5%bb%ba%e5%8f%af%e6%ba%9d%e9%80%9a%e7%9a%84%e7%b6%b2%e8%b7%af%e7%b3%bb%e7%b5%b1%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r4-list-four-access-technologies-classify-each-one-as-home-access-enterprise-access-or-wide-area-wireless-access%22%3eR4.%20List%20four%20access%20technologies.%20Classify%20each%20one%20as%20home%20access%2c%20enterprise%20access%2c%20or%20wide-area%20wireless%20access.%3c%2fh3%3e%0a%3ch4%20id%3d%22%e5%88%97%e5%87%ba%e5%9b%9b%e7%a8%ae%e5%ad%98%e5%8f%96%e6%8a%80%e8%a1%93%e5%b0%87%e6%af%8f%e4%b8%80%e7%a8%ae%e5%88%86%e9%a1%9e%e7%82%ba%e5%ae%b6%e5%ba%ad%e5%ad%98%e5%8f%96%e4%bc%81%e6%a5%ad%e5%ad%98%e5%8f%96%e6%88%96%e5%bb%a3%e5%9f%9f%e7%84%a1%e7%b7%9a%e5%ad%98%e5%8f%96%22%3e%e5%88%97%e5%87%ba%e5%9b%9b%e7%a8%ae%e5%ad%98%e5%8f%96%e6%8a%80%e8%a1%93%e3%80%82%e5%b0%87%e6%af%8f%e4%b8%80%e7%a8%ae%e5%88%86%e9%a1%9e%e7%82%ba%e5%ae%b6%e5%ba%ad%e5%ad%98%e5%8f%96%e3%80%81%e4%bc%81%e6%a5%ad%e5%ad%98%e5%8f%96%e6%88%96%e5%bb%a3%e5%9f%9f%e7%84%a1%e7%b7%9a%e5%ad%98%e5%8f%96%e3%80%82%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%0a%3cul%3e%0a%3cli%3e%e5%ae%b6%e5%ba%ad%e5%ad%98%e5%8f%96%ef%bc%9aDSL%e3%80%81%e5%85%89%e7%ba%96%3c%2fli%3e%0a%3cli%3e%e4%bc%81%e6%a5%ad%e5%ad%98%e5%8f%96%ef%bc%9aEthernet%3c%2fli%3e%0a%3cli%3e%e5%bb%a3%e5%9f%9f%e7%84%a1%e7%b7%9a%e5%ad%98%e5%8f%96%ef%bc%9a3G%2f4G%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r5-is-hfc-transmission-rate-dedicated-or-shared-among-users-are-collisions-possible-in-a-downstream-hfc-channel-why-or-why-not%22%3eR5.%20Is%20HFC%20transmission%20rate%20dedicated%20or%20shared%20among%20users%3f%20Are%20collisions%20possible%20in%20a%20downstream%20HFC%20channel%3f%20Why%20or%20why%20not%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22hfc-%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%e7%b5%a6%e4%bd%bf%e7%94%a8%e8%80%85%e5%9c%a8%e4%b8%8b%e8%a1%8c-hfc-%e9%a0%bb%e9%81%93%e4%b8%ad%e5%8f%af%e8%83%bd%e7%99%bc%e7%94%9f%e7%a2%b0%e6%92%9e%e5%97%8e%e7%82%ba%e4%bb%80%e9%ba%bc%22%3eHFC%20%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%e7%b5%a6%e4%bd%bf%e7%94%a8%e8%80%85%ef%bc%9f%e5%9c%a8%e4%b8%8b%e8%a1%8c%20HFC%20%e9%a0%bb%e9%81%93%e4%b8%ad%e5%8f%af%e8%83%bd%e7%99%bc%e7%94%9f%e7%a2%b0%e6%92%9e%e5%97%8e%ef%bc%9f%e7%82%ba%e4%bb%80%e9%ba%bc%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3eHFC%20%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%85%b1%e4%ba%ab%e7%b5%a6%e4%bd%bf%e7%94%a8%e8%80%85%e7%9a%84%e3%80%82%e4%b8%8b%e8%a1%8c%20HFC%20%e4%b8%8d%e6%9c%83%e7%a2%b0%e6%92%9e%ef%bc%8c%e5%9b%a0%e7%82%ba%20HFC%20%e6%98%af%e7%94%b1%e5%96%ae%e6%ba%90%e9%bb%9e%e7%99%bc%e5%87%ba%ef%bc%8c%e4%b8%8d%e6%9c%83%e6%9c%89%e7%a2%b0%e6%92%9e%e7%9a%84%e5%95%8f%e9%a1%8c%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r6-what-access-network-technologies-would-be-most-suitable-for-providing-internet-access-in-rural-areas%22%3eR6.%20What%20access%20network%20technologies%20would%20be%20most%20suitable%20for%20providing%20internet%20access%20in%20rural%20areas%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e4%bb%80%e9%ba%bc%e5%ad%98%e5%8f%96%e7%b6%b2%e8%b7%af%e6%8a%80%e8%a1%93%e6%9c%80%e9%81%a9%e5%90%88%e5%9c%a8%e9%84%89%e6%9d%91%e5%9c%b0%e5%8d%80%e6%8f%90%e4%be%9b%e4%ba%92%e8%81%af%e7%b6%b2%e5%ad%98%e5%8f%96%22%3e%e4%bb%80%e9%ba%bc%e5%ad%98%e5%8f%96%e7%b6%b2%e8%b7%af%e6%8a%80%e8%a1%93%e6%9c%80%e9%81%a9%e5%90%88%e5%9c%a8%e9%84%89%e6%9d%91%e5%9c%b0%e5%8d%80%e6%8f%90%e4%be%9b%e4%ba%92%e8%81%af%e7%b6%b2%e5%ad%98%e5%8f%96%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3eDSL%e3%80%81%e5%85%89%e7%ba%96%e5%88%b0%e6%88%b6%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r7-dial-up-modems-and-dsl-both-use-the-telephone-line-a-twisted-pair-copper-cabble-as-their-transmission-medium-why-then-is-dsl-much-faster-than-dial-up-access%22%3eR7.%20Dial-up%20modems%20and%20DSL%20both%20use%20the%20telephone%20line%20%28a%20twisted-pair%20copper%20cabble%29%20as%20their%20transmission%20medium.%20Why%20then%20is%20DSL%20much%20faster%20than%20dial-up%20access%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e6%92%a5%e8%99%9f%e6%95%b8%e6%93%9a%e6%a9%9f%e5%92%8c-dsl-%e9%83%bd%e4%bd%bf%e7%94%a8%e9%9b%bb%e8%a9%b1%e7%b7%9a%e9%9b%99%e7%b5%9e%e7%b7%9a%e9%8a%85%e9%9b%bb%e7%ba%9c%e4%bd%9c%e7%82%ba%e5%82%b3%e8%bc%b8%e5%aa%92%e4%bb%8b%e7%82%ba%e4%bb%80%e9%ba%bc-dsl-%e6%af%94%e6%92%a5%e8%99%9f%e8%a8%aa%e5%95%8f%e9%82%84%e5%bf%ab%22%3e%e6%92%a5%e8%99%9f%e6%95%b8%e6%93%9a%e6%a9%9f%e5%92%8c%20DSL%20%e9%83%bd%e4%bd%bf%e7%94%a8%e9%9b%bb%e8%a9%b1%e7%b7%9a%ef%bc%88%e9%9b%99%e7%b5%9e%e7%b7%9a%e9%8a%85%e9%9b%bb%e7%ba%9c%ef%bc%89%e4%bd%9c%e7%82%ba%e5%82%b3%e8%bc%b8%e5%aa%92%e4%bb%8b%e3%80%82%e7%82%ba%e4%bb%80%e9%ba%bc%20DSL%20%e6%af%94%e6%92%a5%e8%99%9f%e8%a8%aa%e5%95%8f%e9%82%84%e5%bf%ab%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e6%92%a5%e6%8e%a5%e9%80%a3%e7%b7%9a%e8%b7%9f%e8%99%95%e7%90%86%e9%9b%bb%e8%a9%b1%e9%80%9a%e9%81%8e%e4%b8%80%e6%a8%a3%e7%9a%84%e5%9f%ba%e7%a4%8e%e8%a8%ad%e6%96%bd%e3%80%82%e9%9b%bb%e8%a9%b1%e7%9a%84%e9%a0%bb%e5%af%ac%e5%be%88%e4%bd%8e%2856%20Kbps%29%ef%bc%8c%e8%80%8c%20DSL%20%e4%bd%bf%e7%94%a8%e5%be%9e%e5%ae%b6%e4%b8%ad%e5%88%b0%20DSLAM%20%e7%9a%84%e9%9b%bb%e8%a9%b1%e7%b7%9a%e8%b7%af%ef%bc%8c%e4%b8%8d%e7%b6%93%e9%81%8e%e9%9b%bb%e4%bf%a1%e5%85%ac%e5%8f%b8%e8%99%95%e7%90%86%e9%9b%bb%e8%a9%b1%e7%9a%84%e5%9f%ba%e7%a4%8e%e8%a8%ad%e6%96%bd%ef%bc%8c%e8%80%8c%e4%b8%94%20DSL%20%e4%bd%bf%e7%94%a8%e9%ab%98%e9%a0%bb%e6%ae%b5%ef%bc%8c%e6%89%80%e4%bb%a5%e9%80%9f%e5%ba%a6%e6%af%94%e8%bc%83%e5%bf%ab%ef%bc%8824%20Mbps%ef%bc%89%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r8-what-are-some-of-the-physical-media-that-ethernet-can-run-over%22%3eR8.%20What%20are%20some%20of%20the%20physical%20media%20that%20Ethernet%20can%20run%20over%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e4%bb%a5%e5%a4%aa%e7%b6%b2%e5%8f%af%e4%bb%a5%e9%81%8b%e8%a1%8c%e5%9c%a8%e5%93%aa%e4%ba%9b%e7%89%a9%e7%90%86%e5%aa%92%e4%bb%8b%e4%b8%8a%22%3e%e4%bb%a5%e5%a4%aa%e7%b6%b2%e5%8f%af%e4%bb%a5%e9%81%8b%e8%a1%8c%e5%9c%a8%e5%93%aa%e4%ba%9b%e7%89%a9%e7%90%86%e5%aa%92%e4%bb%8b%e4%b8%8a%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e5%90%8c%e8%bb%b8%e9%9b%bb%e7%ba%9c%e3%80%81%e5%85%89%e7%ba%96%e3%80%81%e9%9b%99%e7%b5%9e%e7%b7%9a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r9-hfc-dsl-and-ftth-are-all-used-for-residential-access-for-each-of-these-access-technologies-provide-a-range-of-transmission-rates-and-comment-on-whether-the-transmission-rate-is-dedicated-or-shared%22%3eR9.%20HFC%2c%20DSL%2c%20and%20FTTH%20are%20all%20used%20for%20residential%20access.%20For%20each%20of%20these%20access%20technologies%2c%20provide%20a%20range%20of%20transmission%20rates%20and%20comment%20on%20whether%20the%20transmission%20rate%20is%20dedicated%20or%20shared.%3c%2fh3%3e%0a%3ch4%20id%3d%22hfcdsl-%e5%92%8c-ftth-%e9%83%bd%e7%94%a8%e6%96%bc%e4%bd%8f%e5%ae%85%e6%8e%a5%e5%85%a5%e5%b0%8d%e6%96%bc%e9%80%99%e4%ba%9b%e6%8e%a5%e5%85%a5%e6%8a%80%e8%a1%93%e6%8f%90%e4%be%9b%e4%b8%80%e5%80%8b%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%af%84%e5%9c%8d%e4%b8%a6%e8%a8%8e%e8%ab%96%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%22%3eHFC%e3%80%81DSL%20%e5%92%8c%20FTTH%20%e9%83%bd%e7%94%a8%e6%96%bc%e4%bd%8f%e5%ae%85%e6%8e%a5%e5%85%a5%e3%80%82%e5%b0%8d%e6%96%bc%e9%80%99%e4%ba%9b%e6%8e%a5%e5%85%a5%e6%8a%80%e8%a1%93%ef%bc%8c%e6%8f%90%e4%be%9b%e4%b8%80%e5%80%8b%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%af%84%e5%9c%8d%ef%bc%8c%e4%b8%a6%e8%a8%8e%e8%ab%96%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e6%98%af%e5%b0%88%e7%94%a8%e9%82%84%e6%98%af%e5%85%b1%e4%ba%ab%e3%80%82%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%0a%3cul%3e%0a%3cli%3eHFC%ef%bc%9a%e4%b8%8b%e8%a1%8c%2042.8%20Mbps%ef%bc%8c%e4%b8%8a%e8%a1%8c%2030.7%20Mbps%ef%bc%8c%e5%85%b1%e4%ba%ab%3c%2fli%3e%0a%3cli%3eDSL%ef%bc%9a%e4%b8%8b%e8%a1%8c%2024%20Mbps%ef%bc%8c%e4%b8%8a%e8%a1%8c%203%20Mbps%ef%bc%8c%e5%b0%88%e7%94%a8%3c%2fli%3e%0a%3cli%3eFTTH%ef%bc%9a%e4%b8%8b%e8%a1%8c%20100%20Mbps%ef%bc%8c%e4%b8%8a%e8%a1%8c%20100%20Mbps%ef%bc%8c%e5%b0%88%e7%94%a8%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r10-describe-the-different-wireless-technologies-you-use-during-the-day-and-their-characteristics-if-you-have-a-choice-between-multiple-technologies-why-do-you-prefer-one-over-another%22%3eR10.%20Describe%20the%20different%20wireless%20technologies%20you%20use%20during%20the%20day%20and%20their%20characteristics.%20If%20you%20have%20a%20choice%20between%20multiple%20technologies%2c%20why%20do%20you%20prefer%20one%20over%20another%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e6%8f%8f%e8%bf%b0%e6%82%a8%e5%9c%a8%e4%b8%80%e5%a4%a9%e4%b8%ad%e4%bd%bf%e7%94%a8%e7%9a%84%e4%b8%8d%e5%90%8c%e7%84%a1%e7%b7%9a%e6%8a%80%e8%a1%93%e5%8f%8a%e5%85%b6%e7%89%b9%e6%80%a7%e5%a6%82%e6%9e%9c%e6%82%a8%e5%8f%af%e4%bb%a5%e9%81%b8%e6%93%87%e5%a4%9a%e7%a8%ae%e6%8a%80%e8%a1%93%e7%82%ba%e4%bb%80%e9%ba%bc%e6%82%a8%e6%9b%b4%e5%96%9c%e6%ad%a1%e4%b8%80%e7%a8%ae%e8%80%8c%e4%b8%8d%e6%98%af%e5%8f%a6%e4%b8%80%e7%a8%ae%22%3e%e6%8f%8f%e8%bf%b0%e6%82%a8%e5%9c%a8%e4%b8%80%e5%a4%a9%e4%b8%ad%e4%bd%bf%e7%94%a8%e7%9a%84%e4%b8%8d%e5%90%8c%e7%84%a1%e7%b7%9a%e6%8a%80%e8%a1%93%e5%8f%8a%e5%85%b6%e7%89%b9%e6%80%a7%e3%80%82%e5%a6%82%e6%9e%9c%e6%82%a8%e5%8f%af%e4%bb%a5%e9%81%b8%e6%93%87%e5%a4%9a%e7%a8%ae%e6%8a%80%e8%a1%93%ef%bc%8c%e7%82%ba%e4%bb%80%e9%ba%bc%e6%82%a8%e6%9b%b4%e5%96%9c%e6%ad%a1%e4%b8%80%e7%a8%ae%e8%80%8c%e4%b8%8d%e6%98%af%e5%8f%a6%e4%b8%80%e7%a8%ae%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3eWiFi%e3%80%814G%e3%80%81%e4%b9%99%e5%a4%aa%e7%b6%b2%e8%b7%af%ef%bc%8cWiFi%20%e9%80%9f%e5%ba%a6%e5%bf%ab%ef%bc%8c%e4%bd%86%e8%b7%9d%e9%9b%a2%e7%9f%ad%e3%80%824G%20%e9%80%9f%e5%ba%a6%e6%85%a2%e4%bd%86%e8%b7%9d%e9%9b%a2%e9%81%a0%e3%80%82%e4%b9%99%e5%a4%aa%e7%b6%b2%e8%b7%af%e9%80%9f%e5%ba%a6%e5%bf%ab%ef%bc%8c%e4%bd%86%e9%9c%80%e8%a6%81%e6%9c%89%e7%b7%9a%e9%80%a3%e6%8e%a5%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r11-suppose-there-is-exactly-one-packet-switch-between-a-sending-host-and-a-receiving-host-the-transmission-rates-between-the-sending-host-and-the-switch-and-between-the-switch-and-the-receiving-host-are-r_1-and-r_2-respectively-assuming-that-the-switch-uses-store-and-forward-packet-switching-what-is-the-total-end-to-end-delay-to-send-a-packet-of-length-l-ignore-queuing-propagation-delay-and-processing-delay%22%3eR11.%20Suppose%20there%20is%20exactly%20one%20packet%20switch%20between%20a%20sending%20host%20and%20a%20receiving%20host.%20The%20transmission%20rates%20between%20the%20sending%20host%20and%20the%20switch%20and%20between%20the%20switch%20and%20the%20receiving%20host%20are%20%24R_1%24%20and%20%24R_2%24%2c%20respectively.%20Assuming%20that%20the%20switch%20uses%20store-and-forward%20packet%20switching%2c%20what%20is%20the%20total%20end-to-end%20delay%20to%20send%20a%20packet%20of%20length%20%24L%24%3f%20%28Ignore%20queuing%2c%20propagation%20delay%2c%20and%20processing%20delay.%29%3c%2fh3%3e%0a%3ch4%20id%3d%22%e5%81%87%e8%a8%ad%e5%9c%a8%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e6%9c%89%e4%b8%80%e5%80%8b%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e6%a9%9f%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba-r_1%e4%ba%a4%e6%8f%9b%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba-r_2%e5%81%87%e8%a8%ad%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%bd%bf%e7%94%a8%e5%ad%98%e5%84%b2%e8%bd%89%e7%99%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%99%bc%e9%80%81%e9%95%b7%e5%ba%a6%e7%82%ba-l-%e7%9a%84%e5%b0%81%e5%8c%85%e7%9a%84%e7%b8%bd%e7%ab%af%e5%88%b0%e7%ab%af%e5%bb%b6%e9%81%b2%e6%98%af%e5%a4%9a%e5%b0%91%e5%bf%bd%e7%95%a5%e6%8e%92%e9%9a%8a%e5%82%b3%e6%92%ad%e5%bb%b6%e9%81%b2%e5%92%8c%e8%99%95%e7%90%86%e5%bb%b6%e9%81%b2%22%3e%e5%81%87%e8%a8%ad%e5%9c%a8%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e6%9c%89%e4%b8%80%e5%80%8b%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e6%a9%9f%e3%80%82%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%92%8c%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba%20%24R_1%24%ef%bc%8c%e4%ba%a4%e6%8f%9b%e6%a9%9f%e5%92%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e4%b9%8b%e9%96%93%e7%9a%84%e5%82%b3%e8%bc%b8%e9%80%9f%e7%8e%87%e7%82%ba%20%24R_2%24%e3%80%82%e5%81%87%e8%a8%ad%e4%ba%a4%e6%8f%9b%e6%a9%9f%e4%bd%bf%e7%94%a8%e5%ad%98%e5%84%b2%e8%bd%89%e7%99%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%ef%bc%8c%e7%99%bc%e9%80%81%e9%95%b7%e5%ba%a6%e7%82%ba%20%24L%24%20%e7%9a%84%e5%b0%81%e5%8c%85%e7%9a%84%e7%b8%bd%e7%ab%af%e5%88%b0%e7%ab%af%e5%bb%b6%e9%81%b2%e6%98%af%e5%a4%9a%e5%b0%91%ef%bc%9f%ef%bc%88%e5%bf%bd%e7%95%a5%e6%8e%92%e9%9a%8a%e3%80%81%e5%82%b3%e6%92%ad%e5%bb%b6%e9%81%b2%e5%92%8c%e8%99%95%e7%90%86%e5%bb%b6%e9%81%b2%e3%80%82%ef%bc%89%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e4%b8%80%e9%96%8b%e5%a7%8b%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e9%96%8b%e5%a7%8b%e5%82%b3%e8%bc%b8%e3%80%82%e5%9c%a8%20%24%5cfrac%7bL%7d%7bR_1%7d%24%20%e5%be%8c%ef%bc%8c%e7%99%bc%e9%80%81%e4%b8%bb%e6%a9%9f%e5%ae%8c%e6%88%90%e5%82%b3%e8%bc%b8%ef%bc%8c%e4%b8%94%20router%20%e6%8e%a5%e6%94%b6%e5%88%b0%e6%95%b4%e5%80%8b%e5%b0%81%e5%8c%85%28%e7%84%a1%e5%82%b3%e6%92%ad%e5%bb%b6%e9%81%b2%29%e3%80%82%e5%9b%a0%e7%82%ba%20router%20%e5%b7%b2%e7%b6%93%e6%9c%89%e5%ae%8c%e6%95%b4%e7%9a%84%e5%b0%81%e5%8c%85%e4%ba%86%ef%bc%8c%e4%bb%96%e5%8f%af%e4%bb%a5%e9%96%8b%e5%a7%8b%e5%82%b3%e8%bc%b8%e5%88%b0%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%ef%bc%8c%e5%9c%a8%20%24%5cfrac%7bL%7d%7bR_2%7d%24%20%e5%be%8c%ef%bc%8c%e6%8e%a5%e6%94%b6%e4%b8%bb%e6%a9%9f%e6%8e%a5%e6%94%b6%e5%88%b0%e5%b0%81%e5%8c%85%e3%80%82%e6%89%80%e4%bb%a5%e7%b8%bd%e5%bb%b6%e9%81%b2%e7%82%ba%20%24%5cfrac%7bL%7d%7bR_1%7d%20%2b%20%5cfrac%7bL%7d%7bR_2%7d%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r12-what-advantage-does-a-circuit-switched-network-have-over-a-packet-switched-network-what-advantages-does-tdm-have-over-fdm-in-a-circuit-switched-network%22%3eR12.%20What%20advantage%20does%20a%20circuit-switched%20network%20have%20over%20a%20packet-switched%20network%3f%20What%20advantages%20does%20TDM%20have%20over%20FDM%20in%20a%20circuit-switched%20network%3f%3c%2fh3%3e%0a%3ch4%20id%3d%22%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e7%9b%b8%e5%b0%8d%e6%96%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%e5%9c%a8%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e4%b8%adtdm-%e7%9b%b8%e5%b0%8d%e6%96%bc-fdm-%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%22%3e%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e7%9b%b8%e5%b0%8d%e6%96%bc%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%ef%bc%9f%e5%9c%a8%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e7%b5%a1%e4%b8%ad%ef%bc%8cTDM%20%e7%9b%b8%e5%b0%8d%e6%96%bc%20FDM%20%e6%9c%89%e4%bb%80%e9%ba%bc%e5%84%aa%e5%8b%a2%ef%bc%9f%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%e9%9b%bb%e8%b7%af%e4%ba%a4%e6%8f%9b%e7%b6%b2%e8%b7%af%e4%bf%9d%e8%ad%89%e7%ab%af%e5%b0%8d%e7%ab%af%e7%9a%84%e9%a0%bb%e5%af%ac%ef%bc%8c%e8%80%8c%e5%b0%81%e5%8c%85%e4%ba%a4%e6%8f%9b%e7%b6%b2%e8%b7%af%e4%b8%8d%e4%bf%9d%e8%ad%89%e3%80%82%3c%2fli%3e%0a%3cli%3e%e5%a6%82%e6%9e%9c%e7%99%bc%e7%94%9f%e6%93%81%e5%a1%9e%ef%bc%8cTDM%20%e5%8f%af%e8%83%bd%e5%8f%aa%e6%9c%83%20loss%20%e4%b8%80%e4%ba%9b%e8%b3%87%e6%96%99%ef%bc%8c%e8%80%8c%20FDM%20%e5%8f%af%e8%83%bd%e6%9c%83%20loss%20%e5%85%a8%e9%83%a8%e3%80%82%3c%2fli%3e%0a%3cli%3eFDM%20%e5%bb%ba%e7%ab%8b%e9%80%a3%e7%b7%9a%e5%be%8c%ef%bc%8c%e5%8d%a0%e7%94%a8%e7%9a%84%e9%a0%bb%e5%af%ac%e4%b8%8d%e8%83%bd%e8%a2%ab%e5%85%b6%e4%bb%96%e9%80%a3%e7%b7%9a%e4%bd%bf%e7%94%a8%ef%bc%8c%e5%8f%af%e8%83%bd%e5%ad%98%e5%9c%a8%e6%b5%aa%e8%b2%bb%e7%9a%84%e6%83%85%e6%b3%81%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22r13-suppose-users-share-a-2-mbps-link-also-suppose-each-user-transmits-continuously-at-1-mbps-when-transmitting-but-each-user-transmits-only-20-percent-of-the-time-see-the-discussion-of-statistical-multiplexing-in-section-13%22%3eR13.%20Suppose%20users%20share%20a%20%242%24%20Mbps%20link.%20Also%20suppose%20each%20user%20transmits%20continuously%20at%20%241%24%20Mbps%20when%20transmitting%2c%20but%20each%20user%20transmits%20only%2020%20percent%20of%20the%20time.%20%28See%20the%20discussion%20of%20statistical%20multiplexing%20in%20Section%201.3.%29%3c%2fh3%3e%0a%3ch4%20id%3d%22%e5%81%87%e8%a8%ad%e7%94%a8%e6%88%b6%e5%85%b1%e7%94%a8%e4%b8%80%e5%80%8b-2-mbps-%e7%9a%84%e9%80%a3%e7%b7%9a%e5%90%8c%e6%99%82%e5%81%87%e8%a8%ad%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%9c%a8%e5%82%b3%e8%bc%b8%e6%99%82%e9%80%a3%e7%ba%8c%e5%82%b3%e8%bc%b8-1-mbps%e4%bd%86%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%8f%aa%e5%9c%a8-20-%e7%9a%84%e6%99%82%e9%96%93%e5%85%a7%e5%82%b3%e8%bc%b8-%e5%8f%83%e8%a6%8b%e7%ac%ac-13-%e7%af%80%e4%b8%ad%e5%b0%8d%e7%b5%b1%e8%a8%88%e5%a4%9a%e8%b7%af%e5%be%a9%e7%94%a8%e7%9a%84%e8%a8%8e%e8%ab%96%22%3e%e5%81%87%e8%a8%ad%e7%94%a8%e6%88%b6%e5%85%b1%e7%94%a8%e4%b8%80%e5%80%8b%20%242%24%20Mbps%20%e7%9a%84%e9%80%a3%e7%b7%9a%e3%80%82%e5%90%8c%e6%99%82%e5%81%87%e8%a8%ad%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%9c%a8%e5%82%b3%e8%bc%b8%e6%99%82%e9%80%a3%e7%ba%8c%e5%82%b3%e8%bc%b8%20%241%24%20Mbps%ef%bc%8c%e4%bd%86%e6%af%8f%e5%80%8b%e7%94%a8%e6%88%b6%e5%8f%aa%e5%9c%a8%20%2420%24%25%20%e7%9a%84%e6%99%82%e9%96%93%e5%85%a7%e5%82%b3%e8%bc%b8%e3%80%82%20%28%e5%8f%83%e8%a6%8b%e7%ac%ac%201.3%20%e7%af%80%e4%b8%ad%e5%b0%8d%e7%b5%b1%e8%a8%88%e5%a4%9a%e8%b7%af%e5%be%a9%e7%94%a8%e7%9a%84%e8%a8%8e%e8%ab%96%e3%80%82%29%3c%2fh4%3e%0a%3cul%3e%0a%3cli%3e%0a%3cp%3ea.%20When%20circuit%20switching%20is%20used%2c%20how%20many%20users%20can%20be%20supported%3f%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fComputerNetworking%2fCh1_Homework%2f&t=%e3%80%90%e8%a8%88%e7%ae%97%e6%a9%9f%e7%b6%b2%e8%b7%af%e3%80%91CH1%20%e4%bd%9c%e6%a5%ad" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2025  ErrorPro 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script type="text/javascript" src=/js/nest.js count=150 color="255,255,255" opacity=1>
+</script>
+
+<img id="Cursor" src="/images/cursor/silverwolf/01-Normal.gif">
+
+<script type="text/javascript" src=/js/cursor.js>
+</script>
+
+
+
+
+</html>

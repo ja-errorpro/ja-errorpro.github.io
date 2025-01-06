@@ -6,12 +6,12 @@
     <description>Recent content in Tags on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
-    <lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ctf</title>
       <link>http://localhost:1313/tags/ctf/</link>
-      <pubDate>Sun, 08 Sep 2024 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/ctf/</guid>
       <description></description>
     </item>
@@ -76,6 +76,13 @@
       <link>http://localhost:1313/tags/idx/</link>
       <pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/idx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer Networking</title>
+      <link>http://localhost:1313/tags/computer-networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/computer-networking/</guid>
       <description></description>
     </item>
     <item>
