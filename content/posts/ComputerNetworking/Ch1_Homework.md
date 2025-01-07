@@ -568,23 +568,23 @@ sequenceDiagram
 
 - 略
 
-### P31. In modern packet-switched networks, including the Internet, the source host segments long, application-layer messages (for example. an image or a music file) into smaller packets and sends the packets into the network. The receiver then reassembles the packets back into the original message. We refer to this process as message segmentation. Figure 1.27 illustrates the end-to-end transport of a message with and without message segmentation. Consider a message that is $10^6$ bits long that is to be sent from source to destination in Figure 1.27. Suppose each link in the figure is 5 Mbps. Ignore propagation, queuing, and processing delays.
+### P31. In modern packet-switched networks, including the Internet, the source host segments long, application-layer messages (for example. an image or a music file) into smaller packets and sends the packets into the network. The receiver then reassembles the packets back into the original message. We refer to this process as message segmentation. Figure 1.27 illustrates the end-to-end transport of a message with and without message segmentation. Consider a message that is $10^6$ bits long that is to be sent from source to destination in Figure 1.27. Suppose each link in the figure is 5 Mbps. Propagation delay is 250ms, Ignore queuing, and processing delays.
 
-#### 在現代封包交換網絡中，包括互聯網，來源主機將長的應用層消息（例如。圖像或音樂文件）分段為更小的封包並將封包發送到網絡。然後接收器將封包重新組合成原始消息。我們將這個過程稱為消息分段。圖 1.27 顯示了帶有和不帶消息分段的消息的端到端傳輸。考慮從圖 1.27 中的來源到目的地發送的長度為 $10^6$ 位的消息。假設圖中的每個鏈路都是 5 Mbps。忽略傳播、排隊和處理延遲。
+#### 在現代封包交換網絡中，包括互聯網，來源主機將長的應用層消息（例如。圖像或音樂文件）分段為更小的封包並將封包發送到網絡。然後接收器將封包重新組合成原始消息。我們將這個過程稱為消息分段。圖 1.27 顯示了帶有和不帶消息分段的消息的端到端傳輸。考慮從圖 1.27 中的來源到目的地發送的長度為 $10^6$ 位的消息。假設圖中的每個鏈路都是 5 Mbps。傳播延遲為 250 ms 排隊和處理延遲。
 
 ![Figure 1.27](/images/ComputerNetworking/Figure1.27.png)
 
 - a. Consider sending the message from source to destination without message segmentation. How long does it take to move the message from the source host to the first packet switch? Keeping in mind that each switch uses store-and-forward packet switching, what is the total time to move the message from source host to destination host?
     - 考慮從來源到目的地發送消息而不進行消息分段。將消息從來源主機移動到第一個封包交換器需要多長時間？請記住，每個交換器使用存儲轉發分組交換，將消息從來源主機移動到目的主機的總時間是多少？
-        - $\frac{10^6}{5 \times 10^6} = 0.2s$，經過 3 個 switch，所以總時間是 0.6s
+        - $\frac{10^6}{5 \times 10^6} = 0.2s$，經過 3 個 switch，加上 3 個 propagation delay，總共 1350ms
 
 - b. Now suppose that the message is segmented into 100 packets, with each packet being 10,000 bits long. How long does it take to move the first packet from source host to the first switch? When the first packet is being sent from the first switch to the second switch, the second packet is being sent from the source host to the first switch. At what time will the second packet be fully received at the first switch?
     - 現在假設消息被分段為 100 個封包，每個封包長度為 10,000 位。將第一個封包從來源主機移動到第一個交換器需要多長時間？當第一個封包從第一個交換器發送到第二個交換器時，第二個封包正在從來源主機發送到第一個交換器。第二個封包何時完全接收到第一個交換器？
-        - $\frac{10^4}{5 \times 10^6} = 0.002s$，第二個封包在 4ms 後完全接收到第一個交換器
+        - $\frac{10^4}{5 \times 10^6} = 0.002s$，加上兩個 Propagation delay 250ms，總共 504ms
 
 - c. How long does it take to move the file from source host to destination host when message segmentation is used? Compare this result with your answer in part (a) and comment.
     - 使用消息分段時，將文件從來源主機移動到目的主機需要多長時間？將此結果與第（a）部分中的答案進行比較並評論。
-        - 6ms + 剩下每 L/R 會收到一個封包，為 $6ms + (100-1) \times 2ms = 204ms$，比不分段快了 0.4s
+        - 6ms + 剩下每 L/R 會收到一個封包 + 3 個 propagation delay，為 $6ms + (100-1) \times 2ms + 3 \times 250ms = 954ms$，比不分段快了 396ms
 
 - d. In addition to reducing delay, what are reasons to use message segmentation?
     - 除了減少延遲之外，使用消息分段的原因是什麼？
@@ -595,6 +595,10 @@ sequenceDiagram
     - 討論消息分段的缺點。
         - 順序可能會被打亂，要加上 sequence number
         - 如果切很小，header 大小佔比變大，導致利用率下降
+
+- f. Is segmentation more beneficial or less beneficial when there is a small propagation delay?
+    - 如果有小的傳播延遲，分段更有利還是更不利？
+        - 稍微有利，但如果 Propagation delay 越來越大，好處會越來越少
 
 ### P32. Consider Problem P31 and assume that the propagation delay is 250 ms. Recalculate the total time needed to transfer the source data with and without segmentation. Is segmentation more beneficial or less if there is propagation delay?
 
