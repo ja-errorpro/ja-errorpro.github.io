@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy">PDFy&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Mon, 12 May 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>PL OurScheme Interpreter 專案三函數儲存可能思路</title><link>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</link><pubDate>Mon, 12 May 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</guid><description>&lt;h3 id="點我參考程式碼將於專案截止日後轉為公開-repo">&lt;a href="https://github.com/ja-errorpro/CYCS_OurSchemeInterpreter/tree/bf0f8ca3aaadb9b758a11dcd1238e5aff20e81cb">點我參考程式碼(將於專案截止日後轉為公開 repo)&lt;/a>&lt;/h3>
+&lt;p>這邊統一一下對於 parameter 和 argument 的用詞定義：&lt;/p>
+&lt;blockquote>
+&lt;p>Parameter: 定義函數時的參數變數&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Argument: 呼叫函數時傳入的參數值&lt;/p>&lt;/blockquote>
+&lt;p>對於&lt;/p>
+&lt;p>&lt;code>(define F (lambda (param1 param2) s-exp1 s-exp2))&lt;/code>&lt;/p>
+&lt;div class="mermaid">graph TD;
+F(["&lt;center>lambda&lt;br>(tag: isfunc)&lt;/center>"])-->param1d([.]);
+F-->seq1d([.]);
+param1d-->param1([param1]);
+param1d-->param2d([.]);
+param2d-->param2([param2]);
+param2d-->nil2([nil]);
+
+seq1d-->seq1([s-exp1])
+seq1d-->seq2d([.])
+seq2d-->seq2([s-exp2])
+seq2d-->nil3([nil])
+&lt;/div>
+&lt;p>執行 &lt;code>(F arg1 arg2)&lt;/code> 時將建出以下資料結構：&lt;/p>
+&lt;div class="mermaid">graph TD;
+dummyNode([.])-->F(["&lt;center>lambda&lt;br>(tag: isfunc)&lt;/center>"])
+F-->param1d([.]);
+F-->seq1d([.]);
+param1d-->param1([param1]);
+param1d-->param2d([.]);
+param2d-->param2([param2]);
+param2d-->nil2([nil]);
+
+seq1d-->seq1([s-exp1])
+seq1d-->seq2d([.])
+seq2d-->seq2([s-exp2])
+seq2d-->nil3([nil])
+
+dummyNode-->argdot1([.])
+argdot1-->arg1([arg1])
+argdot1-->argdot2([.])
+argdot2-->arg2([arg2])
+argdot2-->nil4([nil])
+&lt;/div>
+&lt;hr>
+&lt;p>對於&lt;/p>
+&lt;p>&lt;code>(define (F param1 param2) s-exp1 s-exp2)&lt;/code>&lt;/p>
+&lt;div class="mermaid">graph TD;
+F(["&lt;center>F&lt;br>(tag: isfunc)&lt;/center>"])-->param1d([.]);
+F-->seq1d([.]);
+param1d-->param1([param1]);
+param1d-->param2d([.]);
+param2d-->param2([param2]);
+param2d-->nil2([nil]);
+
+seq1d-->seq1([s-exp1])
+seq1d-->seq2d([.])
+seq2d-->seq2([s-exp2])
+seq2d-->nil3([nil])
+&lt;/div>
+&lt;p>執行 &lt;code>(F arg1 arg2)&lt;/code> 時將建出以下資料結構：&lt;/p></description></item><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy">PDFy&lt;/h1>
 &lt;p>只有前端的 Source Code，沒什麼特別的&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -210,8 +268,7 @@ RHOST: 10.129.11.184
 &lt;/ul>
 &lt;h3 id="好處">好處&lt;/h3>
 &lt;blockquote>
-&lt;p>把商業邏輯或業務邏輯封裝成簡單邏輯&lt;/p>
-&lt;/blockquote>
+&lt;p>把商業邏輯或業務邏輯封裝成簡單邏輯&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>本質：封裝
 &lt;ul>
@@ -287,8 +344,7 @@ RHOST: 10.129.11.184
 &lt;li>幫助企業降低成本支出&lt;/li>
 &lt;li>按一按就可以升級
 &lt;blockquote>
-&lt;p>資安沒做好還是會噴$$&lt;/p>
-&lt;/blockquote>
+&lt;p>資安沒做好還是會噴$$&lt;/p>&lt;/blockquote>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -320,7 +376,7 @@ RHOST: 10.129.11.184
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h4 id="csa-top11httpsblogbarracudacom20220620csa-identifies-top-11-cloud-security-impediments">&lt;a href="https://blog.barracuda.com/2022/06/20/csa-identifies-top-11-cloud-security-impediments">CSA Top11&lt;/a>&lt;/h4>
+&lt;h4 id="csa-top11">&lt;a href="https://blog.barracuda.com/2022/06/20/csa-identifies-top-11-cloud-security-impediments">CSA Top11&lt;/a>&lt;/h4>
 &lt;ol>
 &lt;li>Insufficient identity, credentials, access, and key Management&lt;/li>
 &lt;li>Insecure interfaces and application programming interfaces (APIs)&lt;/li>
@@ -1249,8 +1305,7 @@ RHOST: 10.129.11.184
 &lt;p>資安事件回應、情資分析佔最多缺額&lt;/p>
 &lt;p>企業資安預算逐年提高&lt;/p>
 &lt;blockquote>
-&lt;p>這是最好的時代，也是最壞的時代&lt;/p>
-&lt;/blockquote>
+&lt;p>這是最好的時代，也是最壞的時代&lt;/p>&lt;/blockquote>
 &lt;ul>
 &lt;li>認清工作現實
 &lt;ul>
@@ -5148,8 +5203,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p>
 &lt;h3 id="1碳足跡">1.碳足跡&lt;/h3>
 &lt;h4 id="製造">製造&lt;/h4>
 &lt;blockquote>
-&lt;p>目前看重環保議題,Farmbot使用最普遍的材料:&lt;/p>
-&lt;/blockquote>
+&lt;p>目前看重環保議題,Farmbot使用最普遍的材料:&lt;/p>&lt;/blockquote>
 &lt;table>
  &lt;thead>
  &lt;tr>
@@ -5206,12 +5260,10 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p>
  &lt;/tbody>
 &lt;/table>
 &lt;blockquote>
-&lt;p>每生產Farmbot排放的理論量約 &lt;strong>95.4 kg&lt;/strong>，但實際上較接近 &lt;strong>150 kg&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>每生產Farmbot排放的理論量約 &lt;strong>95.4 kg&lt;/strong>，但實際上較接近 &lt;strong>150 kg&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;h4 id="使用">使用&lt;/h4>
 &lt;blockquote>
-&lt;p>在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&lt;/p>
-&lt;/blockquote>
+&lt;p>在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&lt;/p>&lt;/blockquote>
 &lt;table>
  &lt;thead>
  &lt;tr>
@@ -5346,11 +5398,9 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p>
 &lt;h2 id="第二堂">第二堂&lt;/h2>
 &lt;p>安裝Pycharm : &lt;a href="https://www.jetbrains.com/pycharm/">Pycharm&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>&lt;!-- raw HTML omitted -->Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted -->&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>&lt;!-- raw HTML omitted -->Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted -->&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
-&lt;p>需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code>$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code>)&lt;/p>
-&lt;/blockquote>
+&lt;p>需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code>$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code>)&lt;/p>&lt;/blockquote>
 &lt;p>安裝方式: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_install.html">Here&lt;/a>&lt;/p>
 &lt;p>設定: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_config.html">here&lt;/a>&lt;/p>
 &lt;p>安裝Cocos2d: Files&amp;gt;Setting&amp;gt;Project: Inter..&amp;gt;(+)&amp;gt;搜尋cocos2d&amp;gt;安裝&lt;/p>
@@ -5360,8 +5410,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p>
 &lt;p>&lt;strong>命令模式&lt;/strong>: 為預設模式,在任何模式中按下Esc即可到此模式,可按下某些鍵來切換模式&lt;/p>
 &lt;p>&lt;strong>插入模式&lt;/strong>: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&lt;/p>
 &lt;p>&lt;strong>底線命令模式&lt;/strong>: 切換方式:按下:,可輸入指令操作內容,&lt;/p>
-&lt;p>離開: :q&lt;/p>
-&lt;p>強制離開: :q!&lt;/p></description></item><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p>Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p>
+&lt;p>離開: :q&lt;/p></description></item><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p>Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p>
 &lt;h1 id="此頁面中答案不保證為正確答案僅供參考">此頁面中答案不保證為正確答案，僅供參考。&lt;/h1>
 &lt;h1 id="ch1-作業">CH1 作業&lt;/h1>
 &lt;h2 id="review">Review&lt;/h2>

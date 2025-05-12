@@ -126,11 +126,9 @@
 &lt;h2 id="第二堂">第二堂&lt;/h2>
 &lt;p>安裝Pycharm : &lt;a href="https://www.jetbrains.com/pycharm/">Pycharm&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>&lt;!-- raw HTML omitted -->Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted -->&lt;/strong>&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;strong>&lt;!-- raw HTML omitted -->Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted -->&lt;/strong>&lt;/p>&lt;/blockquote>
 &lt;blockquote>
-&lt;p>需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code>$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code>)&lt;/p>
-&lt;/blockquote>
+&lt;p>需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code>$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code>)&lt;/p>&lt;/blockquote>
 &lt;p>安裝方式: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_install.html">Here&lt;/a>&lt;/p>
 &lt;p>設定: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_config.html">here&lt;/a>&lt;/p>
 &lt;p>安裝Cocos2d: Files&amp;gt;Setting&amp;gt;Project: Inter..&amp;gt;(+)&amp;gt;搜尋cocos2d&amp;gt;安裝&lt;/p>
@@ -140,5 +138,4 @@
 &lt;p>&lt;strong>命令模式&lt;/strong>: 為預設模式,在任何模式中按下Esc即可到此模式,可按下某些鍵來切換模式&lt;/p>
 &lt;p>&lt;strong>插入模式&lt;/strong>: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&lt;/p>
 &lt;p>&lt;strong>底線命令模式&lt;/strong>: 切換方式:按下:,可輸入指令操作內容,&lt;/p>
-&lt;p>離開: :q&lt;/p>
-&lt;p>強制離開: :q!&lt;/p></description></item></channel></rss>
+&lt;p>離開: :q&lt;/p></description></item></channel></rss>

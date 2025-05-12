@@ -41,18 +41,18 @@
 </span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$DomainName</span> = <span style=color:#f1fa8c>&#34;training_a.local&#34;</span>
 </span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$DomainNetbiosName</span> = <span style=color:#f1fa8c>&#34;TRAINING_A&#34;</span>
 </span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>Install-ADDSForest</span> `
-</span></span><span style=display:flex><span>-CreateDnsDelegation:$false `
+</span></span><span style=display:flex><span>-CreateDnsDelegation:<span style=color:#8be9fd;font-style:italic>$false</span> `
 </span></span><span style=display:flex><span>-DatabasePath <span style=color:#f1fa8c>&#34;C:\Windows\NTDS&#34;</span> `
 </span></span><span style=display:flex><span>-ForestMode <span style=color:#f1fa8c>&#34;WinThreshold&#34;</span> `
 </span></span><span style=display:flex><span>-DomainMode <span style=color:#f1fa8c>&#34;WinThreshold&#34;</span> `
 </span></span><span style=display:flex><span>-DomainName <span style=color:#8be9fd;font-style:italic>$DomainName</span> `
 </span></span><span style=display:flex><span>-DomainNetbiosName <span style=color:#8be9fd;font-style:italic>$DomainNetbiosName</span> `
-</span></span><span style=display:flex><span>-InstallDns:$true `
+</span></span><span style=display:flex><span>-InstallDns:<span style=color:#8be9fd;font-style:italic>$true</span> `
 </span></span><span style=display:flex><span>-LogPath <span style=color:#f1fa8c>&#34;C:\Windows\NTDS&#34;</span> `
-</span></span><span style=display:flex><span>-NoRebootOnCompletion:$false `
+</span></span><span style=display:flex><span>-NoRebootOnCompletion:<span style=color:#8be9fd;font-style:italic>$false</span> `
 </span></span><span style=display:flex><span>-SysvolPath <span style=color:#f1fa8c>&#34;C:\Windows\SYSVOL&#34;</span> `
-</span></span><span style=display:flex><span>-SafeModeAdministratorPassword $(<span style=color:#8be9fd;font-style:italic>ConvertTo-SecureString</span> -string <span style=color:#f1fa8c>&#39;Password!&#39;</span> -AsPlainText -Force) `
-</span></span><span style=display:flex><span>-Force:$true
+</span></span><span style=display:flex><span>-SafeModeAdministratorPassword <span style=color:#8be9fd;font-style:italic>$</span>(<span style=color:#8be9fd;font-style:italic>ConvertTo-SecureString</span> -string <span style=color:#f1fa8c>&#39;Password!&#39;</span> -AsPlainText -Force) `
+</span></span><span style=display:flex><span>-Force:<span style=color:#8be9fd;font-style:italic>$true</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#6272a4>#3</span>
 </span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>Rename-Computer</span> -newname DC01 -Restart -force 
@@ -61,11 +61,11 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>New-ADOrganizationalUnit</span> -Name <span style=color:#f1fa8c>&#34;RD Dept&#34;</span> –Path <span style=color:#f1fa8c>&#34;DC=training_a,DC=Local&#34;</span> -ProtectedFromAccidentalDeletion $true
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>New-ADOrganizationalUnit</span> -Name <span style=color:#f1fa8c>&#34;RD Dept&#34;</span> –Path <span style=color:#f1fa8c>&#34;DC=training_a,DC=Local&#34;</span> -ProtectedFromAccidentalDeletion <span style=color:#8be9fd;font-style:italic>$true</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$pw</span> = <span style=color:#8be9fd;font-style:italic>ConvertTo-SecureString</span> <span style=color:#f1fa8c>&#34;P@ssw0rd&#34;</span> -AsPlainText –Force
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>New-ADUser</span> -Name <span style=color:#f1fa8c>&#34;YiJia Huang&#34;</span> -SamAccountName <span style=color:#f1fa8c>&#34;YiJia&#34;</span> –AccountPassword <span style=color:#8be9fd;font-style:italic>$pw</span> -Enabled $true -Path <span style=color:#f1fa8c>&#34;ou=RD Dept,dc=training_a,dc=local&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>New-ADUser</span> -Name <span style=color:#f1fa8c>&#34;YiJia Huang&#34;</span> -SamAccountName <span style=color:#f1fa8c>&#34;YiJia&#34;</span> –AccountPassword <span style=color:#8be9fd;font-style:italic>$pw</span> -Enabled <span style=color:#8be9fd;font-style:italic>$true</span> -Path <span style=color:#f1fa8c>&#34;ou=RD Dept,dc=training_a,dc=local&#34;</span>
 </span></span></code></pre></td></tr></table></div></div><p>PC domain join script</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
