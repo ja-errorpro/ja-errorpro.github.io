@@ -15,6 +15,14 @@ date: 2025-05-12
 `(define F (lambda (param1 param2) s-exp1 s-exp2))`
 
 ```mermaid
+%%{
+    init: {
+        'theme': 'base',
+        "themeVariables": {
+            "lineColor": "#FFFFFF"
+        }
+    }
+}%%
 graph TD;
 F(["<center>lambda<br>(tag: isfunc)</center>"])-->param1d([.]);
 F-->seq1d([.]);
@@ -32,6 +40,14 @@ seq2d-->nil3([nil])
 執行 `(F arg1 arg2)` 時將建出以下資料結構：
 
 ```mermaid
+%%{
+    init: {
+        'theme': 'base',
+        "themeVariables": {
+            "lineColor": "#FFFFFF"
+        }
+    }
+}%%
 graph TD;
 dummyNode([.])-->F(["<center>lambda<br>(tag: isfunc)</center>"])
 F-->param1d([.]);
@@ -61,6 +77,14 @@ argdot2-->nil4([nil])
 
 
 ```mermaid
+%%{
+    init: {
+        'theme': 'base',
+        "themeVariables": {
+            "lineColor": "#FFFFFF"
+        }
+    }
+}%%
 graph TD;
 F(["<center>F<br>(tag: isfunc)</center>"])-->param1d([.]);
 F-->seq1d([.]);
@@ -78,6 +102,14 @@ seq2d-->nil3([nil])
 執行 `(F arg1 arg2)` 時將建出以下資料結構：
 
 ```mermaid
+%%{
+    init: {
+        'theme': 'base',
+        "themeVariables": {
+            "lineColor": "#FFFFFF"
+        }
+    }
+}%%
 graph TD;
 dummyNode([.])-->F(["<center>F<br>(tag: isfunc)</center>"])
 F-->param1d([.]);
