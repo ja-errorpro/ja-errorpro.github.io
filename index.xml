@@ -6,7 +6,15 @@
 &lt;p>Argument: 呼叫函數時傳入的參數值&lt;/p>&lt;/blockquote>
 &lt;p>對於&lt;/p>
 &lt;p>&lt;code>(define F (lambda (param1 param2) s-exp1 s-exp2))&lt;/code>&lt;/p>
-&lt;div class="mermaid">graph TD;
+&lt;div class="mermaid">%%{
+ init: {
+ 'theme': 'base',
+ "themeVariables": {
+ "lineColor": "#FFFFFF"
+ }
+ }
+}%%
+graph TD;
 F(["&lt;center>lambda&lt;br>(tag: isfunc)&lt;/center>"])-->param1d([.]);
 F-->seq1d([.]);
 param1d-->param1([param1]);
@@ -20,7 +28,15 @@ seq2d-->seq2([s-exp2])
 seq2d-->nil3([nil])
 &lt;/div>
 &lt;p>執行 &lt;code>(F arg1 arg2)&lt;/code> 時將建出以下資料結構：&lt;/p>
-&lt;div class="mermaid">graph TD;
+&lt;div class="mermaid">%%{
+ init: {
+ 'theme': 'base',
+ "themeVariables": {
+ "lineColor": "#FFFFFF"
+ }
+ }
+}%%
+graph TD;
 dummyNode([.])-->F(["&lt;center>lambda&lt;br>(tag: isfunc)&lt;/center>"])
 F-->param1d([.]);
 F-->seq1d([.]);
@@ -41,22 +57,7 @@ argdot2-->arg2([arg2])
 argdot2-->nil4([nil])
 &lt;/div>
 &lt;hr>
-&lt;p>對於&lt;/p>
-&lt;p>&lt;code>(define (F param1 param2) s-exp1 s-exp2)&lt;/code>&lt;/p>
-&lt;div class="mermaid">graph TD;
-F(["&lt;center>F&lt;br>(tag: isfunc)&lt;/center>"])-->param1d([.]);
-F-->seq1d([.]);
-param1d-->param1([param1]);
-param1d-->param2d([.]);
-param2d-->param2([param2]);
-param2d-->nil2([nil]);
-
-seq1d-->seq1([s-exp1])
-seq1d-->seq2d([.])
-seq2d-->seq2([s-exp2])
-seq2d-->nil3([nil])
-&lt;/div>
-&lt;p>執行 &lt;code>(F arg1 arg2)&lt;/code> 時將建出以下資料結構：&lt;/p></description></item><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy">PDFy&lt;/h1>
+&lt;p>對於&lt;/p></description></item><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy">PDFy&lt;/h1>
 &lt;p>只有前端的 Source Code，沒什麼特別的&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
