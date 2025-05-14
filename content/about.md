@@ -18,21 +18,35 @@ A common student studying in [Chung Yuan Christian University](https://www1.cycu
 
 ### Experience
 
-- AIS3 Camp 2024
 - TaiwanHolyHigh 2021
+- 高中資訊能力競賽 2021
 - First Robot Competition 8176 Programmer 2021
+- APCSCamp 2021
+- IOICamp 2021
+- HITCON 2021 Attendee
+- SITCON 2021 Attendee
+- AIS3 EOF 2022
+- HITCON 2022 Attendee
+- SITCON 2022 Attendee
+- Google Developer Student Clubs 2022 Core Team & Speaker
+- Google Developer Student Clubs 2023 Core Team & Speaker
+- HITCON 2023 Attendee
+- COSCUP 2023 Attendee
+- Collegiate Programming Examination 2023 4/7
+- Cyber Security Competition 2023
+- Google CTF 2023
+- Google DevFest Taipei 2023 Attendee
+- Google CTF 2024
+- Cyber Security Competition 2024
+- MyFirstCTF 2024
+- AIS3 Pre-Exam 2024
+- AIS3 Camp 2024
+- HITCON 2024 Attendee
+- Google DevFest Taipei 2024 Attendee
+- Google DevFest Taoyuan 2024 Attendee
 - SITCON 2024 Volunteer
-- Google Developer Groups On Campus CYCU Organizer 2024
-- Google Developer Student Clubs CYCU Core Member 2022-2024
-- Cybersecurity Competition 2023-2024
-- HITCON CTF 2022 attendee
-- AIS3 EOF 2024 attendee
-- Google CTF 2023-2024 attendee
-- HITCON Cyber Range 2024 Student 7th
-- AEGIS 2024 attendee
-- CYBERSEC 2022-2024 attendee
-- HITCON 2022-2024 attendee
-- SITCON 2021-2024 attendee
+- Google Developer Groups on Campus CYCU 2024 Organizer & Speaker
+- Devcore Conference 2025 Attendee
 
 ---
 
