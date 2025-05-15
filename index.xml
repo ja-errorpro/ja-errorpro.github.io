@@ -1,12 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Mon, 12 May 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>PL OurScheme Interpreter 專案三函數儲存可能思路</title><link>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</link><pubDate>Mon, 12 May 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</guid><description>&lt;h3 id="點我參考程式碼將於專案截止日後轉為公開-repo">&lt;a href="https://github.com/ja-errorpro/CYCS_OurSchemeInterpreter/tree/bf0f8ca3aaadb9b758a11dcd1238e5aff20e81cb">點我參考程式碼(將於專案截止日後轉為公開 repo)&lt;/a>&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-Hant-TW</language><lastBuildDate>Thu, 15 May 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>PL OurScheme Interpreter 專案三函數儲存可能思路</title><link>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</link><pubDate>Thu, 15 May 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</guid><description>&lt;h3 id="點我參考程式碼將於專案截止日後轉為公開-repo">&lt;a href="https://github.com/ja-errorpro/CYCS_OurSchemeInterpreter/tree/bf0f8ca3aaadb9b758a11dcd1238e5aff20e81cb">點我參考程式碼(將於專案截止日後轉為公開 repo)&lt;/a>&lt;/h3>
 &lt;p>這邊統一一下對於 parameter 和 argument 的用詞定義：&lt;/p>
 &lt;blockquote>
 &lt;p>Parameter: 定義函數時的參數變數&lt;/p>&lt;/blockquote>
-&lt;blockquote>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">func&lt;/span> &lt;span style="color:#50fa7b">foo&lt;/span>(param1, param2){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#ff79c6">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
 &lt;p>Argument: 呼叫函數時傳入的參數值&lt;/p>&lt;/blockquote>
-&lt;p>對於&lt;/p>
-&lt;p>&lt;code>(define F (lambda (param1 param2) s-exp1 s-exp2))&lt;/code>&lt;/p>
-&lt;div class="mermaid">%%{
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#50fa7b">foo&lt;/span>(arg1, arg2)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>對於&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-scheme" data-lang="scheme">&lt;span style="display:flex;">&lt;span>(&lt;span style="color:#ff79c6">define &lt;/span>&lt;span style="color:#8be9fd;font-style:italic">F&lt;/span> (&lt;span style="color:#ff79c6">lambda &lt;/span>(&lt;span style="color:#50fa7b">param1&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">param2&lt;/span>) &lt;span style="color:#8be9fd;font-style:italic">s-exp1&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">s-exp2&lt;/span>))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="mermaid">%%{
  init: {
  'theme': 'base',
  "themeVariables": {
@@ -27,37 +54,7 @@ seq1d-->seq2d([.])
 seq2d-->seq2([s-exp2])
 seq2d-->nil3([nil])
 &lt;/div>
-&lt;p>執行 &lt;code>(F arg1 arg2)&lt;/code> 時將建出以下資料結構：&lt;/p>
-&lt;div class="mermaid">%%{
- init: {
- 'theme': 'base',
- "themeVariables": {
- "lineColor": "#FFFFFF"
- }
- }
-}%%
-graph TD;
-dummyNode([.])-->F(["&lt;center>lambda&lt;br>(tag: isfunc)&lt;/center>"])
-F-->param1d([.]);
-F-->seq1d([.]);
-param1d-->param1([param1]);
-param1d-->param2d([.]);
-param2d-->param2([param2]);
-param2d-->nil2([nil]);
-
-seq1d-->seq1([s-exp1])
-seq1d-->seq2d([.])
-seq2d-->seq2([s-exp2])
-seq2d-->nil3([nil])
-
-dummyNode-->argdot1([.])
-argdot1-->arg1([arg1])
-argdot1-->argdot2([.])
-argdot2-->arg2([arg2])
-argdot2-->nil4([nil])
-&lt;/div>
-&lt;hr>
-&lt;p>對於&lt;/p></description></item><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy">PDFy&lt;/h1>
+&lt;p>執行 &lt;code>(F arg1 arg2)&lt;/code> 時將建出以下資料結構：&lt;/p></description></item><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy">PDFy&lt;/h1>
 &lt;p>只有前端的 Source Code，沒什麼特別的&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
