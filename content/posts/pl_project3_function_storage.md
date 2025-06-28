@@ -3,9 +3,10 @@ title: PL OurScheme Interpreter 專案三函數儲存可能思路
 date: 2025-05-15
 ---
 
-### [點我參考程式碼(將於專案截止日後轉為公開 repo)](https://github.com/ja-errorpro/CYCS_OurSchemeInterpreter/tree/bf0f8ca3aaadb9b758a11dcd1238e5aff20e81cb)
+### [點我參考程式碼(將於專案截止日後轉為公開 repo)](https://github.com/ja-errorpro/CYCS_OurScheme_Interpreter)
 
 這邊統一一下對於 parameter 和 argument 的用詞定義：
+
 > Parameter: 定義函數時的參數變數
 
 ```go
@@ -89,7 +90,6 @@ argdot2-->nil4([nil])
 (define (F param1 param2) s-exp1 s-exp2)
 ```
 
-
 ```mermaid
 %%{
     init: {
@@ -154,11 +154,12 @@ argdot2-->nil4([nil])
     (lambda (x)
 	  (lambda (y)
 	    (+ x y))))
-		
+
 ((outer 2) 3)
 ```
 
 標準 scheme 的結果為：
+
 ```scheme
 5
 ```
@@ -192,11 +193,12 @@ unbound symbol x
 (define (outer x)
 	  (lambda (y)
 	    (+ x y)))
-		
+
 ((outer 2) 3)
 ```
 
 標準 scheme 的結果為：
+
 ```scheme
 5
 ```
