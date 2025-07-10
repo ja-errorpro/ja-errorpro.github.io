@@ -27,7 +27,7 @@
       <link>http://localhost:1313/comment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/comment/</guid>
-      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://latest.cactus.chat/cactus.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://latest.cactus.chat/style.css&#34; type=&#34;text/css&#34;&gt;&#xD;&#xA;&lt;div id=&#34;comment-section&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;initComments({&#xD;&#xA;  node: document.getElementById(&#34;comment-section&#34;),&#xD;&#xA;  defaultHomeserverUrl: &#34;https://matrix.cactus.chat:8448&#34;,&#xD;&#xA;  serverName: &#34;cactus.chat&#34;,&#xD;&#xA;  siteName: &#34;errorpro&#34;,&#xD;&#xA;  commentSectionId: &#34;website&#34;&#xD;&#xA;})&#xD;&#xA;&lt;/script&gt;</description>
+      <description>&lt;script&#xD;&#xA;  src=&#34;https://utteranc.es/client.js&#34;&#xD;&#xA;  repo=&#34;ja-errorpro/ja-errorpro-website-discussions&#34;&#xD;&#xA;  issue-term=&#34;pathname&#34;&#xD;&#xA;  theme=&#34;github-dark&#34;&#xD;&#xA;  crossorigin=&#34;anonymous&#34;&#xD;&#xA;  async&#xD;&#xA;&gt;&lt;/script&gt;</description>
     </item>
   </channel>
 </rss>

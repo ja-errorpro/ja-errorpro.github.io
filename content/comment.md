@@ -4,4 +4,4 @@ tags:
   - Idx
 ---
 
-{{< chat website >}}
+{{< chat >}}
