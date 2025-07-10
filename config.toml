@@ -90,7 +90,7 @@ weight = 6
     defaultAuthor = "ErrorPro"
 
     mathjax = true
-    css = ["css/highlight.css", "css/style-dark.css", "css/search.css", "css/cursor.css"]
+    css = ["css/highlight.css", "css/search.css", "css/cursor.css"]
   
     [params.comments]
       enabled = false # default

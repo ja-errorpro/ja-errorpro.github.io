@@ -437,7 +437,8 @@ body td {
 @font-face {
   font-style: normal;
   font-family: "Meslo LG";
-  src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
+  src: local("Meslo LG S"),
+    url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
 }
 /*
 @font-face {
@@ -466,7 +467,7 @@ body {
   color: #c9cacc;
   font-display: swap;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 24px;
   font-family: monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
@@ -496,13 +497,23 @@ body {
 .content a {
   color: #c9cacc;
   text-decoration: none;
-  background-image: linear-gradient(transparent, transparent 5px, #c9cacc 5px, #c9cacc);
+  background-image: linear-gradient(
+    transparent,
+    transparent 5px,
+    #c9cacc 5px,
+    #c9cacc
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
 }
 .content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #d480aa 4px, #d480aa);
+  background-image: linear-gradient(
+    transparent,
+    transparent 4px,
+    #d480aa 4px,
+    #d480aa
+  );
 }
 .content a.icon {
   background: none;
@@ -528,7 +539,12 @@ body {
 .content h4 a:hover,
 .content h5 a:hover,
 .content h6 a:hover {
-  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, #d480aa);
+  background-image: linear-gradient(
+    transparent,
+    transparent 6px,
+    #d480aa 6px,
+    #d480aa
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -539,7 +555,12 @@ body {
   text-decoration: none;
 }
 .content h6 a:hover {
-  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, #d480aa);
+  background-image: linear-gradient(
+    transparent,
+    transparent 6px,
+    #d480aa 6px,
+    #d480aa
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -627,7 +648,12 @@ body {
   color: #2bbc8a;
 }
 #header #nav ul a:hover {
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(
+    transparent,
+    transparent 5px,
+    #2bbc8a 5px,
+    #2bbc8a
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -782,7 +808,12 @@ body {
   color: #2bbc8a;
 }
 #header-post #nav ul a:hover {
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(
+    transparent,
+    transparent 5px,
+    #2bbc8a 5px,
+    #2bbc8a
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -940,7 +971,12 @@ body {
   font-size: 1em;
 }
 #footer-post #nav-footer a:hover {
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(
+    transparent,
+    transparent 5px,
+    #2bbc8a 5px,
+    #2bbc8a
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1132,7 +1168,7 @@ article .content blockquote {
   padding: 0.5em 10px;
   background: inherit;
   color: #ccffb6;
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "\201C""\201D""\2018""\2019";
   font-weight: bold;
 }
 article .content blockquote p {
@@ -1152,11 +1188,21 @@ article .content blockquote footer {
   font-size: 11px;
 }
 article .content blockquote footer a {
-  background-image: linear-gradient(transparent, transparent 5px, #666 5px, #666);
+  background-image: linear-gradient(
+    transparent,
+    transparent 5px,
+    #666 5px,
+    #666
+  );
   color: #666;
 }
 article .content blockquote footer a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #858585 4px, #858585);
+  background-image: linear-gradient(
+    transparent,
+    transparent 4px,
+    #858585 4px,
+    #858585
+  );
   color: #858585;
 }
 article .content blockquote footer cite:before {
@@ -1190,7 +1236,12 @@ article .content .caption {
   line-height: 1.25;
 }
 .article-tag .tag-link {
-  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
+  background-image: linear-gradient(
+    transparent,
+    transparent 10px,
+    #d480aa 10px,
+    #d480aa
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1199,7 +1250,12 @@ article .content .caption {
   content: "#";
 }
 .article-category .category-link {
-  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
+  background-image: linear-gradient(
+    transparent,
+    transparent 10px,
+    #d480aa 10px,
+    #d480aa
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1418,7 +1474,7 @@ article .content .caption {
   height: 0;
   color: #c9cacc;
   pointer-events: none;
-  content: '';
+  content: "";
   border: 6px solid transparent;
   opacity: 0;
 }
@@ -1541,7 +1597,12 @@ code {
   color: #666;
   font-style: italic;
   font-size: 0.8em;
-  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
+  background-image: linear-gradient(
+    transparent,
+    transparent 10px,
+    #d480aa 10px,
+    #d480aa
+  );
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
