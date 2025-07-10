@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
   rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
@@ -20,7 +20,7 @@
   <meta property="og:title" content="108年彰雲嘉下午P10 - Huffman">
   <meta property="og:description" content="題目： Huffman ： 維基百科
 霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下：(1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。(2) 每次從尚無父節點的所有節點中，尋找值最小（出現次數最少）的兩個節點來建立霍夫曼樹，產生其父節點的值為兩個節點值相加的和。最後只剩下根節點沒有父節點。(3) 從根節點開始往下編碼，左分支為 0，右分支為 1，每個葉節點的字母元素會產生一個霍夫曼碼（由 0 和 1 所組成），字母元素出現的頻率越高則霍夫曼碼越短。我們這題需要計算一個字串轉成霍夫曼碼的壓縮率。假設有個字串&#34;queue&#34;，則此字串會佔5 bytes = 40bits空間，轉成霍夫曼碼後應為&#34;00011011&#34;，只需要8個bits就可儲存，因此壓縮率為(40-8)/40 * 100% = 80%。輸入： 輸入一列字串(長度最多100字元，且不含空格)。輸出： 依序輸出此字串壓縮前的bit數、壓縮後的bit數、壓縮率百分比(格式為⌊n⌋%，即n向下取整)。Ex 1 Input: queueEx 2 Input: abadcafcabfdec">
-  <meta property="og:locale" content="zh_Hant_TW">
+  <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2021-09-11T00:00:00+08:00">

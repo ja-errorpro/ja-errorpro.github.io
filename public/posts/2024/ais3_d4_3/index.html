@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
   rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
@@ -20,7 +20,7 @@
   <meta property="og:title" content="【AIS3】前端不只有 alert 可以彈">
   <meta property="og:description" content="前端不只有 alert 可以彈 -DEVCORE 資安研究員 黃志仁 splitline
 安全原則 同源政策 A 網站不能讀 B 網站的東西(Browser 層限制) 可能可以寫 CSRF(Cross-Site Request Forgery) superlogout.com 點進去會把一堆服務登出，按進去請小心 偽造 client 端的惡意請求 即使使用 POST 也有機會被攻擊 CSRF Token 使用者訪問網站時被設定一個 token 放在 cookie 發送請求需同時送出 token 不能 CSRF 的情況 非 GET 或 POST 請求 特殊 HTTP header Samesite Cookie Lax 只有 &lt;a&gt;、&lt;link&gt;、&lt;form method=&#34;GET&#34;&gt; 會帶 cookie 在 Chrome、Edge 上預設 Strict 不論如何都不會從其他地方把 cookie 帶過來 None 不論如何都會帶 cookie 新版標準需要帶 Secure XSS Cross-Site Scripting 讓使用者瀏覽器執行駭客給的任意 Script Self-XSS 自己手動把 Script 跑起來 XSS Category Reflected XSS 惡意輸入一次性的映射 (Reflect) 到網頁上 ex: 搜尋欄輸入 &lt;script&gt;alert(1)&lt;/script&gt; 後按下搜尋彈出 alert Stored XSS 伺服器會儲存 (store) 駭客的惡意輸入 ex: 留言板有惡意腳本，所有人看到都會執行 DOM-based XSS JavaScript 讀取惡意輸入造成 XSS Event Handler &lt;svg/onload=alert(1)&gt; &lt;img src=x onerror=alert(1)&gt; &lt;input onfocus=alert(1)&gt; javascript: Scheme &lt;a href=&#34;javascript:alert(1)&#34;&gt;click me&lt;/a&gt; location.replace(‘javascript:alert(1)’) 防禦 Blacklist: 空格，可以這樣繞過 TAB Newline / JSFuck What can XSS do exactly 偷 cookie(無 HttpOnly flag) 偽造請求，不受 CSRF 限制 偷各種資訊 prevent Escape HTML / Javascript (Too Hard) https://www.acunetix.com/blog/web-security-zone/mutation-xss-in-google-search/ CSP Content Security Policy 瀏覽器根據 CSP 控制對外部的請求 Response Header Content-Security-Policy: … Meta Tag &lt;meta http-equiv=&#34;Content-Security-Policy&#34; content=&#34;...&#34;&gt; https://csp-evaluator.withgoogle.com/ Directive default-src img-src style-src script-src frame-src connect-src … CSP Bypass base tag script gadget DOM Based XSS whitelisted CDN/Host https://blog.orange.tw/2019/03/a-wormable-xss-on-hackmd.html https://github.com/k1tten/writeups/blob/master/bugbounty_writeup/HackMD_XSS_%26_Bypass_CSP.md DOM Clobbering Click a button By Javascript &lt;button&#39;s id&gt;.click() DOM 可控制 JavaScript 變數 id 可蓋掉 windows.* name 可蓋掉 windows., document. &lt;a id=&#34;abc&#34; href=&#34;https://ja-errorpro.codes&#34;/&gt; -&gt; alert(abc) ">
-  <meta property="og:locale" content="zh_Hant_TW">
+  <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-08-01T00:00:00+08:00">

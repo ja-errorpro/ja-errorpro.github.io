@@ -1,5 +1,5 @@
 baseURL = 'https://ja-errorpro.codes/'
-languageCode = 'zh-Hant-TW'
+languageCode = 'zh-TW'
 title = 'ErrorPro'
 theme = "cactus"
 timeZone = "Asia/Taipei"
