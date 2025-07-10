@@ -114,15 +114,11 @@
 &lt;img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&amp;amp;logo=Docker&amp;amp;logoColor=white" alt="Docker">
 &lt;img src="https://img.shields.io/badge/Algorithms-2e6dc3?logo=TheAlgorithms&amp;amp;style=flat&amp;amp;logoColor=white" alt="Algorithms">
 &lt;img src="https://img.shields.io/badge/Data%20Structure-red?logo=Task&amp;amp;style=flat&amp;amp;logoColor=white" alt="DataStructure">
-&lt;img src="https://img.shields.io/badge/IT%20Security-154700?logo=HackClub&amp;amp;style=flat&amp;amp;logoColor=white" alt="IT Security">&lt;/p></description></item><item><title>留言區</title><link>https://ja-errorpro.codes/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/comment/</guid><description>&lt;script type="text/javascript" src="https://latest.cactus.chat/cactus.js">&lt;/script>
-&lt;link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-&lt;div id="comment-section">&lt;/div>
-&lt;script>
-initComments({
- node: document.getElementById("comment-section"),
- defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
- serverName: "cactus.chat",
- siteName: "errorpro",
- commentSectionId: "website"
-})
-&lt;/script></description></item></channel></rss>
+&lt;img src="https://img.shields.io/badge/IT%20Security-154700?logo=HackClub&amp;amp;style=flat&amp;amp;logoColor=white" alt="IT Security">&lt;/p></description></item><item><title>留言區</title><link>https://ja-errorpro.codes/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/comment/</guid><description>&lt;script
+ src="https://utteranc.es/client.js"
+ repo="ja-errorpro/ja-errorpro-website-discussions"
+ issue-term="pathname"
+ theme="github-dark"
+ crossorigin="anonymous"
+ async
+>&lt;/script></description></item></channel></rss>
