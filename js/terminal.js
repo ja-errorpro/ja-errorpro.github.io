@@ -15,7 +15,8 @@ var configs = (function () {
         }
     };
     Singleton.defaultOptions = {
-        general_help: "Help Menu",
+        general_help: "=-=-=-=-=-=-=-=[ Help Menu ]=-=-=-=-=-=-=-=",
+        general_help_end: "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=",
         ls_help: "list directory contents",
         cat_help: "concatenate files and print on the standard output",
         whoami_help: "print effective userid",
@@ -29,13 +30,14 @@ var configs = (function () {
         rmdir_help: "remove empty directories",
         touch_help: "change file timestamps",
         sudo_help: "execute a command as another user",
+        flag_help: "Ẁ̶̠̰ĥ̴̞a̶̘̭͒͆t̴̟̐ ̵̩̖̿͝h̴̢̖̍͒á̶͍ṗ̷̊ͅͅp̶̱͇͒̅e̴̙͔͐n̵̹̮͛̐é̶͕̰̔d̶̡͍͋͌?̷͈͂n",
         welcome: "This is a mysterious terminal...\n\nTyping something might lead to interesting things happening?",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this system won't work properly.",
         welcome_file_name: "welcome_message.txt",
         invalid_command_message: "<value>: command not found.",
         reboot_message: "Preparing to reboot...\n\n3...\n\n2...\n\n1...\n\nRebooting...\n\n",
         permission_denied_message: "Unable to '<value>', permission denied.",
-        sudo_message: "sudo: anonymous user is not in the sudoers file. This incident will be reported.",
+        sudo_message: "anonymous user is not in the sudoers file. This incident will be reported.",
         usage: "Usage",
         file: "file",
         file_not_found: "File '<value>' not found.",
@@ -68,7 +70,7 @@ var files = (function () {
     };
     Singleton.defaultOptions = {
         "mail.txt": "yijiahuang@ja-errorpro.codes",
-        "flag.txt": "YI_JIA{this_is_so_cool}",
+        "flag.txt": "TODO: rename my flag file to README.md\n\nYI_JIA{this_is_so_cool}",
     };
     return {
         getInstance: function (options) {
@@ -124,7 +126,8 @@ var main = (function () {
         RM: { value: "rm", help: configs.getInstance().rm_help },
         RMDIR: { value: "rmdir", help: configs.getInstance().rmdir_help },
         TOUCH: { value: "touch", help: configs.getInstance().touch_help },
-        SUDO: { value: "sudo", help: configs.getInstance().sudo_help }
+        SUDO: { value: "sudo", help: configs.getInstance().sudo_help },
+        FLAG: { value: "f̴̬͇̈́l̸͙̊͛a̷̛͕̼͊ǵ̷̢?̷̩̃", help: configs.getInstance().flag_help }
     };
 
     var Terminal = function (prompt, cmdLine, output, user, host, root, outputTimer) {
@@ -205,9 +208,6 @@ var main = (function () {
                 if (cmdComponents.length === 1) {
                     cmdComponents[1] = "";
                 }
-                if (configs.getInstance().welcome_file_name.startsWith(cmdComponents[1].toLowerCase())) {
-                    possibilities.push(cmds.CAT.value + " " + configs.getInstance().welcome_file_name);
-                }
                 for (var file in files.getInstance()) {
                     if (file.startsWith(cmdComponents[1].toLowerCase())) {
                         possibilities.push(cmds.CAT.value + " " + file);
@@ -216,6 +216,7 @@ var main = (function () {
             } else {
                 for (var command in cmds) {
                     if (cmds[command].value.startsWith(cmdComponents[0].toLowerCase())) {
+                        if (command === "FLAG") continue;
                         possibilities.push(cmds[command].value);
                     }
                 }
@@ -239,6 +240,10 @@ var main = (function () {
         var cmdComponents = this.cmdLine.value.trim().split(" ");
         this.lock();
 
+        if (cmdComponents.length === 0 || cmdComponents[0] === "") {
+            this.unlock();
+            return;
+        }
         switch (cmdComponents[0]) {
             case cmds.CAT.value:
                 this.cat(cmdComponents);
@@ -262,6 +267,8 @@ var main = (function () {
                 this.reboot();
                 break;
             case cmds.CD.value:
+                this.cd(cmdComponents);
+                break;
             case cmds.MV.value:
             case cmds.RMDIR.value:
             case cmds.RM.value:
@@ -280,8 +287,8 @@ var main = (function () {
     Terminal.prototype.cat = function (cmdComponents) {
         var result;
         if (cmdComponents.length <= 1) {
-            result = configs.getInstance().usage + ": " + cmds.CAT.value + " <" + configs.getInstance().file + ">";
-        } else if (!cmdComponents[1] || (!cmdComponents[1] === configs.getInstance().welcome_file_name || !files.getInstance().hasOwnProperty(cmdComponents[1]))) {
+            result = configs.getInstance().usage + ": " + cmds.CAT.value + " file";
+        } else if (!cmdComponents[1] || (!files.getInstance().hasOwnProperty(cmdComponents[1]))) {
             result = configs.getInstance().file_not_found.replace(configs.getInstance().value_token, cmdComponents[1]);
         } else {
             result = files.getInstance()[cmdComponents[1]];
@@ -302,7 +309,7 @@ var main = (function () {
     }
 
     Terminal.prototype.whoami = function (cmdComponents) {
-        var result = configs.getInstance().username + ": " + configs.getInstance().user + "\n" + configs.getInstance().hostname + ": " + configs.getInstance().host + "\n" + configs.getInstance().platform + ": " + navigator.platform + "\n" + configs.getInstance().accesible_cores + ": " + navigator.hardwareConcurrency + "\n" + configs.getInstance().language + ": " + navigator.language;
+        var result = configs.getInstance().username + ": " + configs.getInstance().user + "\n" + configs.getInstance().hostname + ": " + configs.getInstance().host + "\n" + configs.getInstance().platform + ": " + navigator.userAgentData.platform + "\n" + configs.getInstance().accesible_cores + ": " + navigator.hardwareConcurrency + "\n" + configs.getInstance().language + ": " + navigator.language;
         this.type(result, this.unlock.bind(this));
     };
 
@@ -311,10 +318,11 @@ var main = (function () {
     };
 
     Terminal.prototype.help = function () {
-        var result = configs.getInstance().general_help + "\n\n";
+        var result = configs.getInstance().general_help + "\n";
         for (var cmd in cmds) {
             result += cmds[cmd].value + " - " + cmds[cmd].help + "\n";
         }
+        result += configs.getInstance().general_help_end + "\n"
         this.type(result.trim(), this.unlock.bind(this));
     };
 
@@ -327,6 +335,15 @@ var main = (function () {
 
     Terminal.prototype.reboot = function () {
         this.type(configs.getInstance().reboot_message, this.reset.bind(this));
+    };
+
+    Terminal.prototype.cd = function (cmdComponents) {
+        if (cmdComponents.length <= 1 || cmdComponents[1] === "" || cmdComponents[1] === "~" || cmdComponents[1] === "/home/anonymous") {
+            window.location.assign("/"); // Redirect to home page
+        } else {
+            var result = "cd: Cannot change to directory '" + cmdComponents[1] + "': Permission denied.";
+            this.type(result, this.unlock.bind(this));
+        }
     };
 
     Terminal.prototype.reset = function () {
@@ -344,11 +361,6 @@ var main = (function () {
     };
 
     Terminal.prototype.invalidCommand = function (cmdComponents) {
-        var encryptedflag1 = "9bd69bc521da9d77206b9cc613fea2ba";
-        var encryptedflag2 = "8f6e10638e795ed1e58b19304fd0036a";
-        var encryptedflag3 = "66b061cd04b2063ad75f5b613afbcf01";
-        var encryptedflag4 = "024563d70a2607fb06499fb68482d720";
-        var encryptedflag5 = "28e6896d057b97f27806242066373f7c";
 
         let text = cmdComponents.join(" ").replace(/\s/g, '');
         text = Base64.encode(text);
