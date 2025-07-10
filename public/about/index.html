@@ -230,17 +230,70 @@ Find me on, , , , , , and .">
 <p>你可以試試輸入
 YI_JIA{this_is_so_cool}</p>
 <p>沒用嗎？要不要換個瀏覽器試試看？</p>
-<div>
-  
+
 
 <script src="/js/base64.js"></script>
 <script src="/js/md5.js"></script>
-<script src="/js/a_secret_script.js"></script>
-
-<input type="text" id="input" name="input" maxlength="100" size="30">
-<input type="button" value="送出" id="submit" onclick="on_bt_clicked()">
-
+<script src="/js/terminal.js"></script>
+<div id="terminal">
+  <div id="output"></div>
+  <div id="input-line" class="input-line">
+    <div id="prompt" class="prompt-color"></div>
+    &nbsp;
+    <div>
+      <input
+        type="text"
+        id="cmdline"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        autofocus
+      />
+    </div>
+  </div>
 </div>
+
+<style>
+  #terminal {
+    padding: 1em;
+    background-color: #1e1e1e;
+    color: #dcdfe4;
+    font-family: "Fira Code", "Hack", "Menlo", "Monaco", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 5px solid #3b3b3b;
+    border-radius: 4px;
+    min-height: 300px;
+    position: relative;
+  }
+  #output {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  #cmdline {
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: inherit;
+    font: inherit;
+    width: 100%;
+    caret-color: #dcdfe4;
+  }
+  .input-line {
+    display: flex;
+    align-items: center;
+    clear: both;
+  }
+  #prompt {
+    color: #8be9fd;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+</style>
+
 
   
   </div>

@@ -87,12 +87,4 @@ YI_JIA{this_is_so_cool}
 
 沒用嗎？要不要換個瀏覽器試試看？
 
-{{< adiv >}}
-
-<script src="/js/base64.js"></script>
-<script src="/js/md5.js"></script>
-<script src="/js/a_secret_script.js"></script>
-
-<input type="text" id="input" name="input" maxlength="100" size="30">
-<input type="button" value="送出" id="submit" onclick="on_bt_clicked()">
-{{< /adiv >}}
+{{< terminal >}}
