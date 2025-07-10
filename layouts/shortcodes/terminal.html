@@ -51,10 +51,24 @@
     caret-color: #dcdfe4;
   }
   .input-line {
-    display: flex;
-    align-items: center;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
     clear: both;
   }
+
+  .input-line > div:nth-child(2) {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+  }
+
   #prompt {
     color: #8be9fd;
     font-weight: bold;
