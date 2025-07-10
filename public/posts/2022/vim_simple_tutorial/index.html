@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Vim 極簡教學 | ErrorPro</title>
-    <link rel='canonical' href='http://localhost:1313/posts/2022/vim_simple_tutorial/'>
-    
-    <meta name="description" content="我覺得現在在看這句話的人超電">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    <meta property="og:url" content="http://localhost:1313/posts/2022/vim_simple_tutorial/">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link rel="preload"
+  href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> Vim 極簡教學 | ErrorPro</title>
+  <link rel="canonical" href="http://localhost:1313/posts/2022/vim_simple_tutorial/" />
+  
+  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all,follow" />
+  <meta name="googlebot" content="index,follow,snippet,archive" />
+  <meta property="og:url" content="http://localhost:1313/posts/2022/vim_simple_tutorial/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="Vim 極簡教學">
   <meta property="og:description" content="簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
@@ -37,8 +32,7 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
     <meta property="article:modified_time" content="2022-09-13T00:00:00+08:00">
     <meta property="article:tag" content="Mix">
     <meta property="article:tag" content="Linux">
-
-    
+ 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Vim 極簡教學">
   <meta name="twitter:description" content="簡介 Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
@@ -48,32 +42,27 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
 普通模式 初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行
 以下是常用的編輯指令
 dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy - 複製從游標往下數n行 u - 復原(undo)動作 Ctrl&#43;r - 重做(redo)動作 . - 重複上一個動作 x - 刪除字元 X - 刪除前一個字元(Backspace) &gt;&gt; - 縮排 &lt;&lt; - 反向縮排 編輯模式 在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯">
+     
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/css/styles.1df0472036a0bb346c4fa3d64e2dfb9cae2a6b3775a1b4cd805e354100896a4d40a0eac7221808031ff4790e7f83b4258969f10207985f9e90cf820d7c7481d3.css"
+    integrity="sha512-HfBHIDaguzRsT6PWTi37nK4qazd1obTNgF41QQCJak1AoOrHIhgIAx/0eQ5/g7QliWnxAgeYX56Qz4INfHSB0w=="
+  />
 
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/styles.1df0472036a0bb346c4fa3d64e2dfb9cae2a6b3775a1b4cd805e354100896a4d40a0eac7221808031ff4790e7f83b4258969f10207985f9e90cf820d7c7481d3.css" integrity="sha512-HfBHIDaguzRsT6PWTi37nK4qazd1obTNgF41QQCJak1AoOrHIhgIAx/0eQ5/g7QliWnxAgeYX56Qz4INfHSB0w==">
-
-    
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
-    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
-    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-    
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-
-    
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/search.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css" />
+   
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+   
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-
-    
-    
-    
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
 <script>
@@ -82,10 +71,9 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
   gtag('js', new Date());
 
   gtag('config', 'G-LP899FV1TS');
-</script>
-    
-    
+</script>  
 </head>
+
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 

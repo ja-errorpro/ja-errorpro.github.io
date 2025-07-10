@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> 算法筆記-枚舉與搜尋 | ErrorPro</title>
-    <link rel='canonical' href='http://localhost:1313/posts/1/algo-enum-and-searching/'>
-    
-    <meta name="description" content="我覺得現在在看這句話的人超電">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    <meta property="og:url" content="http://localhost:1313/posts/1/algo-enum-and-searching/">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link rel="preload"
+  href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 算法筆記-枚舉與搜尋 | ErrorPro</title>
+  <link rel="canonical" href="http://localhost:1313/posts/1/algo-enum-and-searching/" />
+  
+  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all,follow" />
+  <meta name="googlebot" content="index,follow,snippet,archive" />
+  <meta property="og:url" content="http://localhost:1313/posts/1/algo-enum-and-searching/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="算法筆記-枚舉與搜尋">
   <meta property="og:description" content=" 算法筆記目錄 枚舉與搜尋 枚舉(Enumeration) 枚舉，就是把全部或部分可能的情況都列出來，然後一個一個檢查是否符合條件，又稱窮舉。
@@ -32,8 +27,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:tag" content="Algorithms">
-
-    
+ 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="算法筆記-枚舉與搜尋">
   <meta name="twitter:description" content=" 算法筆記目錄 枚舉與搜尋 枚舉(Enumeration) 枚舉，就是把全部或部分可能的情況都列出來，然後一個一個檢查是否符合條件，又稱窮舉。
@@ -41,32 +35,27 @@
 例題一 給一正整數 $n$，求 $n$ 的所有因數。
 我們枚舉所有不超過 $n$ 的正整數，檢查每個數字是否為 $n$ 的因數，時間複雜度為 $O(n)$。
 1 2 3 4 5 6 7 ">
+     
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/css/styles.1df0472036a0bb346c4fa3d64e2dfb9cae2a6b3775a1b4cd805e354100896a4d40a0eac7221808031ff4790e7f83b4258969f10207985f9e90cf820d7c7481d3.css"
+    integrity="sha512-HfBHIDaguzRsT6PWTi37nK4qazd1obTNgF41QQCJak1AoOrHIhgIAx/0eQ5/g7QliWnxAgeYX56Qz4INfHSB0w=="
+  />
 
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/styles.1df0472036a0bb346c4fa3d64e2dfb9cae2a6b3775a1b4cd805e354100896a4d40a0eac7221808031ff4790e7f83b4258969f10207985f9e90cf820d7c7481d3.css" integrity="sha512-HfBHIDaguzRsT6PWTi37nK4qazd1obTNgF41QQCJak1AoOrHIhgIAx/0eQ5/g7QliWnxAgeYX56Qz4INfHSB0w==">
-
-    
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
-    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
-    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-    
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-
-    
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/search.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css" />
+   
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+   
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-
-    
-    
-    
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
 <script>
@@ -75,10 +64,9 @@
   gtag('js', new Date());
 
   gtag('config', 'G-LP899FV1TS');
-</script>
-    
-    
+</script>  
 </head>
+
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 

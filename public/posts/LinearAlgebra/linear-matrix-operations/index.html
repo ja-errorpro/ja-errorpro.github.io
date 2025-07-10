@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-brands-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-regular-400.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/font-awesome/webfonts/fa-solid-900.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/%20lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font"
-        type="font/woff2" crossorigin="anonymous">
-    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> 線性代數筆記-矩陣與矩陣運算 | ErrorPro</title>
-    <link rel='canonical' href='http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/'>
-    
-    <meta name="description" content="我覺得現在在看這句話的人超電">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    <meta property="og:url" content="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link rel="preload"
+  href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 線性代數筆記-矩陣與矩陣運算 | ErrorPro</title>
+  <link rel="canonical" href="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/" />
+  
+  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all,follow" />
+  <meta name="googlebot" content="index,follow,snippet,archive" />
+  <meta property="og:url" content="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="線性代數筆記-矩陣與矩陣運算">
   <meta property="og:description" content="線性代數筆記-目錄
@@ -30,39 +25,33 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:tag" content="Linear Algebra">
-
-    
+ 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="線性代數筆記-矩陣與矩陣運算">
   <meta name="twitter:description" content="線性代數筆記-目錄
 上一篇-消去法
 矩陣與矩陣運算(Matrices and Matrix Operations) 定義與表示法 矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。 一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix}$。 也可寫成 $[a_{ij}]_{m \times n}$。 $a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。 加減法 如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。 乘法 如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。 如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。 換句話說， $AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]， $AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。 如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。 線性系統的矩陣形式 $$\begin{array}{} a_{11}x_1 &#43; a_{12}x_2 &#43; \cdots &#43; a_{1n}x_n = b_1 \\ a_{21}x_1 &#43; a_{22}x_2 &#43; \cdots &#43; a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 &#43; a_{m2}x_2 &#43; \cdots &#43; a_{mn}x_n = b_m\end{array}$$">
+     
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/css/styles.1df0472036a0bb346c4fa3d64e2dfb9cae2a6b3775a1b4cd805e354100896a4d40a0eac7221808031ff4790e7f83b4258969f10207985f9e90cf820d7c7481d3.css"
+    integrity="sha512-HfBHIDaguzRsT6PWTi37nK4qazd1obTNgF41QQCJak1AoOrHIhgIAx/0eQ5/g7QliWnxAgeYX56Qz4INfHSB0w=="
+  />
 
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/styles.1df0472036a0bb346c4fa3d64e2dfb9cae2a6b3775a1b4cd805e354100896a4d40a0eac7221808031ff4790e7f83b4258969f10207985f9e90cf820d7c7481d3.css" integrity="sha512-HfBHIDaguzRsT6PWTi37nK4qazd1obTNgF41QQCJak1AoOrHIhgIAx/0eQ5/g7QliWnxAgeYX56Qz4INfHSB0w==">
-
-    
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/highlight.css"> 
-    <link rel="stylesheet" href="http://localhost:1313/css/search.css"> 
-    <link rel="stylesheet" href="http://localhost:1313/css/cursor.css"> 
-    
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-
-    
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/search.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css" />
+   
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+   
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-
-    
-    
-    
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
 <script>
@@ -71,10 +60,9 @@
   gtag('js', new Date());
 
   gtag('config', 'G-LP899FV1TS');
-</script>
-    
-    
+</script>  
 </head>
+
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 

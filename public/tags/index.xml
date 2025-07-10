@@ -6,8 +6,22 @@
     <description>Recent content in Tags on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-Hant-TW</language>
-    <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mix</title>
+      <link>http://localhost:1313/tags/mix/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/mix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ctf</title>
       <link>http://localhost:1313/tags/ctf/</link>
@@ -34,20 +48,6 @@
       <link>http://localhost:1313/tags/c-cpp/</link>
       <pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/c-cpp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mix</title>
-      <link>http://localhost:1313/tags/mix/</link>
-      <pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/mix/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
