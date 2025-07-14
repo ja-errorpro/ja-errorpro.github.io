@@ -91,7 +91,7 @@ $ magick --version
 Version: ImageMagick 7.1.1-35 ...
 ```
 
-經搜尋後發現有個遠端程式碼執行漏洞
+經搜尋後發現有個任意程式碼執行漏洞
 
 ![magick](/images/htb/titanic/magick.png)
 
