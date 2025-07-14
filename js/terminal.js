@@ -31,7 +31,7 @@ var configs = (function () {
         touch_help: "change file timestamps",
         sudo_help: "execute a command as another user",
         flag_help: "Ẁ̶̠̰ĥ̴̞a̶̘̭͒͆t̴̟̐ ̵̩̖̿͝h̴̢̖̍͒á̶͍ṗ̷̊ͅͅp̶̱͇͒̅e̴̙͔͐n̵̹̮͛̐é̶͕̰̔d̶̡͍͋͌?̷͈͂n",
-        welcome: "This is a mysterious terminal...\n\nTyping something might lead to interesting things happening?",
+        welcome: "This is a mysterious terminal...\n\nTyping something might lead to interesting things happening?\n\nTry 'help' to see what commands are available.",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this system won't work properly.",
         welcome_file_name: "welcome_message.txt",
         invalid_command_message: "<value>: command not found.",
