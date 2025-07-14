@@ -12,7 +12,7 @@ url: "/posts/HTB/Titanic/"
 nmap -sS -A -p- --min-rate 10000 -oN nmap.txt Remote_IP
 ```
 
-![nmap](/images/HTB/Titanic/nmap.png)
+![nmap](/images/htb/titanic/nmap.png)
 
 ```sh
 echo 'Remote_IP titanic.htb' | sudo tee -a /etc/hosts
@@ -20,19 +20,19 @@ echo 'Remote_IP titanic.htb' | sudo tee -a /etc/hosts
 
 # Web on titanic.htb port 80
 
-![web](/images/HTB/Titanic/web_on_port_80_1.png)
+![web](/images/htb/titanic/web_on_port_80_1.png)
 
-![web](/images/HTB/Titanic/web_on_port_80_2.png)
+![web](/images/htb/titanic/web_on_port_80_2.png)
 
 Burp 攔截封包
 
-![post_catch](/images/HTB/Titanic/post_catch.png)
+![post_catch](/images/htb/titanic/post_catch.png)
 
-![catch2](/images/HTB/Titanic/catch2.png)
+![catch2](/images/htb/titanic/catch2.png)
 
 IDOR vulnerability
 
-![IDOR](/images/HTB/Titanic/IDOR.png)
+![IDOR](/images/htb/titanic/IDOR.png)
 
 發現有個 `dev` subdomain
 
@@ -42,17 +42,17 @@ echo 'Remote_IP dev.titanic.htb' | sudo tee -a /etc/hosts
 
 # Web on dev.titanic.htb
 
-![gitea](/images/HTB/Titanic/gitea.png)
+![gitea](/images/htb/titanic/gitea.png)
 
 可以得到 source code
 
 - gitea 設定檔
 
-![app_ini](/images/HTB/Titanic/app_ini.png)
+![app_ini](/images/htb/titanic/app_ini.png)
 
 - SQLite 資料庫
 
-![sqlite](/images/HTB/Titanic/sqlite.png)
+![sqlite](/images/htb/titanic/sqlite.png)
 
 需要先轉換一下格式
 
@@ -93,7 +93,7 @@ Version: ImageMagick 7.1.1-35 ...
 
 經搜尋後發現有個遠端程式碼執行漏洞
 
-![magick](/images/HTB/Titanic/magick.png)
+![magick](/images/htb/titanic/magick.png)
 
 偷 root flag/ssh private key
 
