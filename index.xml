@@ -7,7 +7,7 @@
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>nmap -sS -A -p- --min-rate &lt;span style="color:#bd93f9">10000&lt;/span> -oN nmap.txt Remote_IP
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/nmap.png" alt="nmap">&lt;/p>
+&lt;/div>&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/nmap.png" alt="nmap">&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -17,13 +17,13 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="web-on-titanichtb-port-80">Web on titanic.htb port 80&lt;/h1>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/web_on_port_80_1.png" alt="web">&lt;/p>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/web_on_port_80_2.png" alt="web">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/web_on_port_80_1.png" alt="web">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/web_on_port_80_2.png" alt="web">&lt;/p>
 &lt;p>Burp 攔截封包&lt;/p>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/post_catch.png" alt="post_catch">&lt;/p>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/catch2.png" alt="catch2">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/post_catch.png" alt="post_catch">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/catch2.png" alt="catch2">&lt;/p>
 &lt;p>IDOR vulnerability&lt;/p>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/IDOR.png" alt="IDOR">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/IDOR.png" alt="IDOR">&lt;/p>
 &lt;p>發現有個 &lt;code>dev&lt;/code> subdomain&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -34,16 +34,16 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="web-on-devtitanichtb">Web on dev.titanic.htb&lt;/h1>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/gitea.png" alt="gitea">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/gitea.png" alt="gitea">&lt;/p>
 &lt;p>可以得到 source code&lt;/p>
 &lt;ul>
 &lt;li>gitea 設定檔&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/app_ini.png" alt="app_ini">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/app_ini.png" alt="app_ini">&lt;/p>
 &lt;ul>
 &lt;li>SQLite 資料庫&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://ja-errorpro.codes/images/HTB/Titanic/sqlite.png" alt="sqlite">&lt;/p>
+&lt;p>&lt;img src="https://ja-errorpro.codes/images/htb/titanic/sqlite.png" alt="sqlite">&lt;/p>
 &lt;p>需要先轉換一下格式&lt;/p></description></item><item><title>都 5202 年了，你還在用 pip 嗎？快來試試 uv！</title><link>https://ja-errorpro.codes/posts/2025/uv/</link><pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/uv/</guid><description>&lt;h2 id="why-uv">Why &lt;code>uv&lt;/code>?&lt;/h2>
 &lt;p>以前在使用 pip 時，經常遇到依賴衝突、速度慢等問題。隨著 Python 生態的發展，出現越來越多工具如：&lt;code>venv&lt;/code>、&lt;code>poetry&lt;/code>、&lt;code>pipenv&lt;/code> 等，而 &lt;code>uv&lt;/code> 則將上述的工具整合在一起，提供了一個更簡單、更高效的 Python 包管理體驗。&lt;/p>
 &lt;h2 id="安裝">安裝&lt;/h2>
