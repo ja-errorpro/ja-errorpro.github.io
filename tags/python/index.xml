@@ -79,7 +79,7 @@
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>uv python list &lt;span style="color:#6272a4"># 列出可用的 Python 版本&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>uv python install 3.11 &lt;span style="color:#6272a4"># 安裝 Python 3.11&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>uv python use 3.11 &lt;span style="color:#6272a4"># 使用 Python 3.11&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>uv python pin 3.11 &lt;span style="color:#6272a4"># 使用 Python 3.11&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="虛擬環境">虛擬環境&lt;/h3>

@@ -125,7 +125,7 @@
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>uv python list &lt;span style="color:#6272a4"># 列出可用的 Python 版本&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>uv python install 3.11 &lt;span style="color:#6272a4"># 安裝 Python 3.11&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>uv python use 3.11 &lt;span style="color:#6272a4"># 使用 Python 3.11&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>uv python pin 3.11 &lt;span style="color:#6272a4"># 使用 Python 3.11&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="虛擬環境">虛擬環境&lt;/h3>
@@ -6911,7 +6911,105 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>如果要宣告二維陣列存更多東西，其實就是每個元素都是一個陣列&lt;/p></description></item><item><title>You are Rickrolled</title><link>https://ja-errorpro.codes/embed/rickroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/embed/rickroll/</guid><description>&lt;div>
+&lt;/div>&lt;p>如果要宣告二維陣列存更多東西，其實就是每個元素都是一個陣列&lt;/p></description></item><item><title>OSCP 筆記-目錄</title><link>https://ja-errorpro.codes/posts/OSCP/oscp-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/OSCP/oscp-index/</guid><description>&lt;p>這裡的筆記算是 OSCP(PEN-200) 的 cheat sheet，主要是用來考試的參考&lt;/p>
+&lt;p>由於 Offsec 政策，這裡不會有任何課程內容，只有筆記跟一些技巧&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://ja-errorpro.codes/posts/OSCP/enumeration">OSCP 筆記-枚舉&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>OSCP筆記-枚舉</title><link>https://ja-errorpro.codes/posts/OSCP/enumeration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/OSCP/enumeration/</guid><description>&lt;h1 id="checklist">Checklist&lt;/h1>
+&lt;ul>
+&lt;li>檢查環境變數、history&lt;/li>
+&lt;li>檢查 hostname、OS 版本&lt;/li>
+&lt;/ul>
+&lt;h2 id="nmap">nmap&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>sudo nmap -sCV -p- -Pn --min-rate &lt;span style="color:#bd93f9">10000&lt;/span> host -oN nmap.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>使用 &lt;code>-sUV&lt;/code> 掃描 UDP 服務&lt;/li>
+&lt;/ul>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;h3 id="full-tty">Full TTY&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>python -c &lt;span style="color:#f1fa8c">&amp;#39;import pty; pty.spawn(&amp;#34;/bin/bash&amp;#34;)&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">export&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">TERM&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>xterm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stty raw -echo; &lt;span style="color:#8be9fd;font-style:italic">fg&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="windows">Windows&lt;/h2>
+&lt;h3 id="確認是-powershell-還是-cmd">確認是 powershell 還是 cmd&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">(&lt;/span>dir 2&amp;gt;&amp;amp;&lt;span style="color:#bd93f9">1&lt;/span> *&lt;span style="color:#f1fa8c">`&lt;/span>|&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> CMD&lt;span style="color:#ff79c6">)&lt;/span>;&amp;amp;&amp;lt;&lt;span style="color:#6272a4"># rem #&amp;gt;echo PowerShell&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>WinPEAS&lt;/li>
+&lt;li>嘗試使用者名稱 &lt;code>lastname.firstname&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="web">Web&lt;/h2>
+&lt;ul>
+&lt;li>wappalyzer&lt;/li>
+&lt;li>使用 gobuster 或 feroxbuster 或 fuff 掃描目錄&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gobuster dir -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t &lt;span style="color:#bd93f9">10&lt;/span> -o gobuster.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>feroxbuster -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fuff -u http://host/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>根據不同軟體，掃描副檔名&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gobuster dir -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,asp,aspx,jsp,js -t &lt;span style="color:#bd93f9">10&lt;/span> -o gobuster-ext.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>子域名掃描&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gobuster dns -d example.com -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -t &lt;span style="color:#bd93f9">10&lt;/span> -o subdomains.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fuff -u host -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H &lt;span style="color:#f1fa8c">&amp;#34;Host: FUZZ.example.com&amp;#34;&lt;/span> -t &lt;span style="color:#bd93f9">10&lt;/span> -o subdomains-fuff.txt &lt;span style="color:#6272a4"># -fc 403，忽略 403 狀態&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>注意登入表單&lt;/li>
+&lt;li>嘗試 &lt;code>.git&lt;/code>、&lt;code>.svn&lt;/code>、&lt;code>.hg&lt;/code>、&lt;code>.htaccess&lt;/code>、&lt;code>.env&lt;/code>、&lt;code>robots.txt&lt;/code> 等檔案&lt;/li>
+&lt;li>注意 LFI/RFI&lt;/li>
+&lt;/ul>
+&lt;h2 id="netexec">Netexec&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>user 跟 pass 可以帶 file list&lt;/p></description></item><item><title>You are Rickrolled</title><link>https://ja-errorpro.codes/embed/rickroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/embed/rickroll/</guid><description>&lt;div>
  
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0">&lt;/iframe>
@@ -7464,6 +7562,7 @@ $ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; a \\ 0 &amp;amp; 1 &amp;am
 &lt;li>&lt;a href="https://ja-errorpro.codes/posts/cpp-index/">C++語法筆記&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://ja-errorpro.codes/posts/algo-index/">算法筆記&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-index/">線性代數筆記&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ja-errorpro.codes/posts/OSCP/oscp-index/">OSCP 筆記&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h1 id="線上解題網站">線上解題網站&lt;/h1>
 &lt;ul>
