@@ -63,7 +63,7 @@ uv add numpy
 ```bash
 uv python list # 列出可用的 Python 版本
 uv python install 3.11 # 安裝 Python 3.11
-uv python use 3.11 # 使用 Python 3.11
+uv python pin 3.11 # 使用 Python 3.11
 ```
 
 ### 虛擬環境
