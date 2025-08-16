@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>https://ja-errorpro.codes/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 14 Jul 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】Titanic</title><link>https://ja-errorpro.codes/posts/HTB/Titanic/</link><pubDate>Mon, 14 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Titanic/</guid><description>&lt;h1 id="recon">Recon&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>https://ja-errorpro.codes/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon_2025/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon_2025/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>今年看到有特別多學生會眾、各種大神，還有復刻前幾年的紀念品，以及奧義新出的資安桌遊。
+而 2024 年跟 25 年的 Badge 都很特別，是 PCB Badge，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。&lt;/p>
+&lt;p>去年 BadUSB 我沒有參加到，所以今年有先做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。&lt;/p>
+&lt;h1 id="badusb">BadUSB&lt;/h1>
+&lt;p>&lt;a href="https://pcb.hitcon.org/2025/BadUSB">官方的 BadUSB 說明文件&lt;/a>&lt;/p>
+&lt;p>如果是第一次參加的話可能會不知道這個到底要怎麼玩，其實可以找到 &lt;a href="https://pcb.hitcon.org/2024/BadUSB.html">去年的說明文件&lt;/a>，就能知道要怎麼刷腳本進 Badge。&lt;/p>
+&lt;h2 id="環境設置">環境設置&lt;/h2>
+&lt;p>首先你需要一台 Ubuntu 或 Mac 系統的電腦，
+我自己在測試時發現 BadgeCommander 如果跑在 Kali 上會沒辦法解析螢幕。&lt;/p>
+&lt;p>使用時發現 release Page 裡的 BadgeCommander 刷不進去，所以我是直接從 &lt;a href="https://github.com/john0312/hitcon-pcb-badge/tree/main/sw/BadgeCommander">/sw/BadgeCommander&lt;/a> 自己開 Python3 跑起來。&lt;/p>
+&lt;p>先下載 Repo 還有一些套件&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git clone https://github.com/john0312/hitcon-pcb-badge.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#8be9fd;font-style:italic">cd&lt;/span> hitcon-pcb-badge/sw/BadgeCommander
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pip install -r requirements.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ sudo apt update &lt;span style="color:#ff79c6">&amp;amp;&amp;amp;&lt;/span> sudo apt install -y python3-tk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接著要參考 &lt;code>/sw/BadgeCommander/&lt;/code> 裡的 ReadMe，&lt;/p></description></item><item><title>【HTB Machine】Titanic</title><link>https://ja-errorpro.codes/posts/HTB/Titanic/</link><pubDate>Mon, 14 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Titanic/</guid><description>&lt;h1 id="recon">Recon&lt;/h1>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
