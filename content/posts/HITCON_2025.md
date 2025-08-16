@@ -7,8 +7,7 @@ tags:
 
 # 前言
 
-今年看到有特別多學生會眾、各種大神，還有復刻前幾年的紀念品，以及奧義新出的資安桌遊。
-而 2024 年跟 25 年的 Badge 都很特別，是 PCB Badge，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。
+2024 年跟 25 年的 HITCON Badge 比起以往非常特別，是用 PCB 做的，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。
 
 去年 BadUSB 我沒有參加到，所以今年有先做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。
 
