@@ -6,8 +6,15 @@
     <description>Recent content in Ctf on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 14 Jul 2025 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HITCON 2025 BadUSB WriteUp</title>
+      <link>http://localhost:1313/posts/2025/hitcon_2025/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/hitcon_2025/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;&#xA;&lt;p&gt;今年看到有特別多學生會眾、各種大神，還有復刻前幾年的紀念品，以及奧義新出的資安桌遊。&#xA;而 2024 年跟 25 年的 Badge 都很特別，是 PCB Badge，可以寫 BadUSB 進去，不需要買幾萬塊的 Flipper Zero，拿台電腦開起來就能寫了。&#xA;今年我 D1 都在邊聽演講邊研究 BadUSB，成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，所以這篇就來寫下 WriteUp。&lt;/p&gt;&#xA;&lt;h1 id=&#34;badusb&#34;&gt;BadUSB&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pcb.hitcon.org/2025/BadUSB&#34;&gt;官方的 BadUSB 說明文件&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;如果是第一次參加的話可能會不知道這個到底要怎麼玩，其實可以參考 &lt;a href=&#34;https://pcb.hitcon.org/2024/BadUSB.html&#34;&gt;去年的說明文件&lt;/a&gt;，&#xA;就能知道要怎麼刷腳本進 Badge。&lt;/p&gt;&#xA;&lt;h2 id=&#34;環境設置&#34;&gt;環境設置&lt;/h2&gt;&#xA;&lt;p&gt;首先你需要一台 Ubuntu 系統的電腦，&#xA;我自己在測試時發現 BadgeCommander 如果跑在 Kali 上會沒辦法解析縮放倍率。&lt;/p&gt;&#xA;&lt;p&gt;我在 D1 測時發現 2024 年的文件中給的 BadgeCommander 刷不進去，所以我是直接從 &lt;a href=&#34;https://github.com/john0312/hitcon-pcb-badge/tree/main/sw/BadgeCommander&#34;&gt;/sw/BadgeCommander&lt;/a&gt; 自己開 Python3 跑起來。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+    </item>
     <item>
       <title>【HTB Machine】Titanic</title>
       <link>http://localhost:1313/posts/HTB/Titanic/</link>

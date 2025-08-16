@@ -6,8 +6,15 @@
     <description>Recent content in Posts on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 14 Jul 2025 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HITCON 2025 BadUSB WriteUp</title>
+      <link>http://localhost:1313/posts/2025/hitcon_2025/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/hitcon_2025/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;&#xA;&lt;p&gt;今年看到有特別多學生會眾、各種大神，還有復刻前幾年的紀念品，以及奧義新出的資安桌遊。&#xA;而 2024 年跟 25 年的 Badge 都很特別，是 PCB Badge，可以寫 BadUSB 進去，不需要買幾萬塊的 Flipper Zero，拿台電腦開起來就能寫了。&#xA;今年我 D1 都在邊聽演講邊研究 BadUSB，成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，所以這篇就來寫下 WriteUp。&lt;/p&gt;&#xA;&lt;h1 id=&#34;badusb&#34;&gt;BadUSB&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pcb.hitcon.org/2025/BadUSB&#34;&gt;官方的 BadUSB 說明文件&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;如果是第一次參加的話可能會不知道這個到底要怎麼玩，其實可以參考 &lt;a href=&#34;https://pcb.hitcon.org/2024/BadUSB.html&#34;&gt;去年的說明文件&lt;/a&gt;，&#xA;就能知道要怎麼刷腳本進 Badge。&lt;/p&gt;&#xA;&lt;h2 id=&#34;環境設置&#34;&gt;環境設置&lt;/h2&gt;&#xA;&lt;p&gt;首先你需要一台 Ubuntu 系統的電腦，&#xA;我自己在測試時發現 BadgeCommander 如果跑在 Kali 上會沒辦法解析縮放倍率。&lt;/p&gt;&#xA;&lt;p&gt;我在 D1 測時發現 2024 年的文件中給的 BadgeCommander 刷不進去，所以我是直接從 &lt;a href=&#34;https://github.com/john0312/hitcon-pcb-badge/tree/main/sw/BadgeCommander&#34;&gt;/sw/BadgeCommander&lt;/a&gt; 自己開 Python3 跑起來。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+    </item>
     <item>
       <title>【HTB Machine】Titanic</title>
       <link>http://localhost:1313/posts/HTB/Titanic/</link>
@@ -577,10 +584,17 @@
     </item>
     <item>
       <title>OSCP 筆記-目錄</title>
-      <link>http://localhost:1313/posts/oscp-index/</link>
+      <link>http://localhost:1313/posts/OSCP/oscp-index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/oscp-index/</guid>
-      <description>&lt;p&gt;這裡的筆記算是 OSCP 的 cheat sheet，主要是用來考試的參考&lt;/p&gt;&#xA;&lt;p&gt;由於 Offsec 政策，這裡不會有任何課程內容，只有筆記跟技巧&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/OSCP/oscp-index/</guid>
+      <description>&lt;p&gt;這裡的筆記算是 OSCP(PEN-200) 的 cheat sheet，主要是用來考試的參考&lt;/p&gt;&#xA;&lt;p&gt;由於 Offsec 政策，這裡不會有任何課程內容，只有筆記跟一些技巧&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/posts/OSCP/enumeration&#34;&gt;OSCP 筆記-枚舉&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>OSCP筆記-枚舉</title>
+      <link>http://localhost:1313/posts/OSCP/enumeration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/OSCP/enumeration/</guid>
+      <description>&lt;h1 id=&#34;checklist&#34;&gt;Checklist&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;檢查環境變數、history&lt;/li&gt;&#xA;&lt;li&gt;檢查 hostname、OS 版本&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nmap&#34;&gt;nmap&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmap -sCV -p- -Pn --min-rate &lt;span style=&#34;color:#bd93f9&#34;&gt;10000&lt;/span&gt; host -oN nmap.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;使用 &lt;code&gt;-sUV&lt;/code&gt; 掃描 UDP 服務&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;&#xA;&lt;h3 id=&#34;full-tty&#34;&gt;Full TTY&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
     </item>
     <item>
       <title>算法筆記-DP-LIS</title>
