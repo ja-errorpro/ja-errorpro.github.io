@@ -9,13 +9,13 @@ tags:
 
 2024 年跟 25 年的 HITCON Badge 比起以往非常特別，是用 PCB 做的，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。
 
-去年 BadUSB 我沒有參加到，所以今年有先做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。
+去年 BadUSB 我沒有參加到，所以今年有做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。
 
 # BadUSB
 
 [官方的 BadUSB 說明文件](https://pcb.hitcon.org/2025/BadUSB)
 
-如果是第一次參加的話可能會不知道這個到底要怎麼玩，其實可以找到 [去年的說明文件](https://pcb.hitcon.org/2024/BadUSB.html)，就能知道要怎麼刷腳本進 Badge。
+今年文件沒有特別寫要怎麼刷腳本，其實可以找到 [去年的說明文件](https://pcb.hitcon.org/2024/BadUSB.html)，或者去詢問工作人員，就能知道要怎麼刷腳本進 Badge。
 
 ## 環境設置
 
