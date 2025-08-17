@@ -1,80 +1,641 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2024/ais3_d3_1/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2024/ais3_d3_1/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用"><meta property="og:description" content="深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen
-教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.DIT) 每個 DC 都有一個 NTDS.DIT GPO Virtual collection of policy settings 政策設定影響 User, Computer SYSVOL folder \\\domainname.local\SYSVOL \\\dc.local\sysvol\\\DC_FQDN\\\ Lab01 Windows Server 2019 build AD DC Script"><meta property="og:locale" content="zh_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-07-31T00:00:00+08:00"><meta property="article:modified_time" content="2024-07-31T00:00:00+08:00"><meta property="article:tag" content="Ctf"><meta name=twitter:card content="summary"><meta name=twitter:title content="【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用"><meta name=twitter:description content="深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen
-教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.DIT) 每個 DC 都有一個 NTDS.DIT GPO Virtual collection of policy settings 政策設定影響 User, Computer SYSVOL folder \\\domainname.local\SYSVOL \\\dc.local\sysvol\\\DC_FQDN\\\ Lab01 Windows Server 2019 build AD DC Script"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><link rel=stylesheet href=https://ja-errorpro.codes/css/cursor.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
-<a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
-<a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
-<span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/2024/ais3_d3_2/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/2024/ais3_d3_4/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>
-<span id=i-next class=info style=display:none>Next post</span>
-<span id=i-top class=info style=display:none>Back to top</span>
-<span id=i-share class=info style=display:none>Share post</span></span><br><div id=share style=display:none><ul><li><a class=icon href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f" aria-label=Facebook><i class="fab fa-facebook" aria-hidden=true></i></a></li><li><a class=icon href="https://twitter.com/share?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&text=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Twitter><i class="fab fa-twitter" aria-hidden=true></i></a></li><li><a class=icon href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Linkedin><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li><a class=icon href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&is_video=false&description=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Pinterest><i class="fab fa-pinterest" aria-hidden=true></i></a></li><li><a class=icon href="mailto:?subject=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&body=Check out this article: https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f" aria-label=Email><i class="fas fa-envelope" aria-hidden=true></i></a></li><li><a class=icon href="https://getpocket.com/save?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Pocket><i class="fab fa-get-pocket" aria-hidden=true></i></a></li><li><a class=icon href="http://reddit.com/submit?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=reddit><i class="fab fa-reddit" aria-hidden=true></i></a></li><li><a class=icon href="http://www.tumblr.com/share/link?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&name=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&description=%3ch1%20id%3d%22%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9fad%e5%ae%89%e5%85%a8%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85ad%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%22%3e%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%3ccode%3e-TXOne%20Networks%20Inc.%20Threat%20Researcher%20Dexter%20Chen%3c%2fcode%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%95%99%e6%9d%90%22%3e%e6%95%99%e6%9d%90%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3cli%3eWindows%2010%3c%2fli%3e%0a%3cli%3eKali%20Linux%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory%22%3eActive%20Directory%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Domain%20Service%3c%2fli%3e%0a%3cli%3eLDAP%28Lightweight%20Directory%20Access%20Protocol%29%20%2b%20Kerberos%28MS%20ver.%29%20%2b%20DNS%3c%2fli%3e%0a%3cli%3eSSO%20Services%20%28Base%20on%20Kerberos%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%3cimg%20src%3d%22https%3a%2f%2fcdn.ttgtmedia.com%2frms%2fonlineImages%2fwindowsserver-domain_forest_configuration-f_mobile.png%22%20alt%3d%22image%22%3e%3c%2fp%3e%0a%3ch2%20id%3d%22ad-overview%22%3eAD%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eActive%20Directory%20%28AD%29%20-%20Directory%20Service%3c%2fli%3e%0a%3cli%3eDomain%20Controller%20%28DC%29%0a%3cul%3e%0a%3cli%3e%e6%9f%90%e5%8f%b0%e5%ad%98%e8%91%97%20AD%20%e8%b3%87%e6%96%99%e5%ba%ab%e3%80%81%e7%ae%a1%e7%90%86%e7%b6%b2%e5%9f%9f%e4%b8%ad%20AD%20Object%20%e7%9a%84%e9%9b%bb%e8%85%a6%ef%bc%8c%e6%8f%90%e4%be%9b%e9%a9%97%e8%ad%89%e6%9c%8d%e5%8b%99%3c%2fli%3e%0a%3cli%3eDomain%20Directory%20%e5%ad%98%e5%9c%a8%20DC%3c%2fli%3e%0a%3cli%3e%e4%b8%80%e5%80%8b%e7%b6%b2%e5%9f%9f%e5%8f%af%e4%bb%a5%e6%9c%89%e5%a4%9a%e5%80%8b%20DC%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eObject%3c%2fli%3e%0a%3cli%3eAttribute%3c%2fli%3e%0a%3cli%3eForest%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22ldap-overview%22%3eLDAP%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eLDAP%20Path%0a%3cul%3e%0a%3cli%3eDN%28Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eRDN%28Relative%20Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eCN%28Common%20Name%29%3c%2fli%3e%0a%3cli%3eOU%28Organizational%20Unit%20Name%29%3c%2fli%3e%0a%3cli%3eDC%28Domain%20Component%29%3c%2fli%3e%0a%3cli%3eO%28Organizational%20Unit%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22user-computer-and-group%22%3eUser%2c%20Computer%2c%20and%20Group%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAccount%0a%3cul%3e%0a%3cli%3eUser%20Account%0a%3cul%3e%0a%3cli%3ePerson%20or%20service%20account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eComputer%20Account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eGroup%0a%3cul%3e%0a%3cli%3eActive%20Directory%20objects%20that%20contain%20users%2c%20contacts%2c%20computers%2c%20and%20other%20groups%3c%2fli%3e%0a%3cli%3eGroup%20Policy%20%e4%bd%9c%e7%94%a8%e6%96%bc%20User%2c%20Computer%20Accounts%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22security-identifier-sid%22%3eSecurity%20Identifier%20%28SID%29%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e8%ad%98%e5%88%a5%e5%94%af%e4%b8%80%e5%ae%89%e5%85%a8%e5%8e%9f%e5%89%87%e6%88%96%e5%ae%89%e5%85%a8%e7%be%a4%e7%b5%84%3c%2fli%3e%0a%3cli%3e%e5%8f%af%e4%bb%a5%e4%bb%a3%e8%a1%a8%20User%2c%20Group%2c%20Computer%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory-database%22%3eActive%20Directory%20Database%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAD%20DS%20database%20%28NTDS.DIT%29%3c%2fli%3e%0a%3cli%3e%e6%af%8f%e5%80%8b%20DC%20%e9%83%bd%e6%9c%89%e4%b8%80%e5%80%8b%20NTDS.DIT%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22gpo%22%3eGPO%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eVirtual%20collection%20of%20policy%20settings%3c%2fli%3e%0a%3cli%3e%e6%94%bf%e7%ad%96%e8%a8%ad%e5%ae%9a%e5%bd%b1%e9%9f%bf%20User%2c%20Computer%3c%2fli%3e%0a%3cli%3eSYSVOL%20folder%0a%3cul%3e%0a%3cli%3e%5c%5c%5cdomainname.local%5cSYSVOL%3c%2fli%3e%0a%3cli%3e%5c%5c%5cdc.local%5csysvol%5c%5c%5cDC_FQDN%5c%5c%5c%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22lab01%22%3eLab01%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3ebuild%20AD%20DC%20Script%3c%2fp%3e" aria-label=Tumblr><i class="fab fa-tumblr" aria-hidden=true></i></a></li><li><a class=icon href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&t=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Hacker News"><i class="fab fa-hacker-news" aria-hidden=true></i></a></li></ul></div><div id=toc><nav id=TableOfContents><ul><li><a href=#教材>教材</a></li><li><a href=#active-directory>Active Directory</a></li><li><a href=#ad-overview>AD Overview</a></li><li><a href=#ldap-overview>LDAP Overview</a></li><li><a href=#user-computer-and-group>User, Computer, and Group</a></li><li><a href=#security-identifier-sid>Security Identifier (SID)</a></li><li><a href=#active-directory-database>Active Directory Database</a></li><li><a href=#gpo>GPO</a></li><li><a href=#lab01>Lab01</a></li><li><a href=#lab02>Lab02</a><ul><li><a href=#recon>Recon</a></li><li><a href=#設定-anonymous>設定 Anonymous</a></li><li><a href=#nmap-ldap-script>nmap ldap script</a></li><li><a href=#hfs-exploit>HFS exploit</a></li></ul></li></ul></nav></div></span></div><article class=post itemscope itemtype=http://schema.org/BlogPosting><header><h1 class=posttitle itemprop="name headline">【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用</h1><div class=meta><div class=postdate><time datetime="2024-07-31 00:00:00 +0800 CST" itemprop=datePublished>2024-07-31</time></div><div class=article-tag><i class="fas fa-tag"></i>
-<a class=tag-link href=/tags/ctf rel=tag>CTF</a></div></div></header><div class=content itemprop=articleBody><h1 id=深入淺出網域ad安全細探各項ad組態設定的濫用>深入淺出網域(AD)安全:細探各項AD組態設定的濫用</h1><p><code>-TXOne Networks Inc. Threat Researcher Dexter Chen</code></p><h2 id=教材>教材</h2><ul><li>Windows Server 2019</li><li>Windows 10</li><li>Kali Linux</li></ul><h2 id=active-directory>Active Directory</h2><ul><li>Windows Domain Service</li><li>LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS</li><li>SSO Services (Base on Kerberos)</li></ul><p><img src=https://cdn.ttgtmedia.com/rms/onlineImages/windowsserver-domain_forest_configuration-f_mobile.png alt=image></p><h2 id=ad-overview>AD Overview</h2><ul><li>Active Directory (AD) - Directory Service</li><li>Domain Controller (DC)<ul><li>某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務</li><li>Domain Directory 存在 DC</li><li>一個網域可以有多個 DC</li></ul></li><li>Object</li><li>Attribute</li><li>Forest</li></ul><h2 id=ldap-overview>LDAP Overview</h2><ul><li>LDAP Path<ul><li>DN(Distinguished Name)</li><li>RDN(Relative Distinguished Name)</li><li>CN(Common Name)</li><li>OU(Organizational Unit Name)</li><li>DC(Domain Component)</li><li>O(Organizational Unit)</li></ul></li></ul><h2 id=user-computer-and-group>User, Computer, and Group</h2><ul><li>Account<ul><li>User Account<ul><li>Person or service account</li></ul></li><li>Computer Account</li></ul></li><li>Group<ul><li>Active Directory objects that contain users, contacts, computers, and other groups</li><li>Group Policy 作用於 User, Computer Accounts</li></ul></li></ul><h2 id=security-identifier-sid>Security Identifier (SID)</h2><ul><li>識別唯一安全原則或安全群組</li><li>可以代表 User, Group, Computer</li></ul><h2 id=active-directory-database>Active Directory Database</h2><ul><li>AD DS database (NTDS.DIT)</li><li>每個 DC 都有一個 NTDS.DIT</li></ul><h2 id=gpo>GPO</h2><ul><li>Virtual collection of policy settings</li><li>政策設定影響 User, Computer</li><li>SYSVOL folder<ul><li>\\\domainname.local\SYSVOL</li><li>\\\dc.local\sysvol\\\DC_FQDN\\\</li></ul></li></ul><h2 id=lab01>Lab01</h2><ul><li>Windows Server 2019</li></ul><p>build AD DC Script</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#6272a4>#1</span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>install-windowsfeature</span> <span style=color:#8be9fd;font-style:italic>AD-Domain</span>-Services -IncludeManagementTools
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>Import-Module</span> ADDSDeployment
-</span></span><span style=display:flex><span> 
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#6272a4>#2</span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$DomainName</span> = <span style=color:#f1fa8c>&#34;training_a.local&#34;</span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$DomainNetbiosName</span> = <span style=color:#f1fa8c>&#34;TRAINING_A&#34;</span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>Install-ADDSForest</span> `
-</span></span><span style=display:flex><span>-CreateDnsDelegation:<span style=color:#8be9fd;font-style:italic>$false</span> `
-</span></span><span style=display:flex><span>-DatabasePath <span style=color:#f1fa8c>&#34;C:\Windows\NTDS&#34;</span> `
-</span></span><span style=display:flex><span>-ForestMode <span style=color:#f1fa8c>&#34;WinThreshold&#34;</span> `
-</span></span><span style=display:flex><span>-DomainMode <span style=color:#f1fa8c>&#34;WinThreshold&#34;</span> `
-</span></span><span style=display:flex><span>-DomainName <span style=color:#8be9fd;font-style:italic>$DomainName</span> `
-</span></span><span style=display:flex><span>-DomainNetbiosName <span style=color:#8be9fd;font-style:italic>$DomainNetbiosName</span> `
-</span></span><span style=display:flex><span>-InstallDns:<span style=color:#8be9fd;font-style:italic>$true</span> `
-</span></span><span style=display:flex><span>-LogPath <span style=color:#f1fa8c>&#34;C:\Windows\NTDS&#34;</span> `
-</span></span><span style=display:flex><span>-NoRebootOnCompletion:<span style=color:#8be9fd;font-style:italic>$false</span> `
-</span></span><span style=display:flex><span>-SysvolPath <span style=color:#f1fa8c>&#34;C:\Windows\SYSVOL&#34;</span> `
-</span></span><span style=display:flex><span>-SafeModeAdministratorPassword <span style=color:#8be9fd;font-style:italic>$</span>(<span style=color:#8be9fd;font-style:italic>ConvertTo-SecureString</span> -string <span style=color:#f1fa8c>&#39;Password!&#39;</span> -AsPlainText -Force) `
-</span></span><span style=display:flex><span>-Force:<span style=color:#8be9fd;font-style:italic>$true</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#6272a4>#3</span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>Rename-Computer</span> -newname DC01 -Restart -force 
-</span></span></code></pre></td></tr></table></div></div><p>AD config script</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>New-ADOrganizationalUnit</span> -Name <span style=color:#f1fa8c>&#34;RD Dept&#34;</span> –Path <span style=color:#f1fa8c>&#34;DC=training_a,DC=Local&#34;</span> -ProtectedFromAccidentalDeletion <span style=color:#8be9fd;font-style:italic>$true</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$pw</span> = <span style=color:#8be9fd;font-style:italic>ConvertTo-SecureString</span> <span style=color:#f1fa8c>&#34;P@ssw0rd&#34;</span> -AsPlainText –Force
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>New-ADUser</span> -Name <span style=color:#f1fa8c>&#34;YiJia Huang&#34;</span> -SamAccountName <span style=color:#f1fa8c>&#34;YiJia&#34;</span> –AccountPassword <span style=color:#8be9fd;font-style:italic>$pw</span> -Enabled <span style=color:#8be9fd;font-style:italic>$true</span> -Path <span style=color:#f1fa8c>&#34;ou=RD Dept,dc=training_a,dc=local&#34;</span>
-</span></span></code></pre></td></tr></table></div></div><p>PC domain join script</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$SecPassword</span> = <span style=color:#8be9fd;font-style:italic>ConvertTo-SecureString</span> <span style=color:#f1fa8c>&#34;1qaz@WSX3edc&#34;</span> -AsPlainText -Force
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>$Cred</span> = <span style=color:#8be9fd;font-style:italic>New-Object</span> System.Management.Automation.PSCredential(<span style=color:#f1fa8c>&#34;training_a\administrator&#34;</span>, <span style=color:#8be9fd;font-style:italic>$SecPassword</span>)
-</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>add-computer</span> –domainname training_a.local -Credential <span style=color:#8be9fd;font-style:italic>$Cred</span> -OUPath <span style=color:#f1fa8c>&#34;ou=RD Dept,dc=Training_a,dc=LOCAL&#34;</span>
-</span></span><span style=display:flex><span>-restart
-</span></span></code></pre></td></tr></table></div></div><h2 id=lab02>Lab02</h2><h3 id=recon>Recon</h3><ul><li>有個帳號叫 Anonymous，可能有 read permission</li><li>tools<ul><li>nmap LDAP script(kali)</li><li>Idapsearch(kali)</li></ul></li><li>What can we get<ul><li>1-day 或已知的漏洞</li><li>domain machine 資訊</li><li>domain 群組與使用者資訊</li><li>如果幸運的話會有敏感資訊</li></ul></li></ul><h3 id=設定-anonymous>設定 Anonymous</h3><p>Windows Administrative Tools -> ADSI Edit -> Right Click -> Connection -> Add Configuration</p><p>ADSI Edit -> Configuration -> CN=Services -> CN=Windows NT -> CN=Directory -> CN=Anonymous Logon -> Right Click -> Properties -> Set Attribute -> dSHeuristics -> set to 0000002</p><p>Windows Administrative Tools -> Active Directory Users and Computers -> enable Advanced Features</p><p>training_a.local right click -> Properties -> Security -> Add -> Enter anonymous -> OK</p><p>training_a.local right click -> Properties -> Security -> Advanced -> ANONYMOUS LOGON -> Edit -> Applies to &ldquo;This object and all descendant objects&rdquo; -> OK</p><h3 id=nmap-ldap-script>nmap ldap script</h3><h3 id=hfs-exploit>HFS exploit</h3></div></article><div id=footer-post-container><div id=footer-post><div id=nav-footer style=display:none><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></div><div id=toc-footer style=display:none><nav id=TableOfContents><ul><li><a href=#教材>教材</a></li><li><a href=#active-directory>Active Directory</a></li><li><a href=#ad-overview>AD Overview</a></li><li><a href=#ldap-overview>LDAP Overview</a></li><li><a href=#user-computer-and-group>User, Computer, and Group</a></li><li><a href=#security-identifier-sid>Security Identifier (SID)</a></li><li><a href=#active-directory-database>Active Directory Database</a></li><li><a href=#gpo>GPO</a></li><li><a href=#lab01>Lab01</a></li><li><a href=#lab02>Lab02</a><ul><li><a href=#recon>Recon</a></li><li><a href=#設定-anonymous>設定 Anonymous</a></li><li><a href=#nmap-ldap-script>nmap ldap script</a></li><li><a href=#hfs-exploit>HFS exploit</a></li></ul></li></ul></nav></div><div id=share-footer style=display:none><ul><li><a class=icon href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f" aria-label=Facebook><i class="fab fa-facebook fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://twitter.com/share?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&text=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Twitter><i class="fab fa-twitter fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Linkedin><i class="fab fa-linkedin fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&is_video=false&description=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Pinterest><i class="fab fa-pinterest fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="mailto:?subject=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&body=Check out this article: https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f" aria-label=Email><i class="fas fa-envelope fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://getpocket.com/save?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=Pocket><i class="fab fa-get-pocket fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://reddit.com/submit?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label=reddit><i class="fab fa-reddit fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.tumblr.com/share/link?url=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&name=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&description=%3ch1%20id%3d%22%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9fad%e5%ae%89%e5%85%a8%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85ad%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%22%3e%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%3ccode%3e-TXOne%20Networks%20Inc.%20Threat%20Researcher%20Dexter%20Chen%3c%2fcode%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%95%99%e6%9d%90%22%3e%e6%95%99%e6%9d%90%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3cli%3eWindows%2010%3c%2fli%3e%0a%3cli%3eKali%20Linux%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory%22%3eActive%20Directory%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Domain%20Service%3c%2fli%3e%0a%3cli%3eLDAP%28Lightweight%20Directory%20Access%20Protocol%29%20%2b%20Kerberos%28MS%20ver.%29%20%2b%20DNS%3c%2fli%3e%0a%3cli%3eSSO%20Services%20%28Base%20on%20Kerberos%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%3cimg%20src%3d%22https%3a%2f%2fcdn.ttgtmedia.com%2frms%2fonlineImages%2fwindowsserver-domain_forest_configuration-f_mobile.png%22%20alt%3d%22image%22%3e%3c%2fp%3e%0a%3ch2%20id%3d%22ad-overview%22%3eAD%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eActive%20Directory%20%28AD%29%20-%20Directory%20Service%3c%2fli%3e%0a%3cli%3eDomain%20Controller%20%28DC%29%0a%3cul%3e%0a%3cli%3e%e6%9f%90%e5%8f%b0%e5%ad%98%e8%91%97%20AD%20%e8%b3%87%e6%96%99%e5%ba%ab%e3%80%81%e7%ae%a1%e7%90%86%e7%b6%b2%e5%9f%9f%e4%b8%ad%20AD%20Object%20%e7%9a%84%e9%9b%bb%e8%85%a6%ef%bc%8c%e6%8f%90%e4%be%9b%e9%a9%97%e8%ad%89%e6%9c%8d%e5%8b%99%3c%2fli%3e%0a%3cli%3eDomain%20Directory%20%e5%ad%98%e5%9c%a8%20DC%3c%2fli%3e%0a%3cli%3e%e4%b8%80%e5%80%8b%e7%b6%b2%e5%9f%9f%e5%8f%af%e4%bb%a5%e6%9c%89%e5%a4%9a%e5%80%8b%20DC%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eObject%3c%2fli%3e%0a%3cli%3eAttribute%3c%2fli%3e%0a%3cli%3eForest%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22ldap-overview%22%3eLDAP%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eLDAP%20Path%0a%3cul%3e%0a%3cli%3eDN%28Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eRDN%28Relative%20Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eCN%28Common%20Name%29%3c%2fli%3e%0a%3cli%3eOU%28Organizational%20Unit%20Name%29%3c%2fli%3e%0a%3cli%3eDC%28Domain%20Component%29%3c%2fli%3e%0a%3cli%3eO%28Organizational%20Unit%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22user-computer-and-group%22%3eUser%2c%20Computer%2c%20and%20Group%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAccount%0a%3cul%3e%0a%3cli%3eUser%20Account%0a%3cul%3e%0a%3cli%3ePerson%20or%20service%20account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eComputer%20Account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eGroup%0a%3cul%3e%0a%3cli%3eActive%20Directory%20objects%20that%20contain%20users%2c%20contacts%2c%20computers%2c%20and%20other%20groups%3c%2fli%3e%0a%3cli%3eGroup%20Policy%20%e4%bd%9c%e7%94%a8%e6%96%bc%20User%2c%20Computer%20Accounts%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22security-identifier-sid%22%3eSecurity%20Identifier%20%28SID%29%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e8%ad%98%e5%88%a5%e5%94%af%e4%b8%80%e5%ae%89%e5%85%a8%e5%8e%9f%e5%89%87%e6%88%96%e5%ae%89%e5%85%a8%e7%be%a4%e7%b5%84%3c%2fli%3e%0a%3cli%3e%e5%8f%af%e4%bb%a5%e4%bb%a3%e8%a1%a8%20User%2c%20Group%2c%20Computer%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory-database%22%3eActive%20Directory%20Database%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAD%20DS%20database%20%28NTDS.DIT%29%3c%2fli%3e%0a%3cli%3e%e6%af%8f%e5%80%8b%20DC%20%e9%83%bd%e6%9c%89%e4%b8%80%e5%80%8b%20NTDS.DIT%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22gpo%22%3eGPO%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eVirtual%20collection%20of%20policy%20settings%3c%2fli%3e%0a%3cli%3e%e6%94%bf%e7%ad%96%e8%a8%ad%e5%ae%9a%e5%bd%b1%e9%9f%bf%20User%2c%20Computer%3c%2fli%3e%0a%3cli%3eSYSVOL%20folder%0a%3cul%3e%0a%3cli%3e%5c%5c%5cdomainname.local%5cSYSVOL%3c%2fli%3e%0a%3cli%3e%5c%5c%5cdc.local%5csysvol%5c%5c%5cDC_FQDN%5c%5c%5c%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22lab01%22%3eLab01%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3ebuild%20AD%20DC%20Script%3c%2fp%3e" aria-label=Tumblr><i class="fab fa-tumblr fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fja-errorpro.codes%2fposts%2f2024%2fais3_d3_1%2f&t=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Hacker News"><i class="fab fa-hacker-news fa-lg" aria-hidden=true></i></a></li></ul></div><div id=actions-footer><a id=menu-toggle class=icon href=# onclick='return $("#nav-footer").toggle(),!1' aria-label=Menu><i class="fas fa-bars fa-lg" aria-hidden=true></i> Menu</a>
-<a id=toc-toggle class=icon href=# onclick='return $("#toc-footer").toggle(),!1' aria-label=TOC><i class="fas fa-list fa-lg" aria-hidden=true></i> TOC</a>
-<a id=share-toggle class=icon href=# onclick='return $("#share-footer").toggle(),!1' aria-label=Share><i class="fas fa-share-alt fa-lg" aria-hidden=true></i> share</a>
-<a id=top style=display:none class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg" aria-hidden=true></i> Top</a></div></div></div><footer id=footer><div class=footer-left>Copyright &copy; 2025 ErrorPro</div><div class=footer-right><nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></nav></div></footer></div></body><link rel=stylesheet href=/lib/font-awesome/css/all.min.css><script src=/lib/jquery/jquery.min.js></script><script src=/js/main.js></script><script src=/js/code-copy.js></script><script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},svg:{fontCache:"global"}}</script><script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script type=text/javascript src=/js/nest.js count=80 color=255,255,255 opacity=0.7></script><img id=Cursor src=/images/cursor/silverwolf/01-Normal.gif>
-<script type=text/javascript src=/js/cursor.js></script><script type=text/javascript src=/js/focus-capture.js></script></html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link
+  rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link rel="preload"
+  href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用 | ErrorPro</title>
+  <link rel="canonical" href="http://localhost:1313/posts/2024/ais3_d3_1/" />
+  
+  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all,follow" />
+  <meta name="googlebot" content="index,follow,snippet,archive" />
+  <meta property="og:url" content="http://localhost:1313/posts/2024/ais3_d3_1/">
+  <meta property="og:site_name" content="ErrorPro">
+  <meta property="og:title" content="【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用">
+  <meta property="og:description" content="深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen
+教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) &#43; Kerberos(MS ver.) &#43; DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.DIT) 每個 DC 都有一個 NTDS.DIT GPO Virtual collection of policy settings 政策設定影響 User, Computer SYSVOL folder \\\domainname.local\SYSVOL \\\dc.local\sysvol\\\DC_FQDN\\\ Lab01 Windows Server 2019 build AD DC Script">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-31T00:00:00+08:00">
+    <meta property="article:modified_time" content="2024-07-31T00:00:00+08:00">
+    <meta property="article:tag" content="Ctf">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用">
+  <meta name="twitter:description" content="深入淺出網域(AD)安全:細探各項AD組態設定的濫用 -TXOne Networks Inc. Threat Researcher Dexter Chen
+教材 Windows Server 2019 Windows 10 Kali Linux Active Directory Windows Domain Service LDAP(Lightweight Directory Access Protocol) &#43; Kerberos(MS ver.) &#43; DNS SSO Services (Base on Kerberos) AD Overview Active Directory (AD) - Directory Service Domain Controller (DC) 某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務 Domain Directory 存在 DC 一個網域可以有多個 DC Object Attribute Forest LDAP Overview LDAP Path DN(Distinguished Name) RDN(Relative Distinguished Name) CN(Common Name) OU(Organizational Unit Name) DC(Domain Component) O(Organizational Unit) User, Computer, and Group Account User Account Person or service account Computer Account Group Active Directory objects that contain users, contacts, computers, and other groups Group Policy 作用於 User, Computer Accounts Security Identifier (SID) 識別唯一安全原則或安全群組 可以代表 User, Group, Computer Active Directory Database AD DS database (NTDS.DIT) 每個 DC 都有一個 NTDS.DIT GPO Virtual collection of policy settings 政策設定影響 User, Computer SYSVOL folder \\\domainname.local\SYSVOL \\\dc.local\sysvol\\\DC_FQDN\\\ Lab01 Windows Server 2019 build AD DC Script">
+     
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
+    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+  />
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/search.css" />
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/cursor.css" />
+   
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+   
+<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LP899FV1TS');
+</script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" http://localhost:1313/posts/2024/ais3_d3_2/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="http://localhost:1313/posts/2024/ais3_d3_4/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&text=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&is_video=false&description=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&name=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&description=%3ch1%20id%3d%22%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9fad%e5%ae%89%e5%85%a8%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85ad%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%22%3e%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%3ccode%3e-TXOne%20Networks%20Inc.%20Threat%20Researcher%20Dexter%20Chen%3c%2fcode%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%95%99%e6%9d%90%22%3e%e6%95%99%e6%9d%90%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3cli%3eWindows%2010%3c%2fli%3e%0a%3cli%3eKali%20Linux%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory%22%3eActive%20Directory%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Domain%20Service%3c%2fli%3e%0a%3cli%3eLDAP%28Lightweight%20Directory%20Access%20Protocol%29%20%2b%20Kerberos%28MS%20ver.%29%20%2b%20DNS%3c%2fli%3e%0a%3cli%3eSSO%20Services%20%28Base%20on%20Kerberos%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%3cimg%20src%3d%22https%3a%2f%2fcdn.ttgtmedia.com%2frms%2fonlineImages%2fwindowsserver-domain_forest_configuration-f_mobile.png%22%20alt%3d%22image%22%3e%3c%2fp%3e%0a%3ch2%20id%3d%22ad-overview%22%3eAD%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eActive%20Directory%20%28AD%29%20-%20Directory%20Service%3c%2fli%3e%0a%3cli%3eDomain%20Controller%20%28DC%29%0a%3cul%3e%0a%3cli%3e%e6%9f%90%e5%8f%b0%e5%ad%98%e8%91%97%20AD%20%e8%b3%87%e6%96%99%e5%ba%ab%e3%80%81%e7%ae%a1%e7%90%86%e7%b6%b2%e5%9f%9f%e4%b8%ad%20AD%20Object%20%e7%9a%84%e9%9b%bb%e8%85%a6%ef%bc%8c%e6%8f%90%e4%be%9b%e9%a9%97%e8%ad%89%e6%9c%8d%e5%8b%99%3c%2fli%3e%0a%3cli%3eDomain%20Directory%20%e5%ad%98%e5%9c%a8%20DC%3c%2fli%3e%0a%3cli%3e%e4%b8%80%e5%80%8b%e7%b6%b2%e5%9f%9f%e5%8f%af%e4%bb%a5%e6%9c%89%e5%a4%9a%e5%80%8b%20DC%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eObject%3c%2fli%3e%0a%3cli%3eAttribute%3c%2fli%3e%0a%3cli%3eForest%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22ldap-overview%22%3eLDAP%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eLDAP%20Path%0a%3cul%3e%0a%3cli%3eDN%28Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eRDN%28Relative%20Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eCN%28Common%20Name%29%3c%2fli%3e%0a%3cli%3eOU%28Organizational%20Unit%20Name%29%3c%2fli%3e%0a%3cli%3eDC%28Domain%20Component%29%3c%2fli%3e%0a%3cli%3eO%28Organizational%20Unit%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22user-computer-and-group%22%3eUser%2c%20Computer%2c%20and%20Group%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAccount%0a%3cul%3e%0a%3cli%3eUser%20Account%0a%3cul%3e%0a%3cli%3ePerson%20or%20service%20account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eComputer%20Account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eGroup%0a%3cul%3e%0a%3cli%3eActive%20Directory%20objects%20that%20contain%20users%2c%20contacts%2c%20computers%2c%20and%20other%20groups%3c%2fli%3e%0a%3cli%3eGroup%20Policy%20%e4%bd%9c%e7%94%a8%e6%96%bc%20User%2c%20Computer%20Accounts%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22security-identifier-sid%22%3eSecurity%20Identifier%20%28SID%29%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e8%ad%98%e5%88%a5%e5%94%af%e4%b8%80%e5%ae%89%e5%85%a8%e5%8e%9f%e5%89%87%e6%88%96%e5%ae%89%e5%85%a8%e7%be%a4%e7%b5%84%3c%2fli%3e%0a%3cli%3e%e5%8f%af%e4%bb%a5%e4%bb%a3%e8%a1%a8%20User%2c%20Group%2c%20Computer%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory-database%22%3eActive%20Directory%20Database%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAD%20DS%20database%20%28NTDS.DIT%29%3c%2fli%3e%0a%3cli%3e%e6%af%8f%e5%80%8b%20DC%20%e9%83%bd%e6%9c%89%e4%b8%80%e5%80%8b%20NTDS.DIT%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22gpo%22%3eGPO%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eVirtual%20collection%20of%20policy%20settings%3c%2fli%3e%0a%3cli%3e%e6%94%bf%e7%ad%96%e8%a8%ad%e5%ae%9a%e5%bd%b1%e9%9f%bf%20User%2c%20Computer%3c%2fli%3e%0a%3cli%3eSYSVOL%20folder%0a%3cul%3e%0a%3cli%3e%5c%5c%5cdomainname.local%5cSYSVOL%3c%2fli%3e%0a%3cli%3e%5c%5c%5cdc.local%5csysvol%5c%5c%5cDC_FQDN%5c%5c%5c%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22lab01%22%3eLab01%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3ebuild%20AD%20DC%20Script%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&t=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#教材">教材</a></li>
+    <li><a href="#active-directory">Active Directory</a></li>
+    <li><a href="#ad-overview">AD Overview</a></li>
+    <li><a href="#ldap-overview">LDAP Overview</a></li>
+    <li><a href="#user-computer-and-group">User, Computer, and Group</a></li>
+    <li><a href="#security-identifier-sid">Security Identifier (SID)</a></li>
+    <li><a href="#active-directory-database">Active Directory Database</a></li>
+    <li><a href="#gpo">GPO</a></li>
+    <li><a href="#lab01">Lab01</a></li>
+    <li><a href="#lab02">Lab02</a>
+      <ul>
+        <li><a href="#recon">Recon</a></li>
+        <li><a href="#設定-anonymous">設定 Anonymous</a></li>
+        <li><a href="#nmap-ldap-script">nmap ldap script</a></li>
+        <li><a href="#hfs-exploit">HFS exploit</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        【AIS3】深入淺出網域(AD)安全:細探各項AD組態設定的濫用
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2024-07-31 00:00:00 &#43;0800 CST" itemprop="datePublished">2024-07-31</time>
+          
+        </div>
+        
+        
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/ctf" rel="tag">CTF</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <h1 id="深入淺出網域ad安全細探各項ad組態設定的濫用">深入淺出網域(AD)安全:細探各項AD組態設定的濫用</h1>
+<p><code>-TXOne Networks Inc. Threat Researcher Dexter Chen</code></p>
+<h2 id="教材">教材</h2>
+<ul>
+<li>Windows Server 2019</li>
+<li>Windows 10</li>
+<li>Kali Linux</li>
+</ul>
+<h2 id="active-directory">Active Directory</h2>
+<ul>
+<li>Windows Domain Service</li>
+<li>LDAP(Lightweight Directory Access Protocol) + Kerberos(MS ver.) + DNS</li>
+<li>SSO Services (Base on Kerberos)</li>
+</ul>
+<p><img src="https://cdn.ttgtmedia.com/rms/onlineImages/windowsserver-domain_forest_configuration-f_mobile.png" alt="image"></p>
+<h2 id="ad-overview">AD Overview</h2>
+<ul>
+<li>Active Directory (AD) - Directory Service</li>
+<li>Domain Controller (DC)
+<ul>
+<li>某台存著 AD 資料庫、管理網域中 AD Object 的電腦，提供驗證服務</li>
+<li>Domain Directory 存在 DC</li>
+<li>一個網域可以有多個 DC</li>
+</ul>
+</li>
+<li>Object</li>
+<li>Attribute</li>
+<li>Forest</li>
+</ul>
+<h2 id="ldap-overview">LDAP Overview</h2>
+<ul>
+<li>LDAP Path
+<ul>
+<li>DN(Distinguished Name)</li>
+<li>RDN(Relative Distinguished Name)</li>
+<li>CN(Common Name)</li>
+<li>OU(Organizational Unit Name)</li>
+<li>DC(Domain Component)</li>
+<li>O(Organizational Unit)</li>
+</ul>
+</li>
+</ul>
+<h2 id="user-computer-and-group">User, Computer, and Group</h2>
+<ul>
+<li>Account
+<ul>
+<li>User Account
+<ul>
+<li>Person or service account</li>
+</ul>
+</li>
+<li>Computer Account</li>
+</ul>
+</li>
+<li>Group
+<ul>
+<li>Active Directory objects that contain users, contacts, computers, and other groups</li>
+<li>Group Policy 作用於 User, Computer Accounts</li>
+</ul>
+</li>
+</ul>
+<h2 id="security-identifier-sid">Security Identifier (SID)</h2>
+<ul>
+<li>識別唯一安全原則或安全群組</li>
+<li>可以代表 User, Group, Computer</li>
+</ul>
+<h2 id="active-directory-database">Active Directory Database</h2>
+<ul>
+<li>AD DS database (NTDS.DIT)</li>
+<li>每個 DC 都有一個 NTDS.DIT</li>
+</ul>
+<h2 id="gpo">GPO</h2>
+<ul>
+<li>Virtual collection of policy settings</li>
+<li>政策設定影響 User, Computer</li>
+<li>SYSVOL folder
+<ul>
+<li>\\\domainname.local\SYSVOL</li>
+<li>\\\dc.local\sysvol\\\DC_FQDN\\\</li>
+</ul>
+</li>
+</ul>
+<h2 id="lab01">Lab01</h2>
+<ul>
+<li>Windows Server 2019</li>
+</ul>
+<p>build AD DC Script</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#6272a4">#1</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">install-windowsfeature</span> <span style="color:#8be9fd;font-style:italic">AD-Domain</span>-Services -IncludeManagementTools
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Import-Module</span> ADDSDeployment
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#2</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$DomainName</span> = <span style="color:#f1fa8c">&#34;training_a.local&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$DomainNetbiosName</span> = <span style="color:#f1fa8c">&#34;TRAINING_A&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Install-ADDSForest</span> `
+</span></span><span style="display:flex;"><span>-CreateDnsDelegation:$false `
+</span></span><span style="display:flex;"><span>-DatabasePath <span style="color:#f1fa8c">&#34;C:\Windows\NTDS&#34;</span> `
+</span></span><span style="display:flex;"><span>-ForestMode <span style="color:#f1fa8c">&#34;WinThreshold&#34;</span> `
+</span></span><span style="display:flex;"><span>-DomainMode <span style="color:#f1fa8c">&#34;WinThreshold&#34;</span> `
+</span></span><span style="display:flex;"><span>-DomainName <span style="color:#8be9fd;font-style:italic">$DomainName</span> `
+</span></span><span style="display:flex;"><span>-DomainNetbiosName <span style="color:#8be9fd;font-style:italic">$DomainNetbiosName</span> `
+</span></span><span style="display:flex;"><span>-InstallDns:$true `
+</span></span><span style="display:flex;"><span>-LogPath <span style="color:#f1fa8c">&#34;C:\Windows\NTDS&#34;</span> `
+</span></span><span style="display:flex;"><span>-NoRebootOnCompletion:$false `
+</span></span><span style="display:flex;"><span>-SysvolPath <span style="color:#f1fa8c">&#34;C:\Windows\SYSVOL&#34;</span> `
+</span></span><span style="display:flex;"><span>-SafeModeAdministratorPassword $(<span style="color:#8be9fd;font-style:italic">ConvertTo-SecureString</span> -string <span style="color:#f1fa8c">&#39;Password!&#39;</span> -AsPlainText -Force) `
+</span></span><span style="display:flex;"><span>-Force:$true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#3</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Rename-Computer</span> -newname DC01 -Restart -force 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>AD config script</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">New-ADOrganizationalUnit</span> -Name <span style="color:#f1fa8c">&#34;RD Dept&#34;</span> –Path <span style="color:#f1fa8c">&#34;DC=training_a,DC=Local&#34;</span> -ProtectedFromAccidentalDeletion $true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$pw</span> = <span style="color:#8be9fd;font-style:italic">ConvertTo-SecureString</span> <span style="color:#f1fa8c">&#34;P@ssw0rd&#34;</span> -AsPlainText –Force
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">New-ADUser</span> -Name <span style="color:#f1fa8c">&#34;YiJia Huang&#34;</span> -SamAccountName <span style="color:#f1fa8c">&#34;YiJia&#34;</span> –AccountPassword <span style="color:#8be9fd;font-style:italic">$pw</span> -Enabled $true -Path <span style="color:#f1fa8c">&#34;ou=RD Dept,dc=training_a,dc=local&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>PC domain join script</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$SecPassword</span> = <span style="color:#8be9fd;font-style:italic">ConvertTo-SecureString</span> <span style="color:#f1fa8c">&#34;1qaz@WSX3edc&#34;</span> -AsPlainText -Force
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$Cred</span> = <span style="color:#8be9fd;font-style:italic">New-Object</span> System.Management.Automation.PSCredential(<span style="color:#f1fa8c">&#34;training_a\administrator&#34;</span>, <span style="color:#8be9fd;font-style:italic">$SecPassword</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">add-computer</span> –domainname training_a.local -Credential <span style="color:#8be9fd;font-style:italic">$Cred</span> -OUPath <span style="color:#f1fa8c">&#34;ou=RD Dept,dc=Training_a,dc=LOCAL&#34;</span>
+</span></span><span style="display:flex;"><span>-restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="lab02">Lab02</h2>
+<h3 id="recon">Recon</h3>
+<ul>
+<li>有個帳號叫 Anonymous，可能有 read permission</li>
+<li>tools
+<ul>
+<li>nmap LDAP script(kali)</li>
+<li>Idapsearch(kali)</li>
+</ul>
+</li>
+<li>What can we get
+<ul>
+<li>1-day 或已知的漏洞</li>
+<li>domain machine 資訊</li>
+<li>domain 群組與使用者資訊</li>
+<li>如果幸運的話會有敏感資訊</li>
+</ul>
+</li>
+</ul>
+<h3 id="設定-anonymous">設定 Anonymous</h3>
+<p>Windows Administrative Tools -&gt; ADSI Edit -&gt; Right Click -&gt; Connection -&gt; Add Configuration</p>
+<p>ADSI Edit -&gt; Configuration -&gt; CN=Services -&gt; CN=Windows NT -&gt; CN=Directory -&gt; CN=Anonymous Logon -&gt; Right Click -&gt; Properties -&gt; Set Attribute -&gt; dSHeuristics -&gt; set to 0000002</p>
+<p>Windows Administrative Tools -&gt; Active Directory Users and Computers -&gt; enable Advanced Features</p>
+<p>training_a.local right click -&gt; Properties -&gt; Security -&gt; Add -&gt; Enter anonymous -&gt; OK</p>
+<p>training_a.local right click -&gt; Properties -&gt; Security -&gt; Advanced -&gt; ANONYMOUS LOGON -&gt; Edit -&gt; Applies to &ldquo;This object and all descendant objects&rdquo; -&gt; OK</p>
+<h3 id="nmap-ldap-script">nmap ldap script</h3>
+<h3 id="hfs-exploit">HFS exploit</h3>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">主頁</a></li>
+         
+          <li><a href="/posts">廢文區</a></li>
+         
+          <li><a href="/resources">資源</a></li>
+         
+          <li><a href="/tags">標籤</a></li>
+         
+          <li><a href="/comment">留言區</a></li>
+         
+          <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#教材">教材</a></li>
+    <li><a href="#active-directory">Active Directory</a></li>
+    <li><a href="#ad-overview">AD Overview</a></li>
+    <li><a href="#ldap-overview">LDAP Overview</a></li>
+    <li><a href="#user-computer-and-group">User, Computer, and Group</a></li>
+    <li><a href="#security-identifier-sid">Security Identifier (SID)</a></li>
+    <li><a href="#active-directory-database">Active Directory Database</a></li>
+    <li><a href="#gpo">GPO</a></li>
+    <li><a href="#lab01">Lab01</a></li>
+    <li><a href="#lab02">Lab02</a>
+      <ul>
+        <li><a href="#recon">Recon</a></li>
+        <li><a href="#設定-anonymous">設定 Anonymous</a></li>
+        <li><a href="#nmap-ldap-script">nmap ldap script</a></li>
+        <li><a href="#hfs-exploit">HFS exploit</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&text=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&is_video=false&description=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&title=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&name=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8&description=%3ch1%20id%3d%22%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9fad%e5%ae%89%e5%85%a8%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85ad%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%22%3e%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%3ccode%3e-TXOne%20Networks%20Inc.%20Threat%20Researcher%20Dexter%20Chen%3c%2fcode%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%95%99%e6%9d%90%22%3e%e6%95%99%e6%9d%90%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3cli%3eWindows%2010%3c%2fli%3e%0a%3cli%3eKali%20Linux%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory%22%3eActive%20Directory%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Domain%20Service%3c%2fli%3e%0a%3cli%3eLDAP%28Lightweight%20Directory%20Access%20Protocol%29%20%2b%20Kerberos%28MS%20ver.%29%20%2b%20DNS%3c%2fli%3e%0a%3cli%3eSSO%20Services%20%28Base%20on%20Kerberos%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%3cimg%20src%3d%22https%3a%2f%2fcdn.ttgtmedia.com%2frms%2fonlineImages%2fwindowsserver-domain_forest_configuration-f_mobile.png%22%20alt%3d%22image%22%3e%3c%2fp%3e%0a%3ch2%20id%3d%22ad-overview%22%3eAD%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eActive%20Directory%20%28AD%29%20-%20Directory%20Service%3c%2fli%3e%0a%3cli%3eDomain%20Controller%20%28DC%29%0a%3cul%3e%0a%3cli%3e%e6%9f%90%e5%8f%b0%e5%ad%98%e8%91%97%20AD%20%e8%b3%87%e6%96%99%e5%ba%ab%e3%80%81%e7%ae%a1%e7%90%86%e7%b6%b2%e5%9f%9f%e4%b8%ad%20AD%20Object%20%e7%9a%84%e9%9b%bb%e8%85%a6%ef%bc%8c%e6%8f%90%e4%be%9b%e9%a9%97%e8%ad%89%e6%9c%8d%e5%8b%99%3c%2fli%3e%0a%3cli%3eDomain%20Directory%20%e5%ad%98%e5%9c%a8%20DC%3c%2fli%3e%0a%3cli%3e%e4%b8%80%e5%80%8b%e7%b6%b2%e5%9f%9f%e5%8f%af%e4%bb%a5%e6%9c%89%e5%a4%9a%e5%80%8b%20DC%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eObject%3c%2fli%3e%0a%3cli%3eAttribute%3c%2fli%3e%0a%3cli%3eForest%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22ldap-overview%22%3eLDAP%20Overview%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eLDAP%20Path%0a%3cul%3e%0a%3cli%3eDN%28Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eRDN%28Relative%20Distinguished%20Name%29%3c%2fli%3e%0a%3cli%3eCN%28Common%20Name%29%3c%2fli%3e%0a%3cli%3eOU%28Organizational%20Unit%20Name%29%3c%2fli%3e%0a%3cli%3eDC%28Domain%20Component%29%3c%2fli%3e%0a%3cli%3eO%28Organizational%20Unit%29%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22user-computer-and-group%22%3eUser%2c%20Computer%2c%20and%20Group%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAccount%0a%3cul%3e%0a%3cli%3eUser%20Account%0a%3cul%3e%0a%3cli%3ePerson%20or%20service%20account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eComputer%20Account%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3eGroup%0a%3cul%3e%0a%3cli%3eActive%20Directory%20objects%20that%20contain%20users%2c%20contacts%2c%20computers%2c%20and%20other%20groups%3c%2fli%3e%0a%3cli%3eGroup%20Policy%20%e4%bd%9c%e7%94%a8%e6%96%bc%20User%2c%20Computer%20Accounts%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22security-identifier-sid%22%3eSecurity%20Identifier%20%28SID%29%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3e%e8%ad%98%e5%88%a5%e5%94%af%e4%b8%80%e5%ae%89%e5%85%a8%e5%8e%9f%e5%89%87%e6%88%96%e5%ae%89%e5%85%a8%e7%be%a4%e7%b5%84%3c%2fli%3e%0a%3cli%3e%e5%8f%af%e4%bb%a5%e4%bb%a3%e8%a1%a8%20User%2c%20Group%2c%20Computer%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22active-directory-database%22%3eActive%20Directory%20Database%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eAD%20DS%20database%20%28NTDS.DIT%29%3c%2fli%3e%0a%3cli%3e%e6%af%8f%e5%80%8b%20DC%20%e9%83%bd%e6%9c%89%e4%b8%80%e5%80%8b%20NTDS.DIT%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22gpo%22%3eGPO%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eVirtual%20collection%20of%20policy%20settings%3c%2fli%3e%0a%3cli%3e%e6%94%bf%e7%ad%96%e8%a8%ad%e5%ae%9a%e5%bd%b1%e9%9f%bf%20User%2c%20Computer%3c%2fli%3e%0a%3cli%3eSYSVOL%20folder%0a%3cul%3e%0a%3cli%3e%5c%5c%5cdomainname.local%5cSYSVOL%3c%2fli%3e%0a%3cli%3e%5c%5c%5cdc.local%5csysvol%5c%5c%5cDC_FQDN%5c%5c%5c%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22lab01%22%3eLab01%3c%2fh2%3e%0a%3cul%3e%0a%3cli%3eWindows%20Server%202019%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3ebuild%20AD%20DC%20Script%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fais3_d3_1%2f&t=%e3%80%90AIS3%e3%80%91%e6%b7%b1%e5%85%a5%e6%b7%ba%e5%87%ba%e7%b6%b2%e5%9f%9f%28AD%29%e5%ae%89%e5%85%a8%3a%e7%b4%b0%e6%8e%a2%e5%90%84%e9%a0%85AD%e7%b5%84%e6%85%8b%e8%a8%ad%e5%ae%9a%e7%9a%84%e6%bf%ab%e7%94%a8" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2025  ErrorPro 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">主頁</a></li>
+         
+        <li><a href="/posts">廢文區</a></li>
+         
+        <li><a href="/resources">資源</a></li>
+         
+        <li><a href="/tags">標籤</a></li>
+         
+        <li><a href="/comment">留言區</a></li>
+         
+        <li><a href="/about">關於本人</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script type="text/javascript" src=/js/nest.js count=80 color="255,255,255" opacity=0.7>
+</script>
+
+<img id="Cursor" src="/images/cursor/silverwolf/01-Normal.gif">
+
+<script type="text/javascript" src=/js/cursor.js>
+</script>
+
+<script type="text/javascript" src=/js/focus-capture.js></script>
+
+
+
+
+</html>
