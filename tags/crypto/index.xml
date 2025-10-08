@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Crypto on ErrorPro</title><link>https://ja-errorpro.codes/tags/crypto/</link><description>Recent content in Crypto on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/crypto/index.xml" rel="self" type="application/rss+xml"/><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/rsa/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/rsa/</guid><description>&lt;h1 id="rsa加密演算法">RSA加密演算法&lt;/h1>
-&lt;h2 id="簡介">簡介&lt;/h2>
-&lt;ul>
-&lt;li>由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。&lt;/li>
-&lt;li>非對稱加密演算法(公鑰加密演算法)。&lt;/li>
-&lt;li>一般有1024、2048、4096位的金鑰長度，位是二進位位元數&lt;/li>
-&lt;/ul>
-&lt;h2 id="生成金鑰過程">生成金鑰過程&lt;/h2>
-&lt;ol>
-&lt;li>選兩個質數$p$、$q$，$p\neq q$。&lt;/li>
-&lt;li>算 $\phi(pq) $，其中 $\phi(n)$ 為歐拉函數，表示小於 $n$ 且與 $n$ 互質的正整數個數，歐拉定理 $\phi(pq) = (p-1)(q-1)$。&lt;/li>
-&lt;li>選一個數 $e$，使 $1 \leq e \leq \phi(pq)$ 且 $e$ 與 $\phi(pq)$ 互質。&lt;/li>
-&lt;li>找一個數 $d$，使 $ed \equiv 1 \pmod{\phi(pq)}$，即 $ed$ 除以 $phi(pq)$ 的餘數 $ = 1$。
-4-1. 這步就是在求 $e$ 關於 $\phi(pq)$ 的模逆元，可以用擴展歐幾里得法求，參考：&lt;a href="https://ja-errorpro.codes/posts/1/algo-number-theory/#%E8%B2%9D%E7%A5%96%E5%AE%9A%E7%90%86bezouts-thm">算法筆記-數論&lt;/a>&lt;/li>
-&lt;li>$p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。&lt;/li>
-&lt;/ol>
-&lt;h2 id="加密過程">加密過程&lt;/h2>
-&lt;ol>
-&lt;li>將明文字串 $m$ 轉換成數字(ASCII)陣列。&lt;/li>
-&lt;li>一個數一個數加密，設數字為 $x$，計算 $x^e\ mod\ n$，得到密文。&lt;/li>
-&lt;li>把這些密文再組合起來&lt;/li>
-&lt;/ol>
-&lt;h2 id="解密過程">解密過程&lt;/h2>
-&lt;ol>
-&lt;li>把密文拆開，一個數一個數解密，設數字為 $y$，計算 $y^d\ mod\ n$，得到明文。&lt;/li>
-&lt;li>把這些明文再組合起來&lt;/li>
-&lt;/ol>
-&lt;h2 id="攻擊">攻擊&lt;/h2>
-&lt;p>&lt;a href="https://github.com/aleaxit/gmpy">gmpy2&lt;/a>
-&lt;a href="http://factordb.com">線上分解n&lt;/a>
-&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool">RSACTFTool&lt;/a>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Crypto on ErrorPro</title><link>https://ja-errorpro.codes/tags/crypto/</link><description>Recent content in Crypto on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/crypto/index.xml" rel="self" type="application/rss+xml"/><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/rsa/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/rsa/</guid><description>&lt;h1 id="rsa加密演算法"&gt;RSA加密演算法&lt;/h1&gt;
+&lt;h2 id="簡介"&gt;簡介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。&lt;/li&gt;
+&lt;li&gt;非對稱加密演算法(公鑰加密演算法)。&lt;/li&gt;
+&lt;li&gt;一般有1024、2048、4096位的金鑰長度，位是二進位位元數&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="生成金鑰過程"&gt;生成金鑰過程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;選兩個質數$p$、$q$，$p\neq q$。&lt;/li&gt;
+&lt;li&gt;算 $\phi(pq) $，其中 $\phi(n)$ 為歐拉函數，表示小於 $n$ 且與 $n$ 互質的正整數個數，歐拉定理 $\phi(pq) = (p-1)(q-1)$。&lt;/li&gt;
+&lt;li&gt;選一個數 $e$，使 $1 \leq e \leq \phi(pq)$ 且 $e$ 與 $\phi(pq)$ 互質。&lt;/li&gt;
+&lt;li&gt;找一個數 $d$，使 $ed \equiv 1 \pmod{\phi(pq)}$，即 $ed$ 除以 $phi(pq)$ 的餘數 $ = 1$。
+4-1. 這步就是在求 $e$ 關於 $\phi(pq)$ 的模逆元，可以用擴展歐幾里得法求，參考：&lt;a href="https://ja-errorpro.codes/posts/1/algo-number-theory/#%E8%B2%9D%E7%A5%96%E5%AE%9A%E7%90%86bezouts-thm"&gt;算法筆記-數論&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;$p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="加密過程"&gt;加密過程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;將明文字串 $m$ 轉換成數字(ASCII)陣列。&lt;/li&gt;
+&lt;li&gt;一個數一個數加密，設數字為 $x$，計算 $x^e\ mod\ n$，得到密文。&lt;/li&gt;
+&lt;li&gt;把這些密文再組合起來&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="解密過程"&gt;解密過程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;把密文拆開，一個數一個數解密，設數字為 $y$，計算 $y^d\ mod\ n$，得到明文。&lt;/li&gt;
+&lt;li&gt;把這些明文再組合起來&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="攻擊"&gt;攻擊&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/aleaxit/gmpy"&gt;gmpy2&lt;/a&gt;
+&lt;a href="http://factordb.com"&gt;線上分解n&lt;/a&gt;
+&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool"&gt;RSACTFTool&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

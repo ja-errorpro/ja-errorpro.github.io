@@ -1,241 +1,241 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bot on ErrorPro</title><link>https://ja-errorpro.codes/tags/bot/</link><description>Recent content in Bot on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/bot/index.xml" rel="self" type="application/rss+xml"/><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi">Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1>
-&lt;p>支援更多操作如斜線指令、按鈕、選單，且簡單易懂&lt;/p>
-&lt;h1 id="簡介">簡介&lt;/h1>
-&lt;p>經過大量搜尋資料，發現dcpi的介紹特別少，
-因此閱讀完官方API後想記錄下來翻成中文並做個整理。&lt;/p>
-&lt;h1 id="先備知識">先備知識&lt;/h1>
-&lt;ul>
-&lt;li>需知道如何在 &lt;a href="https://discord.com/developers/applications">Discord Developers Applications&lt;/a> 裡創建機器人&lt;/li>
-&lt;li>需知道命令列的基本操作&lt;/li>
-&lt;/ul>
-&lt;h1 id="環境建置">環境建置&lt;/h1>
-&lt;p>既然是py當然要安裝Python(目前已測試3.8~3.10可用)&lt;/p>
-&lt;p>&lt;a href="https://www.python.org">Python官網&lt;/a>&lt;/p>
-&lt;p>安裝 dcpi(以編寫此篇文時的版本為主)&lt;/p>
-&lt;p>&lt;a href="https://pypi.org/project/discord-py-interactions/">dcpi Pypi&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ pip3 install discord-py-interactions&lt;span style="color:#ff79c6">==&lt;/span>4.3.4
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1 id="quick-start">Quick Start&lt;/h1>
-&lt;p>根據這份&lt;a href="https://interactionspy.readthedocs.io/en/latest/quickstart.html">API文件&lt;/a>&lt;/p>
-&lt;p>先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為&lt;code>bot.py&lt;/code>，
-並在DC的開發應用頁面創建好機器人&lt;/p>
-&lt;p>然後複製以下code，將&lt;code>your-bot-token&lt;/code>換成機器人的token，注意不要將token公開給別人。&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">import&lt;/span> interactions
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bot &lt;span style="color:#ff79c6">=&lt;/span> interactions&lt;span style="color:#ff79c6">.&lt;/span>Client(token&lt;span style="color:#ff79c6">=&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;your-bot-token&amp;#34;&lt;/span>,intents&lt;span style="color:#ff79c6">=&lt;/span>interactions&lt;span style="color:#ff79c6">.&lt;/span>flags&lt;span style="color:#ff79c6">.&lt;/span>Intents&lt;span style="color:#ff79c6">.&lt;/span>ALL)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4"># 啟動機器人&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bot&lt;span style="color:#ff79c6">.&lt;/span>start()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>接著執行它&lt;/p></description></item><item><title>Farmbot歷程</title><link>https://ja-errorpro.codes/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/farmbot/</guid><description>&lt;p style="text-align:center">Farmbot&lt;/p>
-&lt;p>(本頁面在舊版網站發布，會有不少顯示問題)&lt;/p>
-&lt;p>&lt;a href="https://paper.dropbox.com/doc/FarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA">FBTUG共筆資料&lt;/a>&lt;/p>
-&lt;h2 id="什麼是farmbot">什麼是Farmbot?&lt;/h2>
-&lt;p>一個機器人開放式系統，可通過土地種植，澆水，土壤測試和除草為所有需要耕種小土地跟想種糧食的人提供幫助&lt;/p>
-&lt;p>使用Raspberry Pi(樹莓派)，Arduino以及其他優良組件&lt;/p>
-&lt;h3 id="1碳足跡">1.碳足跡&lt;/h3>
-&lt;h4 id="製造">製造&lt;/h4>
-&lt;blockquote>
-&lt;p>目前看重環保議題,Farmbot使用最普遍的材料:&lt;/p>&lt;/blockquote>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>材料&lt;/th>
- &lt;th>用途&lt;/th>
- &lt;th>重量(kg)&lt;/th>
- &lt;th>kg CO2/物料 kg&lt;/th>
- &lt;th>CO2(kg)&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>鋁&lt;/td>
- &lt;td>擠壓板&lt;/td>
- &lt;td>9.5&lt;/td>
- &lt;td>8.24&lt;/td>
- &lt;td>78.3&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>不鏽鋼&lt;/td>
- &lt;td>硬件，軸承，驅動軸，絲槓&lt;/td>
- &lt;td>1.4&lt;/td>
- &lt;td>6.15&lt;/td>
- &lt;td>8.6&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>塑料&lt;/td>
- &lt;td>拖鏈，3D列印&lt;a href="https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3a231755273e980d277c3a4c">[CAD]&lt;/a>，輪子，電子設備，管材，電路板&lt;/td>
- &lt;td>2.8&lt;/td>
- &lt;td>2.53&lt;/td>
- &lt;td>7.1&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>銅&lt;/td>
- &lt;td>電，佈線，電動機繞組&lt;/td>
- &lt;td>0.3&lt;/td>
- &lt;td>2.60&lt;/td>
- &lt;td>0.8&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>橡膠&lt;/td>
- &lt;td>皮帶，電線，墊片&lt;/td>
- &lt;td>0.2&lt;/td>
- &lt;td>3.18&lt;/td>
- &lt;td>0.6&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>合計&lt;/td>
- &lt;td>95.4&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;blockquote>
-&lt;p>每生產Farmbot排放的理論量約 &lt;strong>95.4 kg&lt;/strong>，但實際上較接近 &lt;strong>150 kg&lt;/strong>&lt;/p>&lt;/blockquote>
-&lt;h4 id="使用">使用&lt;/h4>
-&lt;blockquote>
-&lt;p>在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&lt;/p>&lt;/blockquote>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>零件&lt;/th>
- &lt;th>功率(W)&lt;/th>
- &lt;th>佔空比(%)&lt;/th>
- &lt;th>使用時間(h/d)&lt;/th>
- &lt;th>kWh/day&lt;/th>
- &lt;th>kWh/year&lt;/th>
- &lt;th>kg CO2/day&lt;/th>
- &lt;th>kg CO2/year&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>樹莓派2&lt;/td>
- &lt;td>3.0&lt;/td>
- &lt;td>100%&lt;/td>
- &lt;td>24.00&lt;/td>
- &lt;td>0.072&lt;/td>
- &lt;td>26.3&lt;/td>
- &lt;td>0.040&lt;/td>
- &lt;td>14.56&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>樹莓派相機&lt;/td>
- &lt;td>1.5&lt;/td>
- &lt;td>100%&lt;/td>
- &lt;td>24.00&lt;/td>
- &lt;td>0.036&lt;/td>
- &lt;td>13.1&lt;/td>
- &lt;td>0.020&lt;/td>
- &lt;td>7.28&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Arduino Mega 2560&lt;/td>
- &lt;td>1.0&lt;/td>
- &lt;td>100%&lt;/td>
- &lt;td>24.00&lt;/td>
- &lt;td>0.024&lt;/td>
- &lt;td>8.8&lt;/td>
- &lt;td>0.013&lt;/td>
- &lt;td>4.85&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>NEMA 17步進馬達*3&lt;/td>
- &lt;td>30.0&lt;/td>
- &lt;td>5%&lt;/td>
- &lt;td>1.20&lt;/td>
- &lt;td>0.036&lt;/td>
- &lt;td>13.1&lt;/td>
- &lt;td>0.020&lt;/td>
- &lt;td>7.28&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>12V工具&lt;/td>
- &lt;td>132.0&lt;/td>
- &lt;td>2%&lt;/td>
- &lt;td>0.48&lt;/td>
- &lt;td>0.063&lt;/td>
- &lt;td>23.1&lt;/td>
- &lt;td>0.035&lt;/td>
- &lt;td>12.81&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>電磁閥&lt;/td>
- &lt;td>30.0&lt;/td>
- &lt;td>2%&lt;/td>
- &lt;td>0.48&lt;/td>
- &lt;td>0.014&lt;/td>
- &lt;td>5.3&lt;/td>
- &lt;td>0.008&lt;/td>
- &lt;td>2.91&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>真空泵&lt;/td>
- &lt;td>186.0&lt;/td>
- &lt;td>0.5%&lt;/td>
- &lt;td>0.012&lt;/td>
- &lt;td>0.022&lt;/td>
- &lt;td>8.1&lt;/td>
- &lt;td>0.012&lt;/td>
- &lt;td>4.51&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Web App服務器/用戶&lt;/td>
- &lt;td>20.0&lt;/td>
- &lt;td>1%&lt;/td>
- &lt;td>0.24&lt;/td>
- &lt;td>0.005&lt;/td>
- &lt;td>1.8&lt;/td>
- &lt;td>0.003&lt;/td>
- &lt;td>0.97&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>設備(筆電)&lt;/td>
- &lt;td>60.0&lt;/td>
- &lt;td>1%&lt;/td>
- &lt;td>0.24&lt;/td>
- &lt;td>0.014&lt;/td>
- &lt;td>5.3&lt;/td>
- &lt;td>0.008&lt;/td>
- &lt;td>2.91&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>合計&lt;/td>
- &lt;td>0.287&lt;/td>
- &lt;td>104.9&lt;/td>
- &lt;td>0.159&lt;/td>
- &lt;td>58.09&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;blockquote>
-&lt;blockquote>
-&lt;p>*佔空比:組件使用時間的估計平均百分比&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bot on ErrorPro</title><link>https://ja-errorpro.codes/tags/bot/</link><description>Recent content in Bot on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/bot/index.xml" rel="self" type="application/rss+xml"/><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi"&gt;Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1&gt;
+&lt;p&gt;支援更多操作如斜線指令、按鈕、選單，且簡單易懂&lt;/p&gt;
+&lt;h1 id="簡介"&gt;簡介&lt;/h1&gt;
+&lt;p&gt;經過大量搜尋資料，發現dcpi的介紹特別少，
+因此閱讀完官方API後想記錄下來翻成中文並做個整理。&lt;/p&gt;
+&lt;h1 id="先備知識"&gt;先備知識&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;需知道如何在 &lt;a href="https://discord.com/developers/applications"&gt;Discord Developers Applications&lt;/a&gt; 裡創建機器人&lt;/li&gt;
+&lt;li&gt;需知道命令列的基本操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="環境建置"&gt;環境建置&lt;/h1&gt;
+&lt;p&gt;既然是py當然要安裝Python(目前已測試3.8~3.10可用)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.python.org"&gt;Python官網&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安裝 dcpi(以編寫此篇文時的版本為主)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pypi.org/project/discord-py-interactions/"&gt;dcpi Pypi&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ pip3 install discord-py-interactions&lt;span style="color:#ff79c6"&gt;==&lt;/span&gt;4.3.4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id="quick-start"&gt;Quick Start&lt;/h1&gt;
+&lt;p&gt;根據這份&lt;a href="https://interactionspy.readthedocs.io/en/latest/quickstart.html"&gt;API文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;先創建一個專門放Discord Bot的資料夾，然後在裡面新增一個檔案名為&lt;code&gt;bot.py&lt;/code&gt;，
+並在DC的開發應用頁面創建好機器人&lt;/p&gt;
+&lt;p&gt;然後複製以下code，將&lt;code&gt;your-bot-token&lt;/code&gt;換成機器人的token，注意不要將token公開給別人。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;5
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;6
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;7
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;8
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-py" data-lang="py"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 導入interactions套件，如果報錯的話檢查一下環境建置是否有問題&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; interactions
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 宣告bot這個變數為一個客戶端，記得將your-bot-token改成Discord bot的token&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 我們需要告訴Discord我們要監聽哪些事件，透過設定intents達成&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bot &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; interactions&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;Client(token&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;your-bot-token&amp;#34;&lt;/span&gt;,intents&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;interactions&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;flags&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;Intents&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;ALL)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 啟動機器人&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bot&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;start()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接著執行它&lt;/p&gt;</description></item><item><title>Farmbot歷程</title><link>https://ja-errorpro.codes/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/farmbot/</guid><description>&lt;p style="text-align:center"&gt;Farmbot&lt;/p&gt;
+&lt;p&gt;(本頁面在舊版網站發布，會有不少顯示問題)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://paper.dropbox.com/doc/FarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA"&gt;FBTUG共筆資料&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="什麼是farmbot"&gt;什麼是Farmbot?&lt;/h2&gt;
+&lt;p&gt;一個機器人開放式系統，可通過土地種植，澆水，土壤測試和除草為所有需要耕種小土地跟想種糧食的人提供幫助&lt;/p&gt;
+&lt;p&gt;使用Raspberry Pi(樹莓派)，Arduino以及其他優良組件&lt;/p&gt;
+&lt;h3 id="1碳足跡"&gt;1.碳足跡&lt;/h3&gt;
+&lt;h4 id="製造"&gt;製造&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前看重環保議題,Farmbot使用最普遍的材料:&lt;/p&gt;&lt;/blockquote&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;材料&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;th&gt;重量(kg)&lt;/th&gt;
+ &lt;th&gt;kg CO2/物料 kg&lt;/th&gt;
+ &lt;th&gt;CO2(kg)&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;鋁&lt;/td&gt;
+ &lt;td&gt;擠壓板&lt;/td&gt;
+ &lt;td&gt;9.5&lt;/td&gt;
+ &lt;td&gt;8.24&lt;/td&gt;
+ &lt;td&gt;78.3&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;不鏽鋼&lt;/td&gt;
+ &lt;td&gt;硬件，軸承，驅動軸，絲槓&lt;/td&gt;
+ &lt;td&gt;1.4&lt;/td&gt;
+ &lt;td&gt;6.15&lt;/td&gt;
+ &lt;td&gt;8.6&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;塑料&lt;/td&gt;
+ &lt;td&gt;拖鏈，3D列印&lt;a href="https://cad.onshape.com/documents/6626b842adca229e69544ad1/w/89ac2637f82d915f22c2bcd0/e/3a231755273e980d277c3a4c"&gt;[CAD]&lt;/a&gt;，輪子，電子設備，管材，電路板&lt;/td&gt;
+ &lt;td&gt;2.8&lt;/td&gt;
+ &lt;td&gt;2.53&lt;/td&gt;
+ &lt;td&gt;7.1&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;銅&lt;/td&gt;
+ &lt;td&gt;電，佈線，電動機繞組&lt;/td&gt;
+ &lt;td&gt;0.3&lt;/td&gt;
+ &lt;td&gt;2.60&lt;/td&gt;
+ &lt;td&gt;0.8&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;橡膠&lt;/td&gt;
+ &lt;td&gt;皮帶，電線，墊片&lt;/td&gt;
+ &lt;td&gt;0.2&lt;/td&gt;
+ &lt;td&gt;3.18&lt;/td&gt;
+ &lt;td&gt;0.6&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;合計&lt;/td&gt;
+ &lt;td&gt;95.4&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每生產Farmbot排放的理論量約 &lt;strong&gt;95.4 kg&lt;/strong&gt;，但實際上較接近 &lt;strong&gt;150 kg&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id="使用"&gt;使用&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;零件&lt;/th&gt;
+ &lt;th&gt;功率(W)&lt;/th&gt;
+ &lt;th&gt;佔空比(%)&lt;/th&gt;
+ &lt;th&gt;使用時間(h/d)&lt;/th&gt;
+ &lt;th&gt;kWh/day&lt;/th&gt;
+ &lt;th&gt;kWh/year&lt;/th&gt;
+ &lt;th&gt;kg CO2/day&lt;/th&gt;
+ &lt;th&gt;kg CO2/year&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;樹莓派2&lt;/td&gt;
+ &lt;td&gt;3.0&lt;/td&gt;
+ &lt;td&gt;100%&lt;/td&gt;
+ &lt;td&gt;24.00&lt;/td&gt;
+ &lt;td&gt;0.072&lt;/td&gt;
+ &lt;td&gt;26.3&lt;/td&gt;
+ &lt;td&gt;0.040&lt;/td&gt;
+ &lt;td&gt;14.56&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;樹莓派相機&lt;/td&gt;
+ &lt;td&gt;1.5&lt;/td&gt;
+ &lt;td&gt;100%&lt;/td&gt;
+ &lt;td&gt;24.00&lt;/td&gt;
+ &lt;td&gt;0.036&lt;/td&gt;
+ &lt;td&gt;13.1&lt;/td&gt;
+ &lt;td&gt;0.020&lt;/td&gt;
+ &lt;td&gt;7.28&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Arduino Mega 2560&lt;/td&gt;
+ &lt;td&gt;1.0&lt;/td&gt;
+ &lt;td&gt;100%&lt;/td&gt;
+ &lt;td&gt;24.00&lt;/td&gt;
+ &lt;td&gt;0.024&lt;/td&gt;
+ &lt;td&gt;8.8&lt;/td&gt;
+ &lt;td&gt;0.013&lt;/td&gt;
+ &lt;td&gt;4.85&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;NEMA 17步進馬達*3&lt;/td&gt;
+ &lt;td&gt;30.0&lt;/td&gt;
+ &lt;td&gt;5%&lt;/td&gt;
+ &lt;td&gt;1.20&lt;/td&gt;
+ &lt;td&gt;0.036&lt;/td&gt;
+ &lt;td&gt;13.1&lt;/td&gt;
+ &lt;td&gt;0.020&lt;/td&gt;
+ &lt;td&gt;7.28&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;12V工具&lt;/td&gt;
+ &lt;td&gt;132.0&lt;/td&gt;
+ &lt;td&gt;2%&lt;/td&gt;
+ &lt;td&gt;0.48&lt;/td&gt;
+ &lt;td&gt;0.063&lt;/td&gt;
+ &lt;td&gt;23.1&lt;/td&gt;
+ &lt;td&gt;0.035&lt;/td&gt;
+ &lt;td&gt;12.81&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;電磁閥&lt;/td&gt;
+ &lt;td&gt;30.0&lt;/td&gt;
+ &lt;td&gt;2%&lt;/td&gt;
+ &lt;td&gt;0.48&lt;/td&gt;
+ &lt;td&gt;0.014&lt;/td&gt;
+ &lt;td&gt;5.3&lt;/td&gt;
+ &lt;td&gt;0.008&lt;/td&gt;
+ &lt;td&gt;2.91&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;真空泵&lt;/td&gt;
+ &lt;td&gt;186.0&lt;/td&gt;
+ &lt;td&gt;0.5%&lt;/td&gt;
+ &lt;td&gt;0.012&lt;/td&gt;
+ &lt;td&gt;0.022&lt;/td&gt;
+ &lt;td&gt;8.1&lt;/td&gt;
+ &lt;td&gt;0.012&lt;/td&gt;
+ &lt;td&gt;4.51&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Web App服務器/用戶&lt;/td&gt;
+ &lt;td&gt;20.0&lt;/td&gt;
+ &lt;td&gt;1%&lt;/td&gt;
+ &lt;td&gt;0.24&lt;/td&gt;
+ &lt;td&gt;0.005&lt;/td&gt;
+ &lt;td&gt;1.8&lt;/td&gt;
+ &lt;td&gt;0.003&lt;/td&gt;
+ &lt;td&gt;0.97&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;設備(筆電)&lt;/td&gt;
+ &lt;td&gt;60.0&lt;/td&gt;
+ &lt;td&gt;1%&lt;/td&gt;
+ &lt;td&gt;0.24&lt;/td&gt;
+ &lt;td&gt;0.014&lt;/td&gt;
+ &lt;td&gt;5.3&lt;/td&gt;
+ &lt;td&gt;0.008&lt;/td&gt;
+ &lt;td&gt;2.91&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;合計&lt;/td&gt;
+ &lt;td&gt;0.287&lt;/td&gt;
+ &lt;td&gt;104.9&lt;/td&gt;
+ &lt;td&gt;0.159&lt;/td&gt;
+ &lt;td&gt;58.09&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*佔空比:組件使用時間的估計平均百分比&lt;/p&gt;</description></item></channel></rss>

@@ -1,64 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linear Algebra on ErrorPro</title><link>https://ja-errorpro.codes/tags/linear-algebra/</link><description>Recent content in Linear Algebra on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><atom:link href="https://ja-errorpro.codes/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml"/><item><title>線性代數筆記-消去法</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/</guid><description>&lt;p>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/index/">線性代數筆記-目錄&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-intro/">上一篇-線性方程系統簡介&lt;/a>&lt;/p>
-&lt;h1 id="高斯消去法gaussian-elimination">高斯消去法(Gaussian elimination)&lt;/h1>
-&lt;h2 id="梯形echelon-form">梯形(Echelon form)&lt;/h2>
-&lt;ul>
-&lt;li>如果有以下性質，稱為簡化列梯形(reduced row-echeleon form)：
-&lt;ul>
-&lt;li>若該列並非全為 $0$，則該列第一個非零元素為 $1$(leading 1)。&lt;/li>
-&lt;li>若該列全為 $0$，則必須被放在矩陣的最下方。&lt;/li>
-&lt;li>對於連續兩個非零列，較低列的 leading 1 必須在較高列的 leading 1 的右邊。&lt;/li>
-&lt;li>每一行除了 leading 1 之外，其餘元素皆為 $0$。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>如果只滿足前三項，稱為列梯形(row-echeleon form)。&lt;/li>
-&lt;li>簡化列梯形有列梯形的性質，但不一定相反。&lt;/li>
-&lt;/ul>
-&lt;p>以下為簡化列梯形的例子：&lt;/p>
-&lt;p>$ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} $
-$ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; a \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; b \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; c \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \end{bmatrix} $&lt;/p></description></item><item><title>線性代數筆記-目錄</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-index/</guid><description>&lt;ul>
-&lt;li>&lt;a href="https://ja-errorpro.codes/posts/1/linear-intro/">線性方程系統簡介&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/">消去法&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-matrix-operations/">矩陣與矩陣運算&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>線性代數筆記-矩陣與矩陣運算</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-matrix-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-matrix-operations/</guid><description>&lt;p>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/index/">線性代數筆記-目錄&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/">上一篇-消去法&lt;/a>&lt;/p>
-&lt;h1 id="矩陣與矩陣運算matrices-and-matrix-operations">矩陣與矩陣運算(Matrices and Matrix Operations)&lt;/h1>
-&lt;h2 id="定義與表示法">定義與表示法&lt;/h2>
-&lt;ul>
-&lt;li>矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。&lt;/li>
-&lt;li>一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n} \\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mn} \end{bmatrix}$。&lt;/li>
-&lt;li>也可寫成 $[a_{ij}]_{m \times n}$。&lt;/li>
-&lt;li>$a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。&lt;/li>
-&lt;/ul>
-&lt;h2 id="加減法">加減法&lt;/h2>
-&lt;ul>
-&lt;li>如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。&lt;/li>
-&lt;/ul>
-&lt;h2 id="乘法">乘法&lt;/h2>
-&lt;ul>
-&lt;li>如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。&lt;/li>
-&lt;li>如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。&lt;/li>
-&lt;li>換句話說，
-&lt;ul>
-&lt;li>$AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]，&lt;/li>
-&lt;li>$AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。&lt;/li>
-&lt;/ul>
-&lt;h2 id="線性系統的矩陣形式">線性系統的矩陣形式&lt;/h2>
-&lt;p>$$\begin{array}{} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\end{array}$$&lt;/p></description></item><item><title>線性代數筆記-線性方程系統簡介</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-intro/</guid><description>&lt;p>&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/index/">線性代數筆記-目錄&lt;/a>&lt;/p>
-&lt;p>注意：以下所有行(columns)、列(rows)的定義皆以台灣的表示法為主，即行為直向，列為橫向&lt;/p>
-&lt;h1 id="線性方程式">線性方程式&lt;/h1>
-&lt;h2 id="線性方程式-1">線性方程式&lt;/h2>
-&lt;p>在二維直角座標系中，一個直線方程式可表示為 $ax+by=c$ ($a$, $b$ 不全為 $0$)&lt;/p>
-&lt;p>而在三維直角座標系中，一個平面方程式可表示為 $ax+by+cz=d$ ($a$, $b$, $c$ 不全為 $0$)&lt;/p>
-&lt;p>所以我們可以將線性方程式一般化，為了表示 $n$ 維 ($n$ 個變數) 的線性方程式，&lt;/p>
-&lt;p>將 $n$ 個變數分別表示為 $x_1, x_2, \cdots, x_n$，並將 $n$ 個係數分別表示為 $a_1, a_2, \cdots, a_n$，&lt;/p>
-&lt;p>則 $n$ 維線性方程式可表示為 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)&lt;/p>
-&lt;p>或是 $ \sum^n_{i=1} a_i x_i = c$。&lt;/p>
-&lt;p>如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的&lt;strong>齊次線性方程式&lt;/strong>。&lt;/p>
-&lt;hr>
-&lt;h1 id="線性方程系統">線性方程系統&lt;/h1>
-&lt;h2 id="線性方程系統-1">線性方程系統&lt;/h2>
-&lt;p>有限個數的線性方程式集合，稱為線性方程系統(system of linear equations)或線性系統(linear system)。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linear Algebra on ErrorPro</title><link>https://ja-errorpro.codes/tags/linear-algebra/</link><description>Recent content in Linear Algebra on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><atom:link href="https://ja-errorpro.codes/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml"/><item><title>線性代數筆記-消去法</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/</guid><description>&lt;p&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/index/"&gt;線性代數筆記-目錄&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-intro/"&gt;上一篇-線性方程系統簡介&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="高斯消去法gaussian-elimination"&gt;高斯消去法(Gaussian elimination)&lt;/h1&gt;
+&lt;h2 id="梯形echelon-form"&gt;梯形(Echelon form)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果有以下性質，稱為簡化列梯形(reduced row-echeleon form)：
+&lt;ul&gt;
+&lt;li&gt;若該列並非全為 $0$，則該列第一個非零元素為 $1$(leading 1)。&lt;/li&gt;
+&lt;li&gt;若該列全為 $0$，則必須被放在矩陣的最下方。&lt;/li&gt;
+&lt;li&gt;對於連續兩個非零列，較低列的 leading 1 必須在較高列的 leading 1 的右邊。&lt;/li&gt;
+&lt;li&gt;每一行除了 leading 1 之外，其餘元素皆為 $0$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果只滿足前三項，稱為列梯形(row-echeleon form)。&lt;/li&gt;
+&lt;li&gt;簡化列梯形有列梯形的性質，但不一定相反。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下為簡化列梯形的例子：&lt;/p&gt;
+&lt;p&gt;$ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} $
+$ \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; a \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; b \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; c \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \end{bmatrix} $&lt;/p&gt;</description></item><item><title>線性代數筆記-目錄</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-index/</guid><description>&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/linear-intro/"&gt;線性方程系統簡介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/"&gt;消去法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-matrix-operations/"&gt;矩陣與矩陣運算&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>線性代數筆記-矩陣與矩陣運算</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-matrix-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-matrix-operations/</guid><description>&lt;p&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/index/"&gt;線性代數筆記-目錄&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/linear-elimination-methods/"&gt;上一篇-消去法&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="矩陣與矩陣運算matrices-and-matrix-operations"&gt;矩陣與矩陣運算(Matrices and Matrix Operations)&lt;/h1&gt;
+&lt;h2 id="定義與表示法"&gt;定義與表示法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。&lt;/li&gt;
+&lt;li&gt;一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n} \\ a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n} \\ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\ a_{m1} &amp;amp; a_{m2} &amp;amp; \cdots &amp;amp; a_{mn} \end{bmatrix}$。&lt;/li&gt;
+&lt;li&gt;也可寫成 $[a_{ij}]_{m \times n}$。&lt;/li&gt;
+&lt;li&gt;$a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="加減法"&gt;加減法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="乘法"&gt;乘法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。&lt;/li&gt;
+&lt;li&gt;如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。&lt;/li&gt;
+&lt;li&gt;換句話說，
+&lt;ul&gt;
+&lt;li&gt;$AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]，&lt;/li&gt;
+&lt;li&gt;$AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="線性系統的矩陣形式"&gt;線性系統的矩陣形式&lt;/h2&gt;
+&lt;p&gt;$$\begin{array}{} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m\end{array}$$&lt;/p&gt;</description></item><item><title>線性代數筆記-線性方程系統簡介</title><link>https://ja-errorpro.codes/posts/LinearAlgebra/linear-intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/LinearAlgebra/linear-intro/</guid><description>&lt;p&gt;&lt;a href="https://ja-errorpro.codes/posts/LinearAlgebra/index/"&gt;線性代數筆記-目錄&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意：以下所有行(columns)、列(rows)的定義皆以台灣的表示法為主，即行為直向，列為橫向&lt;/p&gt;
+&lt;h1 id="線性方程式"&gt;線性方程式&lt;/h1&gt;
+&lt;h2 id="線性方程式-1"&gt;線性方程式&lt;/h2&gt;
+&lt;p&gt;在二維直角座標系中，一個直線方程式可表示為 $ax+by=c$ ($a$, $b$ 不全為 $0$)&lt;/p&gt;
+&lt;p&gt;而在三維直角座標系中，一個平面方程式可表示為 $ax+by+cz=d$ ($a$, $b$, $c$ 不全為 $0$)&lt;/p&gt;
+&lt;p&gt;所以我們可以將線性方程式一般化，為了表示 $n$ 維 ($n$ 個變數) 的線性方程式，&lt;/p&gt;
+&lt;p&gt;將 $n$ 個變數分別表示為 $x_1, x_2, \cdots, x_n$，並將 $n$ 個係數分別表示為 $a_1, a_2, \cdots, a_n$，&lt;/p&gt;
+&lt;p&gt;則 $n$ 維線性方程式可表示為 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)&lt;/p&gt;
+&lt;p&gt;或是 $ \sum^n_{i=1} a_i x_i = c$。&lt;/p&gt;
+&lt;p&gt;如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的&lt;strong&gt;齊次線性方程式&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="線性方程系統"&gt;線性方程系統&lt;/h1&gt;
+&lt;h2 id="線性方程系統-1"&gt;線性方程系統&lt;/h2&gt;
+&lt;p&gt;有限個數的線性方程式集合，稱為線性方程系統(system of linear equations)或線性系統(linear system)。&lt;/p&gt;</description></item></channel></rss>

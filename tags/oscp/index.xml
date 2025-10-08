@@ -1,99 +1,99 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OSCP on ErrorPro</title><link>https://ja-errorpro.codes/tags/oscp/</link><description>Recent content in OSCP on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><atom:link href="https://ja-errorpro.codes/tags/oscp/index.xml" rel="self" type="application/rss+xml"/><item><title>OSCP 筆記-目錄</title><link>https://ja-errorpro.codes/posts/OSCP/oscp-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/OSCP/oscp-index/</guid><description>&lt;p>這裡的筆記算是 OSCP(PEN-200) 的 cheat sheet，主要是用來考試的參考&lt;/p>
-&lt;p>由於 Offsec 政策，這裡不會有任何課程內容，只有筆記跟一些技巧&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://ja-errorpro.codes/posts/OSCP/enumeration">OSCP 筆記-枚舉&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>OSCP筆記-枚舉</title><link>https://ja-errorpro.codes/posts/OSCP/enumeration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/OSCP/enumeration/</guid><description>&lt;h1 id="checklist">Checklist&lt;/h1>
-&lt;ul>
-&lt;li>檢查環境變數、history&lt;/li>
-&lt;li>檢查 hostname、OS 版本&lt;/li>
-&lt;/ul>
-&lt;h2 id="nmap">nmap&lt;/h2>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>sudo nmap -sCV -p- -Pn --min-rate &lt;span style="color:#bd93f9">10000&lt;/span> host -oN nmap.txt
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>使用 &lt;code>-sUV&lt;/code> 掃描 UDP 服務&lt;/li>
-&lt;/ul>
-&lt;h2 id="linux">Linux&lt;/h2>
-&lt;h3 id="full-tty">Full TTY&lt;/h3>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>python -c &lt;span style="color:#f1fa8c">&amp;#39;import pty; pty.spawn(&amp;#34;/bin/bash&amp;#34;)&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">export&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">TERM&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>xterm
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stty raw -echo; &lt;span style="color:#8be9fd;font-style:italic">fg&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="windows">Windows&lt;/h2>
-&lt;h3 id="確認是-powershell-還是-cmd">確認是 powershell 還是 cmd&lt;/h3>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">(&lt;/span>dir 2&amp;gt;&amp;amp;&lt;span style="color:#bd93f9">1&lt;/span> *&lt;span style="color:#f1fa8c">`&lt;/span>|&lt;span style="color:#8be9fd;font-style:italic">echo&lt;/span> CMD&lt;span style="color:#ff79c6">)&lt;/span>;&amp;amp;&amp;lt;&lt;span style="color:#6272a4"># rem #&amp;gt;echo PowerShell&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>WinPEAS&lt;/li>
-&lt;li>嘗試使用者名稱 &lt;code>lastname.firstname&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="web">Web&lt;/h2>
-&lt;ul>
-&lt;li>wappalyzer&lt;/li>
-&lt;li>使用 gobuster 或 feroxbuster 或 fuff 掃描目錄&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gobuster dir -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t &lt;span style="color:#bd93f9">10&lt;/span> -o gobuster.txt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>feroxbuster -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fuff -u http://host/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>根據不同軟體，掃描副檔名&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gobuster dir -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,asp,aspx,jsp,js -t &lt;span style="color:#bd93f9">10&lt;/span> -o gobuster-ext.txt
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>子域名掃描&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gobuster dns -d example.com -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -t &lt;span style="color:#bd93f9">10&lt;/span> -o subdomains.txt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fuff -u host -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H &lt;span style="color:#f1fa8c">&amp;#34;Host: FUZZ.example.com&amp;#34;&lt;/span> -t &lt;span style="color:#bd93f9">10&lt;/span> -o subdomains-fuff.txt &lt;span style="color:#6272a4"># -fc 403，忽略 403 狀態&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>注意登入表單&lt;/li>
-&lt;li>嘗試 &lt;code>.git&lt;/code>、&lt;code>.svn&lt;/code>、&lt;code>.hg&lt;/code>、&lt;code>.htaccess&lt;/code>、&lt;code>.env&lt;/code>、&lt;code>robots.txt&lt;/code> 等檔案&lt;/li>
-&lt;li>注意 LFI/RFI&lt;/li>
-&lt;/ul>
-&lt;h2 id="netexec">Netexec&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>user 跟 pass 可以帶 file list&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OSCP on ErrorPro</title><link>https://ja-errorpro.codes/tags/oscp/</link><description>Recent content in OSCP on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><atom:link href="https://ja-errorpro.codes/tags/oscp/index.xml" rel="self" type="application/rss+xml"/><item><title>OSCP 筆記-目錄</title><link>https://ja-errorpro.codes/posts/OSCP/oscp-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/OSCP/oscp-index/</guid><description>&lt;p&gt;這裡的筆記算是 OSCP(PEN-200) 的 cheat sheet，主要是用來考試的參考&lt;/p&gt;
+&lt;p&gt;由於 Offsec 政策，這裡不會有任何課程內容，只有筆記跟一些技巧&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/OSCP/enumeration"&gt;OSCP 筆記-枚舉&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>OSCP筆記-枚舉</title><link>https://ja-errorpro.codes/posts/OSCP/enumeration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/OSCP/enumeration/</guid><description>&lt;h1 id="checklist"&gt;Checklist&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;檢查環境變數、history&lt;/li&gt;
+&lt;li&gt;檢查 hostname、OS 版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="nmap"&gt;nmap&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo nmap -sCV -p- -Pn --min-rate &lt;span style="color:#bd93f9"&gt;10000&lt;/span&gt; host -oN nmap.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;-sUV&lt;/code&gt; 掃描 UDP 服務&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="linux"&gt;Linux&lt;/h2&gt;
+&lt;h3 id="full-tty"&gt;Full TTY&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;python -c &lt;span style="color:#f1fa8c"&gt;&amp;#39;import pty; pty.spawn(&amp;#34;/bin/bash&amp;#34;)&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;export&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;TERM&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;xterm
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;stty raw -echo; &lt;span style="color:#8be9fd;font-style:italic"&gt;fg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="windows"&gt;Windows&lt;/h2&gt;
+&lt;h3 id="確認是-powershell-還是-cmd"&gt;確認是 powershell 還是 cmd&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;dir 2&amp;gt;&amp;amp;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt; *&lt;span style="color:#f1fa8c"&gt;`&lt;/span&gt;|&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; CMD&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;;&amp;amp;&amp;lt;&lt;span style="color:#6272a4"&gt;# rem #&amp;gt;echo PowerShell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;WinPEAS&lt;/li&gt;
+&lt;li&gt;嘗試使用者名稱 &lt;code&gt;lastname.firstname&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="web"&gt;Web&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;wappalyzer&lt;/li&gt;
+&lt;li&gt;使用 gobuster 或 feroxbuster 或 fuff 掃描目錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gobuster dir -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t &lt;span style="color:#bd93f9"&gt;10&lt;/span&gt; -o gobuster.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;feroxbuster -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fuff -u http://host/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;根據不同軟體，掃描副檔名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gobuster dir -u http://host -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,asp,aspx,jsp,js -t &lt;span style="color:#bd93f9"&gt;10&lt;/span&gt; -o gobuster-ext.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;子域名掃描&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;gobuster dns -d example.com -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -t &lt;span style="color:#bd93f9"&gt;10&lt;/span&gt; -o subdomains.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fuff -u host -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H &lt;span style="color:#f1fa8c"&gt;&amp;#34;Host: FUZZ.example.com&amp;#34;&lt;/span&gt; -t &lt;span style="color:#bd93f9"&gt;10&lt;/span&gt; -o subdomains-fuff.txt &lt;span style="color:#6272a4"&gt;# -fc 403，忽略 403 狀態&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;注意登入表單&lt;/li&gt;
+&lt;li&gt;嘗試 &lt;code&gt;.git&lt;/code&gt;、&lt;code&gt;.svn&lt;/code&gt;、&lt;code&gt;.hg&lt;/code&gt;、&lt;code&gt;.htaccess&lt;/code&gt;、&lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;robots.txt&lt;/code&gt; 等檔案&lt;/li&gt;
+&lt;li&gt;注意 LFI/RFI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="netexec"&gt;Netexec&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;user 跟 pass 可以帶 file list&lt;/p&gt;</description></item></channel></rss>
