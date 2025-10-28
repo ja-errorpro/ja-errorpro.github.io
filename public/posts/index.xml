@@ -6,8 +6,22 @@
     <description>Recent content in Posts on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>115 陽明交大資工所丙戊組推甄心得</title>
+      <link>http://localhost:1313/posts/2025/nycu_applicate/</link>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/nycu_applicate/</guid>
+      <description>&lt;h2 id=&#34;初審&#34;&gt;初審&lt;/h2&gt;&#xA;&lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;&#xA;&lt;p&gt;在校成績：27%&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPA 3.7/4&lt;/li&gt;&#xA;&lt;li&gt;計概：95&lt;/li&gt;&#xA;&lt;li&gt;資結：97&lt;/li&gt;&#xA;&lt;li&gt;離散數學：96&lt;/li&gt;&#xA;&lt;li&gt;程式語言：100&lt;/li&gt;&#xA;&lt;li&gt;計算機網路：75&lt;/li&gt;&#xA;&lt;li&gt;作業系統：64&lt;/li&gt;&#xA;&lt;li&gt;演算法：87&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;我們學校有「資料結構與演算法」和「演算法分析」兩門課，我填比較高的&lt;/p&gt;&#xA;&lt;h2 id=&#34;特殊經歷&#34;&gt;特殊經歷&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;專題：信用卡中間人攻擊與檢測&lt;/li&gt;&#xA;&lt;li&gt;AIS3：Linux Kernel 漏洞復現(無最佳專題)&lt;/li&gt;&#xA;&lt;li&gt;校務系統開發&lt;/li&gt;&#xA;&lt;li&gt;金盾獎決賽&lt;/li&gt;&#xA;&lt;li&gt;HITCON CyberRange rk.7&lt;/li&gt;&#xA;&lt;li&gt;Google 聯合黑客松全國第一名&lt;/li&gt;&#xA;&lt;li&gt;一堆在外面接的 App 專案&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;複試&#34;&gt;複試&lt;/h2&gt;&#xA;&lt;p&gt;上了丙組跟戊組，複試是一整天，早上性向測驗，下午面試。性向測驗不算分，但面試會根據寫的答案跟備審資料問問題。&lt;/p&gt;&#xA;&lt;h3 id=&#34;性向測驗&#34;&gt;性向測驗&lt;/h3&gt;&#xA;&lt;p&gt;丙組：很多跟考古題一樣，可以看其他人網站文章都有，但也有多幾題不一樣的&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Buffer Overflow 是什麼&lt;/li&gt;&#xA;&lt;li&gt;Ip Spoofing 是什麼，Android 可以做 IP Spoofing 嗎&lt;/li&gt;&#xA;&lt;li&gt;怎麼 Debug kernel driver，如果不重新編譯要怎麼輸入不同參數&lt;/li&gt;&#xA;&lt;li&gt;買了商用的 WiFi 基地台如果要用 C 語言加功能可以怎麼做&lt;/li&gt;&#xA;&lt;li&gt;TCP SYN 沒收到，要怎麼判斷機器是關機還是沒開 Port&lt;/li&gt;&#xA;&lt;li&gt;設計一個 DevSecOps 的策略，要達成的目標(例如：CIA)&lt;/li&gt;&#xA;&lt;li&gt;設計一個 AI Agent 評分備審資料&lt;/li&gt;&#xA;&lt;li&gt;設計一個產品分類與庫存管理系統&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VMWare 開啟內嵌虛擬化的一些坑</title>
+      <link>http://localhost:1313/posts/2025/vmware_intel_virtualized/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/vmware_intel_virtualized/</guid>
+      <description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;&#xA;&lt;p&gt;這個狀況是在 BIOS 已經確認開啟 Intel VT-x 的情況下，Windows 已經關閉 Hyper-V 與 hypervisor 的情況下發生的。&lt;/p&gt;&#xA;&lt;p&gt;後來發現，除了 Hyper-V 之外，還需要將 Virtual Machine Platform 這個 Windows 功能關閉，然後為了徹底關閉 Hyper-V，還需要在命令提示字元下執行以下指令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bcdedit /set hypervisorlaunchtype off&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dism /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;關鍵是 Virtual Machine Platform 這個功能，關閉之後 VMWare 才能順利啟動並使用內嵌虛擬化功能。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HITCON 2025 BadUSB Easy&#43;Medium WriteUp</title>
       <link>http://localhost:1313/posts/2025/hitcon_2025/</link>
@@ -352,13 +366,6 @@
       <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;for-python遊戲設計&#34;&gt;FOR Python遊戲設計&lt;/h1&gt;&#xA;&lt;p&gt;檔案庫: &lt;a href=&#34;https://drive.google.com/drive/folders/1MlQkB7COIBu_EZDFaYExBuVVb_FxZpiW?usp=sharing&#34;&gt;Here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Python程式列表(全自寫):  &lt;a href=&#34;./pythonprograms/list&#34;&gt;LIST&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cocos2d: &lt;a href=&#34;https://docs.cocos.com/creator/2.3/manual/zh/getting-started/cocos2d-x-guide.html&#34;&gt;Docs&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;第一堂-ide-pycharm-ce-module-cocos2d&#34;&gt;第一堂: IDE: pycharm CE, Module: cocos2d&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://training.pada-x.com/python-start.htm&#34;&gt;彭彭-Python程式設計入門&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hackmd.io/@jease0502/colab_simple?print-pdf#/&#34;&gt;Colab&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jckantor.github.io/CBE30338/&#34;&gt;CBE30338&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;記得寫程式可放個&lt;a href=&#34;https://drive.google.com/file/d/10Tuhcgdapt0QKy1v6roHRPEwtA0MZVIs/view?usp=sharing&#34;&gt;小抄&lt;/a&gt;在旁邊&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;有問題&lt;a href=&#34;https://google.com&#34;&gt;請點這個&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;作業: 遊玩&lt;a href=&#34;https://codecombat.com/&#34;&gt;CodeCombat&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;第二堂&#34;&gt;第二堂&lt;/h2&gt;&#xA;&lt;p&gt;安裝Pycharm : &lt;a href=&#34;https://www.jetbrains.com/pycharm/&#34;&gt;Pycharm&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code&gt;$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>http://localhost:1313/posts/1/nycu_applicate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/1/nycu_applicate/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>【計算機網路】CH1 作業</title>
       <link>http://localhost:1313/posts/ComputerNetworking/Ch1_Homework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -504,13 +511,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/OSCP/enumeration/</guid>
       <description>&lt;h1 id=&#34;checklist&#34;&gt;Checklist&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;檢查環境變數、history&lt;/li&gt;&#xA;&lt;li&gt;檢查 hostname、OS 版本&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nmap&#34;&gt;nmap&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmap -sCV -p- -Pn --min-rate &lt;span style=&#34;color:#bd93f9&#34;&gt;10000&lt;/span&gt; host -oN nmap.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;使用 &lt;code&gt;-sUV&lt;/code&gt; 掃描 UDP 服務&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;&#xA;&lt;h3 id=&#34;full-tty&#34;&gt;Full TTY&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
-    </item>
-    <item>
-      <title>VMWare 開啟內嵌虛擬化的一些坑</title>
-      <link>http://localhost:1313/posts/1/vmware_intel_virtualized/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/1/vmware_intel_virtualized/</guid>
-      <description></description>
     </item>
     <item>
       <title>算法筆記-DP-LIS</title>

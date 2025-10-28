@@ -6,8 +6,15 @@
     <description>Recent content in Linux on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Oct 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VMWare 開啟內嵌虛擬化的一些坑</title>
+      <link>http://localhost:1313/posts/2025/vmware_intel_virtualized/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/vmware_intel_virtualized/</guid>
+      <description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;&#xA;&lt;p&gt;這個狀況是在 BIOS 已經確認開啟 Intel VT-x 的情況下，Windows 已經關閉 Hyper-V 與 hypervisor 的情況下發生的。&lt;/p&gt;&#xA;&lt;p&gt;後來發現，除了 Hyper-V 之外，還需要將 Virtual Machine Platform 這個 Windows 功能關閉，然後為了徹底關閉 Hyper-V，還需要在命令提示字元下執行以下指令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bcdedit /set hypervisorlaunchtype off&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dism /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;關鍵是 Virtual Machine Platform 這個功能，關閉之後 VMWare 才能順利啟動並使用內嵌虛擬化功能。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Vim 極簡教學</title>
       <link>http://localhost:1313/posts/2022/vim_simple_tutorial/</link>

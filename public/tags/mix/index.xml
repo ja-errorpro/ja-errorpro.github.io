@@ -6,8 +6,15 @@
     <description>Recent content in Mix on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/mix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>115 陽明交大資工所丙戊組推甄心得</title>
+      <link>http://localhost:1313/posts/2025/nycu_applicate/</link>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/nycu_applicate/</guid>
+      <description>&lt;h2 id=&#34;初審&#34;&gt;初審&lt;/h2&gt;&#xA;&lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;&#xA;&lt;p&gt;在校成績：27%&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPA 3.7/4&lt;/li&gt;&#xA;&lt;li&gt;計概：95&lt;/li&gt;&#xA;&lt;li&gt;資結：97&lt;/li&gt;&#xA;&lt;li&gt;離散數學：96&lt;/li&gt;&#xA;&lt;li&gt;程式語言：100&lt;/li&gt;&#xA;&lt;li&gt;計算機網路：75&lt;/li&gt;&#xA;&lt;li&gt;作業系統：64&lt;/li&gt;&#xA;&lt;li&gt;演算法：87&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;我們學校有「資料結構與演算法」和「演算法分析」兩門課，我填比較高的&lt;/p&gt;&#xA;&lt;h2 id=&#34;特殊經歷&#34;&gt;特殊經歷&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;專題：信用卡中間人攻擊與檢測&lt;/li&gt;&#xA;&lt;li&gt;AIS3：Linux Kernel 漏洞復現(無最佳專題)&lt;/li&gt;&#xA;&lt;li&gt;校務系統開發&lt;/li&gt;&#xA;&lt;li&gt;金盾獎決賽&lt;/li&gt;&#xA;&lt;li&gt;HITCON CyberRange rk.7&lt;/li&gt;&#xA;&lt;li&gt;Google 聯合黑客松全國第一名&lt;/li&gt;&#xA;&lt;li&gt;一堆在外面接的 App 專案&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;複試&#34;&gt;複試&lt;/h2&gt;&#xA;&lt;p&gt;上了丙組跟戊組，複試是一整天，早上性向測驗，下午面試。性向測驗不算分，但面試會根據寫的答案跟備審資料問問題。&lt;/p&gt;&#xA;&lt;h3 id=&#34;性向測驗&#34;&gt;性向測驗&lt;/h3&gt;&#xA;&lt;p&gt;丙組：很多跟考古題一樣，可以看其他人網站文章都有，但也有多幾題不一樣的&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Buffer Overflow 是什麼&lt;/li&gt;&#xA;&lt;li&gt;Ip Spoofing 是什麼，Android 可以做 IP Spoofing 嗎&lt;/li&gt;&#xA;&lt;li&gt;怎麼 Debug kernel driver，如果不重新編譯要怎麼輸入不同參數&lt;/li&gt;&#xA;&lt;li&gt;買了商用的 WiFi 基地台如果要用 C 語言加功能可以怎麼做&lt;/li&gt;&#xA;&lt;li&gt;TCP SYN 沒收到，要怎麼判斷機器是關機還是沒開 Port&lt;/li&gt;&#xA;&lt;li&gt;設計一個 DevSecOps 的策略，要達成的目標(例如：CIA)&lt;/li&gt;&#xA;&lt;li&gt;設計一個 AI Agent 評分備審資料&lt;/li&gt;&#xA;&lt;li&gt;設計一個產品分類與庫存管理系統&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>都 5202 年了，你還在用 pip 嗎？快來試試 uv！</title>
       <link>http://localhost:1313/posts/2025/uv/</link>
