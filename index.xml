@@ -1,4 +1,127 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon_2025/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon_2025/</guid><description>&lt;h1 id="前言"&gt;前言&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>陽明交大資工所丙戊組推甄心得</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;
+&lt;p&gt;在校成績：27%&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GPA 3.7/4&lt;/li&gt;
+&lt;li&gt;計概：95&lt;/li&gt;
+&lt;li&gt;資結：97&lt;/li&gt;
+&lt;li&gt;離散數學：96&lt;/li&gt;
+&lt;li&gt;程式語言：100&lt;/li&gt;
+&lt;li&gt;計算機網路：75&lt;/li&gt;
+&lt;li&gt;作業系統：64&lt;/li&gt;
+&lt;li&gt;演算法：87&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我們學校有「資料結構與演算法」和「演算法分析」兩門課，我填比較高的&lt;/p&gt;
+&lt;h2 id="特殊經歷"&gt;特殊經歷&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;專題：信用卡中間人攻擊與檢測&lt;/li&gt;
+&lt;li&gt;AIS3：Linux Kernel 漏洞復現(無最佳專題)&lt;/li&gt;
+&lt;li&gt;校務系統開發&lt;/li&gt;
+&lt;li&gt;金盾獎決賽&lt;/li&gt;
+&lt;li&gt;HITCON CyberRange rk.7&lt;/li&gt;
+&lt;li&gt;Google 聯合黑客松全國第一名&lt;/li&gt;
+&lt;li&gt;一堆在外面接的 App 專案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="複試"&gt;複試&lt;/h2&gt;
+&lt;p&gt;上了丙組跟戊組，複試是一整天，早上性向測驗，下午面試。性向測驗不算分，但面試會根據寫的答案跟備審資料問問題。&lt;/p&gt;
+&lt;h3 id="性向測驗"&gt;性向測驗&lt;/h3&gt;
+&lt;p&gt;丙組：很多跟考古題一樣，可以看其他人網站文章都有，但也有多幾題不一樣的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Buffer Overflow 是什麼&lt;/li&gt;
+&lt;li&gt;Ip Spoofing 是什麼，Android 可以做 IP Spoofing 嗎&lt;/li&gt;
+&lt;li&gt;怎麼 Debug kernel driver，如果不重新編譯要怎麼輸入不同參數&lt;/li&gt;
+&lt;li&gt;買了商用的 WiFi 基地台如果要用 C 語言加功能可以怎麼做&lt;/li&gt;
+&lt;li&gt;TCP SYN 沒收到，要怎麼判斷機器是關機還是沒開 Port&lt;/li&gt;
+&lt;li&gt;設計一個 DevSecOps 的策略，要達成的目標(例如：CIA)&lt;/li&gt;
+&lt;li&gt;設計一個 AI Agent 評分備審資料&lt;/li&gt;
+&lt;li&gt;設計一個產品分類與庫存管理系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;
+&lt;p&gt;戊組：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未經同意把師生肖像放在校務網頁會違反什麼法
+&lt;ul&gt;
+&lt;li&gt;a.個人資料保護法&lt;/li&gt;
+&lt;li&gt;b. 著作權法&lt;/li&gt;
+&lt;li&gt;c. 廣播電視法&lt;/li&gt;
+&lt;li&gt;d. 不違法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;未經同意把師生拍的校園風景照放校務網頁會違反什麼法
+&lt;ul&gt;
+&lt;li&gt;a.個人資料保護法&lt;/li&gt;
+&lt;li&gt;b. 著作權法&lt;/li&gt;
+&lt;li&gt;c. 廣播電視法&lt;/li&gt;
+&lt;li&gt;d. 不違法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;哪個行為違反資通安全管理法
+&lt;ul&gt;
+&lt;li&gt;a. (忘了)&lt;/li&gt;
+&lt;li&gt;b. 不做定期弱點掃描&lt;/li&gt;
+&lt;li&gt;c. 批評政府&lt;/li&gt;
+&lt;li&gt;d. 以上皆是&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;哪個行為不能加強資訊安全
+&lt;ul&gt;
+&lt;li&gt;a. (忘了)&lt;/li&gt;
+&lt;li&gt;b. 更換 UI&lt;/li&gt;
+&lt;li&gt;c. 使用 SSL&lt;/li&gt;
+&lt;li&gt;d. 以上皆是&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;哪個排序平均複雜度最快
+&lt;ul&gt;
+&lt;li&gt;a. Bubble Sort&lt;/li&gt;
+&lt;li&gt;b. Insertion Sort&lt;/li&gt;
+&lt;li&gt;c. Merge Sort&lt;/li&gt;
+&lt;li&gt;d. Selection Sort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;哪個資料結構是 FIFO
+&lt;ul&gt;
+&lt;li&gt;a. Queue&lt;/li&gt;
+&lt;li&gt;b. Graph&lt;/li&gt;
+&lt;li&gt;c. Tree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;什麼是 LDAP? OpenLDAP 資料同步記憶體耗盡怎麼辦&lt;/li&gt;
+&lt;li&gt;PHP 的系統更新要注意什麼&lt;/li&gt;
+&lt;li&gt;系統用單一帳號，LDAP 驗證，每個系統都一個登入介面，有什麼安全問題？如果要加多因素驗證可以嗎，怎麼做&lt;/li&gt;
+&lt;li&gt;怎麼分散大流量的網頁，Queues Message Broker
+&lt;ul&gt;
+&lt;li&gt;你之前的專案有處理過大流量嗎，你怎麼做壓力測試跟效能測試&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="面試"&gt;面試&lt;/h3&gt;
+&lt;p&gt;丙組：總共八分鐘，三位教授&lt;/p&gt;</description></item><item><title>VMWare 開啟內嵌虛擬化的一些坑</title><link>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</link><pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</guid><description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;
+&lt;p&gt;這個狀況是在 BIOS 已經確認開啟 Intel VT-x 的情況下，Windows 已經關閉 Hyper-V 與 hypervisor 的情況下發生的。&lt;/p&gt;
+&lt;p&gt;後來發現，除了 Hyper-V 之外，還需要將 Virtual Machine Platform 這個 Windows 功能關閉，然後為了徹底關閉 Hyper-V，還需要在命令提示字元下執行以下指令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bcdedit /set hypervisorlaunchtype off
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dism /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-All
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;關鍵是 Virtual Machine Platform 這個功能，關閉之後 VMWare 才能順利啟動並使用內嵌虛擬化功能。&lt;/p&gt;
+&lt;p&gt;重新開機後，會發現 WSL 跟 Docker Desktop 全部無法使用，如果要恢復的話，就把 Virtual Machine Platform、Hyper-V、Hypervisor 都打開，並執行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bcdedit /set hypervisorlaunchtype auto
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-All
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;與&lt;/p&gt;</description></item><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon_2025/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon_2025/</guid><description>&lt;h1 id="前言"&gt;前言&lt;/h1&gt;
 &lt;p&gt;2024 年跟 25 年的 HITCON Badge 比起以往非常特別，是用 PCB 做的，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。&lt;/p&gt;
 &lt;p&gt;去年 BadUSB 我沒有參加到，所以今年有做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。&lt;/p&gt;
 &lt;h1 id="badusb"&gt;BadUSB&lt;/h1&gt;
@@ -201,7 +324,8 @@
 &lt;/div&gt;</description></item><item><title>PL OurScheme Interpreter 專案三函數儲存可能思路</title><link>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</link><pubDate>Thu, 15 May 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</guid><description>&lt;h3 id="點我參考程式碼將於專案截止日後轉為公開-repo"&gt;&lt;a href="https://github.com/ja-errorpro/CYCS_OurScheme_Interpreter"&gt;點我參考程式碼(將於專案截止日後轉為公開 repo)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;這邊統一一下對於 parameter 和 argument 的用詞定義：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Parameter: 定義函數時的參數變數&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Parameter: 定義函數時的參數變數&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
@@ -215,7 +339,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Argument: 呼叫函數時傳入的參數值&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Argument: 呼叫函數時傳入的參數值&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
@@ -4016,7 +4141,8 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;h3 id="1碳足跡"&gt;1.碳足跡&lt;/h3&gt;
 &lt;h4 id="製造"&gt;製造&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;目前看重環保議題,Farmbot使用最普遍的材料:&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;目前看重環保議題,Farmbot使用最普遍的材料:&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -4073,10 +4199,12 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;每生產Farmbot排放的理論量約 &lt;strong&gt;95.4 kg&lt;/strong&gt;，但實際上較接近 &lt;strong&gt;150 kg&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;每生產Farmbot排放的理論量約 &lt;strong&gt;95.4 kg&lt;/strong&gt;，但實際上較接近 &lt;strong&gt;150 kg&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id="使用"&gt;使用&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;在使用Farmbot時，最明顯的CO2排放源應為用電量，在此使用美國平均每千瓦時所排放的二氧化碳量 (0.554kg/kWh)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -4211,9 +4339,11 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;h2 id="第二堂"&gt;第二堂&lt;/h2&gt;
 &lt;p&gt;安裝Pycharm : &lt;a href="https://www.jetbrains.com/pycharm/"&gt;Pycharm&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code&gt;$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code&gt;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code&gt;$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;安裝方式: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_install.html"&gt;Here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;設定: &lt;a href="https://pygame.hackersir.org/Lessons/01/PyCharm_config.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;安裝Cocos2d: Files&amp;gt;Setting&amp;gt;Project: Inter..&amp;gt;(+)&amp;gt;搜尋cocos2d&amp;gt;安裝&lt;/p&gt;
@@ -4223,7 +4353,8 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;命令模式&lt;/strong&gt;: 為預設模式,在任何模式中按下Esc即可到此模式,可按下某些鍵來切換模式&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;插入模式&lt;/strong&gt;: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;底線命令模式&lt;/strong&gt;: 切換方式:按下:,可輸入指令操作內容,&lt;/p&gt;
-&lt;p&gt;離開: :q&lt;/p&gt;</description></item><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p&gt;Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p&gt;
+&lt;p&gt;離開: :q&lt;/p&gt;
+&lt;p&gt;強制離開: :q!&lt;/p&gt;</description></item><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p&gt;Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p&gt;
 &lt;h1 id="此頁面中答案不保證為正確答案僅供參考"&gt;此頁面中答案不保證為正確答案，僅供參考。&lt;/h1&gt;
 &lt;h1 id="ch1-作業"&gt;CH1 作業&lt;/h1&gt;
 &lt;h2 id="review"&gt;Review&lt;/h2&gt;
