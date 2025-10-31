@@ -18,9 +18,9 @@
 &lt;li&gt;普通會員沒有折扣&lt;/li&gt;
 &lt;li&gt;黃金會員有 95 折&lt;/li&gt;
 &lt;li&gt;鑽石會員有 9 折&lt;/li&gt;
-&lt;li&gt;折扣僅適用於商品總價，不包含運費
-描述你會怎麼測試，什麼是白箱測試、黑箱測試，各別設計兩個測試案例，並說明為什麼。
-如果你推上去後發現一堆沒找到的 bug，怎麼修效率最高？&lt;/li&gt;
+&lt;li&gt;折扣僅適用於商品總價，不包含運費&lt;/li&gt;
+&lt;li&gt;描述你會怎麼測試，什麼是白箱測試、黑箱測試，各別設計兩個測試案例，並說明為什麼。&lt;/li&gt;
+&lt;li&gt;如果你推上去後發現一堆沒找到的 bug，怎麼修效率最高？&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start="3"&gt;
 &lt;li&gt;新人工程師寫了 try catch，資深工程師說脫褲子放屁，分析他們的觀點跟盲點。&lt;/li&gt;
@@ -49,7 +49,7 @@
 &lt;li&gt;二分搜尋，lower bound&lt;/li&gt;
 &lt;li&gt;無限背包問題，但有最大重量與最大體積限制&lt;/li&gt;
 &lt;li&gt;Magic 153，輸入一個正整數 n，將 n 的每個位數立方和相加，重複此過程，判斷最後是否會回到 153。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄心得</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;/ol&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
 &lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;
 &lt;p&gt;中原資工，在校成績：27%&lt;/p&gt;
 &lt;ul&gt;
