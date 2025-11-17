@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>https://ja-errorpro.codes/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>115 國立臺灣科技大學資訊工程所乙組推甄</title><link>https://ja-errorpro.codes/posts/2025/ntust_applicate/</link><pubDate>Sat, 08 Nov 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/ntust_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
-&lt;p&gt;參見上一篇的交大推甄。交的東西都差不多，只差在不用準備分工表之類的。&lt;/p&gt;
+&lt;p&gt;參見上一篇的&lt;a href="./nycu_applicate.md"&gt;交大推甄&lt;/a&gt;。交的東西都差不多，只差在不用準備分工表之類的。&lt;/p&gt;
 &lt;h2 id="面試"&gt;面試&lt;/h2&gt;
 &lt;p&gt;分兩關，&lt;/p&gt;
 &lt;h3 id="第一關"&gt;第一關&lt;/h3&gt;
@@ -18,7 +18,7 @@
 &lt;p&gt;我原本以為會跟網路上其他人一樣被問很多 DS、OS、線代的題目，結果問的幾乎是備審的東西，算是蠻輕鬆的面試經驗。&lt;/p&gt;
 &lt;p&gt;而且由於前一天被交大放榜影響，我的心情很放鬆，衣服還穿金盾獎 T，應該是全場穿得最隨便的。&lt;/p&gt;
 &lt;p&gt;總之，體驗比交大的面試還好很多。&lt;/p&gt;</description></item><item><title>115 中央大學資工所軟體工程組推甄</title><link>https://ja-errorpro.codes/posts/2025/ncu_applicate/</link><pubDate>Fri, 31 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/ncu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
-&lt;p&gt;參見上一篇的交大推甄。交的東西都差不多，只差在不用準備分工表之類的。&lt;/p&gt;
+&lt;p&gt;參見上一篇的&lt;a href="./nycu_applicate.md"&gt;交大推甄&lt;/a&gt;。交的東西都差不多，只差在不用準備分工表之類的。&lt;/p&gt;
 &lt;h2 id="筆試"&gt;筆試&lt;/h2&gt;
 &lt;p&gt;全手寫，三小時&lt;/p&gt;
 &lt;h3 id="觀念題"&gt;觀念題&lt;/h3&gt;
@@ -92,8 +92,12 @@
 &lt;li&gt;Google 聯合黑客松全國第一名&lt;/li&gt;
 &lt;li&gt;一堆在外面接的 App 專案&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id="簡歷"&gt;簡歷&lt;/h3&gt;
+&lt;p&gt;用 pandoc 把一堆專案經歷寫在一起，模板用最經典的 Eisvogel，&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://short.ja-errorpro.codes/r1SEYy87Kx"&gt;簡歷、專題、Source Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果連結不見的話再聯絡我。&lt;/p&gt;
 &lt;h2 id="複試"&gt;複試&lt;/h2&gt;
-&lt;p&gt;上了丙組跟戊組，複試是一整天，早上性向測驗，下午面試。性向測驗不算分，但面試會根據寫的答案跟備審資料問問題。&lt;/p&gt;
+&lt;p&gt;上了丙組跟戊組，複試是一整天，早上性向測驗，下午面試。(據說)性向測驗不算分，但面試會根據寫的答案跟備審資料問問題。&lt;/p&gt;
 &lt;h3 id="性向測驗"&gt;性向測驗&lt;/h3&gt;
 &lt;p&gt;丙組：很多跟考古題一樣，可以看其他人網站文章都有，但也有多幾題不一樣的&lt;/p&gt;
 &lt;ul&gt;
@@ -106,67 +110,7 @@
 &lt;li&gt;設計一個 AI Agent 評分備審資料&lt;/li&gt;
 &lt;li&gt;設計一個產品分類與庫存管理系統&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;
-&lt;p&gt;戊組：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;未經同意把師生肖像放在校務網頁會違反什麼法
-&lt;ul&gt;
-&lt;li&gt;a.個人資料保護法&lt;/li&gt;
-&lt;li&gt;b. 著作權法&lt;/li&gt;
-&lt;li&gt;c. 廣播電視法&lt;/li&gt;
-&lt;li&gt;d. 不違法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;未經同意把師生拍的校園風景照放校務網頁會違反什麼法
-&lt;ul&gt;
-&lt;li&gt;a.個人資料保護法&lt;/li&gt;
-&lt;li&gt;b. 著作權法&lt;/li&gt;
-&lt;li&gt;c. 廣播電視法&lt;/li&gt;
-&lt;li&gt;d. 不違法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;哪個行為違反資通安全管理法
-&lt;ul&gt;
-&lt;li&gt;a. (忘了)&lt;/li&gt;
-&lt;li&gt;b. 不做定期弱點掃描&lt;/li&gt;
-&lt;li&gt;c. 批評政府&lt;/li&gt;
-&lt;li&gt;d. 以上皆是&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;哪個行為不能加強資訊安全
-&lt;ul&gt;
-&lt;li&gt;a. (忘了)&lt;/li&gt;
-&lt;li&gt;b. 更換 UI&lt;/li&gt;
-&lt;li&gt;c. 使用 SSL&lt;/li&gt;
-&lt;li&gt;d. 以上皆是&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;哪個排序平均複雜度最快
-&lt;ul&gt;
-&lt;li&gt;a. Bubble Sort&lt;/li&gt;
-&lt;li&gt;b. Insertion Sort&lt;/li&gt;
-&lt;li&gt;c. Merge Sort&lt;/li&gt;
-&lt;li&gt;d. Selection Sort&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;哪個資料結構是 FIFO
-&lt;ul&gt;
-&lt;li&gt;a. Queue&lt;/li&gt;
-&lt;li&gt;b. Graph&lt;/li&gt;
-&lt;li&gt;c. Tree&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;什麼是 LDAP? OpenLDAP 資料同步記憶體耗盡怎麼辦&lt;/li&gt;
-&lt;li&gt;PHP 的系統更新要注意什麼&lt;/li&gt;
-&lt;li&gt;系統用單一帳號，LDAP 驗證，每個系統都一個登入介面，有什麼安全問題？如果要加多因素驗證可以嗎，怎麼做&lt;/li&gt;
-&lt;li&gt;怎麼分散大流量的網頁，Queues Message Broker
-&lt;ul&gt;
-&lt;li&gt;你之前的專案有處理過大流量嗎，你怎麼做壓力測試跟效能測試&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="面試"&gt;面試&lt;/h3&gt;
-&lt;p&gt;丙組：總共八分鐘，三位教授&lt;/p&gt;</description></item><item><title>VMWare 開啟內嵌虛擬化的一些坑</title><link>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</link><pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</guid><description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;
+&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;</description></item><item><title>VMWare 開啟內嵌虛擬化的一些坑</title><link>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</link><pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</guid><description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;
 &lt;p&gt;這個狀況是在 BIOS 已經確認開啟 Intel VT-x 的情況下，Windows 已經關閉 Hyper-V 與 hypervisor 的情況下發生的。&lt;/p&gt;
 &lt;p&gt;後來發現，除了 Hyper-V 之外，還需要將 Virtual Machine Platform 這個 Windows 功能關閉，然後為了徹底關閉 Hyper-V，還需要在命令提示字元下執行以下指令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
