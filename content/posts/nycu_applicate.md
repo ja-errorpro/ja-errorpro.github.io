@@ -100,7 +100,7 @@ keywords:
 
 用 pandoc 把一堆專案經歷寫在一起，模板用最經典的 Eisvogel，
 
-[簡歷、專題、Source Code](https://short.ja-errorpro.codes/r1SEYy87Kx)
+[簡歷、專題、Source Code 連結請點我](https://short.ja-errorpro.codes/r1SEYy87Kx)
 
 如果連結不見的話再聯絡我。
 
