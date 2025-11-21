@@ -1,4 +1,59 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>【資訊安全】Metasploitable2 滲透測試實作(筆記) | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="【資訊安全】Metasploitable2 滲透測試實作(筆記)"><meta property="og:description" content="先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable2 Metasploitable2 一種充滿漏洞的Linux系統，適合用於練習滲透測試。
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>【資訊安全】Metasploitable2 滲透測試實作(筆記) | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/><meta name=description content="先備知識
+
+知道如何使用 VMware 或 VirtualBox
+Kali Linux 基本操作
+能夠讓 Kali 連線至 Metasploitable2
+
+Metasploitable2
+一種充滿漏洞的Linux系統，適合用於練習滲透測試。
+可直接到 Sourceforge 上下載虛擬機檔。
+偵查
+
+
+開啟 Metasploitable2，會先要求輸入帳號密碼，帳密都是 msfadmin (輸入密碼時不會顯示在螢幕上)。
+
+
+輸入 ifconfig 查看 IP 位址，假設為 192.168.235.130。
+
+
+打開 Kali Linux (IP為192.168.235.128)，終端輸入 msfconsole 進入 Metasploit。
+
+
+
+
+使用 nmap 掃描可以連的 port
+
+
+
+1
+
+
+msf6 > nmap -sV 192.168.235.130
+
+
+
+可以看到有一大堆 port 是開著的
+滲透
+
+看看 vsftpd 有沒有洞，在 msf 中輸入 search vsftpd，可以看到有一個 exploit 可以使用
+
+
+
+使用這個 exploit，用 show options 可以看到這個 exploit 需要的參數，然後用 set 參數 值 設定一些參數。
+
+
+
+1
+2
+3
+
+
+msf6 > use exploit/unix/ftp/vsftpd_234_backdoor
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > show options
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > set RHOSTS 192.168.235.130
+
+
+"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="【資訊安全】Metasploitable2 滲透測試實作(筆記)"><meta property="og:description" content="先備知識 知道如何使用 VMware 或 VirtualBox Kali Linux 基本操作 能夠讓 Kali 連線至 Metasploitable2 Metasploitable2 一種充滿漏洞的Linux系統，適合用於練習滲透測試。
 可直接到 Sourceforge 上下載虛擬機檔。
 偵查 開啟 Metasploitable2，會先要求輸入帳號密碼，帳密都是 msfadmin (輸入密碼時不會顯示在螢幕上)。
 輸入 ifconfig 查看 IP 位址，假設為 192.168.235.130。
@@ -10,7 +65,7 @@
 輸入 ifconfig 查看 IP 位址，假設為 192.168.235.130。
 打開 Kali Linux (IP為192.168.235.128)，終端輸入 msfconsole 進入 Metasploit。
 使用 nmap 掃描可以連的 port 1 msf6 > nmap -sV 192.168.235.130 可以看到有一大堆 port 是開著的
-滲透 看看 vsftpd 有沒有洞，在 msf 中輸入 search vsftpd，可以看到有一個 exploit 可以使用 使用這個 exploit，用 show options 可以看到這個 exploit 需要的參數，然後用 set 參數 值 設定一些參數。 1 2 3 msf6 > use exploit/unix/ftp/vsftpd_234_backdoor msf6 exploit(unix/ftp/vsftpd_234_backdoor) > show options msf6 exploit(unix/ftp/vsftpd_234_backdoor) > set RHOSTS 192.168.235.130"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+滲透 看看 vsftpd 有沒有洞，在 msf 中輸入 search vsftpd，可以看到有一個 exploit 可以使用 使用這個 exploit，用 show options 可以看到這個 exploit 需要的參數，然後用 set 參數 值 設定一些參數。 1 2 3 msf6 > use exploit/unix/ftp/vsftpd_234_backdoor msf6 exploit(unix/ftp/vsftpd_234_backdoor) > show options msf6 exploit(unix/ftp/vsftpd_234_backdoor) > set RHOSTS 192.168.235.130"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/2022/metasploitable3_installation/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

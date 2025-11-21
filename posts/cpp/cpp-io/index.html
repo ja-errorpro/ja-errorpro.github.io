@@ -1,4 +1,38 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-IO | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/cpp/cpp-io/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/cpp/cpp-io/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-IO"><meta property="og:description" content="C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-IO | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/cpp/cpp-io/><meta name=description content="
+C++筆記-目錄
+
+輸入/輸出與流Buffer概念
+流
+在c++我們需要了解一下流跟緩衝區的概念，
+C++這個語言本來是沒有IO功能的，
+基本的輸入輸出定義於<iostream>與<fstream>這兩個標準模板庫(std)裡，
+它們被分成了三個標準：
+istream/ cin、wcin ： 標準輸入流
+ostream/ cout、wcout ： 標準輸出流
+ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)
+ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
+輸入的方式，是使用(&#187;)從輸入流中擷取資料，而輸出則是用(&#171;)將資料擷取到輸出流。
+這就是一開始學校在教程式時會說輸入就是 cin >> x;，輸出是 cout << x;，箭號方向不能交換。
+緩衝區
+緩衝區的定義是 用作中介的內存塊，簡單來說，
+它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。
+因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，
+也就是當程式頻繁進行 IO 操作，會頻繁把高速的部分打斷，
+造成性能下降。
+緩衝區的功用就在於避開頻繁操作，只要讀取緩衝區的資料就好。
+只有需要時再刷新緩衝區進行 IO 操作，讓程式性能提升。
+以下狀況會刷新緩衝區：
+
+使用cin
+釋放cout的資源
+使用endl、fflush
+程式正常結束
+
+關於 IO 優化等操作，可查閱算法筆記
+輸入
+在 C++，我們使用 cin(音：西印) 輸入文字，
+方法很簡單，不像 C 語言還要指定型別， cin >> x; 就是輸入資料到x。
+當要輸入多筆資料，只要在後面繼續加就好 cin >> x >> y >> z;。"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/cpp/cpp-io/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-IO"><meta property="og:description" content="C++筆記-目錄 輸入/輸出與流Buffer概念 流 在c++我們需要了解一下流跟緩衝區的概念，
 C++這個語言本來是沒有IO功能的，
 基本的輸入輸出定義於<iostream>與<fstream>這兩個標準模板庫(std)裡，
 它們被分成了三個標準：
@@ -40,7 +74,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
 使用cin 釋放cout的資源 使用endl、fflush 程式正常結束 關於 IO 優化等操作，可查閱算法筆記
 輸入 在 C++，我們使用 cin(音：西印) 輸入文字，
 方法很簡單，不像 C 語言還要指定型別， cin >> x; 就是輸入資料到x。
-當要輸入多筆資料，只要在後面繼續加就好 cin >> x >> y >> z;。"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+當要輸入多筆資料，只要在後面繼續加就好 cin >> x >> y >> z;。"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/cpp/cpp-function/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/cpp/cpp-macro/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

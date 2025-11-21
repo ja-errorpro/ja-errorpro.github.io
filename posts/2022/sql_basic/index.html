@@ -1,4 +1,64 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>SQL 基本語法(sqlite3 in python) | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2022/sql_basic/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2022/sql_basic/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="SQL 基本語法(sqlite3 in python)"><meta property="og:description" content="環境 市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>SQL 基本語法(sqlite3 in python) | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2022/sql_basic/><meta name=description content="環境
+市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：
+
+SQLite
+MySQL
+PostgreSQL
+SQL Server
+
+在這裡使用 SQLite 來說明，在 Python 中可以直接使用 SQLite3 來操作。
+安裝套件
+
+
+1
+
+
+pip install sqlite3
+
+
+與資料庫連線
+
+
+1
+2
+
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+
+
+當此程式執行時，如果與程式同一個資料夾下有 example.db 檔案，則會連線到該檔案，如果沒有，則會建立一個新的 example.db 檔案。
+並且 conn 將被建立為 Connection 物件表示資料庫。
+建立表格
+在建立表格前，需要一個 Cursor 來執行 SQL 各種指令。
+
+
+1
+
+
+cur = conn.cursor()
+
+
+建立表格的語法如下：
+
+
+1
+2
+3
+4
+5
+6
+
+
+CREATE TABLE 表格名稱 (
+    第一欄名稱 資料類型,
+    第二欄名稱 資料類型,
+    第三欄名稱 資料類型,
+   ....
+);
+
+
+在 SQLite 中，資料類型有以下幾種："><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2022/sql_basic/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="SQL 基本語法(sqlite3 in python)"><meta property="og:description" content="環境 市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：
 SQLite MySQL PostgreSQL SQL Server 在這裡使用 SQLite 來說明，在 Python 中可以直接使用 SQLite3 來操作。
 安裝套件 1 pip install sqlite3 與資料庫連線 1 2 import sqlite3 conn = sqlite3.connect('example.db') 當此程式執行時，如果與程式同一個資料夾下有 example.db 檔案，則會連線到該檔案，如果沒有，則會建立一個新的 example.db 檔案。
 並且 conn 將被建立為 Connection 物件表示資料庫。
@@ -10,7 +70,7 @@ SQLite MySQL PostgreSQL SQL Server 在這裡使用 SQLite 來說明，在 Python
 並且 conn 將被建立為 Connection 物件表示資料庫。
 建立表格 在建立表格前，需要一個 Cursor 來執行 SQL 各種指令。
 1 cur = conn.cursor() 建立表格的語法如下：
-1 2 3 4 5 6 CREATE TABLE 表格名稱 ( 第一欄名稱 資料類型, 第二欄名稱 資料類型, 第三欄名稱 資料類型, .... ); 在 SQLite 中，資料類型有以下幾種："><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+1 2 3 4 5 6 CREATE TABLE 表格名稱 ( 第一欄名稱 資料類型, 第二欄名稱 資料類型, 第三欄名稱 資料類型, .... ); 在 SQLite 中，資料類型有以下幾種："><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/2022/metasploitable3_installation/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

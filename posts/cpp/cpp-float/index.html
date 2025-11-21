@@ -1,4 +1,138 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-浮點數 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/cpp/cpp-float/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/cpp/cpp-float/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-浮點數"><meta property="og:description" content="C++筆記-目錄 浮點數 名言：「算錢用浮點，遲早被人扁。」 浮點數是一個很難理解的東西，
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-浮點數 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/cpp/cpp-float/><meta name=description content="
+C++筆記-目錄
+
+浮點數
+名言：「算錢用浮點，遲早被人扁。」
+浮點數是一個很難理解的東西，
+這裡特別拿出來說明。
+宣告
+如果遇到一定要用浮點數的情況，請使用 double 或 long double  的型態，
+不要使用 float！
+不要使用 float！
+不要使用 float！
+IEEE 754 與浮點數誤差
+現在還沒有完整的方式可以存一個實數，目前電腦的儲存方式是採用 IEEE 754 標準
+IEEE 754
+IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算標準，除了浮點數的表示以外，它還定義了關於負0、反常值以及其運算子與例外情況，像是inf(Infinite)、nan(Not A Number)這些特殊數值。
+我們要先知道如何做進制轉換，
+欲將十進位轉成二進位，對於整數部分，就是一直除以2直到商數為0，再依序由下往上取出餘數：
+而小數則相反，需要一直乘以2直到變成0為止，且每次的運算都只取小數部分，再依序由上往下取出整數。
+假設要轉換 432.1 為二進制，
+
+  
+      
+          計算
+          結果
+          餘數
+      
+  
+  
+      
+          432/2
+          216
+          0
+      
+      
+          216/2
+          108
+          0
+      
+      
+          108/2
+          54
+          0
+      
+      
+          54/2
+          27
+          0
+      
+      
+          27/2
+          13
+          1
+      
+      
+          13/2
+          6
+          1
+      
+      
+          6/2
+          3
+          0
+      
+      
+          3/2
+          1
+          1
+      
+      
+          1/2
+          0
+          1
+      
+  
+
+由下往上寫結果就是 110110000
+對小數部分
+
+  
+      
+          計算
+          結果
+          整數部分
+      
+  
+  
+      
+          0.1*2
+          0.2
+          0
+      
+      
+          0.2*2
+          0.4
+          0
+      
+      
+          0.4*2
+          0.8
+          0
+      
+      
+          0.8*2
+          1.6
+          1
+      
+      
+          0.6*2
+          1.2
+          1
+      
+      
+          0.2*2
+          0.4
+          0
+      
+      
+          0.4*2
+          0.8
+          0
+      
+      
+          0.8*2
+          1.6
+          1
+      
+      
+          0.6*2
+          1.2
+          1
+      
+  
+
+這時你會發現它是無限循環小數，結果為 $0.0\overline{0011}$"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/cpp/cpp-float/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-浮點數"><meta property="og:description" content="C++筆記-目錄 浮點數 名言：「算錢用浮點，遲早被人扁。」 浮點數是一個很難理解的東西，
 這裡特別拿出來說明。
 宣告 如果遇到一定要用浮點數的情況，請使用 double 或 long double 的型態，
 不要使用 float！ 不要使用 float！ 不要使用 float！ IEEE 754 與浮點數誤差 現在還沒有完整的方式可以存一個實數，目前電腦的儲存方式是採用 IEEE 754 標準
@@ -20,7 +154,7 @@ IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算
 假設要轉換 432.1 為二進制，
 計算 結果 餘數 432/2 216 0 216/2 108 0 108/2 54 0 54/2 27 0 27/2 13 1 13/2 6 1 6/2 3 0 3/2 1 1 1/2 0 1 由下往上寫結果就是 110110000
 對小數部分
-計算 結果 整數部分 0.1*2 0.2 0 0.2*2 0.4 0 0.4*2 0.8 0 0.8*2 1.6 1 0.6*2 1.2 1 0.2*2 0.4 0 0.4*2 0.8 0 0.8*2 1.6 1 0.6*2 1.2 1 這時你會發現它是無限循環小數，結果為 $0.0\overline{0011}$"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+計算 結果 整數部分 0.1*2 0.2 0 0.2*2 0.4 0 0.4*2 0.8 0 0.8*2 1.6 1 0.6*2 1.2 1 0.2*2 0.4 0 0.4*2 0.8 0 0.8*2 1.6 1 0.6*2 1.2 1 這時你會發現它是無限循環小數，結果為 $0.0\overline{0011}$"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/cpp/cpp-struct/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/cpp/cpp-process/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

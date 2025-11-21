@@ -1,4 +1,194 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>108年彰雲嘉上午P5 - 魔術三角形 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="108年彰雲嘉上午P5 - 魔術三角形"><meta property="og:description" content="題目： 魔術三角形是一個由1到9的數字所形成之三角形， 每邊由4個數字組成，邊與邊之間會有1個數字共用，而且每個邊 4個數字相加之總和是一樣的，舉例來說，下圖是一個魔術三角形，三個邊的數字和均為19。 我們以三角形最上面的數字7為起點，順時針方向列出所有9個數字來表示這個三角形， 表示為&#34;781359264&#34; (取自108年彰雲嘉資訊科能力競試上午場P5)
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>108年彰雲嘉上午P5 - 魔術三角形 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/><meta name=description content="題目：
+魔術三角形是一個由1到9的數字所形成之三角形，  
+每邊由4個數字組成，邊與邊之間會有1個數字共用，而且每個邊  
+4個數字相加之總和是一樣的，舉例來說，下圖是一個魔術三角形，三個邊的數字和均為19。  
+我們以三角形最上面的數字7為起點，順時針方向列出所有9個數字來表示這個三角形，  
+表示為&#34;781359264&#34;  
+
+ (取自108年彰雲嘉資訊科能力競試上午場P5)
+預先將下圖的三個藍色粗框部分填入數字，請填入其餘數字使其成為一個魔術三角形。
+
+ (取自108年彰雲嘉資訊科能力競試上午場P5)
+輸入：
+三個1~9之間的數代表依順時針填入藍色粗框的3個數字。
+
+輸出：
+將形成的魔術三角形之9個數字合併成一個十進位數字輸出，若存在多個答案  
+，則輸出十進位數字最小者。若無法形成魔術三角形，則輸出1個0。
+
+Ex 1 Input:
+4 3 6
+
+Ex 2 Input:
+4 6 7
+
+Ex 1 Output:
+542937168
+
+Ex 2 Output:
+249561873
+
+題解：
+題目沒給時間限制，當然直接暴力做下去啊！
+時間複雜度也只有O(6!) = O(720)，
+所以也不會超過1秒
+可使用next_permutation()這個函式，
+他是用來枚舉排列的工具，既然是排列，
+有學過排列組合都知道不重複排列數是P(n,n)
+那時間複雜度就會是O(P(n,n))=O(n!)
+如果遇到排列數很多的就還是別用了吧
+記得在用這個函式時要先把要排的數組先排序好，
+才能完整枚舉所有排列。
+上程式碼：
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+
+
+#pragma GCC optimize(&#34;Ofast&#34;)
+#pragma loop_opt(on)
+#include<bits/stdc++.h>
+using namespace std;
+template<class T> long long Mod(T a,T b){return ((a%b)+b)%b;}
+#define endl '\n'
+#define ll long long
+#define IO ios_base::sync_with_stdio(0); cin.tie(0);
+#define GETOUT cout.tie(0);
+#define gc getchar()
+#define cendl cout << endl;
+#define fr(bob,n,l) for(int bob=(n);bob<(l);++bob)
+#define fra(ns,a) for(auto (ns):a)
+#define frc(bot,ns,l) for(int bot=(ns);bot<=(l);++bot)
+#define frx(i,ns,l) for(int i=(ns);i<(l);++i)
+const int MAX=1e9+7;
+const int MOD=998244353;
+inline int nextint(){
+	int x=0,w=1;char ch=0;
+  	while(ch<'0'||ch>'9'){
+    	if(ch == '-')w=-1;
+    	ch=getchar();
+  	}
+  	while(ch>='0'&&amp;ch<='9')x=x*10+(ch-'0'),ch=getchar();
+  	return x*w;
+}
+int a[3];
+vector<int> s;
+inline void solve(){
+	cin >> a[0] >> a[1] >> a[2];
+	for(int i=1;i<=9;++i){
+		if(i!=a[0]&&amp;i!=a[1]&&amp;i!=a[2]){
+			s.push_back(i);
+		}
+	}
+	sort(s.begin(),s.end());
+	vector<vector<int> > ans(1000);
+	int cnt=0;
+	do{
+		if(s[0]+a[0]+s[1]+s[2] == s[2]+a[1]+s[3]+s[4] 
+			&& s[2]+a[1]+s[3]+s[4] == s[4]+a[2]+s[5]+s[0]){
+			++cnt;
+			for(int i=0;i<6;i++){
+				ans[cnt].push_back(s[i]);
+			}
+			
+		}
+	}while(next_permutation(s.begin(),s.end()));
+	if(cnt!=0){
+		for(int i=1,j=0,k=0;i<=9;i++){
+			if(i!=2 && i != 5 && i!=8){
+				cout << ans[1][j++];
+			}
+			else{
+				cout << a[k++];
+			}
+		}
+		cendl;	
+	}
+	else{
+		cout << 0 << endl;
+	}
+}
+signed main(){
+	IO;
+	GETOUT;
+	int t;
+	t=1;
+	while(t--)solve();
+	return 0;
+}
+
+
+"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="108年彰雲嘉上午P5 - 魔術三角形"><meta property="og:description" content="題目： 魔術三角形是一個由1到9的數字所形成之三角形， 每邊由4個數字組成，邊與邊之間會有1個數字共用，而且每個邊 4個數字相加之總和是一樣的，舉例來說，下圖是一個魔術三角形，三個邊的數字和均為19。 我們以三角形最上面的數字7為起點，順時針方向列出所有9個數字來表示這個三角形， 表示為&#34;781359264&#34; (取自108年彰雲嘉資訊科能力競試上午場P5)
 預先將下圖的三個藍色粗框部分填入數字，請填入其餘數字使其成為一個魔術三角形。 (取自108年彰雲嘉資訊科能力競試上午場P5)
 輸入： 三個1~9之間的數代表依順時針填入藍色粗框的3個數字。 輸出： 將形成的魔術三角形之9個數字合併成一個十進位數字輸出，若存在多個答案 ，則輸出十進位數字最小者。若無法形成魔術三角形，則輸出1個0。 Ex 1 Input: 4 3 6 Ex 2 Input: 4 6 7 Ex 1 Output: 542937168 Ex 2 Output: 249561873 題解： 題目沒給時間限制，當然直接暴力做下去啊！
 時間複雜度也只有O(6!) = O(720)，
@@ -24,7 +214,7 @@
 記得在用這個函式時要先把要排的數組先排序好，
 才能完整枚舉所有排列。
 上程式碼：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 #pragma GCC optimize(&#34;Ofast&#34;) #pragma loop_opt(on) #include<bits/stdc++.h> using namespace std; template<class T> long long Mod(T a,T b){return ((a%b)+b)%b;} #define endl '\n' #define ll long long #define IO ios_base::sync_with_stdio(0); cin.tie(0); #define GETOUT cout.tie(0); #define gc getchar() #define cendl cout << endl; #define fr(bob,n,l) for(int bob=(n);bob<(l);++bob) #define fra(ns,a) for(auto (ns):a) #define frc(bot,ns,l) for(int bot=(ns);bot<=(l);++bot) #define frx(i,ns,l) for(int i=(ns);i<(l);++i) const int MAX=1e9+7; const int MOD=998244353; inline int nextint(){ int x=0,w=1;char ch=0; while(ch<'0'||ch>'9'){ if(ch == '-')w=-1; ch=getchar(); } while(ch>='0'&&amp;ch<='9')x=x*10+(ch-'0'),ch=getchar(); return x*w; } int a[3]; vector<int> s; inline void solve(){ cin >> a[0] >> a[1] >> a[2]; for(int i=1;i<=9;++i){ if(i!=a[0]&&amp;i!=a[1]&&amp;i!=a[2]){ s.push_back(i); } } sort(s.begin(),s.end()); vector<vector<int> > ans(1000); int cnt=0; do{ if(s[0]+a[0]+s[1]+s[2] == s[2]+a[1]+s[3]+s[4] && s[2]+a[1]+s[3]+s[4] == s[4]+a[2]+s[5]+s[0]){ ++cnt; for(int i=0;i<6;i++){ ans[cnt].push_back(s[i]); } } }while(next_permutation(s.begin(),s.end())); if(cnt!=0){ for(int i=1,j=0,k=0;i<=9;i++){ if(i!=2 && i != 5 && i!=8){ cout << ans[1][j++]; } else{ cout << a[k++]; } } cendl;	} else{ cout << 0 << endl; } } signed main(){ IO; GETOUT; int t; t=1; while(t--)solve(); return 0; }"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 #pragma GCC optimize(&#34;Ofast&#34;) #pragma loop_opt(on) #include<bits/stdc++.h> using namespace std; template<class T> long long Mod(T a,T b){return ((a%b)+b)%b;} #define endl '\n' #define ll long long #define IO ios_base::sync_with_stdio(0); cin.tie(0); #define GETOUT cout.tie(0); #define gc getchar() #define cendl cout << endl; #define fr(bob,n,l) for(int bob=(n);bob<(l);++bob) #define fra(ns,a) for(auto (ns):a) #define frc(bot,ns,l) for(int bot=(ns);bot<=(l);++bot) #define frx(i,ns,l) for(int i=(ns);i<(l);++i) const int MAX=1e9+7; const int MOD=998244353; inline int nextint(){ int x=0,w=1;char ch=0; while(ch<'0'||ch>'9'){ if(ch == '-')w=-1; ch=getchar(); } while(ch>='0'&&amp;ch<='9')x=x*10+(ch-'0'),ch=getchar(); return x*w; } int a[3]; vector<int> s; inline void solve(){ cin >> a[0] >> a[1] >> a[2]; for(int i=1;i<=9;++i){ if(i!=a[0]&&amp;i!=a[1]&&amp;i!=a[2]){ s.push_back(i); } } sort(s.begin(),s.end()); vector<vector<int> > ans(1000); int cnt=0; do{ if(s[0]+a[0]+s[1]+s[2] == s[2]+a[1]+s[3]+s[4] && s[2]+a[1]+s[3]+s[4] == s[4]+a[2]+s[5]+s[0]){ ++cnt; for(int i=0;i<6;i++){ ans[cnt].push_back(s[i]); } } }while(next_permutation(s.begin(),s.end())); if(cnt!=0){ for(int i=1,j=0,k=0;i<=9;i++){ if(i!=2 && i != 5 && i!=8){ cout << ans[1][j++]; } else{ cout << a[k++]; } } cendl;	} else{ cout << 0 << endl; } } signed main(){ IO; GETOUT; int t; t=1; while(t--)solve(); return 0; }"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/2021/mtwcp108_1_6/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/2021/mtwcp107_6/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

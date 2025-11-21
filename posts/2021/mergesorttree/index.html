@@ -1,4 +1,43 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>區間詢問比K小的數量 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2021/mergesorttree/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2021/mergesorttree/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="區間詢問比K小的數量"><meta property="og:description" content="今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>區間詢問比K小的數量 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2021/mergesorttree/><meta name=description content="今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
+所以來刻點線段樹緩下心情(?
+順便測試一下在網站中使用 $ \LaTeX $
+先要基礎：
+線段樹、二分搜、排序
+合併排序樹
+合併排序樹是一種線段樹，節點上都是一個向量(Vector)，  
+比如節點的範圍是[l,r]，則節點上向量就是已排序過的array[l~r]。  
+
+題目：
+輸入 $n$ 個數到陣列 $A$，然後輸入一個 $q$ 代表詢問次數。
+接著每次詢問有三個數 $l,r,k$ 代表詢問的區間$[l,r]$ 有幾個數比 $k$ 小。
+其中，$ 1 \le n,q \le 2*10^5$，且陣列中沒有重複數字。
+輸入：
+首先輸入一整數 $n$，
+再來一行有$n$個數代表 $a_i(1 \le a_i \le 10^9)$。
+接下來一行輸入整數$q$，
+接著有 $q$ 行分別輸入 $l,r,k$。
+輸出：
+一個整數代表在 $[l,r]$ 區間內有幾個數比 $k$ 小。
+Ex 1 Input:
+10
+5 2 1 9 10 4 8 7 6 3
+5
+1 10 6
+4 8 7
+6 9 4
+1 8 5
+2 7 10
+
+Ex 1 Output:
+5
+1
+0
+3
+5
+
+Note:
+第一個詢問區間 $[1,10]，k=6$，其中比k小的元素有:$ {5,2,1,4,3} $，共$5$個。
+第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2021/mergesorttree/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="區間詢問比K小的數量"><meta property="og:description" content="今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
 所以來刻點線段樹緩下心情(?
 順便測試一下在網站中使用 $ \LaTeX $
 先要基礎： 線段樹、二分搜、排序
@@ -24,7 +63,7 @@ Ex 1 Input: 10 5 2 1 9 10 4 8 7 6 3 5 1 10 6 4 8 7 6 9 4 1 8 5 2 7 10 Ex 1 Outpu
 接著有 $q$ 行分別輸入 $l,r,k$。
 輸出： 一個整數代表在 $[l,r]$ 區間內有幾個數比 $k$ 小。
 Ex 1 Input: 10 5 2 1 9 10 4 8 7 6 3 5 1 10 6 4 8 7 6 9 4 1 8 5 2 7 10 Ex 1 Output: 5 1 0 3 5 Note: 第一個詢問區間 $[1,10]，k=6$，其中比k小的元素有:$ {5,2,1,4,3} $，共$5$個。
-第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/2021/mtwcp103_5/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/2022/codeserver/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

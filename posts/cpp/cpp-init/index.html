@@ -1,4 +1,51 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-運作原理與基礎模板 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/cpp/cpp-init/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/cpp/cpp-init/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-運作原理與基礎模板"><meta property="og:description" content="C++筆記-目錄 程式碼運作原理 我們知道其實電腦只懂 0 與 1，因此想跟電腦溝通就需要透過一些轉譯，
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>C++筆記-運作原理與基礎模板 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/cpp/cpp-init/><meta name=description content="
+C++筆記-目錄
+
+程式碼運作原理
+我們知道其實電腦只懂 0 與 1，因此想跟電腦溝通就需要透過一些轉譯，
+在人類的世界中所使用的語言叫高階語言，而只由 0 與 1 數字組成的語言稱為機器語言，我們很難看懂，
+要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
+就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。
+基礎C++模板
+附上STL標頭檔：
+
+
+1
+
+
+#include<bits/stdc++.h>
+
+
+注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
+這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 <algorithm> 裡的 __gcd(計算最大公因數)
+不過有些編譯器不包含這個標頭檔，可以自己 Google 找到對應的解決方法。
+而在只有輸入輸出這些簡單的程式中，我們使用 <iostream> 就好
+
+
+1
+
+
+#include <iostream>
+
+
+有時候看別人的Code還會看到一個標頭檔 <bits/extc++.h> ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
+為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫 std 的名稱空間裡，這樣在做像是輸入輸出 (cin, cout) 等操作時
+不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。
+打個比喻，如果說標頭檔是圖書館，那 std 就是你想找的書。
+而每個程式都會需要一個叫做 main 的主函式，這個函式就是整個程式的起點跟終點：
+
+
+1
+2
+3
+
+
+int main(){
+	return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。
+}
+
+
+在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/cpp/cpp-init/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="C++筆記-運作原理與基礎模板"><meta property="og:description" content="C++筆記-目錄 程式碼運作原理 我們知道其實電腦只懂 0 與 1，因此想跟電腦溝通就需要透過一些轉譯，
 在人類的世界中所使用的語言叫高階語言，而只由 0 與 1 數字組成的語言稱為機器語言，我們很難看懂，
 要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
 就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。
@@ -22,7 +69,7 @@
 1 #include <iostream> 有時候看別人的Code還會看到一個標頭檔 <bits/extc++.h> ，那是內建紅黑樹、雜湊表的標頭檔等更進階的東西，現在暫時不理他。
 為了方便，會在下面定義名稱空間 using namespace std; ，為什麼要加這個？因為我們需要將程式的幾乎所有東西都被定義到一個叫 std 的名稱空間裡，這樣在做像是輸入輸出 (cin, cout) 等操作時 不需要在每個句子前面加上 std:: 這種東西，也就是這段程式是起到了類似宣告成了全域變數的作用。 打個比喻，如果說標頭檔是圖書館，那 std 就是你想找的書。
 而每個程式都會需要一個叫做 main 的主函式，這個函式就是整個程式的起點跟終點：
-1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+1 2 3 int main(){ return 0; // 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。 } 在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。"><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/cpp/cpp-operator/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/cpp/cpp-variable/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>

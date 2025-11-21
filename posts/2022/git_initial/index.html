@@ -1,4 +1,53 @@
-<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>【Git】Git初始設定與環境 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2022/git_initial/><meta name=description content="我覺得現在在看這句話的人超電"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2022/git_initial/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="【Git】Git初始設定與環境"><meta property="og:description" content='What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。
+<!doctype html><html lang=zh-TW><head><link rel=preload href=/lib/font-awesome/webfonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/font-awesome/webfonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin=anonymous><link rel=preload href=/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2 as=font type=font/woff2 crossorigin=anonymous><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>【Git】Git初始設定與環境 | ErrorPro</title><link rel=canonical href=https://ja-errorpro.codes/posts/2022/git_initial/><meta name=description content='What is Git?
+能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。
+讓開發者(群)能夠更好管理專案。
+分散式與中央式版控系統
+中央式版控系統
+需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用
+分散式版控系統
+即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。
+Git環境
+Local Repo
+我們在修改完檔案後，透過git add 將檔案加入暫存區，再透過git commit將檔案加入Local Repo。
+Remote Repo
+Remote Repo是一個遠端的Git伺服器，我們可以將Local Repo push 到 Remote Repo，也可以從Remote Repo pull 到 Local Repo。
+Git安裝
+Windows
+到以下網址下載合適的版本並進行安裝
+Git for Windows
+安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
+這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
+Linux
+非常簡單，打開你的終端機
+
+
+1
+2
+
+
+$ sudo apt update
+$ sudo apt install git -y
+
+
+初始設定
+
+
+1
+2
+3
+4
+5
+
+
+$ git config --global user.name "你的名字"
+$ git config --global user.email "你的Email"
+$ git config --global core.editor "你的編輯器" # 預設為vim
+
+# --global 如果省略，將只對這個Repo有效
+
+
+建立全新的Repo
+我們一步一步慢慢來，先在家目錄建立一個空的資料夾'><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:url" content="https://ja-errorpro.codes/posts/2022/git_initial/"><meta property="og:site_name" content="ErrorPro"><meta property="og:title" content="【Git】Git初始設定與環境"><meta property="og:description" content='What is Git? 能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。 讓開發者(群)能夠更好管理專案。
 分散式與中央式版控系統 中央式版控系統 需要一台伺服器，所有版本控制功能必須在這台伺服器上運作，如果伺服器壞了或沒網路就無法使用
 分散式版控系統 即使沒有網路也能使用，可以先在本機版控直到能連上伺服器後再同步。
 Git環境 Local Repo 我們在修改完檔案後，透過git add 將檔案加入暫存區，再透過git commit將檔案加入Local Repo。
@@ -18,7 +67,7 @@ Git for Windows
 安裝過程直接按到底即可，接著打開Git Bash，可從開始功能表或是桌面右鍵選擇Git Bash Here。
 這套軟體能模擬Linux的環境，所以我們可以在這裡使用Linux的指令。
 Linux 非常簡單，打開你的終端機
-1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name "你的名字" $ git config --global user.email "你的Email" $ git config --global core.editor "你的編輯器" # 預設為vim # --global 如果省略，將只對這個Repo有效 建立全新的Repo 我們一步一步慢慢來，先在家目錄建立一個空的資料夾'><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg+1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+1 2 $ sudo apt update $ sudo apt install git -y 初始設定 1 2 3 4 5 $ git config --global user.name "你的名字" $ git config --global user.email "你的Email" $ git config --global core.editor "你的編輯器" # 預設為vim # --global 如果省略，將只對這個Repo有效 建立全新的Repo 我們一步一步慢慢來，先在家目錄建立一個空的資料夾'><link rel=stylesheet href=https://ja-errorpro.codes/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3+tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y+O1Uhe7GCNrFukgA=="><link rel=stylesheet href=https://ja-errorpro.codes/css/highlight.css><link rel=stylesheet href=https://ja-errorpro.codes/css/search.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://ja-errorpro.codes/images/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LP899FV1TS")</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
 <a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
 <span id=menu><span id=nav><ul><li><a href=/>主頁</a></li><li><a href=/posts>廢文區</a></li><li><a href=/resources>資源</a></li><li><a href=/tags>標籤</a></li><li><a href=/comment>留言區</a></li><li><a href=/about>關於本人</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/ aria-label=Previous><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=https://ja-errorpro.codes/posts/2022/git_branch/ aria-label=Next><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")' aria-label="Top of Page"><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=# aria-label=Share><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>
