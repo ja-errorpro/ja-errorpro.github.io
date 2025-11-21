@@ -10,7 +10,73 @@
   <title> C&#43;&#43;筆記-變數 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-variable/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+C&#43;&#43;筆記-目錄
+
+變數概論
+當我們要進行複雜運算時，變數成為很重要的東西，你可以用變數儲存各種資料，讓電腦記住它。
+要如何宣告一個變數？格式為 (變數型態) (變數名稱)，我們可以一次宣告很多變數： (型態) (名稱),(名稱),(名稱)...;
+ex: int a,b,c;
+要注意的是，變數的名稱在同作用範圍下不可重複，只能為英數字、底線(_)、開頭不可為數字、且不能是C&#43;&#43;裡面已經定義的名稱(ex:int, char, double, long&hellip;)
+變數型態：
+根據型態的不同，儲存所需容量也會不同，依照平台而有所差異，如果想知道該型態佔了多少空間，可以使用 sizeof()，
+以下所提的空間都是在多數 32 位元機器上佔有空間
+一、整數 integer
+每種整數資料型態都會有一定的值域，若超過的話會發生溢位，使得答案出錯
+而 signed/unsigned 表示型態含不含符號，而負數前面都會有一個 &ldquo;-&rdquo; ，因此當型態為 unsigned 時，是將所有負值的空間加到正值，讓正值值域更大
+
+  
+      
+          型態
+          空間
+          範圍
+          描述
+      
+  
+  
+      
+          short/short int
+          2 Bytes
+          -2^15~2^15-1
+          短整數
+      
+      
+          unsigned short/unsigned short int
+          2 Bytes
+          0~2^16-1
+          無符號短整數
+      
+      
+          int/long int/signed/signed long int/long
+          4 Bytes
+          -2^31~2^31-1
+          整數
+      
+      
+          unsigned int/unsigned long int/unsigned
+          4 Bytes
+          0~2^32-1
+          無符號整數
+      
+      
+          long long/long long int
+          8 Bytes
+          -2^63~2^63-1
+          長整數
+      
+      
+          unsigned long long/unsigned long long int
+          8 Bytes
+          0~2^64-1
+          無符號長整數
+      
+  
+
+二、浮點數 float
+就是有小數點的變數" />
+  
+  
+  <meta name="keywords" content="C-Cpp" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -42,8 +108,8 @@ ex: int a,b,c;
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

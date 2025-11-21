@@ -10,7 +10,35 @@
   <title> 算法筆記-時間複雜度概述 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/1/algo-runtime/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+算法筆記目錄
+
+時間複雜度在競程中是個非常重要且最基本的工具，
+係用於估算程式執行N次，大概需要花多久時間。
+我們在程式中做的任何事情可能都需要花費1單位時間，
+比如五則運算、條件判斷、變數存賦等。
+而我們通常會使用函式$O(Big-O)$ 來表示程式的複雜度。
+對於$O()$，有以下定義：
+$$
+Def:\
+\qquad	If\ f(x) = O(g(x)),\ ∃M,x_0 &gt; 0,\ such \ that \ ∀x&gt;=x_0,then \ |f(x)| &lt;= M|g(x)|
+$$
+為什麼我們需要估時間複雜度？
+因為我們在寫程式追求的是速度！當你的演算法太慢(時間複雜度太大)時，
+就算結果是對的，但你會在Online Judge上或APCS得到一個TLE(Time Limit Exceeded)，
+即若將測資丟到你的程式，會超出該題目所規定的執行時間。
+要如何估自己的程式會跑幾秒？
+通常，Judge的執行速度大約是1e8筆/秒，因此只要將題目的範圍限制代入所估複雜度，
+然後除以1e8，就能大概知道自己程式會不會TLE了。
+常見的複雜度有： $1,n,n^2,n^3,nlogn,2^n$。
+而log通常以2為底但我們不太會去明指以誰為底。
+以下是複雜度計算的原則：
+&ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。
+&ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。
+即$O(f(n)&#43;g(n)) = O(f(n)) &gt; O(g(n)) ? O(f(n)) : O(g(n))$" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -68,8 +96,8 @@ $$ Def:\
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

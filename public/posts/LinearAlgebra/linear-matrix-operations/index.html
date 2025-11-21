@@ -10,7 +10,37 @@
   <title> 線性代數筆記-矩陣與矩陣運算 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="線性代數筆記-目錄
+上一篇-消去法
+矩陣與矩陣運算(Matrices and Matrix Operations)
+定義與表示法
+
+矩陣是一堆數字的矩形陣列，陣列中的數字稱為矩陣的元素(entry)。
+一個 $m \times n$ 的矩陣，可表示為 $A = \begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix}$。
+也可寫成 $[a_{ij}]_{m \times n}$。
+$a_{ij}$ 表為矩陣 $A$ 的第 $i$ 列第 $j$ 行的元素。
+
+加減法
+
+如果矩陣大小相同，則可進行加減法，將對應位置的元素相加減。
+
+乘法
+
+如果是純量乘上矩陣，則將矩陣中的每個元素乘上純量。
+如果是 $A$ 是 $m \times r$ 矩陣，$B$ 是 $r \times n$ 矩陣，則 $AB$ 是 $m \times n$ 矩陣，$AB$ 的第 $i$ 列第 $j$ 行的元素為 $ \sum_{k=1}^r a_{ik}b_{kj}$。
+換句話說，
+
+$AB$ 的第 $j$ 行 $ = A $ [ $B$ 的第 $j$ 行]，
+$AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。
+
+
+如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。
+
+線性系統的矩陣形式
+$$\begin{array}{} a_{11}x_1 &#43; a_{12}x_2 &#43; \cdots &#43; a_{1n}x_n = b_1 \\ a_{21}x_1 &#43; a_{22}x_2 &#43; \cdots &#43; a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 &#43; a_{m2}x_2 &#43; \cdots &#43; a_{mn}x_n = b_m\end{array}$$" />
+  
+  
+  <meta name="keywords" content="linear algebra" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -34,8 +64,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

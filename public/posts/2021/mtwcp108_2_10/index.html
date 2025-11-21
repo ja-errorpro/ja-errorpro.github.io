@@ -10,7 +10,33 @@
   <title> 108年彰雲嘉下午P10 - Huffman | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2021/mtwcp108_2_10/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="題目：
+Huffman ： 維基百科
+霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下：
+	(1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。
+	(2) 每次從尚無父節點的所有節點中，尋找值最小（出現次數最少）的兩個節點來建立霍夫曼樹，
+	產生其父節點的值為兩個節點值相加的和。最後只剩下根節點沒有父節點。
+	(3) 從根節點開始往下編碼，左分支為 0，右分支為 1，每個葉節點的字母元素會產生一個霍夫
+	曼碼（由 0 和 1 所組成），字母元素出現的頻率越高則霍夫曼碼越短。
+	
+我們這題需要計算一個字串轉成霍夫曼碼的壓縮率。假設有個字串&quot;queue&quot;，則此字串會佔5 bytes = 40bits空間，
+轉成霍夫曼碼後應為&quot;00011011&quot;，只需要8個bits就可儲存，因此壓縮率為(40-8)/40 * 100% = 80%。
+
+輸入：
+輸入一列字串(長度最多100字元，且不含空格)。
+
+輸出：
+依序輸出此字串壓縮前的bit數、壓縮後的bit數、壓縮率百分比(格式為⌊n⌋%，即n向下取整)。
+
+Ex 1 Input:
+queue
+
+Ex 2 Input:
+abadcafcabfdec
+" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -34,8 +60,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

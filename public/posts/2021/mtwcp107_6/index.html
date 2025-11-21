@@ -10,7 +10,39 @@
   <title> 107年彰雲嘉P6 - 統一發票對獎程式 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2021/mtwcp107_6/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="題目：
+
+Ex 1 Input:
+73372972
+22315462
+91903003
+16228722
+03270598
+163
+983
+814
+73372971
+22315461
+91903001
+16228722
+13210598
+03210163
+0
+
+Ex 1 Output:
+201200
+
+題解：
+前三個獎直接判別，後面判別如果你用int，就 mod pow(10,i)；
+如果你用字串，直接複製 string s1(s.begin()&#43;i,s.end())。
+這裡使用字串判別。
+判定順序可以任意，總之記得符合條件就一定要break不然會多算。
+增開六獎跟持有號碼數量雖然不一定，但他們長度都是固定的，
+string直接s.size()，而int你可以透過除以1000 == 0? 判別。
+這裡直接把六獎當增開六獎判定，反正結果一樣。" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -44,8 +76,8 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

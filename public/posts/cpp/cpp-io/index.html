@@ -10,7 +10,44 @@
   <title> C&#43;&#43;筆記-IO | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-io/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+C&#43;&#43;筆記-目錄
+
+輸入/輸出與流Buffer概念
+流
+在c&#43;&#43;我們需要了解一下流跟緩衝區的概念，
+C&#43;&#43;這個語言本來是沒有IO功能的，
+基本的輸入輸出定義於&lt;iostream&gt;與&lt;fstream&gt;這兩個標準模板庫(std)裡，
+它們被分成了三個標準：
+istream/ cin、wcin ： 標準輸入流
+ostream/ cout、wcout ： 標準輸出流
+ostream/ cerr、wcerr ： 標準錯誤輸出流(無緩衝)
+ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
+輸入的方式，是使用(&raquo;)從輸入流中擷取資料，而輸出則是用(&laquo;)將資料擷取到輸出流。
+這就是一開始學校在教程式時會說輸入就是 cin &gt;&gt; x;，輸出是 cout &lt;&lt; x;，箭號方向不能交換。
+緩衝區
+緩衝區的定義是 用作中介的內存塊，簡單來說，
+它就是先把資料全部移到一個地方(內存)，再去慢慢讀取的概念。
+因為程式只能一個字一個字讀，如果直接讀，程式會變超慢，
+也就是當程式頻繁進行 IO 操作，會頻繁把高速的部分打斷，
+造成性能下降。
+緩衝區的功用就在於避開頻繁操作，只要讀取緩衝區的資料就好。
+只有需要時再刷新緩衝區進行 IO 操作，讓程式性能提升。
+以下狀況會刷新緩衝區：
+
+使用cin
+釋放cout的資源
+使用endl、fflush
+程式正常結束
+
+關於 IO 優化等操作，可查閱算法筆記
+輸入
+在 C&#43;&#43;，我們使用 cin(音：西印) 輸入文字，
+方法很簡單，不像 C 語言還要指定型別， cin &gt;&gt; x; 就是輸入資料到x。
+當要輸入多筆資料，只要在後面繼續加就好 cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;。" />
+  
+  
+  <meta name="keywords" content="C-Cpp" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -72,8 +109,8 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

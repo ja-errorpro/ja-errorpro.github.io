@@ -10,7 +10,31 @@
   <title> 算法筆記-進階資料結構 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/1/algo-advanced-structure/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+算法筆記目錄
+
+進階資料結構
+二元搜尋樹
+某棵樹滿足以下條件可稱為二元搜尋樹
+* 為一棵 Binary Tree
+* 對任一節點 $i$，其左子樹所有值小於它，且右子樹所有值大於它
+* 沒有鍵值相同的節點
+實作
+插入節點
+
+如果 root 為空就填進去
+跟 root 比較，如果比較小就往左，比較大就往右
+
+搜尋
+跟新增差不多，比較小往左，比較大往右，經過的時候順便檢查當前是否為搜尋目標
+刪除節點
+先找到要刪的節點
+如果它沒有子節點，直接刪掉就好
+如果它只有一個子節點，把該子節點跟親代節點連起來就好
+如果它有兩個子節點，找到右子節點的最小值(或左子節點的最大值)替補上去就好。" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -38,8 +62,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

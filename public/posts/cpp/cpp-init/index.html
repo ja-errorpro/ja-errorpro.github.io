@@ -10,7 +10,35 @@
   <title> C&#43;&#43;筆記-運作原理與基礎模板 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-init/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+C&#43;&#43;筆記-目錄
+
+程式碼運作原理
+我們知道其實電腦只懂 0 與 1，因此想跟電腦溝通就需要透過一些轉譯，
+在人類的世界中所使用的語言叫高階語言，而只由 0 與 1 數字組成的語言稱為機器語言，我們很難看懂，
+要將高階語言轉成機器語言，就需要藉由編譯器與組譯器的幫忙，編譯器可以幫我們把程式碼轉成所謂的組合語言，此時階段
+就會有很多人開始看不懂了，當然如果有學過還是能稍微看懂，但組合語言經過組譯器就會變成0跟1，只有電腦才看得懂。
+基礎C&#43;&#43;模板
+附上STL標頭檔：
+
+
+1
+
+
+#include&lt;bits/stdc&#43;&#43;.h&gt;
+
+
+注意，比競程時再用他，如果是其他用途(大型專案)的話最好是不要引入這個
+這個標頭檔包含了之後會使用到的任何輸入輸出、資料結構，還藏有很多很方便的函式像是 &lt;algorithm&gt; 裡的 __gcd(計算最大公因數)
+不過有些編譯器不包含這個標頭檔，可以自己 Google 找到對應的解決方法。
+而在只有輸入輸出這些簡單的程式中，我們使用 &lt;iostream&gt; 就好
+
+
+1
+" />
+  
+  
+  <meta name="keywords" content="C-Cpp" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -48,8 +76,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

@@ -10,7 +10,45 @@
   <title> 算法筆記-初階資料結構 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/1/algo-primary-structure/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+算法筆記目錄
+
+初階資料結構
+1.Segment Tree - 線段樹
+Segment Tree是一種二元樹，適合解決RMQ問題(查詢區間極值)、區間和，
+適合用於單點修改、區間修改。
+成功實現Sparse Table做不到的事。
+每個節點可以存一種區間的數據(比如區間和)，
+根節點存[1,n]的數據，每個左子節點編號是index*2，右邊為index*2&#43;1，
+左邊紀錄[l,(l&#43;r)/2)，右邊紀錄[(l&#43;r)/2&#43;1,r]。
+通常，線段樹會開4倍大
+
+
+1
+
+
+int T[4*N],a[N]; // int T[N&lt;&lt;2];
+
+
+建立線段樹，若l==r，此節點即a[l]
+子樹建完後就把資料合併
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -44,8 +82,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

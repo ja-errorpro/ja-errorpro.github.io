@@ -10,7 +10,27 @@
   <title> 區間詢問比K小的數量 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2021/mergesorttree/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="今天是資訊能競校內初選，沒把經典題做出來真的很可惜。
+所以來刻點線段樹緩下心情(?
+順便測試一下在網站中使用 $ \LaTeX $
+先要基礎：
+線段樹、二分搜、排序
+合併排序樹
+合併排序樹是一種線段樹，節點上都是一個向量(Vector)，  
+比如節點的範圍是[l,r]，則節點上向量就是已排序過的array[l~r]。  
+
+題目：
+輸入 $n$ 個數到陣列 $A$，然後輸入一個 $q$ 代表詢問次數。
+接著每次詢問有三個數 $l,r,k$ 代表詢問的區間$[l,r]$ 有幾個數比 $k$ 小。
+其中，$ 1 \le n,q \le 2*10^5$，且陣列中沒有重複數字。
+輸入：
+首先輸入一整數 $n$，
+再來一行有$n$個數代表 $a_i(1 \le a_i \le 10^9)$。
+接下來一行輸入整數$q$，
+接著有 $q$ 行分別輸入 $l,r,k$。
+輸出：
+一個整數代表在 $[l,r]$ 區間內有幾個數比 $k$ 小。" />
+  
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -53,8 +73,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

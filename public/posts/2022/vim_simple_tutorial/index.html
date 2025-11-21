@@ -10,7 +10,34 @@
   <title> Vim 極簡教學 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/vim_simple_tutorial/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="簡介
+Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。
+起步
+若要使用vim編輯檔案，請在命令列中輸入 vim xxx.yyy，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；
+如果不存在，就會在儲存後新建一個。
+模式
+Vim主要有四種模式： 普通模式、編輯模式、視覺模式、指令模式
+普通模式
+初始畫面，可使用方向鍵控制游標，或用Page UP/Down換頁，而任何有關編輯的指令都要在此模式下進行
+以下是常用的編輯指令
+
+dd - 刪除整行
+(n)dd - 刪除從游標往下數n行
+yy - 複製整行
+(n)yy - 複製從游標往下數n行
+u - 復原(undo)動作
+Ctrl&#43;r - 重做(redo)動作
+. - 重複上一個動作
+x - 刪除字元
+X - 刪除前一個字元(Backspace)
+&gt;&gt; - 縮排
+&lt;&lt; - 反向縮排
+
+編輯模式
+在普通模式按下 i(Insert), o(Open), a(Append) 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 -- INSERT --，即可對檔案編輯" />
+  
+  
+  <meta name="keywords" content="mix, Linux" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -45,8 +72,8 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

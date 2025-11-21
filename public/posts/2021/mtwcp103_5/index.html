@@ -10,7 +10,34 @@
   <title> 103年彰雲嘉P5 - Infix to Postfix | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2021/mtwcp103_5/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="題目：
+一般我們在表示運算式時，是使用中序式，是將運算子放在兩運算元中間，  
+比如 (A&#43;B)*(C&#43;D)。而在電腦中，需要將中序式轉成後序式以方便運算。  
+
+(A&#43;B)*(C&#43;D)的後序式為 AB&#43;CD&#43;*；  
+A*(B&#43;C)-D*E&#43;F 的後序式為 ABC&#43;*DE*-F&#43; 。  
+請寫一程式將中序式轉成後序式。
+
+輸入：
+輸入一個中序運算式，其中運算元為A~Z等26個單一字母表示，運算子只包含&#43;、-、*、/。  
+運算式中可有任意多個括號，且保證輸入的式子合法。
+
+輸出：
+輸出後序式。
+
+Ex 1 Input:
+中置式: (A&#43;B*(C-D)&#43;E)* ((F&#43;G)/(H*I)&#43;J)  
+
+Ex 1 Output:
+後置式: ABCD-*&#43;E&#43;FG&#43;HI*/J&#43;*
+
+題解：
+需要注意的是四則運算的優先序(括號先算，由左到右，先乘除，後加減)。
+這題是非常經典的堆疊資料結構應用題，用 getline 輸入，遇到運算子就加入堆疊，
+先看括號，然後看加減乘除，如果遇到 ) 的話，就把堆疊的運算子都輸出直到碰到 ( 為止。" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -36,8 +63,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

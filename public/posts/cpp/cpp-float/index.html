@@ -10,7 +10,86 @@
   <title> C&#43;&#43;筆記-浮點數 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-float/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+C&#43;&#43;筆記-目錄
+
+浮點數
+名言：「算錢用浮點，遲早被人扁。」
+浮點數是一個很難理解的東西，
+這裡特別拿出來說明。
+宣告
+如果遇到一定要用浮點數的情況，請使用 double 或 long double  的型態，
+不要使用 float！
+不要使用 float！
+不要使用 float！
+IEEE 754 與浮點數誤差
+現在還沒有完整的方式可以存一個實數，目前電腦的儲存方式是採用 IEEE 754 標準
+IEEE 754
+IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算標準，除了浮點數的表示以外，它還定義了關於負0、反常值以及其運算子與例外情況，像是inf(Infinite)、nan(Not A Number)這些特殊數值。
+我們要先知道如何做進制轉換，
+欲將十進位轉成二進位，對於整數部分，就是一直除以2直到商數為0，再依序由下往上取出餘數：
+而小數則相反，需要一直乘以2直到變成0為止，且每次的運算都只取小數部分，再依序由上往下取出整數。
+假設要轉換 432.1 為二進制，
+
+  
+      
+          計算
+          結果
+          餘數
+      
+  
+  
+      
+          432/2
+          216
+          0
+      
+      
+          216/2
+          108
+          0
+      
+      
+          108/2
+          54
+          0
+      
+      
+          54/2
+          27
+          0
+      
+      
+          27/2
+          13
+          1
+      
+      
+          13/2
+          6
+          1
+      
+      
+          6/2
+          3
+          0
+      
+      
+          3/2
+          1
+          1
+      
+      
+          1/2
+          0
+          1
+      
+  
+
+由下往上寫結果就是 110110000" />
+  
+  
+  <meta name="keywords" content="C-Cpp" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -48,8 +127,8 @@ IEEE754是自20世紀80年代以來現代電腦最廣泛使用的浮點數運算
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

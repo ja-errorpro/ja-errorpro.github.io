@@ -10,7 +10,49 @@
   <title> 算法筆記-基本資料結構 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/1/algo-basic-structure/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+算法筆記目錄
+
+基礎資料結構
+我們程式想儲存東西有很多種方式，而資料結構就像一種容器，
+可以儲存或拿取需要的東西，每種資料結構都有不同的複雜度，
+如果用得好，效率就會高。
+以下都是最基本的資料結構
+1.Vector - 向量 in &lt;vector&gt;
+
+
+1
+
+
+vector&lt;int&gt; v;
+
+
+向量可當成陣列來用，應該說它就是更強的陣列，而且易維護。
+比起原本陣列，它可以自動擴大容量，
+能用的空間也比陣列還多。但要注意的是，如果使用operator[]存取了未配置的記憶體位置，
+會導致Segmentation Fault。
+以下為vector的功能：  
+-- vector[n] 存取索引值為n的元素  
+-- vector.at(n) 存取索引值為n的元素(較安全)  
+-- vector.begin() 回傳指向vector第一個元素的疊代器  
+-- vector.end() 回傳指向vector最後一個元素再下一個的疊代器  
+-- vector.front() 回傳vector[0]  
+-- vector.back() 回傳vector最後一個元素的值  
+-- vector.size() 回傳目前vector儲存了多少元素  
+-- vector.resize(n) 修改vector大小  
+-- vector.capacity() 存取可容納最大個數  
+-- vector.empty() 回傳布林值表示vector是不是空的  
+-- vector.reserve(n) 配置更多記憶體以容納更多元素   
+-- vector.push_back(n) 把n放到vector最尾端  
+-- vector.pop_back() 把vector最尾端元素取出  
+-- vector.insert(it,n) 在疊代器it後插入元素n  
+-- vector.erase(it,(it2)) 刪除疊代器it~it2的元素  
+-- vector.clear() 刪除所有元素  
+-- vector.swap(vector2) 交換兩個vector  
+" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -46,8 +88,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

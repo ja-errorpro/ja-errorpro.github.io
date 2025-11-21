@@ -10,7 +10,147 @@
   <title> C&#43;&#43;筆記-邏輯與運算子 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-operator/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="
+C&#43;&#43;筆記-目錄
+
+表達式 Expression
+有人常言道：「表達式(計算式)的天職，就是得到一個值。」
+1 &#43; 2 是一個表達式，其中 1 是一個運算元，2 是另一個運算元，而 &#43; 是運算子。
+1 &#43; ( 2 - 3 ) 也是一個表達式，這個表達式裡還有一個表達式 ( 2 - 3 )，稱為複合表達式(Compound Expression)
+而等等會看到的 a = 5，其實也是一個表達式，將 5 賦值給 a，那麼這個表達式得到的值當然就是最後賦值給 a 的數值。
+運算子 Operator
+運算子可簡單區分為一元(單元)運算子、二元運算子以及三元運算子。
+每個運算子都有執行的優先順序，如同數學有先乘除後加減，以下是之後可能會在 c&#43;&#43; 看到的運算子：
+
+  
+      
+          優先度
+          運算子
+          描述
+          閱讀順序
+          例子
+      
+  
+  
+      
+          1
+          ::
+          作用域
+          -&gt;
+          std::cout &laquo; endl;
+      
+      
+          2
+          &#43;&#43;/-- () [] . -&gt;
+          先回傳再加減1 \ 函式呼叫 \ 陣列存取 \ 物件存取成員 \ 指標存取成員
+          -&gt;
+          i&#43;&#43;/i--;  int a = f(x); int a[10];  obj.cmp = 0;  ptr-&gt;val = 0;
+      
+      
+          3
+          &#43;&#43;/-- &#43;/- ! ~ (Type) * &amp; sizeof
+          先加/減1再回傳 \ 正負號 \ 邏輯NOT \ 位元取反 \ 強轉類型 \ 指標取值 \ 取址 \ 佔用位元組大小
+          &lt;-
+          &#43;&#43;i/--i &#43;/-1 if(!true) a = ~a; int i=int(doublex); int k = *a; int *k = &amp;a; cout &laquo; sizeof(int);//4
+      
+      
+          4
+          * / %
+          乘 \ 除 \ 取模
+          -&gt;
+          int a = 8*8; int a = 20/6; int a = 6%4;
+      
+      
+          5
+          &#43;/-
+          加 \ 減
+          -&gt;
+          int a = 6&#43;4;
+      
+      
+          6
+          &raquo;/&laquo;
+          位元右 \ 左移
+          -&gt;
+          int a = 4 &raquo; 3;
+      
+      
+          7
+          &lt;/&lt;=/&gt;/&gt;=
+          大小等於
+          -&gt;
+          if(a &lt; 0)
+      
+      
+          8
+          ==/!=
+          等於/不等於
+          -&gt;
+          while(a!=0)
+      
+      
+          9
+          &amp;
+          位元AND運算
+          -&gt;
+          n = x&amp;1
+      
+      
+          10
+          ^
+          位元XOR運算
+          -&gt;
+          n = x^1
+      
+      
+          11
+          |
+          位元OR運算
+          -&gt;
+          n = x|1
+      
+      
+          12
+          &amp;&amp;
+          邏輯AND
+          -&gt;
+          if(1==3 &amp;&amp; 2==2)
+      
+      
+          13
+          ||
+          邏輯OR
+          -&gt;
+          if(1==3 || 2==2)
+      
+      
+          14
+          c?p1:p2
+          三元條件運算(可當成if-else)
+          &lt;-
+          int i = a&gt;b?a:b;
+      
+      
+          15
+          =/&#43;=/-=/*=//=/%=/&laquo;=/&raquo;=/&amp;=/^=/|=
+          賦值
+          &lt;-
+          a&#43;=3;b&amp;=1;
+      
+      
+          16
+          ,
+          逗號
+          -&gt;
+          int i,j,k;
+      
+  
+
+賦值運算子 Assignment operator
+用於修改容器所存的值，比如 =，而 a = 5 這個表達式中，就是將數字 5 賦值給 a。" />
+  
+  
+  <meta name="keywords" content="C-Cpp" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -42,8 +182,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

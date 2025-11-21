@@ -10,7 +10,24 @@
   <title> 【系統安全】Stack Overflow | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2024/stack_overflow/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="先備知識
+
+【系統安全】組合語言
+【系統安全】Linux 安全機制
+
+Stack Overflow
+Stack
+回顧 Memory Layout，Stack 是一種後進先出的資料結構，在記憶體上由高位址往低位址長，上面會保存函式呼叫的資訊、區域變數。
+注意 32 位元與 64 位元 的差別：
+
+x86: 函式參數會放在 return address 上方
+x64: System V AMD64 ABI，前 6 個整數參數依序放在 rdi, rsi, rdx, rcx, r8, r9, 後面如果還有才會放在 stack 上。
+
+Stack Overflow
+當程式輸入資料的大小超過 buffer 的大小，會蓋到該 buffer 之後的記憶體，稱為 Overflow，而 Stack Overflow 表示在 stack 上發生了 Overflow。另外還有 Heap Overflow 表示在 heap 上發生了 Overflow。" />
+  
+  
+  <meta name="keywords" content="ctf" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -36,8 +53,8 @@ x86: 函式參數會放在 return address 上方 x64: System V AMD64 ABI，前 6
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

@@ -10,7 +10,23 @@
   <title> 【CTF-WriteUp】EasyCTF-adder | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/ctf_easyctf_adder/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="題目：
+給你一個加法程式，找出Flag
+
+adder
+概念：
+
+反編譯
+
+題解
+在linux執行程式，看到要你輸入三個數，先隨意輸入，發現輸出nope。
+開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，
+而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 0x539 即可。
+透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$
+開啟程式輸入1337 0 0 就可以拿到flag了~" />
+  
+  
+  <meta name="keywords" content="ctf" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -44,8 +60,8 @@
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   

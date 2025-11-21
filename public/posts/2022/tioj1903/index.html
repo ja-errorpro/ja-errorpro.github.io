@@ -10,7 +10,46 @@
   <title> 【TIOJ】1903-你的笑容由我來守護-EXTREME | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/tioj1903/" />
   
-  <meta name="description" content="我覺得現在在看這句話的人超電" />
+  <meta name="description" content="題目：
+給一張$N$個點的無向圖，一開始有$M$條邊。
+接著$Q$個操作，有以下兩種：
+
+增加一條連著$A_i$、$B_i$的邊。
+刪除一條連著$A_i$、$B_i$的邊(保證這條邊存在)。
+
+每次操作完後輸出當前連通塊數量。
+
+$1 \le N \le 5e5$
+$M&#43;Q \le 5e5$
+$0 \le A_i,B_i \le N-1$
+$A_i \neq B_i$
+
+輸入：
+第一行有一個數字T代表測資筆數。
+每筆測資第1行有3個整數N、M、Q。
+接下來M行每行兩個整數Ai、Bi，代表Ai和Bi這兩個人目標相同。
+接下來Q行，每行有一個字元 c 和兩個整數Ai、Bi，代表修改一個紀錄。
+如果 c 是 N，代表增加一筆 Ai、Bi 兩人目標相同的紀錄；
+如果 c 是 D，代表要刪除一筆 Ai、Bi 目標相同的紀錄，所有刪除都是合法的。
+輸出：
+對於每筆測資的Q筆修改，每次修改完輸出一行代表連通塊數量。
+Ex 1 Input:
+2
+3 0 3
+N 0 1
+N 1 2
+N 2 1
+3 3 3
+0 1
+1 2
+2 1
+D 2 1
+D 0 1
+D 2 1
+" />
+  
+  
+  <meta name="keywords" content="algorithms" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
@@ -50,8 +89,8 @@ Ex 1 Input: 23 0 3N 0 1N 1 2N 2 13 3 30 11 22 1D 2 1D 0 1D 2 1 ">
      
   <link
     rel="stylesheet"
-    href="http://localhost:1313/css/styles.de16082f3720765c260a965272f7bff60df851b83ed6b624d0f5a062d0abab4986e9c0cfa90acb96dcd8e51748eaaa95c5e1300b5da35a151a66a54e4890e6df.css"
-    integrity="sha512-3hYILzcgdlwmCpZScve/9g34Ubg&#43;1rYk0PWgYtCrq0mG6cDPqQrLltzY5RdI6qqVxeEwC12jWhUaZqVOSJDm3w=="
+    href="http://localhost:1313/css/styles.8e268111f3b30d3b8460299a078fe3ce0709fd2afb79f548a46c7cde4737fad3f3ce16114642ef3f800fddb5ade43f7129e02bd58f8ed5485eec608dac5ba480.css"
+    integrity="sha512-jiaBEfOzDTuEYCmaB4/jzgcJ/Sr7efVIpGx83kc3&#43;tPzzhYRRkLvP4AP3bWt5D9xKeAr1Y&#43;O1Uhe7GCNrFukgA=="
   />
 
   
