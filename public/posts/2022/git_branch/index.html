@@ -10,7 +10,9 @@
   <title> 【Git】Git分支的打開方式 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/git_branch/" />
   
-  <meta name="description" content="當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。
+  <meta
+    name="description"
+    content="當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。
 初始化Local Repo
 詳見 上一篇文章
 查看現在有哪些分支
@@ -35,11 +37,9 @@ Output:
 
 
 1
-" />
-  
-  
-  <meta name="keywords" content="Git, mix" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -83,15 +83,21 @@ Output:
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

@@ -10,7 +10,9 @@
   <title> 【HTB Machine】Curling | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/HTB/Curling/" />
   
-  <meta name="description" content="Curling
+  <meta
+    name="description"
+    content="Curling
 掃描
 
 Web
@@ -29,11 +31,9 @@ RCE
 
 
 在家目錄有三個東西
-" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -82,15 +82,21 @@ RCE 在 template 新增利用 SSTI RCE
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

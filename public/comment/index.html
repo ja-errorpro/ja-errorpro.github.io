@@ -10,11 +10,11 @@
   <title> 留言區 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/comment/" />
   
-  <meta name="description" content="" />
-  
-  
-  <meta name="keywords" content="Idx" />
-  
+  <meta
+    name="description"
+    content=""
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -46,15 +46,21 @@
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">
@@ -62,35 +68,34 @@
 
     <header id="header">
   <a href="http://localhost:1313/">
-  
-    <img id="logo" src="http://localhost:1313/images/logo.png" alt="ErrorPro">
-  
-  <div id="title">
-    <h1>ErrorPro</h1>
-  </div>
+     <img id="logo" src="http://localhost:1313/images/logo.png" alt="ErrorPro"> 
+    <div id="title">
+      <h1>ErrorPro</h1>
+    </div>
   </a>
   <div id="nav">
     <ul>
       <li class="icon">
-        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Menu"
+          ><i class="fas fa-bars fa-2x" aria-hidden="true"></i
+        ></a>
       </li>
       
-        <li><a href="/">主頁</a></li>
+      <li><a href="/">主頁</a></li>
       
-        <li><a href="/posts">廢文區</a></li>
+      <li><a href="/posts">廢文區</a></li>
       
-        <li><a href="/resources">資源</a></li>
+      <li><a href="/resources">資源</a></li>
       
-        <li><a href="/tags">標籤</a></li>
+      <li><a href="/tags">標籤</a></li>
       
-        <li><a href="/comment">留言區</a></li>
+      <li><a href="/comment">留言區</a></li>
       
-        <li><a href="/about">關於本人</a></li>
+      <li><a href="/about">關於本人</a></li>
       
     </ul>
   </div>
 </header>
-
 
 
     

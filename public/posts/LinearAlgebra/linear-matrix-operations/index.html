@@ -10,7 +10,9 @@
   <title> 線性代數筆記-矩陣與矩陣運算 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/LinearAlgebra/linear-matrix-operations/" />
   
-  <meta name="description" content="線性代數筆記-目錄
+  <meta
+    name="description"
+    content="線性代數筆記-目錄
 上一篇-消去法
 矩陣與矩陣運算(Matrices and Matrix Operations)
 定義與表示法
@@ -37,11 +39,9 @@ $AB$ 的第 $i$ 列 $ = $ [ $A$ 的第 $i$ 列] $B$。
 如果 $A$ 與 $B$ 的大小不是如同 $m \times r$ 與 $r \times n $ 的形式，則$AB$不存在。
 
 線性系統的矩陣形式
-$$\begin{array}{} a_{11}x_1 &#43; a_{12}x_2 &#43; \cdots &#43; a_{1n}x_n = b_1 \\ a_{21}x_1 &#43; a_{22}x_2 &#43; \cdots &#43; a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 &#43; a_{m2}x_2 &#43; \cdots &#43; a_{mn}x_n = b_m\end{array}$$" />
-  
-  
-  <meta name="keywords" content="linear algebra" />
-  
+$$\begin{array}{} a_{11}x_1 &#43; a_{12}x_2 &#43; \cdots &#43; a_{1n}x_n = b_1 \\ a_{21}x_1 &#43; a_{22}x_2 &#43; \cdots &#43; a_{2n}x_n = b_2 \\ \vdots \\ a_{m1}x_1 &#43; a_{m2}x_2 &#43; \cdots &#43; a_{mn}x_n = b_m\end{array}$$"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -80,15 +80,21 @@ $$\begin{array}{} a_{11}x_1 &#43; a_{12}x_2 &#43; \cdots &#43; a_{1n}x_n = b_1 \
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

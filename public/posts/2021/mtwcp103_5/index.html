@@ -10,7 +10,9 @@
   <title> 103年彰雲嘉P5 - Infix to Postfix | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2021/mtwcp103_5/" />
   
-  <meta name="description" content="題目：
+  <meta
+    name="description"
+    content="題目：
 一般我們在表示運算式時，是使用中序式，是將運算子放在兩運算元中間，  
 比如 (A&#43;B)*(C&#43;D)。而在電腦中，需要將中序式轉成後序式以方便運算。  
 
@@ -34,11 +36,9 @@ Ex 1 Output:
 題解：
 需要注意的是四則運算的優先序(括號先算，由左到右，先乘除，後加減)。
 這題是非常經典的堆疊資料結構應用題，用 getline 輸入，遇到運算子就加入堆疊，
-先看括號，然後看加減乘除，如果遇到 ) 的話，就把堆疊的運算子都輸出直到碰到 ( 為止。" />
-  
-  
-  <meta name="keywords" content="algorithms" />
-  
+先看括號，然後看加減乘除，如果遇到 ) 的話，就把堆疊的運算子都輸出直到碰到 ( 為止。"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -79,15 +79,21 @@ Ex 1 Output:
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

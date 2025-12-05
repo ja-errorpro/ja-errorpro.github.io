@@ -10,7 +10,9 @@
   <title> 【系統安全】Linux 安全機制 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2023/linux_system_security/" />
   
-  <meta name="description" content="Address space layout randomization(ASLR):
+  <meta
+    name="description"
+    content="Address space layout randomization(ASLR):
 記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用
 繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪
 Stack Canary:
@@ -26,11 +28,9 @@ PIE(Position Independent Executable):
 Fortify Source:
 在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()
 RELRO(RELocation Read-Only):
-在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -87,15 +87,21 @@ RELRO(RELocation Read-Only): 在Lazy Binding時，會將.got.plt section設為re
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

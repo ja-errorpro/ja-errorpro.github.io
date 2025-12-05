@@ -10,7 +10,9 @@
   <title> C&#43;&#43;筆記-目錄 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp-index/" />
   
-  <meta name="description" content="所有內容將以Windows 10&#43;,MinGW-w64 GNU 8.1.0 C&#43;&#43;17為主
+  <meta
+    name="description"
+    content="所有內容將以Windows 10&#43;,MinGW-w64 GNU 8.1.0 C&#43;&#43;17為主
 
 運作原理與基礎模板
 變數
@@ -31,11 +33,9 @@ IO
 Reference
 
 Openhome
-" />
-  
-  
-  <meta name="keywords" content="C-Cpp" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -70,15 +70,21 @@ Openhome
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

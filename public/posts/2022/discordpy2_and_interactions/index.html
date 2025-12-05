@@ -10,7 +10,9 @@
   <title> 【Discord 聊天機器人】 - Discord interactions.py 介紹與開始 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/discordpy2_and_interactions/" />
   
-  <meta name="description" content="Why discord-py-interactions(以下簡稱 dcpi)?
+  <meta
+    name="description"
+    content="Why discord-py-interactions(以下簡稱 dcpi)?
 支援更多操作如斜線指令、按鈕、選單，且簡單易懂
 簡介
 經過大量搜尋資料，發現dcpi的介紹特別少，
@@ -34,11 +36,9 @@ $ pip3 install discord-py-interactions==4.3.4
 
 
 Quick Start
-根據這份API文件" />
-  
-  
-  <meta name="keywords" content="Bot, mix, python" />
-  
+根據這份API文件"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -89,15 +89,21 @@ dcpi Pypi
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

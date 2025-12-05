@@ -10,15 +10,15 @@
   <title> OSCP 筆記-目錄 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/OSCP/oscp-index/" />
   
-  <meta name="description" content="這裡的筆記算是 OSCP(PEN-200) 的 cheat sheet，主要是用來考試的參考
+  <meta
+    name="description"
+    content="這裡的筆記算是 OSCP(PEN-200) 的 cheat sheet，主要是用來考試的參考
 由於 Offsec 政策，這裡不會有任何課程內容，只有筆記跟一些技巧
 
 OSCP 筆記-枚舉
-" />
-  
-  
-  <meta name="keywords" content="OSCP" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -57,15 +57,21 @@ OSCP 筆記-枚舉 ">
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

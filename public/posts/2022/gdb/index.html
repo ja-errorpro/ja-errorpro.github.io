@@ -10,7 +10,9 @@
   <title> gdb 除錯工具學習 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/gdb/" />
   
-  <meta name="description" content="What is GDB?
+  <meta
+    name="description"
+    content="What is GDB?
 gdb全名為gnu debugger，是一種動態Debug的工具。
 使用
 我們可以先寫一個簡易的Hello World，並宣告一些變數
@@ -34,11 +36,9 @@ int main(){
     printf(&#34;Hello World\n&#34;);
     return 0;
 }
-" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -79,15 +79,21 @@ int main(){
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

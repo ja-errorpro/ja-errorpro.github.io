@@ -10,7 +10,9 @@
   <title> 線性代數筆記-線性方程系統簡介 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/LinearAlgebra/linear-intro/" />
   
-  <meta name="description" content="線性代數筆記-目錄
+  <meta
+    name="description"
+    content="線性代數筆記-目錄
 注意：以下所有行(columns)、列(rows)的定義皆以台灣的表示法為主，即行為直向，列為橫向
 線性方程式
 線性方程式
@@ -20,11 +22,9 @@
 將 $n$ 個變數分別表示為 $x_1, x_2, \cdots, x_n$，並將 $n$ 個係數分別表示為 $a_1, a_2, \cdots, a_n$，
 則 $n$ 維線性方程式可表示為 $a_1x_1&#43;a_2x_2&#43;\cdots&#43;a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)
 或是 $ \sum^n_{i=1} a_i x_i = c$。
-如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的齊次線性方程式。" />
-  
-  
-  <meta name="keywords" content="linear algebra" />
-  
+如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的齊次線性方程式。"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -75,15 +75,21 @@
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

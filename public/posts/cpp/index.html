@@ -10,7 +10,9 @@
   <title> C&#43;&#43;筆記-語法 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/" />
   
-  <meta name="description" content="*所有內容將以Windows 10&#43;,MinGW-w64 GNU 8.1.0 C&#43;&#43;17為主
+  <meta
+    name="description"
+    content="*所有內容將以Windows 10&#43;,MinGW-w64 GNU 8.1.0 C&#43;&#43;17為主
 程式碼運作原理
 我們知道其實電腦只懂0與1，因此想跟電腦溝通就需要透過一些轉譯，
 在人類的世界中所使用的語言叫高階語言，而只由0與1數字組成的語言稱為機器語言，我們很難看懂，
@@ -33,11 +35,9 @@
 
 
 1
-" />
-  
-  
-  <meta name="keywords" content="C-Cpp" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -92,15 +92,21 @@
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

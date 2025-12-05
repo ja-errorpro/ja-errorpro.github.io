@@ -10,7 +10,9 @@
   <title> 【CTF】密碼學-RSA加密演算法 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2023/rsa/" />
   
-  <meta name="description" content="RSA加密演算法
+  <meta
+    name="description"
+    content="RSA加密演算法
 簡介
 
 由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。
@@ -40,11 +42,9 @@ $p$、$q$、$e$ 組成公鑰 $(n,e)$，$p$、$q$、$d$ 組成私鑰 $(n,d)$。
 攻擊
 gmpy2
 線上分解n
-RSACTFTool" />
-  
-  
-  <meta name="keywords" content="ctf, crypto" />
-  
+RSACTFTool"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -82,15 +82,21 @@ RSACTFTool" />
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

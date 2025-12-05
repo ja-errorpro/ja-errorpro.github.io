@@ -10,7 +10,9 @@
   <title> SQL 基本語法(sqlite3 in python) | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/sql_basic/" />
   
-  <meta name="description" content="環境
+  <meta
+    name="description"
+    content="環境
 市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：
 
 SQLite
@@ -33,11 +35,9 @@ pip install sqlite3
 
 1
 2
-" />
-  
-  
-  <meta name="keywords" content="mix, python" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -79,15 +79,21 @@ SQLite MySQL PostgreSQL SQL Server 在這裡使用 SQLite 來說明，在 Python
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

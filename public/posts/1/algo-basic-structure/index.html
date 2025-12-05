@@ -10,7 +10,9 @@
   <title> 算法筆記-基本資料結構 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/1/algo-basic-structure/" />
   
-  <meta name="description" content="
+  <meta
+    name="description"
+    content="
 算法筆記目錄
 
 基礎資料結構
@@ -49,11 +51,9 @@ vector&lt;int&gt; v;
 -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素  
 -- vector.clear() 刪除所有元素  
 -- vector.swap(vector2) 交換兩個vector  
-" />
-  
-  
-  <meta name="keywords" content="algorithms" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -104,15 +104,21 @@ vector&lt;int&gt; v;
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

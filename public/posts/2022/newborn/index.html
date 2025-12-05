@@ -10,13 +10,13 @@
   <title> 網站搬家~ | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/newborn/" />
   
-  <meta name="description" content="我把網站從Jekyll改到Hugo了
+  <meta
+    name="description"
+    content="我把網站從Jekyll改到Hugo了
 因為111學測已經很久沒更新了，今天終於把網站搬遷成功，整個網站比以前看起來更舒服~
-Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~" />
-  
-  
-  <meta name="keywords" content="Idx" />
-  
+Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -55,15 +55,21 @@ Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就�
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

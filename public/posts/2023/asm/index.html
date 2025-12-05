@@ -10,7 +10,9 @@
   <title> 【系統安全】組合語言 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2023/asm/" />
   
-  <meta name="description" content="組合語言
+  <meta
+    name="description"
+    content="組合語言
 編譯流程
 
 詞法分析 (Lexical Analysis)
@@ -72,11 +74,9 @@ GCC編譯流程
 行號記錄
 
 編譯 (Compilation)
-組語格式：預設 AT&amp;T 語法，可用 -masm=intel 改成 Intel 語法" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+組語格式：預設 AT&amp;T 語法，可用 -masm=intel 改成 Intel 語法"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -125,15 +125,21 @@ GCC編譯流程 前置處理 (Preprocessing) -&gt; 編譯 (Compilation) -&gt; �
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

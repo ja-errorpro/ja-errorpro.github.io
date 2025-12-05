@@ -10,7 +10,9 @@
   <title> 【CTF】Heap Exploitation(Part 1 - Overview, UAF) | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2023/ctf_heap/" />
   
-  <meta name="description" content="Heap Exploitation
+  <meta
+    name="description"
+    content="Heap Exploitation
 預備知識
 
 需要注意glibc的版本
@@ -48,11 +50,9 @@ dynamic memory allocator
 4
 5
 6
-" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -89,15 +89,21 @@ dynamic memory allocator
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

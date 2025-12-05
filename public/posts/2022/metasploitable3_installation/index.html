@@ -10,7 +10,9 @@
   <title> 【資訊安全】Metasploitable3 環境建置(Windows VMware) | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/metasploitable3_installation/" />
   
-  <meta name="description" content="需求
+  <meta
+    name="description"
+    content="需求
 
 Windows 10 up
 VMware Workstation Pro
@@ -28,11 +30,9 @@ Download Vagrant VMware Utility
 2
 3
 4
-" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -77,15 +77,21 @@ Download Vagrant VMware Utility
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

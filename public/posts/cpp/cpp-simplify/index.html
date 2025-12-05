@@ -10,7 +10,9 @@
   <title> C&#43;&#43;筆記-增加程式可讀性 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-simplify/" />
   
-  <meta name="description" content="
+  <meta
+    name="description"
+    content="
 C&#43;&#43;筆記-目錄
 
 簡化程式可讀性
@@ -23,11 +25,9 @@ C&#43;&#43;筆記-目錄
 可以在每次操作完輸出變數檢查
 避免跳來跳去的結構，像是goto
 重複的程式碼可以濃縮成函式或迴圈
-" />
-  
-  
-  <meta name="keywords" content="C-Cpp" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -66,15 +66,21 @@ C&#43;&#43;筆記-目錄
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

@@ -10,7 +10,9 @@
   <title> HITCON 2025 BadUSB Easy&#43;Medium WriteUp | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2025/hitcon_2025/" />
   
-  <meta name="description" content="前言
+  <meta
+    name="description"
+    content="前言
 2024 年跟 25 年的 HITCON Badge 比起以往非常特別，是用 PCB 做的，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。
 去年 BadUSB 我沒有參加到，所以今年有做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。
 BadUSB
@@ -20,11 +22,9 @@ BadUSB
 首先你需要一台 Ubuntu 或 Mac 系統的電腦，
 我自己在測試時發現 BadgeCommander 如果跑在 Kali 上會沒辦法解析螢幕。
 使用時發現 release Page 裡的 BadgeCommander 刷不進去，所以我是直接從 /sw/BadgeCommander 自己開 Python3 跑起來。
-先下載 Repo 還有一些套件" />
-  
-  
-  <meta name="keywords" content="ctf" />
-  
+先下載 Repo 還有一些套件"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -73,15 +73,21 @@ BadUSB 官方的 BadUSB 說明文件
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

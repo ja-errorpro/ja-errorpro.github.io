@@ -10,7 +10,9 @@
   <title> 【計算機網路】CH2 作業 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/ComputerNetworking/Ch2_Homework/" />
   
-  <meta name="description" content="Reference: Computer Networking: A Top-Down Approach, 8th Edition
+  <meta
+    name="description"
+    content="Reference: Computer Networking: A Top-Down Approach, 8th Edition
 此頁面中答案不保證為正確答案，僅供參考。
 CH2 作業
 Review
@@ -183,11 +185,9 @@ R27. For the client-server application over TCP described in Section 2.7, why mu
 
 TCP 伺服器需要先啟動，因為 TCP 是有連接的，客戶端需要連接到伺服器，如果伺服器沒有啟動，客戶端無法連接。
 UDP 是無連接的，客戶端可以先啟動，因為客戶端不需要確認伺服器是否在線，即使這會導致 data loss。
-" />
-  
-  
-  <meta name="keywords" content="Computer Networking" />
-  
+"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -224,15 +224,21 @@ UDP 是無連接的，客戶端可以先啟動，因為客戶端不需要確認�
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

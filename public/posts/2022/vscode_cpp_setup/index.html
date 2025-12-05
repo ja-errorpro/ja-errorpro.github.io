@@ -10,7 +10,9 @@
   <title> VSCode設定C&#43;&#43;教學(Code Runner) | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2022/vscode_cpp_setup/" />
   
-  <meta name="description" content="遇到很多來問我VSC怎麼設定C/C&#43;&#43;的問題，這裡直接寫篇文來說明我的作法。
+  <meta
+    name="description"
+    content="遇到很多來問我VSC怎麼設定C/C&#43;&#43;的問題，這裡直接寫篇文來說明我的作法。
 前置
 
 環境(以撰寫此篇文時的環境為主)： Windows 11(64 bit) 22H2
@@ -31,11 +33,9 @@ Visual Studio Code 1.71
 下載編譯器(視個人需求選擇一種編譯器)，並解壓到任意空間，(ex: C:/)
 三、設定環境變數
 Windows設定 -&gt; 系統 -&gt; 裝置規格 -&gt; 進階系統設定 -&gt; 環境變數 -&gt; 系統變數(使用者環境變數)
-在變數名 Path 中添加路徑(剛剛解壓到的路徑/bin/)" />
-  
-  
-  <meta name="keywords" content="C-Cpp" />
-  
+在變數名 Path 中添加路徑(剛剛解壓到的路徑/bin/)"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -80,15 +80,21 @@ Windows設定 -&gt; 系統 -&gt; 裝置規格 -&gt; 進階系統設定 -&gt; 環
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

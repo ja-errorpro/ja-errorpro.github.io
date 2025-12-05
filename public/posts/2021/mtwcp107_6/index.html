@@ -10,7 +10,9 @@
   <title> 107年彰雲嘉P6 - 統一發票對獎程式 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/2021/mtwcp107_6/" />
   
-  <meta name="description" content="題目：
+  <meta
+    name="description"
+    content="題目：
 
 Ex 1 Input:
 73372972
@@ -39,11 +41,9 @@ Ex 1 Output:
 判定順序可以任意，總之記得符合條件就一定要break不然會多算。
 增開六獎跟持有號碼數量雖然不一定，但他們長度都是固定的，
 string直接s.size()，而int你可以透過除以1000 == 0? 判別。
-這裡直接把六獎當增開六獎判定，反正結果一樣。" />
-  
-  
-  <meta name="keywords" content="algorithms" />
-  
+這裡直接把六獎當增開六獎判定，反正結果一樣。"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -92,15 +92,21 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">

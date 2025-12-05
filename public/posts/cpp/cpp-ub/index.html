@@ -10,7 +10,9 @@
   <title> C&#43;&#43;筆記-未定義行為 | ErrorPro</title>
   <link rel="canonical" href="http://localhost:1313/posts/cpp/cpp-ub/" />
   
-  <meta name="description" content="
+  <meta
+    name="description"
+    content="
 C&#43;&#43;筆記-目錄
 
 未定義行為(Undeﬁned Behavior，簡稱 UB)
@@ -28,11 +30,9 @@ int i = 10;
 i = i&#43;&#43; &#43; &#43;&#43;i;
 
 
-這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。" />
-  
-  
-  <meta name="keywords" content="C-Cpp" />
-  
+這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。"
+  />
+   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -71,15 +71,21 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
   <![endif]-->
    
 <link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LP899FV1TS');
-</script>  
+   
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LP899FV1TS');
+        }
+      </script> 
 </head>
 
 <body class="max-width mx-auto px3 ltr">
