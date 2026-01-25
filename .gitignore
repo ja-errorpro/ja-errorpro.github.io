@@ -1,0 +1,24 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+*.lnk
+
+# Hugo
+.hugo_build.lock
+resources/_gen/
+
+# Cloudflare Worker & Node.js
+node_modules/
+cloudflare-worker/*
+.dev.vars
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secret Content & Drafts (Critical)
+draft/
+drafts/
+
+tools/
