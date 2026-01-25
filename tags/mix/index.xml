@@ -72,7 +72,7 @@
 &lt;li&gt;Magic 153，輸入一個正整數 n，將 n 的每個位數立方和相加，重複此過程，判斷最後是否會回到 153。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="最後結果"&gt;最後結果&lt;/h2&gt;
-&lt;p&gt;備取 7(放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;p&gt;備取 7(備上，放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
 &lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;
 &lt;p&gt;中原資工，在校成績：27%&lt;/p&gt;
 &lt;ul&gt;
@@ -409,7 +409,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define TO_STR(err) \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (BAR_CODE_FORMAT_ERROR == err \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; ? &amp;#34;BAR_CODE_FORMAT_ERROR&amp;#34; \
@@ -424,7 +424,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; : (NOT_ENOUGH_MERCHANDISE == err \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; ? &amp;#34;NOT_ENOUGH_MERCHANDISE&amp;#34; \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; : &amp;#34;UNKNOWN&amp;#34;))))))
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;char&lt;/span&gt; Str30[&lt;span style="color:#bd93f9"&gt;30&lt;/span&gt;];
@@ -432,53 +432,53 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;PriceAmount&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; cost; &lt;span style="color:#6272a4"&gt;// 成本
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; PriceAmount &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; PriceAmount &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; PriceAmount &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;PriceAmountPtr;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Product&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountTotal; &lt;span style="color:#6272a4"&gt;// 總量
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold; &lt;span style="color:#6272a4"&gt;// 總共賣掉多少個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; income; &lt;span style="color:#6272a4"&gt;// 收入
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit; &lt;span style="color:#6272a4"&gt;// 利潤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; PriceAmountPtr head; &lt;span style="color:#6272a4"&gt;// 這個商品的價格與庫存列表
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Product &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next; &lt;span style="color:#6272a4"&gt;// 下個Product
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountTotal; &lt;span style="color:#6272a4"&gt;// 總量
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold; &lt;span style="color:#6272a4"&gt;// 總共賣掉多少個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; income; &lt;span style="color:#6272a4"&gt;// 收入
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit; &lt;span style="color:#6272a4"&gt;// 利潤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; PriceAmountPtr head; &lt;span style="color:#6272a4"&gt;// 這個商品的價格與庫存列表
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Product &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next; &lt;span style="color:#6272a4"&gt;// 下個Product
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;PurchasedItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 進的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;SoldItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 銷售的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* Note: 真正題目的 數 字 可能會不同 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;enum&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;ErrorType&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 條碼格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}; &lt;span style="color:#6272a4"&gt;// enum ErrorType
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}; &lt;span style="color:#6272a4"&gt;// enum ErrorType
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ErrorType type; &lt;span style="color:#6272a4"&gt;// 這是什麼類型的error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str50 info; &lt;span style="color:#6272a4"&gt;// 發生錯誤時需要紀錄的額外資訊
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Error &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str50 info; &lt;span style="color:#6272a4"&gt;// 發生錯誤時需要紀錄的額外資訊
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Error &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Date&lt;/span&gt; {
@@ -486,20 +486,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; month;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; day;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}; &lt;span style="color:#6272a4"&gt;// struct Date
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; Product &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;ProductPtr;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; Error &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;ErrorPtr;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Statistics&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; capital; &lt;span style="color:#6272a4"&gt;// 目前本店手頭上有多少錢(i.e.資本)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ProductPtr gInventoryHead &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 存貨資料頭
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;ProductPtr gInventoryTail &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 存貨資料尾
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;ErrorPtr gErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 儲存錯誤紀錄
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;Statistics gStat &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; {&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ProductPtr gInventoryTail &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 存貨資料尾
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ErrorPtr gErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 儲存錯誤紀錄
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Statistics gStat &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; {&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/** 讀入一個輸入的字串
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt; * @param str 讀入一個不含空白的字串，讀入後會存在此變數中
@@ -576,7 +576,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;WriteErrors&lt;/span&gt;(ErrorType err, Str50 info) { &lt;span style="color:#6272a4"&gt;// pA 10%
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; ErrorPtr &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt;gErrors;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ErrorPtr &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt;gErrors;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;while&lt;/span&gt; (&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt;((&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head)&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;next);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; Error;
@@ -732,7 +732,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include &amp;lt;string.h&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include &amp;lt;ctype.h&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# define TO_STR(err) \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (BAR_CODE_FORMAT_ERROR == err ? &amp;#34;BAR_CODE_FORMAT_ERROR&amp;#34;: \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (BAR_CODE_NAME_WRONG == err ? &amp;#34;BAR_CODE_NAME_WRONG&amp;#34;: \
@@ -743,9 +743,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (DATE_FORMAT_ERROR == err ? &amp;#34;DATE_FORMAT_ERROR&amp;#34;: \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (DATE_CONTENT_ERROR == err ? &amp;#34;DATE_CONTENT_ERROR&amp;#34;: \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (DATE_SEQUENCE_ERROR == err ? &amp;#34;DATE_SEQUENCE_ERROR&amp;#34;:&amp;#34;UNKNOWN&amp;#34;)))))))))
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define NOT !
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std ;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX_INVENTORY &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;100&lt;/span&gt; ;
@@ -756,62 +756,62 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Product&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; cost ; &lt;span style="color:#6272a4"&gt;// 成本
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft ; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold ; &lt;span style="color:#6272a4"&gt;// (被記錄於這一筆之中的)總共賣掉多少個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit ; &lt;span style="color:#6272a4"&gt;// 此品項的獲利(可能會賠錢賣)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Product
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; cost ; &lt;span style="color:#6272a4"&gt;// 成本
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft ; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold ; &lt;span style="color:#6272a4"&gt;// (被記錄於這一筆之中的)總共賣掉多少個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit ; &lt;span style="color:#6272a4"&gt;// 此品項的獲利(可能會賠錢賣)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Product
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;PurchasedItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 進的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;SoldItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 銷售的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* Note: 真正題目的 數 字 可能會不同 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;enum&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;ErrorType&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 條碼格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;} ; &lt;span style="color:#6272a4"&gt;// enum ErrorType
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// enum ErrorType
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ErrorType type ; &lt;span style="color:#6272a4"&gt;// 這是什麼形式的error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str50 info ; &lt;span style="color:#6272a4"&gt;// 相關的錯誤資訊(如果需要記下來就記在這裡)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str50 info ; &lt;span style="color:#6272a4"&gt;// 相關的錯誤資訊(如果需要記下來就記在這裡)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Error
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Date&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; year ; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; month ; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; day ; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Date
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Statistics&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; capital ; &lt;span style="color:#6272a4"&gt;// 目前本店手頭上有多少錢(i.e.資本)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue ; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit ; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue ; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit ; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Product gInventory[ MAX_INVENTORY ] ; &lt;span style="color:#6272a4"&gt;// 所有的存貨資料
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfProducts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gInventory[]之中總共有多少幾筆存貨資料
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;Date gCurrentDate &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { &lt;span style="color:#bd93f9"&gt;1900&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt; } ; &lt;span style="color:#6272a4"&gt;// 目前的日期
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;Error gErrors[ MAX_ERRORS ] ; &lt;span style="color:#6272a4"&gt;// 所有已發現的error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gErrors[]之中總共有多少幾筆Error資料
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfProducts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gInventory[]之中總共有多少幾筆存貨資料
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date gCurrentDate &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { &lt;span style="color:#bd93f9"&gt;1900&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt; } ; &lt;span style="color:#6272a4"&gt;// 目前的日期
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Error gErrors[ MAX_ERRORS ] ; &lt;span style="color:#6272a4"&gt;// 所有已發現的error
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gErrors[]之中總共有多少幾筆Error資料
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Statistics gStat &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; } ;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/** 

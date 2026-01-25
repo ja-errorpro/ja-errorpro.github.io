@@ -72,7 +72,7 @@
 &lt;li&gt;Magic 153，輸入一個正整數 n，將 n 的每個位數立方和相加，重複此過程，判斷最後是否會回到 153。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="最後結果"&gt;最後結果&lt;/h2&gt;
-&lt;p&gt;備取 7(放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;p&gt;備取 7(備上，放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
 &lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;
 &lt;p&gt;中原資工，在校成績：27%&lt;/p&gt;
 &lt;ul&gt;
@@ -1182,7 +1182,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(是第一次呼叫)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 呼叫 brk() &lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt; sys_brk() 分配 &lt;span style="color:#bd93f9"&gt;132&lt;/span&gt;KB 的Segment，此Segment稱為 main arena
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;{ &lt;span style="color:#6272a4"&gt;// 超過128KB
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; mmap() &lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt; sys_mmap()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mmap() &lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt; sys_mmap()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -1350,10 +1350,10 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;__libc_lock_define&lt;/span&gt; (, mutex);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Flags (formerly in max_fast). */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; flags;&lt;span style="color:#6272a4"&gt;//0x4
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;/* Set if the fastbin chunks contain recently inserted free blocks. */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Set if the fastbin chunks contain recently inserted free blocks. */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Note this is a bool but not all targets support atomics on booleans. */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; have_fastchunks;&lt;span style="color:#6272a4"&gt;//0x4
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;/* Fastbins */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Fastbins */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mfastbinptr fastbinsY[NFASTBINS];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Base of the topmost chunk -- not otherwise kept in a bin */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mchunkptr top;
@@ -1405,7 +1405,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;FD &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;fd; &lt;span style="color:#6272a4"&gt;// P is the chunk to be freed
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;BK &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;BK &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* 檢查size */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;__builtin_expect&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;chunksize&lt;/span&gt;(P) &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;prev_size&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;next_chunk&lt;/span&gt;(P)), &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;))
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (&lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span&gt;); 
@@ -1814,7 +1814,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ...
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// puts(歡迎訊息);
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 &lt;span style="color:#50fa7b"&gt;do_stuff&lt;/span&gt;();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;(&lt;span style="color:#8be9fd;font-style:italic"&gt;true&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
@@ -1852,10 +1852,10 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define int long long
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define endl &amp;#39;\n&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;f&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a, &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; b, &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; c, &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; x) { &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt; x &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt; x &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; b &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt; x &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; c; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;signed&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;() {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a, b, c, d, L;
@@ -2040,7 +2040,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define TO_STR(err) \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (BAR_CODE_FORMAT_ERROR == err \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; ? &amp;#34;BAR_CODE_FORMAT_ERROR&amp;#34; \
@@ -2055,7 +2055,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; : (NOT_ENOUGH_MERCHANDISE == err \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; ? &amp;#34;NOT_ENOUGH_MERCHANDISE&amp;#34; \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; : &amp;#34;UNKNOWN&amp;#34;))))))
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;char&lt;/span&gt; Str30[&lt;span style="color:#bd93f9"&gt;30&lt;/span&gt;];
@@ -2063,53 +2063,53 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;PriceAmount&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; cost; &lt;span style="color:#6272a4"&gt;// 成本
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; PriceAmount &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; PriceAmount &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; PriceAmount &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;PriceAmountPtr;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Product&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountTotal; &lt;span style="color:#6272a4"&gt;// 總量
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold; &lt;span style="color:#6272a4"&gt;// 總共賣掉多少個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; income; &lt;span style="color:#6272a4"&gt;// 收入
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit; &lt;span style="color:#6272a4"&gt;// 利潤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; PriceAmountPtr head; &lt;span style="color:#6272a4"&gt;// 這個商品的價格與庫存列表
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Product &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next; &lt;span style="color:#6272a4"&gt;// 下個Product
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountTotal; &lt;span style="color:#6272a4"&gt;// 總量
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold; &lt;span style="color:#6272a4"&gt;// 總共賣掉多少個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; income; &lt;span style="color:#6272a4"&gt;// 收入
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit; &lt;span style="color:#6272a4"&gt;// 利潤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; PriceAmountPtr head; &lt;span style="color:#6272a4"&gt;// 這個商品的價格與庫存列表
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Product &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next; &lt;span style="color:#6272a4"&gt;// 下個Product
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;PurchasedItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 進的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;SoldItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 銷售的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* Note: 真正題目的 數 字 可能會不同 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;enum&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;ErrorType&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 條碼格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}; &lt;span style="color:#6272a4"&gt;// enum ErrorType
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}; &lt;span style="color:#6272a4"&gt;// enum ErrorType
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ErrorType type; &lt;span style="color:#6272a4"&gt;// 這是什麼類型的error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str50 info; &lt;span style="color:#6272a4"&gt;// 發生錯誤時需要紀錄的額外資訊
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Error &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str50 info; &lt;span style="color:#6272a4"&gt;// 發生錯誤時需要紀錄的額外資訊
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Error &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;next;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Date&lt;/span&gt; {
@@ -2117,20 +2117,20 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; month;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; day;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}; &lt;span style="color:#6272a4"&gt;// struct Date
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; Product &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;ProductPtr;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; Error &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;ErrorPtr;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Statistics&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; capital; &lt;span style="color:#6272a4"&gt;// 目前本店手頭上有多少錢(i.e.資本)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ProductPtr gInventoryHead &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 存貨資料頭
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;ProductPtr gInventoryTail &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 存貨資料尾
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;ErrorPtr gErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 儲存錯誤紀錄
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;Statistics gStat &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; {&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ProductPtr gInventoryTail &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 存貨資料尾
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ErrorPtr gErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 儲存錯誤紀錄
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Statistics gStat &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; {&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/** 讀入一個輸入的字串
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt; * @param str 讀入一個不含空白的字串，讀入後會存在此變數中
@@ -2207,7 +2207,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;WriteErrors&lt;/span&gt;(ErrorType err, Str50 info) { &lt;span style="color:#6272a4"&gt;// pA 10%
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; ErrorPtr &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt;gErrors;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ErrorPtr &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt;gErrors;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;while&lt;/span&gt; (&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;NULL&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;amp;&lt;/span&gt;((&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head)&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;next);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;head &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; Error;
@@ -2363,7 +2363,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include &amp;lt;string.h&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include &amp;lt;ctype.h&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# define TO_STR(err) \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (BAR_CODE_FORMAT_ERROR == err ? &amp;#34;BAR_CODE_FORMAT_ERROR&amp;#34;: \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (BAR_CODE_NAME_WRONG == err ? &amp;#34;BAR_CODE_NAME_WRONG&amp;#34;: \
@@ -2374,9 +2374,9 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (DATE_FORMAT_ERROR == err ? &amp;#34;DATE_FORMAT_ERROR&amp;#34;: \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (DATE_CONTENT_ERROR == err ? &amp;#34;DATE_CONTENT_ERROR&amp;#34;: \
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt; (DATE_SEQUENCE_ERROR == err ? &amp;#34;DATE_SEQUENCE_ERROR&amp;#34;:&amp;#34;UNKNOWN&amp;#34;)))))))))
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define NOT !
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std ;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX_INVENTORY &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;100&lt;/span&gt; ;
@@ -2387,62 +2387,62 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Product&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; cost ; &lt;span style="color:#6272a4"&gt;// 成本
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft ; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold ; &lt;span style="color:#6272a4"&gt;// (被記錄於這一筆之中的)總共賣掉多少個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit ; &lt;span style="color:#6272a4"&gt;// 此品項的獲利(可能會賠錢賣)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Product
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; cost ; &lt;span style="color:#6272a4"&gt;// 成本
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountLeft ; &lt;span style="color:#6272a4"&gt;// 還有多少存貨
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amountSold ; &lt;span style="color:#6272a4"&gt;// (被記錄於這一筆之中的)總共賣掉多少個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; profit ; &lt;span style="color:#6272a4"&gt;// 此品項的獲利(可能會賠錢賣)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Product
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;PurchasedItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 進的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 name ; &lt;span style="color:#6272a4"&gt;// 貨品名稱
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;SoldItem&lt;/span&gt; { &lt;span style="color:#6272a4"&gt;// 銷售的一筆貨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str30 barCode ; &lt;span style="color:#6272a4"&gt;// 條碼(有時稱&amp;#39;序號&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; unitPrice ; &lt;span style="color:#6272a4"&gt;// 單價
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; amount ; &lt;span style="color:#6272a4"&gt;// 有幾個
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* Note: 真正題目的 數 字 可能會不同 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;enum&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;ErrorType&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 條碼格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;} ; &lt;span style="color:#6272a4"&gt;// enum ErrorType
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BAR_CODE_NAME_WRONG &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2172429&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 條碼錯誤(商品名稱有問題)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NO_SUCH_PRODUCT, &lt;span style="color:#6272a4"&gt;// 商品不存在
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NEGATIVE_NUMBER &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4791202&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 負數錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_CAPITAL, &lt;span style="color:#6272a4"&gt;// 資本不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NOT_ENOUGH_MERCHANDISE &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6139072&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 商品不足
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_FORMAT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期格式錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_CONTENT_ERROR, &lt;span style="color:#6272a4"&gt;// 日期內容錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DATE_SEQUENCE_ERROR &lt;span style="color:#6272a4"&gt;// 日期順序錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// enum ErrorType
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ErrorType type ; &lt;span style="color:#6272a4"&gt;// 這是什麼形式的error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; Str50 info ; &lt;span style="color:#6272a4"&gt;// 相關的錯誤資訊(如果需要記下來就記在這裡)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Str50 info ; &lt;span style="color:#6272a4"&gt;// 相關的錯誤資訊(如果需要記下來就記在這裡)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Error
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Date&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; year ; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; month ; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; day ; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} ; &lt;span style="color:#6272a4"&gt;// struct Date
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Statistics&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; capital ; &lt;span style="color:#6272a4"&gt;// 目前本店手頭上有多少錢(i.e.資本)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue ; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit ; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; revenue ; &lt;span style="color:#6272a4"&gt;// 到目前為止全部的銷售額
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; netProfit ; &lt;span style="color:#6272a4"&gt;// 到目前為止總共(因為銷售貨品)的獲利(這有可能會是負的)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Product gInventory[ MAX_INVENTORY ] ; &lt;span style="color:#6272a4"&gt;// 所有的存貨資料
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfProducts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gInventory[]之中總共有多少幾筆存貨資料
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;Date gCurrentDate &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { &lt;span style="color:#bd93f9"&gt;1900&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt; } ; &lt;span style="color:#6272a4"&gt;// 目前的日期
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;Error gErrors[ MAX_ERRORS ] ; &lt;span style="color:#6272a4"&gt;// 所有已發現的error
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gErrors[]之中總共有多少幾筆Error資料
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfProducts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gInventory[]之中總共有多少幾筆存貨資料
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date gCurrentDate &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { &lt;span style="color:#bd93f9"&gt;1900&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt; } ; &lt;span style="color:#6272a4"&gt;// 目前的日期
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Error gErrors[ MAX_ERRORS ] ; &lt;span style="color:#6272a4"&gt;// 所有已發現的error
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; gNumOfErrors &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; ; &lt;span style="color:#6272a4"&gt;// gErrors[]之中總共有多少幾筆Error資料
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Statistics gStat &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt; } ;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/** 
@@ -2938,7 +2938,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include&amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;5&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; b &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; c &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; b &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4&lt;/span&gt;;
@@ -3106,9 +3106,9 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;&amp;#34;c&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;cd $dir &amp;amp;&amp;amp; gcc $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;&amp;#34;cpp&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;cd $dir &amp;amp;&amp;amp; g++ -std=c++11 -O2 $fileName -o $fileNameWithoutExt &amp;amp;&amp;amp; $dir$fileNameWithoutExt&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}, &lt;span style="color:#6272a4"&gt;// 編譯並執行指令，其中設定項 -std= 後面可接C++版本 (98,11,14,17,20,...)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;code-runner.runInTerminal&amp;#34;&lt;/span&gt;: &lt;span style="color:#ff79c6"&gt;true&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;//此行決定是否讓code runner在終端機執行，沒有這行的話會無法讓使用者輸入任何東西
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;code-runner.saveFileBeforeRun&amp;#34;&lt;/span&gt;: &lt;span style="color:#ff79c6"&gt;true&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;//是否在執行前先存檔
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;C_Cpp.default.compilerPath&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;&amp;lt;編譯器路徑/bin/g++.exe&amp;gt;&amp;#34;&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 請修改成g++.exe的路徑
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;code-runner.runInTerminal&amp;#34;&lt;/span&gt;: &lt;span style="color:#ff79c6"&gt;true&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;//此行決定是否讓code runner在終端機執行，沒有這行的話會無法讓使用者輸入任何東西
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;code-runner.saveFileBeforeRun&amp;#34;&lt;/span&gt;: &lt;span style="color:#ff79c6"&gt;true&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;//是否在執行前先存檔
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;C_Cpp.default.compilerPath&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;&amp;lt;編譯器路徑/bin/g++.exe&amp;gt;&amp;#34;&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 請修改成g++.exe的路徑
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;完成後存檔&lt;/p&gt;</description></item><item><title>大學面試心得</title><link>https://ja-errorpro.codes/posts/2022/college_interview/</link><pubDate>Fri, 20 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/college_interview/</guid><description>&lt;h2 id="申請入學新課綱第一屆白老鼠"&gt;申請入學(新課綱第一屆白老鼠)&lt;/h2&gt;
@@ -3425,7 +3425,7 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;template&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;class&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;T&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; Mod(T a,T b){&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; ((a&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define endl &amp;#39;\n&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define ll long long
@@ -3443,8 +3443,8 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define pb emplace_back
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define fi first
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define se second
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//#define int long long
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//#define int long long
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MOD&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;998244353&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;priority&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;char&lt;/span&gt; c){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;switch&lt;/span&gt;(c){
@@ -3499,8 +3499,8 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;signed&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#6272a4"&gt;//IO;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#6272a4"&gt;//GETOUT;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; t;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#6272a4"&gt;//GETOUT;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; t;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	t&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;(t&lt;span style="color:#ff79c6"&gt;--&lt;/span&gt;)solve();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
@@ -3646,7 +3646,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;template&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;class&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;T&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; Mod(T a,T b){&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; ((a&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define endl &amp;#39;\n&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define ll long long
@@ -3658,9 +3658,9 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define frc(bot,n,l) for(int bot=n;bot&amp;lt;=l;bot++)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define frx(i,n,l) for(int i=n;i&amp;lt;l;i++)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define mem(arr,initn) memset(arr,initn,sizeof(arr))
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//#define int long long
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MOD&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;998244353&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;string s1,s2,s3,s4,s5;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vector&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;string&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; six;
@@ -3833,7 +3833,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;template&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;class&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;T&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; Mod(T a,T b){&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; ((a&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define endl &amp;#39;\n&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define ll long long
@@ -3845,7 +3845,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define fra(ns,a) for(auto (ns):a)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define frc(bot,ns,l) for(int bot=(ns);bot&amp;lt;=(l);++bot)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define frx(i,ns,l) for(int i=(ns);i&amp;lt;(l);++i)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MOD&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;998244353&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;inline&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;nextint&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;,w&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;;&lt;span style="color:#8be9fd"&gt;char&lt;/span&gt; ch&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
@@ -4028,7 +4028,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;template&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;class&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;T&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; Mod(T a,T b){&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; ((a&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;b)&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;b;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define endl &amp;#39;\n&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define ll long long
@@ -4038,7 +4038,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define fra(ns,a) for(auto (ns):a)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define frc(bot,ns,l) for(int bot=(ns);bot&amp;lt;=(l);++bot)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define frx(i,ns,l) for(int i=(ns);i&amp;lt;(l);++i)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAX&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1e9&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;7&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MOD&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;998244353&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;inline&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;nextint&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;,w&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;;&lt;span style="color:#8be9fd"&gt;char&lt;/span&gt; ch&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
@@ -4051,19 +4051,19 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; movx[&lt;span style="color:#bd93f9"&gt;8&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;{&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; movy[&lt;span style="color:#bd93f9"&gt;8&lt;/span&gt;]&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;{&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;}; &lt;span style="color:#6272a4"&gt;//八種走法
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;bool&lt;/span&gt; visited[&lt;span style="color:#bd93f9"&gt;10001&lt;/span&gt;][&lt;span style="color:#bd93f9"&gt;10001&lt;/span&gt;]; &lt;span style="color:#6272a4"&gt;//確認這個點是否走過了
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;queue&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; bfsx,bfsy;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;bool&lt;/span&gt; visited[&lt;span style="color:#bd93f9"&gt;10001&lt;/span&gt;][&lt;span style="color:#bd93f9"&gt;10001&lt;/span&gt;]; &lt;span style="color:#6272a4"&gt;//確認這個點是否走過了
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;queue&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt; bfsx,bfsy;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; dis[&lt;span style="color:#bd93f9"&gt;10001&lt;/span&gt;][&lt;span style="color:#bd93f9"&gt;10001&lt;/span&gt;]; &lt;span style="color:#6272a4"&gt;//計算距離
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;inline&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;solve&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;inline&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;solve&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#6272a4"&gt;//記得確認上一筆測資是否沒把佇列清乾淨
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsx.empty()) bfsx.pop();
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsx.empty()) bfsx.pop();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsy.empty()) bfsy.pop(); 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; X,Y,a,b,c,d;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	cin &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; X &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; Y &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; b &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; c &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; d;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#6272a4"&gt;// 初始化
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	frc(i,&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;,X){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	frc(i,&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;,X){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		frc(j,&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;,Y){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			dis[i][j]&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			visited[i][j]&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;false&lt;/span&gt;;
@@ -4075,19 +4075,19 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	bfsx.push(a);bfsy.push(b);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	visited[a][b]&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;true&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#6272a4"&gt;//這裡開始BFS
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;((&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsx.empty())&lt;span style="color:#ff79c6"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsy.empty())){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;((&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsx.empty())&lt;span style="color:#ff79c6"&gt;&amp;amp;&amp;amp;&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;bfsy.empty())){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; nowx &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; bfsx.front();bfsx.pop();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; nowy &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; bfsy.front();bfsy.pop();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(nowx&lt;span style="color:#ff79c6"&gt;==&lt;/span&gt;c &lt;span style="color:#ff79c6"&gt;&amp;amp;&amp;amp;&lt;/span&gt; nowy &lt;span style="color:#ff79c6"&gt;==&lt;/span&gt; d){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#6272a4"&gt;//如果走到目標點了，把所算距離(步數)設為答案
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;			ans &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; dis[c][d];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			ans &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; dis[c][d];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#ff79c6"&gt;break&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; k&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;k&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;8&lt;/span&gt;;&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;k){ &lt;span style="color:#6272a4"&gt;//八種走法
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;			&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; nextx &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; nowx&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;movx[k];
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; nextx &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; nowx&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;movx[k];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; nexty &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; nowy&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;movy[k];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(nextx&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;||&lt;/span&gt;nextx&lt;span style="color:#ff79c6"&gt;&amp;gt;=&lt;/span&gt;X&lt;span style="color:#ff79c6"&gt;||&lt;/span&gt;nexty&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;||&lt;/span&gt;nexty&lt;span style="color:#ff79c6"&gt;&amp;gt;=&lt;/span&gt;Y) &lt;span style="color:#ff79c6"&gt;continue&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;//不讓棋子走出棋盤
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;			&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;visited[nextx][nexty]){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;!&lt;/span&gt;visited[nextx][nexty]){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				visited[nextx][nexty]&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;true&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				dis[nextx][nexty] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; dis[nowx][nowy]&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;				bfsx.push(nextx);
@@ -4643,9 +4643,9 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define int long long 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;#define pb push_back
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//把指令縮短，之後要用就打pb就好
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define pb push_back
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//把指令縮短，之後要用就打pb就好
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;我們也可以用巨集來定義函式：&lt;/p&gt;
@@ -4656,7 +4656,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#define add(a,b) a+b
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//定義一個函式，參數為a,b，回傳a+b
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//定義一個函式，參數為a,b，回傳a+b
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;有時候如果定義的巨集是變數型態也可以用&lt;code&gt;typedef&lt;/code&gt;&lt;/p&gt;
@@ -4681,7 +4681,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;typedef&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;char&lt;/span&gt; str[&lt;span style="color:#bd93f9"&gt;100&lt;/span&gt;];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//之後宣告字串就打str就好
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;str s; &lt;span style="color:#6272a4"&gt;// 宣告 char 陣列
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -4762,9 +4762,9 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;f&lt;/span&gt;(){ &lt;span style="color:#6272a4"&gt;// 不接受參數
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; 可以做任何事;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 可以做任何事;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 使用void就不會回傳值
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;而上一章字串介紹的empty()，其實也是一個布林函式&lt;/p&gt;</description></item><item><title>C++筆記-增加程式可讀性</title><link>https://ja-errorpro.codes/posts/cpp/cpp-simplify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/cpp/cpp-simplify/</guid><description>&lt;ul&gt;
@@ -4796,7 +4796,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;,b&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#39;z&amp;#39;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;a;i&lt;span style="color:#ff79c6"&gt;&amp;lt;=&lt;/span&gt;b;i&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;) cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; i &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
@@ -4819,9 +4819,9 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;string s1; &lt;span style="color:#6272a4"&gt;//空字串
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;string &lt;span style="color:#50fa7b"&gt;s2&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#34;abcde&amp;#34;&lt;/span&gt;); &lt;span style="color:#6272a4"&gt;//用字面常量宣告初始化
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;string &lt;span style="color:#50fa7b"&gt;s3&lt;/span&gt;(s2); &lt;span style="color:#6272a4"&gt;// 複製s2
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;string s4 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;edasd&amp;#34;&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 用字面常量宣告初始化
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;string &lt;span style="color:#50fa7b"&gt;s2&lt;/span&gt;(&lt;span style="color:#f1fa8c"&gt;&amp;#34;abcde&amp;#34;&lt;/span&gt;); &lt;span style="color:#6272a4"&gt;//用字面常量宣告初始化
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;string &lt;span style="color:#50fa7b"&gt;s3&lt;/span&gt;(s2); &lt;span style="color:#6272a4"&gt;// 複製s2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;string s4 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;edasd&amp;#34;&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 用字面常量宣告初始化
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;string可以用size()或length()直接查看字數(字串長度)，用empty()確認是否是空字串，甚至可以直接用==比較字串內容是否相同，&lt;/p&gt;</description></item><item><title>C++筆記-字面常數</title><link>https://ja-errorpro.codes/posts/cpp/cpp-literal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/cpp/cpp-literal/</guid><description>&lt;ul&gt;
@@ -4843,13 +4843,13 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base10 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;1234&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 十進位
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base8 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0373&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 八進位
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base16 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0xf1&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 十六進位
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base2 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0b1010&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 二進位
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base8 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0373&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 八進位
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base16 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0xf1&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 十六進位
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; base2 &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0b1010&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 二進位
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;對於整數，cout 都會以十進位輸出，試試看輸出上面程式中的變數會出現什麼數值。&lt;/p&gt;
@@ -4876,7 +4876,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;swap&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; x,&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; y){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; t&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;x;x&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;y;y&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;t;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
@@ -4951,7 +4951,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(條件式(condition) ){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;//當條件成立要做的事
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;而這題的寫法如：&lt;/p&gt;
@@ -4972,15 +4972,15 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; n;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cin &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; n;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(n&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;==&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;){ &lt;span style="color:#6272a4"&gt;// 當 n 除以 2 的餘數為0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	 cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Yes&amp;#34;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Yes&amp;#34;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(n&lt;span style="color:#ff79c6"&gt;%&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;){ &lt;span style="color:#6272a4"&gt;// 當 n 除以 2 的餘數不為0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	 cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;No&amp;#34;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;No&amp;#34;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -5140,13 +5140,13 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;struct&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;Account&lt;/span&gt;{ &lt;span style="color:#6272a4"&gt;// 建立&amp;#34;帳戶&amp;#34;這個型態
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; string name; &lt;span style="color:#6272a4"&gt;// 名字
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; string ID; &lt;span style="color:#6272a4"&gt;// 身分證號
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; string Living; &lt;span style="color:#6272a4"&gt;// 戶籍地
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;bool&lt;/span&gt; gender; &lt;span style="color:#6272a4"&gt;// 性別(大多數情況就男女之分(? 所以用bool)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; birthday; &lt;span style="color:#6272a4"&gt;// 出生日期
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; balance; &lt;span style="color:#6272a4"&gt;// 帳戶餘額
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}; &lt;span style="color:#6272a4"&gt;//要分號
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; string name; &lt;span style="color:#6272a4"&gt;// 名字
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; string ID; &lt;span style="color:#6272a4"&gt;// 身分證號
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; string Living; &lt;span style="color:#6272a4"&gt;// 戶籍地
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;bool&lt;/span&gt; gender; &lt;span style="color:#6272a4"&gt;// 性別(大多數情況就男女之分(? 所以用bool)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; birthday; &lt;span style="color:#6272a4"&gt;// 出生日期
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; balance; &lt;span style="color:#6272a4"&gt;// 帳戶餘額
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}; &lt;span style="color:#6272a4"&gt;//要分號
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;這樣，我們就能把它當成一種型態來操作了，假設要開新帳戶：&lt;/p&gt;
@@ -5221,7 +5221,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。&lt;/p&gt;
@@ -5238,10 +5238,10 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 你會看到電腦跟你說Hello World
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -5354,7 +5354,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 函式結束後，要使用這句話回傳一個值，來告訴程式已經執行完了。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在這裡就是將main函式宣告成int(整數)，因此結束後也要回傳一個整數才行，而它也可以被宣告為signed(我習慣宣告成這個)，這個等下會提到。&lt;/p&gt;</description></item><item><title>C++筆記-邏輯與運算子</title><link>https://ja-errorpro.codes/posts/cpp/cpp-operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/cpp/cpp-operator/</guid><description>&lt;ul&gt;
@@ -5574,15 +5574,15 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; n;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cin &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; n;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a[n]; &lt;span style="color:#6272a4"&gt;// GCC
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;i&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;n;i&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;) cin &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; a[i]; &lt;span style="color:#6272a4"&gt;//利用上次講的for迴圈輸入每個變數值，注意從0開始
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;i&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;n;i&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;) cin &lt;span style="color:#ff79c6"&gt;&amp;gt;&amp;gt;&lt;/span&gt; a[i]; &lt;span style="color:#6272a4"&gt;//利用上次講的for迴圈輸入每個變數值，注意從0開始
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;n&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;;i&lt;span style="color:#ff79c6"&gt;&amp;gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;i&lt;span style="color:#ff79c6"&gt;--&lt;/span&gt;) cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; a[i] &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl; &lt;span style="color:#6272a4"&gt;//倒序輸出，注意最後一個索引值是n-1
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -5721,8 +5721,8 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// Top-Down
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAXN &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;1005&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a[MAXN],dp[MAXN];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;DP&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i){
@@ -5769,8 +5769,8 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// Buttom-Up
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;using&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;namespace&lt;/span&gt; std;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; MAXN &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;1005&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a[MAXN],dp[MAXN];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
@@ -5832,8 +5832,8 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; mid &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; l&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;(r&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;l)&lt;span style="color:#ff79c6"&gt;/&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 避免 (l+r)/2 溢位 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;		build(index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,l,mid); &lt;span style="color:#6272a4"&gt;// build(index&amp;lt;&amp;lt;1,l,mid);
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;		build(index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,mid&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,r);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		build(index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,l,mid); &lt;span style="color:#6272a4"&gt;// build(index&amp;lt;&amp;lt;1,l,mid);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		build(index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,mid&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,r);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		T[index] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; T[index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; T[index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;] ;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
@@ -5947,11 +5947,11 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//以較不安全的運算來編譯程式
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on) 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//迴圈優化
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#6272a4"&gt;//更改最大堆疊數
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//以較不安全的運算來編譯程式
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on) 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//迴圈優化
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//更改最大堆疊數
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;以上是我常用的編譯器優化指令，&lt;/p&gt;

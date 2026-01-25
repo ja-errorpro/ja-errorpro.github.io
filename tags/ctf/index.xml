@@ -854,7 +854,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(是第一次呼叫)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 呼叫 brk() &lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt; sys_brk() 分配 &lt;span style="color:#bd93f9"&gt;132&lt;/span&gt;KB 的Segment，此Segment稱為 main arena
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;{ &lt;span style="color:#6272a4"&gt;// 超過128KB
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; mmap() &lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt; sys_mmap()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mmap() &lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt; sys_mmap()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -1022,10 +1022,10 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;__libc_lock_define&lt;/span&gt; (, mutex);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Flags (formerly in max_fast). */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; flags;&lt;span style="color:#6272a4"&gt;//0x4
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;/* Set if the fastbin chunks contain recently inserted free blocks. */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Set if the fastbin chunks contain recently inserted free blocks. */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Note this is a bool but not all targets support atomics on booleans. */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; have_fastchunks;&lt;span style="color:#6272a4"&gt;//0x4
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt; &lt;span style="color:#6272a4"&gt;/* Fastbins */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Fastbins */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mfastbinptr fastbinsY[NFASTBINS];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;/* Base of the topmost chunk -- not otherwise kept in a bin */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mchunkptr top;
@@ -1077,7 +1077,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;FD &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;fd; &lt;span style="color:#6272a4"&gt;// P is the chunk to be freed
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;BK &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;BK &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* 檢查size */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;__builtin_expect&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;chunksize&lt;/span&gt;(P) &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;prev_size&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;next_chunk&lt;/span&gt;(P)), &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;))
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (&lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span&gt;); 
@@ -1486,7 +1486,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ...
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// puts(歡迎訊息);
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;&lt;/span&gt;	&lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;do&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 &lt;span style="color:#50fa7b"&gt;do_stuff&lt;/span&gt;();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}&lt;span style="color:#ff79c6"&gt;while&lt;/span&gt;(&lt;span style="color:#8be9fd;font-style:italic"&gt;true&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
@@ -1646,7 +1646,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;# include&amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;&lt;/span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;main&lt;/span&gt;(){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;5&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; b &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;*&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;6&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; c &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; b &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;4&lt;/span&gt;;
