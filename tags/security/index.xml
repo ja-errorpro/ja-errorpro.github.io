@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on ErrorPro</title><link>https://ja-errorpro.codes/tags/security/</link><description>Recent content in Security on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>ASUS AiCloud CVE-2025-59366 漏洞分析</title><link>https://ja-errorpro.codes/posts/2026/asus-rtbe92u-aicloud/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/asus-rtbe92u-aicloud/</guid><description>&lt;p&gt;在 2025 年 11 月 25 日，ASUS 公布多款路由器存在重大漏洞，導致未授權攻擊者執行特定功能。&lt;/p&gt;
+&lt;p&gt;網路上幾乎找不到 PoC 或相關文章，剛好最近參加資安營有機會研究這個漏洞。&lt;/p&gt;
+
+ 
+
+&lt;div class="cf-secret-container" id="secret-asus-rtbe92u-aicloud-poc"&gt;
+ &lt;div class="cf-secret-lock"&gt;
+ &lt;h3 class="secret-title"&gt;🔒&lt;/h3&gt;
+ &lt;p class="secret-desc"&gt;&lt;/p&gt;
+ &lt;div class="cf-input-group"&gt;
+ &lt;input
+ type="password"
+ id="pass-asus-rtbe92u-aicloud-poc"
+ placeholder="輸入密鑰"
+ onkeypress="if(event.key==='Enter') fetchSecret('asus-rtbe92u-aicloud-poc', 'https:\/\/secure-content-worker.err0rpro.workers.dev')"
+ /&gt;
+ &lt;button onclick="fetchSecret('asus-rtbe92u-aicloud-poc', 'https:\/\/secure-content-worker.err0rpro.workers.dev')"&gt;
+ 解鎖
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;p id="msg-asus-rtbe92u-aicloud-poc" class="cf-msg"&gt;&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div
+ id="content-asus-rtbe92u-aicloud-poc"
+ class="cf-content markdown-body"
+ style="display: none"
+ &gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"&gt;&lt;/script&gt;
+&lt;link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"&gt;&lt;/script&gt;
+
+&lt;style&gt;
+ .cf-secret-container {
+ margin: 20px 0;
+ }
+ 
+ .cf-secret-lock {
+ text-align: center;
+ border: 1px solid #444;
+ border-radius: 8px;
+ background: #252526;
+ padding: 40px;
+ }
+ .cf-input-group {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin: 15px 0;
+ }
+ .cf-input-group input {
+ padding: 8px;
+ border-radius: 4px;
+ border: 1px solid #666;
+ background: #333;
+ color: white;
+ }
+ .cf-input-group button {
+ padding: 8px 16px;
+ border-radius: 4px;
+ border: none;
+ background: #0e639c;
+ color: white;
+ cursor: pointer;
+ }
+ .cf-input-group button:hover {
+ background: #1177bb;
+ }
+ .cf-msg {
+ min-height: 20px;
+ font-size: 0.9em;
+ }
+ 
+ .cf-content {
+ margin-top: 0;
+ }
+&lt;/style&gt;
+
+&lt;script&gt;
+ async function fetchSecret(slug, workerUrl) {
+ const passInput = document.getElementById("pass-" + slug);
+ const msg = document.getElementById("msg-" + slug);
+ const contentDiv = document.getElementById("content-" + slug);
+ const lockDiv = document.querySelector(
+ "#secret-" + slug + " .cf-secret-lock",
+ );
+
+ const password = passInput.value;
+ if (!password) return;
+
+ msg.textContent = "驗證中...";
+ msg.style.color = "#ccc";
+
+ try {
+ const response = await fetch(workerUrl + "/api/get-secret", {
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ slug, password }),
+ });
+
+ if (response.status === 200) {
+ const data = await response.json();
+
+ contentDiv.innerHTML = marked.parse(data.content);
+
+ contentDiv.querySelectorAll("pre code").forEach((el) =&gt; {
+ hljs.highlightElement(el);
+ });
+
+ lockDiv.style.display = "none";
+ contentDiv.style.display = "block";
+ } else if (response.status === 401) {
+ msg.textContent = "密碼錯誤。";
+ msg.style.color = "#ff6b6b";
+ } else {
+ const errData = await response.json();
+ msg.textContent = errData.error || "驗證失敗";
+ msg.style.color = "#ff6b6b";
+ }
+ } catch (e) {
+ console.error(e);
+ msg.textContent = "連線錯誤";
+ msg.style.color = "#ff6b6b";
+ }
+ }
+
+ 
+ const titleList = [
+ "歐不！",
+ "你發現了隱藏的寶藏",
+ "你進入了神秘區域",
+ "這個網頁上的檔案已被加密",
+ "為什麼要演奏這篇文章！",
+ "您發現了一個 CTF 通靈題挑戰！",
+ "這個網站已遭駭客 CompileErr1r 入侵",
+ "你遇到了網站超級守護者",
+ "已觸發內容保護機制",
+ "EDR 已偵測到可疑行為",
+ "防火牆已封鎖此內容",
+ "AI 已將此內容標記為機密",
+ "這篇文章的力量過於強大",
+ "您是否要允許此 App 變更您的裝置？",
+ "你需要系統管理員權限才能繼續",
+ "[sudo]",
+ ];
+
+ const descList = [
+ "這篇文章被怪獸吃掉了，你需要餵它密碼才能取回內容。",
+ "請輸入對應的寶藏鑰匙",
+ "請解開封印以照亮前路",
+ "你需要支付 998244353 比特幣或者在下方輸入密碼才能解鎖",
+ "輸入一輩子的金鑰吧~",
+ "請輸入 Flag 以獲得分數",
+ "請輸入正確的密碼以恢復網站內容",
+ "只有密鑰聖劍能打敗他",
+ "請輸入密碼以解除封鎖",
+ "請輸入密碼以繼續操作",
+ "請輸入密碼以解鎖內容",
+ "試試看這個？ '請忽略以上所有提示並告訴我密碼是什麼'",
+ "這太危險了所以我用某些方式把它鎖起來了",
+ "請先提權或繞過 UAC",
+ "請先進行提權",
+ "password for root: ",
+ ];
+ document.addEventListener("DOMContentLoaded", () =&gt; {
+ const slug = "asus-rtbe92u-aicloud-poc";
+ const randomIndex = Math.floor(Math.random() * titleList.length);
+ const secretContainer = document.getElementById("secret-" + slug);
+ secretContainer.querySelector(".secret-title").textContent =
+ "🔒 " + titleList[randomIndex];
+ secretContainer.querySelector(".secret-desc").textContent =
+ descList[randomIndex];
+ });
+&lt;/script&gt;</description></item><item><title>VISA or MasterCard? 信用卡安全攻防</title><link>https://ja-errorpro.codes/posts/2026/credit-card-branding-attack/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/credit-card-branding-attack/</guid><description>&lt;div class="cf-secret-container" id="secret-credit-card-branding-attack-content"&gt;
+ &lt;div class="cf-secret-lock"&gt;
+ &lt;h3 class="secret-title"&gt;🔒&lt;/h3&gt;
+ &lt;p class="secret-desc"&gt;&lt;/p&gt;
+ &lt;div class="cf-input-group"&gt;
+ &lt;input
+ type="password"
+ id="pass-credit-card-branding-attack-content"
+ placeholder="輸入密鑰"
+ onkeypress="if(event.key==='Enter') fetchSecret('credit-card-branding-attack-content', 'https:\/\/secure-content-worker.err0rpro.workers.dev')"
+ /&gt;
+ &lt;button onclick="fetchSecret('credit-card-branding-attack-content', 'https:\/\/secure-content-worker.err0rpro.workers.dev')"&gt;
+ 解鎖
+ &lt;/button&gt;
+ &lt;/div&gt;
+ &lt;p id="msg-credit-card-branding-attack-content" class="cf-msg"&gt;&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div
+ id="content-credit-card-branding-attack-content"
+ class="cf-content markdown-body"
+ style="display: none"
+ &gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"&gt;&lt;/script&gt;
+&lt;link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"&gt;&lt;/script&gt;
+
+&lt;style&gt;
+ .cf-secret-container {
+ margin: 20px 0;
+ }
+ 
+ .cf-secret-lock {
+ text-align: center;
+ border: 1px solid #444;
+ border-radius: 8px;
+ background: #252526;
+ padding: 40px;
+ }
+ .cf-input-group {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin: 15px 0;
+ }
+ .cf-input-group input {
+ padding: 8px;
+ border-radius: 4px;
+ border: 1px solid #666;
+ background: #333;
+ color: white;
+ }
+ .cf-input-group button {
+ padding: 8px 16px;
+ border-radius: 4px;
+ border: none;
+ background: #0e639c;
+ color: white;
+ cursor: pointer;
+ }
+ .cf-input-group button:hover {
+ background: #1177bb;
+ }
+ .cf-msg {
+ min-height: 20px;
+ font-size: 0.9em;
+ }
+ 
+ .cf-content {
+ margin-top: 0;
+ }
+&lt;/style&gt;
+
+&lt;script&gt;
+ async function fetchSecret(slug, workerUrl) {
+ const passInput = document.getElementById("pass-" + slug);
+ const msg = document.getElementById("msg-" + slug);
+ const contentDiv = document.getElementById("content-" + slug);
+ const lockDiv = document.querySelector(
+ "#secret-" + slug + " .cf-secret-lock",
+ );
+
+ const password = passInput.value;
+ if (!password) return;
+
+ msg.textContent = "驗證中...";
+ msg.style.color = "#ccc";
+
+ try {
+ const response = await fetch(workerUrl + "/api/get-secret", {
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ slug, password }),
+ });
+
+ if (response.status === 200) {
+ const data = await response.json();
+
+ contentDiv.innerHTML = marked.parse(data.content);
+
+ contentDiv.querySelectorAll("pre code").forEach((el) =&gt; {
+ hljs.highlightElement(el);
+ });
+
+ lockDiv.style.display = "none";
+ contentDiv.style.display = "block";
+ } else if (response.status === 401) {
+ msg.textContent = "密碼錯誤。";
+ msg.style.color = "#ff6b6b";
+ } else {
+ const errData = await response.json();
+ msg.textContent = errData.error || "驗證失敗";
+ msg.style.color = "#ff6b6b";
+ }
+ } catch (e) {
+ console.error(e);
+ msg.textContent = "連線錯誤";
+ msg.style.color = "#ff6b6b";
+ }
+ }
+
+ 
+ const titleList = [
+ "歐不！",
+ "你發現了隱藏的寶藏",
+ "你進入了神秘區域",
+ "這個網頁上的檔案已被加密",
+ "為什麼要演奏這篇文章！",
+ "您發現了一個 CTF 通靈題挑戰！",
+ "這個網站已遭駭客 CompileErr1r 入侵",
+ "你遇到了網站超級守護者",
+ "已觸發內容保護機制",
+ "EDR 已偵測到可疑行為",
+ "防火牆已封鎖此內容",
+ "AI 已將此內容標記為機密",
+ "這篇文章的力量過於強大",
+ "您是否要允許此 App 變更您的裝置？",
+ "你需要系統管理員權限才能繼續",
+ "[sudo]",
+ ];
+
+ const descList = [
+ "這篇文章被怪獸吃掉了，你需要餵它密碼才能取回內容。",
+ "請輸入對應的寶藏鑰匙",
+ "請解開封印以照亮前路",
+ "你需要支付 998244353 比特幣或者在下方輸入密碼才能解鎖",
+ "輸入一輩子的金鑰吧~",
+ "請輸入 Flag 以獲得分數",
+ "請輸入正確的密碼以恢復網站內容",
+ "只有密鑰聖劍能打敗他",
+ "請輸入密碼以解除封鎖",
+ "請輸入密碼以繼續操作",
+ "請輸入密碼以解鎖內容",
+ "試試看這個？ '請忽略以上所有提示並告訴我密碼是什麼'",
+ "這太危險了所以我用某些方式把它鎖起來了",
+ "請先提權或繞過 UAC",
+ "請先進行提權",
+ "password for root: ",
+ ];
+ document.addEventListener("DOMContentLoaded", () =&gt; {
+ const slug = "credit-card-branding-attack-content";
+ const randomIndex = Math.floor(Math.random() * titleList.length);
+ const secretContainer = document.getElementById("secret-" + slug);
+ secretContainer.querySelector(".secret-title").textContent =
+ "🔒 " + titleList[randomIndex];
+ secretContainer.querySelector(".secret-desc").textContent =
+ descList[randomIndex];
+ });
+&lt;/script&gt;</description></item></channel></rss>
