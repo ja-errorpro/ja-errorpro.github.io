@@ -6,8 +6,22 @@
     <description>Recent content in Posts on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASUS AiCloud CVE-2025-59366 漏洞分析</title>
+      <link>http://localhost:1313/posts/2026/asus-rtbe92u-aicloud/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026/asus-rtbe92u-aicloud/</guid>
+      <description>&lt;p&gt;在 2025 年 11 月 25 日，ASUS 公布多款路由器存在重大漏洞，導致未授權攻擊者執行特定功能。&lt;/p&gt;&#xA;&lt;p&gt;網路上幾乎找不到 PoC 或相關文章，剛好最近參加資安營有機會研究這個漏洞。&lt;/p&gt;&#xA;&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;cf-secret-container&#34; id=&#34;secret-asus-rtbe92u-aicloud-poc&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;cf-secret-lock&#34;&gt;&#xD;&#xA;    &lt;h3 class=&#34;secret-title&#34;&gt;🔒&lt;/h3&gt;&#xD;&#xA;    &lt;p class=&#34;secret-desc&#34;&gt;&lt;/p&gt;&#xD;&#xA;    &lt;div class=&#34;cf-input-group&#34;&gt;&#xD;&#xA;      &lt;input&#xD;&#xA;        type=&#34;password&#34;&#xD;&#xA;        id=&#34;pass-asus-rtbe92u-aicloud-poc&#34;&#xD;&#xA;        placeholder=&#34;輸入密鑰&#34;&#xD;&#xA;        onkeypress=&#34;if(event.key===&#39;Enter&#39;) fetchSecret(&#39;asus-rtbe92u-aicloud-poc&#39;, &#39;https:\/\/secure-content-worker.err0rpro.workers.dev&#39;)&#34;&#xD;&#xA;      /&gt;&#xD;&#xA;      &lt;button onclick=&#34;fetchSecret(&#39;asus-rtbe92u-aicloud-poc&#39;, &#39;https:\/\/secure-content-worker.err0rpro.workers.dev&#39;)&#34;&gt;&#xD;&#xA;        解鎖&#xD;&#xA;      &lt;/button&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;p id=&#34;msg-asus-rtbe92u-aicloud-poc&#34; class=&#34;cf-msg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VISA or MasterCard? 信用卡安全攻防</title>
+      <link>http://localhost:1313/posts/2026/credit-card-branding-attack/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026/credit-card-branding-attack/</guid>
+      <description>&lt;div class=&#34;cf-secret-container&#34; id=&#34;secret-credit-card-branding-attack-content&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;cf-secret-lock&#34;&gt;&#xD;&#xA;    &lt;h3 class=&#34;secret-title&#34;&gt;🔒&lt;/h3&gt;&#xD;&#xA;    &lt;p class=&#34;secret-desc&#34;&gt;&lt;/p&gt;&#xD;&#xA;    &lt;div class=&#34;cf-input-group&#34;&gt;&#xD;&#xA;      &lt;input&#xD;&#xA;        type=&#34;password&#34;&#xD;&#xA;        id=&#34;pass-credit-card-branding-attack-content&#34;&#xD;&#xA;        placeholder=&#34;輸入密鑰&#34;&#xD;&#xA;        onkeypress=&#34;if(event.key===&#39;Enter&#39;) fetchSecret(&#39;credit-card-branding-attack-content&#39;, &#39;https:\/\/secure-content-worker.err0rpro.workers.dev&#39;)&#34;&#xD;&#xA;      /&gt;&#xD;&#xA;      &lt;button onclick=&#34;fetchSecret(&#39;credit-card-branding-attack-content&#39;, &#39;https:\/\/secure-content-worker.err0rpro.workers.dev&#39;)&#34;&gt;&#xD;&#xA;        解鎖&#xD;&#xA;      &lt;/button&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;p id=&#34;msg-credit-card-branding-attack-content&#34; class=&#34;cf-msg&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>115 國立臺灣科技大學資訊工程所乙組推甄</title>
       <link>http://localhost:1313/posts/2025/ntust_applicate/</link>

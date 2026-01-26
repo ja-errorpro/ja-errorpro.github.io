@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on ErrorPro</title>
+    <link>http://localhost:1313/tags/security/</link>
+    <description>Recent content in Security on ErrorPro</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VISA or MasterCard? 信用卡安全攻防</title>
+      <link>http://localhost:1313/posts/2026/credit-card-branding-attack/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026/credit-card-branding-attack/</guid>
+      <description>&lt;div class=&#34;cf-secret-container&#34; id=&#34;secret-credit-card-branding-attack-content&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;cf-secret-lock&#34;&gt;&#xD;&#xA;    &lt;h3&gt;🔒 歐不！&lt;/h3&gt;&#xD;&#xA;    &lt;p&gt;這個文章被密碼綁架了，請輸入密鑰以解鎖內容。&lt;/p&gt;&#xD;&#xA;    &lt;div class=&#34;cf-input-group&#34;&gt;&#xD;&#xA;      &lt;input&#xD;&#xA;        type=&#34;password&#34;&#xD;&#xA;        id=&#34;pass-credit-card-branding-attack-content&#34;&#xD;&#xA;        placeholder=&#34;輸入密鑰&#34;&#xD;&#xA;        onkeypress=&#34;if(event.key===&#39;Enter&#39;) fetchSecret(&#39;credit-card-branding-attack-content&#39;, &#39;https:\/\/secure-content-worker.err0rpro.workers.dev&#39;)&#34;&#xD;&#xA;      /&gt;&#xD;&#xA;      &lt;button onclick=&#34;fetchSecret(&#39;credit-card-branding-attack-content&#39;, &#39;https:\/\/secure-content-worker.err0rpro.workers.dev&#39;)&#34;&gt;&#xD;&#xA;        解鎖&#xD;&#xA;      &lt;/button&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;p id=&#34;msg-credit-card-branding-attack-content&#34; class=&#34;cf-msg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
