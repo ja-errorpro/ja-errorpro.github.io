@@ -3,6 +3,7 @@ title: 【系統安全】組合語言
 date: 2023-10-22
 tags:
   - ctf
+  - security
 ---
 
 # 組合語言
@@ -29,10 +30,10 @@ tags:
 
 ## GCC編譯流程
 
-|  | 前置處理 (Preprocessing) | -> 編譯 (Compilation) | -> 組譯 (Assembly) | -> 連結 (Linking) |
-| --- | --- | --- | --- | --- |
-| 檔案副檔名 | (.i) | (.s) | (.o) | (.out) |
-| 指令參數 | -E | -S | -c |  |
+|            | 前置處理 (Preprocessing) | -> 編譯 (Compilation) | -> 組譯 (Assembly) | -> 連結 (Linking) |
+| ---------- | ------------------------ | --------------------- | ------------------ | ----------------- |
+| 檔案副檔名 | (.i)                     | (.s)                  | (.o)               | (.out)            |
+| 指令參數   | -E                       | -S                    | -c                 |                   |
 
 ### 前置處理 (Preprocessing)
 
@@ -62,31 +63,31 @@ printf()：只有一個參數會換成 `puts()`
 ## 指令集
 
 - 複雜指令集：CISC(Complex Instruction Set Computer)
-    - x86, x86-64
+  - x86, x86-64
 - 精簡指令集：RISC(Reduced Instruction Set Computer)
-    - ARM, MIPS
+  - ARM, MIPS
 
 以下以 x86 與 x86-64 為主
 
 ## 語法風格
 
-| AT&T | Intel |
-| --- | --- |
-| 暫存器前面加 `%` | 暫存器前無號 |
-| 目標運算元在後面 | 目標運算元在前面 |
-| 16進位數字前面加 `$` | 16進位數字以h結尾 |
-| 立即數字前面加 `$` | 立即數字前面無號 |
-| 間接定址用 `()` | 間接定址用 `[]` |
+| AT&T                     | Intel                              |
+| ------------------------ | ---------------------------------- |
+| 暫存器前面加 `%`         | 暫存器前無號                       |
+| 目標運算元在後面         | 目標運算元在前面                   |
+| 16進位數字前面加 `$`     | 16進位數字以h結尾                  |
+| 立即數字前面加 `$`       | 立即數字前面無號                   |
+| 間接定址用 `()`          | 間接定址用 `[]`                    |
 | 操作位元語法 `b` `w` `l` | 操作位元語法 `byte` `word` `dword` |
 
 ## 暫存器
 
-| 位元 | 可用暫存器 |
-| --- | --- |
-| 8 | `al` `bl` `cl` `dl` `sil` `dil` `bpl` `spl` ... |
-| 16 | `ax` `bx` `cx` `dx` `si` `di` `bp` `sp` ... |
-| 32 | `eax` `ebx` `ecx` `edx` `esi` `edi` `ebp` `esp` ... |
-| 64 | `rax` `rbx` `rcx` `rdx` `rsi` `rdi` `rbp` `rsp` ... |
+| 位元 | 可用暫存器                                          |
+| ---- | --------------------------------------------------- |
+| 8    | `al` `bl` `cl` `dl` `sil` `dil` `bpl` `spl` ...     |
+| 16   | `ax` `bx` `cx` `dx` `si` `di` `bp` `sp` ...         |
+| 32   | `eax` `ebx` `ecx` `edx` `esi` `edi` `ebp` `esp` ... |
+| 64   | `rax` `rbx` `rcx` `rdx` `rsi` `rdi` `rbp` `rsp` ... |
 
 ## 位元組序
 
@@ -138,7 +139,7 @@ jmp label ; 無條件跳躍
 
 ### 暫存器
 
-* ESP(32), RSP(64) -> 堆疊頂端
+- ESP(32), RSP(64) -> 堆疊頂端
 
 ### 操作
 
@@ -181,13 +182,11 @@ ret
 Foo ENDP
 ```
 
-
 ## Stack Frame(Activation Record)
 
 - ebp(rbp)
 
 用在堆疊上劃分函式、函式內的區域變數。
-
 
 ## Calling Convention
 
@@ -197,43 +196,43 @@ x86-64 參考 System V AMD64 ABI。
 
 ### Caller
 
-* 參數從右到左丟堆疊
-* 前六個參數(由左到右)依序放 edi(rdi), esi(rsi), edx(rdx), ecx(rcx), r8, r9，多的丟堆疊
-* 浮點數丟 st0-st7
-* Return Result 丟 eax(rax)，如果是浮點數丟 st0
-* eax, ecx, edx, st0-st7 會被影響，要自己備份(放堆疊)
-* 先做完參數再 call，返回後要自己清堆疊
+- 參數從右到左丟堆疊
+- 前六個參數(由左到右)依序放 edi(rdi), esi(rsi), edx(rdx), ecx(rcx), r8, r9，多的丟堆疊
+- 浮點數丟 st0-st7
+- Return Result 丟 eax(rax)，如果是浮點數丟 st0
+- eax, ecx, edx, st0-st7 會被影響，要自己備份(放堆疊)
+- 先做完參數再 call，返回後要自己清堆疊
 
 ### Callee
 
-* 備份 ebp(rbp)，然後 ebp(rbp) 指到 esp(rbp)
+- 備份 ebp(rbp)，然後 ebp(rbp) 指到 esp(rbp)
 
 ```asm
 push ebp
 mov ebp, esp
 ```
 
-* 備份 ebx(rbx), edi(rdi), esi(rsi)
-* 返回時
-	* 把 eax(rax) 設 return result
-	* 恢復 edi(rdi), esi(rsi)
-	* 把堆疊空間還給系統 ( mov esp, ebp )
-	* 恢復 ebp
-	* 做 ret
+- 備份 ebx(rbx), edi(rdi), esi(rsi)
+- 返回時
+  - 把 eax(rax) 設 return result
+  - 恢復 edi(rdi), esi(rsi)
+  - 把堆疊空間還給系統 ( mov esp, ebp )
+  - 恢復 ebp
+  - 做 ret
 
 ### 微軟的 x86-64
 
-* 前四個參數(由左到右)依序放 rcx, rdx, r8, r9，多的丟堆疊(由右到左)
-* 浮點數丟 XMM0-XMM3
-* Return Result 丟 rax，如果是浮點數丟 XMM0
+- 前四個參數(由左到右)依序放 rcx, rdx, r8, r9，多的丟堆疊(由右到左)
+- 浮點數丟 XMM0-XMM3
+- Return Result 丟 rax，如果是浮點數丟 XMM0
 
 ## System Call
 
-* System Call number 放 eax(rax)
-* 前六個參數(由左到右)依序放 edi(rdi), esi(rsi), edx(rdx), ecx(r10), r8, r9，多的丟堆疊
-	* x64 的 rcx 要換成 r10，因為 rcx 被拿去存 return address
-* Return Result 會在 eax(rax)
-* x86 用 `int 0x80` 做軟體中斷，x64 用 `syscall`
+- System Call number 放 eax(rax)
+- 前六個參數(由左到右)依序放 edi(rdi), esi(rsi), edx(rdx), ecx(r10), r8, r9，多的丟堆疊
+  - x64 的 rcx 要換成 r10，因為 rcx 被拿去存 return address
+- Return Result 會在 eax(rax)
+- x86 用 `int 0x80` 做軟體中斷，x64 用 `syscall`
 
 ```asm
 section .text

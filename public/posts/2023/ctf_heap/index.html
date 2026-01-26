@@ -66,6 +66,7 @@ dynamic memory allocator
     <meta property="article:published_time" content="2023-11-16T00:00:00+08:00">
     <meta property="article:modified_time" content="2023-11-16T00:00:00+08:00">
     <meta property="article:tag" content="Ctf">
+    <meta property="article:tag" content="Security">
  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【CTF】Heap Exploitation(Part 1 - Overview, UAF)">
@@ -277,6 +278,9 @@ dynamic memory allocator
             
             
             <a class="tag-link" href="/tags/ctf" rel="tag">ctf</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/security" rel="tag">security</a>
             
         </div>
         
@@ -556,7 +560,7 @@ dynamic memory allocator
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>BK <span style="color:#ff79c6">=</span> P<span style="color:#ff79c6">-&gt;</span>bk;
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 檢查size */</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> (<span style="color:#50fa7b">__builtin_expect</span> (<span style="color:#50fa7b">chunksize</span>(P) <span style="color:#ff79c6">!=</span> <span style="color:#50fa7b">prev_size</span> (<span style="color:#50fa7b">next_chunk</span>(P)), <span style="color:#bd93f9">0</span>))
-</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">malloc_printerr</span> (<span style="color:#f1fa8c">&#34;corrupted size vs. prev_size&#34;</span>); 
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">malloc_printerr</span> (<span style="color:#f1fa8c">&#34;corrupted size vs. prev_size&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 檢查fd、bk */</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> (<span style="color:#50fa7b">__builtin_expect</span> (FD<span style="color:#ff79c6">-&gt;</span>bk <span style="color:#ff79c6">!=</span> P <span style="color:#ff79c6">||</span> BK<span style="color:#ff79c6">-&gt;</span>fd <span style="color:#ff79c6">!=</span> P, <span style="color:#bd93f9">0</span>))
 </span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">malloc_printerr</span> (check_action, <span style="color:#f1fa8c">&#34;corrupted double-linked list&#34;</span>, P, AV);

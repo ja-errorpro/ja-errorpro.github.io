@@ -2,6 +2,7 @@
 title: OSCP 筆記-目錄
 tags:
   - OSCP
+  - security
 url: "/posts/OSCP/oscp-index"
 ---
 

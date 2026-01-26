@@ -2,7 +2,7 @@
 title: 【HTB Machine】Titanic
 date: 2025-07-14
 tags:
-  - ctf
+  - security
 url: "/posts/HTB/Titanic/"
 ---
 

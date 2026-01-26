@@ -3,17 +3,18 @@ title: 【CTF-WriteUp】EasyCTF-adder
 date: 2022-03-12
 tags:
   - ctf
+  - security
 ---
 
 題目：
 
     給你一個加法程式，找出Flag
-	
 
 [adder](/file/adder)
 
 # 概念：
-  - 反編譯
+
+- 反編譯
 
 # 題解
 
@@ -26,4 +27,3 @@ tags:
 透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$
 
 開啟程式輸入1337 0 0 就可以拿到flag了~
-

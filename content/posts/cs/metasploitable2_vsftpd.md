@@ -2,14 +2,14 @@
 title: 【資訊安全】Metasploitable2 滲透測試實作(筆記)
 date: 2022-11-23
 tags:
-  - ctf
+  - security
 ---
 
 ## 先備知識
 
-  * 知道如何使用 VMware 或 VirtualBox
-  * Kali Linux 基本操作
-  * 能夠讓 Kali 連線至 Metasploitable2 
+- 知道如何使用 VMware 或 VirtualBox
+- Kali Linux 基本操作
+- 能夠讓 Kali 連線至 Metasploitable2
 
 ## Metasploitable2
 

@@ -3,6 +3,7 @@ title: 【Pico】Pwn 系列解題紀錄
 date: 2024-07-16
 tags:
   - ctf
+  - security
 url: "/posts/picoctf/pwn/"
 ---
 
@@ -184,8 +185,8 @@ def exec_fmt(payload):
     else:
         p = process()
     p.sendline(payload)
-    return p.recvall()    
-    
+    return p.recvall()
+
 
 fmt = FmtStr(exec_fmt)
 offset = fmt.offset

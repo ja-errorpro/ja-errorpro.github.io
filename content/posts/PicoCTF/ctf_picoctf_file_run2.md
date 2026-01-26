@@ -3,17 +3,18 @@ title: 【CTF-WriteUp】PicoCTF-file-run2
 date: 2022-10-04
 tags:
   - ctf
+  - security
 ---
 
 題目：
 
-	給你一個檔案，執行它時輸入"Hello!"(不含引號)。
-	
+    給你一個檔案，執行它時輸入"Hello!"(不含引號)。
+
 # 概念：
 
-* 逆向工程
-* Linux 指令操作
-* Linux 權限控制
+- 逆向工程
+- Linux 指令操作
+- Linux 權限控制
 
 # 題解
 
@@ -23,7 +24,7 @@ tags:
 
 main(int param_1,long param_2){
   int var1;
-  
+
   if ((param_1 < 2) || (2 < param_1)) {
     puts("Run this file with only one argument.");
   }

@@ -3,12 +3,13 @@ title: 【系統安全】Stack Overflow
 date: 2024-07-05
 tags:
   - ctf
+  - security
 ---
 
 # 先備知識
 
-* [【系統安全】組合語言](/posts/2023/asm/)
-* [【系統安全】Linux 安全機制](/posts/2023/linux_system_security/)
+- [【系統安全】組合語言](/posts/2023/asm/)
+- [【系統安全】Linux 安全機制](/posts/2023/linux_system_security/)
 
 # Stack Overflow
 
@@ -27,18 +28,18 @@ tags:
 
 ## Concept
 
-* 尋找危險函式，可以確認是否有 buffer overflow，常見的危險函式有 gets, scanf, strcpy, strcat, sprintf, vsprintf
-* 確定 padding 長度，計算要蓋到的地址離 buffer 的距離
-* 如果要蓋 return address，直接看 frame pointer 位置然後找出偏移
-* 如果要蓋 stack 上特定資料，需要先觀察 stack 上的資料再找出偏移
-* 希望透過覆蓋記憶體位址來控制程式的執行流程
+- 尋找危險函式，可以確認是否有 buffer overflow，常見的危險函式有 gets, scanf, strcpy, strcat, sprintf, vsprintf
+- 確定 padding 長度，計算要蓋到的地址離 buffer 的距離
+- 如果要蓋 return address，直接看 frame pointer 位置然後找出偏移
+- 如果要蓋 stack 上特定資料，需要先觀察 stack 上的資料再找出偏移
+- 希望透過覆蓋記憶體位址來控制程式的執行流程
 
 ## ROP
 
-* 用於繞過 NX 保護的漏洞利用技術
-* 利用程式碼已有的片段，拼出想要的功能，而控制程式執行流程
-* 這些片段稱為 gadget，通常以 ret 結尾
-* 可使用 ROPgadget, ropper, pwntools 來找 gadget
+- 用於繞過 NX 保護的漏洞利用技術
+- 利用程式碼已有的片段，拼出想要的功能，而控制程式執行流程
+- 這些片段稱為 gadget，通常以 ret 結尾
+- 可使用 ROPgadget, ropper, pwntools 來找 gadget
 
 ## ret2win
 

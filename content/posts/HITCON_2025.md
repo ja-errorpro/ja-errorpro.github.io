@@ -3,6 +3,7 @@ title: HITCON 2025 BadUSB Easy+Medium WriteUp
 date: 2025-08-16
 tags:
   - ctf
+  - security
 ---
 
 # 前言

@@ -2,7 +2,7 @@
 title: 【資訊安全】Metasploitable3 環境建置(Windows VMware)
 date: 2022-11-29
 tags:
-  - ctf
+  - security
 ---
 
 ## 需求
@@ -30,7 +30,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rapid7/metasploitable3
 vagrant up --provider=vmware_desktop
 ```
 
-等待一段時間，完成後可以在 
+等待一段時間，完成後可以在
 
 `C:\Users\{username}\.vagrant.d\boxes\xxx\yyy\vmware_desktop\` 下看到 box 檔案。
 

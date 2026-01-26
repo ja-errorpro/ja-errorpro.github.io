@@ -2,7 +2,7 @@
 title: "【HTB Machine】Curling"
 date: 2024-09-08
 tags:
-  - ctf
+  - security
 url: "/posts/HTB/Curling/"
 ---
 

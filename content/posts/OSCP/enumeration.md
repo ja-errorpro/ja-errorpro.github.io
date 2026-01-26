@@ -2,6 +2,7 @@
 title: OSCP筆記-枚舉
 tags:
   - OSCP
+  - security
 url: "/posts/OSCP/enumeration"
 ---
 

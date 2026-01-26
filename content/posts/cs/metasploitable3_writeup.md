@@ -2,15 +2,15 @@
 title: 【資訊安全】Metasploitable3 滲透測試實作（筆記）
 date: 2024-04-20
 tags:
-  - ctf
+  - security
 ---
 
 ## 先備知識
 
-  * 知道如何使用 VMware 或 VirtualBox
-  * Kali Linux 基本操作
-  * 能夠讓 Kali 連線至 Metasploitable3
-  * 良好的網路環境
+- 知道如何使用 VMware 或 VirtualBox
+- Kali Linux 基本操作
+- 能夠讓 Kali 連線至 Metasploitable3
+- 良好的網路環境
 
 ## 確認 IP
 

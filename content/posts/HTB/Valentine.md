@@ -2,7 +2,7 @@
 title: "【HTB Machine】Valentine"
 date: 2024-09-05
 tags:
-  - ctf
+  - security
 url: "/posts/HTB/Valentine/"
 ---
 
