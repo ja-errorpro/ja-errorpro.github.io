@@ -374,251 +374,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ sudo apt update &lt;span style="color:#ff79c6"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install -y python3-tk
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;接著要參考 &lt;code&gt;/sw/BadgeCommander/&lt;/code&gt; 裡的 ReadMe，&lt;/p&gt;</description></item><item><title>【HTB Machine】Titanic</title><link>https://ja-errorpro.codes/posts/HTB/Titanic/</link><pubDate>Mon, 14 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Titanic/</guid><description>&lt;h1 id="recon"&gt;Recon&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nmap -sS -A -p- --min-rate &lt;span style="color:#bd93f9"&gt;10000&lt;/span&gt; -oN nmap.txt Remote_IP
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/nmap.png" alt="nmap"&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;Remote_IP titanic.htb&amp;#39;&lt;/span&gt; | sudo tee -a /etc/hosts
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h1 id="web-on-titanichtb-port-80"&gt;Web on titanic.htb port 80&lt;/h1&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/web_on_port_80_1.png" alt="web"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/web_on_port_80_2.png" alt="web"&gt;&lt;/p&gt;
-&lt;p&gt;Burp 攔截封包&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/post_catch.png" alt="post_catch"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/catch2.png" alt="catch2"&gt;&lt;/p&gt;
-&lt;p&gt;IDOR vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/IDOR.png" alt="IDOR"&gt;&lt;/p&gt;
-&lt;p&gt;發現有個 &lt;code&gt;dev&lt;/code&gt; subdomain&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;Remote_IP dev.titanic.htb&amp;#39;&lt;/span&gt; | sudo tee -a /etc/hosts
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h1 id="web-on-devtitanichtb"&gt;Web on dev.titanic.htb&lt;/h1&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/gitea.png" alt="gitea"&gt;&lt;/p&gt;
-&lt;p&gt;可以得到 source code&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;gitea 設定檔&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/app_ini.png" alt="app_ini"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SQLite 資料庫&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/sqlite.png" alt="sqlite"&gt;&lt;/p&gt;
-&lt;p&gt;需要先轉換一下格式&lt;/p&gt;</description></item><item><title>【HTB Challenge】PDFy</title><link>https://ja-errorpro.codes/posts/HTB/PDFy/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/PDFy/</guid><description>&lt;h1 id="pdfy"&gt;PDFy&lt;/h1&gt;
-&lt;p&gt;只有前端的 Source Code，沒什麼特別的&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 6
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 7
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 8
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 9
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;10
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;11
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;12
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;13
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;14
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;15
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;16
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;17
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;18
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;19
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;20
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;21
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;22
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;23
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;24
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;25
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;26
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;27
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;28
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;29
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;30
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;31
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;32
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;33
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;34
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;35
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;36
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;37
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;38
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;39
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;40
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;41
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;42
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;43
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;44
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;45
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;46
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;47
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;48
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;49
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;50
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;51
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;52
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;53
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;54
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;55
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; form &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;form&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; url &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; alerts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;alerts&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; screenshot &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;screenshot&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; loading &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;loading&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; flash &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; (message, level) =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alerts.innerHTML &lt;span style="color:#ff79c6"&gt;+=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;`
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; &amp;lt;div class=&amp;#34;alert alert-&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;level&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; &amp;lt;button type=&amp;#34;button&amp;#34; id=&amp;#34;closeAlert&amp;#34; class=&amp;#34;close&amp;#34; data-dismiss=&amp;#34;alert&amp;#34; aria-label=&amp;#34;Close&amp;#34;&amp;gt;&amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; &amp;lt;strong&amp;gt;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;message&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;lt;/strong&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; &amp;lt;/div&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; `&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;form.addEventListener(&lt;span style="color:#f1fa8c"&gt;&amp;#39;submit&amp;#39;&lt;/span&gt;, e =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; e.preventDefault();
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alerts.innerHTML &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; screenshot.innerHTML &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (url.value.trim().length &lt;span style="color:#ff79c6"&gt;==&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; flash(&lt;span style="color:#f1fa8c"&gt;&amp;#39;URL can\&amp;#39;t be empty&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;warning&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; loading.style.display &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;block&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; fetch(&lt;span style="color:#f1fa8c"&gt;&amp;#39;/api/cache&amp;#39;&lt;/span&gt;, {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; method&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; body&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; JSON.stringify({
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; url.value
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; headers&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; })
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then(resp =&amp;gt; resp.json())
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then(resp =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (resp.message) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; flash(resp.message, resp.level);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; setTimeout(() =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;closeAlert&amp;#39;&lt;/span&gt;).click();
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }, &lt;span style="color:#bd93f9"&gt;2800&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (resp.domain) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; screenshot.innerHTML &lt;span style="color:#ff79c6"&gt;+=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;`
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; &amp;lt;h2&amp;gt;Screenshot for &amp;lt;a href=&amp;#34;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;url.value&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;resp.domain&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; &amp;lt;iframe src=&amp;#34;/static/pdfs/&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;resp.filename&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34; frameborder=&amp;#34;0&amp;#34; scrolling=&amp;#34;no&amp;#34; style=&amp;#34;height:100vh;width:65%;&amp;#34;&amp;gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; `&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; })
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then(() =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; url.value &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; loading.style.display &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;none&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;看起來是 Request 到指定的 URL，一個 SSRF&lt;/p&gt;</description></item><item><title>【HTB Machine】Curling</title><link>https://ja-errorpro.codes/posts/HTB/Curling/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Curling/</guid><description>&lt;h1 id="curling"&gt;Curling&lt;/h1&gt;
-&lt;h2 id="掃描"&gt;掃描&lt;/h2&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image1.png" alt="image1"&gt;&lt;/p&gt;
-&lt;h2 id="web"&gt;Web&lt;/h2&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image2.png" alt="image2"&gt;&lt;/p&gt;
-&lt;p&gt;使用 Joomla CMS&lt;/p&gt;
-&lt;p&gt;從 Source Code 看到 &lt;code&gt;secret.txt&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image3.png" alt="image3"&gt;&lt;/p&gt;
-&lt;p&gt;從第一篇文推測 Super User 名稱是 &lt;code&gt;Floris&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image4.png" alt="image4"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;url&amp;gt;/secret.txt&lt;/code&gt; 有密碼&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image5.png" alt="image5"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;url&amp;gt;/administrator&lt;/code&gt; 登入&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image6.png" alt="image6"&gt;&lt;/p&gt;
-&lt;h2 id="rce"&gt;RCE&lt;/h2&gt;
-&lt;p&gt;在 template 新增利用 SSTI RCE&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image7.png" alt="image7"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image8.png" alt="image8"&gt;&lt;/p&gt;
-&lt;p&gt;在家目錄有三個東西&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image9.png" alt="image9"&gt;&lt;/p&gt;
-&lt;p&gt;輸出來看看，看起來像 hexdump&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image10.png" alt="image10"&gt;&lt;/p&gt;
-&lt;p&gt;用維基百科查詢 magic header 發現是 bzip&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image11.png" alt="image11"&gt;&lt;/p&gt;
-&lt;p&gt;用 CyberChef 驗證，確實是 bzip&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image12.png" alt="image12"&gt;&lt;/p&gt;
-&lt;p&gt;解壓縮後變成 gzip&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image13.png" alt="image13"&gt;&lt;/p&gt;
-&lt;p&gt;Bzip 再解壓&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image14.png" alt="image14"&gt;&lt;/p&gt;
-&lt;p&gt;tar 解壓&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image15.png" alt="image15"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image16.png" alt="image16"&gt;&lt;/p&gt;
-&lt;p&gt;拿到密碼，可以登入 SSH&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image17.png" alt="image17"&gt;&lt;/p&gt;
-&lt;h1 id="user-pwned"&gt;User Pwned!!!&lt;/h1&gt;
-&lt;h2 id="privilege-escalation"&gt;Privilege Escalation&lt;/h2&gt;
-&lt;p&gt;翻一下 admin_area&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/curling/image18.png" alt="image18"&gt;&lt;/p&gt;</description></item><item><title>【HTB Machine】Valentine</title><link>https://ja-errorpro.codes/posts/HTB/Valentine/</link><pubDate>Thu, 05 Sep 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Valentine/</guid><description>&lt;h1 id="htb-machinevalentine"&gt;【HTB Machine】Valentine&lt;/h1&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;LHOST: 10.10.16.13
-RHOST: 10.129.11.184
-&lt;/code&gt;&lt;/pre&gt;&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nmap -sCV 10.129.11.184
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image1.png" alt="image1"&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nmap --script vuln 10.129.11.184
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image2.png" alt="image2"&gt;&lt;/p&gt;
-&lt;p&gt;Heartbleed 有心臟出血漏洞&lt;/p&gt;
-&lt;p&gt;網路上很多 POC, 這邊直接開 metasploit 來攻擊&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;msfconsole
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;search openssl
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;use auxiliary/scanner/ssl/openssl_heartbleed
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;set&lt;/span&gt; RHOSTS 10.129.11.184
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;set&lt;/span&gt; verbose &lt;span style="color:#8be9fd;font-style:italic"&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;run
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/valentine/image3.png" alt="image3"&gt;&lt;/p&gt;
-&lt;p&gt;有一串看起來像 Base64 的字串，拿去解密&lt;/p&gt;</description></item><item><title>【Pico】Pwn 系列解題紀錄</title><link>https://ja-errorpro.codes/posts/picoctf/pwn/</link><pubDate>Tue, 16 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/picoctf/pwn/</guid><description>&lt;h1 id="picopwn-系列解題紀錄"&gt;【Pico】Pwn 系列解題紀錄&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;接著要參考 &lt;code&gt;/sw/BadgeCommander/&lt;/code&gt; 裡的 ReadMe，&lt;/p&gt;</description></item><item><title>【Pico】Pwn 系列解題紀錄</title><link>https://ja-errorpro.codes/posts/picoctf/pwn/</link><pubDate>Tue, 16 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/picoctf/pwn/</guid><description>&lt;h1 id="picopwn-系列解題紀錄"&gt;【Pico】Pwn 系列解題紀錄&lt;/h1&gt;
 &lt;p&gt;這篇只是用來放解題的程式碼，之後再補解題過程。&lt;/p&gt;
 &lt;h2 id="heap0"&gt;heap0&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
@@ -961,8 +717,8 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; process()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sendline(payload)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;recvall() 
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;recvall()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; FmtStr(exec_fmt)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;offset &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; fmt&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;offset
@@ -1086,82 +842,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; exit(&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</guid><description>&lt;h2 id="先備知識"&gt;先備知識&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;知道如何使用 VMware 或 VirtualBox&lt;/li&gt;
-&lt;li&gt;Kali Linux 基本操作&lt;/li&gt;
-&lt;li&gt;能夠讓 Kali 連線至 Metasploitable3&lt;/li&gt;
-&lt;li&gt;良好的網路環境&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="確認-ip"&gt;確認 IP&lt;/h2&gt;
-&lt;p&gt;Win2k8:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ipconfig
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;ub1404:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ifconfig
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id="弱點掃描"&gt;弱點掃描&lt;/h2&gt;
-&lt;p&gt;使用 Nmap 將所有 port 掃描一遍，查看主機上開啟的 Service&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo nmap -sV -sS -n -v --reason --open -p- &amp;lt;Metasploitable3 IP&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&amp;lt;Metasploitable3 IP&amp;gt; 請替換成靶機 IP&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable3/nmap_1.png" alt="nmap1"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable3/nmap_2.png" alt="nmap2"&gt;&lt;/p&gt;
-&lt;h2 id="文件上傳漏洞"&gt;文件上傳漏洞&lt;/h2&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable3/file_upload/uploads.png" alt="upload"&gt;&lt;/p&gt;
-&lt;p&gt;掃描 8585 port 是否存在文件上傳漏洞&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;davtest -url http://&amp;lt;Metasploitable3 IP&amp;gt;:8585/uploads/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable3/file_upload/davtest.png" alt="davtest"&gt;&lt;/p&gt;</description></item><item><title>【HTB Challenge】Sacred Scrolls: Revenge</title><link>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</link><pubDate>Tue, 05 Mar 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Sacred-Scrolls-Revenge/</guid><description>&lt;h1 id="htb-challengesacred-scrolls-revenge"&gt;【HTB Challenge】Sacred Scrolls: Revenge&lt;/h1&gt;
-&lt;h2 id="description"&gt;Description&lt;/h2&gt;
-&lt;p&gt;Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.&lt;/p&gt;
-&lt;h2 id="checksec"&gt;Checksec&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;5
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;6
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;[&lt;/span&gt;*&lt;span style="color:#ff79c6"&gt;]&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Arch: amd64-64-little
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; RELRO: Full RELRO
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Stack: No canary found
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; NX: NX enabled
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; PIE: No PIE &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;0x400000&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; RUNPATH: b&lt;span style="color:#f1fa8c"&gt;&amp;#39;./glibc/&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id="analysis"&gt;Analysis&lt;/h2&gt;
-&lt;p&gt;丟到 IDA 分析程式碼&lt;/p&gt;</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation"&gt;Heap Exploitation&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p&gt;</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation"&gt;Heap Exploitation&lt;/h1&gt;
 &lt;h2 id="預備知識"&gt;預備知識&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;需要注意glibc的版本&lt;/li&gt;
@@ -1431,7 +1112,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;BK &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* 檢查size */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;__builtin_expect&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;chunksize&lt;/span&gt;(P) &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;prev_size&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;next_chunk&lt;/span&gt;(P)), &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (&lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span&gt;); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (&lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* 檢查fd、bk */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;__builtin_expect&lt;/span&gt; (FD&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; P &lt;span style="color:#ff79c6"&gt;||&lt;/span&gt; BK&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;fd &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; P, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;))
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (check_action, &lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted double-linked list&amp;#34;&lt;/span&gt;, P, AV);
@@ -1748,9 +1429,8 @@ RHOST: 10.129.11.184
 &lt;li&gt;行號記錄&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="編譯-compilation"&gt;編譯 (Compilation)&lt;/h3&gt;
-&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;給你指定的libc與elf file請pwn掉它
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p&gt;題目：
+給你指定的libc與elf file請pwn掉它&lt;/p&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;組合語言課學的各種東西&lt;/li&gt;
@@ -1821,7 +1501,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;-&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;32&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; ret;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;do_stuff&lt;/span&gt;(){
@@ -1844,90 +1524,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在函式do_stuff()裡，&lt;code&gt;scanf(&amp;quot;%[^\n]&amp;quot;, str)&lt;/code&gt; 的意思是會一直讀到換行為止然後塞進 str，
-沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</guid><description>&lt;h2 id="需求"&gt;需求&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Windows 10 up&lt;/li&gt;
-&lt;li&gt;VMware Workstation Pro&lt;/li&gt;
-&lt;li&gt;良好的網路環境&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="1-下載並安裝-vagrant--vagrant-vmware-utility"&gt;1. 下載並安裝 Vagrant &amp;amp; Vagrant VMware Utility&lt;/h2&gt;
-&lt;p&gt;Vagrant 是建置虛擬機的工具，透過 Vagrantfile 來設定虛擬機。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://developer.hashicorp.com/vagrant/downloads"&gt;Download Vagrant&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://developer.hashicorp.com/vagrant/downloads/vmware"&gt;Download Vagrant VMware Utility&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="2-快速建置"&gt;2. 快速建置&lt;/h2&gt;
-&lt;p&gt;打開 PowerShell，cd 到適當的資料夾，依序輸入&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mkdir &lt;span style="color:#8be9fd;font-style:italic"&gt;metasploitable3-workspace&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;cd metasploitable3-workspace&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;Invoke-WebRequest&lt;/span&gt; -Uri &lt;span style="color:#f1fa8c"&gt;&amp;#34;https://raw.githubusercontent.com/rapid7/metasploitable3/master/Vagrantfile&amp;#34;&lt;/span&gt; -OutFile &lt;span style="color:#f1fa8c"&gt;&amp;#34;Vagrantfile&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vagrant up --provider=vmware_desktop
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;等待一段時間，完成後可以在&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;C:\Users\{username}\.vagrant.d\boxes\xxx\yyy\vmware_desktop\&lt;/code&gt; 下看到 box 檔案。&lt;/p&gt;
-&lt;p&gt;將 vmware_desktop 資料夾複製到適當的地方，接著打開 VMWare，在 Library 下按右鍵點選 Scan for Virtual Machines，選擇剛剛複製的資料夾，就可以使用 Metasploitable3 了。&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</guid><description>&lt;h2 id="先備知識"&gt;先備知識&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;知道如何使用 VMware 或 VirtualBox&lt;/li&gt;
-&lt;li&gt;Kali Linux 基本操作&lt;/li&gt;
-&lt;li&gt;能夠讓 Kali 連線至 Metasploitable2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="metasploitable2"&gt;Metasploitable2&lt;/h2&gt;
-&lt;p&gt;一種充滿漏洞的Linux系統，適合用於練習滲透測試。&lt;/p&gt;
-&lt;p&gt;可直接到 &lt;a href="https://sourceforge.net/projects/metasploitable/"&gt;Sourceforge&lt;/a&gt; 上下載虛擬機檔。&lt;/p&gt;
-&lt;h2 id="偵查"&gt;偵查&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;開啟 Metasploitable2，會先要求輸入帳號密碼，帳密都是 &lt;code&gt;msfadmin&lt;/code&gt; (輸入密碼時不會顯示在螢幕上)。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;輸入 &lt;code&gt;ifconfig&lt;/code&gt; 查看 IP 位址，假設為 &lt;code&gt;192.168.235.130&lt;/code&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;打開 Kali Linux (IP為192.168.235.128)，終端輸入 &lt;code&gt;msfconsole&lt;/code&gt; 進入 Metasploit。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msfconsole.png" alt="msfconsole"&gt;&lt;/p&gt;
-&lt;ol start="4"&gt;
-&lt;li&gt;使用 nmap 掃描可以連的 port&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;msf6 &amp;gt; nmap -sV 192.168.235.130
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_nmap.png" alt="nmap"&gt;&lt;/p&gt;
-&lt;p&gt;可以看到有一大堆 port 是開著的&lt;/p&gt;
-&lt;h2 id="滲透"&gt;滲透&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;看看 vsftpd 有沒有洞，在 msf 中輸入 &lt;code&gt;search vsftpd&lt;/code&gt;，可以看到有一個 exploit 可以使用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_vsftpd.png" alt="search vsftpd"&gt;&lt;/p&gt;
-&lt;ol start="2"&gt;
-&lt;li&gt;使用這個 exploit，用 &lt;code&gt;show options&lt;/code&gt; 可以看到這個 exploit 需要的參數，然後用 &lt;code&gt;set 參數 值&lt;/code&gt; 設定一些參數。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
-&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;msf6 &amp;gt; use exploit/unix/ftp/vsftpd_234_backdoor
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;msf6 exploit&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;unix/ftp/vsftpd_234_backdoor&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt; &amp;gt; show options
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;msf6 exploit&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;unix/ftp/vsftpd_234_backdoor&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt; &amp;gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;set&lt;/span&gt; RHOSTS 192.168.235.130
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_exploit.png" alt="use exploit"&gt;&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
+沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
@@ -1963,7 +1560,7 @@ RHOST: 10.129.11.184
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;main(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; param_1,&lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; param_2){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; var1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; ((param_1 &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;||&lt;/span&gt; (&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; param_1)) {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; puts(&lt;span style="color:#f1fa8c"&gt;&amp;#34;Run this file with only one argument.&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
@@ -2013,7 +1610,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ gcc -g hello.c -o hello 
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ gcc -g hello.c -o hello
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ gdb ./hello
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;

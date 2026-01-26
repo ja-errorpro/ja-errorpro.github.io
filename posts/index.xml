@@ -807,13 +807,14 @@ seq2d--&gt;nil3([nil])
 &lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;53
 &lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;54
 &lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;55
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;56
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; form &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;form&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; url &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; alerts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;alerts&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; screenshot &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;screenshot&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; loading &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;loading&amp;#39;&lt;/span&gt;);
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; form &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#34;form&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; url &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#34;url&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; alerts &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#34;alerts&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; screenshot &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#34;screenshot&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; loading &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#34;loading&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; flash &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; (message, level) =&amp;gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alerts.innerHTML &lt;span style="color:#ff79c6"&gt;+=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;`
@@ -824,31 +825,32 @@ seq2d--&gt;nil3([nil])
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; `&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;form.addEventListener(&lt;span style="color:#f1fa8c"&gt;&amp;#39;submit&amp;#39;&lt;/span&gt;, e =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;form.addEventListener(&lt;span style="color:#f1fa8c"&gt;&amp;#34;submit&amp;#34;&lt;/span&gt;, (e) =&amp;gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; e.preventDefault();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alerts.innerHTML &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; screenshot.innerHTML &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; alerts.innerHTML &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; screenshot.innerHTML &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (url.value.trim().length &lt;span style="color:#ff79c6"&gt;==&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; flash(&lt;span style="color:#f1fa8c"&gt;&amp;#39;URL can\&amp;#39;t be empty&amp;#39;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#39;warning&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (url.value.trim().length &lt;span style="color:#ff79c6"&gt;==&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; flash(&lt;span style="color:#f1fa8c"&gt;&amp;#34;URL can&amp;#39;t be empty&amp;#34;&lt;/span&gt;, &lt;span style="color:#f1fa8c"&gt;&amp;#34;warning&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; loading.style.display &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;block&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; fetch(&lt;span style="color:#f1fa8c"&gt;&amp;#39;/api/cache&amp;#39;&lt;/span&gt;, {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; method&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; loading.style.display &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;block&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; fetch(&lt;span style="color:#f1fa8c"&gt;&amp;#34;/api/cache&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; method&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; body&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; JSON.stringify({
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; url.value
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; url&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; url.value,
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }),
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; headers&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; },
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; })
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then(resp =&amp;gt; resp.json())
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then(resp =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then((resp) =&amp;gt; resp.json())
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then((resp) =&amp;gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (resp.message) {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; flash(resp.message, resp.level);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; setTimeout(() =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#39;closeAlert&amp;#39;&lt;/span&gt;).click();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;document&lt;/span&gt;.getElementById(&lt;span style="color:#f1fa8c"&gt;&amp;#34;closeAlert&amp;#34;&lt;/span&gt;).click();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }, &lt;span style="color:#bd93f9"&gt;2800&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
@@ -860,8 +862,8 @@ seq2d--&gt;nil3([nil])
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; })
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .then(() =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; url.value &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; loading.style.display &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;none&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; url.value &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; loading.style.display &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;none&amp;#34;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -1289,8 +1291,8 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; process()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;sendline(payload)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;recvall() 
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;recvall()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; FmtStr(exec_fmt)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;offset &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; fmt&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;offset
@@ -1759,7 +1761,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;BK &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; P&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* 檢查size */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;__builtin_expect&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;chunksize&lt;/span&gt;(P) &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;prev_size&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;next_chunk&lt;/span&gt;(P)), &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (&lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span&gt;); 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (&lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted size vs. prev_size&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;/* 檢查fd、bk */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; (&lt;span style="color:#50fa7b"&gt;__builtin_expect&lt;/span&gt; (FD&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;bk &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; P &lt;span style="color:#ff79c6"&gt;||&lt;/span&gt; BK&lt;span style="color:#ff79c6"&gt;-&amp;gt;&lt;/span&gt;fd &lt;span style="color:#ff79c6"&gt;!=&lt;/span&gt; P, &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;))
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;malloc_printerr&lt;/span&gt; (check_action, &lt;span style="color:#f1fa8c"&gt;&amp;#34;corrupted double-linked list&amp;#34;&lt;/span&gt;, P, AV);
@@ -2076,9 +2078,8 @@ RHOST: 10.129.11.184
 &lt;li&gt;行號記錄&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="編譯-compilation"&gt;編譯 (Compilation)&lt;/h3&gt;
-&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;給你指定的libc與elf file請pwn掉它
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p&gt;題目：
+給你指定的libc與elf file請pwn掉它&lt;/p&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;組合語言課學的各種東西&lt;/li&gt;
@@ -2149,7 +2150,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a &lt;span style="color:#ff79c6"&gt;-&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;32&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ret &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; ret;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;void&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;do_stuff&lt;/span&gt;(){
@@ -3255,7 +3256,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;main(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; param_1,&lt;span style="color:#8be9fd"&gt;long&lt;/span&gt; param_2){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; var1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt; ((param_1 &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;||&lt;/span&gt; (&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt; param_1)) {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; puts(&lt;span style="color:#f1fa8c"&gt;&amp;#34;Run this file with only one argument.&amp;#34;&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
@@ -3305,7 +3306,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ gcc -g hello.c -o hello 
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ gcc -g hello.c -o hello
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ gdb ./hello
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
