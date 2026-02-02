@@ -84,7 +84,7 @@ Ex 1 Input: 10 5 2 1 9 10 4 8 7 6 3 5 1 10 6 4 8 7 6 9 4 1 8 5 2 7 10 Ex 1 Outpu
 0
 3
 5
-</code></pre><h4 id=note>Note:</h4><p>第一個詢問區間 $[1,10]，k=6$，其中比k小的元素有:$ {5,2,1,4,3} $，共$5$個。<br>第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。</p><h1 id=題解>題解：</h1><p>建好一棵類型為向量的線段樹，子節點就是 $arr[l]$ push進去。<br>維護方式是將兩個兒子跟自己合併，利用 <code>merge()</code> 可以解決。</p><p>而詢問就是利用二分搜找出位置。</p><p>上程式碼:</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</code></pre><h4 id=note>Note:</h4><p>第一個詢問區間 $[1,10]，k=6$，其中比k小的元素有:$ {5,2,1,4,3} $，共$5$個。<br>第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。</p><h1 id=題解>題解：</h1><p>建好一棵類型為向量的線段樹，子節點就是 $arr[l]$ push進去。<br>維護方式是將兩個兒子跟自己合併，利用 <code>merge()</code> 可以解決。</p><p>而詢問就是利用二分搜找出位置。</p><p>上程式碼:</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
@@ -166,7 +166,7 @@ Ex 1 Input: 10 5 2 1 9 10 4 8 7 6 3 5 1 10 6 4 8 7 6 9 4 1 8 5 2 7 10 Ex 1 Outpu
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">81
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">82
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff79c6>#pragma GCC optimize(&#34;Ofast&#34;)
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#ff79c6>#pragma GCC optimize(&#34;Ofast&#34;)
 </span></span></span><span style=display:flex><span><span style=color:#ff79c6>#pragma loop_opt(on)
 </span></span></span><span style=display:flex><span><span style=color:#ff79c6>#include&lt;bits/stdc++.h&gt;
 </span></span></span><span style=display:flex><span><span style=color:#ff79c6>using</span> <span style=color:#ff79c6>namespace</span> std;
