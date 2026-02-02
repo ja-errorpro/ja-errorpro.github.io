@@ -6,8 +6,15 @@
     <description>Recent content in Security on ErrorPro</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>淺讀 Chrome Elevator 2: 如何繞過 Chrome App-Bound Encryption 來竊取資料</title>
+      <link>http://localhost:1313/posts/2026/chrome-elevator/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026/chrome-elevator/</guid>
+      <description>&lt;p&gt;最近剛推完研究所閒閒沒事，所以來玩一點黑黑的東西。有看到許多 Discord 帳號被盜的新聞，讓我思考如果今天換我是駭客，我要怎麼像他們一樣偷到 Discord 的 Cookie？&lt;/p&gt;&#xA;&lt;p&gt;於是我寫了一個小小的惡意程式，在這篇文章我將紀錄一下取得 Chrome 或 Brave 這種常見瀏覽器的敏感資料的原理以及繞過。&lt;/p&gt;&#xA;&lt;h2 id=&#34;舊版本的-solution-dpapi&#34;&gt;舊版本的 Solution: DPAPI&lt;/h2&gt;&#xA;&lt;p&gt;DPAPI 是 Windows 提供給應用程式用來加密資料的 API，舊版的瀏覽器會使用 DPAPI 來加密儲存在本地端的 Cookie 或是密碼等敏感資料。而 DPAPI 的特性是只要是同一個使用者帳號下的程式都可以解密這些資料，因此駭客只要取得使用者的權限，就能夠輕易地解密這些敏感資料。&lt;/p&gt;&#xA;&lt;p&gt;DPAPI 的路徑通常位於：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;%APPDATA%\Microsoft\Protect\&amp;lt;User SID&amp;gt;\&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;裡面會存著稱為 Master Key 的東西，他是由 Windows 生成的，並且需要使用登入密碼/Kerberos key 來解密。&lt;/p&gt;&#xA;&lt;p&gt;駭客可以使用 mimikatz 的 dpapi 模組來解密這些資料，例如：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dpapi::chrome /in:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;%LOCALAPPDATA%\Google\Chrome\User Data\Default\Login Data&amp;#34;&lt;/span&gt; /encryptionkey:&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;Encrypted Key&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt; /unprotect&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+    </item>
     <item>
       <title>ASUS AiCloud CVE-2025-59366 漏洞分析</title>
       <link>http://localhost:1313/posts/2026/asus-rtbe92u-aicloud/</link>

@@ -18,6 +18,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Secret Content & Drafts (Critical)
+content/secrets/
 draft/
 drafts/
 
