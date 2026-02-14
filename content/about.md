@@ -46,7 +46,14 @@ A common student studying in [Chung Yuan Christian University](https://www1.cycu
 - Google DevFest Taoyuan 2024 Attendee
 - SITCON 2024 Volunteer
 - Google Developer Groups on Campus CYCU 2024 Organizer & Speaker
-- Devcore Conference 2025 Attendee
+- DEVCORE Conference 2025 Attendee
+- SITCON 2025 Attendee
+- COSCUP 2025 Attendee
+- HITCON 2025 Attendee
+- CYCU IT Department Part-time Assistant
+- Google Developer Groups On Campus CYCU 2025 Core Team
+- TeamT5 Camp 2026
+- Taiwan Security Club 2026 Staff
 
 ---
 
