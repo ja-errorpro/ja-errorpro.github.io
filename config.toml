@@ -141,7 +141,7 @@ weight = 6
     link = "https://g.dev/CompileErr0r"
 	[[params.social]]
 	name = "twitter"
-	link = "https://twitter.com/CompileErr0r"
+	link = "https://x.com/CompileErr0r"
     [[params.social]]
     name = "email"
     link = "yijiahuang@ja-errorpro.codes"  # no need for "mailto:" in the head
