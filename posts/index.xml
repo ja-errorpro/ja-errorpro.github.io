@@ -1,124 +1,215 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ErrorPro</title><link>https://ja-errorpro.codes/posts/</link><description>Recent content in Posts on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 16 Feb 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】Facts</title><link>https://ja-errorpro.codes/posts/HTB/Facts/</link><pubDate>Mon, 16 Feb 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Facts/</guid><description>&lt;h1 id="recon"&gt;Recon&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 2
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 3
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 4
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 5
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 6
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 7
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 8
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 9
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 10
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 11
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 12
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 13
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 14
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 15
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 16
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 17
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 18
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 19
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 20
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 21
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 22
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 23
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 24
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 25
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 26
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 27
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 28
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 29
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 30
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 31
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 32
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 33
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 34
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 35
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 36
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 37
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 38
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 39
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 40
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 41
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 42
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 43
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 44
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 45
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 46
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 47
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 48
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 49
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 50
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 51
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 52
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 53
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 54
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 55
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 56
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 57
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 58
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 59
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 60
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 61
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 62
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 63
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 64
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 65
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 66
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 67
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 68
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 69
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 70
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 71
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 72
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 73
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 74
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 75
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 76
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 77
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 78
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 79
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 80
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 81
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 82
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 83
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 84
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 85
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 86
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 87
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 88
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 89
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 90
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 91
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 92
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 93
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 94
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 95
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 96
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 97
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 98
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 99
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;100
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;101
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;102
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nmap -sCV -p- --min-rate &lt;span style="color:#bd93f9"&gt;10000&lt;/span&gt; -oN nmap.txt Remote_IP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Nmap 7.98 scan initiated Tue Feb 17 00:00:54 2026 as: /usr/lib/nmap/nmap -sCV -p- --min-rate 10000 -oN nmap.txt 10.129.246.48&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Nmap scan report &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; 10.129.246.48
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host is up &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;0.077s latency&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Not shown: &lt;span style="color:#bd93f9"&gt;65532&lt;/span&gt; closed tcp ports &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;reset&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;PORT STATE SERVICE VERSION
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;22/tcp open ssh OpenSSH 9.9p1 Ubuntu 3ubuntu3.2 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;Ubuntu Linux; protocol 2.0&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| ssh-hostkey:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| &lt;span style="color:#bd93f9"&gt;256&lt;/span&gt; 4d:d7:b2:8c:d4:df:57:9c:a4:2f:df:c6:e3:01:29:89 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;ECDSA&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_ &lt;span style="color:#bd93f9"&gt;256&lt;/span&gt; a3:ad:6b:2f:4a:bf:6f:48:ac:81:b9:45:3f:de:fb:87 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;ED25519&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;80/tcp open http nginx 1.26.3 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;Ubuntu&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_http-server-header: nginx/1.26.3 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;Ubuntu&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_http-title: Did not follow redirect to http://facts.htb/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;54321/tcp open http Golang net/http server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_http-title: Did not follow redirect to http://10.129.246.48:9001
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_http-server-header: MinIO
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| fingerprint-strings:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| FourOhFourRequest:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| HTTP/1.0 &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt; Bad Request
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Accept-Ranges: bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Content-Length: &lt;span style="color:#bd93f9"&gt;303&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Content-Type: application/xml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Server: MinIO
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Strict-Transport-Security: max-age&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;31536000; includeSubDomains
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Vary: Origin
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Amz-Id-2: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Amz-Request-Id: 1894C57C3B5C2D04
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Content-Type-Options: nosniff
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Xss-Protection: 1; &lt;span style="color:#8be9fd;font-style:italic"&gt;mode&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;block
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Date: Mon, &lt;span style="color:#bd93f9"&gt;16&lt;/span&gt; Feb &lt;span style="color:#bd93f9"&gt;2026&lt;/span&gt; 16:01:30 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| &amp;lt;?xml &lt;span style="color:#8be9fd;font-style:italic"&gt;version&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;encoding&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| &amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidRequest&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid Request &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;invalid argument&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;&amp;lt;/Message&amp;gt;&amp;lt;Resource&amp;gt;/nice ports,/Trinity.txt.bak&amp;lt;/Resource&amp;gt;&amp;lt;RequestId&amp;gt;1894C57C3B5C2D04&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| GenericLines, Help, RTSPRequest, SSLSessionReq:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| HTTP/1.1 &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt; Bad Request
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Content-Type: text/plain; &lt;span style="color:#8be9fd;font-style:italic"&gt;charset&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;utf-8
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Connection: close
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Request
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| GetRequest:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| HTTP/1.0 &lt;span style="color:#bd93f9"&gt;400&lt;/span&gt; Bad Request
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Accept-Ranges: bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Content-Length: &lt;span style="color:#bd93f9"&gt;276&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Content-Type: application/xml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Server: MinIO
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Strict-Transport-Security: max-age&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;31536000; includeSubDomains
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Vary: Origin
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Amz-Id-2: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Amz-Request-Id: 1894C577BA3C5BDD
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Content-Type-Options: nosniff
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| X-Xss-Protection: 1; &lt;span style="color:#8be9fd;font-style:italic"&gt;mode&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;block
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Date: Mon, &lt;span style="color:#bd93f9"&gt;16&lt;/span&gt; Feb &lt;span style="color:#bd93f9"&gt;2026&lt;/span&gt; 16:01:11 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| &amp;lt;?xml &lt;span style="color:#8be9fd;font-style:italic"&gt;version&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;encoding&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| &amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidRequest&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid Request &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;invalid argument&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;&amp;lt;/Message&amp;gt;&amp;lt;Resource&amp;gt;/&amp;lt;/Resource&amp;gt;&amp;lt;RequestId&amp;gt;1894C577BA3C5BDD&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| HTTPOptions:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| HTTP/1.0 &lt;span style="color:#bd93f9"&gt;200&lt;/span&gt; OK
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Vary: Origin
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| Date: Mon, &lt;span style="color:#bd93f9"&gt;16&lt;/span&gt; Feb &lt;span style="color:#bd93f9"&gt;2026&lt;/span&gt; 16:01:12 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_ Content-Length: &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt; service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;SF-Port54321-TCP:V&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;7.98%I&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;7%D&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;2/17%Time&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;69933F46%P&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;x86_64-pc-linux-gnu%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;G
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;SF:enericLines,67,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:x20Request&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;GetRequest,2B0,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.0\x20400\x20Bad\x20Request\r\nAc
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:cept-Ranges:\x20bytes\r\nContent-Length:\x20276\r\nContent-Type:\x20app
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:lication/xml\r\nServer:\x20MinIO\r\nStrict-Transport-Security:\x20max-a
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:ge=31536000;\x20includeSubDomains\r\nVary:\x20Origin\r\nX-Amz-Id-2:\x20
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8\r\nX-A
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:mz-Request-Id:\x201894C577BA3C5BDD\r\nX-Content-Type-Options:\x20nosnif
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:f\r\nX-Xss-Protection:\x201;\x20mode=block\r\nDate:\x20Mon,\x2016\x20Fe
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:b\x202026\x2016:01:11\x20GMT\r\n\r\n&amp;lt;\?xml\x20version=\&amp;#34;1\.0\&amp;#34;\x20encod
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:ing=\&amp;#34;UTF-8\&amp;#34;\?&amp;gt;\n&amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidRequest&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid\x2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:0Request\x20\(invalid\x20argument\)&amp;lt;/Message&amp;gt;&amp;lt;Resource&amp;gt;/&amp;lt;/Resource&amp;gt;&amp;lt;Req
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:uestId&amp;gt;1894C577BA3C5BDD&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:ebf374d3b3fd1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;HTTPOptions,5
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;SF:9,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.0\x20200\x20OK\r\nVary:\x20Origin\r\nDate:\x20Mon,\x2016\x20
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:Feb\x202026\x2016:01:12\x20GMT\r\nContent-Length:\x200\r\n\r\n&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;RTSP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;SF:Request,67,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20R
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:equest&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;Help,67,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:Bad\x20Request&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;SSLSessionReq,67,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20clo
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:se\r\n\r\n400\x20Bad\x20Request&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;%r&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;FourOhFourRequest,2CB,&lt;span style="color:#f1fa8c"&gt;&amp;#34;HTTP/1\.0\x2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:0400\x20Bad\x20Request\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:0303\r\nContent-Type:\x20application/xml\r\nServer:\x20MinIO\r\nStrict-
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nVary:\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:x20Origin\r\nX-Amz-Id-2:\x20dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:9251148b658df7ac2e3e8\r\nX-Amz-Request-Id:\x201894C57C3B5C2D04\r\nX-Con
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:tent-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;\x20mode=block\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:r\nDate:\x20Mon,\x2016\x20Feb\x202026\x2016:01:30\x20GMT\r\n\r\n&amp;lt;\?xml\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:x20version=\&amp;#34;1\.0\&amp;#34;\x20encoding=\&amp;#34;UTF-8\&amp;#34;\?&amp;gt;\n&amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidReque
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:st&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid\x20Request\x20\(invalid\x20argument\)&amp;lt;/Messag
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:e&amp;gt;&amp;lt;Resource&amp;gt;/nice\x20ports,/Trinity\.txt\.bak&amp;lt;/Resource&amp;gt;&amp;lt;RequestId&amp;gt;1894
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:C57C3B5C2D04&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6ebf374d3b3f
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;SF:d1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Nmap done at Tue Feb 17 00:01:45 2026 -- 1 IP address (1 host up) scanned in 50.99 seconds&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;pre tabindex="0"&gt;&lt;code&gt;# Nmap 7.98 scan initiated Tue Feb 17 00:00:54 2026 as: /usr/lib/nmap/nmap -sCV -p- --min-rate 10000 -oN nmap.txt 10.129.246.48
-Nmap scan report for 10.129.246.48
-Host is up (0.077s latency).
-Not shown: 65532 closed tcp ports (reset)
-PORT STATE SERVICE VERSION
-22/tcp open ssh OpenSSH 9.9p1 Ubuntu 3ubuntu3.2 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey:
-| 256 4d:d7:b2:8c:d4:df:57:9c:a4:2f:df:c6:e3:01:29:89 (ECDSA)
-|_ 256 a3:ad:6b:2f:4a:bf:6f:48:ac:81:b9:45:3f:de:fb:87 (ED25519)
-80/tcp open http nginx 1.26.3 (Ubuntu)
-|_http-server-header: nginx/1.26.3 (Ubuntu)
-|_http-title: Did not follow redirect to http://facts.htb/
-54321/tcp open http Golang net/http server
-|_http-title: Did not follow redirect to http://10.129.246.48:9001
-|_http-server-header: MinIO
-| fingerprint-strings:
-| FourOhFourRequest:
-| HTTP/1.0 400 Bad Request
-| Accept-Ranges: bytes
-| Content-Length: 303
-| Content-Type: application/xml
-| Server: MinIO
-| Strict-Transport-Security: max-age=31536000; includeSubDomains
-| Vary: Origin
-| X-Amz-Id-2: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8
-| X-Amz-Request-Id: 1894C57C3B5C2D04
-| X-Content-Type-Options: nosniff
-| X-Xss-Protection: 1; mode=block
-| Date: Mon, 16 Feb 2026 16:01:30 GMT
-| &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
-| &amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidRequest&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid Request (invalid argument)&amp;lt;/Message&amp;gt;&amp;lt;Resource&amp;gt;/nice ports,/Trinity.txt.bak&amp;lt;/Resource&amp;gt;&amp;lt;RequestId&amp;gt;1894C57C3B5C2D04&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;
-| GenericLines, Help, RTSPRequest, SSLSessionReq:
-| HTTP/1.1 400 Bad Request
-| Content-Type: text/plain; charset=utf-8
-| Connection: close
-| Request
-| GetRequest:
-| HTTP/1.0 400 Bad Request
-| Accept-Ranges: bytes
-| Content-Length: 276
-| Content-Type: application/xml
-| Server: MinIO
-| Strict-Transport-Security: max-age=31536000; includeSubDomains
-| Vary: Origin
-| X-Amz-Id-2: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8
-| X-Amz-Request-Id: 1894C577BA3C5BDD
-| X-Content-Type-Options: nosniff
-| X-Xss-Protection: 1; mode=block
-| Date: Mon, 16 Feb 2026 16:01:11 GMT
-| &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
-| &amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidRequest&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid Request (invalid argument)&amp;lt;/Message&amp;gt;&amp;lt;Resource&amp;gt;/&amp;lt;/Resource&amp;gt;&amp;lt;RequestId&amp;gt;1894C577BA3C5BDD&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;
-| HTTPOptions:
-| HTTP/1.0 200 OK
-| Vary: Origin
-| Date: Mon, 16 Feb 2026 16:01:12 GMT
-|_ Content-Length: 0
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port54321-TCP:V=7.98%I=7%D=2/17%Time=69933F46%P=x86_64-pc-linux-gnu%r(G
-SF:enericLines,67,&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
-SF:text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\
-SF:x20Request&amp;#34;)%r(GetRequest,2B0,&amp;#34;HTTP/1\.0\x20400\x20Bad\x20Request\r\nAc
-SF:cept-Ranges:\x20bytes\r\nContent-Length:\x20276\r\nContent-Type:\x20app
-SF:lication/xml\r\nServer:\x20MinIO\r\nStrict-Transport-Security:\x20max-a
-SF:ge=31536000;\x20includeSubDomains\r\nVary:\x20Origin\r\nX-Amz-Id-2:\x20
-SF:dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8\r\nX-A
-SF:mz-Request-Id:\x201894C577BA3C5BDD\r\nX-Content-Type-Options:\x20nosnif
-SF:f\r\nX-Xss-Protection:\x201;\x20mode=block\r\nDate:\x20Mon,\x2016\x20Fe
-SF:b\x202026\x2016:01:11\x20GMT\r\n\r\n&amp;lt;\?xml\x20version=\&amp;#34;1\.0\&amp;#34;\x20encod
-SF:ing=\&amp;#34;UTF-8\&amp;#34;\?&amp;gt;\n&amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidRequest&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid\x2
-SF:0Request\x20\(invalid\x20argument\)&amp;lt;/Message&amp;gt;&amp;lt;Resource&amp;gt;/&amp;lt;/Resource&amp;gt;&amp;lt;Req
-SF:uestId&amp;gt;1894C577BA3C5BDD&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6
-SF:ebf374d3b3fd1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;&amp;#34;)%r(HTTPOptions,5
-SF:9,&amp;#34;HTTP/1\.0\x20200\x20OK\r\nVary:\x20Origin\r\nDate:\x20Mon,\x2016\x20
-SF:Feb\x202026\x2016:01:12\x20GMT\r\nContent-Length:\x200\r\n\r\n&amp;#34;)%r(RTSP
-SF:Request,67,&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text
-SF:/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20R
-SF:equest&amp;#34;)%r(Help,67,&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
-SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
-SF:Bad\x20Request&amp;#34;)%r(SSLSessionReq,67,&amp;#34;HTTP/1\.1\x20400\x20Bad\x20Request
-SF:\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20clo
-SF:se\r\n\r\n400\x20Bad\x20Request&amp;#34;)%r(FourOhFourRequest,2CB,&amp;#34;HTTP/1\.0\x2
-SF:0400\x20Bad\x20Request\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x2
-SF:0303\r\nContent-Type:\x20application/xml\r\nServer:\x20MinIO\r\nStrict-
-SF:Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nVary:\
-SF:x20Origin\r\nX-Amz-Id-2:\x20dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af
-SF:9251148b658df7ac2e3e8\r\nX-Amz-Request-Id:\x201894C57C3B5C2D04\r\nX-Con
-SF:tent-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;\x20mode=block\
-SF:r\nDate:\x20Mon,\x2016\x20Feb\x202026\x2016:01:30\x20GMT\r\n\r\n&amp;lt;\?xml\
-SF:x20version=\&amp;#34;1\.0\&amp;#34;\x20encoding=\&amp;#34;UTF-8\&amp;#34;\?&amp;gt;\n&amp;lt;Error&amp;gt;&amp;lt;Code&amp;gt;InvalidReque
-SF:st&amp;lt;/Code&amp;gt;&amp;lt;Message&amp;gt;Invalid\x20Request\x20\(invalid\x20argument\)&amp;lt;/Messag
-SF:e&amp;gt;&amp;lt;Resource&amp;gt;/nice\x20ports,/Trinity\.txt\.bak&amp;lt;/Resource&amp;gt;&amp;lt;RequestId&amp;gt;1894
-SF:C57C3B5C2D04&amp;lt;/RequestId&amp;gt;&amp;lt;HostId&amp;gt;dd9025bab4ad464b049177c95eb6ebf374d3b3f
-SF:d1af9251148b658df7ac2e3e8&amp;lt;/HostId&amp;gt;&amp;lt;/Error&amp;gt;&amp;#34;);
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Feb 17 00:01:45 2026 -- 1 IP address (1 host up) scanned in 50.99 seconds
-&lt;/code&gt;&lt;/pre&gt;&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd;font-style:italic"&gt;echo&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#39;Remote_IP facts.htb&amp;#39;&lt;/span&gt; | sudo tee -a /etc/hosts
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
- 
-
-&lt;div class="cf-secret-container" id="secret-htb-facts"&gt;
- &lt;div class="cf-secret-lock"&gt;
- &lt;h3 class="secret-title"&gt;🔒&lt;/h3&gt;
- &lt;p class="secret-desc"&gt;&lt;/p&gt;</description></item><item><title>淺讀 Chrome Elevator: 如何繞過 Chrome App-Bound Encryption 來竊取資料</title><link>https://ja-errorpro.codes/posts/2026/chrome-elevator/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/chrome-elevator/</guid><description>&lt;p&gt;最近剛推完研究所閒閒沒事，所以來玩一點黑黑的東西。有看到許多 Discord 帳號被盜的新聞，讓我思考如果今天換我是駭客，我要怎麼像他們一樣偷到 Discord 的 Cookie？&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;add Remote_IP to /etc/hosts&lt;/p&gt;</description></item><item><title>淺讀 Chrome Elevator: 如何繞過 Chrome App-Bound Encryption 來竊取資料</title><link>https://ja-errorpro.codes/posts/2026/chrome-elevator/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/chrome-elevator/</guid><description>&lt;p&gt;最近剛推完研究所閒閒沒事，所以來玩一點黑黑的東西。有看到許多 Discord 帳號被盜的新聞，讓我思考如果今天換我是駭客，我要怎麼像他們一樣偷到 Discord 的 Cookie？&lt;/p&gt;
 &lt;p&gt;於是我寫了一個小小的惡意程式，在這篇文章我將紀錄一下取得 Chrome 或 Brave 這種常見瀏覽器的敏感資料的原理以及繞過。&lt;/p&gt;
 &lt;p&gt;【此文純屬技術研究學習，請勿用於非法用途】&lt;/p&gt;
 &lt;h2 id="舊版本的-solution-dpapi"&gt;舊版本的 Solution: DPAPI&lt;/h2&gt;
