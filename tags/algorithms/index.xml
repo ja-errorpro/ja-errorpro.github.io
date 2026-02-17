@@ -1665,9 +1665,9 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; &lt;span style="color:#50fa7b"&gt;DP&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i){
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(dp[i]&lt;span style="color:#ff79c6"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;) &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; dp[i];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	dp[i] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; j&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;j&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;i;&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;j) &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(a[j]&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;a[i]) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; j&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;j&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;i;&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;j) &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(a[j]&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;a[i])
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	 dp[i] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; max(dp[i],DP(j)&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; dp[i];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
@@ -1718,7 +1718,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;i&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;n;&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;i)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; j&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;j&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;i;&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;j) &lt;span style="color:#ff79c6"&gt;if&lt;/span&gt;(a[j]&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;a[i])
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;			dp[i] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; max(dp[i],dp[j]&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; ans &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;for&lt;/span&gt;(&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; i&lt;span style="color:#ff79c6"&gt;=&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;;i&lt;span style="color:#ff79c6"&gt;&amp;lt;&lt;/span&gt;n;&lt;span style="color:#ff79c6"&gt;++&lt;/span&gt;i) ans &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; max(ans,dp[i]);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	cout &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; ans &lt;span style="color:#ff79c6"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
@@ -1768,7 +1768,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		T[l] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; a[l];
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#ff79c6"&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; mid &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; l&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;(r&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;l)&lt;span style="color:#ff79c6"&gt;/&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 避免 (l+r)/2 溢位 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#8be9fd"&gt;int&lt;/span&gt; mid &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; l&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;(r&lt;span style="color:#ff79c6"&gt;-&lt;/span&gt;l)&lt;span style="color:#ff79c6"&gt;/&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// 避免 (l+r)/2 溢位
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		build(index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;,l,mid); &lt;span style="color:#6272a4"&gt;// build(index&amp;lt;&amp;lt;1,l,mid);
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		build(index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,mid&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;,r);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		T[index] &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; T[index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;] &lt;span style="color:#ff79c6"&gt;+&lt;/span&gt; T[index&lt;span style="color:#ff79c6"&gt;*&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;2&lt;/span&gt;&lt;span style="color:#ff79c6"&gt;+&lt;/span&gt;&lt;span style="color:#bd93f9"&gt;1&lt;/span&gt;] ;
@@ -1883,9 +1883,9 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;) 
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma GCC optimize(&amp;#34;Ofast&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//以較不安全的運算來編譯程式
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on) 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma loop_opt(on)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//迴圈優化
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;#pragma comment(linker,&amp;#34;/stack:200000000&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;//更改最大堆疊數
@@ -1971,9 +1971,9 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;p&gt;我們在程式中做的任何事情可能都需要花費1單位時間，&lt;br&gt;
 比如五則運算、條件判斷、變數存賦等。&lt;br&gt;
 而我們通常會使用函式$O(Big-O)$ 來表示程式的複雜度。&lt;/p&gt;
-&lt;p&gt;對於$O()$，有以下定義：&lt;br&gt;
-$$
-Def:\&lt;br&gt;
+&lt;p&gt;對於$O()$，有以下定義：&lt;/p&gt;
+&lt;p&gt;$$
+Def:\
 \qquad	If\ f(x) = O(g(x)),\ ∃M,x_0 &amp;gt; 0,\ such \ that \ ∀x&amp;gt;=x_0,then \ |f(x)| &amp;lt;= M|g(x)|
 $$&lt;/p&gt;
 &lt;p&gt;為什麼我們需要估時間複雜度？&lt;br&gt;
