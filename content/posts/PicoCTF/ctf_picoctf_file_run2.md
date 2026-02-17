@@ -4,6 +4,17 @@ date: 2022-10-04
 tags:
   - ctf
   - security
+keywords:
+  - picoctf
+  - writeup
+  - file run 2
+  - reverse engineering
+  - linux
+  - 題解
+  - 逆向工程
+  - 新手教學
+  - 程式競賽
+  - CTF
 ---
 
 題目：

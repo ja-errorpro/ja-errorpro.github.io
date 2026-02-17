@@ -4,6 +4,24 @@ date: 2022-10-27
 tags:
   - Git
   - mix
+keywords:
+  - git
+  - version control
+  - init
+  - introduction
+  - distributed systems
+  - tutorial
+  - command line
+  - git init
+  - git config
+  - 版本控制
+  - 初始設定
+  - 新手教學
+  - 分散式系統
+  - 程式碼管理
+  - 環境建置
+  - 指令操作
+  - 入門指南
 ---
 
 ## What is Git?

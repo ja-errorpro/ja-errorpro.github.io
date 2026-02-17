@@ -3,6 +3,24 @@ title: 107年彰雲嘉P6 - 統一發票對獎程式
 date: 2021-09-11
 tags:
   - algorithms
+keywords:
+  - receipt lottery
+  - simulation
+  - algorithm
+  - cpp
+  - problem solving
+  - implementation
+  - chang-yun-chia
+  - programming contest
+  - 統一發票
+  - 對獎程式
+  - 模擬
+  - 演算法
+  - 實作題
+  - 程式競賽
+  - 彰雲嘉
+  - 考古題
+  - 題解
 ---
 
 # **題目：**

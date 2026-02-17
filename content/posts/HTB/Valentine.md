@@ -3,6 +3,18 @@ title: "【HTB Machine】Valentine"
 date: 2024-09-05
 tags:
   - security
+keywords:
+  - htb
+  - writeup
+  - valentine
+  - linux
+  - ctf
+  - heartbleed
+  - 靶機攻略
+  - 滲透測試
+  - 題解
+  - 心臟出血
+  - 漏洞利用
 url: "/posts/HTB/Valentine/"
 ---
 

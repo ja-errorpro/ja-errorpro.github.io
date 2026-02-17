@@ -4,6 +4,21 @@ date: 2022-09-13
 tags:
   - mix
   - Linux
+keywords:
+  - vim
+  - editor
+  - linux
+  - tutorial
+  - cli
+  - text editor
+  - vi
+  - command line editor
+  - 編輯器
+  - 終端機
+  - 教學
+  - 指令操作
+  - 快捷鍵
+  - 基礎入門
 ---
 
 ## 簡介

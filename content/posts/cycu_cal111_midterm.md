@@ -5,6 +5,26 @@ tags:
   - C-Cpp
   - mix
   - algorithms
+keywords:
+  - cycu
+  - computer science
+  - midterm exam
+  - solution
+  - c++
+  - programming
+  - algorithms
+  - chung yuan christian university
+  - freshman
+  - 中原大學
+  - 資工系
+  - 計算機概論
+  - 期中考
+  - 考古題
+  - 題解
+  - 程式設計
+  - 演算法
+  - 大一
+  - 程式解題
 ---
 
 # (本人已放棄思考)

@@ -16,6 +16,19 @@ keywords:
   - 資安防護
   - 資訊保護
   - 網路安全
+  - Chrome
+  - Browser Security
+  - Malware
+  - Stealer
+  - Credential Theft
+  - Password Stealing
+  - Cookie Theft
+  - Chrome Security
+  - Windows Security
+  - Reverse Engineering
+  - Cryptography
+  - InfoStealer
+  - Bypass Security
   - DLL Injection
   - Reflective DLL Injection
   - Process Hollowing

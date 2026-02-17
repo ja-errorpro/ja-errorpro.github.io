@@ -3,6 +3,12 @@ title: OSCP 筆記-目錄
 tags:
   - OSCP
   - security
+keywords:
+  - oscp
+  - index
+  - penetration testing
+  - certification
+  - offsec
 url: "/posts/OSCP/oscp-index"
 ---
 

@@ -3,6 +3,18 @@ title: "【HTB Challenge】Sacred Scrolls: Revenge"
 date: 2024-03-05
 tags:
   - security
+keywords:
+  - htb
+  - writeup
+  - sacred scrolls revenge
+  - linux
+  - ctf
+  - sql injection
+  - 靶機攻略
+  - 滲透測試
+  - 題解
+  - 資料庫注入
+  - 網頁安全
 url: "/posts/HTB/Sacred-Scrolls-Revenge/"
 ---
 

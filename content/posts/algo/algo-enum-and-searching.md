@@ -1,10 +1,23 @@
 ---
 title: 算法筆記-枚舉與搜尋
-tags: 
+tags:
   - algorithms
+keywords:
+  - enumeration
+  - binary search
+  - ternary search
+  - searching algorithms
+  - brute force
+  - algorithm
+  - 枚舉
+  - 二分搜尋
+  - 三分搜尋
+  - 搜尋演算法
+  - 暴力法
+  - 演算法
 ---
 
-* [算法筆記目錄](/posts/algo-index/)
+- [算法筆記目錄](/posts/algo-index/)
 
 # 枚舉與搜尋
 
@@ -74,7 +87,6 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
 八皇后問題，給一個 $n \times n ( 0 < N \le 15)$ 的棋盤，請問有多少種方法可以在棋盤上放置 $n$ 個皇后，使得任意兩個皇后都不會互相攻擊，皇后可以攻擊同一行、同一列、同一斜線上的任意一個棋子。
 
-
 未優化的作法是枚舉 $n$ 個皇后在 $n^2$ 格的每個位置，共 $C^{n^2}_n$ 種，但我們的 $n$ 高達 $15$，所以有 $C^225_15$ 種，非常沒有效率。因為每列最多只有一個皇后，改枚舉每個皇后在每列的位置，同理每行只有一個皇后，因此有 $n!$ 種，但我們的 $n$ 高達 $15$，所以有 $15!$ 種，還是非常沒有效率。
 
 #### 剪枝
@@ -103,14 +115,14 @@ void solve(int now){
 
 我們可以用位元來表示一個集合
 
-  * 空集合 = 0
-  * 宇集合(全部) = ${2^n-1}_{10}$ = (1<<n)-1
-  * 加入一個元素到集合 S
-    * S = S | (1<<i)
-  * 刪除一個元素從集合 S
-    * S = S & ~(1<<i)
-  * 集合內是否有元素 i
-    * S & (1<<i)
+- 空集合 = 0
+- 宇集合(全部) = ${2^n-1}_{10}$ = (1<<n)-1
+- 加入一個元素到集合 S
+  - S = S | (1<<i)
+- 刪除一個元素從集合 S
+  - S = S & ~(1<<i)
+- 集合內是否有元素 i
+  - S & (1<<i)
 
 ### 例題
 
@@ -131,11 +143,10 @@ for(int i=0; i<(1<<n); i++){
 
 STL 中有兩個函式可以幫助我們枚舉排列
 
-  * next_permutation(begin, end)
-  * prev_permutation(begin, end)
+- next_permutation(begin, end)
+- prev_permutation(begin, end)
 
 會根據字典序來枚舉
-
 
 ## 線性搜尋(Linear Search)
 
@@ -164,9 +175,9 @@ while(l<r){
 
 對於左右邊界怎麼設定，看個人習慣(是否包含左右邊界)，我們可以設定成
 
-  * 左邊界為最小值，右邊界為最大值
-  * 左邊界為最小值，右邊界為最大值+1
-  * 左邊界為最小值-1，右邊界為最大值
+- 左邊界為最小值，右邊界為最大值
+- 左邊界為最小值，右邊界為最大值+1
+- 左邊界為最小值-1，右邊界為最大值
 
 只要選擇一種習慣的方式就好，只要注意邊界條件和最後的答案在哪裡就好。
 
@@ -198,7 +209,7 @@ cout << "! " << l-1 << endl;
 
 STL 中有一個函式可以幫助我們找到一個數字在可隨機存取的資料結構中的位置
 
-  * lower_bound(begin, end, target)，找到第一個大於等於 target 的數字的位置
-  * upper_bound(begin, end, target)，找到第一個大於 target 的數字的位置
+- lower_bound(begin, end, target)，找到第一個大於等於 target 的數字的位置
+- upper_bound(begin, end, target)，找到第一個大於 target 的數字的位置
 
 注意如果是 set 或 map，應使用 s.lower_bound(target) 或 s.upper_bound(target) 呼叫。

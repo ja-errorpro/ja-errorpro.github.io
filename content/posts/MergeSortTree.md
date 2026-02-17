@@ -1,5 +1,25 @@
 ---
 title: 區間詢問比K小的數量
+keywords:
+  - merge sort tree
+  - algorithm
+  - competitive programming
+  - segment tree
+  - data structure
+  - cpp
+  - binary search
+  - sorting
+  - range query
+  - advanced data structure
+  - 合併排序樹
+  - 線段樹
+  - 資料結構
+  - 演算法
+  - 程式競賽
+  - 區間查詢
+  - 二分搜
+  - 排序演算法
+  - 進階資料結構
 date: 2021-09-25
 ---
 

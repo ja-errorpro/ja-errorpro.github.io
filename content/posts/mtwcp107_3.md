@@ -3,6 +3,25 @@ title: 107年彰雲嘉p3 - GCD & LCM
 date: 2021-09-11
 tags:
   - algorithms
+keywords:
+  - gcd
+  - lcm
+  - algorithm
+  - number theory
+  - greatest common divisor
+  - least common multiple
+  - cpp
+  - chang-yun-chia
+  - programming contest
+  - 最大公因數
+  - 最小公倍數
+  - 數論
+  - 演算法
+  - 程式競賽
+  - 彰雲嘉
+  - 考古題
+  - 題解
+  - 數學
 ---
 
 # **題目：**

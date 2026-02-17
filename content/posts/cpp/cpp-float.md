@@ -2,6 +2,20 @@
 title: C++筆記-浮點數
 tags:
   - C-Cpp
+keywords:
+  - float
+  - double
+  - precision
+  - floating point
+  - ieee754
+  - c++
+  - cpp
+  - 浮點數
+  - 雙精度
+  - 精度
+  - 科學記號
+  - 誤差
+  - 程式設計
 url: "/posts/cpp/cpp-float"
 ---
 

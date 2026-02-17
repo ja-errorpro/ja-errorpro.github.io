@@ -4,6 +4,18 @@ date: 2024-06-11
 tags:
   - ctf
   - security
+keywords:
+  - ais3
+  - ctf
+  - writeup
+  - pre-exam
+  - security
+  - challenge
+  - 資訊安全
+  - 競賽
+  - 題解
+  - 預賽
+  - 新手教學
 ---
 
 # AIS3 Pre-Exam 2024

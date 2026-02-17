@@ -4,6 +4,18 @@ date: 2022-09-26
 tags:
   - ctf
   - security
+keywords:
+  - gdb
+  - debugger
+  - linux
+  - debugging
+  - gef
+  - pwn
+  - 除錯器
+  - 動態分析
+  - 指令教學
+  - 漏洞利用
+  - 記憶體分析
 ---
 
 # What is GDB?

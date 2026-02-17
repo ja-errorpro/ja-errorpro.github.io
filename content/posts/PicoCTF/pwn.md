@@ -4,6 +4,18 @@ date: 2024-07-16
 tags:
   - ctf
   - security
+keywords:
+  - picoctf
+  - pwn
+  - binary exploitation
+  - ctf
+  - writeup
+  - buffer overflow
+  - 題解
+  - 漏洞利用
+  - 二進制安全
+  - 程式競賽
+  - 解題紀錄
 url: "/posts/picoctf/pwn/"
 ---
 

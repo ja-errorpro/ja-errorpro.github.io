@@ -3,6 +3,18 @@ title: 【資訊安全】Metasploitable3 滲透測試實作（筆記）
 date: 2024-04-20
 tags:
   - security
+keywords:
+  - metasploitable3
+  - writeup
+  - ctf
+  - penetration testing
+  - flags
+  - walkthrough
+  - 滲透測試
+  - 題解
+  - 靶機攻略
+  - 漏洞利用
+  - 實作紀錄
 ---
 
 ## 先備知識

@@ -37,7 +37,7 @@
 1
 "
   />
-   
+    <meta name="keywords" content="C&#43;&#43;, cpp, programming, syntax, basic, tutorial, notes, mingw, compiler" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -693,7 +693,7 @@
           <td style="text-align: left">++/--<!-- raw HTML omitted -->()<!-- raw HTML omitted -->[]<!-- raw HTML omitted -->.<!-- raw HTML omitted -->-&gt;</td>
           <td style="text-align: left">先回傳再加減1<!-- raw HTML omitted -->函式呼叫\陣列存取\物件存取成員\指標存取成員</td>
           <td style="text-align: left">-&gt;</td>
-          <td style="text-align: left">i++/i--  int a = f(x);<!-- raw HTML omitted --> int a[10];<!-- raw HTML omitted -->obj.cmp = 0;<!-- raw HTML omitted -->ptr-&gt;val = 0;</td>
+          <td style="text-align: left">i++/i-- int a = f(x);<!-- raw HTML omitted --> int a[10];<!-- raw HTML omitted -->obj.cmp = 0;<!-- raw HTML omitted -->ptr-&gt;val = 0;</td>
       </tr>
       <tr>
           <td style="text-align: left">3</td>
@@ -875,7 +875,7 @@
   </tbody>
 </table>
 <p>舉例：<br>
-$ 10_{10}\ |\ 8_{10} = 1010_2\ |\ 1000_2 = 1010_2 = 10_{10} $$</p>
+$ 10*{10}\ |\ 8*{10} = 1010<em>2\ |\ 1000_2 = 1010_2 = 10</em>{10} $$</p>
 <p>只要有位元為1，則輸出就是1。</p>
 <p>使用XOR運算結果如下：</p>
 <table>
@@ -910,7 +910,7 @@ $ 10_{10}\ |\ 8_{10} = 1010_2\ |\ 1000_2 = 1010_2 = 10_{10} $$</p>
   </tbody>
 </table>
 <p>舉例：</p>
-<p>$ 10_{10} \oplus 8_{10} = 1010_2 \oplus 1000_2 = 0010_2 = 2_{10} $</p>
+<p>$ 10*{10} \oplus 8*{10} = 1010<em>2 \oplus 1000_2 = 0010_2 = 2</em>{10} $</p>
 <p>兩個位元只能有一個是1，其他情況都回傳0。</p>
 <p>它的用途更廣，你可以用它將兩個數交換：</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -972,7 +972,7 @@ $ 10_{10}\ |\ 8_{10} = 1010_2\ |\ 1000_2 = 1010_2 = 10_{10} $$</p>
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#ff79c6">#define int long long 
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#ff79c6">#define int long long
 </span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span><span style="color:#6272a4">//讓所有整數都變成長整數，之後用int宣告的話都會宣告成long long
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">#define pb push_back
 </span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span><span style="color:#6272a4">//把指令縮短，之後要用就打pb就好
@@ -1517,7 +1517,7 @@ n是奇數，因此程式會將他乘3，但$99999999 \times 3 &gt; 2^{31}-1$，
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a[n]; 
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a[n];
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果要動態宣告，要用到其他資料結構跟動態記憶體宣告，之後會在講指標提到。</p>
@@ -1565,7 +1565,7 @@ n是奇數，因此程式會將他乘3，但$99999999 \times 3 &gt; 2^{31}-1$，
 </span></span><span style="display:flex;"><span>  cin <span style="color:#ff79c6">&gt;&gt;</span> n;
 </span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">int</span> a[n]; <span style="color:#6272a4">// GCC
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">for</span>(<span style="color:#8be9fd">int</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>;i<span style="color:#ff79c6">&lt;</span>n;i<span style="color:#ff79c6">++</span>) cin <span style="color:#ff79c6">&gt;&gt;</span> a[i]; <span style="color:#6272a4">//利用上次講的for迴圈輸入每個變數值，注意從0開始
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">for</span>(<span style="color:#8be9fd">int</span> i<span style="color:#ff79c6">=</span>n<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>;i<span style="color:#ff79c6">&gt;=</span><span style="color:#bd93f9">0</span>;i<span style="color:#ff79c6">--</span>) cout <span style="color:#ff79c6">&lt;&lt;</span> a[i] <span style="color:#ff79c6">&lt;&lt;</span> endl; <span style="color:#6272a4">//倒序輸出，注意最後一個索引值是n-1
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
 </span></span><span style="display:flex;"><span>}
@@ -2119,7 +2119,7 @@ n是奇數，因此程式會將他乘3，但$99999999 \times 3 &gt; 2^{31}-1$，
 </span></span><span style="display:flex;"><span>   Account <span style="color:#ff79c6">*</span>A <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Account(<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">10000</span>,<span style="color:#f1fa8c">&#34;Bob&#34;</span>);
 </span></span><span style="display:flex;"><span>   Account <span style="color:#ff79c6">*</span>B <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Account();
 </span></span><span style="display:flex;"><span>   cout <span style="color:#ff79c6">&lt;&lt;</span> A<span style="color:#ff79c6">-&gt;</span>gender <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> A<span style="color:#ff79c6">-&gt;</span>balance <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> A<span style="color:#ff79c6">-&gt;</span>name <span style="color:#ff79c6">&lt;&lt;</span> endl;
-</span></span><span style="display:flex;"><span>   <span style="color:#6272a4">// 可以把 p-&gt;x 當成 (*p).x 
+</span></span><span style="display:flex;"><span>   <span style="color:#6272a4">// 可以把 p-&gt;x 當成 (*p).x
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>   cout <span style="color:#ff79c6">&lt;&lt;</span> B<span style="color:#ff79c6">-&gt;</span>gender <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> B<span style="color:#ff79c6">-&gt;</span>balance <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> B<span style="color:#ff79c6">-&gt;</span>name <span style="color:#ff79c6">&lt;&lt;</span> endl;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
@@ -2170,7 +2170,7 @@ n是奇數，因此程式會將他乘3，但$99999999 \times 3 &gt; 2^{31}-1$，
 </span></span><span style="display:flex;"><span>   Account <span style="color:#ff79c6">*</span>A <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Account(<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">10000</span>,<span style="color:#f1fa8c">&#34;Bob&#34;</span>);
 </span></span><span style="display:flex;"><span>   Account <span style="color:#ff79c6">*</span>B <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Account();
 </span></span><span style="display:flex;"><span>   cout <span style="color:#ff79c6">&lt;&lt;</span> A<span style="color:#ff79c6">-&gt;</span>gender <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> A<span style="color:#ff79c6">-&gt;</span>balance <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> A<span style="color:#ff79c6">-&gt;</span>name <span style="color:#ff79c6">&lt;&lt;</span> endl;
-</span></span><span style="display:flex;"><span>   <span style="color:#6272a4">// 可以把 p-&gt;x 當成 (*p).x 
+</span></span><span style="display:flex;"><span>   <span style="color:#6272a4">// 可以把 p-&gt;x 當成 (*p).x
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>   cout <span style="color:#ff79c6">&lt;&lt;</span> B<span style="color:#ff79c6">-&gt;</span>gender <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> B<span style="color:#ff79c6">-&gt;</span>balance <span style="color:#ff79c6">&lt;&lt;</span> <span style="color:#f1fa8c">&#34; &#34;</span> <span style="color:#ff79c6">&lt;&lt;</span> B<span style="color:#ff79c6">-&gt;</span>name <span style="color:#ff79c6">&lt;&lt;</span> endl;
 </span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">delete</span> A;
 </span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">delete</span> B;
@@ -2256,9 +2256,9 @@ n是奇數，因此程式會將他乘3，但$99999999 \times 3 &gt; 2^{31}-1$，
 </span></span><span style="display:flex;"><span>			cin <span style="color:#ff79c6">&gt;&gt;</span> B.val[i][j];
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    Matrix Ret <span style="color:#ff79c6">=</span> A<span style="color:#ff79c6">+</span>B; <span style="color:#6272a4">// *
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>	
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
 </span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">for</span>(<span style="color:#8be9fd">int</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>;i<span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">2</span>;i<span style="color:#ff79c6">++</span>){
 </span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">for</span>(<span style="color:#8be9fd">int</span> j<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>;j<span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">2</span>;j<span style="color:#ff79c6">++</span>){
 </span></span><span style="display:flex;"><span>			cout <span style="color:#ff79c6">&lt;&lt;</span> Ret.val[i][j];
@@ -2299,7 +2299,7 @@ n是奇數，因此程式會將他乘3，但$99999999 \times 3 &gt; 2^{31}-1$，
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd">double</span> b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>;
-</span></span><span style="display:flex;"><span>cout <span style="color:#ff79c6">&lt;&lt;</span> sum(a,b) <span style="color:#ff79c6">&lt;&lt;</span> endl;<span style="color:#6272a4">// Compile Error 
+</span></span><span style="display:flex;"><span>cout <span style="color:#ff79c6">&lt;&lt;</span> sum(a,b) <span style="color:#ff79c6">&lt;&lt;</span> endl;<span style="color:#6272a4">// Compile Error
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>但這些型態都是我們已經指定好了，如果兩個交換或要其他型態就又要再寫一個，
@@ -2411,6 +2411,28 @@ Template也可以用於自訂類別/型態</p>
 
     </div>
   </article>
+
+  
+  
+  
+  <div id="related-posts">
+    <h3>Related Posts</h3>
+    <ul>
+      
+      <li><a href="/posts/2022/vscode_cpp_setup/">VSCode設定C&#43;&#43;教學(Code Runner)</a></li>
+      
+      <li><a href="/posts/cpp-index/">C&#43;&#43;筆記-目錄</a></li>
+      
+      <li><a href="/posts/2023/cpe_20230523/">【CPE】2023-05-23 紀錄</a></li>
+      
+      <li><a href="/posts/2023/cycu_cal_1112_midterm/">中原111資工計概下學期期中機測</a></li>
+      
+      <li><a href="/posts/2023/cycu_cal_111_finalexam/">中原111資工計概上學期期末機測</a></li>
+      
+    </ul>
+  </div>
+  
+  
 
   
   

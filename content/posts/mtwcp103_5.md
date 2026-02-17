@@ -3,6 +3,25 @@ title: 103年彰雲嘉P5 - Infix to Postfix
 date: 2021-09-11
 tags:
   - algorithms
+keywords:
+  - infix to postfix
+  - algorithm
+  - stack
+  - data structure
+  - cpp
+  - expression parsing
+  - shunting yard
+  - chang-yun-chia
+  - programming contest
+  - 中序轉後序
+  - 演算法
+  - 堆疊
+  - 資料結構
+  - 運算式解析
+  - 程式競賽
+  - 彰雲嘉
+  - 考古題
+  - 題解
 ---
 
 # **題目：**

@@ -1,10 +1,23 @@
 ---
 title: 算法筆記-貪心
-tags: 
+tags:
   - algorithms
+keywords:
+  - greedy algorithm
+  - optimization
+  - huffman coding
+  - activity selection
+  - algorithm
+  - 貪婪演算法
+  - 貪心法
+  - 最佳化
+  - 霍夫曼編碼
+  - 活動選擇問題
+  - 演算法
+  - 筆記
 ---
 
-* [算法筆記目錄](/posts/algo-index/)
+- [算法筆記目錄](/posts/algo-index/)
 
 ## 貪心
 

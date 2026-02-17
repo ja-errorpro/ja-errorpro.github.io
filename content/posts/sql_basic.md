@@ -4,6 +4,19 @@ date: 2022-12-18
 tags:
   - mix
   - python
+keywords:
+  - sql
+  - sqlite
+  - python
+  - database
+  - tutorial
+  - syntax
+  - sqlite3
+  - 資料庫
+  - 語法教學
+  - 關聯式資料庫
+  - 基礎入門
+  - 程式設計
 ---
 
 # 環境

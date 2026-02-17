@@ -2,6 +2,20 @@
 title: C++筆記-運作原理與基礎模板
 tags:
   - C-Cpp
+keywords:
+  - initialization
+  - main function
+  - basic structure
+  - template
+  - c++
+  - cpp
+  - hello world
+  - 初始化
+  - 主程式
+  - 基本架構
+  - 模板
+  - 程式設計
+  - 入門
 url: "/posts/cpp/cpp-init"
 ---
 

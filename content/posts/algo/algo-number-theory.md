@@ -2,9 +2,24 @@
 title: 算法筆記-數論
 tags:
   - algorithms
+keywords:
+  - number theory
+  - prime numbers
+  - gcd
+  - modular arithmetic
+  - sieve of eratosthenes
+  - algorithm
+  - 數論
+  - 質數
+  - 最大公因數
+  - 模運算
+  - 埃氏篩法
+  - 演算法
+  - 歐拉函數
+  - 費馬小定理
 ---
 
-* [算法筆記目錄](/posts/algo-index/)
+- [算法筆記目錄](/posts/algo-index/)
 
 ## 什麼是數論
 
@@ -18,7 +33,7 @@ tags:
 
 $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b$ 模 $n$ 同餘。
 
-比如 
+比如
 
 7 除以 3 餘 1
 
@@ -28,7 +43,6 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 
 #### 證明:
 
-
 對於 $a \equiv b \pmod k $
 
 令 $a = ks + r,\ b = kt + r$
@@ -36,7 +50,6 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 兩式相減得 $a-b = k(s-t)$
 
 證明結束
-
 
 ### 加乘法性質
 
@@ -60,13 +73,14 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 
 ### 需要注意的地方
 
-當我們在C++或其他大部分程式語言使用 % 時，a % b被定義成 a-(a/b)*b，
+當我們在C++或其他大部分程式語言使用 % 時，a % b被定義成 a-(a/b)\*b，
 
 如果遇到負數時 -8 % 3 應為 1，但程式會算出 -2 ，因此需特別小心，或者寫成 ((a%b)+b)%b。
 
 另外要注意的則是溢值，如果有加法或乘法時建議先mod後再加乘。
 
 ---
+
 ## 快速幂取模
 
 當我們想快速計算 $a^n\ mod\ m$ 時，利用快速冪可以在 $O(logn)$ 的時間內完成。
@@ -87,7 +101,7 @@ ll fast_pow(ll a, ll n){ // 遞迴版
     if(n&1) return fast_pow(a,n-1) * a;
     else {
         ll r = fast_pow(a,n/2);
-        return r * r; 
+        return r * r;
     }
     // 注意不要直接return fast_pow() * fast_pow();
     // 否則會多算一次讓複雜度退化為 O(n)
@@ -113,7 +127,7 @@ ll fast_pow_mod(ll a, ll n, ll m){ // 遞迴版
     if(n&1) return fast_pow(a,n-1) * a % m;
     else {
         ll r = fast_pow(a,n/2) % m;
-        return r * r % m; 
+        return r * r % m;
     }
 }
 ll fast_pow_mod2(ll a, ll n, ll m){ // 迴圈版
@@ -191,6 +205,7 @@ tuple<int,int,int> ExtGcd(int a,int b){
 如果怕麻煩當然也可以寫成迴圈，或是用 reference 傳 $x,y$
 
 ---
+
 ## 質數
 
 如果 $p$ 的正因數只有 $1$ 和 $p$，則可說 $p$ 為質數。
@@ -335,9 +350,9 @@ bool miller_rabin(ll a,ll n){
 
 ## 中國剩餘定理
 
-<<孫子算經>>：`有物不知其數，三三數之賸二，五五數之賸三，七七數之賸二，問物幾何？` 
+<<孫子算經>>：`有物不知其數，三三數之賸二，五五數之賸三，七七數之賸二，問物幾何？`
 
-翻成白話文就是求 $x$ 滿足 
+翻成白話文就是求 $x$ 滿足
 
 $$ \left\\{ \begin{aligned} x \equiv 2 \pmod 3 \\\ x \equiv 3 \pmod 5 \\\ x \equiv 2 \pmod 7 \end{aligned} \right. $$
 
@@ -405,16 +420,16 @@ $c = 15r \equiv 2 \pmod 7$，$r$ 可為 $2$。
 
 #### 引理：
 
-  1. 如果 $p$ 是質數，則 $\varphi(p) = p-1$。
-  2. 如果 $p$ 是質數，則 $\varphi(p^k) = p^{k-1}(p-1)$。
-  3. 如果 $m$ 與 $n$ 互質，則 $\varphi(mn) = \varphi(m)\varphi(n)$。
-  4. 模 $n$ 的既約剩餘系大小就是 $\varphi(n)$。
+1. 如果 $p$ 是質數，則 $\varphi(p) = p-1$。
+2. 如果 $p$ 是質數，則 $\varphi(p^k) = p^{k-1}(p-1)$。
+3. 如果 $m$ 與 $n$ 互質，則 $\varphi(mn) = \varphi(m)\varphi(n)$。
+4. 模 $n$ 的既約剩餘系大小就是 $\varphi(n)$。
 
 現在把正整數 $n$ 做質因數分解
 
 若 $n = p_1^{c_1}p_2^{c_2}...p_n^{c_n}$
 
-，根據引理得 
+，根據引理得
 
 $\varphi(n) = \varphi(p_1^{c_1})\varphi(p_2^{c_2})... \varphi(p_k^{c_k}) $
 
@@ -489,30 +504,30 @@ $= n \prod_{p | n}(1-\frac{1}{p})$。
 
 ### 奇偶函數
 
-  * 奇函數：$f(x) = -f(-x)$，比如 $sin(x)$
-  * 偶函數：$f(x) = f(-x)$，比如 $cos(x)$
+- 奇函數：$f(x) = -f(-x)$，比如 $sin(x)$
+- 偶函數：$f(x) = f(-x)$，比如 $cos(x)$
 
 ### 三角函數正交性
 
-  * $sin(x)cos(x) = \frac{1}{2}sin(2x)$
-  * $sin^2(x) + cos^2(x) = 1$
-  * $sin(x)sin(y) + cos(x)cos(y) $ \
+- $sin(x)cos(x) = \frac{1}{2}sin(2x)$
+- $sin^2(x) + cos^2(x) = 1$
+- $sin(x)sin(y) + cos(x)cos(y) $ \
     $ = \frac{1}{2}sin(x+y) + \frac{1}{2}sin(x-y)$
-  * $sin(x)cos(y) - cos(x)sin(y) $ \
+- $sin(x)cos(y) - cos(x)sin(y) $ \
     $ = \frac{1}{2}sin(x+y) - \frac{1}{2}sin(x-y)$
-  * $sin(mx)cos(nx) $ \
+- $sin(mx)cos(nx) $ \
     $ = \frac{1}{2}sin(m+n)x + \frac{1}{2}sin(m-n)x$
-  * $sin(mx)sin(nx) $ \
+- $sin(mx)sin(nx) $ \
     $= -(\frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x)$
-  * $cos(mx)cos(nx) $ \
+- $cos(mx)cos(nx) $ \
     $ = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$
-  * $e^{ix} = cos(x) + isin(x)$
-  * $\int_{-\pi}^{\pi}sin(mx)cos(nx)dx = 0 (m \neq \pm n)$
-  * $\int_{-\pi}^{\pi}sin(mx)sin(nx)dx = 0 (m \neq \pm n)$
-  * $\int_{-\pi}^{\pi}cos(mx)cos(nx)dx = 0 (m \neq \pm n)$
-  * $\int_{-\pi}^{\pi}sin(mx)cos(mx)dx = 0$
-  * $\int_{-\pi}^{\pi}sin(mx)sin(mx)dx = \pi $
-  * $\int_{-\pi}^{\pi}cos(mx)cos(mx)dx = \pi $
+- $e^{ix} = cos(x) + isin(x)$
+- $\int_{-\pi}^{\pi}sin(mx)cos(nx)dx = 0 (m \neq \pm n)$
+- $\int_{-\pi}^{\pi}sin(mx)sin(nx)dx = 0 (m \neq \pm n)$
+- $\int_{-\pi}^{\pi}cos(mx)cos(nx)dx = 0 (m \neq \pm n)$
+- $\int_{-\pi}^{\pi}sin(mx)cos(mx)dx = 0$
+- $\int\_{-\pi}^{\pi}sin(mx)sin(mx)dx = \pi $
+- $\int\_{-\pi}^{\pi}cos(mx)cos(mx)dx = \pi $
 
 ### 傅立葉級數
 
@@ -520,10 +535,10 @@ $= n \prod_{p | n}(1-\frac{1}{p})$。
 
 而德國的數學家狄利克雷給了週期函數可轉成傅立葉級數的條件(Dirichelet's theorem)：
 
-  * 函數必須有界，即 $\forall x, |f(x)| \le M$，其中 $M$ 為正實數。
-  * 任意閉區間內除了有限個點外，函數必須連續。
-  * 任意閉區間內，函數必須僅包含有限個極值。
-  * 一週期內，$|f(x)|$ 積分必須收斂。
+- 函數必須有界，即 $\forall x, |f(x)| \le M$，其中 $M$ 為正實數。
+- 任意閉區間內除了有限個點外，函數必須連續。
+- 任意閉區間內，函數必須僅包含有限個極值。
+- 一週期內，$|f(x)|$ 積分必須收斂。
 
 設週期函數 $f(x)$，週期為 $2\pi$。對任意整數 $n$，$f(x) = f(x+2n\pi)$，我們可以選擇考慮區間 $\left[ 0,2\pi \right]$，也可以考慮 $\left[ -\pi,\pi \right]$。
 
@@ -535,17 +550,17 @@ $d_1 sin(x) + d_2 sin(2x) + \cdots + d_n sin(nx)$
 
 這種形式的函數稱為三角多項式(trigonometric polynomial)，如果 $c_n, d_n \neq 0$，則 $T(x)$ 為 $n$ 階。
 
-接著我們考慮區間 $\left[ 0,2\pi \right]$，$W$ 為 $C\left[a,b\right]$ 中有限維度的子空間，對連續函數 $f$ 做近似，即 $f$ 在 $W$ 的正交投影，設 $W$ 的正則基底為 $\left\\{ g_0,g_1,\cdots,g_n \right\\}$，則 $f$ 在 $W$ 的正交投影為 
+接著我們考慮區間 $\left[ 0,2\pi \right]$，$W$ 為 $C\left[a,b\right]$ 中有限維度的子空間，對連續函數 $f$ 做近似，即 $f$ 在 $W$ 的正交投影，設 $W$ 的正則基底為 $\left\\{ g_0,g_1,\cdots,g_n \right\\}$，則 $f$ 在 $W$ 的正交投影為
 
-$ proj_{W} f = \langle f,g_0 \rangle g_0 + \langle f,g_1 \rangle g_1 + \cdots + \langle f,g_n \rangle g_n$。
+$ proj\_{W} f = \langle f,g_0 \rangle g_0 + \langle f,g_1 \rangle g_1 + \cdots + \langle f,g_n \rangle g_n$。
 
-$W$ 的正則基底可以對 $1,cos(x),cos(2x),\cdots,cos(nx),sin(x),sin(2x),\cdots,sin(nx)$ 進行正交化，得到正則基底 
+$W$ 的正則基底可以對 $1,cos(x),cos(2x),\cdots,cos(nx),sin(x),sin(2x),\cdots,sin(nx)$ 進行正交化，得到正則基底
 
 $$ g_0 = \frac{1}{\sqrt{2\pi}}, g_1 = \frac{1}{\sqrt{\pi}} cos(x), g_2 = \frac{1}{\sqrt{\pi}} cos(2x), \cdots, $$
 
-$$ g_n = \frac{1}{\sqrt{\pi}} cos(nx), g_{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$
+$$ g*n = \frac{1}{\sqrt{\pi}} cos(nx), g*{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g\_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$
 
-定義係數 
+定義係數
 
 $a_0 = \frac{2}{\sqrt{2\pi}}\langle f,g_0 \rangle, a_1 = \frac{1}{\sqrt{\pi}}\langle f,g_1 \rangle , \cdots , a_n = \frac{1}{\sqrt{\pi}}\langle f,g_n \rangle$
 
@@ -553,7 +568,7 @@ $b_1 = \frac{1}{\sqrt{\pi}}\langle f,g_{n+1} \rangle , \cdots , b_n = \frac{1}{\
 
 代入原正交投影式，得
 
-$ proj_{W} f = \frac{a_0}{2} + \left\[ a_1 cos(x) + \cdots + a_n cos(nx) \right\] + $
+$ proj\_{W} f = \frac{a_0}{2} + \left\[ a_1 cos(x) + \cdots + a_n cos(nx) \right\] + $
 
 $\left\[ b_1 sin(x) + \cdots + b_n sin(nx) \right\]$
 
@@ -595,7 +610,7 @@ $\large{w_n^k = e^\frac{-2\pi ik}{n} = cos(\frac{2k\pi}{n}) + isin(\frac{2k\pi}{
 
 將離散傅立葉轉換表示成矩陣形式 $y = Fx$，
 
-$$ \left\[ \begin{matrix} y_0 \\\ y_1 \\\ y2 \\\ \vdots \\\ y_{n-1} \end{matrix} \right\] = \left\[ \begin{matrix} 1 & 1 & 1 & \cdots & 1 \\\ 1 & w_n^1 & w_n^2 & \cdots & w_n^{n-1} \\\ 1 & w_n^2 & w_n^4 & \cdots & w_n^{2(n-1)} \\\ \vdots & \vdots & \vdots & \ddots & \vdots \\\ 1 & w_n^{n-1} & w_n^{2(n-1)} & \cdots & w_{n}^{(n-1)^2} \end{matrix} \right\] \left\[ \begin{matrix} x_0 \\\ x_1 \\\ x_2 \\\ \vdots \\\ x_{n-1} \end{matrix} \right\]$$
+$$ \left\[ \begin{matrix} y*0 \\\ y_1 \\\ y2 \\\ \vdots \\\ y*{n-1} \end{matrix} \right\] = \left\[ \begin{matrix} 1 & 1 & 1 & \cdots & 1 \\\ 1 & w*n^1 & w_n^2 & \cdots & w_n^{n-1} \\\ 1 & w_n^2 & w_n^4 & \cdots & w_n^{2(n-1)} \\\ \vdots & \vdots & \vdots & \ddots & \vdots \\\ 1 & w_n^{n-1} & w_n^{2(n-1)} & \cdots & w*{n}^{(n-1)^2} \end{matrix} \right\] \left\[ \begin{matrix} x*0 \\\ x_1 \\\ x_2 \\\ \vdots \\\ x*{n-1} \end{matrix} \right\]$$
 
 $F$ 稱為傅立葉矩陣，而要逆變換時其實就是算 $F^{-1}y = x$，而接下來我們最後的目標就是要能快速算出矩陣乘法
 
@@ -603,7 +618,7 @@ $F$ 稱為傅立葉矩陣，而要逆變換時其實就是算 $F^{-1}y = x$，�
 
 設一堆多項式
 
-$$ \left\\{ \begin{align} & y_0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\\ & y1 = a_0 + a_1x_1 + a_2x_1^2 + \cdots + a_nx_1^n \\\ & y2 = a_0 + a_1x_2 + a_2x_2^2 + \cdots + a_nx_2^n \\\ \vdots \\\ & y_{n-1} = a_0 + a_1x_{n-1} + a_2x_{n-1}^2 + \cdots + a_nx_{n-1}^{n-1} \end{align} \right. $$
+$$ \left\\{ \begin{align} & y*0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\\ & y1 = a_0 + a_1x_1 + a_2x_1^2 + \cdots + a_nx_1^n \\\ & y2 = a_0 + a_1x_2 + a_2x_2^2 + \cdots + a_nx_2^n \\\ \vdots \\\ & y*{n-1} = a*0 + a_1x*{n-1} + a*2x*{n-1}^2 + \cdots + a*nx*{n-1}^{n-1} \end{align} \right. $$
 
 我們知道兩點構成一次函數，三點構成二次函數，所以 $n+1$ 個點構成 $n$ 次函數。
 
@@ -617,7 +632,7 @@ $$ \left\\{ \begin{align} & y_0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\
 
 假設 $n = 2^k$，我們可以把函式拆成奇偶項，
 
-$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) $
+$A(x) = (a*0 + a_2x^2 + a_4x^4 + \cdots + a*{n-2}x^{n-2}) $
 
 $+ (a_1x + a_3x^3 + \cdots + a_{n-1}x^{n-1})$
 
@@ -674,4 +689,3 @@ struct FFT{
     }
 }
 ```
-

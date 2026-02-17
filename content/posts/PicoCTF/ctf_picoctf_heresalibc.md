@@ -4,6 +4,18 @@ date: 2023-10-20
 tags:
   - ctf
   - security
+keywords:
+  - picoctf
+  - writeup
+  - here's a libc
+  - pwn
+  - ret2libc
+  - buffer overflow
+  - 題解
+  - 漏洞利用
+  - 緩衝區溢位
+  - 程式競賽
+  - CTF
 ---
 
 題目：

@@ -2,10 +2,25 @@
 title: C++筆記-物件(結構體)
 tags:
   - C-Cpp
+keywords:
+  - struct
+  - class
+  - object
+  - member
+  - encapsulation
+  - c++
+  - cpp
+  - 結構體
+  - 類別
+  - 物件
+  - 成員
+  - 封裝
+  - 程式設計
+  - 物件導向
 url: "/posts/cpp/cpp-struct"
 ---
 
-* [C++筆記-目錄](/posts/cpp-index)
+- [C++筆記-目錄](/posts/cpp-index)
 
 ## 物件(結構體)
 
@@ -42,6 +57,7 @@ a.ID = "A12345678";
 ```
 
 當然如果有很多帳戶，也能直接宣告陣列
+
 ```cpp
 Account Arr[100];
 Arr[0].name = "吉娃娃";
@@ -55,7 +71,6 @@ struct point{
     int distance(int _x,int _y){ return hypot(x-_x,y-_y); }
 };
 ```
-
 
 ### 建構與解構
 
@@ -89,7 +104,7 @@ int main(){
    Account *A = new Account(1,10000,"Bob");
    Account *B = new Account();
    cout << A->gender << " " << A->balance << " " << A->name << endl;
-   // 可以把 p->x 當成 (*p).x 
+   // 可以把 p->x 當成 (*p).x
    cout << B->gender << " " << B->balance << " " << B->name << endl;
 }
 ```
@@ -115,7 +130,7 @@ int main(){
    Account *A = new Account(1,10000,"Bob");
    Account *B = new Account();
    cout << A->gender << " " << A->balance << " " << A->name << endl;
-   // 可以把 p->x 當成 (*p).x 
+   // 可以把 p->x 當成 (*p).x
    cout << B->gender << " " << B->balance << " " << B->name << endl;
    delete A;
    delete B;
@@ -160,9 +175,9 @@ int main(){
 			cin >> B.val[i][j];
 		}
 	}
-	
+
     Matrix Ret = A+B; // *
-	
+
 	for(int i=0;i<2;i++){
 		for(int j=0;j<2;j++){
 			cout << Ret.val[i][j];
@@ -172,7 +187,7 @@ int main(){
 }
 ```
 
-當然也能實作看看 +=、-、\*、\/ 等各種運算子。 
+當然也能實作看看 +=、-、\*、\/ 等各種運算子。
 
 如果要對自訂型態排序(排序在算法筆記)，可以重載 < 運算子。
 
@@ -192,13 +207,13 @@ struct dat{
 ```cpp
 int a = 1;
 double b = 2;
-cout << sum(a,b) << endl;// Compile Error 
+cout << sum(a,b) << endl;// Compile Error
 ```
 
 但這些型態都是我們已經指定好了，如果兩個交換或要其他型態就又要再寫一個，
 於是C++提供了template樣板工具
 
-```cpp 
+```cpp
 template<class T,class T1,...>
 T max(T a,T b){
     return (a>b?a:b);
@@ -220,7 +235,7 @@ struct B{
 
 ```
 
-而如果要對特定型態指定不同行為，可以這樣寫 
+而如果要對特定型態指定不同行為，可以這樣寫
 
 ```cpp
 #include<iostream>

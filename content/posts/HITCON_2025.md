@@ -4,6 +4,28 @@ date: 2025-08-16
 tags:
   - ctf
   - security
+keywords:
+  - hitcon
+  - badusb
+  - ctf
+  - writeup
+  - security
+  - hardware hacking
+  - pcb
+  - rubber ducky
+  - easy combined
+  - hid
+  - hitcon 2025
+  - hardware ctf
+  - usb attack
+  - human interface device
+  - 資安競賽
+  - 硬體安全
+  - 駭客年會
+  - 題解
+  - 惡意USB
+  - 鍵盤模擬
+  - 電路板設計
 ---
 
 # 前言

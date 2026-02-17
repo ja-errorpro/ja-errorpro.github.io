@@ -18,6 +18,10 @@ keywords:
   - object-storage
   - bucket
   - aws-s3
+  - 靶機攻略
+  - 滲透測試
+  - 雲端安全
+  - 題解
   - s3-api
   - s3-compatible
   - golang

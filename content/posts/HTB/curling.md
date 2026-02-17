@@ -3,6 +3,18 @@ title: "【HTB Machine】Curling"
 date: 2024-09-08
 tags:
   - security
+keywords:
+  - htb
+  - writeup
+  - curling
+  - linux
+  - web exploitation
+  - ctf
+  - 靶機攻略
+  - 滲透測試
+  - 題解
+  - 網頁漏洞
+  - 提權
 url: "/posts/HTB/Curling/"
 ---
 

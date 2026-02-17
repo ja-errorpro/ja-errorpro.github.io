@@ -4,6 +4,22 @@ date: 2025-07-10
 tags:
   - Python
   - Mix
+keywords:
+  - python
+  - uv
+  - package manager
+  - pip
+  - poetry
+  - venv
+  - development tools
+  - astral
+  - python package manager
+  - python environment
+  - 套件管理
+  - 開發工具
+  - 虛擬環境
+  - 依賴管理
+  - 現代化工具
 ---
 
 ## Why `uv`?

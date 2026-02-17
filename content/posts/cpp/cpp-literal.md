@@ -2,6 +2,19 @@
 title: C++筆記-字面常數
 tags:
   - C-Cpp
+keywords:
+  - literal
+  - constant
+  - string literal
+  - integer literal
+  - c++
+  - cpp
+  - 字面常數
+  - 常數
+  - 字串常數
+  - 整數常數
+  - 程式設計
+  - 基礎語法
 url: "/posts/cpp/cpp-literal"
 ---
 

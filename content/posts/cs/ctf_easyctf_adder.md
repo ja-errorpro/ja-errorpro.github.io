@@ -4,6 +4,17 @@ date: 2022-03-12
 tags:
   - ctf
   - security
+keywords:
+  - easyctf
+  - adder
+  - writeup
+  - ctf
+  - reverse engineering
+  - python
+  - 逆向工程
+  - 題解
+  - 簡單題
+  - 程式競賽
 ---
 
 題目：

@@ -3,6 +3,26 @@ title: Farmbot歷程
 date: 2021-02-11
 tags:
   - Bot
+keywords:
+  - farmbot
+  - agriculture
+  - robotics
+  - raspberry pi
+  - arduino
+  - open source
+  - automation
+  - iot
+  - fbtug
+  - 智慧農業
+  - 開源機器人
+  - 自動化耕種
+  - 樹莓派
+  - arduino project
+  - 農業機器人
+  - 自造者
+  - 創客
+  - 科技農業
+  - 機器人製作
 ---
 
 

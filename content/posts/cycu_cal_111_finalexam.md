@@ -5,6 +5,26 @@ tags:
   - C-Cpp
   - mix
   - algorithms
+keywords:
+  - cycu
+  - computer science
+  - final exam
+  - solution
+  - c++
+  - programming
+  - data structures
+  - chung yuan christian university
+  - freshman
+  - 中原大學
+  - 資工系
+  - 計算機概論
+  - 期末考
+  - 考古題
+  - 題解
+  - 程式設計
+  - 大一
+  - 程式解題
+  - 上學期
 ---
 
 # 答案僅供參考

@@ -3,6 +3,24 @@ title: VSCode設定C++教學(Code Runner)
 date: 2022-09-11
 tags:
   - C-Cpp
+keywords:
+  - vscode
+  - cpp
+  - c++
+  - setup
+  - mingw
+  - gcc
+  - compiler
+  - windows
+  - code runner
+  - environment setup
+  - visual studio code
+  - c++ setup
+  - 開發環境設定
+  - 編譯器
+  - 教學
+  - 程式設計
+  - 整合開發環境
 ---
 
 遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。

@@ -2,6 +2,21 @@
 title: C++筆記-IO
 tags:
   - C-Cpp
+keywords:
+  - input
+  - output
+  - iostream
+  - cin
+  - cout
+  - file io
+  - c++
+  - cpp
+  - 輸入
+  - 輸出
+  - 串流
+  - 緩衝區
+  - 檔案讀寫
+  - 程式設計
 url: "/posts/cpp/cpp-io"
 ---
 

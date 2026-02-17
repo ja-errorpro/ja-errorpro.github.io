@@ -4,6 +4,18 @@ date: 2024-07-05
 tags:
   - ctf
   - security
+keywords:
+  - stack overflow
+  - buffer overflow
+  - pwn
+  - binary exploitation
+  - ret2libc
+  - shellcode
+  - 堆疊溢位
+  - 緩衝區溢位
+  - 漏洞利用
+  - 系統安全
+  - 二進制弱點
 ---
 
 # 先備知識

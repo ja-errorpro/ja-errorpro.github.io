@@ -5,6 +5,27 @@ tags:
   - Bot
   - mix
   - python
+keywords:
+  - discord
+  - bot
+  - python
+  - discord-py-interactions
+  - slash commands
+  - buttons
+  - menus
+  - library
+  - api wrapper
+  - tutorial
+  - discord bot
+  - python bot
+  - slash command
+  - discord.py
+  - 聊天機器人
+  - 斜線指令
+  - 按鈕
+  - 選單
+  - 教學
+  - 機器人開發
 ---
 
 # Why discord-py-interactions(以下簡稱 dcpi)?

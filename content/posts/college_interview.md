@@ -3,6 +3,30 @@ title: 大學面試心得
 date: 2022-05-20
 tags:
   - mix
+keywords:
+  - college interview
+  - university application
+  - taiwan
+  - computer science
+  - chung yuan christian university
+  - feng chia university
+  - tunghai university
+  - apcs
+  - personal statement
+  - portfolio
+  - 大學面試
+  - 個人申請
+  - 資工系
+  - 面試心得
+  - 備審資料
+  - 學習歷程
+  - 程式設計
+  - 中原大學
+  - 逢甲大學
+  - 東海大學
+  - 元智大學
+  - 升學經驗
+  - 二階面試
 ---
 
 ## 申請入學(新課綱第一屆白老鼠)

@@ -4,6 +4,18 @@ date: 2023-11-16
 tags:
   - ctf
   - security
+keywords:
+  - heap exploitation
+  - pwn
+  - ctf
+  - memory management
+  - glibc
+  - malloc
+  - 堆積溢位
+  - 下溢
+  - 記憶體管理
+  - 漏洞利用
+  - 系統安全
 ---
 
 # Heap Exploitation

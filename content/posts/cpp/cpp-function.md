@@ -2,6 +2,20 @@
 title: C++筆記-函式與遞迴
 tags:
   - C-Cpp
+keywords:
+  - function
+  - recursion
+  - parameter
+  - return value
+  - c++
+  - cpp
+  - procedural programming
+  - 函式
+  - 遞迴
+  - 參數
+  - 回傳值
+  - 程序化程式設計
+  - 函數
 url: "/posts/cpp/cpp-function"
 ---
 

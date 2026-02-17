@@ -1,10 +1,23 @@
 ---
 title: 算法筆記-DP-LIS
-tags: 
+tags:
   - algorithms
+keywords:
+  - dynamic programming
+  - dp
+  - lis
+  - longest increasing subsequence
+  - optimization
+  - algorithm
+  - 動態規劃
+  - 最長遞增子序列
+  - 演算法
+  - 最佳化
+  - 程式競賽
+  - 筆記
 ---
 
-* [算法筆記目錄](/posts/algo-index/)
+- [算法筆記目錄](/posts/algo-index/)
 
 ## 最長遞增子列(Longest Increasing Subsequence)
 
@@ -27,9 +40,9 @@ int a[MAXN],dp[MAXN];
 int DP(int i){
     if(dp[i]>0) return dp[i];
 	dp[i] = 1;
-	for(int j=0;j<i;++j) if(a[j]<a[i]) 
+	for(int j=0;j<i;++j) if(a[j]<a[i])
 	    dp[i] = max(dp[i],DP(j)+1);
-	
+
 	return dp[i];
 
 }
@@ -58,7 +71,7 @@ int main(){
 	for(int i=0;i<n;++i)
 		for(int j=0;j<i;++j) if(a[j]<a[i])
 			dp[i] = max(dp[i],dp[j]+1);
-	
+
 	int ans = 0;
 	for(int i=0;i<n;++i) ans = max(ans,dp[i]);
 	cout << ans << endl;
@@ -81,7 +94,7 @@ int main(){
 ```cpp
 int LIS(vector<int>& a){
 	if(a.size()==0) return 0;
-	
+
 	vector<int> lis;
 	lis.push_back(a[0]);
 	for(int i=1;i<a.size();++i){
@@ -91,7 +104,6 @@ int LIS(vector<int>& a){
 	return lis.size();
 }
 ```
-
 
 如果是非嚴格遞增，把判斷式加個等號就行。
 
@@ -104,6 +116,3 @@ int LIS(vector<int>& a){
 
 因為不重複，一一對應後可以離散化，並將兩序列中只出現在其中一個序列的數刪除，
 就成功轉化成盡量多的A序列元素，讓他在B序列對應的元素單調遞增，即LIS。
-
-
-

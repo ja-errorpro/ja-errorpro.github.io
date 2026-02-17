@@ -1,6 +1,22 @@
 ---
 title: PL OurScheme Interpreter 專案三函數儲存可能思路
 date: 2025-05-15
+keywords:
+  - programming languages
+  - scheme
+  - interpreter
+  - parameter
+  - argument
+  - function storage
+  - cycu
+  - 程式語言
+  - 解釋器
+  - 函數參數
+  - 函數儲存
+  - 中原大學
+  - 實作筆記
+  - 變數作用域
+  - 閉包
 ---
 
 ### [點我參考程式碼(將於專案截止日後轉為公開 repo)](https://github.com/ja-errorpro/CYCS_OurScheme_Interpreter)

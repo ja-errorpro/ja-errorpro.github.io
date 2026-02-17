@@ -4,6 +4,17 @@ date: 2023-11-12
 tags:
   - ctf
   - security
+keywords:
+  - nmap
+  - network scanning
+  - reconnaissance
+  - port scanning
+  - security tools
+  - 網路掃描
+  - 埠口掃描
+  - 資訊蒐集
+  - 安全工具
+  - 指令教學
 ---
 
 # Nmap

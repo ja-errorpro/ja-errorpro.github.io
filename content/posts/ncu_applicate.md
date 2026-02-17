@@ -18,6 +18,10 @@ keywords:
   - 複試
   - 115
   - NCU
+  - university application
+  - interview
+  - computer science
+  - taiwan
   - 國立中央大學
   - 資訊工程學系
   - 碩士班

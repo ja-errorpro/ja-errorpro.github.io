@@ -29,7 +29,7 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 對於 $a \equiv b \pmod k $
 令 $a = ks &#43; r,\ b = kt &#43; r$"
   />
-   
+    <meta name="keywords" content="number theory, prime numbers, gcd, modular arithmetic, sieve of eratosthenes, algorithm, 數論, 質數, 最大公因數, 模運算, 埃氏篩法, 演算法, 歐拉函數, 費馬小定理" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
   <meta name="googlebot" content="index,follow,snippet,archive" />
@@ -427,7 +427,7 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span>(n<span style="color:#ff79c6">&amp;</span><span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">return</span> fast_pow(a,n<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">*</span> a;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span> {
 </span></span><span style="display:flex;"><span>        ll r <span style="color:#ff79c6">=</span> fast_pow(a,n<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> r <span style="color:#ff79c6">*</span> r; 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> r <span style="color:#ff79c6">*</span> r;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 注意不要直接return fast_pow() * fast_pow();
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 否則會多算一次讓複雜度退化為 O(n)
@@ -474,7 +474,7 @@ $a \equiv b \pmod n $ 表示 $n\ |\ (a-b)$ ( $n$ 整除 $a-b$ )，稱 $a$ 與 $b
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span>(n<span style="color:#ff79c6">&amp;</span><span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">return</span> fast_pow(a,n<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">*</span> a <span style="color:#ff79c6">%</span> m;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span> {
 </span></span><span style="display:flex;"><span>        ll r <span style="color:#ff79c6">=</span> fast_pow(a,n<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>) <span style="color:#ff79c6">%</span> m;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> r <span style="color:#ff79c6">*</span> r <span style="color:#ff79c6">%</span> m; 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> r <span style="color:#ff79c6">*</span> r <span style="color:#ff79c6">%</span> m;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>ll <span style="color:#50fa7b">fast_pow_mod2</span>(ll a, ll n, ll m){ <span style="color:#6272a4">// 迴圈版
@@ -875,7 +875,7 @@ $ = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$</li>
 <p>$ proj_{W} f = \langle f,g_0 \rangle g_0 + \langle f,g_1 \rangle g_1 + \cdots + \langle f,g_n \rangle g_n$。</p>
 <p>$W$ 的正則基底可以對 $1,cos(x),cos(2x),\cdots,cos(nx),sin(x),sin(2x),\cdots,sin(nx)$ 進行正交化，得到正則基底</p>
 <p>$$ g_0 = \frac{1}{\sqrt{2\pi}}, g_1 = \frac{1}{\sqrt{\pi}} cos(x), g_2 = \frac{1}{\sqrt{\pi}} cos(2x), \cdots, $$</p>
-<p>$$ g_n = \frac{1}{\sqrt{\pi}} cos(nx), g_{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$</p>
+<p>$$ g<em>n = \frac{1}{\sqrt{\pi}} cos(nx), g</em>{n+1} = \frac{1}{\sqrt{\pi}} sin(x), g_{2n} = \frac{1}{\sqrt{\pi}} sin(nx)$$</p>
 <p>定義係數</p>
 <p>$a_0 = \frac{2}{\sqrt{2\pi}}\langle f,g_0 \rangle, a_1 = \frac{1}{\sqrt{\pi}}\langle f,g_1 \rangle , \cdots , a_n = \frac{1}{\sqrt{\pi}}\langle f,g_n \rangle$</p>
 <p>$b_1 = \frac{1}{\sqrt{\pi}}\langle f,g_{n+1} \rangle , \cdots , b_n = \frac{1}{\sqrt{\pi}}\langle f,g_{2n} \rangle$</p>
@@ -901,18 +901,18 @@ $ = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$</li>
 <p>回顧之前的單位根，可以將原根寫成</p>
 <p>$\large{w_n^k = e^\frac{-2\pi ik}{n} = cos(\frac{2k\pi}{n}) + isin(\frac{2k\pi}{n})}$</p>
 <p>將離散傅立葉轉換表示成矩陣形式 $y = Fx$，</p>
-<p>$$ \left[ \begin{matrix} y_0 \\ y_1 \\ y2 \\ \vdots \\ y_{n-1} \end{matrix} \right] = \left[ \begin{matrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\ 1 &amp; w_n^1 &amp; w_n^2 &amp; \cdots &amp; w_n^{n-1} \\ 1 &amp; w_n^2 &amp; w_n^4 &amp; \cdots &amp; w_n^{2(n-1)} \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 1 &amp; w_n^{n-1} &amp; w_n^{2(n-1)} &amp; \cdots &amp; w_{n}^{(n-1)^2} \end{matrix} \right] \left[ \begin{matrix} x_0 \\ x_1 \\ x_2 \\ \vdots \\ x_{n-1} \end{matrix} \right]$$</p>
+<p>$$ \left[ \begin{matrix} y<em>0 \\ y_1 \\ y2 \\ \vdots \\ y</em>{n-1} \end{matrix} \right] = \left[ \begin{matrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\ 1 &amp; w<em>n^1 &amp; w_n^2 &amp; \cdots &amp; w_n^{n-1} \\ 1 &amp; w_n^2 &amp; w_n^4 &amp; \cdots &amp; w_n^{2(n-1)} \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 1 &amp; w_n^{n-1} &amp; w_n^{2(n-1)} &amp; \cdots &amp; w</em>{n}^{(n-1)^2} \end{matrix} \right] \left[ \begin{matrix} x<em>0 \\ x_1 \\ x_2 \\ \vdots \\ x</em>{n-1} \end{matrix} \right]$$</p>
 <p>$F$ 稱為傅立葉矩陣，而要逆變換時其實就是算 $F^{-1}y = x$，而接下來我們最後的目標就是要能快速算出矩陣乘法</p>
 <h3 id="多項式點值表示法">多項式點值表示法</h3>
 <p>設一堆多項式</p>
-<p>$$ \left\{ \begin{align} &amp; y_0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\ &amp; y1 = a_0 + a_1x_1 + a_2x_1^2 + \cdots + a_nx_1^n \\ &amp; y2 = a_0 + a_1x_2 + a_2x_2^2 + \cdots + a_nx_2^n \\ \vdots \\ &amp; y_{n-1} = a_0 + a_1x_{n-1} + a_2x_{n-1}^2 + \cdots + a_nx_{n-1}^{n-1} \end{align} \right. $$</p>
+<p>$$ \left\{ \begin{align} &amp; y<em>0 = a_0 + a_1x_0 + a_1x_0^2 + \cdots + a_nx_0^n \\ &amp; y1 = a_0 + a_1x_1 + a_2x_1^2 + \cdots + a_nx_1^n \\ &amp; y2 = a_0 + a_1x_2 + a_2x_2^2 + \cdots + a_nx_2^n \\ \vdots \\ &amp; y</em>{n-1} = a<em>0 + a_1x</em>{n-1} + a<em>2x</em>{n-1}^2 + \cdots + a<em>nx</em>{n-1}^{n-1} \end{align} \right. $$</p>
 <p>我們知道兩點構成一次函數，三點構成二次函數，所以 $n+1$ 個點構成 $n$ 次函數。</p>
 <p>我們把 $x^n = 1$ 的單位根都代入多項式，看起來不就像剛剛的傅立葉矩陣嗎？</p>
 <h1 id="我們成功把物理的傅立葉轉換跟-oi-上的結合了">我們成功把物理的傅立葉轉換跟 OI 上的結合了！</h1>
 <h3 id="快速傅立葉轉換">快速傅立葉轉換</h3>
 <p>然而如果直接計算乘法的話，複雜度是 $O(n^2)$，</p>
 <p>假設 $n = 2^k$，我們可以把函式拆成奇偶項，</p>
-<p>$A(x) = (a_0 + a_2x^2 + a_4x^4 + \cdots + a_{n-2}x^{n-2}) $</p>
+<p>$A(x) = (a<em>0 + a_2x^2 + a_4x^4 + \cdots + a</em>{n-2}x^{n-2}) $</p>
 <p>$+ (a_1x + a_3x^3 + \cdots + a_{n-1}x^{n-1})$</p>
 <p>設 $A_0 = (a_0 + a_2x + \cdots + a_{n-2}x^{\frac{n}{2}-1}),$</p>
 <p>$A_1 = (a_1 + a_3x + \cdots + a_{n-1}x^{\frac{n}{2}-1})$</p>
@@ -1007,6 +1007,28 @@ $ = \frac{1}{2}cos(m+n)x - \frac{1}{2}cos(m-n)x$</li>
 </div>
     </div>
   </article>
+
+  
+  
+  
+  <div id="related-posts">
+    <h3>Related Posts</h3>
+    <ul>
+      
+      <li><a href="/posts/2021/mtwcp107_3/">107年彰雲嘉p3 - GCD &amp; LCM</a></li>
+      
+      <li><a href="/posts/2023/cpe_20230523/">【CPE】2023-05-23 紀錄</a></li>
+      
+      <li><a href="/posts/2022/tioj1903/">【TIOJ】1903-你的笑容由我來守護-EXTREME</a></li>
+      
+      <li><a href="/posts/2021/mtwcp103_5/">103年彰雲嘉P5 - Infix to Postfix</a></li>
+      
+      <li><a href="/posts/2021/mtwcp107_6/">107年彰雲嘉P6 - 統一發票對獎程式</a></li>
+      
+    </ul>
+  </div>
+  
+  
 
   
   

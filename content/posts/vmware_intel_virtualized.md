@@ -18,6 +18,9 @@ keywords:
     - bcdedit
     - dism
     - 內嵌虛擬化
+    - 踩坑紀錄
+    - 錯誤排除
+    - 虛擬機設定
     - 虛擬機器
     - VT-x not available
     - virtualization technology

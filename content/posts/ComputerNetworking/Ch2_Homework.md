@@ -2,6 +2,20 @@
 title: 【計算機網路】CH2 作業
 tags:
   - Computer Networking
+keywords:
+  - computer networking
+  - homework
+  - solution
+  - chapter 2
+  - application layer
+  - 計算機網路
+  - 作業
+  - 題解
+  - 第二章
+  - 應用層
+  - HTTP
+  - DNS
+  - SMTP
 url: "/posts/ComputerNetworking/Ch2_Homework/"
 ---
 

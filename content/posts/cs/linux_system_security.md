@@ -4,6 +4,17 @@ date: 2023-10-22
 tags:
   - ctf
   - security
+keywords:
+  - linux security
+  - hardening
+  - system administration
+  - permissions
+  - security audit
+  - 系統安全
+  - 權限管理
+  - 安全稽核
+  - 防護機制
+  - 漏洞防禦
 ---
 
 ## Address space layout randomization(ASLR):

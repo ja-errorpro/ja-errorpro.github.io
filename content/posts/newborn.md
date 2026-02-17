@@ -3,6 +3,18 @@ title: 網站搬家~
 date: 2022-02-16
 tags:
   - Idx
+keywords:
+  - hugo
+  - jekyll
+  - migration
+  - blog
+  - static site generator
+  - website
+  - personal blog
+  - 部落格
+  - 搬家
+  - 靜態網站
+  - 架站心得
 ---
 
 # 我把網站從Jekyll改到Hugo了

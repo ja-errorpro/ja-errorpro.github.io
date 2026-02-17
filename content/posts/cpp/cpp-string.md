@@ -2,10 +2,23 @@
 title: C++筆記-字元字串
 tags:
   - C-Cpp
+keywords:
+  - string
+  - std::string
+  - char array
+  - string manipulation
+  - c++
+  - cpp
+  - 字串
+  - 字元陣列
+  - 字串處理
+  - 程式設計
+  - 基礎語法
+  - 類別
 url: "/posts/cpp/cpp-string"
 ---
 
-* [C++筆記-目錄](/posts/cpp-index)
+- [C++筆記-目錄](/posts/cpp-index)
 
 ## 字元字串
 
@@ -25,7 +38,6 @@ int main(){
 
 沒錯，經過型態轉換，'a'會變成97，'z'會變成122，其實這就是ascii碼，因此我們其實可以用字元做計算，
 現在可以試試看如果改成'A'~'Z'會對應到哪些ascii碼呢。
-
 
 字元的宣告要用char，而字串就是字元型態的陣列啦~
 
@@ -58,7 +70,6 @@ cout << s2 << endl;
 ```
 
 因為字串即字元陣列，我們也可以直接使用[ ]存取每個值。
-
 
 如果要循序走訪，我們可以
 

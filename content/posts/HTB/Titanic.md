@@ -3,6 +3,18 @@ title: 【HTB Machine】Titanic
 date: 2025-07-14
 tags:
   - security
+keywords:
+  - htb
+  - writeup
+  - titanic
+  - linux
+  - ctf
+  - docker
+  - 靶機攻略
+  - 滲透測試
+  - 題解
+  - 容器安全
+  - 提權
 url: "/posts/HTB/Titanic/"
 ---
 

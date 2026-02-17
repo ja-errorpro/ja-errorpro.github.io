@@ -2,10 +2,24 @@
 title: C++筆記-未定義行為
 tags:
   - C-Cpp
+keywords:
+  - undefined behavior
+  - ub
+  - standard
+  - portability
+  - warning
+  - c++
+  - cpp
+  - 未定義行為
+  - 標準規範
+  - 可移植性
+  - 警告
+  - 程式設計
+  - 錯誤避免
 url: "/posts/cpp/cpp-ub"
 ---
 
-* [C++筆記-目錄](/posts/cpp-index)
+- [C++筆記-目錄](/posts/cpp-index)
 
 ## 未定義行為(Undeﬁned Behavior，簡稱 UB)
 
@@ -89,4 +103,3 @@ printf("%d %d", k++, k++);
 int k = 0;
 printf("%d", &k); // 參數非預期型別
 ```
-

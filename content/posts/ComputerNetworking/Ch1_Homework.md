@@ -2,6 +2,20 @@
 title: 【計算機網路】CH1 作業
 tags:
   - Computer Networking
+keywords:
+  - computer networking
+  - homework
+  - solution
+  - chapter 1
+  - kurose ross
+  - 計算機網路
+  - 作業
+  - 題解
+  - 第一章
+  - INTERNET
+  - protocol
+  - edge
+  - core
 url: "/posts/ComputerNetworking/Ch1_Homework/"
 ---
 

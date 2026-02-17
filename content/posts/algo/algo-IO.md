@@ -1,22 +1,35 @@
 ---
 title: 算法筆記-常數優化
-tags: 
+tags:
   - algorithms
+keywords:
+  - fast io
+  - input output
+  - optimization
+  - competitive programming
+  - c++ io
+  - 快速IO
+  - 輸入輸出
+  - 優化
+  - 程式競賽
+  - 常數優化
+  - cin cout
 ---
 
-* [算法筆記目錄](/posts/algo-index/)
+- [算法筆記目錄](/posts/algo-index/)
 
 ## 編譯器優化
+
 我們的程式變成執行檔時需要經過一連串的轉譯與運算，  
 如果改變編譯器的編譯模式，或者改變寫程式的習慣，有可能會讓效率變更高。
 
 一般的Judge編譯器模式都是O2，是個比較安全的運算方式。  
-但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。  
+但其實我們可以在程式中再加入一些指令，改變編譯器的運算方式。
 
 ```cpp
-#pragma GCC optimize("Ofast") 
+#pragma GCC optimize("Ofast")
 //以較不安全的運算來編譯程式
-#pragma loop_opt(on) 
+#pragma loop_opt(on)
 //迴圈優化
 #pragma comment(linker,"/stack:200000000")
 //更改最大堆疊數
@@ -33,7 +46,7 @@ tags:
 我們應該減少拿取的動作，因為這非常耗時。
 
 如果做過CF互動題，會發現題目會要求在輸出後加上cout.flush()，就是要把資料強制輸出，  
-否則它可能要等到程式結束後才輸出。  
+否則它可能要等到程式結束後才輸出。
 
 cin，它的原理其實是讀取鍵盤輸入的字，再輸出給使用者看打了什麼，  
 這就讓拿取的動作暴增了，解決方法是加上 `cin.tie(0);`  

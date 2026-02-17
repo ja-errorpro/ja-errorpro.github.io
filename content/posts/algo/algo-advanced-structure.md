@@ -3,6 +3,18 @@ title: 算法筆記-進階資料結構
 tags: 
   - algorithms
 keywords:
+  - segment tree
+  - fenwick tree
+  - sparse table
+  - data structure
+  - advanced algorithms
+  - competitive programming
+  - 線段樹
+  - 樹狀數組
+  - 稀疏表
+  - 資料結構
+  - 進階演算法
+  - 程式競賽
 ---
 
 * [算法筆記目錄](/posts/algo-index/)

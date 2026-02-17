@@ -2,14 +2,30 @@
 title: C++筆記-指標
 tags:
   - C-Cpp
+keywords:
+  - pointer
+  - address
+  - reference
+  - memory management
+  - dereference
+  - c++
+  - cpp
+  - 指標
+  - 位址
+  - 參考
+  - 記憶體管理
+  - 取值
+  - 程式設計
+  - 進階語法
 url: "/posts/cpp/cpp-pointer"
 ---
 
-* [C++筆記-目錄](/posts/cpp-index)
+- [C++筆記-目錄](/posts/cpp-index)
 
 ## 指標
 
 ### 觀念
+
 現在我們要寫一個交換兩個數的函式，如果這樣寫會發生什麼事呢
 
 ```cpp
@@ -27,6 +43,7 @@ int main(){
 }
 
 ```
+
 Output: `1 2`
 
 奇怪，ab沒有被交換，
@@ -35,7 +52,7 @@ Output: `1 2`
 
 要取得變數的指標，只需在它前面加上 & 就好，如果我們輸出 &a，會得到它的記憶體位址。
 
-而指標的型態，取決於它從哪種變數取得指標，int指標型別就是 int\*，double指標型別是double*
+而指標的型態，取決於它從哪種變數取得指標，int指標型別就是 int\*，double指標型別是double\*
 
 宣告指標的方式也很簡單
 
@@ -118,7 +135,6 @@ for(auto i=begin(arr);i!=end(arr);++i){
 }
 ```
 
-
 ### 配置記憶體
 
 我們運行程式時，每個變數都會有段生命週期，只存在於程式運行時，放在記憶體的堆疊區，
@@ -142,6 +158,7 @@ delete p2;
 ```
 
 我們還能配置連續空間
+
 ```cpp
 int *p1 = new int[100];
 int *p2 = new int[5]{1,2,3,4,5}; // 初始化
@@ -159,5 +176,6 @@ delete [] p3;
 int **arr = new int*[10];
 for(int i=0;i<10;i++) arr[i] = new int[12]{1};
 ```
+
 最後程式宣告的是10\*12的二維陣列，並初始化為1。
 也一定要記得在最後用迴圈把陣列delete還給電腦。

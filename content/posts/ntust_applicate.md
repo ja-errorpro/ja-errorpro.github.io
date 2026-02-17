@@ -18,6 +18,10 @@ keywords:
   - 碩士班
   - 甄試
   - 備審資料
+  - university application
+  - interview
+  - computer science
+  - taiwan
   - 初審
   - 程式設計
   - 軟體開發

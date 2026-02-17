@@ -3,6 +3,17 @@ title: 【資訊安全】Metasploitable3 環境建置(Windows VMware)
 date: 2022-11-29
 tags:
   - security
+keywords:
+  - metasploitable3
+  - installation
+  - lab setup
+  - virtualization
+  - penetration testing environment
+  - 環境建置
+  - 靶機安裝
+  - 虛擬化
+  - 滲透測試實驗室
+  - 教學
 ---
 
 ## 需求

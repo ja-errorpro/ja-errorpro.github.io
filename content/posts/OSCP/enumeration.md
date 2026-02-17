@@ -3,6 +3,18 @@ title: OSCP筆記-枚舉
 tags:
   - OSCP
   - security
+keywords:
+  - enumeration
+  - oscp
+  - pentesting
+  - network scanning
+  - reconnaissance
+  - checklist
+  - 資訊蒐集
+  - 滲透測試
+  - 檢查清單
+  - 網路掃描
+  - 認證考試
 url: "/posts/OSCP/enumeration"
 ---
 

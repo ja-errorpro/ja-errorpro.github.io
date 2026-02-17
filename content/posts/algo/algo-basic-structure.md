@@ -3,6 +3,18 @@ title: 算法筆記-基本資料結構
 tags: 
   - algorithms
 keywords:
+  - stack
+  - queue
+  - deque
+  - data structure
+  - basic algorithms
+  - competitive programming
+  - 堆疊
+  - 佇列
+  - 雙端佇列
+  - 資料結構
+  - 基礎演算法
+  - 程式競賽
 ---
 
 * [算法筆記目錄](/posts/algo-index/)

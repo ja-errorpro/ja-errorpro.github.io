@@ -3,6 +3,25 @@ title: 自架CodeServer，實現隨時隨地都能寫程式
 date: 2022-02-16
 tags:
   - mix
+keywords:
+  - code-server
+  - vscode
+  - docker
+  - self-hosted
+  - development environment
+  - remote coding
+  - docker-compose
+  - linux
+  - windows 11
+  - cloud ide
+  - visual studio code
+  - browser ide
+  - server setup
+  - 遠端開發
+  - 雲端開發環境
+  - 架設伺服器
+  - 程式開發
+  - 虛擬化容器
 ---
 
 最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~

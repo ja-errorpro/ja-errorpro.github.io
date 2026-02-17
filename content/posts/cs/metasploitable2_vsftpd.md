@@ -3,6 +3,18 @@ title: 【資訊安全】Metasploitable2 滲透測試實作(筆記)
 date: 2022-11-23
 tags:
   - security
+keywords:
+  - metasploitable2
+  - vsftpd
+  - backdoor
+  - exploit
+  - penetration testing
+  - metasploit
+  - 滲透測試
+  - 漏洞利用
+  - 後門
+  - 靶機實作
+  - 教學
 ---
 
 ## 先備知識

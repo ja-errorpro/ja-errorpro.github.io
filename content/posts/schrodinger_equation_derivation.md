@@ -3,6 +3,20 @@ title: 【普物】 Schrodinger Equation Derivation
 date: 2023-01-03
 tags:
   - mix
+keywords:
+  - physics
+  - quantum mechanics
+  - schrodinger equation
+  - derivation
+  - wave function
+  - latex
+  - 物理
+  - 量子力學
+  - 薛丁格方程式
+  - 推導
+  - 波函數
+  - 普通物理
+  - 公式證明
 ---
 
 # 薛丁格方程

@@ -4,6 +4,18 @@ date: 2023-11-12
 tags:
   - ctf
   - security
+keywords:
+  - ctf tools
+  - security tools
+  - pwntools
+  - gdb
+  - ida pro
+  - ghidra
+  - 工具集
+  - 滲透測試
+  - 逆向工具
+  - 除錯器
+  - 常用指令
 ---
 
 # CTF工具集

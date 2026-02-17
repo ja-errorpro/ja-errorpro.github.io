@@ -4,6 +4,23 @@ title = 'ErrorPro'
 theme = "cactus"
 timeZone = "Asia/Taipei"
 
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+
+[[related.indices]]
+  name = "tags"
+  weight = 100
+
+[[related.indices]]
+  name = "keywords"
+  weight = 50
+
+[[related.indices]]
+  name = "date"
+  weight = 10
+
 [permalinks]
 posts = "/posts/:year/:filename/"
 

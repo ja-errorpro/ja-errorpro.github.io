@@ -4,6 +4,17 @@ date: 2023-10-25
 tags:
   - ctf
   - security
+keywords:
+  - elf
+  - executable and linkable format
+  - linux
+  - binary analysis
+  - reverse engineering
+  - 執行檔格式
+  - 二進制分析
+  - 逆向工程
+  - 系統程式設計
+  - 連結器
 ---
 
 # ELF檔案格式

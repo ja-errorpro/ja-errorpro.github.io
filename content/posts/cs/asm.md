@@ -4,6 +4,18 @@ date: 2023-10-22
 tags:
   - ctf
   - security
+keywords:
+  - assembly
+  - asm
+  - x86
+  - registers
+  - reverse engineering
+  - low level programming
+  - 組合語言
+  - 逆向工程
+  - 暫存器
+  - 機器碼
+  - 系統程式設計
 ---
 
 # 組合語言

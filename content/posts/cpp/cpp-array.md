@@ -2,6 +2,19 @@
 title: C++筆記-陣列
 tags:
   - C-Cpp
+keywords:
+  - array
+  - vector
+  - multidimensional array
+  - c++
+  - cpp
+  - data structure
+  - 陣列
+  - 向量
+  - 多維陣列
+  - 資料結構
+  - 程式設計
+  - 教學
 url: "/posts/cpp/cpp-array"
 ---
 

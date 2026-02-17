@@ -18,6 +18,9 @@ keywords:
   - 戊組
   - 115
   - NYCU
+  - university application
+  - interview
+  - computer science
   - 國立陽明交通大學
   - 資訊工程學系
   - 資訊科學與工程學系

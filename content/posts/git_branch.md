@@ -4,6 +4,23 @@ date: 2022-10-27
 tags:
   - Git
   - mix
+keywords:
+  - git
+  - version control
+  - branch
+  - merge
+  - tutorial
+  - development
+  - command line
+  - git branch
+  - git merge
+  - 版本控制
+  - 分支管理
+  - 合併分支
+  - 軟體開發
+  - 指令教學
+  - 團隊合作
+  - 程式碼管理
 ---
 
 當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。

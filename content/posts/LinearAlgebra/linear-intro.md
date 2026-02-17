@@ -2,6 +2,17 @@
 title: 線性代數筆記-線性方程系統簡介
 tags:
   - linear algebra
+keywords:
+  - linear algebra
+  - introduction
+  - vector
+  - matrix
+  - linear equation
+  - 線性代數
+  - 向量
+  - 矩陣
+  - 線性方程式
+  - 基礎導論
 url: "/posts/LinearAlgebra/linear-intro/"
 ---
 
@@ -23,9 +34,9 @@ url: "/posts/LinearAlgebra/linear-intro/"
 
 則 $n$ 維線性方程式可表示為 $a_1x_1+a_2x_2+\cdots+a_nx_n=c$ ($a_1, a_2, \cdots, a_n$ 不全為 $0$)
 
-或是 $ \sum^n_{i=1} a_i x_i = c$。
+或是 $ \sum^n\_{i=1} a_i x_i = c$。
 
-如果 $c$ 為 $0$，$ \sum^n_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的**齊次線性方程式**。
+如果 $c$ 為 $0$，$ \sum^n\_{i=1} a_i x_i = 0$，稱為 $x_1, x_2, \cdots, x_n$ 的**齊次線性方程式**。
 
 ---
 
@@ -35,10 +46,10 @@ url: "/posts/LinearAlgebra/linear-intro/"
 
 有限個數的線性方程式集合，稱為線性方程系統(system of linear equations)或線性系統(linear system)。
 
-  * 一 $n$ 個未知數的線性系統的解可寫成 $(s_1, s_2, \cdots, s_n)$，可使得 $n$ 個方程式同時成立。
-  * 每個線性系統只會有：唯一解、無解、無限多解。
-  * 如果沒有解，稱此線性系統為**矛盾方程組**、**非一致性**(inconsistent)。
-  * 如果有解，稱此線性系統為**相容方程組**、**一致性**(consistent)。
+- 一 $n$ 個未知數的線性系統的解可寫成 $(s_1, s_2, \cdots, s_n)$，可使得 $n$ 個方程式同時成立。
+- 每個線性系統只會有：唯一解、無解、無限多解。
+- 如果沒有解，稱此線性系統為**矛盾方程組**、**非一致性**(inconsistent)。
+- 如果有解，稱此線性系統為**相容方程組**、**一致性**(consistent)。
 
 ## 增廣矩陣(Augmented matrix)
 
@@ -52,8 +63,8 @@ $$ \left[ \begin{array}{cccc|c} a_{11} & a_{12} & \cdots & a_{1n} & b_1 \\\ a_{2
 
 解線性方程組，對增廣矩陣的列進行一些操作，更容易找出解。
 
-  * 交換兩列
-  * 將某列乘上一個非零常數
-  * 將某列乘上一個非零常數後加到另一列
+- 交換兩列
+- 將某列乘上一個非零常數
+- 將某列乘上一個非零常數後加到另一列
 
 [下一篇-消去法](/posts/LinearAlgebra/linear-elimination-methods/)

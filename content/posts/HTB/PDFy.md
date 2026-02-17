@@ -3,6 +3,18 @@ title: "【HTB Challenge】PDFy"
 date: 2024-09-19
 tags:
   - security
+keywords:
+  - htb
+  - writeup
+  - pdfy
+  - linux
+  - ctf
+  - web exploitation
+  - 靶機攻略
+  - 滲透測試
+  - 題解
+  - PDF漏洞
+  - 網頁安全
 url: "/posts/HTB/PDFy/"
 ---
 

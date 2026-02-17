@@ -3,6 +3,19 @@ title: Python遊戲設計
 date: 2021-01-11
 tags:
   - python
+keywords:
+  - python
+  - game design
+  - cocos2d
+  - pycharm
+  - programming
+  - tutorial
+  - 遊戲設計
+  - 遊戲開發
+  - 程式教學
+  - 遊戲引擎
+  - 專案紀錄
+  - 學習歷程
 ---
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
