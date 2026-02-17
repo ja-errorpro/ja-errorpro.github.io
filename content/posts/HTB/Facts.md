@@ -110,9 +110,10 @@ url: "/posts/HTB/Facts/"
 
 ```sh
 nmap -sCV -p- --min-rate 10000 -oN nmap.txt Remote_IP
-```
 
-```
+
+---
+
 # Nmap 7.98 scan initiated Tue Feb 17 00:00:54 2026 as: /usr/lib/nmap/nmap -sCV -p- --min-rate 10000 -oN nmap.txt 10.129.246.48
 Nmap scan report for 10.129.246.48
 Host is up (0.077s latency).
@@ -211,6 +212,8 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Tue Feb 17 00:01:45 2026 -- 1 IP address (1 host up) scanned in 50.99 seconds
 ```
+
+add Remote_IP to /etc/hosts
 
 ```sh
 echo 'Remote_IP facts.htb' | sudo tee -a /etc/hosts
