@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -114,6 +111,7 @@ GCC編譯流程 前置處理 (Preprocessing) -&gt; 編譯 (Compilation) -&gt; �
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -206,54 +204,95 @@ GCC編譯流程 前置處理 (Preprocessing) -&gt; 編譯 (Compilation) -&gt; �
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&description=%3ch1%20id%3d%22%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%22%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fh1%3e%0a%3ch2%20id%3d%22%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3e%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3col%3e%0a%3cli%3e%e8%a9%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Lexical%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%88%87token%20-%26gt%3b%20%e8%a9%9e%e7%b4%a0%20%28Lexeme%29%3c%2fp%3e%0a%3col%20start%3d%222%22%3e%0a%3cli%3e%e8%aa%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Syntax%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%bb%ba%e7%ab%8b%e8%aa%9e%e6%b3%95%e6%a8%b9%20%28Syntax%20Tree%29%3c%2fp%3e%0a%3col%20start%3d%223%22%3e%0a%3cli%3e%e8%aa%9e%e6%84%8f%e5%88%86%e6%9e%90%20%28Semantic%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e7%94%a8%e8%aa%9e%e6%b3%95%e6%a8%b9%e8%b7%9f%e7%ac%a6%e8%99%9f%e8%a1%a8%20%28Symbol%20Table%29%20%e4%be%86%e6%aa%a2%e6%9f%a5%e8%aa%9e%e6%84%8f%3c%2fp%3e%0a%3col%20start%3d%224%22%3e%0a%3cli%3e%0a%3cp%3e%e4%b8%ad%e9%96%93%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Intermediate%20Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e6%9c%80%e4%bd%b3%e5%8c%96%20%28Optimization%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e7%9b%ae%e6%a8%99%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3c%2fol%3e%0a%3ch2%20id%3d%22gcc%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3eGCC%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b5%84%e8%ad%af%20%28Assembly%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e9%80%a3%e7%b5%90%20%28Linking%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%aa%94%e6%a1%88%e5%89%af%e6%aa%94%e5%90%8d%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.i%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.s%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.o%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.out%29%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8c%87%e4%bb%a4%e5%8f%83%e6%95%b8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-E%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-S%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-c%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3ch3%20id%3d%22%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86-preprocessing%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fh3%3e%0a%3cul%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23include%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e5%b1%95%e9%96%8b%e6%89%80%e6%9c%89%20%3ccode%3e%23define%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e5%88%aa%e9%99%a4%e6%89%80%e6%9c%89%e8%a8%bb%e8%a7%a3%3c%2fli%3e%0a%3cli%3e%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23if%3c%2fcode%3e%20%3ccode%3e%23ifdef%3c%2fcode%3e%20%3ccode%3e%23ifndef%3c%2fcode%3e%20%3ccode%3e%23else%3c%2fcode%3e%20%3ccode%3e%23endif%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e8%a1%8c%e8%99%9f%e8%a8%98%e9%8c%84%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%ad%af-compilation%22%3e%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fh3%3e%0a%3cp%3e%e7%b5%84%e8%aa%9e%e6%a0%bc%e5%bc%8f%ef%bc%9a%e9%a0%90%e8%a8%ad%20AT%26amp%3bT%20%e8%aa%9e%e6%b3%95%ef%bc%8c%e5%8f%af%e7%94%a8%20%3ccode%3e-masm%3dintel%3c%2fcode%3e%20%e6%94%b9%e6%88%90%20Intel%20%e8%aa%9e%e6%b3%95%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&description=%3ch1%20id%3d%22%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%22%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fh1%3e%0a%3ch2%20id%3d%22%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3e%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3col%3e%0a%3cli%3e%e8%a9%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Lexical%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%88%87token%20-%26gt%3b%20%e8%a9%9e%e7%b4%a0%20%28Lexeme%29%3c%2fp%3e%0a%3col%20start%3d%222%22%3e%0a%3cli%3e%e8%aa%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Syntax%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%bb%ba%e7%ab%8b%e8%aa%9e%e6%b3%95%e6%a8%b9%20%28Syntax%20Tree%29%3c%2fp%3e%0a%3col%20start%3d%223%22%3e%0a%3cli%3e%e8%aa%9e%e6%84%8f%e5%88%86%e6%9e%90%20%28Semantic%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e7%94%a8%e8%aa%9e%e6%b3%95%e6%a8%b9%e8%b7%9f%e7%ac%a6%e8%99%9f%e8%a1%a8%20%28Symbol%20Table%29%20%e4%be%86%e6%aa%a2%e6%9f%a5%e8%aa%9e%e6%84%8f%3c%2fp%3e%0a%3col%20start%3d%224%22%3e%0a%3cli%3e%0a%3cp%3e%e4%b8%ad%e9%96%93%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Intermediate%20Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e6%9c%80%e4%bd%b3%e5%8c%96%20%28Optimization%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e7%9b%ae%e6%a8%99%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3c%2fol%3e%0a%3ch2%20id%3d%22gcc%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3eGCC%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b5%84%e8%ad%af%20%28Assembly%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e9%80%a3%e7%b5%90%20%28Linking%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%aa%94%e6%a1%88%e5%89%af%e6%aa%94%e5%90%8d%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.i%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.s%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.o%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.out%29%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8c%87%e4%bb%a4%e5%8f%83%e6%95%b8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-E%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-S%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-c%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3ch3%20id%3d%22%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86-preprocessing%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fh3%3e%0a%3cul%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23include%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e5%b1%95%e9%96%8b%e6%89%80%e6%9c%89%20%3ccode%3e%23define%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e5%88%aa%e9%99%a4%e6%89%80%e6%9c%89%e8%a8%bb%e8%a7%a3%3c%2fli%3e%0a%3cli%3e%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23if%3c%2fcode%3e%20%3ccode%3e%23ifdef%3c%2fcode%3e%20%3ccode%3e%23ifndef%3c%2fcode%3e%20%3ccode%3e%23else%3c%2fcode%3e%20%3ccode%3e%23endif%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e8%a1%8c%e8%99%9f%e8%a8%98%e9%8c%84%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%ad%af-compilation%22%3e%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fh3%3e%0a%3cp%3e%e7%b5%84%e8%aa%9e%e6%a0%bc%e5%bc%8f%ef%bc%9a%e9%a0%90%e8%a8%ad%20AT%26amp%3bT%20%e8%aa%9e%e6%b3%95%ef%bc%8c%e5%8f%af%e7%94%a8%20%3ccode%3e-masm%3dintel%3c%2fcode%3e%20%e6%94%b9%e6%88%90%20Intel%20%e8%aa%9e%e6%b3%95%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -817,54 +856,95 @@ GCC編譯流程 前置處理 (Preprocessing) -&gt; 編譯 (Compilation) -&gt; �
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&description=%3ch1%20id%3d%22%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%22%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fh1%3e%0a%3ch2%20id%3d%22%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3e%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3col%3e%0a%3cli%3e%e8%a9%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Lexical%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%88%87token%20-%26gt%3b%20%e8%a9%9e%e7%b4%a0%20%28Lexeme%29%3c%2fp%3e%0a%3col%20start%3d%222%22%3e%0a%3cli%3e%e8%aa%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Syntax%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%bb%ba%e7%ab%8b%e8%aa%9e%e6%b3%95%e6%a8%b9%20%28Syntax%20Tree%29%3c%2fp%3e%0a%3col%20start%3d%223%22%3e%0a%3cli%3e%e8%aa%9e%e6%84%8f%e5%88%86%e6%9e%90%20%28Semantic%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e7%94%a8%e8%aa%9e%e6%b3%95%e6%a8%b9%e8%b7%9f%e7%ac%a6%e8%99%9f%e8%a1%a8%20%28Symbol%20Table%29%20%e4%be%86%e6%aa%a2%e6%9f%a5%e8%aa%9e%e6%84%8f%3c%2fp%3e%0a%3col%20start%3d%224%22%3e%0a%3cli%3e%0a%3cp%3e%e4%b8%ad%e9%96%93%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Intermediate%20Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e6%9c%80%e4%bd%b3%e5%8c%96%20%28Optimization%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e7%9b%ae%e6%a8%99%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3c%2fol%3e%0a%3ch2%20id%3d%22gcc%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3eGCC%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b5%84%e8%ad%af%20%28Assembly%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e9%80%a3%e7%b5%90%20%28Linking%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%aa%94%e6%a1%88%e5%89%af%e6%aa%94%e5%90%8d%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.i%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.s%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.o%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.out%29%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8c%87%e4%bb%a4%e5%8f%83%e6%95%b8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-E%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-S%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-c%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3ch3%20id%3d%22%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86-preprocessing%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fh3%3e%0a%3cul%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23include%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e5%b1%95%e9%96%8b%e6%89%80%e6%9c%89%20%3ccode%3e%23define%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e5%88%aa%e9%99%a4%e6%89%80%e6%9c%89%e8%a8%bb%e8%a7%a3%3c%2fli%3e%0a%3cli%3e%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23if%3c%2fcode%3e%20%3ccode%3e%23ifdef%3c%2fcode%3e%20%3ccode%3e%23ifndef%3c%2fcode%3e%20%3ccode%3e%23else%3c%2fcode%3e%20%3ccode%3e%23endif%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e8%a1%8c%e8%99%9f%e8%a8%98%e9%8c%84%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%ad%af-compilation%22%3e%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fh3%3e%0a%3cp%3e%e7%b5%84%e8%aa%9e%e6%a0%bc%e5%bc%8f%ef%bc%9a%e9%a0%90%e8%a8%ad%20AT%26amp%3bT%20%e8%aa%9e%e6%b3%95%ef%bc%8c%e5%8f%af%e7%94%a8%20%3ccode%3e-masm%3dintel%3c%2fcode%3e%20%e6%94%b9%e6%88%90%20Intel%20%e8%aa%9e%e6%b3%95%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80&description=%3ch1%20id%3d%22%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%22%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fh1%3e%0a%3ch2%20id%3d%22%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3e%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3col%3e%0a%3cli%3e%e8%a9%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Lexical%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%88%87token%20-%26gt%3b%20%e8%a9%9e%e7%b4%a0%20%28Lexeme%29%3c%2fp%3e%0a%3col%20start%3d%222%22%3e%0a%3cli%3e%e8%aa%9e%e6%b3%95%e5%88%86%e6%9e%90%20%28Syntax%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e5%bb%ba%e7%ab%8b%e8%aa%9e%e6%b3%95%e6%a8%b9%20%28Syntax%20Tree%29%3c%2fp%3e%0a%3col%20start%3d%223%22%3e%0a%3cli%3e%e8%aa%9e%e6%84%8f%e5%88%86%e6%9e%90%20%28Semantic%20Analysis%29%3c%2fli%3e%0a%3c%2fol%3e%0a%3cp%3e%e7%94%a8%e8%aa%9e%e6%b3%95%e6%a8%b9%e8%b7%9f%e7%ac%a6%e8%99%9f%e8%a1%a8%20%28Symbol%20Table%29%20%e4%be%86%e6%aa%a2%e6%9f%a5%e8%aa%9e%e6%84%8f%3c%2fp%3e%0a%3col%20start%3d%224%22%3e%0a%3cli%3e%0a%3cp%3e%e4%b8%ad%e9%96%93%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Intermediate%20Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e6%9c%80%e4%bd%b3%e5%8c%96%20%28Optimization%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3cli%3e%0a%3cp%3e%e7%9b%ae%e6%a8%99%e7%a2%bc%e7%94%a2%e7%94%9f%20%28Code%20Generation%29%3c%2fp%3e%0a%3c%2fli%3e%0a%3c%2fol%3e%0a%3ch2%20id%3d%22gcc%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%22%3eGCC%e7%b7%a8%e8%ad%af%e6%b5%81%e7%a8%8b%3c%2fh2%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e7%b5%84%e8%ad%af%20%28Assembly%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e-%26gt%3b%20%e9%80%a3%e7%b5%90%20%28Linking%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%aa%94%e6%a1%88%e5%89%af%e6%aa%94%e5%90%8d%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.i%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.s%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.o%29%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%28.out%29%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8c%87%e4%bb%a4%e5%8f%83%e6%95%b8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-E%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-S%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e-c%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3ch3%20id%3d%22%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86-preprocessing%22%3e%e5%89%8d%e7%bd%ae%e8%99%95%e7%90%86%20%28Preprocessing%29%3c%2fh3%3e%0a%3cul%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23include%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e9%81%9e%e8%bf%b4%e5%b1%95%e9%96%8b%e6%89%80%e6%9c%89%20%3ccode%3e%23define%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e5%88%aa%e9%99%a4%e6%89%80%e6%9c%89%e8%a8%bb%e8%a7%a3%3c%2fli%3e%0a%3cli%3e%e8%99%95%e7%90%86%e6%89%80%e6%9c%89%20%3ccode%3e%23if%3c%2fcode%3e%20%3ccode%3e%23ifdef%3c%2fcode%3e%20%3ccode%3e%23ifndef%3c%2fcode%3e%20%3ccode%3e%23else%3c%2fcode%3e%20%3ccode%3e%23endif%3c%2fcode%3e%3c%2fli%3e%0a%3cli%3e%e8%a1%8c%e8%99%9f%e8%a8%98%e9%8c%84%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%ad%af-compilation%22%3e%e7%b7%a8%e8%ad%af%20%28Compilation%29%3c%2fh3%3e%0a%3cp%3e%e7%b5%84%e8%aa%9e%e6%a0%bc%e5%bc%8f%ef%bc%9a%e9%a0%90%e8%a8%ad%20AT%26amp%3bT%20%e8%aa%9e%e6%b3%95%ef%bc%8c%e5%8f%af%e7%94%a8%20%3ccode%3e-masm%3dintel%3c%2fcode%3e%20%e6%94%b9%e6%88%90%20Intel%20%e8%aa%9e%e6%b3%95%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fasm%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

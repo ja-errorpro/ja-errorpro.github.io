@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -76,6 +73,7 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -168,54 +166,95 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&text=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&text=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&is_video=false&description=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&is_video=false&description=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&name=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&description=%3ch2%20id%3d%22%e7%b0%a1%e4%bb%8b%22%3e%e7%b0%a1%e4%bb%8b%3c%2fh2%3e%0a%3cp%3eVim%e6%98%af%e4%b8%80%e7%a8%ae%e9%96%8b%e6%ba%90%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%ef%bc%8c%e6%98%afVi%e7%9a%84%e9%80%b2%e5%8c%96%e7%89%88%ef%bc%8c%e7%94%b1%e6%96%bc%e6%93%8d%e4%bd%9c%e6%96%b9%e4%be%bf%ef%bc%8c%e6%9c%89%e8%a8%b1%e5%a4%9a%e4%ba%ba%e5%be%88%e6%84%9b%e7%94%a8%ef%bc%8c%e6%98%af%e4%bd%9c%e7%82%baLinux%20OS%e4%b8%bb%e8%a6%81%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%e4%b9%8b%e4%b8%80%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e8%b5%b7%e6%ad%a5%22%3e%e8%b5%b7%e6%ad%a5%3c%2fh2%3e%0a%3cp%3e%e8%8b%a5%e8%a6%81%e4%bd%bf%e7%94%a8vim%e7%b7%a8%e8%bc%af%e6%aa%94%e6%a1%88%ef%bc%8c%e8%ab%8b%e5%9c%a8%e5%91%bd%e4%bb%a4%e5%88%97%e4%b8%ad%e8%bc%b8%e5%85%a5%20%3ccode%3evim%20xxx.yyy%3c%2fcode%3e%ef%bc%8c%e5%a6%82%e6%9e%9cxxx.yyy%e5%ad%98%e5%9c%a8%e5%b0%b1%e6%9c%83%e7%9b%b4%e6%8e%a5%e9%80%b2%e5%85%a5%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e4%b8%a6%e5%8f%af%e7%80%8f%e8%a6%bd%e6%aa%94%e6%a1%88%ef%bc%9b%3c%2fp%3e%0a%3cp%3e%e5%a6%82%e6%9e%9c%e4%b8%8d%e5%ad%98%e5%9c%a8%ef%bc%8c%e5%b0%b1%e6%9c%83%e5%9c%a8%e5%84%b2%e5%ad%98%e5%be%8c%e6%96%b0%e5%bb%ba%e4%b8%80%e5%80%8b%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%a8%a1%e5%bc%8f%22%3e%e6%a8%a1%e5%bc%8f%3c%2fh2%3e%0a%3cp%3eVim%e4%b8%bb%e8%a6%81%e6%9c%89%e5%9b%9b%e7%a8%ae%e6%a8%a1%e5%bc%8f%ef%bc%9a%20%3cstrong%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e3%80%81%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%e3%80%81%e8%a6%96%e8%a6%ba%e6%a8%a1%e5%bc%8f%e3%80%81%e6%8c%87%e4%bb%a4%e6%a8%a1%e5%bc%8f%3c%2fstrong%3e%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%22%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%88%9d%e5%a7%8b%e7%95%ab%e9%9d%a2%ef%bc%8c%e5%8f%af%e4%bd%bf%e7%94%a8%e6%96%b9%e5%90%91%e9%8d%b5%e6%8e%a7%e5%88%b6%e6%b8%b8%e6%a8%99%ef%bc%8c%e6%88%96%e7%94%a8Page%20UP%2fDown%e6%8f%9b%e9%a0%81%ef%bc%8c%e8%80%8c%e4%bb%bb%e4%bd%95%e6%9c%89%e9%97%9c%e7%b7%a8%e8%bc%af%e7%9a%84%e6%8c%87%e4%bb%a4%e9%83%bd%e8%a6%81%e5%9c%a8%e6%ad%a4%e6%a8%a1%e5%bc%8f%e4%b8%8b%e9%80%b2%e8%a1%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e5%b8%b8%e7%94%a8%e7%9a%84%e7%b7%a8%e8%bc%af%e6%8c%87%e4%bb%a4%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ccode%3edd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29dd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eyy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29yy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eu%3c%2fcode%3e%20-%20%e5%be%a9%e5%8e%9f%28undo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3eCtrl%2br%3c%2fcode%3e%20-%20%e9%87%8d%e5%81%9a%28redo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3e.%3c%2fcode%3e%20-%20%e9%87%8d%e8%a4%87%e4%b8%8a%e4%b8%80%e5%80%8b%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3ex%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%ad%97%e5%85%83%3c%2fli%3e%0a%3cli%3e%3ccode%3eX%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%89%8d%e4%b8%80%e5%80%8b%e5%ad%97%e5%85%83%28Backspace%29%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26gt%3b%26gt%3b%3c%2fcode%3e%20-%20%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26lt%3b%26lt%3b%3c%2fcode%3e%20-%20%e5%8f%8d%e5%90%91%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%22%3e%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%9c%a8%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e6%8c%89%e4%b8%8b%20%3ccode%3ei%28Insert%29%2c%20o%28Open%29%2c%20a%28Append%29%3c%2fcode%3e%20%e7%ad%89%e9%8d%b5%e5%b0%b1%e6%9c%83%e9%80%b2%e5%85%a5%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%ef%bc%8c%e6%ad%a4%e6%99%82%e5%8f%af%e4%bb%a5%e7%9c%8b%e5%88%b0%e8%a6%96%e7%aa%97%e6%9c%80%e4%b8%8b%e6%96%b9%e5%87%ba%e7%8f%be%20%3ccode%3e--%20INSERT%20--%3c%2fcode%3e%ef%bc%8c%e5%8d%b3%e5%8f%af%e5%b0%8d%e6%aa%94%e6%a1%88%e7%b7%a8%e8%bc%af%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&name=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&description=%3ch2%20id%3d%22%e7%b0%a1%e4%bb%8b%22%3e%e7%b0%a1%e4%bb%8b%3c%2fh2%3e%0a%3cp%3eVim%e6%98%af%e4%b8%80%e7%a8%ae%e9%96%8b%e6%ba%90%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%ef%bc%8c%e6%98%afVi%e7%9a%84%e9%80%b2%e5%8c%96%e7%89%88%ef%bc%8c%e7%94%b1%e6%96%bc%e6%93%8d%e4%bd%9c%e6%96%b9%e4%be%bf%ef%bc%8c%e6%9c%89%e8%a8%b1%e5%a4%9a%e4%ba%ba%e5%be%88%e6%84%9b%e7%94%a8%ef%bc%8c%e6%98%af%e4%bd%9c%e7%82%baLinux%20OS%e4%b8%bb%e8%a6%81%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%e4%b9%8b%e4%b8%80%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e8%b5%b7%e6%ad%a5%22%3e%e8%b5%b7%e6%ad%a5%3c%2fh2%3e%0a%3cp%3e%e8%8b%a5%e8%a6%81%e4%bd%bf%e7%94%a8vim%e7%b7%a8%e8%bc%af%e6%aa%94%e6%a1%88%ef%bc%8c%e8%ab%8b%e5%9c%a8%e5%91%bd%e4%bb%a4%e5%88%97%e4%b8%ad%e8%bc%b8%e5%85%a5%20%3ccode%3evim%20xxx.yyy%3c%2fcode%3e%ef%bc%8c%e5%a6%82%e6%9e%9cxxx.yyy%e5%ad%98%e5%9c%a8%e5%b0%b1%e6%9c%83%e7%9b%b4%e6%8e%a5%e9%80%b2%e5%85%a5%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e4%b8%a6%e5%8f%af%e7%80%8f%e8%a6%bd%e6%aa%94%e6%a1%88%ef%bc%9b%3c%2fp%3e%0a%3cp%3e%e5%a6%82%e6%9e%9c%e4%b8%8d%e5%ad%98%e5%9c%a8%ef%bc%8c%e5%b0%b1%e6%9c%83%e5%9c%a8%e5%84%b2%e5%ad%98%e5%be%8c%e6%96%b0%e5%bb%ba%e4%b8%80%e5%80%8b%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%a8%a1%e5%bc%8f%22%3e%e6%a8%a1%e5%bc%8f%3c%2fh2%3e%0a%3cp%3eVim%e4%b8%bb%e8%a6%81%e6%9c%89%e5%9b%9b%e7%a8%ae%e6%a8%a1%e5%bc%8f%ef%bc%9a%20%3cstrong%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e3%80%81%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%e3%80%81%e8%a6%96%e8%a6%ba%e6%a8%a1%e5%bc%8f%e3%80%81%e6%8c%87%e4%bb%a4%e6%a8%a1%e5%bc%8f%3c%2fstrong%3e%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%22%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%88%9d%e5%a7%8b%e7%95%ab%e9%9d%a2%ef%bc%8c%e5%8f%af%e4%bd%bf%e7%94%a8%e6%96%b9%e5%90%91%e9%8d%b5%e6%8e%a7%e5%88%b6%e6%b8%b8%e6%a8%99%ef%bc%8c%e6%88%96%e7%94%a8Page%20UP%2fDown%e6%8f%9b%e9%a0%81%ef%bc%8c%e8%80%8c%e4%bb%bb%e4%bd%95%e6%9c%89%e9%97%9c%e7%b7%a8%e8%bc%af%e7%9a%84%e6%8c%87%e4%bb%a4%e9%83%bd%e8%a6%81%e5%9c%a8%e6%ad%a4%e6%a8%a1%e5%bc%8f%e4%b8%8b%e9%80%b2%e8%a1%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e5%b8%b8%e7%94%a8%e7%9a%84%e7%b7%a8%e8%bc%af%e6%8c%87%e4%bb%a4%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ccode%3edd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29dd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eyy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29yy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eu%3c%2fcode%3e%20-%20%e5%be%a9%e5%8e%9f%28undo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3eCtrl%2br%3c%2fcode%3e%20-%20%e9%87%8d%e5%81%9a%28redo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3e.%3c%2fcode%3e%20-%20%e9%87%8d%e8%a4%87%e4%b8%8a%e4%b8%80%e5%80%8b%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3ex%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%ad%97%e5%85%83%3c%2fli%3e%0a%3cli%3e%3ccode%3eX%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%89%8d%e4%b8%80%e5%80%8b%e5%ad%97%e5%85%83%28Backspace%29%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26gt%3b%26gt%3b%3c%2fcode%3e%20-%20%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26lt%3b%26lt%3b%3c%2fcode%3e%20-%20%e5%8f%8d%e5%90%91%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%22%3e%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%9c%a8%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e6%8c%89%e4%b8%8b%20%3ccode%3ei%28Insert%29%2c%20o%28Open%29%2c%20a%28Append%29%3c%2fcode%3e%20%e7%ad%89%e9%8d%b5%e5%b0%b1%e6%9c%83%e9%80%b2%e5%85%a5%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%ef%bc%8c%e6%ad%a4%e6%99%82%e5%8f%af%e4%bb%a5%e7%9c%8b%e5%88%b0%e8%a6%96%e7%aa%97%e6%9c%80%e4%b8%8b%e6%96%b9%e5%87%ba%e7%8f%be%20%3ccode%3e--%20INSERT%20--%3c%2fcode%3e%ef%bc%8c%e5%8d%b3%e5%8f%af%e5%b0%8d%e6%aa%94%e6%a1%88%e7%b7%a8%e8%bc%af%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&t=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&t=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -403,54 +442,95 @@ dd - 刪除整行 (n)dd - 刪除從游標往下數n行 yy - 複製整行 (n)yy -
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&text=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&text=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&is_video=false&description=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&is_video=false&description=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&title=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&name=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&description=%3ch2%20id%3d%22%e7%b0%a1%e4%bb%8b%22%3e%e7%b0%a1%e4%bb%8b%3c%2fh2%3e%0a%3cp%3eVim%e6%98%af%e4%b8%80%e7%a8%ae%e9%96%8b%e6%ba%90%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%ef%bc%8c%e6%98%afVi%e7%9a%84%e9%80%b2%e5%8c%96%e7%89%88%ef%bc%8c%e7%94%b1%e6%96%bc%e6%93%8d%e4%bd%9c%e6%96%b9%e4%be%bf%ef%bc%8c%e6%9c%89%e8%a8%b1%e5%a4%9a%e4%ba%ba%e5%be%88%e6%84%9b%e7%94%a8%ef%bc%8c%e6%98%af%e4%bd%9c%e7%82%baLinux%20OS%e4%b8%bb%e8%a6%81%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%e4%b9%8b%e4%b8%80%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e8%b5%b7%e6%ad%a5%22%3e%e8%b5%b7%e6%ad%a5%3c%2fh2%3e%0a%3cp%3e%e8%8b%a5%e8%a6%81%e4%bd%bf%e7%94%a8vim%e7%b7%a8%e8%bc%af%e6%aa%94%e6%a1%88%ef%bc%8c%e8%ab%8b%e5%9c%a8%e5%91%bd%e4%bb%a4%e5%88%97%e4%b8%ad%e8%bc%b8%e5%85%a5%20%3ccode%3evim%20xxx.yyy%3c%2fcode%3e%ef%bc%8c%e5%a6%82%e6%9e%9cxxx.yyy%e5%ad%98%e5%9c%a8%e5%b0%b1%e6%9c%83%e7%9b%b4%e6%8e%a5%e9%80%b2%e5%85%a5%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e4%b8%a6%e5%8f%af%e7%80%8f%e8%a6%bd%e6%aa%94%e6%a1%88%ef%bc%9b%3c%2fp%3e%0a%3cp%3e%e5%a6%82%e6%9e%9c%e4%b8%8d%e5%ad%98%e5%9c%a8%ef%bc%8c%e5%b0%b1%e6%9c%83%e5%9c%a8%e5%84%b2%e5%ad%98%e5%be%8c%e6%96%b0%e5%bb%ba%e4%b8%80%e5%80%8b%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%a8%a1%e5%bc%8f%22%3e%e6%a8%a1%e5%bc%8f%3c%2fh2%3e%0a%3cp%3eVim%e4%b8%bb%e8%a6%81%e6%9c%89%e5%9b%9b%e7%a8%ae%e6%a8%a1%e5%bc%8f%ef%bc%9a%20%3cstrong%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e3%80%81%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%e3%80%81%e8%a6%96%e8%a6%ba%e6%a8%a1%e5%bc%8f%e3%80%81%e6%8c%87%e4%bb%a4%e6%a8%a1%e5%bc%8f%3c%2fstrong%3e%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%22%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%88%9d%e5%a7%8b%e7%95%ab%e9%9d%a2%ef%bc%8c%e5%8f%af%e4%bd%bf%e7%94%a8%e6%96%b9%e5%90%91%e9%8d%b5%e6%8e%a7%e5%88%b6%e6%b8%b8%e6%a8%99%ef%bc%8c%e6%88%96%e7%94%a8Page%20UP%2fDown%e6%8f%9b%e9%a0%81%ef%bc%8c%e8%80%8c%e4%bb%bb%e4%bd%95%e6%9c%89%e9%97%9c%e7%b7%a8%e8%bc%af%e7%9a%84%e6%8c%87%e4%bb%a4%e9%83%bd%e8%a6%81%e5%9c%a8%e6%ad%a4%e6%a8%a1%e5%bc%8f%e4%b8%8b%e9%80%b2%e8%a1%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e5%b8%b8%e7%94%a8%e7%9a%84%e7%b7%a8%e8%bc%af%e6%8c%87%e4%bb%a4%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ccode%3edd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29dd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eyy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29yy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eu%3c%2fcode%3e%20-%20%e5%be%a9%e5%8e%9f%28undo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3eCtrl%2br%3c%2fcode%3e%20-%20%e9%87%8d%e5%81%9a%28redo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3e.%3c%2fcode%3e%20-%20%e9%87%8d%e8%a4%87%e4%b8%8a%e4%b8%80%e5%80%8b%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3ex%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%ad%97%e5%85%83%3c%2fli%3e%0a%3cli%3e%3ccode%3eX%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%89%8d%e4%b8%80%e5%80%8b%e5%ad%97%e5%85%83%28Backspace%29%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26gt%3b%26gt%3b%3c%2fcode%3e%20-%20%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26lt%3b%26lt%3b%3c%2fcode%3e%20-%20%e5%8f%8d%e5%90%91%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%22%3e%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%9c%a8%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e6%8c%89%e4%b8%8b%20%3ccode%3ei%28Insert%29%2c%20o%28Open%29%2c%20a%28Append%29%3c%2fcode%3e%20%e7%ad%89%e9%8d%b5%e5%b0%b1%e6%9c%83%e9%80%b2%e5%85%a5%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%ef%bc%8c%e6%ad%a4%e6%99%82%e5%8f%af%e4%bb%a5%e7%9c%8b%e5%88%b0%e8%a6%96%e7%aa%97%e6%9c%80%e4%b8%8b%e6%96%b9%e5%87%ba%e7%8f%be%20%3ccode%3e--%20INSERT%20--%3c%2fcode%3e%ef%bc%8c%e5%8d%b3%e5%8f%af%e5%b0%8d%e6%aa%94%e6%a1%88%e7%b7%a8%e8%bc%af%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&name=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8&description=%3ch2%20id%3d%22%e7%b0%a1%e4%bb%8b%22%3e%e7%b0%a1%e4%bb%8b%3c%2fh2%3e%0a%3cp%3eVim%e6%98%af%e4%b8%80%e7%a8%ae%e9%96%8b%e6%ba%90%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%ef%bc%8c%e6%98%afVi%e7%9a%84%e9%80%b2%e5%8c%96%e7%89%88%ef%bc%8c%e7%94%b1%e6%96%bc%e6%93%8d%e4%bd%9c%e6%96%b9%e4%be%bf%ef%bc%8c%e6%9c%89%e8%a8%b1%e5%a4%9a%e4%ba%ba%e5%be%88%e6%84%9b%e7%94%a8%ef%bc%8c%e6%98%af%e4%bd%9c%e7%82%baLinux%20OS%e4%b8%bb%e8%a6%81%e7%9a%84%e7%b7%a8%e8%bc%af%e5%99%a8%e4%b9%8b%e4%b8%80%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e8%b5%b7%e6%ad%a5%22%3e%e8%b5%b7%e6%ad%a5%3c%2fh2%3e%0a%3cp%3e%e8%8b%a5%e8%a6%81%e4%bd%bf%e7%94%a8vim%e7%b7%a8%e8%bc%af%e6%aa%94%e6%a1%88%ef%bc%8c%e8%ab%8b%e5%9c%a8%e5%91%bd%e4%bb%a4%e5%88%97%e4%b8%ad%e8%bc%b8%e5%85%a5%20%3ccode%3evim%20xxx.yyy%3c%2fcode%3e%ef%bc%8c%e5%a6%82%e6%9e%9cxxx.yyy%e5%ad%98%e5%9c%a8%e5%b0%b1%e6%9c%83%e7%9b%b4%e6%8e%a5%e9%80%b2%e5%85%a5%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e4%b8%a6%e5%8f%af%e7%80%8f%e8%a6%bd%e6%aa%94%e6%a1%88%ef%bc%9b%3c%2fp%3e%0a%3cp%3e%e5%a6%82%e6%9e%9c%e4%b8%8d%e5%ad%98%e5%9c%a8%ef%bc%8c%e5%b0%b1%e6%9c%83%e5%9c%a8%e5%84%b2%e5%ad%98%e5%be%8c%e6%96%b0%e5%bb%ba%e4%b8%80%e5%80%8b%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e6%a8%a1%e5%bc%8f%22%3e%e6%a8%a1%e5%bc%8f%3c%2fh2%3e%0a%3cp%3eVim%e4%b8%bb%e8%a6%81%e6%9c%89%e5%9b%9b%e7%a8%ae%e6%a8%a1%e5%bc%8f%ef%bc%9a%20%3cstrong%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e3%80%81%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%e3%80%81%e8%a6%96%e8%a6%ba%e6%a8%a1%e5%bc%8f%e3%80%81%e6%8c%87%e4%bb%a4%e6%a8%a1%e5%bc%8f%3c%2fstrong%3e%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%22%3e%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%88%9d%e5%a7%8b%e7%95%ab%e9%9d%a2%ef%bc%8c%e5%8f%af%e4%bd%bf%e7%94%a8%e6%96%b9%e5%90%91%e9%8d%b5%e6%8e%a7%e5%88%b6%e6%b8%b8%e6%a8%99%ef%bc%8c%e6%88%96%e7%94%a8Page%20UP%2fDown%e6%8f%9b%e9%a0%81%ef%bc%8c%e8%80%8c%e4%bb%bb%e4%bd%95%e6%9c%89%e9%97%9c%e7%b7%a8%e8%bc%af%e7%9a%84%e6%8c%87%e4%bb%a4%e9%83%bd%e8%a6%81%e5%9c%a8%e6%ad%a4%e6%a8%a1%e5%bc%8f%e4%b8%8b%e9%80%b2%e8%a1%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e5%b8%b8%e7%94%a8%e7%9a%84%e7%b7%a8%e8%bc%af%e6%8c%87%e4%bb%a4%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ccode%3edd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29dd%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eyy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e6%95%b4%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3e%28n%29yy%3c%2fcode%3e%20-%20%e8%a4%87%e8%a3%bd%e5%be%9e%e6%b8%b8%e6%a8%99%e5%be%80%e4%b8%8b%e6%95%b8n%e8%a1%8c%3c%2fli%3e%0a%3cli%3e%3ccode%3eu%3c%2fcode%3e%20-%20%e5%be%a9%e5%8e%9f%28undo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3eCtrl%2br%3c%2fcode%3e%20-%20%e9%87%8d%e5%81%9a%28redo%29%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3e.%3c%2fcode%3e%20-%20%e9%87%8d%e8%a4%87%e4%b8%8a%e4%b8%80%e5%80%8b%e5%8b%95%e4%bd%9c%3c%2fli%3e%0a%3cli%3e%3ccode%3ex%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%ad%97%e5%85%83%3c%2fli%3e%0a%3cli%3e%3ccode%3eX%3c%2fcode%3e%20-%20%e5%88%aa%e9%99%a4%e5%89%8d%e4%b8%80%e5%80%8b%e5%ad%97%e5%85%83%28Backspace%29%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26gt%3b%26gt%3b%3c%2fcode%3e%20-%20%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3cli%3e%3ccode%3e%26lt%3b%26lt%3b%3c%2fcode%3e%20-%20%e5%8f%8d%e5%90%91%e7%b8%ae%e6%8e%92%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch3%20id%3d%22%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%22%3e%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%3c%2fh3%3e%0a%3cp%3e%e5%9c%a8%e6%99%ae%e9%80%9a%e6%a8%a1%e5%bc%8f%e6%8c%89%e4%b8%8b%20%3ccode%3ei%28Insert%29%2c%20o%28Open%29%2c%20a%28Append%29%3c%2fcode%3e%20%e7%ad%89%e9%8d%b5%e5%b0%b1%e6%9c%83%e9%80%b2%e5%85%a5%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f%ef%bc%8c%e6%ad%a4%e6%99%82%e5%8f%af%e4%bb%a5%e7%9c%8b%e5%88%b0%e8%a6%96%e7%aa%97%e6%9c%80%e4%b8%8b%e6%96%b9%e5%87%ba%e7%8f%be%20%3ccode%3e--%20INSERT%20--%3c%2fcode%3e%ef%bc%8c%e5%8d%b3%e5%8f%af%e5%b0%8d%e6%aa%94%e6%a1%88%e7%b7%a8%e8%bc%af%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&t=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fvim_simple_tutorial%2f&t=Vim%20%e6%a5%b5%e7%b0%a1%e6%95%99%e5%ad%b8"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

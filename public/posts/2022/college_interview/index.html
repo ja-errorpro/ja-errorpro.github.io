@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -79,6 +76,7 @@
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -171,54 +169,95 @@
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&text=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&text=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&is_video=false&description=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&is_video=false&description=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&name=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&description=%3ch2%20id%3d%22%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%22%3e%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%28%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%29%3c%2fh2%3e%0a%3cp%3e%e8%ba%ab%e7%82%ba2003%2f9%e6%9c%88%e5%87%ba%e7%94%9f%e7%9a%84%e6%88%91%ef%bc%8c%e8%ae%8a%e6%88%90%e6%95%99%e8%82%b2%e9%83%a8%e7%88%86%e6%94%b9%e8%aa%b2%e7%b6%b1%e7%9a%84%e9%a0%ad%e4%b8%80%e6%89%b9%e7%99%bd%e8%80%81%e9%bc%a0orz%26hellip%3b%ef%bc%8c%e5%8f%af%e8%ac%82%e7%94%9f%e6%96%bcSARS%ef%bc%8c%e6%ad%bb%e6%96%bc%e6%ad%a6%e6%bc%a2%ef%bc%81%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e7%82%ba%e4%bb%8a%e5%b9%b4%e6%95%b8%e5%ad%b8%e6%9c%83%e6%af%94110%e7%b0%a1%e5%96%ae%ef%bc%8c%e7%b5%90%e6%9e%9c%e6%9b%b4%e9%9b%a3%f0%9f%98%a0%ef%bc%8c%e6%88%91%e7%9a%84%e5%ad%b8%e6%b8%ac%e7%9b%b4%e6%8e%a5%e7%87%92%e5%88%b0%e5%8f%aa%e5%89%a943%e7%b4%9a%e5%88%86%e3%80%82%3c%2fp%3e%0a%3cp%3e%e8%81%bd%e5%88%b0%e9%80%99%e6%88%90%e7%b8%be%e5%be%8c%e6%88%91%e9%82%84%e6%98%af%e7%a1%ac%e8%91%97%e9%a0%ad%e7%9a%ae%e6%8a%8a%e5%85%ad%e5%80%8b%e5%bf%97%e9%a1%98%e5%85%a8%e9%83%bd%e5%a1%ab%e9%9b%bb%e8%b3%87%2f%e8%b3%87%e5%b7%a5%ef%bc%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e6%88%91%e7%9a%84%e4%b8%80%e9%9a%8e%e6%ad%a3%e5%8f%96%e6%a0%a1%e7%b3%bb%e4%bb%a5%e5%8f%8a%e4%ba%8c%e9%9a%8e%e9%9d%a2%e8%a9%a6%e7%8b%80%e6%b3%81%2820220530%e6%9b%b4%e6%96%b0%3a%20%e7%a9%a9%e5%88%b0%e4%b8%8d%e8%a1%8c%e6%ac%b8%e5%a5%bd%e8%ae%9a%29%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e5%82%9914%3c%2fli%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%e6%ad%a38%3c%2fli%3e%0a%3cli%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e521%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a330%3c%2fli%3e%0a%3cli%3e%e5%85%83%e6%99%ba%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%84%a1%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e6%ad%a376%3c%2fli%3e%0a%3cli%3e%e6%9d%b1%e6%b5%b7%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e522%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a33%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e5%93%ad%e5%95%8a%e5%8f%aa%e5%89%a9%e5%85%a9%e9%96%93%e9%9d%a2%e8%a9%a6%ef%bc%8c%e9%a3%af%e5%ba%97%e9%83%bd%e8%a8%82%e5%a5%bd%e4%ba%86%ef%bc%8c%e7%9b%b4%e6%8e%a5%e5%99%b4%e6%8e%891000%3c%2fp%3e%0a%3ch2%20id%3d%22%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%22%3e%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%3c%2fh2%3e%0a%3ch3%20id%3d%22%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%22%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%3a%3c%2fh3%3e%0a%3cp%3e%e5%8d%b0%e8%b1%a1%e4%b8%8d%e9%8c%af%ef%bc%8c%e6%9c%89%e7%86%b1%e6%83%85%e7%9a%84%e5%ad%b8%e9%95%b7%e5%a7%8a%28%3f%ef%bc%8c%e9%80%b2%e5%8e%bb%e5%89%8d%e6%9c%83%e4%b8%80%e7%9b%b4%e8%b7%9f%e6%88%91%e5%80%91%e8%81%8a%e5%a4%a9%28%e9%99%8d%e4%bd%8e%e7%b7%8a%e5%bc%b5%e6%84%9f%ef%bc%9f%3c%2fp%3e%0a%3cp%3e%e8%80%8c%e4%b8%94%e6%95%99%e6%8e%88%e9%9d%9e%e5%b8%b8%e5%8f%8b%e5%96%84%e3%80%81%e5%92%8c%e8%97%b9%28%e5%b9%b8%e9%81%8b%e9%81%87%e5%88%b0%e7%99%bd%e8%87%89%29~%20%e8%81%bd%e8%aa%aa%e5%8f%a6%e4%b8%80%e9%96%93%e8%a9%a6%e5%a0%b4%e6%98%af%e9%bb%91%e8%87%89%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e%e9%9d%a2%e8%a9%a6%e6%96%b9%e5%bc%8f%e6%98%af%e4%b8%80%e6%ac%a1%e5%85%ad%e5%80%8b%e4%ba%ba%e5%b0%8d%e4%b8%89%e4%bd%8d%e6%95%99%e6%8e%88%ef%bc%8c%e5%a4%a7%e6%a6%82%e6%98%af%e9%80%99%e6%a8%a3%e5%9d%90%e7%9a%84%ef%bc%9a%3c%2fp%3e%0a%3cp%3e%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e------%e9%95%b7%e6%a1%8c------%3c%2fp%3e%0a%3cp%3e1%28%e6%b2%92%e4%be%86%29%202%203%204%205%20%e6%88%91%286%29%20%20%20%20%20%20%20%20%e9%96%80%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&name=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&description=%3ch2%20id%3d%22%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%22%3e%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%28%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%29%3c%2fh2%3e%0a%3cp%3e%e8%ba%ab%e7%82%ba2003%2f9%e6%9c%88%e5%87%ba%e7%94%9f%e7%9a%84%e6%88%91%ef%bc%8c%e8%ae%8a%e6%88%90%e6%95%99%e8%82%b2%e9%83%a8%e7%88%86%e6%94%b9%e8%aa%b2%e7%b6%b1%e7%9a%84%e9%a0%ad%e4%b8%80%e6%89%b9%e7%99%bd%e8%80%81%e9%bc%a0orz%26hellip%3b%ef%bc%8c%e5%8f%af%e8%ac%82%e7%94%9f%e6%96%bcSARS%ef%bc%8c%e6%ad%bb%e6%96%bc%e6%ad%a6%e6%bc%a2%ef%bc%81%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e7%82%ba%e4%bb%8a%e5%b9%b4%e6%95%b8%e5%ad%b8%e6%9c%83%e6%af%94110%e7%b0%a1%e5%96%ae%ef%bc%8c%e7%b5%90%e6%9e%9c%e6%9b%b4%e9%9b%a3%f0%9f%98%a0%ef%bc%8c%e6%88%91%e7%9a%84%e5%ad%b8%e6%b8%ac%e7%9b%b4%e6%8e%a5%e7%87%92%e5%88%b0%e5%8f%aa%e5%89%a943%e7%b4%9a%e5%88%86%e3%80%82%3c%2fp%3e%0a%3cp%3e%e8%81%bd%e5%88%b0%e9%80%99%e6%88%90%e7%b8%be%e5%be%8c%e6%88%91%e9%82%84%e6%98%af%e7%a1%ac%e8%91%97%e9%a0%ad%e7%9a%ae%e6%8a%8a%e5%85%ad%e5%80%8b%e5%bf%97%e9%a1%98%e5%85%a8%e9%83%bd%e5%a1%ab%e9%9b%bb%e8%b3%87%2f%e8%b3%87%e5%b7%a5%ef%bc%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e6%88%91%e7%9a%84%e4%b8%80%e9%9a%8e%e6%ad%a3%e5%8f%96%e6%a0%a1%e7%b3%bb%e4%bb%a5%e5%8f%8a%e4%ba%8c%e9%9a%8e%e9%9d%a2%e8%a9%a6%e7%8b%80%e6%b3%81%2820220530%e6%9b%b4%e6%96%b0%3a%20%e7%a9%a9%e5%88%b0%e4%b8%8d%e8%a1%8c%e6%ac%b8%e5%a5%bd%e8%ae%9a%29%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e5%82%9914%3c%2fli%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%e6%ad%a38%3c%2fli%3e%0a%3cli%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e521%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a330%3c%2fli%3e%0a%3cli%3e%e5%85%83%e6%99%ba%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%84%a1%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e6%ad%a376%3c%2fli%3e%0a%3cli%3e%e6%9d%b1%e6%b5%b7%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e522%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a33%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e5%93%ad%e5%95%8a%e5%8f%aa%e5%89%a9%e5%85%a9%e9%96%93%e9%9d%a2%e8%a9%a6%ef%bc%8c%e9%a3%af%e5%ba%97%e9%83%bd%e8%a8%82%e5%a5%bd%e4%ba%86%ef%bc%8c%e7%9b%b4%e6%8e%a5%e5%99%b4%e6%8e%891000%3c%2fp%3e%0a%3ch2%20id%3d%22%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%22%3e%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%3c%2fh2%3e%0a%3ch3%20id%3d%22%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%22%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%3a%3c%2fh3%3e%0a%3cp%3e%e5%8d%b0%e8%b1%a1%e4%b8%8d%e9%8c%af%ef%bc%8c%e6%9c%89%e7%86%b1%e6%83%85%e7%9a%84%e5%ad%b8%e9%95%b7%e5%a7%8a%28%3f%ef%bc%8c%e9%80%b2%e5%8e%bb%e5%89%8d%e6%9c%83%e4%b8%80%e7%9b%b4%e8%b7%9f%e6%88%91%e5%80%91%e8%81%8a%e5%a4%a9%28%e9%99%8d%e4%bd%8e%e7%b7%8a%e5%bc%b5%e6%84%9f%ef%bc%9f%3c%2fp%3e%0a%3cp%3e%e8%80%8c%e4%b8%94%e6%95%99%e6%8e%88%e9%9d%9e%e5%b8%b8%e5%8f%8b%e5%96%84%e3%80%81%e5%92%8c%e8%97%b9%28%e5%b9%b8%e9%81%8b%e9%81%87%e5%88%b0%e7%99%bd%e8%87%89%29~%20%e8%81%bd%e8%aa%aa%e5%8f%a6%e4%b8%80%e9%96%93%e8%a9%a6%e5%a0%b4%e6%98%af%e9%bb%91%e8%87%89%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e%e9%9d%a2%e8%a9%a6%e6%96%b9%e5%bc%8f%e6%98%af%e4%b8%80%e6%ac%a1%e5%85%ad%e5%80%8b%e4%ba%ba%e5%b0%8d%e4%b8%89%e4%bd%8d%e6%95%99%e6%8e%88%ef%bc%8c%e5%a4%a7%e6%a6%82%e6%98%af%e9%80%99%e6%a8%a3%e5%9d%90%e7%9a%84%ef%bc%9a%3c%2fp%3e%0a%3cp%3e%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e------%e9%95%b7%e6%a1%8c------%3c%2fp%3e%0a%3cp%3e1%28%e6%b2%92%e4%be%86%29%202%203%204%205%20%e6%88%91%286%29%20%20%20%20%20%20%20%20%e9%96%80%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&t=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&t=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -400,54 +439,95 @@
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&text=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&text=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&is_video=false&description=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&is_video=false&description=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&title=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&name=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&description=%3ch2%20id%3d%22%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%22%3e%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%28%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%29%3c%2fh2%3e%0a%3cp%3e%e8%ba%ab%e7%82%ba2003%2f9%e6%9c%88%e5%87%ba%e7%94%9f%e7%9a%84%e6%88%91%ef%bc%8c%e8%ae%8a%e6%88%90%e6%95%99%e8%82%b2%e9%83%a8%e7%88%86%e6%94%b9%e8%aa%b2%e7%b6%b1%e7%9a%84%e9%a0%ad%e4%b8%80%e6%89%b9%e7%99%bd%e8%80%81%e9%bc%a0orz%26hellip%3b%ef%bc%8c%e5%8f%af%e8%ac%82%e7%94%9f%e6%96%bcSARS%ef%bc%8c%e6%ad%bb%e6%96%bc%e6%ad%a6%e6%bc%a2%ef%bc%81%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e7%82%ba%e4%bb%8a%e5%b9%b4%e6%95%b8%e5%ad%b8%e6%9c%83%e6%af%94110%e7%b0%a1%e5%96%ae%ef%bc%8c%e7%b5%90%e6%9e%9c%e6%9b%b4%e9%9b%a3%f0%9f%98%a0%ef%bc%8c%e6%88%91%e7%9a%84%e5%ad%b8%e6%b8%ac%e7%9b%b4%e6%8e%a5%e7%87%92%e5%88%b0%e5%8f%aa%e5%89%a943%e7%b4%9a%e5%88%86%e3%80%82%3c%2fp%3e%0a%3cp%3e%e8%81%bd%e5%88%b0%e9%80%99%e6%88%90%e7%b8%be%e5%be%8c%e6%88%91%e9%82%84%e6%98%af%e7%a1%ac%e8%91%97%e9%a0%ad%e7%9a%ae%e6%8a%8a%e5%85%ad%e5%80%8b%e5%bf%97%e9%a1%98%e5%85%a8%e9%83%bd%e5%a1%ab%e9%9b%bb%e8%b3%87%2f%e8%b3%87%e5%b7%a5%ef%bc%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e6%88%91%e7%9a%84%e4%b8%80%e9%9a%8e%e6%ad%a3%e5%8f%96%e6%a0%a1%e7%b3%bb%e4%bb%a5%e5%8f%8a%e4%ba%8c%e9%9a%8e%e9%9d%a2%e8%a9%a6%e7%8b%80%e6%b3%81%2820220530%e6%9b%b4%e6%96%b0%3a%20%e7%a9%a9%e5%88%b0%e4%b8%8d%e8%a1%8c%e6%ac%b8%e5%a5%bd%e8%ae%9a%29%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e5%82%9914%3c%2fli%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%e6%ad%a38%3c%2fli%3e%0a%3cli%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e521%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a330%3c%2fli%3e%0a%3cli%3e%e5%85%83%e6%99%ba%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%84%a1%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e6%ad%a376%3c%2fli%3e%0a%3cli%3e%e6%9d%b1%e6%b5%b7%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e522%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a33%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e5%93%ad%e5%95%8a%e5%8f%aa%e5%89%a9%e5%85%a9%e9%96%93%e9%9d%a2%e8%a9%a6%ef%bc%8c%e9%a3%af%e5%ba%97%e9%83%bd%e8%a8%82%e5%a5%bd%e4%ba%86%ef%bc%8c%e7%9b%b4%e6%8e%a5%e5%99%b4%e6%8e%891000%3c%2fp%3e%0a%3ch2%20id%3d%22%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%22%3e%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%3c%2fh2%3e%0a%3ch3%20id%3d%22%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%22%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%3a%3c%2fh3%3e%0a%3cp%3e%e5%8d%b0%e8%b1%a1%e4%b8%8d%e9%8c%af%ef%bc%8c%e6%9c%89%e7%86%b1%e6%83%85%e7%9a%84%e5%ad%b8%e9%95%b7%e5%a7%8a%28%3f%ef%bc%8c%e9%80%b2%e5%8e%bb%e5%89%8d%e6%9c%83%e4%b8%80%e7%9b%b4%e8%b7%9f%e6%88%91%e5%80%91%e8%81%8a%e5%a4%a9%28%e9%99%8d%e4%bd%8e%e7%b7%8a%e5%bc%b5%e6%84%9f%ef%bc%9f%3c%2fp%3e%0a%3cp%3e%e8%80%8c%e4%b8%94%e6%95%99%e6%8e%88%e9%9d%9e%e5%b8%b8%e5%8f%8b%e5%96%84%e3%80%81%e5%92%8c%e8%97%b9%28%e5%b9%b8%e9%81%8b%e9%81%87%e5%88%b0%e7%99%bd%e8%87%89%29~%20%e8%81%bd%e8%aa%aa%e5%8f%a6%e4%b8%80%e9%96%93%e8%a9%a6%e5%a0%b4%e6%98%af%e9%bb%91%e8%87%89%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e%e9%9d%a2%e8%a9%a6%e6%96%b9%e5%bc%8f%e6%98%af%e4%b8%80%e6%ac%a1%e5%85%ad%e5%80%8b%e4%ba%ba%e5%b0%8d%e4%b8%89%e4%bd%8d%e6%95%99%e6%8e%88%ef%bc%8c%e5%a4%a7%e6%a6%82%e6%98%af%e9%80%99%e6%a8%a3%e5%9d%90%e7%9a%84%ef%bc%9a%3c%2fp%3e%0a%3cp%3e%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e------%e9%95%b7%e6%a1%8c------%3c%2fp%3e%0a%3cp%3e1%28%e6%b2%92%e4%be%86%29%202%203%204%205%20%e6%88%91%286%29%20%20%20%20%20%20%20%20%e9%96%80%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&name=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97&description=%3ch2%20id%3d%22%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%22%3e%e7%94%b3%e8%ab%8b%e5%85%a5%e5%ad%b8%28%e6%96%b0%e8%aa%b2%e7%b6%b1%e7%ac%ac%e4%b8%80%e5%b1%86%e7%99%bd%e8%80%81%e9%bc%a0%29%3c%2fh2%3e%0a%3cp%3e%e8%ba%ab%e7%82%ba2003%2f9%e6%9c%88%e5%87%ba%e7%94%9f%e7%9a%84%e6%88%91%ef%bc%8c%e8%ae%8a%e6%88%90%e6%95%99%e8%82%b2%e9%83%a8%e7%88%86%e6%94%b9%e8%aa%b2%e7%b6%b1%e7%9a%84%e9%a0%ad%e4%b8%80%e6%89%b9%e7%99%bd%e8%80%81%e9%bc%a0orz%26hellip%3b%ef%bc%8c%e5%8f%af%e8%ac%82%e7%94%9f%e6%96%bcSARS%ef%bc%8c%e6%ad%bb%e6%96%bc%e6%ad%a6%e6%bc%a2%ef%bc%81%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e7%82%ba%e4%bb%8a%e5%b9%b4%e6%95%b8%e5%ad%b8%e6%9c%83%e6%af%94110%e7%b0%a1%e5%96%ae%ef%bc%8c%e7%b5%90%e6%9e%9c%e6%9b%b4%e9%9b%a3%f0%9f%98%a0%ef%bc%8c%e6%88%91%e7%9a%84%e5%ad%b8%e6%b8%ac%e7%9b%b4%e6%8e%a5%e7%87%92%e5%88%b0%e5%8f%aa%e5%89%a943%e7%b4%9a%e5%88%86%e3%80%82%3c%2fp%3e%0a%3cp%3e%e8%81%bd%e5%88%b0%e9%80%99%e6%88%90%e7%b8%be%e5%be%8c%e6%88%91%e9%82%84%e6%98%af%e7%a1%ac%e8%91%97%e9%a0%ad%e7%9a%ae%e6%8a%8a%e5%85%ad%e5%80%8b%e5%bf%97%e9%a1%98%e5%85%a8%e9%83%bd%e5%a1%ab%e9%9b%bb%e8%b3%87%2f%e8%b3%87%e5%b7%a5%ef%bc%8c%3c%2fp%3e%0a%3cp%3e%e4%bb%a5%e4%b8%8b%e6%98%af%e6%88%91%e7%9a%84%e4%b8%80%e9%9a%8e%e6%ad%a3%e5%8f%96%e6%a0%a1%e7%b3%bb%e4%bb%a5%e5%8f%8a%e4%ba%8c%e9%9a%8e%e9%9d%a2%e8%a9%a6%e7%8b%80%e6%b3%81%2820220530%e6%9b%b4%e6%96%b0%3a%20%e7%a9%a9%e5%88%b0%e4%b8%8d%e8%a1%8c%e6%ac%b8%e5%a5%bd%e8%ae%9a%29%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e5%82%9914%3c%2fli%3e%0a%3cli%3e%e4%b8%ad%e5%8e%9f%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e%e7%96%ab%e6%83%85%e5%8f%96%e6%b6%88%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%e6%ad%a38%3c%2fli%3e%0a%3cli%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%20-%20%3cstrong%3e521%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a330%3c%2fli%3e%0a%3cli%3e%e5%85%83%e6%99%ba%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e%e7%84%a1%e9%9d%a2%e8%a9%a6%3c%2fstrong%3e%20-%20%e6%ad%a376%3c%2fli%3e%0a%3cli%3e%e6%9d%b1%e6%b5%b7%e8%b3%87%e5%b7%a5%20-%20%3cstrong%3e522%e9%9d%a2%e8%a9%a6%e7%b5%90%e6%9d%9f%3c%2fstrong%3e%20-%20%e6%ad%a33%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e5%93%ad%e5%95%8a%e5%8f%aa%e5%89%a9%e5%85%a9%e9%96%93%e9%9d%a2%e8%a9%a6%ef%bc%8c%e9%a3%af%e5%ba%97%e9%83%bd%e8%a8%82%e5%a5%bd%e4%ba%86%ef%bc%8c%e7%9b%b4%e6%8e%a5%e5%99%b4%e6%8e%891000%3c%2fp%3e%0a%3ch2%20id%3d%22%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%22%3e%e9%9d%a2%e8%a9%a6%e9%81%8e%e7%a8%8b%3c%2fh2%3e%0a%3ch3%20id%3d%22%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%22%3e%e9%80%a2%e7%94%b2%e8%b3%87%e9%9b%bb%e4%b8%8d%e5%88%86%e7%b3%bb%3a%3c%2fh3%3e%0a%3cp%3e%e5%8d%b0%e8%b1%a1%e4%b8%8d%e9%8c%af%ef%bc%8c%e6%9c%89%e7%86%b1%e6%83%85%e7%9a%84%e5%ad%b8%e9%95%b7%e5%a7%8a%28%3f%ef%bc%8c%e9%80%b2%e5%8e%bb%e5%89%8d%e6%9c%83%e4%b8%80%e7%9b%b4%e8%b7%9f%e6%88%91%e5%80%91%e8%81%8a%e5%a4%a9%28%e9%99%8d%e4%bd%8e%e7%b7%8a%e5%bc%b5%e6%84%9f%ef%bc%9f%3c%2fp%3e%0a%3cp%3e%e8%80%8c%e4%b8%94%e6%95%99%e6%8e%88%e9%9d%9e%e5%b8%b8%e5%8f%8b%e5%96%84%e3%80%81%e5%92%8c%e8%97%b9%28%e5%b9%b8%e9%81%8b%e9%81%87%e5%88%b0%e7%99%bd%e8%87%89%29~%20%e8%81%bd%e8%aa%aa%e5%8f%a6%e4%b8%80%e9%96%93%e8%a9%a6%e5%a0%b4%e6%98%af%e9%bb%91%e8%87%89%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e%e9%9d%a2%e8%a9%a6%e6%96%b9%e5%bc%8f%e6%98%af%e4%b8%80%e6%ac%a1%e5%85%ad%e5%80%8b%e4%ba%ba%e5%b0%8d%e4%b8%89%e4%bd%8d%e6%95%99%e6%8e%88%ef%bc%8c%e5%a4%a7%e6%a6%82%e6%98%af%e9%80%99%e6%a8%a3%e5%9d%90%e7%9a%84%ef%bc%9a%3c%2fp%3e%0a%3cp%3e%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%20%e6%95%99%e6%8e%88%3c%2fp%3e%0a%3cp%3e------%e9%95%b7%e6%a1%8c------%3c%2fp%3e%0a%3cp%3e1%28%e6%b2%92%e4%be%86%29%202%203%204%205%20%e6%88%91%286%29%20%20%20%20%20%20%20%20%e9%96%80%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&t=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcollege_interview%2f&t=%e5%a4%a7%e5%ad%b8%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

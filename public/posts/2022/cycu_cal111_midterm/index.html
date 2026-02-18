@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -68,6 +65,7 @@ bool NotLetter(char ch){
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -160,54 +158,95 @@ bool NotLetter(char ch){
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&text=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&text=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&is_video=false&description=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&is_video=false&description=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&name=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&description=%3ch1%20id%3d%22%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%22%3e%28%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%29%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-1%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-2%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%22%3e%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%3c%2fh1%3e%0a%3ch2%20id%3d%22pa%22%3epA%3c%2fh2%3e%0a%3cp%3e%e5%af%a6%e4%bd%9c%3ccode%3eNotLetter%28char%20ch%29%3c%2fcode%3e%20function%ef%bc%8c%e5%a6%82%e6%9e%9cch%e4%b8%8d%e6%98%af%e5%ad%97%e6%af%8d%e5%b0%b1%e5%9b%9e%e5%82%b3true%ef%bc%8c%e5%8f%8d%e5%89%87false%e3%80%82%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3ebool%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3eNotLetter%3c%2fspan%3e%28%3cspan%20style%3d%22color%3a%238be9fd%22%3echar%3c%2fspan%3e%20ch%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3ba%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bz%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bA%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bZ%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3etrue%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&name=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&description=%3ch1%20id%3d%22%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%22%3e%28%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%29%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-1%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-2%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%22%3e%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%3c%2fh1%3e%0a%3ch2%20id%3d%22pa%22%3epA%3c%2fh2%3e%0a%3cp%3e%e5%af%a6%e4%bd%9c%3ccode%3eNotLetter%28char%20ch%29%3c%2fcode%3e%20function%ef%bc%8c%e5%a6%82%e6%9e%9cch%e4%b8%8d%e6%98%af%e5%ad%97%e6%af%8d%e5%b0%b1%e5%9b%9e%e5%82%b3true%ef%bc%8c%e5%8f%8d%e5%89%87false%e3%80%82%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3ebool%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3eNotLetter%3c%2fspan%3e%28%3cspan%20style%3d%22color%3a%238be9fd%22%3echar%3c%2fspan%3e%20ch%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3ba%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bz%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bA%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bZ%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3etrue%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&t=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&t=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -717,54 +756,95 @@ apples
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&text=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&text=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&is_video=false&description=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&is_video=false&description=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&title=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&name=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&description=%3ch1%20id%3d%22%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%22%3e%28%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%29%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-1%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-2%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%22%3e%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%3c%2fh1%3e%0a%3ch2%20id%3d%22pa%22%3epA%3c%2fh2%3e%0a%3cp%3e%e5%af%a6%e4%bd%9c%3ccode%3eNotLetter%28char%20ch%29%3c%2fcode%3e%20function%ef%bc%8c%e5%a6%82%e6%9e%9cch%e4%b8%8d%e6%98%af%e5%ad%97%e6%af%8d%e5%b0%b1%e5%9b%9e%e5%82%b3true%ef%bc%8c%e5%8f%8d%e5%89%87false%e3%80%82%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3ebool%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3eNotLetter%3c%2fspan%3e%28%3cspan%20style%3d%22color%3a%238be9fd%22%3echar%3c%2fspan%3e%20ch%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3ba%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bz%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bA%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bZ%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3etrue%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&name=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac&description=%3ch1%20id%3d%22%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%22%3e%28%e6%9c%ac%e4%ba%ba%e5%b7%b2%e6%94%be%e6%a3%84%e6%80%9d%e8%80%83%29%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-1%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83-2%22%3e%e7%ad%94%e6%a1%88%e5%83%85%e4%be%9b%e5%8f%83%e8%80%83%3c%2fh1%3e%0a%3ch1%20id%3d%22%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%22%3e%e9%ac%bc%e6%89%8d%e7%9f%a5%e9%81%93%e6%98%af%e4%b8%8d%e6%98%af%e6%ad%a3%e8%a7%a3%3c%2fh1%3e%0a%3ch2%20id%3d%22pa%22%3epA%3c%2fh2%3e%0a%3cp%3e%e5%af%a6%e4%bd%9c%3ccode%3eNotLetter%28char%20ch%29%3c%2fcode%3e%20function%ef%bc%8c%e5%a6%82%e6%9e%9cch%e4%b8%8d%e6%98%af%e5%ad%97%e6%af%8d%e5%b0%b1%e5%9b%9e%e5%82%b3true%ef%bc%8c%e5%8f%8d%e5%89%87false%e3%80%82%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3ebool%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3eNotLetter%3c%2fspan%3e%28%3cspan%20style%3d%22color%3a%238be9fd%22%3echar%3c%2fspan%3e%20ch%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3ba%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bz%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3eif%3c%2fspan%3e%28ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26gt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bA%26%2339%3b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26amp%3b%26amp%3b%3c%2fspan%3e%20ch%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%26lt%3b%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3bZ%26%2339%3b%3c%2fspan%3e%29%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3efalse%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%238be9fd%3bfont-style%3aitalic%22%3etrue%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&t=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fcycu_cal111_midterm%2f&t=%e4%b8%ad%e5%8e%9f111%e8%b3%87%e5%b7%a5%e8%a8%88%e6%a6%82%e4%b8%8a%e5%ad%b8%e6%9c%9f%e6%9c%9f%e4%b8%ad%e6%a9%9f%e6%b8%ac"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

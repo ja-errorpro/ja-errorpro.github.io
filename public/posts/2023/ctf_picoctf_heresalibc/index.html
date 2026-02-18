@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -104,6 +101,7 @@ ret2libc
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -196,54 +194,95 @@ ret2libc
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&text=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&text=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&is_video=false&description=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&is_video=false&description=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&name=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&description=%3cp%3e%e9%a1%8c%e7%9b%ae%ef%bc%9a%0a%e7%b5%a6%e4%bd%a0%e6%8c%87%e5%ae%9a%e7%9a%84libc%e8%88%87elf%20file%e8%ab%8bpwn%e6%8e%89%e5%ae%83%3c%2fp%3e%0a%3ch1%20id%3d%22%e6%a6%82%e5%bf%b5%22%3e%e6%a6%82%e5%bf%b5%ef%bc%9a%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%e8%aa%b2%e5%ad%b8%e7%9a%84%e5%90%84%e7%a8%ae%e6%9d%b1%e8%a5%bf%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%3c%2fli%3e%0a%3cli%3eLittle%20endian%3c%2fli%3e%0a%3cli%3estack%20frame%3c%2fli%3e%0a%3cli%3eELF%20format%3c%2fli%3e%0a%3cli%3eret2libc%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22%e9%a1%8c%e8%a7%a3%22%3e%e9%a1%8c%e8%a7%a3%ef%bc%9a%3c%2fh1%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-file-%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20file%20%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2ffile.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e9%80%99%e6%98%af%e4%b8%80%e5%80%8b64%e4%bd%8dELF%e6%a0%bc%e5%bc%8f%e5%8f%af%e5%9f%b7%e8%a1%8c%e6%aa%94%3c%2fp%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-checksec-%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20checksec%20%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2fchecksec.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e5%8f%aa%e9%96%8b%e4%ba%86%20NX%28No-Execute%2c%20%e5%a0%86%e7%96%8a%e4%b8%8d%e5%8f%af%e5%9f%b7%e8%a1%8c%29%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%8b%bf%e5%8e%bbghidra%e6%88%96ida%e9%80%86%e5%90%91%22%3e%e6%8b%bf%e5%8e%bbGhidra%e6%88%96IDA%e9%80%86%e5%90%91%3c%2fh3%3e%0a%3cp%3e%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%83%e7%94%a8%e5%88%b0%e7%9a%84%e5%87%bd%e5%bc%8f%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%201%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%202%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%203%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%204%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%205%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%206%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%207%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%208%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%209%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e10%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e11%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e12%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e13%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e14%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e15%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e16%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e17%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e18%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e19%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e20%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e21%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e22%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e23%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e24%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e25%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e26%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e27%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e28%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e29%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e30%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e31%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e32%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e33%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e34%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&name=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&description=%3cp%3e%e9%a1%8c%e7%9b%ae%ef%bc%9a%0a%e7%b5%a6%e4%bd%a0%e6%8c%87%e5%ae%9a%e7%9a%84libc%e8%88%87elf%20file%e8%ab%8bpwn%e6%8e%89%e5%ae%83%3c%2fp%3e%0a%3ch1%20id%3d%22%e6%a6%82%e5%bf%b5%22%3e%e6%a6%82%e5%bf%b5%ef%bc%9a%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%e8%aa%b2%e5%ad%b8%e7%9a%84%e5%90%84%e7%a8%ae%e6%9d%b1%e8%a5%bf%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%3c%2fli%3e%0a%3cli%3eLittle%20endian%3c%2fli%3e%0a%3cli%3estack%20frame%3c%2fli%3e%0a%3cli%3eELF%20format%3c%2fli%3e%0a%3cli%3eret2libc%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22%e9%a1%8c%e8%a7%a3%22%3e%e9%a1%8c%e8%a7%a3%ef%bc%9a%3c%2fh1%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-file-%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20file%20%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2ffile.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e9%80%99%e6%98%af%e4%b8%80%e5%80%8b64%e4%bd%8dELF%e6%a0%bc%e5%bc%8f%e5%8f%af%e5%9f%b7%e8%a1%8c%e6%aa%94%3c%2fp%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-checksec-%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20checksec%20%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2fchecksec.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e5%8f%aa%e9%96%8b%e4%ba%86%20NX%28No-Execute%2c%20%e5%a0%86%e7%96%8a%e4%b8%8d%e5%8f%af%e5%9f%b7%e8%a1%8c%29%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%8b%bf%e5%8e%bbghidra%e6%88%96ida%e9%80%86%e5%90%91%22%3e%e6%8b%bf%e5%8e%bbGhidra%e6%88%96IDA%e9%80%86%e5%90%91%3c%2fh3%3e%0a%3cp%3e%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%83%e7%94%a8%e5%88%b0%e7%9a%84%e5%87%bd%e5%bc%8f%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%201%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%202%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%203%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%204%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%205%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%206%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%207%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%208%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%209%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e10%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e11%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e12%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e13%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e14%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e15%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e16%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e17%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e18%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e19%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e20%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e21%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e22%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e23%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e24%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e25%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e26%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e27%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e28%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e29%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e30%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e31%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e32%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e33%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e34%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&t=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&t=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -648,54 +687,95 @@ ret2libc
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&text=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&text=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&is_video=false&description=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&is_video=false&description=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&title=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&name=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&description=%3cp%3e%e9%a1%8c%e7%9b%ae%ef%bc%9a%0a%e7%b5%a6%e4%bd%a0%e6%8c%87%e5%ae%9a%e7%9a%84libc%e8%88%87elf%20file%e8%ab%8bpwn%e6%8e%89%e5%ae%83%3c%2fp%3e%0a%3ch1%20id%3d%22%e6%a6%82%e5%bf%b5%22%3e%e6%a6%82%e5%bf%b5%ef%bc%9a%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%e8%aa%b2%e5%ad%b8%e7%9a%84%e5%90%84%e7%a8%ae%e6%9d%b1%e8%a5%bf%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%3c%2fli%3e%0a%3cli%3eLittle%20endian%3c%2fli%3e%0a%3cli%3estack%20frame%3c%2fli%3e%0a%3cli%3eELF%20format%3c%2fli%3e%0a%3cli%3eret2libc%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22%e9%a1%8c%e8%a7%a3%22%3e%e9%a1%8c%e8%a7%a3%ef%bc%9a%3c%2fh1%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-file-%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20file%20%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2ffile.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e9%80%99%e6%98%af%e4%b8%80%e5%80%8b64%e4%bd%8dELF%e6%a0%bc%e5%bc%8f%e5%8f%af%e5%9f%b7%e8%a1%8c%e6%aa%94%3c%2fp%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-checksec-%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20checksec%20%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2fchecksec.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e5%8f%aa%e9%96%8b%e4%ba%86%20NX%28No-Execute%2c%20%e5%a0%86%e7%96%8a%e4%b8%8d%e5%8f%af%e5%9f%b7%e8%a1%8c%29%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%8b%bf%e5%8e%bbghidra%e6%88%96ida%e9%80%86%e5%90%91%22%3e%e6%8b%bf%e5%8e%bbGhidra%e6%88%96IDA%e9%80%86%e5%90%91%3c%2fh3%3e%0a%3cp%3e%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%83%e7%94%a8%e5%88%b0%e7%9a%84%e5%87%bd%e5%bc%8f%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%201%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%202%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%203%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%204%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%205%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%206%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%207%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%208%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%209%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e10%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e11%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e12%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e13%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e14%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e15%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e16%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e17%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e18%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e19%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e20%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e21%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e22%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e23%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e24%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e25%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e26%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e27%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e28%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e29%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e30%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e31%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e32%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e33%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e34%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&name=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC&description=%3cp%3e%e9%a1%8c%e7%9b%ae%ef%bc%9a%0a%e7%b5%a6%e4%bd%a0%e6%8c%87%e5%ae%9a%e7%9a%84libc%e8%88%87elf%20file%e8%ab%8bpwn%e6%8e%89%e5%ae%83%3c%2fp%3e%0a%3ch1%20id%3d%22%e6%a6%82%e5%bf%b5%22%3e%e6%a6%82%e5%bf%b5%ef%bc%9a%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%e8%aa%b2%e5%ad%b8%e7%9a%84%e5%90%84%e7%a8%ae%e6%9d%b1%e8%a5%bf%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%3c%2fli%3e%0a%3cli%3eLittle%20endian%3c%2fli%3e%0a%3cli%3estack%20frame%3c%2fli%3e%0a%3cli%3eELF%20format%3c%2fli%3e%0a%3cli%3eret2libc%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22%e9%a1%8c%e8%a7%a3%22%3e%e9%a1%8c%e8%a7%a3%ef%bc%9a%3c%2fh1%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-file-%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20file%20%e6%9f%a5%e7%9c%8b%e6%aa%94%e6%a1%88%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2ffile.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e9%80%99%e6%98%af%e4%b8%80%e5%80%8b64%e4%bd%8dELF%e6%a0%bc%e5%bc%8f%e5%8f%af%e5%9f%b7%e8%a1%8c%e6%aa%94%3c%2fp%3e%0a%3ch3%20id%3d%22%e5%9f%b7%e8%a1%8c-checksec-%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%22%3e%e5%9f%b7%e8%a1%8c%20checksec%20%e6%9f%a5%e7%9c%8b%e5%ae%89%e5%85%a8%e5%b1%ac%e6%80%a7%3c%2fh3%3e%0a%3cp%3e%3cimg%20src%3d%22%2fimages%2fctf%2fpicoctf_heresalibc%2fchecksec.png%22%20alt%3d%22checksec%22%3e%3c%2fp%3e%0a%3cp%3e%e5%8f%aa%e9%96%8b%e4%ba%86%20NX%28No-Execute%2c%20%e5%a0%86%e7%96%8a%e4%b8%8d%e5%8f%af%e5%9f%b7%e8%a1%8c%29%3c%2fp%3e%0a%3ch3%20id%3d%22%e6%8b%bf%e5%8e%bbghidra%e6%88%96ida%e9%80%86%e5%90%91%22%3e%e6%8b%bf%e5%8e%bbGhidra%e6%88%96IDA%e9%80%86%e5%90%91%3c%2fh3%3e%0a%3cp%3e%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%83%e7%94%a8%e5%88%b0%e7%9a%84%e5%87%bd%e5%bc%8f%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%201%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%202%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%203%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%204%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%205%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%206%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%207%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%208%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e%209%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e10%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e11%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e12%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e13%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e14%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e15%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e16%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e17%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e18%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e19%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e20%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e21%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e22%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e23%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e24%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e25%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e26%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e27%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e28%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e29%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e30%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e31%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e32%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e33%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e34%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&t=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2023%2fctf_picoctf_heresalibc%2f&t=%e3%80%90CTF-WriteUp%e3%80%91PicoCTF-Here%27s%20a%20LIBC"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -68,6 +65,7 @@ int main(){
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -160,54 +158,95 @@ int main(){
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&text=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&text=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&is_video=false&description=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&is_video=false&description=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&name=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&description=%3ch1%20id%3d%22what-is-gdb%22%3eWhat%20is%20GDB%3f%3c%2fh1%3e%0a%3cp%3egdb%e5%85%a8%e5%90%8d%e7%82%bagnu%20debugger%ef%bc%8c%e6%98%af%e4%b8%80%e7%a8%ae%e5%8b%95%e6%85%8bDebug%e7%9a%84%e5%b7%a5%e5%85%b7%e3%80%82%3c%2fp%3e%0a%3ch1%20id%3d%22%e4%bd%bf%e7%94%a8%22%3e%e4%bd%bf%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%e6%88%91%e5%80%91%e5%8f%af%e4%bb%a5%e5%85%88%e5%af%ab%e4%b8%80%e5%80%8b%e7%b0%a1%e6%98%93%e7%9a%84Hello%20World%ef%bc%8c%e4%b8%a6%e5%ae%a3%e5%91%8a%e4%b8%80%e4%ba%9b%e8%ae%8a%e6%95%b8%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e8%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%23%20include%26lt%3bstdio.h%26gt%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3c%2fspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3emain%3c%2fspan%3e%28%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e5%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2a%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e6%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20c%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e4%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20printf%28%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3bHello%20World%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%5cn%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3b%3c%2fspan%3e%29%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&name=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&description=%3ch1%20id%3d%22what-is-gdb%22%3eWhat%20is%20GDB%3f%3c%2fh1%3e%0a%3cp%3egdb%e5%85%a8%e5%90%8d%e7%82%bagnu%20debugger%ef%bc%8c%e6%98%af%e4%b8%80%e7%a8%ae%e5%8b%95%e6%85%8bDebug%e7%9a%84%e5%b7%a5%e5%85%b7%e3%80%82%3c%2fp%3e%0a%3ch1%20id%3d%22%e4%bd%bf%e7%94%a8%22%3e%e4%bd%bf%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%e6%88%91%e5%80%91%e5%8f%af%e4%bb%a5%e5%85%88%e5%af%ab%e4%b8%80%e5%80%8b%e7%b0%a1%e6%98%93%e7%9a%84Hello%20World%ef%bc%8c%e4%b8%a6%e5%ae%a3%e5%91%8a%e4%b8%80%e4%ba%9b%e8%ae%8a%e6%95%b8%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e8%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%23%20include%26lt%3bstdio.h%26gt%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3c%2fspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3emain%3c%2fspan%3e%28%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e5%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2a%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e6%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20c%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e4%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20printf%28%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3bHello%20World%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%5cn%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3b%3c%2fspan%3e%29%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&t=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&t=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -438,54 +477,95 @@ int main(){
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&text=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&text=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&is_video=false&description=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&is_video=false&description=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&title=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&name=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&description=%3ch1%20id%3d%22what-is-gdb%22%3eWhat%20is%20GDB%3f%3c%2fh1%3e%0a%3cp%3egdb%e5%85%a8%e5%90%8d%e7%82%bagnu%20debugger%ef%bc%8c%e6%98%af%e4%b8%80%e7%a8%ae%e5%8b%95%e6%85%8bDebug%e7%9a%84%e5%b7%a5%e5%85%b7%e3%80%82%3c%2fp%3e%0a%3ch1%20id%3d%22%e4%bd%bf%e7%94%a8%22%3e%e4%bd%bf%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%e6%88%91%e5%80%91%e5%8f%af%e4%bb%a5%e5%85%88%e5%af%ab%e4%b8%80%e5%80%8b%e7%b0%a1%e6%98%93%e7%9a%84Hello%20World%ef%bc%8c%e4%b8%a6%e5%ae%a3%e5%91%8a%e4%b8%80%e4%ba%9b%e8%ae%8a%e6%95%b8%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e8%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%23%20include%26lt%3bstdio.h%26gt%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3c%2fspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3emain%3c%2fspan%3e%28%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e5%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2a%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e6%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20c%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e4%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20printf%28%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3bHello%20World%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%5cn%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3b%3c%2fspan%3e%29%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&name=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92&description=%3ch1%20id%3d%22what-is-gdb%22%3eWhat%20is%20GDB%3f%3c%2fh1%3e%0a%3cp%3egdb%e5%85%a8%e5%90%8d%e7%82%bagnu%20debugger%ef%bc%8c%e6%98%af%e4%b8%80%e7%a8%ae%e5%8b%95%e6%85%8bDebug%e7%9a%84%e5%b7%a5%e5%85%b7%e3%80%82%3c%2fp%3e%0a%3ch1%20id%3d%22%e4%bd%bf%e7%94%a8%22%3e%e4%bd%bf%e7%94%a8%3c%2fh1%3e%0a%3cp%3e%e6%88%91%e5%80%91%e5%8f%af%e4%bb%a5%e5%85%88%e5%af%ab%e4%b8%80%e5%80%8b%e7%b0%a1%e6%98%93%e7%9a%84Hello%20World%ef%bc%8c%e4%b8%a6%e5%ae%a3%e5%91%8a%e4%b8%80%e4%ba%9b%e8%ae%8a%e6%95%b8%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e8%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%23%20include%26lt%3bstdio.h%26gt%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3c%2fspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%2350fa7b%22%3emain%3c%2fspan%3e%28%29%7b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e5%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2a%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e6%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20c%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20b%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e4%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20printf%28%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3bHello%20World%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%5cn%3c%2fspan%3e%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3b%3c%2fspan%3e%29%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3ereturn%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%7d%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&t=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2022%2fgdb%2f&t=gdb%20%e9%99%a4%e9%8c%af%e5%b7%a5%e5%85%b7%e5%ad%b8%e7%bf%92"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -64,6 +61,7 @@ MacOS/Linux 1 curl -sSfL https://astral.sh/install.sh | sh Windows 1 powershell 
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -156,54 +154,95 @@ MacOS/Linux 1 curl -sSfL https://astral.sh/install.sh | sh Windows 1 powershell 
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&text=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&text=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&is_video=false&description=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&is_video=false&description=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&name=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&description=%3ch2%20id%3d%22why-uv%22%3eWhy%20%3ccode%3euv%3c%2fcode%3e%3f%3c%2fh2%3e%0a%3cp%3e%e4%bb%a5%e5%89%8d%e5%9c%a8%e4%bd%bf%e7%94%a8%20pip%20%e6%99%82%ef%bc%8c%e7%b6%93%e5%b8%b8%e9%81%87%e5%88%b0%e4%be%9d%e8%b3%b4%e8%a1%9d%e7%aa%81%e3%80%81%e9%80%9f%e5%ba%a6%e6%85%a2%e7%ad%89%e5%95%8f%e9%a1%8c%e3%80%82%e9%9a%a8%e8%91%97%20Python%20%e7%94%9f%e6%85%8b%e7%9a%84%e7%99%bc%e5%b1%95%ef%bc%8c%e5%87%ba%e7%8f%be%e8%b6%8a%e4%be%86%e8%b6%8a%e5%a4%9a%e5%b7%a5%e5%85%b7%e5%a6%82%ef%bc%9a%3ccode%3evenv%3c%2fcode%3e%e3%80%81%3ccode%3epoetry%3c%2fcode%3e%e3%80%81%3ccode%3epipenv%3c%2fcode%3e%20%e7%ad%89%ef%bc%8c%e8%80%8c%20%3ccode%3euv%3c%2fcode%3e%20%e5%89%87%e5%b0%87%e4%b8%8a%e8%bf%b0%e7%9a%84%e5%b7%a5%e5%85%b7%e6%95%b4%e5%90%88%e5%9c%a8%e4%b8%80%e8%b5%b7%ef%bc%8c%e6%8f%90%e4%be%9b%e4%ba%86%e4%b8%80%e5%80%8b%e6%9b%b4%e7%b0%a1%e5%96%ae%e3%80%81%e6%9b%b4%e9%ab%98%e6%95%88%e7%9a%84%20Python%20%e5%8c%85%e7%ae%a1%e7%90%86%e9%ab%94%e9%a9%97%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e5%ae%89%e8%a3%9d%22%3e%e5%ae%89%e8%a3%9d%3c%2fh2%3e%0a%3cp%3e%e6%a0%b9%e6%93%9a%20%3ca%20href%3d%22https%3a%2f%2fdocs.astral.sh%2fuv%2fgetting-started%2finstallation%2f%22%3e%e5%ae%98%e6%96%b9%e6%96%87%e4%bb%b6%3c%2fa%3e%3c%2fp%3e%0a%3ch3%20id%3d%22macoslinux%22%3eMacOS%2fLinux%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-bash%22%20data-lang%3d%22bash%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ecurl%20-sSfL%20https%3a%2f%2fastral.sh%2finstall.sh%20%7c%20sh%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch3%20id%3d%22windows%22%3eWindows%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-powershell%22%20data-lang%3d%22powershell%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3epowershell%20-ExecutionPolicy%20ByPass%20-c%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3birm%20https%3a%2f%2fastral.sh%2fuv%2finstall.ps1%20%7c%20iex%26%2334%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&name=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&description=%3ch2%20id%3d%22why-uv%22%3eWhy%20%3ccode%3euv%3c%2fcode%3e%3f%3c%2fh2%3e%0a%3cp%3e%e4%bb%a5%e5%89%8d%e5%9c%a8%e4%bd%bf%e7%94%a8%20pip%20%e6%99%82%ef%bc%8c%e7%b6%93%e5%b8%b8%e9%81%87%e5%88%b0%e4%be%9d%e8%b3%b4%e8%a1%9d%e7%aa%81%e3%80%81%e9%80%9f%e5%ba%a6%e6%85%a2%e7%ad%89%e5%95%8f%e9%a1%8c%e3%80%82%e9%9a%a8%e8%91%97%20Python%20%e7%94%9f%e6%85%8b%e7%9a%84%e7%99%bc%e5%b1%95%ef%bc%8c%e5%87%ba%e7%8f%be%e8%b6%8a%e4%be%86%e8%b6%8a%e5%a4%9a%e5%b7%a5%e5%85%b7%e5%a6%82%ef%bc%9a%3ccode%3evenv%3c%2fcode%3e%e3%80%81%3ccode%3epoetry%3c%2fcode%3e%e3%80%81%3ccode%3epipenv%3c%2fcode%3e%20%e7%ad%89%ef%bc%8c%e8%80%8c%20%3ccode%3euv%3c%2fcode%3e%20%e5%89%87%e5%b0%87%e4%b8%8a%e8%bf%b0%e7%9a%84%e5%b7%a5%e5%85%b7%e6%95%b4%e5%90%88%e5%9c%a8%e4%b8%80%e8%b5%b7%ef%bc%8c%e6%8f%90%e4%be%9b%e4%ba%86%e4%b8%80%e5%80%8b%e6%9b%b4%e7%b0%a1%e5%96%ae%e3%80%81%e6%9b%b4%e9%ab%98%e6%95%88%e7%9a%84%20Python%20%e5%8c%85%e7%ae%a1%e7%90%86%e9%ab%94%e9%a9%97%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e5%ae%89%e8%a3%9d%22%3e%e5%ae%89%e8%a3%9d%3c%2fh2%3e%0a%3cp%3e%e6%a0%b9%e6%93%9a%20%3ca%20href%3d%22https%3a%2f%2fdocs.astral.sh%2fuv%2fgetting-started%2finstallation%2f%22%3e%e5%ae%98%e6%96%b9%e6%96%87%e4%bb%b6%3c%2fa%3e%3c%2fp%3e%0a%3ch3%20id%3d%22macoslinux%22%3eMacOS%2fLinux%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-bash%22%20data-lang%3d%22bash%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ecurl%20-sSfL%20https%3a%2f%2fastral.sh%2finstall.sh%20%7c%20sh%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch3%20id%3d%22windows%22%3eWindows%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-powershell%22%20data-lang%3d%22powershell%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3epowershell%20-ExecutionPolicy%20ByPass%20-c%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3birm%20https%3a%2f%2fastral.sh%2fuv%2finstall.ps1%20%7c%20iex%26%2334%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&t=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&t=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -473,54 +512,95 @@ MacOS/Linux 1 curl -sSfL https://astral.sh/install.sh | sh Windows 1 powershell 
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&text=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&text=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&is_video=false&description=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&is_video=false&description=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&title=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&name=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&description=%3ch2%20id%3d%22why-uv%22%3eWhy%20%3ccode%3euv%3c%2fcode%3e%3f%3c%2fh2%3e%0a%3cp%3e%e4%bb%a5%e5%89%8d%e5%9c%a8%e4%bd%bf%e7%94%a8%20pip%20%e6%99%82%ef%bc%8c%e7%b6%93%e5%b8%b8%e9%81%87%e5%88%b0%e4%be%9d%e8%b3%b4%e8%a1%9d%e7%aa%81%e3%80%81%e9%80%9f%e5%ba%a6%e6%85%a2%e7%ad%89%e5%95%8f%e9%a1%8c%e3%80%82%e9%9a%a8%e8%91%97%20Python%20%e7%94%9f%e6%85%8b%e7%9a%84%e7%99%bc%e5%b1%95%ef%bc%8c%e5%87%ba%e7%8f%be%e8%b6%8a%e4%be%86%e8%b6%8a%e5%a4%9a%e5%b7%a5%e5%85%b7%e5%a6%82%ef%bc%9a%3ccode%3evenv%3c%2fcode%3e%e3%80%81%3ccode%3epoetry%3c%2fcode%3e%e3%80%81%3ccode%3epipenv%3c%2fcode%3e%20%e7%ad%89%ef%bc%8c%e8%80%8c%20%3ccode%3euv%3c%2fcode%3e%20%e5%89%87%e5%b0%87%e4%b8%8a%e8%bf%b0%e7%9a%84%e5%b7%a5%e5%85%b7%e6%95%b4%e5%90%88%e5%9c%a8%e4%b8%80%e8%b5%b7%ef%bc%8c%e6%8f%90%e4%be%9b%e4%ba%86%e4%b8%80%e5%80%8b%e6%9b%b4%e7%b0%a1%e5%96%ae%e3%80%81%e6%9b%b4%e9%ab%98%e6%95%88%e7%9a%84%20Python%20%e5%8c%85%e7%ae%a1%e7%90%86%e9%ab%94%e9%a9%97%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e5%ae%89%e8%a3%9d%22%3e%e5%ae%89%e8%a3%9d%3c%2fh2%3e%0a%3cp%3e%e6%a0%b9%e6%93%9a%20%3ca%20href%3d%22https%3a%2f%2fdocs.astral.sh%2fuv%2fgetting-started%2finstallation%2f%22%3e%e5%ae%98%e6%96%b9%e6%96%87%e4%bb%b6%3c%2fa%3e%3c%2fp%3e%0a%3ch3%20id%3d%22macoslinux%22%3eMacOS%2fLinux%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-bash%22%20data-lang%3d%22bash%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ecurl%20-sSfL%20https%3a%2f%2fastral.sh%2finstall.sh%20%7c%20sh%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch3%20id%3d%22windows%22%3eWindows%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-powershell%22%20data-lang%3d%22powershell%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3epowershell%20-ExecutionPolicy%20ByPass%20-c%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3birm%20https%3a%2f%2fastral.sh%2fuv%2finstall.ps1%20%7c%20iex%26%2334%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&name=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81&description=%3ch2%20id%3d%22why-uv%22%3eWhy%20%3ccode%3euv%3c%2fcode%3e%3f%3c%2fh2%3e%0a%3cp%3e%e4%bb%a5%e5%89%8d%e5%9c%a8%e4%bd%bf%e7%94%a8%20pip%20%e6%99%82%ef%bc%8c%e7%b6%93%e5%b8%b8%e9%81%87%e5%88%b0%e4%be%9d%e8%b3%b4%e8%a1%9d%e7%aa%81%e3%80%81%e9%80%9f%e5%ba%a6%e6%85%a2%e7%ad%89%e5%95%8f%e9%a1%8c%e3%80%82%e9%9a%a8%e8%91%97%20Python%20%e7%94%9f%e6%85%8b%e7%9a%84%e7%99%bc%e5%b1%95%ef%bc%8c%e5%87%ba%e7%8f%be%e8%b6%8a%e4%be%86%e8%b6%8a%e5%a4%9a%e5%b7%a5%e5%85%b7%e5%a6%82%ef%bc%9a%3ccode%3evenv%3c%2fcode%3e%e3%80%81%3ccode%3epoetry%3c%2fcode%3e%e3%80%81%3ccode%3epipenv%3c%2fcode%3e%20%e7%ad%89%ef%bc%8c%e8%80%8c%20%3ccode%3euv%3c%2fcode%3e%20%e5%89%87%e5%b0%87%e4%b8%8a%e8%bf%b0%e7%9a%84%e5%b7%a5%e5%85%b7%e6%95%b4%e5%90%88%e5%9c%a8%e4%b8%80%e8%b5%b7%ef%bc%8c%e6%8f%90%e4%be%9b%e4%ba%86%e4%b8%80%e5%80%8b%e6%9b%b4%e7%b0%a1%e5%96%ae%e3%80%81%e6%9b%b4%e9%ab%98%e6%95%88%e7%9a%84%20Python%20%e5%8c%85%e7%ae%a1%e7%90%86%e9%ab%94%e9%a9%97%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e5%ae%89%e8%a3%9d%22%3e%e5%ae%89%e8%a3%9d%3c%2fh2%3e%0a%3cp%3e%e6%a0%b9%e6%93%9a%20%3ca%20href%3d%22https%3a%2f%2fdocs.astral.sh%2fuv%2fgetting-started%2finstallation%2f%22%3e%e5%ae%98%e6%96%b9%e6%96%87%e4%bb%b6%3c%2fa%3e%3c%2fp%3e%0a%3ch3%20id%3d%22macoslinux%22%3eMacOS%2fLinux%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-bash%22%20data-lang%3d%22bash%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ecurl%20-sSfL%20https%3a%2f%2fastral.sh%2finstall.sh%20%7c%20sh%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch3%20id%3d%22windows%22%3eWindows%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-powershell%22%20data-lang%3d%22powershell%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3epowershell%20-ExecutionPolicy%20ByPass%20-c%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2334%3birm%20https%3a%2f%2fastral.sh%2fuv%2finstall.ps1%20%7c%20iex%26%2334%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&t=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2fuv%2f&t=%e9%83%bd%205202%20%e5%b9%b4%e4%ba%86%ef%bc%8c%e4%bd%a0%e9%82%84%e5%9c%a8%e7%94%a8%20pip%20%e5%97%8e%ef%bc%9f%e5%bf%ab%e4%be%86%e8%a9%a6%e8%a9%a6%20uv%ef%bc%81"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

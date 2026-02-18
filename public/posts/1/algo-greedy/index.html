@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -47,6 +44,7 @@
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -139,54 +137,95 @@
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e8%b2%aa%e5%bf%83%22%3e%e8%b2%aa%e5%bf%83%3c%2fh2%3e%0a%3cp%3e%e8%b2%aa%e5%bf%83%e5%b0%b1%e6%98%af%e5%9c%a8%e6%af%8f%e4%b8%80%e6%ad%a5%e9%83%bd%e9%81%b8%e6%93%87%e7%95%b6%e4%b8%8b%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%80%e5%a5%bd%e7%9a%84%e9%81%b8%e6%93%87%ef%bc%8c%e7%9b%b4%e5%88%b0%e7%b5%90%e6%9d%9f%e3%80%82%3c%2fp%3e%0a%3cp%3e%e7%b6%93%e5%85%b8%e9%a1%8c%e5%a6%82%ef%bc%9a%e6%8f%9b%e9%8c%a2%e5%95%8f%e9%a1%8c%e3%80%81%e6%8e%92%e7%a8%8b%e5%95%8f%e9%a1%8c%e9%83%bd%e6%98%af%e8%b2%aa%e5%bf%83%e7%9a%84%e5%85%b8%e5%9e%8b%e9%a1%8c%e7%9b%ae%e3%80%82%3c%2fp%3e%0a%3cp%3e%e5%9c%a8%e4%b9%8b%e5%be%8c%e7%9a%84%e5%9c%96%e8%ab%96%e4%b8%ad%e5%a6%82%e6%9c%80%e5%b0%8f%e7%94%9f%e6%88%90%e6%a8%b9%e3%80%81%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%91%e5%95%8f%e9%a1%8c%e4%b9%9f%e9%83%bd%e6%98%af%e5%88%a9%e7%94%a8%e8%b2%aa%e5%bf%83%e8%a7%a3%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e8%b2%aa%e5%bf%83%22%3e%e8%b2%aa%e5%bf%83%3c%2fh2%3e%0a%3cp%3e%e8%b2%aa%e5%bf%83%e5%b0%b1%e6%98%af%e5%9c%a8%e6%af%8f%e4%b8%80%e6%ad%a5%e9%83%bd%e9%81%b8%e6%93%87%e7%95%b6%e4%b8%8b%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%80%e5%a5%bd%e7%9a%84%e9%81%b8%e6%93%87%ef%bc%8c%e7%9b%b4%e5%88%b0%e7%b5%90%e6%9d%9f%e3%80%82%3c%2fp%3e%0a%3cp%3e%e7%b6%93%e5%85%b8%e9%a1%8c%e5%a6%82%ef%bc%9a%e6%8f%9b%e9%8c%a2%e5%95%8f%e9%a1%8c%e3%80%81%e6%8e%92%e7%a8%8b%e5%95%8f%e9%a1%8c%e9%83%bd%e6%98%af%e8%b2%aa%e5%bf%83%e7%9a%84%e5%85%b8%e5%9e%8b%e9%a1%8c%e7%9b%ae%e3%80%82%3c%2fp%3e%0a%3cp%3e%e5%9c%a8%e4%b9%8b%e5%be%8c%e7%9a%84%e5%9c%96%e8%ab%96%e4%b8%ad%e5%a6%82%e6%9c%80%e5%b0%8f%e7%94%9f%e6%88%90%e6%a8%b9%e3%80%81%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%91%e5%95%8f%e9%a1%8c%e4%b9%9f%e9%83%bd%e6%98%af%e5%88%a9%e7%94%a8%e8%b2%aa%e5%bf%83%e8%a7%a3%e3%80%82%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -310,54 +349,95 @@
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e8%b2%aa%e5%bf%83%22%3e%e8%b2%aa%e5%bf%83%3c%2fh2%3e%0a%3cp%3e%e8%b2%aa%e5%bf%83%e5%b0%b1%e6%98%af%e5%9c%a8%e6%af%8f%e4%b8%80%e6%ad%a5%e9%83%bd%e9%81%b8%e6%93%87%e7%95%b6%e4%b8%8b%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%80%e5%a5%bd%e7%9a%84%e9%81%b8%e6%93%87%ef%bc%8c%e7%9b%b4%e5%88%b0%e7%b5%90%e6%9d%9f%e3%80%82%3c%2fp%3e%0a%3cp%3e%e7%b6%93%e5%85%b8%e9%a1%8c%e5%a6%82%ef%bc%9a%e6%8f%9b%e9%8c%a2%e5%95%8f%e9%a1%8c%e3%80%81%e6%8e%92%e7%a8%8b%e5%95%8f%e9%a1%8c%e9%83%bd%e6%98%af%e8%b2%aa%e5%bf%83%e7%9a%84%e5%85%b8%e5%9e%8b%e9%a1%8c%e7%9b%ae%e3%80%82%3c%2fp%3e%0a%3cp%3e%e5%9c%a8%e4%b9%8b%e5%be%8c%e7%9a%84%e5%9c%96%e8%ab%96%e4%b8%ad%e5%a6%82%e6%9c%80%e5%b0%8f%e7%94%9f%e6%88%90%e6%a8%b9%e3%80%81%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%91%e5%95%8f%e9%a1%8c%e4%b9%9f%e9%83%bd%e6%98%af%e5%88%a9%e7%94%a8%e8%b2%aa%e5%bf%83%e8%a7%a3%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e8%b2%aa%e5%bf%83%22%3e%e8%b2%aa%e5%bf%83%3c%2fh2%3e%0a%3cp%3e%e8%b2%aa%e5%bf%83%e5%b0%b1%e6%98%af%e5%9c%a8%e6%af%8f%e4%b8%80%e6%ad%a5%e9%83%bd%e9%81%b8%e6%93%87%e7%95%b6%e4%b8%8b%e7%9c%8b%e8%b5%b7%e4%be%86%e6%9c%80%e5%a5%bd%e7%9a%84%e9%81%b8%e6%93%87%ef%bc%8c%e7%9b%b4%e5%88%b0%e7%b5%90%e6%9d%9f%e3%80%82%3c%2fp%3e%0a%3cp%3e%e7%b6%93%e5%85%b8%e9%a1%8c%e5%a6%82%ef%bc%9a%e6%8f%9b%e9%8c%a2%e5%95%8f%e9%a1%8c%e3%80%81%e6%8e%92%e7%a8%8b%e5%95%8f%e9%a1%8c%e9%83%bd%e6%98%af%e8%b2%aa%e5%bf%83%e7%9a%84%e5%85%b8%e5%9e%8b%e9%a1%8c%e7%9b%ae%e3%80%82%3c%2fp%3e%0a%3cp%3e%e5%9c%a8%e4%b9%8b%e5%be%8c%e7%9a%84%e5%9c%96%e8%ab%96%e4%b8%ad%e5%a6%82%e6%9c%80%e5%b0%8f%e7%94%9f%e6%88%90%e6%a8%b9%e3%80%81%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%91%e5%95%8f%e9%a1%8c%e4%b9%9f%e9%83%bd%e6%98%af%e5%88%a9%e7%94%a8%e8%b2%aa%e5%bf%83%e8%a7%a3%e3%80%82%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-greedy%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e8%b2%aa%e5%bf%83"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

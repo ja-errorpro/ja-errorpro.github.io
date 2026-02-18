@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -58,6 +55,7 @@ x86: 函式參數會放在 return address 上方 x64: System V AMD64 ABI，前 6
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -150,54 +148,95 @@ x86: 函式參數會放在 return address 上方 x64: System V AMD64 ABI，前 6
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&description=%3ch1%20id%3d%22%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%22%3e%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2fasm%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2flinux_system_security%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Linux%20%e5%ae%89%e5%85%a8%e6%a9%9f%e5%88%b6%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22stack-overflow%22%3eStack%20Overflow%3c%2fh1%3e%0a%3ch2%20id%3d%22stack%22%3eStack%3c%2fh2%3e%0a%3cp%3e%e5%9b%9e%e9%a1%a7%20Memory%20Layout%ef%bc%8cStack%20%e6%98%af%e4%b8%80%e7%a8%ae%e5%be%8c%e9%80%b2%e5%85%88%e5%87%ba%e7%9a%84%e8%b3%87%e6%96%99%e7%b5%90%e6%a7%8b%ef%bc%8c%e5%9c%a8%e8%a8%98%e6%86%b6%e9%ab%94%e4%b8%8a%e7%94%b1%e9%ab%98%e4%bd%8d%e5%9d%80%e5%be%80%e4%bd%8e%e4%bd%8d%e5%9d%80%e9%95%b7%ef%bc%8c%e4%b8%8a%e9%9d%a2%e6%9c%83%e4%bf%9d%e5%ad%98%e5%87%bd%e5%bc%8f%e5%91%bc%e5%8f%ab%e7%9a%84%e8%b3%87%e8%a8%8a%e3%80%81%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8%e3%80%82%3c%2fp%3e%0a%3cp%3e%e6%b3%a8%e6%84%8f%2032%20%e4%bd%8d%e5%85%83%e8%88%87%2064%20%e4%bd%8d%e5%85%83%20%e7%9a%84%e5%b7%ae%e5%88%a5%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3ex86%3a%20%e5%87%bd%e5%bc%8f%e5%8f%83%e6%95%b8%e6%9c%83%e6%94%be%e5%9c%a8%20return%20address%20%e4%b8%8a%e6%96%b9%3c%2fli%3e%0a%3cli%3ex64%3a%20System%20V%20AMD64%20ABI%ef%bc%8c%e5%89%8d%206%20%e5%80%8b%e6%95%b4%e6%95%b8%e5%8f%83%e6%95%b8%e4%be%9d%e5%ba%8f%e6%94%be%e5%9c%a8%20rdi%2c%20rsi%2c%20rdx%2c%20rcx%2c%20r8%2c%20r9%2c%20%e5%be%8c%e9%9d%a2%e5%a6%82%e6%9e%9c%e9%82%84%e6%9c%89%e6%89%8d%e6%9c%83%e6%94%be%e5%9c%a8%20stack%20%e4%b8%8a%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22stack-overflow-1%22%3eStack%20Overflow%3c%2fh2%3e%0a%3cp%3e%e7%95%b6%e7%a8%8b%e5%bc%8f%e8%bc%b8%e5%85%a5%e8%b3%87%e6%96%99%e7%9a%84%e5%a4%a7%e5%b0%8f%e8%b6%85%e9%81%8e%20buffer%20%e7%9a%84%e5%a4%a7%e5%b0%8f%ef%bc%8c%e6%9c%83%e8%93%8b%e5%88%b0%e8%a9%b2%20buffer%20%e4%b9%8b%e5%be%8c%e7%9a%84%e8%a8%98%e6%86%b6%e9%ab%94%ef%bc%8c%e7%a8%b1%e7%82%ba%20Overflow%ef%bc%8c%e8%80%8c%20Stack%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20stack%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%e5%8f%a6%e5%a4%96%e9%82%84%e6%9c%89%20Heap%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20heap%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&description=%3ch1%20id%3d%22%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%22%3e%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2fasm%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2flinux_system_security%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Linux%20%e5%ae%89%e5%85%a8%e6%a9%9f%e5%88%b6%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22stack-overflow%22%3eStack%20Overflow%3c%2fh1%3e%0a%3ch2%20id%3d%22stack%22%3eStack%3c%2fh2%3e%0a%3cp%3e%e5%9b%9e%e9%a1%a7%20Memory%20Layout%ef%bc%8cStack%20%e6%98%af%e4%b8%80%e7%a8%ae%e5%be%8c%e9%80%b2%e5%85%88%e5%87%ba%e7%9a%84%e8%b3%87%e6%96%99%e7%b5%90%e6%a7%8b%ef%bc%8c%e5%9c%a8%e8%a8%98%e6%86%b6%e9%ab%94%e4%b8%8a%e7%94%b1%e9%ab%98%e4%bd%8d%e5%9d%80%e5%be%80%e4%bd%8e%e4%bd%8d%e5%9d%80%e9%95%b7%ef%bc%8c%e4%b8%8a%e9%9d%a2%e6%9c%83%e4%bf%9d%e5%ad%98%e5%87%bd%e5%bc%8f%e5%91%bc%e5%8f%ab%e7%9a%84%e8%b3%87%e8%a8%8a%e3%80%81%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8%e3%80%82%3c%2fp%3e%0a%3cp%3e%e6%b3%a8%e6%84%8f%2032%20%e4%bd%8d%e5%85%83%e8%88%87%2064%20%e4%bd%8d%e5%85%83%20%e7%9a%84%e5%b7%ae%e5%88%a5%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3ex86%3a%20%e5%87%bd%e5%bc%8f%e5%8f%83%e6%95%b8%e6%9c%83%e6%94%be%e5%9c%a8%20return%20address%20%e4%b8%8a%e6%96%b9%3c%2fli%3e%0a%3cli%3ex64%3a%20System%20V%20AMD64%20ABI%ef%bc%8c%e5%89%8d%206%20%e5%80%8b%e6%95%b4%e6%95%b8%e5%8f%83%e6%95%b8%e4%be%9d%e5%ba%8f%e6%94%be%e5%9c%a8%20rdi%2c%20rsi%2c%20rdx%2c%20rcx%2c%20r8%2c%20r9%2c%20%e5%be%8c%e9%9d%a2%e5%a6%82%e6%9e%9c%e9%82%84%e6%9c%89%e6%89%8d%e6%9c%83%e6%94%be%e5%9c%a8%20stack%20%e4%b8%8a%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22stack-overflow-1%22%3eStack%20Overflow%3c%2fh2%3e%0a%3cp%3e%e7%95%b6%e7%a8%8b%e5%bc%8f%e8%bc%b8%e5%85%a5%e8%b3%87%e6%96%99%e7%9a%84%e5%a4%a7%e5%b0%8f%e8%b6%85%e9%81%8e%20buffer%20%e7%9a%84%e5%a4%a7%e5%b0%8f%ef%bc%8c%e6%9c%83%e8%93%8b%e5%88%b0%e8%a9%b2%20buffer%20%e4%b9%8b%e5%be%8c%e7%9a%84%e8%a8%98%e6%86%b6%e9%ab%94%ef%bc%8c%e7%a8%b1%e7%82%ba%20Overflow%ef%bc%8c%e8%80%8c%20Stack%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20stack%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%e5%8f%a6%e5%a4%96%e9%82%84%e6%9c%89%20Heap%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20heap%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -368,54 +407,95 @@ x86: 函式參數會放在 return address 上方 x64: System V AMD64 ABI，前 6
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&text=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&is_video=false&description=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&title=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&description=%3ch1%20id%3d%22%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%22%3e%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2fasm%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2flinux_system_security%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Linux%20%e5%ae%89%e5%85%a8%e6%a9%9f%e5%88%b6%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22stack-overflow%22%3eStack%20Overflow%3c%2fh1%3e%0a%3ch2%20id%3d%22stack%22%3eStack%3c%2fh2%3e%0a%3cp%3e%e5%9b%9e%e9%a1%a7%20Memory%20Layout%ef%bc%8cStack%20%e6%98%af%e4%b8%80%e7%a8%ae%e5%be%8c%e9%80%b2%e5%85%88%e5%87%ba%e7%9a%84%e8%b3%87%e6%96%99%e7%b5%90%e6%a7%8b%ef%bc%8c%e5%9c%a8%e8%a8%98%e6%86%b6%e9%ab%94%e4%b8%8a%e7%94%b1%e9%ab%98%e4%bd%8d%e5%9d%80%e5%be%80%e4%bd%8e%e4%bd%8d%e5%9d%80%e9%95%b7%ef%bc%8c%e4%b8%8a%e9%9d%a2%e6%9c%83%e4%bf%9d%e5%ad%98%e5%87%bd%e5%bc%8f%e5%91%bc%e5%8f%ab%e7%9a%84%e8%b3%87%e8%a8%8a%e3%80%81%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8%e3%80%82%3c%2fp%3e%0a%3cp%3e%e6%b3%a8%e6%84%8f%2032%20%e4%bd%8d%e5%85%83%e8%88%87%2064%20%e4%bd%8d%e5%85%83%20%e7%9a%84%e5%b7%ae%e5%88%a5%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3ex86%3a%20%e5%87%bd%e5%bc%8f%e5%8f%83%e6%95%b8%e6%9c%83%e6%94%be%e5%9c%a8%20return%20address%20%e4%b8%8a%e6%96%b9%3c%2fli%3e%0a%3cli%3ex64%3a%20System%20V%20AMD64%20ABI%ef%bc%8c%e5%89%8d%206%20%e5%80%8b%e6%95%b4%e6%95%b8%e5%8f%83%e6%95%b8%e4%be%9d%e5%ba%8f%e6%94%be%e5%9c%a8%20rdi%2c%20rsi%2c%20rdx%2c%20rcx%2c%20r8%2c%20r9%2c%20%e5%be%8c%e9%9d%a2%e5%a6%82%e6%9e%9c%e9%82%84%e6%9c%89%e6%89%8d%e6%9c%83%e6%94%be%e5%9c%a8%20stack%20%e4%b8%8a%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22stack-overflow-1%22%3eStack%20Overflow%3c%2fh2%3e%0a%3cp%3e%e7%95%b6%e7%a8%8b%e5%bc%8f%e8%bc%b8%e5%85%a5%e8%b3%87%e6%96%99%e7%9a%84%e5%a4%a7%e5%b0%8f%e8%b6%85%e9%81%8e%20buffer%20%e7%9a%84%e5%a4%a7%e5%b0%8f%ef%bc%8c%e6%9c%83%e8%93%8b%e5%88%b0%e8%a9%b2%20buffer%20%e4%b9%8b%e5%be%8c%e7%9a%84%e8%a8%98%e6%86%b6%e9%ab%94%ef%bc%8c%e7%a8%b1%e7%82%ba%20Overflow%ef%bc%8c%e8%80%8c%20Stack%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20stack%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%e5%8f%a6%e5%a4%96%e9%82%84%e6%9c%89%20Heap%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20heap%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&name=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow&description=%3ch1%20id%3d%22%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%22%3e%e5%85%88%e5%82%99%e7%9f%a5%e8%ad%98%3c%2fh1%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2fasm%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91%e7%b5%84%e5%90%88%e8%aa%9e%e8%a8%80%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2f2023%2flinux_system_security%2f%22%3e%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Linux%20%e5%ae%89%e5%85%a8%e6%a9%9f%e5%88%b6%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch1%20id%3d%22stack-overflow%22%3eStack%20Overflow%3c%2fh1%3e%0a%3ch2%20id%3d%22stack%22%3eStack%3c%2fh2%3e%0a%3cp%3e%e5%9b%9e%e9%a1%a7%20Memory%20Layout%ef%bc%8cStack%20%e6%98%af%e4%b8%80%e7%a8%ae%e5%be%8c%e9%80%b2%e5%85%88%e5%87%ba%e7%9a%84%e8%b3%87%e6%96%99%e7%b5%90%e6%a7%8b%ef%bc%8c%e5%9c%a8%e8%a8%98%e6%86%b6%e9%ab%94%e4%b8%8a%e7%94%b1%e9%ab%98%e4%bd%8d%e5%9d%80%e5%be%80%e4%bd%8e%e4%bd%8d%e5%9d%80%e9%95%b7%ef%bc%8c%e4%b8%8a%e9%9d%a2%e6%9c%83%e4%bf%9d%e5%ad%98%e5%87%bd%e5%bc%8f%e5%91%bc%e5%8f%ab%e7%9a%84%e8%b3%87%e8%a8%8a%e3%80%81%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8%e3%80%82%3c%2fp%3e%0a%3cp%3e%e6%b3%a8%e6%84%8f%2032%20%e4%bd%8d%e5%85%83%e8%88%87%2064%20%e4%bd%8d%e5%85%83%20%e7%9a%84%e5%b7%ae%e5%88%a5%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3ex86%3a%20%e5%87%bd%e5%bc%8f%e5%8f%83%e6%95%b8%e6%9c%83%e6%94%be%e5%9c%a8%20return%20address%20%e4%b8%8a%e6%96%b9%3c%2fli%3e%0a%3cli%3ex64%3a%20System%20V%20AMD64%20ABI%ef%bc%8c%e5%89%8d%206%20%e5%80%8b%e6%95%b4%e6%95%b8%e5%8f%83%e6%95%b8%e4%be%9d%e5%ba%8f%e6%94%be%e5%9c%a8%20rdi%2c%20rsi%2c%20rdx%2c%20rcx%2c%20r8%2c%20r9%2c%20%e5%be%8c%e9%9d%a2%e5%a6%82%e6%9e%9c%e9%82%84%e6%9c%89%e6%89%8d%e6%9c%83%e6%94%be%e5%9c%a8%20stack%20%e4%b8%8a%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22stack-overflow-1%22%3eStack%20Overflow%3c%2fh2%3e%0a%3cp%3e%e7%95%b6%e7%a8%8b%e5%bc%8f%e8%bc%b8%e5%85%a5%e8%b3%87%e6%96%99%e7%9a%84%e5%a4%a7%e5%b0%8f%e8%b6%85%e9%81%8e%20buffer%20%e7%9a%84%e5%a4%a7%e5%b0%8f%ef%bc%8c%e6%9c%83%e8%93%8b%e5%88%b0%e8%a9%b2%20buffer%20%e4%b9%8b%e5%be%8c%e7%9a%84%e8%a8%98%e6%86%b6%e9%ab%94%ef%bc%8c%e7%a8%b1%e7%82%ba%20Overflow%ef%bc%8c%e8%80%8c%20Stack%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20stack%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%e5%8f%a6%e5%a4%96%e9%82%84%e6%9c%89%20Heap%20Overflow%20%e8%a1%a8%e7%a4%ba%e5%9c%a8%20heap%20%e4%b8%8a%e7%99%bc%e7%94%9f%e4%ba%86%20Overflow%e3%80%82%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2fstack_overflow%2f&t=%e3%80%90%e7%b3%bb%e7%b5%b1%e5%ae%89%e5%85%a8%e3%80%91Stack%20Overflow"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

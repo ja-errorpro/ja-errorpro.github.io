@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -118,6 +115,7 @@ FBTUG共筆資料
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -210,54 +208,95 @@ FBTUG共筆資料
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&text=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&text=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&is_video=false&description=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&is_video=false&description=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Farmbot%e6%ad%b7%e7%a8%8b&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=Farmbot%e6%ad%b7%e7%a8%8b&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&name=Farmbot%e6%ad%b7%e7%a8%8b&description=%3cp%20style%3d%22text-align%3acenter%22%3eFarmbot%3c%2fp%3e%0a%3cp%3e%28%e6%9c%ac%e9%a0%81%e9%9d%a2%e5%9c%a8%e8%88%8a%e7%89%88%e7%b6%b2%e7%ab%99%e7%99%bc%e5%b8%83%ef%bc%8c%e6%9c%83%e6%9c%89%e4%b8%8d%e5%b0%91%e9%a1%af%e7%a4%ba%e5%95%8f%e9%a1%8c%29%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22https%3a%2f%2fpaper.dropbox.com%2fdoc%2fFarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA%22%3eFBTUG%e5%85%b1%e7%ad%86%e8%b3%87%e6%96%99%3c%2fa%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%bb%80%e9%ba%bc%e6%98%affarmbot%22%3e%e4%bb%80%e9%ba%bc%e6%98%afFarmbot%3f%3c%2fh2%3e%0a%3cp%3e%e4%b8%80%e5%80%8b%e6%a9%9f%e5%99%a8%e4%ba%ba%e9%96%8b%e6%94%be%e5%bc%8f%e7%b3%bb%e7%b5%b1%ef%bc%8c%e5%8f%af%e9%80%9a%e9%81%8e%e5%9c%9f%e5%9c%b0%e7%a8%ae%e6%a4%8d%ef%bc%8c%e6%be%86%e6%b0%b4%ef%bc%8c%e5%9c%9f%e5%a3%a4%e6%b8%ac%e8%a9%a6%e5%92%8c%e9%99%a4%e8%8d%89%e7%82%ba%e6%89%80%e6%9c%89%e9%9c%80%e8%a6%81%e8%80%95%e7%a8%ae%e5%b0%8f%e5%9c%9f%e5%9c%b0%e8%b7%9f%e6%83%b3%e7%a8%ae%e7%b3%a7%e9%a3%9f%e7%9a%84%e4%ba%ba%e6%8f%90%e4%be%9b%e5%b9%ab%e5%8a%a9%3c%2fp%3e%0a%3cp%3e%e4%bd%bf%e7%94%a8Raspberry%20Pi%28%e6%a8%b9%e8%8e%93%e6%b4%be%29%ef%bc%8cArduino%e4%bb%a5%e5%8f%8a%e5%85%b6%e4%bb%96%e5%84%aa%e8%89%af%e7%b5%84%e4%bb%b6%3c%2fp%3e%0a%3ch3%20id%3d%221%e7%a2%b3%e8%b6%b3%e8%b7%a1%22%3e1.%e7%a2%b3%e8%b6%b3%e8%b7%a1%3c%2fh3%3e%0a%3ch4%20id%3d%22%e8%a3%bd%e9%80%a0%22%3e%e8%a3%bd%e9%80%a0%3c%2fh4%3e%0a%3cblockquote%3e%0a%3cp%3e%e7%9b%ae%e5%89%8d%e7%9c%8b%e9%87%8d%e7%92%b0%e4%bf%9d%e8%ad%b0%e9%a1%8c%2cFarmbot%e4%bd%bf%e7%94%a8%e6%9c%80%e6%99%ae%e9%81%8d%e7%9a%84%e6%9d%90%e6%96%99%3a%3c%2fp%3e%0a%3c%2fblockquote%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e6%9d%90%e6%96%99%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e7%94%a8%e9%80%94%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e9%87%8d%e9%87%8f%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3ekg%20CO2%2f%e7%89%a9%e6%96%99%20kg%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3eCO2%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8b%81%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%93%a0%e5%a3%93%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e9.5%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.24%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e78.3%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e4%b8%8d%e9%8f%bd%e9%8b%bc%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%a1%ac%e4%bb%b6%ef%bc%8c%e8%bb%b8%e6%89%bf%ef%bc%8c%e9%a9%85%e5%8b%95%e8%bb%b8%ef%bc%8c%e7%b5%b2%e6%a7%93%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e1.4%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e6.15%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%a1%91%e6%96%99%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8b%96%e9%8f%88%ef%bc%8c3D%e5%88%97%e5%8d%b0%3ca%20href%3d%22https%3a%2f%2fcad.onshape.com%2fdocuments%2f6626b842adca229e69544ad1%2fw%2f89ac2637f82d915f22c2bcd0%2fe%2f3a231755273e980d277c3a4c%22%3e%5bCAD%5d%3c%2fa%3e%ef%bc%8c%e8%bc%aa%e5%ad%90%ef%bc%8c%e9%9b%bb%e5%ad%90%e8%a8%ad%e5%82%99%ef%bc%8c%e7%ae%a1%e6%9d%90%ef%bc%8c%e9%9b%bb%e8%b7%af%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.53%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e7.1%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8a%85%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%9b%bb%ef%bc%8c%e4%bd%88%e7%b7%9a%ef%bc%8c%e9%9b%bb%e5%8b%95%e6%a9%9f%e7%b9%9e%e7%b5%84%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.3%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.60%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.8%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%a9%a1%e8%86%a0%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%9a%ae%e5%b8%b6%ef%bc%8c%e9%9b%bb%e7%b7%9a%ef%bc%8c%e5%a2%8a%e7%89%87%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.2%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e3.18%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%90%88%e8%a8%88%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e95.4%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3cblockquote%3e%0a%3cp%3e%e6%af%8f%e7%94%9f%e7%94%a2Farmbot%e6%8e%92%e6%94%be%e7%9a%84%e7%90%86%e8%ab%96%e9%87%8f%e7%b4%84%20%3cstrong%3e95.4%20kg%3c%2fstrong%3e%ef%bc%8c%e4%bd%86%e5%af%a6%e9%9a%9b%e4%b8%8a%e8%bc%83%e6%8e%a5%e8%bf%91%20%3cstrong%3e150%20kg%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&name=Farmbot%e6%ad%b7%e7%a8%8b&description=%3cp%20style%3d%22text-align%3acenter%22%3eFarmbot%3c%2fp%3e%0a%3cp%3e%28%e6%9c%ac%e9%a0%81%e9%9d%a2%e5%9c%a8%e8%88%8a%e7%89%88%e7%b6%b2%e7%ab%99%e7%99%bc%e5%b8%83%ef%bc%8c%e6%9c%83%e6%9c%89%e4%b8%8d%e5%b0%91%e9%a1%af%e7%a4%ba%e5%95%8f%e9%a1%8c%29%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22https%3a%2f%2fpaper.dropbox.com%2fdoc%2fFarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA%22%3eFBTUG%e5%85%b1%e7%ad%86%e8%b3%87%e6%96%99%3c%2fa%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%bb%80%e9%ba%bc%e6%98%affarmbot%22%3e%e4%bb%80%e9%ba%bc%e6%98%afFarmbot%3f%3c%2fh2%3e%0a%3cp%3e%e4%b8%80%e5%80%8b%e6%a9%9f%e5%99%a8%e4%ba%ba%e9%96%8b%e6%94%be%e5%bc%8f%e7%b3%bb%e7%b5%b1%ef%bc%8c%e5%8f%af%e9%80%9a%e9%81%8e%e5%9c%9f%e5%9c%b0%e7%a8%ae%e6%a4%8d%ef%bc%8c%e6%be%86%e6%b0%b4%ef%bc%8c%e5%9c%9f%e5%a3%a4%e6%b8%ac%e8%a9%a6%e5%92%8c%e9%99%a4%e8%8d%89%e7%82%ba%e6%89%80%e6%9c%89%e9%9c%80%e8%a6%81%e8%80%95%e7%a8%ae%e5%b0%8f%e5%9c%9f%e5%9c%b0%e8%b7%9f%e6%83%b3%e7%a8%ae%e7%b3%a7%e9%a3%9f%e7%9a%84%e4%ba%ba%e6%8f%90%e4%be%9b%e5%b9%ab%e5%8a%a9%3c%2fp%3e%0a%3cp%3e%e4%bd%bf%e7%94%a8Raspberry%20Pi%28%e6%a8%b9%e8%8e%93%e6%b4%be%29%ef%bc%8cArduino%e4%bb%a5%e5%8f%8a%e5%85%b6%e4%bb%96%e5%84%aa%e8%89%af%e7%b5%84%e4%bb%b6%3c%2fp%3e%0a%3ch3%20id%3d%221%e7%a2%b3%e8%b6%b3%e8%b7%a1%22%3e1.%e7%a2%b3%e8%b6%b3%e8%b7%a1%3c%2fh3%3e%0a%3ch4%20id%3d%22%e8%a3%bd%e9%80%a0%22%3e%e8%a3%bd%e9%80%a0%3c%2fh4%3e%0a%3cblockquote%3e%0a%3cp%3e%e7%9b%ae%e5%89%8d%e7%9c%8b%e9%87%8d%e7%92%b0%e4%bf%9d%e8%ad%b0%e9%a1%8c%2cFarmbot%e4%bd%bf%e7%94%a8%e6%9c%80%e6%99%ae%e9%81%8d%e7%9a%84%e6%9d%90%e6%96%99%3a%3c%2fp%3e%0a%3c%2fblockquote%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e6%9d%90%e6%96%99%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e7%94%a8%e9%80%94%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e9%87%8d%e9%87%8f%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3ekg%20CO2%2f%e7%89%a9%e6%96%99%20kg%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3eCO2%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8b%81%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%93%a0%e5%a3%93%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e9.5%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.24%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e78.3%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e4%b8%8d%e9%8f%bd%e9%8b%bc%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%a1%ac%e4%bb%b6%ef%bc%8c%e8%bb%b8%e6%89%bf%ef%bc%8c%e9%a9%85%e5%8b%95%e8%bb%b8%ef%bc%8c%e7%b5%b2%e6%a7%93%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e1.4%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e6.15%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%a1%91%e6%96%99%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8b%96%e9%8f%88%ef%bc%8c3D%e5%88%97%e5%8d%b0%3ca%20href%3d%22https%3a%2f%2fcad.onshape.com%2fdocuments%2f6626b842adca229e69544ad1%2fw%2f89ac2637f82d915f22c2bcd0%2fe%2f3a231755273e980d277c3a4c%22%3e%5bCAD%5d%3c%2fa%3e%ef%bc%8c%e8%bc%aa%e5%ad%90%ef%bc%8c%e9%9b%bb%e5%ad%90%e8%a8%ad%e5%82%99%ef%bc%8c%e7%ae%a1%e6%9d%90%ef%bc%8c%e9%9b%bb%e8%b7%af%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.53%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e7.1%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8a%85%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%9b%bb%ef%bc%8c%e4%bd%88%e7%b7%9a%ef%bc%8c%e9%9b%bb%e5%8b%95%e6%a9%9f%e7%b9%9e%e7%b5%84%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.3%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.60%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.8%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%a9%a1%e8%86%a0%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%9a%ae%e5%b8%b6%ef%bc%8c%e9%9b%bb%e7%b7%9a%ef%bc%8c%e5%a2%8a%e7%89%87%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.2%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e3.18%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%90%88%e8%a8%88%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e95.4%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3cblockquote%3e%0a%3cp%3e%e6%af%8f%e7%94%9f%e7%94%a2Farmbot%e6%8e%92%e6%94%be%e7%9a%84%e7%90%86%e8%ab%96%e9%87%8f%e7%b4%84%20%3cstrong%3e95.4%20kg%3c%2fstrong%3e%ef%bc%8c%e4%bd%86%e5%af%a6%e9%9a%9b%e4%b8%8a%e8%bc%83%e6%8e%a5%e8%bf%91%20%3cstrong%3e150%20kg%3c%2fstrong%3e%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&t=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&t=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -1193,54 +1232,95 @@ FBTUG共筆資料
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&text=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&text=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&is_video=false&description=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&is_video=false&description=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Farmbot%e6%ad%b7%e7%a8%8b&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=Farmbot%e6%ad%b7%e7%a8%8b&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&title=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&name=Farmbot%e6%ad%b7%e7%a8%8b&description=%3cp%20style%3d%22text-align%3acenter%22%3eFarmbot%3c%2fp%3e%0a%3cp%3e%28%e6%9c%ac%e9%a0%81%e9%9d%a2%e5%9c%a8%e8%88%8a%e7%89%88%e7%b6%b2%e7%ab%99%e7%99%bc%e5%b8%83%ef%bc%8c%e6%9c%83%e6%9c%89%e4%b8%8d%e5%b0%91%e9%a1%af%e7%a4%ba%e5%95%8f%e9%a1%8c%29%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22https%3a%2f%2fpaper.dropbox.com%2fdoc%2fFarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA%22%3eFBTUG%e5%85%b1%e7%ad%86%e8%b3%87%e6%96%99%3c%2fa%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%bb%80%e9%ba%bc%e6%98%affarmbot%22%3e%e4%bb%80%e9%ba%bc%e6%98%afFarmbot%3f%3c%2fh2%3e%0a%3cp%3e%e4%b8%80%e5%80%8b%e6%a9%9f%e5%99%a8%e4%ba%ba%e9%96%8b%e6%94%be%e5%bc%8f%e7%b3%bb%e7%b5%b1%ef%bc%8c%e5%8f%af%e9%80%9a%e9%81%8e%e5%9c%9f%e5%9c%b0%e7%a8%ae%e6%a4%8d%ef%bc%8c%e6%be%86%e6%b0%b4%ef%bc%8c%e5%9c%9f%e5%a3%a4%e6%b8%ac%e8%a9%a6%e5%92%8c%e9%99%a4%e8%8d%89%e7%82%ba%e6%89%80%e6%9c%89%e9%9c%80%e8%a6%81%e8%80%95%e7%a8%ae%e5%b0%8f%e5%9c%9f%e5%9c%b0%e8%b7%9f%e6%83%b3%e7%a8%ae%e7%b3%a7%e9%a3%9f%e7%9a%84%e4%ba%ba%e6%8f%90%e4%be%9b%e5%b9%ab%e5%8a%a9%3c%2fp%3e%0a%3cp%3e%e4%bd%bf%e7%94%a8Raspberry%20Pi%28%e6%a8%b9%e8%8e%93%e6%b4%be%29%ef%bc%8cArduino%e4%bb%a5%e5%8f%8a%e5%85%b6%e4%bb%96%e5%84%aa%e8%89%af%e7%b5%84%e4%bb%b6%3c%2fp%3e%0a%3ch3%20id%3d%221%e7%a2%b3%e8%b6%b3%e8%b7%a1%22%3e1.%e7%a2%b3%e8%b6%b3%e8%b7%a1%3c%2fh3%3e%0a%3ch4%20id%3d%22%e8%a3%bd%e9%80%a0%22%3e%e8%a3%bd%e9%80%a0%3c%2fh4%3e%0a%3cblockquote%3e%0a%3cp%3e%e7%9b%ae%e5%89%8d%e7%9c%8b%e9%87%8d%e7%92%b0%e4%bf%9d%e8%ad%b0%e9%a1%8c%2cFarmbot%e4%bd%bf%e7%94%a8%e6%9c%80%e6%99%ae%e9%81%8d%e7%9a%84%e6%9d%90%e6%96%99%3a%3c%2fp%3e%0a%3c%2fblockquote%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e6%9d%90%e6%96%99%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e7%94%a8%e9%80%94%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e9%87%8d%e9%87%8f%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3ekg%20CO2%2f%e7%89%a9%e6%96%99%20kg%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3eCO2%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8b%81%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%93%a0%e5%a3%93%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e9.5%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.24%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e78.3%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e4%b8%8d%e9%8f%bd%e9%8b%bc%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%a1%ac%e4%bb%b6%ef%bc%8c%e8%bb%b8%e6%89%bf%ef%bc%8c%e9%a9%85%e5%8b%95%e8%bb%b8%ef%bc%8c%e7%b5%b2%e6%a7%93%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e1.4%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e6.15%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%a1%91%e6%96%99%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8b%96%e9%8f%88%ef%bc%8c3D%e5%88%97%e5%8d%b0%3ca%20href%3d%22https%3a%2f%2fcad.onshape.com%2fdocuments%2f6626b842adca229e69544ad1%2fw%2f89ac2637f82d915f22c2bcd0%2fe%2f3a231755273e980d277c3a4c%22%3e%5bCAD%5d%3c%2fa%3e%ef%bc%8c%e8%bc%aa%e5%ad%90%ef%bc%8c%e9%9b%bb%e5%ad%90%e8%a8%ad%e5%82%99%ef%bc%8c%e7%ae%a1%e6%9d%90%ef%bc%8c%e9%9b%bb%e8%b7%af%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.53%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e7.1%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8a%85%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%9b%bb%ef%bc%8c%e4%bd%88%e7%b7%9a%ef%bc%8c%e9%9b%bb%e5%8b%95%e6%a9%9f%e7%b9%9e%e7%b5%84%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.3%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.60%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.8%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%a9%a1%e8%86%a0%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%9a%ae%e5%b8%b6%ef%bc%8c%e9%9b%bb%e7%b7%9a%ef%bc%8c%e5%a2%8a%e7%89%87%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.2%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e3.18%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%90%88%e8%a8%88%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e95.4%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3cblockquote%3e%0a%3cp%3e%e6%af%8f%e7%94%9f%e7%94%a2Farmbot%e6%8e%92%e6%94%be%e7%9a%84%e7%90%86%e8%ab%96%e9%87%8f%e7%b4%84%20%3cstrong%3e95.4%20kg%3c%2fstrong%3e%ef%bc%8c%e4%bd%86%e5%af%a6%e9%9a%9b%e4%b8%8a%e8%bc%83%e6%8e%a5%e8%bf%91%20%3cstrong%3e150%20kg%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&name=Farmbot%e6%ad%b7%e7%a8%8b&description=%3cp%20style%3d%22text-align%3acenter%22%3eFarmbot%3c%2fp%3e%0a%3cp%3e%28%e6%9c%ac%e9%a0%81%e9%9d%a2%e5%9c%a8%e8%88%8a%e7%89%88%e7%b6%b2%e7%ab%99%e7%99%bc%e5%b8%83%ef%bc%8c%e6%9c%83%e6%9c%89%e4%b8%8d%e5%b0%91%e9%a1%af%e7%a4%ba%e5%95%8f%e9%a1%8c%29%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22https%3a%2f%2fpaper.dropbox.com%2fdoc%2fFarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA%22%3eFBTUG%e5%85%b1%e7%ad%86%e8%b3%87%e6%96%99%3c%2fa%3e%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%bb%80%e9%ba%bc%e6%98%affarmbot%22%3e%e4%bb%80%e9%ba%bc%e6%98%afFarmbot%3f%3c%2fh2%3e%0a%3cp%3e%e4%b8%80%e5%80%8b%e6%a9%9f%e5%99%a8%e4%ba%ba%e9%96%8b%e6%94%be%e5%bc%8f%e7%b3%bb%e7%b5%b1%ef%bc%8c%e5%8f%af%e9%80%9a%e9%81%8e%e5%9c%9f%e5%9c%b0%e7%a8%ae%e6%a4%8d%ef%bc%8c%e6%be%86%e6%b0%b4%ef%bc%8c%e5%9c%9f%e5%a3%a4%e6%b8%ac%e8%a9%a6%e5%92%8c%e9%99%a4%e8%8d%89%e7%82%ba%e6%89%80%e6%9c%89%e9%9c%80%e8%a6%81%e8%80%95%e7%a8%ae%e5%b0%8f%e5%9c%9f%e5%9c%b0%e8%b7%9f%e6%83%b3%e7%a8%ae%e7%b3%a7%e9%a3%9f%e7%9a%84%e4%ba%ba%e6%8f%90%e4%be%9b%e5%b9%ab%e5%8a%a9%3c%2fp%3e%0a%3cp%3e%e4%bd%bf%e7%94%a8Raspberry%20Pi%28%e6%a8%b9%e8%8e%93%e6%b4%be%29%ef%bc%8cArduino%e4%bb%a5%e5%8f%8a%e5%85%b6%e4%bb%96%e5%84%aa%e8%89%af%e7%b5%84%e4%bb%b6%3c%2fp%3e%0a%3ch3%20id%3d%221%e7%a2%b3%e8%b6%b3%e8%b7%a1%22%3e1.%e7%a2%b3%e8%b6%b3%e8%b7%a1%3c%2fh3%3e%0a%3ch4%20id%3d%22%e8%a3%bd%e9%80%a0%22%3e%e8%a3%bd%e9%80%a0%3c%2fh4%3e%0a%3cblockquote%3e%0a%3cp%3e%e7%9b%ae%e5%89%8d%e7%9c%8b%e9%87%8d%e7%92%b0%e4%bf%9d%e8%ad%b0%e9%a1%8c%2cFarmbot%e4%bd%bf%e7%94%a8%e6%9c%80%e6%99%ae%e9%81%8d%e7%9a%84%e6%9d%90%e6%96%99%3a%3c%2fp%3e%0a%3c%2fblockquote%3e%0a%3ctable%3e%0a%20%20%3cthead%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e6%9d%90%e6%96%99%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e7%94%a8%e9%80%94%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3e%e9%87%8d%e9%87%8f%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3ekg%20CO2%2f%e7%89%a9%e6%96%99%20kg%3c%2fth%3e%0a%20%20%20%20%20%20%20%20%20%20%3cth%20style%3d%22text-align%3a%20left%22%3eCO2%28kg%29%3c%2fth%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2fthead%3e%0a%20%20%3ctbody%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8b%81%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%93%a0%e5%a3%93%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e9.5%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.24%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e78.3%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e4%b8%8d%e9%8f%bd%e9%8b%bc%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%a1%ac%e4%bb%b6%ef%bc%8c%e8%bb%b8%e6%89%bf%ef%bc%8c%e9%a9%85%e5%8b%95%e8%bb%b8%ef%bc%8c%e7%b5%b2%e6%a7%93%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e1.4%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e6.15%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e8.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%a1%91%e6%96%99%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%8b%96%e9%8f%88%ef%bc%8c3D%e5%88%97%e5%8d%b0%3ca%20href%3d%22https%3a%2f%2fcad.onshape.com%2fdocuments%2f6626b842adca229e69544ad1%2fw%2f89ac2637f82d915f22c2bcd0%2fe%2f3a231755273e980d277c3a4c%22%3e%5bCAD%5d%3c%2fa%3e%ef%bc%8c%e8%bc%aa%e5%ad%90%ef%bc%8c%e9%9b%bb%e5%ad%90%e8%a8%ad%e5%82%99%ef%bc%8c%e7%ae%a1%e6%9d%90%ef%bc%8c%e9%9b%bb%e8%b7%af%e6%9d%bf%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.8%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.53%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e7.1%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%8a%85%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e9%9b%bb%ef%bc%8c%e4%bd%88%e7%b7%9a%ef%bc%8c%e9%9b%bb%e5%8b%95%e6%a9%9f%e7%b9%9e%e7%b5%84%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.3%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e2.60%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.8%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e6%a9%a1%e8%86%a0%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e7%9a%ae%e5%b8%b6%ef%bc%8c%e9%9b%bb%e7%b7%9a%ef%bc%8c%e5%a2%8a%e7%89%87%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.2%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e3.18%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e0.6%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%20%20%20%20%3ctr%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e%e5%90%88%e8%a8%88%3c%2ftd%3e%0a%20%20%20%20%20%20%20%20%20%20%3ctd%20style%3d%22text-align%3a%20left%22%3e95.4%3c%2ftd%3e%0a%20%20%20%20%20%20%3c%2ftr%3e%0a%20%20%3c%2ftbody%3e%0a%3c%2ftable%3e%0a%3cblockquote%3e%0a%3cp%3e%e6%af%8f%e7%94%9f%e7%94%a2Farmbot%e6%8e%92%e6%94%be%e7%9a%84%e7%90%86%e8%ab%96%e9%87%8f%e7%b4%84%20%3cstrong%3e95.4%20kg%3c%2fstrong%3e%ef%bc%8c%e4%bd%86%e5%af%a6%e9%9a%9b%e4%b8%8a%e8%bc%83%e6%8e%a5%e8%bf%91%20%3cstrong%3e150%20kg%3c%2fstrong%3e%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&t=Farmbot%e6%ad%b7%e7%a8%8b" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2021%2ffarmbot%2f&t=Farmbot%e6%ad%b7%e7%a8%8b"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>

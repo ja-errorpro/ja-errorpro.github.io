@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   <meta charset="utf-8">
@@ -66,6 +63,7 @@
     href="http://localhost:1313/css/styles.9131269a2305a8ea1b022b5b5f25bb62cfde46787178c2aba37881d745a0ad91590652397ea01ed666a1264b0d40af355d52161b8c821da64ae14fe43d06572f.css"
     integrity="sha512-kTEmmiMFqOobAitbXyW7Ys/eRnhxeMKro3iB10WgrZFZBlI5fqAe1mahJksNQK81XVIWG4yCHaZK4U/kPQZXLw=="
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" crossorigin="anonymous">
 
   
   
@@ -158,54 +156,95 @@
     <div id="share" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="X">
-      <svg class="" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Pocket">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e7%be%a4%22%3e%e7%be%a4%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e4%b8%80%e5%80%8b%e9%9b%86%e5%90%88%20%24G%24%20%e5%92%8c%e4%b8%80%e5%80%8b%e4%ba%8c%e5%85%83%e9%81%8b%e7%ae%97%e5%ad%90%20%24%5ccdot%24%ef%bc%8c%e6%bb%bf%e8%b6%b3%e4%bb%a5%e4%b8%8b%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%b0%b1%e7%a8%b1%20%24%28G%2c%5ccdot%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e5%b0%81%e9%96%89%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%a9%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20b%5cin%20G%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e7%b5%90%e5%90%88%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e4%b8%89%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%2cc%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20%28b%5ccdot%20c%29%3d%28a%5ccdot%20b%29%5ccdot%20c%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e5%96%ae%e4%bd%8d%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24e%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20e%3da%3de%5ccdot%20a%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%5e%7b-1%7d%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20a%5e%7b-1%7d%3da%5e%7b-1%7d%5ccdot%20a%3de%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e4%bb%a5%e5%8a%a0%e6%b3%95%e7%82%ba%e4%be%8b%ef%bc%8c%24a%2cb%2cc%20%5cin%20%5cmathbb%7bZ%7d%20%24%ef%bc%8c%24a%2bb%2bc%24%20%e6%bb%bf%e8%b6%b3%e4%b8%8a%e8%bf%b0%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%9b%a0%e6%ad%a4%20%24%28%5cmathbb%7bZ%7d%2c%2b%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e7%be%a4%22%3e%e7%be%a4%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e4%b8%80%e5%80%8b%e9%9b%86%e5%90%88%20%24G%24%20%e5%92%8c%e4%b8%80%e5%80%8b%e4%ba%8c%e5%85%83%e9%81%8b%e7%ae%97%e5%ad%90%20%24%5ccdot%24%ef%bc%8c%e6%bb%bf%e8%b6%b3%e4%bb%a5%e4%b8%8b%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%b0%b1%e7%a8%b1%20%24%28G%2c%5ccdot%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e5%b0%81%e9%96%89%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%a9%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20b%5cin%20G%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e7%b5%90%e5%90%88%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e4%b8%89%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%2cc%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20%28b%5ccdot%20c%29%3d%28a%5ccdot%20b%29%5ccdot%20c%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e5%96%ae%e4%bd%8d%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24e%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20e%3da%3de%5ccdot%20a%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%5e%7b-1%7d%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20a%5e%7b-1%7d%3da%5e%7b-1%7d%5ccdot%20a%3de%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e4%bb%a5%e5%8a%a0%e6%b3%95%e7%82%ba%e4%be%8b%ef%bc%8c%24a%2cb%2cc%20%5cin%20%5cmathbb%7bZ%7d%20%24%ef%bc%8c%24a%2bb%2bc%24%20%e6%bb%bf%e8%b6%b3%e4%b8%8a%e8%bf%b0%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%9b%a0%e6%ad%a4%20%24%28%5cmathbb%7bZ%7d%2c%2b%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%e3%80%82%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Hacker News">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news "
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
@@ -360,54 +399,95 @@
     <div id="share-footer" style="display: none">
       
       <ul>
-  
-  
-    
-  
-  
+      
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f" aria-label="Facebook">
+    <a
+      class="icon"
+      href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f"
+      aria-label="Facebook"
+    >
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="X">
-      <svg class="fa-lg" aria-hidden="true" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height: 1em; width: 1em; vertical-align: -0.125em;"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    <a
+      class="icon"
+      href="https://x.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&text=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="X"
+    >
+      <i
+        class="fa-brands fa-x-twitter fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Linkedin">
+    <a
+      class="icon"
+      href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Linkedin"
+    >
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Pinterest">
+    <a
+      class="icon"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&is_video=false&description=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Pinterest"
+    >
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f" aria-label="Email">
+    <a
+      class="icon"
+      href="mailto:?subject=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f"
+      aria-label="Email"
+    >
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Pocket">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Pocket"
+    >
+      <i
+        class="fab fa-get-pocket fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="reddit">
+    <a
+      class="icon"
+      href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&title=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="reddit"
+    >
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e7%be%a4%22%3e%e7%be%a4%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e4%b8%80%e5%80%8b%e9%9b%86%e5%90%88%20%24G%24%20%e5%92%8c%e4%b8%80%e5%80%8b%e4%ba%8c%e5%85%83%e9%81%8b%e7%ae%97%e5%ad%90%20%24%5ccdot%24%ef%bc%8c%e6%bb%bf%e8%b6%b3%e4%bb%a5%e4%b8%8b%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%b0%b1%e7%a8%b1%20%24%28G%2c%5ccdot%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e5%b0%81%e9%96%89%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%a9%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20b%5cin%20G%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e7%b5%90%e5%90%88%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e4%b8%89%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%2cc%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20%28b%5ccdot%20c%29%3d%28a%5ccdot%20b%29%5ccdot%20c%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e5%96%ae%e4%bd%8d%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24e%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20e%3da%3de%5ccdot%20a%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%5e%7b-1%7d%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20a%5e%7b-1%7d%3da%5e%7b-1%7d%5ccdot%20a%3de%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e4%bb%a5%e5%8a%a0%e6%b3%95%e7%82%ba%e4%be%8b%ef%bc%8c%24a%2cb%2cc%20%5cin%20%5cmathbb%7bZ%7d%20%24%ef%bc%8c%24a%2bb%2bc%24%20%e6%bb%bf%e8%b6%b3%e4%b8%8a%e8%bf%b0%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%9b%a0%e6%ad%a4%20%24%28%5cmathbb%7bZ%7d%2c%2b%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%e3%80%82%3c%2fp%3e" aria-label="Tumblr">
+    <a
+      class="icon"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&name=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2falgo-index%2f%22%3e%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e7%be%a4%22%3e%e7%be%a4%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e4%b8%80%e5%80%8b%e9%9b%86%e5%90%88%20%24G%24%20%e5%92%8c%e4%b8%80%e5%80%8b%e4%ba%8c%e5%85%83%e9%81%8b%e7%ae%97%e5%ad%90%20%24%5ccdot%24%ef%bc%8c%e6%bb%bf%e8%b6%b3%e4%bb%a5%e4%b8%8b%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%b0%b1%e7%a8%b1%20%24%28G%2c%5ccdot%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%ef%bc%9a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%e5%b0%81%e9%96%89%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%a9%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20b%5cin%20G%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e7%b5%90%e5%90%88%e6%80%a7%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e4%b8%89%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%2cb%2cc%24%ef%bc%8c%e9%83%bd%e6%9c%89%20%24a%5ccdot%20%28b%5ccdot%20c%29%3d%28a%5ccdot%20b%29%5ccdot%20c%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e5%96%ae%e4%bd%8d%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24e%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20e%3da%3de%5ccdot%20a%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3cli%3e%e9%80%86%e5%85%83%0a%3cul%3e%0a%3cli%3e%e5%b0%8d%e6%96%bc%20%24G%24%20%e4%b8%ad%e7%9a%84%e4%bb%bb%e6%84%8f%e5%85%83%e7%b4%a0%20%24a%24%ef%bc%8c%e9%83%bd%e6%9c%89%e5%ad%98%e5%9c%a8%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%20%24a%5e%7b-1%7d%24%ef%bc%8c%e4%bd%bf%e5%be%97%20%24a%5ccdot%20a%5e%7b-1%7d%3da%5e%7b-1%7d%5ccdot%20a%3de%24%e3%80%82%3c%2fli%3e%0a%3c%2ful%3e%0a%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3e%e4%bb%a5%e5%8a%a0%e6%b3%95%e7%82%ba%e4%be%8b%ef%bc%8c%24a%2cb%2cc%20%5cin%20%5cmathbb%7bZ%7d%20%24%ef%bc%8c%24a%2bb%2bc%24%20%e6%bb%bf%e8%b6%b3%e4%b8%8a%e8%bf%b0%e6%a2%9d%e4%bb%b6%ef%bc%8c%e5%9b%a0%e6%ad%a4%20%24%28%5cmathbb%7bZ%7d%2c%2b%29%24%20%e6%a7%8b%e6%88%90%e4%b8%80%e5%80%8b%e7%be%a4%e3%80%82%3c%2fp%3e"
+      aria-label="Tumblr"
+    >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96" aria-label="Hacker News">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    <a
+      class="icon"
+      href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f1%2falgo-group-theory%2f&t=%e7%ae%97%e6%b3%95%e7%ad%86%e8%a8%98-%e7%be%a4%e8%ab%96"
+      aria-label="Hacker News"
+    >
+      <i
+        class="fab fa-hacker-news fa-lg"
+        aria-hidden="true"
+      ></i>
     </a>
   </li>
 </ul>
