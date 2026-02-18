@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on ErrorPro</title><link>https://ja-errorpro.codes/tags/security/</link><description>Recent content in Security on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 16 Feb 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】Facts</title><link>https://ja-errorpro.codes/posts/HTB/Facts/</link><pubDate>Mon, 16 Feb 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Facts/</guid><description>&lt;h1 id="recon"&gt;Recon&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on ErrorPro</title><link>https://ja-errorpro.codes/tags/security/</link><description>Recent content in Security on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Wed, 18 Feb 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>【HTB Machine】WingData</title><link>https://ja-errorpro.codes/posts/HTB/WingData/</link><pubDate>Wed, 18 Feb 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/WingData/</guid><description>&lt;h2 id="recon"&gt;Recon&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 1
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 2
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 3
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 4
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 5
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 6
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 7
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 8
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 9
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;10
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;11
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;12
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;13
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;14
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;15
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;16
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;17
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;18
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;19
+&lt;/span&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"&gt;
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo nmap -sCV -p- --min-rate &lt;span style="color:#bd93f9"&gt;10000&lt;/span&gt; -oN nmap.txt Remote_IP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Nmap 7.98 scan initiated Tue Feb 17 20:12:10 2026 as: /usr/lib/nmap/nmap -sCV -p- --min-rate 10000 -oN nmap.txt 10.129.245.192&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Nmap scan report &lt;span style="color:#ff79c6"&gt;for&lt;/span&gt; 10.129.245.192
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Host is up &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;0.087s latency&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Not shown: &lt;span style="color:#bd93f9"&gt;65533&lt;/span&gt; filtered tcp ports &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;no-response&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;PORT STATE SERVICE VERSION
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;22/tcp open ssh OpenSSH 9.2p1 Debian 2+deb12u7 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;protocol 2.0&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| ssh-hostkey:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;| &lt;span style="color:#bd93f9"&gt;256&lt;/span&gt; a1:fa:95:8b:d7:56:03:85:e4:45:c9:c7:1e:ba:28:3b &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;ECDSA&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_ &lt;span style="color:#bd93f9"&gt;256&lt;/span&gt; 9c:ba:21:1a:97:2f:3a:64:73:c1:4c:1d:ce:65:7a:2f &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;ED25519&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;80/tcp open http Apache httpd 2.4.66
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_http-title: Did not follow redirect to http://wingdata.htb/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;|_http-server-header: Apache/2.4.66 &lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;Debian&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Service Info: Host: localhost; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Nmap done at Tue Feb 17 20:12:39 2026 -- 1 IP address (1 host up) scanned in 28.94 seconds&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;add Remote_IP to /etc/hosts&lt;/p&gt;</description></item><item><title>【HTB Machine】Facts</title><link>https://ja-errorpro.codes/posts/HTB/Facts/</link><pubDate>Mon, 16 Feb 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/HTB/Facts/</guid><description>&lt;h1 id="recon"&gt;Recon&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt; 1
@@ -265,10 +312,6 @@
 
 
 &lt;script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"&gt;&lt;/script&gt;
-&lt;link
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
-/&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"&gt;&lt;/script&gt;
 
 &lt;style&gt;
@@ -315,9 +358,114 @@
  .cf-content {
  margin-top: 0;
  }
+
+ 
+ .cf-content .highlight &gt; div {
+ border-radius: 2px;
+ -webkit-border-radius: 2px;
+ }
+ .cf-content .highlight pre {
+ border: none;
+ background: none;
+ }
+ .cf-content pre code {
+ display: block;
+ padding: 0;
+ border: none;
+ background: transparent;
+ }
+ .cf-content code {
+ font-family:
+ "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+ }
 &lt;/style&gt;
 
 &lt;script&gt;
+ 
+
+ const DRACULA_COLORS = {
+ keyword: "#ff79c6",
+ built_in: "#8be9fd",
+ type: "#8be9fd",
+ literal: "#bd93f9",
+ number: "#bd93f9",
+ operator: "#ff79c6",
+ punctuation: "#f8f8f2",
+ property: "#66d9ef",
+ regexp: "#f1fa8c",
+ string: "#f1fa8c",
+ "char.escape": "#f1fa8c",
+ subst: "#f8f8f2",
+ symbol: "#f1fa8c",
+ variable: "#f8f8f2",
+ "variable.language": "#bd93f9",
+ "variable.constant": "#bd93f9",
+ class: "#8be9fd",
+ title: "#50fa7b",
+ "title.class": "#8be9fd",
+ "title.class.inherited": "#8be9fd",
+ "title.function": "#50fa7b",
+ "title.function.invoke": "#50fa7b",
+ function: "#50fa7b",
+ params: "#f8f8f2",
+ comment: "#6272a4",
+ doctag: "#6272a4",
+ meta: "#6272a4",
+ "meta keyword": "#ff79c6",
+ "meta string": "#f1fa8c",
+ section: "#f8f8f2",
+ tag: "#ff79c6",
+ name: "#ff79c6",
+ attr: "#50fa7b",
+ attribute: "#50fa7b",
+ "selector-tag": "#ff79c6",
+ "selector-id": "#50fa7b",
+ "selector-class": "#50fa7b",
+ "selector-attr": "#50fa7b",
+ "selector-pseudo": "#50fa7b",
+ "template-tag": "#ff79c6",
+ "template-variable": "#bd93f9",
+ addition: "#50fa7b",
+ deletion: "#ff5555",
+ link: "#8be9fd",
+ bullet: "#bd93f9",
+ formula: "#bd93f9",
+ quote: "#6272a4",
+ code: "#50fa7b",
+ };
+
+ 
+
+ function hljsToInlineStyles(hljs_html) {
+ return hljs_html.replace(
+ /&lt;span class="hljs-([^"]+)"&gt;/g,
+ function (_match, cls) {
+ const color =
+ DRACULA_COLORS[cls] || DRACULA_COLORS[cls.split(".")[0]] || "#f8f8f2";
+ return '&lt;span style="color:' + color + '"&gt;';
+ },
+ );
+ }
+
+ 
+
+ function highlightCode(code, lang) {
+ try {
+ let result;
+ if (lang &amp;&amp; hljs.getLanguage(lang)) {
+ result = hljs.highlight(code, { language: lang });
+ } else {
+ result = hljs.highlightAuto(code);
+ }
+ return hljsToInlineStyles(result.value);
+ } catch (_e) {
+ return code
+ .replace(/&amp;/g, "&amp;amp;")
+ .replace(/&lt;/g, "&amp;lt;")
+ .replace(/&gt;/g, "&amp;gt;");
+ }
+ }
+
  async function fetchSecret(slug, workerUrl) {
  const passInput = document.getElementById("pass-" + slug);
  const msg = document.getElementById("msg-" + slug);
@@ -342,14 +490,45 @@
  if (response.status === 200) {
  const data = await response.json();
 
- contentDiv.innerHTML = marked.parse(data.content);
+ 
+ 
+ const renderer = new marked.Renderer();
+ renderer.code = function ({ text, lang }) {
+ 
+ const raw_code = text
+ .replace(/&amp;amp;/g, "&amp;")
+ .replace(/&amp;lt;/g, "&lt;")
+ .replace(/&amp;gt;/g, "&gt;")
+ .replace(/&amp;quot;/g, '"')
+ .replace(/&amp;#39;/g, "'");
+ const language = (lang || "").trim();
+ const highlighted_html = highlightCode(raw_code, language);
+ return (
+ '&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;' +
+ '-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;' +
+ '&lt;pre style="color:#f8f8f2;background-color:#282a36;' +
+ '-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;' +
+ "&lt;code&gt;" +
+ highlighted_html +
+ "&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;"
+ );
+ };
 
+ contentDiv.innerHTML = marked.parse(data.content, { renderer });
+
+ 
  contentDiv.querySelectorAll("pre code").forEach((el) =&gt; {
- hljs.highlightElement(el);
+ addLineNumbers(el);
  });
+
+ 
+ addCopyButtons(contentDiv);
 
  lockDiv.style.display = "none";
  contentDiv.style.display = "block";
+
+ 
+ updateTocWithSecretHeadings(contentDiv);
  } else if (response.status === 401) {
  msg.textContent = "密碼錯誤。";
  msg.style.color = "#ff6b6b";
@@ -363,6 +542,146 @@
  msg.textContent = "連線錯誤";
  msg.style.color = "#ff6b6b";
  }
+ }
+
+ 
+
+ function addLineNumbers(code_el) {
+ const lines = code_el.innerHTML.split("\n");
+ 
+ if (lines.length &gt; 0 &amp;&amp; lines[lines.length - 1] === "") {
+ lines.pop();
+ }
+ const total = lines.length;
+ const pad_width = String(total).length;
+ const line_number_style =
+ "white-space:pre;-webkit-user-select:none;user-select:none;" +
+ "margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f";
+ const numbered_lines = lines.map((line, i) =&gt; {
+ const num = String(i + 1).padStart(pad_width, " ");
+ return (
+ '&lt;span style="' + line_number_style + '"&gt;' + num + "&lt;/span&gt;" + line
+ );
+ });
+ code_el.innerHTML = numbered_lines.join("\n");
+ }
+
+ 
+
+ function addCopyButtons(container) {
+ container.querySelectorAll("pre &gt; code").forEach((code_node) =&gt; {
+ const copy_btn = document.createElement("button");
+ copy_btn.className = "code-copy-btn";
+ copy_btn.type = "button";
+ copy_btn.innerText = "copy";
+
+ let reset_timer;
+ copy_btn.addEventListener("click", () =&gt; {
+ navigator.clipboard.writeText(code_node.innerText).then(() =&gt; {
+ copy_btn.innerText = "copied!";
+ clearTimeout(reset_timer);
+ reset_timer = setTimeout(() =&gt; {
+ copy_btn.innerText = "copy";
+ }, 1000);
+ });
+ });
+
+ code_node.parentNode.insertBefore(copy_btn, code_node);
+ });
+ }
+
+ 
+
+ function updateTocWithSecretHeadings(contentEl) {
+ const headings = contentEl.querySelectorAll("h2, h3, h4");
+ if (headings.length === 0) return;
+
+ 
+ headings.forEach((h) =&gt; {
+ if (!h.id) {
+ h.id = h.textContent
+ .trim()
+ .toLowerCase()
+ .replace(/[^\w\u4e00-\u9fff]+/g, "-")
+ .replace(/^-+|-+$/g, "");
+ }
+ });
+
+ 
+ 
+ 
+ function buildTocList(headingsList) {
+ let min_level = 6;
+ headingsList.forEach((h) =&gt; {
+ const lv = parseInt(h.tagName[1], 10);
+ if (lv &lt; min_level) min_level = lv;
+ });
+ 
+ const level_offset = 2 - min_level;
+
+ const root = document.createElement("ul");
+ let current_stack = [{ level: 2, ul: root }];
+
+ headingsList.forEach((h) =&gt; {
+ const level = parseInt(h.tagName[1], 10) + level_offset;
+ const li = document.createElement("li");
+ const a = document.createElement("a");
+ a.href = "#" + h.id;
+ a.textContent = h.textContent;
+ li.appendChild(a);
+
+ 
+ while (
+ current_stack.length &gt; 1 &amp;&amp;
+ current_stack[current_stack.length - 1].level &gt;= level
+ ) {
+ current_stack.pop();
+ }
+
+ const parent_ul = current_stack[current_stack.length - 1].ul;
+
+ if (level &gt; current_stack[current_stack.length - 1].level) {
+ 
+ const last_li = parent_ul.querySelector(":scope &gt; li:last-child");
+ const target = last_li || parent_ul;
+ const new_ul = document.createElement("ul");
+ new_ul.appendChild(li);
+ target.appendChild(new_ul);
+ current_stack.push({ level: level, ul: new_ul });
+ } else {
+ parent_ul.appendChild(li);
+ }
+ });
+
+ return root;
+ }
+
+ const toc_fragment = buildTocList(headings);
+
+ 
+ ["#toc", "#toc-footer"].forEach((selector) =&gt; {
+ const toc_container = document.querySelector(selector);
+ if (!toc_container) return;
+
+ let nav = toc_container.querySelector("#TableOfContents");
+ if (!nav) {
+ nav = document.createElement("nav");
+ nav.id = "TableOfContents";
+ toc_container.appendChild(nav);
+ }
+
+ let existing_ul = nav.querySelector(":scope &gt; ul");
+ if (!existing_ul) {
+ 
+ nav.appendChild(toc_fragment.cloneNode(true));
+ } else {
+ 
+ const new_items = toc_fragment.cloneNode(true);
+ while (new_items.firstChild) {
+ existing_ul.appendChild(new_items.firstChild);
+ }
+ }
+ });
  }
 
  
@@ -438,10 +757,6 @@
 
 
 &lt;script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"&gt;&lt;/script&gt;
-&lt;link
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
-/&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"&gt;&lt;/script&gt;
 
 &lt;style&gt;
@@ -488,9 +803,114 @@
  .cf-content {
  margin-top: 0;
  }
+
+ 
+ .cf-content .highlight &gt; div {
+ border-radius: 2px;
+ -webkit-border-radius: 2px;
+ }
+ .cf-content .highlight pre {
+ border: none;
+ background: none;
+ }
+ .cf-content pre code {
+ display: block;
+ padding: 0;
+ border: none;
+ background: transparent;
+ }
+ .cf-content code {
+ font-family:
+ "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+ }
 &lt;/style&gt;
 
 &lt;script&gt;
+ 
+
+ const DRACULA_COLORS = {
+ keyword: "#ff79c6",
+ built_in: "#8be9fd",
+ type: "#8be9fd",
+ literal: "#bd93f9",
+ number: "#bd93f9",
+ operator: "#ff79c6",
+ punctuation: "#f8f8f2",
+ property: "#66d9ef",
+ regexp: "#f1fa8c",
+ string: "#f1fa8c",
+ "char.escape": "#f1fa8c",
+ subst: "#f8f8f2",
+ symbol: "#f1fa8c",
+ variable: "#f8f8f2",
+ "variable.language": "#bd93f9",
+ "variable.constant": "#bd93f9",
+ class: "#8be9fd",
+ title: "#50fa7b",
+ "title.class": "#8be9fd",
+ "title.class.inherited": "#8be9fd",
+ "title.function": "#50fa7b",
+ "title.function.invoke": "#50fa7b",
+ function: "#50fa7b",
+ params: "#f8f8f2",
+ comment: "#6272a4",
+ doctag: "#6272a4",
+ meta: "#6272a4",
+ "meta keyword": "#ff79c6",
+ "meta string": "#f1fa8c",
+ section: "#f8f8f2",
+ tag: "#ff79c6",
+ name: "#ff79c6",
+ attr: "#50fa7b",
+ attribute: "#50fa7b",
+ "selector-tag": "#ff79c6",
+ "selector-id": "#50fa7b",
+ "selector-class": "#50fa7b",
+ "selector-attr": "#50fa7b",
+ "selector-pseudo": "#50fa7b",
+ "template-tag": "#ff79c6",
+ "template-variable": "#bd93f9",
+ addition: "#50fa7b",
+ deletion: "#ff5555",
+ link: "#8be9fd",
+ bullet: "#bd93f9",
+ formula: "#bd93f9",
+ quote: "#6272a4",
+ code: "#50fa7b",
+ };
+
+ 
+
+ function hljsToInlineStyles(hljs_html) {
+ return hljs_html.replace(
+ /&lt;span class="hljs-([^"]+)"&gt;/g,
+ function (_match, cls) {
+ const color =
+ DRACULA_COLORS[cls] || DRACULA_COLORS[cls.split(".")[0]] || "#f8f8f2";
+ return '&lt;span style="color:' + color + '"&gt;';
+ },
+ );
+ }
+
+ 
+
+ function highlightCode(code, lang) {
+ try {
+ let result;
+ if (lang &amp;&amp; hljs.getLanguage(lang)) {
+ result = hljs.highlight(code, { language: lang });
+ } else {
+ result = hljs.highlightAuto(code);
+ }
+ return hljsToInlineStyles(result.value);
+ } catch (_e) {
+ return code
+ .replace(/&amp;/g, "&amp;amp;")
+ .replace(/&lt;/g, "&amp;lt;")
+ .replace(/&gt;/g, "&amp;gt;");
+ }
+ }
+
  async function fetchSecret(slug, workerUrl) {
  const passInput = document.getElementById("pass-" + slug);
  const msg = document.getElementById("msg-" + slug);
@@ -515,14 +935,45 @@
  if (response.status === 200) {
  const data = await response.json();
 
- contentDiv.innerHTML = marked.parse(data.content);
+ 
+ 
+ const renderer = new marked.Renderer();
+ renderer.code = function ({ text, lang }) {
+ 
+ const raw_code = text
+ .replace(/&amp;amp;/g, "&amp;")
+ .replace(/&amp;lt;/g, "&lt;")
+ .replace(/&amp;gt;/g, "&gt;")
+ .replace(/&amp;quot;/g, '"')
+ .replace(/&amp;#39;/g, "'");
+ const language = (lang || "").trim();
+ const highlighted_html = highlightCode(raw_code, language);
+ return (
+ '&lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;' +
+ '-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;' +
+ '&lt;pre style="color:#f8f8f2;background-color:#282a36;' +
+ '-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;' +
+ "&lt;code&gt;" +
+ highlighted_html +
+ "&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;"
+ );
+ };
 
+ contentDiv.innerHTML = marked.parse(data.content, { renderer });
+
+ 
  contentDiv.querySelectorAll("pre code").forEach((el) =&gt; {
- hljs.highlightElement(el);
+ addLineNumbers(el);
  });
+
+ 
+ addCopyButtons(contentDiv);
 
  lockDiv.style.display = "none";
  contentDiv.style.display = "block";
+
+ 
+ updateTocWithSecretHeadings(contentDiv);
  } else if (response.status === 401) {
  msg.textContent = "密碼錯誤。";
  msg.style.color = "#ff6b6b";
@@ -536,6 +987,146 @@
  msg.textContent = "連線錯誤";
  msg.style.color = "#ff6b6b";
  }
+ }
+
+ 
+
+ function addLineNumbers(code_el) {
+ const lines = code_el.innerHTML.split("\n");
+ 
+ if (lines.length &gt; 0 &amp;&amp; lines[lines.length - 1] === "") {
+ lines.pop();
+ }
+ const total = lines.length;
+ const pad_width = String(total).length;
+ const line_number_style =
+ "white-space:pre;-webkit-user-select:none;user-select:none;" +
+ "margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f";
+ const numbered_lines = lines.map((line, i) =&gt; {
+ const num = String(i + 1).padStart(pad_width, " ");
+ return (
+ '&lt;span style="' + line_number_style + '"&gt;' + num + "&lt;/span&gt;" + line
+ );
+ });
+ code_el.innerHTML = numbered_lines.join("\n");
+ }
+
+ 
+
+ function addCopyButtons(container) {
+ container.querySelectorAll("pre &gt; code").forEach((code_node) =&gt; {
+ const copy_btn = document.createElement("button");
+ copy_btn.className = "code-copy-btn";
+ copy_btn.type = "button";
+ copy_btn.innerText = "copy";
+
+ let reset_timer;
+ copy_btn.addEventListener("click", () =&gt; {
+ navigator.clipboard.writeText(code_node.innerText).then(() =&gt; {
+ copy_btn.innerText = "copied!";
+ clearTimeout(reset_timer);
+ reset_timer = setTimeout(() =&gt; {
+ copy_btn.innerText = "copy";
+ }, 1000);
+ });
+ });
+
+ code_node.parentNode.insertBefore(copy_btn, code_node);
+ });
+ }
+
+ 
+
+ function updateTocWithSecretHeadings(contentEl) {
+ const headings = contentEl.querySelectorAll("h2, h3, h4");
+ if (headings.length === 0) return;
+
+ 
+ headings.forEach((h) =&gt; {
+ if (!h.id) {
+ h.id = h.textContent
+ .trim()
+ .toLowerCase()
+ .replace(/[^\w\u4e00-\u9fff]+/g, "-")
+ .replace(/^-+|-+$/g, "");
+ }
+ });
+
+ 
+ 
+ 
+ function buildTocList(headingsList) {
+ let min_level = 6;
+ headingsList.forEach((h) =&gt; {
+ const lv = parseInt(h.tagName[1], 10);
+ if (lv &lt; min_level) min_level = lv;
+ });
+ 
+ const level_offset = 2 - min_level;
+
+ const root = document.createElement("ul");
+ let current_stack = [{ level: 2, ul: root }];
+
+ headingsList.forEach((h) =&gt; {
+ const level = parseInt(h.tagName[1], 10) + level_offset;
+ const li = document.createElement("li");
+ const a = document.createElement("a");
+ a.href = "#" + h.id;
+ a.textContent = h.textContent;
+ li.appendChild(a);
+
+ 
+ while (
+ current_stack.length &gt; 1 &amp;&amp;
+ current_stack[current_stack.length - 1].level &gt;= level
+ ) {
+ current_stack.pop();
+ }
+
+ const parent_ul = current_stack[current_stack.length - 1].ul;
+
+ if (level &gt; current_stack[current_stack.length - 1].level) {
+ 
+ const last_li = parent_ul.querySelector(":scope &gt; li:last-child");
+ const target = last_li || parent_ul;
+ const new_ul = document.createElement("ul");
+ new_ul.appendChild(li);
+ target.appendChild(new_ul);
+ current_stack.push({ level: level, ul: new_ul });
+ } else {
+ parent_ul.appendChild(li);
+ }
+ });
+
+ return root;
+ }
+
+ const toc_fragment = buildTocList(headings);
+
+ 
+ ["#toc", "#toc-footer"].forEach((selector) =&gt; {
+ const toc_container = document.querySelector(selector);
+ if (!toc_container) return;
+
+ let nav = toc_container.querySelector("#TableOfContents");
+ if (!nav) {
+ nav = document.createElement("nav");
+ nav.id = "TableOfContents";
+ toc_container.appendChild(nav);
+ }
+
+ let existing_ul = nav.querySelector(":scope &gt; ul");
+ if (!existing_ul) {
+ 
+ nav.appendChild(toc_fragment.cloneNode(true));
+ } else {
+ 
+ const new_items = toc_fragment.cloneNode(true);
+ while (new_items.firstChild) {
+ existing_ul.appendChild(new_items.firstChild);
+ }
+ }
+ });
  }
 
  
