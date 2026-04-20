@@ -107,7 +107,7 @@ weight = 6
     defaultAuthor = "ErrorPro"
 
     mathjax = true
-    css = ["css/highlight.css", "css/search.css"]
+    css = ["css/highlight.css", "css/search.css", "css/cyberpunk.css"]
   
     [params.comments]
       enabled = false # default
