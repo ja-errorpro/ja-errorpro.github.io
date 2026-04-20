@@ -23,7 +23,19 @@ Checksec
 5
 6
 7
-"
+
+
+[*] &#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&#39;
+    Arch:     amd64-64-little
+    RELRO:    Full RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x400000)
+    RUNPATH:  b&#39;./glibc/&#39;
+
+
+Analysis
+丟到 IDA 分析程式碼"
   />
     <meta name="keywords" content="htb, writeup, sacred scrolls revenge, linux, ctf, sql injection, 靶機攻略, 滲透測試, 題解, 資料庫注入, 網頁安全" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +45,7 @@ Checksec
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="【HTB Challenge】Sacred Scrolls: Revenge">
   <meta property="og:description" content="【HTB Challenge】Sacred Scrolls: Revenge Description Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.
-Checksec 1 2 3 4 5 6 7 ">
+Checksec 1 2 3 4 5 6 7 [*] &#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&#39; Arch: amd64-64-little RELRO: Full RELRO Stack: No canary found NX: NX enabled PIE: No PIE (0x400000) RUNPATH: b&#39;./glibc/&#39; Analysis 丟到 IDA 分析程式碼">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -44,7 +56,7 @@ Checksec 1 2 3 4 5 6 7 ">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【HTB Challenge】Sacred Scrolls: Revenge">
   <meta name="twitter:description" content="【HTB Challenge】Sacred Scrolls: Revenge Description Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.
-Checksec 1 2 3 4 5 6 7 ">
+Checksec 1 2 3 4 5 6 7 [*] &#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&#39; Arch: amd64-64-little RELRO: Full RELRO Stack: No canary found NX: NX enabled PIE: No PIE (0x400000) RUNPATH: b&#39;./glibc/&#39; Analysis 丟到 IDA 分析程式碼">
      
   <link
     rel="stylesheet"
@@ -71,7 +83,7 @@ Checksec 1 2 3 4 5 6 7 ">
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -114,14 +126,14 @@ Checksec 1 2 3 4 5 6 7 ">
       <ul>
         
         <li>
-          <a class="icon" href=" http://localhost:1313/posts/2023/ctf_heap/" aria-label="Previous">
+          <a class="icon" href=" http://localhost:1313/posts/2023/ctfheap-exploitationpart-1-overview-uaf/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="http://localhost:1313/posts/2024/metasploitable3_writeup/" aria-label="Next">
+          <a class="icon" href="http://localhost:1313/posts/2024/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable3-%E6%BB%B2%E9%80%8F%E6%B8%AC%E8%A9%A6%E5%AF%A6%E4%BD%9C%E7%AD%86%E8%A8%98/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -219,7 +231,7 @@ Checksec 1 2 3 4 5 6 7 ">
   <li>
     <a
       class="icon"
-      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fHTB%2fSacred-Scrolls-Revenge%2f&name=%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge&description=%3ch1%20id%3d%22htb-challengesacred-scrolls-revenge%22%3e%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge%3c%2fh1%3e%0a%3ch2%20id%3d%22description%22%3eDescription%3c%2fh2%3e%0a%3cp%3eEach%20house%20of%20the%20campus%20has%20its%20own%20secret%20library%20to%20store%20spells%20or%20spellbound%20messages%20so%20the%20others%20cannot%20see%20them.%20Messages%20are%20encrypted%20and%20must%20be%20signed%20by%20the%20boy%20who%20lived%2c%20turning%20them%20into%20sacred%20scrolls%2c%20otherwise%20they%20are%20not%20accepted%20in%20this%20library.%20You%20can%20try%20it%20yourself%20as%20long%20as%20you%20are%20a%20wizard%20of%20this%20house.%3c%2fp%3e%0a%3ch2%20id%3d%22checksec%22%3eChecksec%3c%2fh2%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fHTB%2fSacred-Scrolls-Revenge%2f&name=%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge&description=%3ch1%20id%3d%22htb-challengesacred-scrolls-revenge%22%3e%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge%3c%2fh1%3e%0a%3ch2%20id%3d%22description%22%3eDescription%3c%2fh2%3e%0a%3cp%3eEach%20house%20of%20the%20campus%20has%20its%20own%20secret%20library%20to%20store%20spells%20or%20spellbound%20messages%20so%20the%20others%20cannot%20see%20them.%20Messages%20are%20encrypted%20and%20must%20be%20signed%20by%20the%20boy%20who%20lived%2c%20turning%20them%20into%20sacred%20scrolls%2c%20otherwise%20they%20are%20not%20accepted%20in%20this%20library.%20You%20can%20try%20it%20yourself%20as%20long%20as%20you%20are%20a%20wizard%20of%20this%20house.%3c%2fp%3e%0a%3ch2%20id%3d%22checksec%22%3eChecksec%3c%2fh2%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-sh%22%20data-lang%3d%22sh%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%5b%3c%2fspan%3e%2a%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%5d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3b%2fhome%2ferr0rpro%2fCTFLab%2fHackthebox%2fSacredScrollsRevenge%2fsacred_scrolls%26%2339%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20Arch%3a%20%20%20%20%20amd64-64-little%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20RELRO%3a%20%20%20%20Full%20RELRO%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20Stack%3a%20%20%20%20No%20canary%20found%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20NX%3a%20%20%20%20%20%20%20NX%20enabled%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20PIE%3a%20%20%20%20%20%20No%20PIE%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%28%3c%2fspan%3e0x400000%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%29%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20RUNPATH%3a%20%20b%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3b.%2fglibc%2f%26%2339%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch2%20id%3d%22analysis%22%3eAnalysis%3c%2fh2%3e%0a%3cp%3e%e4%b8%9f%e5%88%b0%20IDA%20%e5%88%86%e6%9e%90%e7%a8%8b%e5%bc%8f%e7%a2%bc%3c%2fp%3e"
       aria-label="Tumblr"
     >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
@@ -297,9 +309,9 @@ Checksec 1 2 3 4 5 6 7 ">
 <h2 id="description">Description</h2>
 <p>Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.</p>
 <h2 id="checksec">Checksec</h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -308,7 +320,7 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#ff79c6">[</span>*<span style="color:#ff79c6">]</span> <span style="color:#f1fa8c">&#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&#39;</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#ff79c6">[</span>*<span style="color:#ff79c6">]</span> <span style="color:#f1fa8c">&#39;/home/err0rpro/CTFLab/Hackthebox/SacredScrollsRevenge/sacred_scrolls&#39;</span>
 </span></span><span style="display:flex;"><span>    Arch:     amd64-64-little
 </span></span><span style="display:flex;"><span>    RELRO:    Full RELRO
 </span></span><span style="display:flex;"><span>    Stack:    No canary found
@@ -319,9 +331,9 @@ Checksec 1 2 3 4 5 6 7 ">
 </div>
 </div><h2 id="analysis">Analysis</h2>
 <p>丟到 IDA 分析程式碼</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -412,28 +424,28 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">89
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">__cdecl</span> __noreturn <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">int</span> argc, <span style="color:#ff79c6">const</span> <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">**</span>argv, <span style="color:#ff79c6">const</span> <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">**</span>envp)
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">__cdecl</span> __noreturn <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">int</span> argc, <span style="color:#ff79c6">const</span> <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">**</span>argv, <span style="color:#ff79c6">const</span> <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">**</span>envp)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>v3; <span style="color:#6272a4">// rsp
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> command; <span style="color:#6272a4">// rax
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> <span style="color:#ff79c6">*</span>file_input; <span style="color:#6272a4">// rax
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v6; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v7; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v8; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v9; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v10; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v11; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v12; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v13; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v14; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v15; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v16; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v17; <span style="color:#6272a4">// rcx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> wizard_tag[<span style="color:#bd93f9">25</span>]; <span style="color:#6272a4">// [rsp+0h] [rbp-100h] BYREF
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>buf; <span style="color:#6272a4">// [rsp+C8h] [rbp-38h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">__int64</span> v20; <span style="color:#6272a4">// [rsp+D0h] [rbp-30h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">int</span> v21; <span style="color:#6272a4">// [rsp+DCh] [rbp-24h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> command; <span style="color:#6272a4">// rax
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> <span style="color:#ff79c6">*</span>file_input; <span style="color:#6272a4">// rax
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v6; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v7; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v8; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v9; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v10; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v11; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v12; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v13; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v14; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v15; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v16; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v17; <span style="color:#6272a4">// rcx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> wizard_tag[<span style="color:#bd93f9">25</span>]; <span style="color:#6272a4">// [rsp+0h] [rbp-100h] BYREF
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>buf; <span style="color:#6272a4">// [rsp+C8h] [rbp-38h]
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">__int64</span> v20; <span style="color:#6272a4">// [rsp+D0h] [rbp-30h]
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">int</span> v21; <span style="color:#6272a4">// [rsp+DCh] [rbp-24h]
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">setup</span>(argc, argv, envp);
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">banner</span>();
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">clean</span>();
@@ -512,9 +524,9 @@ Checksec 1 2 3 4 5 6 7 ">
 </ol>
 <p>而由於 read() 後面不會補 <code>'\0'</code>，printf 可能會印出垃圾。</p>
 <h3 id="upload">upload()</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -556,14 +568,14 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">spell_upload</span>()
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">spell_upload</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">char</span> dest[<span style="color:#bd93f9">4096</span>]; <span style="color:#6272a4">// [rsp+0h] [rbp-1220h] BYREF
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">char</span> user_input[<span style="color:#bd93f9">520</span>]; <span style="color:#6272a4">// [rsp+1000h] [rbp-220h] BYREF
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">int</span> fd[<span style="color:#bd93f9">2</span>]; <span style="color:#6272a4">// [rsp+1208h] [rbp-18h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">unsigned</span> <span style="color:#ff79c6">__int64</span> len; <span style="color:#6272a4">// [rsp+1210h] [rbp-10h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">unsigned</span> <span style="color:#ff79c6">__int64</span> i; <span style="color:#6272a4">// [rsp+1218h] [rbp-8h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">char</span> user_input[<span style="color:#bd93f9">520</span>]; <span style="color:#6272a4">// [rsp+1000h] [rbp-220h] BYREF
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">int</span> fd[<span style="color:#bd93f9">2</span>]; <span style="color:#6272a4">// [rsp+1208h] [rbp-18h]
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">unsigned</span> <span style="color:#ff79c6">__int64</span> len; <span style="color:#6272a4">// [rsp+1210h] [rbp-10h]
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">unsigned</span> <span style="color:#ff79c6">__int64</span> i; <span style="color:#6272a4">// [rsp+1218h] [rbp-8h]
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">memset</span>(user_input, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">512uLL</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">memset</span>(dest, <span style="color:#bd93f9">0</span>, <span style="color:#ff79c6">sizeof</span>(dest));
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[*] Enter file (it will be named spell.zip): &#34;</span>);
@@ -572,9 +584,9 @@ Checksec 1 2 3 4 5 6 7 ">
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">for</span> ( i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0LL</span>; i <span style="color:#ff79c6">&lt;</span> len; <span style="color:#ff79c6">++</span>i )
 </span></span><span style="display:flex;"><span>  {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> ( (user_input[i] <span style="color:#ff79c6">&lt;=</span> <span style="color:#f1fa8c">&#39;`&#39;</span> <span style="color:#ff79c6">||</span> user_input[i] <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;z&#39;</span>) <span style="color:#6272a4">// a-z
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">&amp;&amp;</span> (user_input[i] <span style="color:#ff79c6">&lt;=</span> <span style="color:#f1fa8c">&#39;@&#39;</span> <span style="color:#ff79c6">||</span> user_input[i] <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;Z&#39;</span>) <span style="color:#6272a4">// A-Z
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">&amp;&amp;</span> (user_input[i] <span style="color:#ff79c6">&lt;=</span> <span style="color:#f1fa8c">&#39;/&#39;</span> <span style="color:#ff79c6">||</span> user_input[i] <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;9&#39;</span>) <span style="color:#6272a4">// 0-9
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>      <span style="color:#ff79c6">&amp;&amp;</span> user_input[i] <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#39;.&#39;</span>
+</span></span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&amp;&amp;</span> (user_input[i] <span style="color:#ff79c6">&lt;=</span> <span style="color:#f1fa8c">&#39;@&#39;</span> <span style="color:#ff79c6">||</span> user_input[i] <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;Z&#39;</span>) <span style="color:#6272a4">// A-Z
+</span></span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&amp;&amp;</span> (user_input[i] <span style="color:#ff79c6">&lt;=</span> <span style="color:#f1fa8c">&#39;/&#39;</span> <span style="color:#ff79c6">||</span> user_input[i] <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;9&#39;</span>) <span style="color:#6272a4">// 0-9
+</span></span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&amp;&amp;</span> user_input[i] <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#39;.&#39;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&amp;&amp;</span> user_input[i]
 </span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&amp;&amp;</span> user_input[i] <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#39;+&#39;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&amp;&amp;</span> user_input[i] <span style="color:#ff79c6">!=</span> <span style="color:#f1fa8c">&#39;=&#39;</span> )
@@ -601,9 +613,9 @@ Checksec 1 2 3 4 5 6 7 ">
 </div><p>程式會檢查輸入是否為合法的 Base64 且不含 <code>/</code>，並將其解碼後寫到 <code>spell.zip</code> 檔案。</p>
 <p>所以待會可能需要準備一個 Base64 的檔案，值得注意的是，這裡呼叫了 <code>system()</code>(system 函式已被載入到記憶體)</p>
 <h3 id="read">read()</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -627,11 +639,11 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span><span style="color:#50fa7b">spell_read</span>()
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span><span style="color:#50fa7b">spell_read</span>()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  FILE <span style="color:#ff79c6">*</span>stream; <span style="color:#6272a4">// [rsp+10h] [rbp-10h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>ptr; <span style="color:#6272a4">// [rsp+18h] [rbp-8h]
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>ptr; <span style="color:#6272a4">// [rsp+18h] [rbp-8h]
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  ptr <span style="color:#ff79c6">=</span> (<span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>)<span style="color:#50fa7b">malloc</span>(<span style="color:#bd93f9">0x190uLL</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">system</span>(<span style="color:#f1fa8c">&#34;unzip spell.zip&#34;</span>);
 </span></span><span style="display:flex;"><span>  stream <span style="color:#ff79c6">=</span> <span style="color:#50fa7b">fopen</span>(<span style="color:#f1fa8c">&#34;spell.txt&#34;</span>, <span style="color:#f1fa8c">&#34;rb&#34;</span>);
@@ -653,20 +665,20 @@ Checksec 1 2 3 4 5 6 7 ">
 </div>
 </div><p>將 spell.zip 解壓縮後打開 spell.txt，並檢查前四個 bytes 是否為 <code>\xF0\x9F\x91\x93</code> 且後面接著 <code>\xE2\x9A\xA1</code></p>
 <p>把它們輸出出來看看</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">echo</span> -e <span style="color:#f1fa8c">&#34;\xF0\x9F\x91\x93\xE2\x9A\xA1&#34;</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">echo</span> -e <span style="color:#f1fa8c">&#34;\xF0\x9F\x91\x93\xE2\x9A\xA1&#34;</span>
 </span></span><span style="display:flex;"><span>👓⚡
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="save">save()</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -675,10 +687,10 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">__fastcall</span> <span style="color:#50fa7b">spell_save</span>(<span style="color:#ff79c6">const</span> <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>a1)
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">__fastcall</span> <span style="color:#50fa7b">spell_save</span>(<span style="color:#ff79c6">const</span> <span style="color:#8be9fd">void</span> <span style="color:#ff79c6">*</span>a1)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#8be9fd">char</span> dest[<span style="color:#bd93f9">32</span>]; <span style="color:#6272a4">// [rsp+10h] [rbp-20h] BYREF
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">memcpy</span>(dest, a1, <span style="color:#bd93f9">600uLL</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;%s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">[-] This spell is not quiet effective, thus it will not be saved!</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\x1B</span><span style="color:#f1fa8c">[1;31m&#34;</span>);
 </span></span><span style="display:flex;"><span>}
@@ -690,9 +702,9 @@ Checksec 1 2 3 4 5 6 7 ">
 <p>開 gdb 找 libc 的位置</p>
 <p>不知道為啥 gdb-peda 不能正常執行，但 gdb-gef 可以&hellip;</p>
 <p>中斷在輸入 wizard_tag 的地方看看</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -743,7 +755,7 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Enter your wizard tag: ^C
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Enter your wizard tag: ^C
 </span></span><span style="display:flex;"><span>Program received signal SIGINT, Interrupt.
 </span></span><span style="display:flex;"><span>0x00007ffff7d14992 in <span style="color:#8be9fd;font-style:italic">read</span> <span style="color:#ff79c6">()</span> from ./glibc/libc.so.6
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span> Legend: Modified register | Code | Heap | Stack | String <span style="color:#ff79c6">]</span>
@@ -795,9 +807,9 @@ Checksec 1 2 3 4 5 6 7 ">
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>此時斷的地方是 read()，根據 Calling Convention，wizard_tag 的位址應放在 $rsi</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -811,7 +823,7 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gef➤  x/20gx <span style="color:#8be9fd;font-style:italic">$rsi</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gef➤  x/20gx <span style="color:#8be9fd;font-style:italic">$rsi</span>
 </span></span><span style="display:flex;"><span>0x7fffffffd5a0: 0x000000000000001f      0x0000000000000000
 </span></span><span style="display:flex;"><span>0x7fffffffd5b0: 0x00007ffff7dd8698      0x00000000f7ceb0f0
 </span></span><span style="display:flex;"><span>0x7fffffffd5c0: 0x0000000000000000      0x00000000ffffd9f0
@@ -826,14 +838,14 @@ Checksec 1 2 3 4 5 6 7 ">
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中記憶體位置是 0x7fff 開頭的全都是 libc 相關的位址，看看第一個是什麼</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gef➤  x/s 0x00007ffff7dd8698
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gef➤  x/s 0x00007ffff7dd8698
 </span></span><span style="display:flex;"><span>0x7ffff7dd8698: <span style="color:#f1fa8c">&#34;/bin/sh&#34;</span>
 </span></span><span style="display:flex;"><span>gef➤
 </span></span></code></pre></td></tr></table>
@@ -846,21 +858,21 @@ Checksec 1 2 3 4 5 6 7 ">
 <p>再來要蓋掉 return address，目標是 system，步驟是把 <code>pop rdi; ret;</code> 這個 gadget 放進去，rdi 就會拿到後面接著的 &ldquo;/bin/sh&rdquo;，</p>
 <p>這樣參數就準備好了，然而呼叫 libc 函數在 64 位元下需要做記憶體對齊，否則會噴 segmentation fault，所以再加一個 <code>ret;</code> 給他就好。</p>
 <p>利用 ROPgadget</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ROPgadget --binary ./sacred_scrolls
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ ROPgadget --binary ./sacred_scrolls
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>找到需要的 gadget 分別在 0x4011b3 以及 0x4007ce</p>
 <p>找 system() 的位址，可以直接用 <code>elf.plt['system']</code> 找</p>
 <p>最後就是 get shell，cat flag.txt！</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -923,7 +935,7 @@ Checksec 1 2 3 4 5 6 7 ">
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">#!/usr/bin/env python3</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> pwn <span style="color:#ff79c6">import</span> <span style="color:#ff79c6">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> os
@@ -1137,7 +1149,7 @@ Checksec 1 2 3 4 5 6 7 ">
   <li>
     <a
       class="icon"
-      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fHTB%2fSacred-Scrolls-Revenge%2f&name=%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge&description=%3ch1%20id%3d%22htb-challengesacred-scrolls-revenge%22%3e%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge%3c%2fh1%3e%0a%3ch2%20id%3d%22description%22%3eDescription%3c%2fh2%3e%0a%3cp%3eEach%20house%20of%20the%20campus%20has%20its%20own%20secret%20library%20to%20store%20spells%20or%20spellbound%20messages%20so%20the%20others%20cannot%20see%20them.%20Messages%20are%20encrypted%20and%20must%20be%20signed%20by%20the%20boy%20who%20lived%2c%20turning%20them%20into%20sacred%20scrolls%2c%20otherwise%20they%20are%20not%20accepted%20in%20this%20library.%20You%20can%20try%20it%20yourself%20as%20long%20as%20you%20are%20a%20wizard%20of%20this%20house.%3c%2fp%3e%0a%3ch2%20id%3d%22checksec%22%3eChecksec%3c%2fh2%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpr"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fHTB%2fSacred-Scrolls-Revenge%2f&name=%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge&description=%3ch1%20id%3d%22htb-challengesacred-scrolls-revenge%22%3e%e3%80%90HTB%20Challenge%e3%80%91Sacred%20Scrolls%3a%20Revenge%3c%2fh1%3e%0a%3ch2%20id%3d%22description%22%3eDescription%3c%2fh2%3e%0a%3cp%3eEach%20house%20of%20the%20campus%20has%20its%20own%20secret%20library%20to%20store%20spells%20or%20spellbound%20messages%20so%20the%20others%20cannot%20see%20them.%20Messages%20are%20encrypted%20and%20must%20be%20signed%20by%20the%20boy%20who%20lived%2c%20turning%20them%20into%20sacred%20scrolls%2c%20otherwise%20they%20are%20not%20accepted%20in%20this%20library.%20You%20can%20try%20it%20yourself%20as%20long%20as%20you%20are%20a%20wizard%20of%20this%20house.%3c%2fp%3e%0a%3ch2%20id%3d%22checksec%22%3eChecksec%3c%2fh2%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e4%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e5%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e6%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e7%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-sh%22%20data-lang%3d%22sh%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%5b%3c%2fspan%3e%2a%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%5d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3b%2fhome%2ferr0rpro%2fCTFLab%2fHackthebox%2fSacredScrollsRevenge%2fsacred_scrolls%26%2339%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20Arch%3a%20%20%20%20%20amd64-64-little%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20RELRO%3a%20%20%20%20Full%20RELRO%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20Stack%3a%20%20%20%20No%20canary%20found%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20NX%3a%20%20%20%20%20%20%20NX%20enabled%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20PIE%3a%20%20%20%20%20%20No%20PIE%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%28%3c%2fspan%3e0x400000%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%29%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%20%20%20%20RUNPATH%3a%20%20b%3cspan%20style%3d%22color%3a%23f1fa8c%22%3e%26%2339%3b.%2fglibc%2f%26%2339%3b%3c%2fspan%3e%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch2%20id%3d%22analysis%22%3eAnalysis%3c%2fh2%3e%0a%3cp%3e%e4%b8%9f%e5%88%b0%20IDA%20%e5%88%86%e6%9e%90%e7%a8%8b%e5%bc%8f%e7%a2%bc%3c%2fp%3e"
       aria-label="Tumblr"
     >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>

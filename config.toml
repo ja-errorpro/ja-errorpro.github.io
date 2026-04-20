@@ -22,7 +22,7 @@ timeZone = "Asia/Taipei"
   weight = 10
 
 [permalinks]
-posts = "/posts/:year/:filename/"
+posts = "/posts/:year/:slug/"
 
 # Navigation
 ## Main menu which appears below site header.
@@ -59,6 +59,8 @@ url = "/about"
 weight = 6
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.tableOfContents]
     endLevel = 4
     ordered = false

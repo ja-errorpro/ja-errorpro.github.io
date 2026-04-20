@@ -28,7 +28,32 @@ int i = 10;
 i = i&#43;&#43; &#43; &#43;&#43;i;
 
 
-這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。"
+這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。
+而像以下程式碼也是錯誤的寫法
+
+
+1
+2
+3
+
+
+int arr[10];
+int i = 0;
+arr[i] = i&#43;&#43;;
+
+
+2. 除以零
+
+
+1
+2
+
+
+int a = 5;
+int q = a / 0;
+
+
+除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。"
   />
     <meta name="keywords" content="undefined behavior, ub, standard, portability, warning, c&#43;&#43;, cpp, 未定義行為, 標準規範, 可移植性, 警告, 程式設計, 錯誤避免" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,9 +62,11 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
   <meta property="og:url" content="http://localhost:1313/posts/cpp/cpp-ub/">
   <meta property="og:site_name" content="ErrorPro">
   <meta property="og:title" content="C&#43;&#43;筆記-未定義行為">
-  <meta property="og:description" content=" C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
+  <meta property="og:description" content="C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
 一些例子 1. 順序未定義 考慮以下程式碼：
-1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。">
+1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。
+而像以下程式碼也是錯誤的寫法
+1 2 3 int arr[10]; int i = 0; arr[i] = i&#43;&#43;; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -47,9 +74,11 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="C&#43;&#43;筆記-未定義行為">
-  <meta name="twitter:description" content=" C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
+  <meta name="twitter:description" content="C&#43;&#43;筆記-目錄 未定義行為(Undeﬁned Behavior，簡稱 UB) 有時我們執行程式時，會發現程式的行為不是我們預期的，有時候就是未定義行為惹的禍。
 一些例子 1. 順序未定義 考慮以下程式碼：
-1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。">
+1 2 int i = 10; i = i&#43;&#43; &#43; &#43;&#43;i; 這段的程式碼最後 i 值無法預期，因為沒有規定 i&#43;&#43; 和 &#43;&#43;i 哪個先執行，不一樣的編譯器可能會有不同的結果。
+而像以下程式碼也是錯誤的寫法
+1 2 3 int arr[10]; int i = 0; arr[i] = i&#43;&#43;; 2. 除以零 1 2 int a = 5; int q = a / 0; 除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。">
      
   <link
     rel="stylesheet"
@@ -76,7 +105,7 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP899FV1TS"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -224,7 +253,7 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
   <li>
     <a
       class="icon"
-      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2fcpp-index%22%3eC%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%baunde%ef%ac%81ned-behavior%e7%b0%a1%e7%a8%b1-ub%22%3e%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%22%3e%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%3c%2fh2%3e%0a%3ch3%20id%3d%221-%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%22%3e1.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%3c%2fh3%3e%0a%3cp%3e%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-c%22%20data-lang%3d%22c%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ei%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3ei%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%3c%2fp%3e"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2fcpp-index%22%3eC%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%baunde%ef%ac%81ned-behavior%e7%b0%a1%e7%a8%b1-ub%22%3e%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%22%3e%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%3c%2fh2%3e%0a%3ch3%20id%3d%221-%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%22%3e1.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%3c%2fh3%3e%0a%3cp%3e%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-c%22%20data-lang%3d%22c%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ei%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3ei%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%3c%2fp%3e%0a%3cp%3e%e8%80%8c%e5%83%8f%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%e4%b9%9f%e6%98%af%e9%8c%af%e8%aa%a4%e7%9a%84%e5%af%ab%e6%b3%95%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20arr%5b%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%5d%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3earr%5bi%5d%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch3%20id%3d%222-%e9%99%a4%e4%bb%a5%e9%9b%b6%22%3e2.%20%e9%99%a4%e4%bb%a5%e9%9b%b6%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e5%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20q%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2f%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%99%a4%e4%bb%a5%e9%9b%b6%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%ef%bc%8c%e8%80%8c%e5%9c%a8%20float%e3%80%81double%e3%80%81long%20double%20%e9%a1%9e%e5%9e%8b%e9%99%a4%e4%bb%a5%e9%9b%b6%e7%9a%84%e7%b5%90%e6%9e%9c%ef%bc%8c%e6%a0%b9%e6%93%9a%20IEEE%20754%ef%bc%8c%e5%8f%af%e8%83%bd%e6%98%af%20inf%20%e6%88%96%20nan%28Not%20A%20Number%29%e3%80%82%3c%2fp%3e"
       aria-label="Tumblr"
     >
       <i class="fab fa-tumblr " aria-hidden="true"></i>
@@ -307,119 +336,119 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
 <h2 id="一些例子">一些例子</h2>
 <h3 id="1-順序未定義">1. 順序未定義</h3>
 <p>考慮以下程式碼：</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
 </span></span><span style="display:flex;"><span>i <span style="color:#ff79c6">=</span> i<span style="color:#ff79c6">++</span> <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">++</span>i;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>這段的程式碼最後 i 值無法預期，因為沒有規定 i++ 和 ++i 哪個先執行，不一樣的編譯器可能會有不同的結果。</p>
 <p>而像以下程式碼也是錯誤的寫法</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> arr[<span style="color:#bd93f9">10</span>];
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> arr[<span style="color:#bd93f9">10</span>];
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
 </span></span><span style="display:flex;"><span>arr[i] <span style="color:#ff79c6">=</span> i<span style="color:#ff79c6">++</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="2-除以零">2. 除以零</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>;
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> q <span style="color:#ff79c6">=</span> a <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">0</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>除以零是未定義行為，而在 float、double、long double 類型除以零的結果，根據 IEEE 754，可能是 inf 或 nan(Not A Number)。</p>
 <h3 id="3-溢值">3. 溢值</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> x <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2147483647</span>; <span style="color:#6272a4">// 假設 32 位元
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd">int</span> y <span style="color:#ff79c6">=</span> x <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> x <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2147483647</span>; <span style="color:#6272a4">// 假設 32 位元
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> y <span style="color:#ff79c6">=</span> x <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="4-陣列越界">4. 陣列越界</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a[<span style="color:#bd93f9">10</span>];
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> a[<span style="color:#bd93f9">10</span>];
 </span></span><span style="display:flex;"><span>a[<span style="color:#bd93f9">10</span>] <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="5-修改字串常量">5. 修改字串常量</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>p <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>p <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>;
 </span></span><span style="display:flex;"><span>p[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;h&#39;</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>應使用陣列或std中的string。</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">char</span> p[] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">char</span> p[] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>;
 </span></span><span style="display:flex;"><span>p[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;h&#39;</span>;
 </span></span><span style="display:flex;"><span>std<span style="color:#ff79c6">::</span>string q <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello&#34;</span>;
 </span></span><span style="display:flex;"><span>q[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;h&#39;</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="6-空指標取值">6. 空指標取值</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span>p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">nullptr</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span>p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">nullptr</span>;
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span>p <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="7-標準庫函式的未定義行為">7. 標準庫函式的未定義行為</h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> k <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> k <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
 </span></span><span style="display:flex;"><span>printf(<span style="color:#f1fa8c">&#34;%d %d&#34;</span>, k<span style="color:#ff79c6">++</span>, k<span style="color:#ff79c6">++</span>);
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> k <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> k <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
 </span></span><span style="display:flex;"><span>printf(<span style="color:#f1fa8c">&#34;%d&#34;</span>, <span style="color:#ff79c6">&amp;</span>k); <span style="color:#6272a4">// 參數非預期型別
 </span></span></span></code></pre></td></tr></table>
 </div>
@@ -434,8 +463,6 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
     <h3>Related Posts</h3>
     <ul>
       
-      <li><a href="/posts/2022/vscode_cpp_setup/">VSCode設定C&#43;&#43;教學(Code Runner)</a></li>
-      
       <li><a href="/posts/cpp/cpp-macro/">C&#43;&#43;筆記-(補充)巨集</a></li>
       
       <li><a href="/posts/cpp/cpp-io/">C&#43;&#43;筆記-IO</a></li>
@@ -443,6 +470,8 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
       <li><a href="/posts/cpp/cpp-simplify/">C&#43;&#43;筆記-增加程式可讀性</a></li>
       
       <li><a href="/posts/cpp/cpp-string/">C&#43;&#43;筆記-字元字串</a></li>
+      
+      <li><a href="/posts/cpp/cpp-literal/">C&#43;&#43;筆記-字面常數</a></li>
       
     </ul>
   </div>
@@ -575,7 +604,7 @@ i = i&#43;&#43; &#43; &#43;&#43;i;
   <li>
     <a
       class="icon"
-      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2fcpp-index%22%3eC%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%baunde%ef%ac%81ned-behavior%e7%b0%a1%e7%a8%b1-ub%22%3e%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%22%3e%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%3c%2fh2%3e%0a%3ch3%20id%3d%221-%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%22%3e1.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%3c%2fh3%3e%0a%3cp%3e%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b%22%3e%3ccode%20class%3d%22language-c%22%20data-lang%3d%22c%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ei%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3ei%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%3c%2fp%3e"
+      href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcpp%2fcpp-ub%2f&name=C%2b%2b%e7%ad%86%e8%a8%98-%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba&description=%3cul%3e%0a%3cli%3e%3ca%20href%3d%22%2fposts%2fcpp-index%22%3eC%2b%2b%e7%ad%86%e8%a8%98-%e7%9b%ae%e9%8c%84%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3ch2%20id%3d%22%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%baunde%ef%ac%81ned-behavior%e7%b0%a1%e7%a8%b1-ub%22%3e%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%28Unde%ef%ac%81ned%20Behavior%ef%bc%8c%e7%b0%a1%e7%a8%b1%20UB%29%3c%2fh2%3e%0a%3cp%3e%e6%9c%89%e6%99%82%e6%88%91%e5%80%91%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f%e6%99%82%ef%bc%8c%e6%9c%83%e7%99%bc%e7%8f%be%e7%a8%8b%e5%bc%8f%e7%9a%84%e8%a1%8c%e7%82%ba%e4%b8%8d%e6%98%af%e6%88%91%e5%80%91%e9%a0%90%e6%9c%9f%e7%9a%84%ef%bc%8c%e6%9c%89%e6%99%82%e5%80%99%e5%b0%b1%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%e6%83%b9%e7%9a%84%e7%a6%8d%e3%80%82%3c%2fp%3e%0a%3ch2%20id%3d%22%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%22%3e%e4%b8%80%e4%ba%9b%e4%be%8b%e5%ad%90%3c%2fh2%3e%0a%3ch3%20id%3d%221-%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%22%3e1.%20%e9%a0%86%e5%ba%8f%e6%9c%aa%e5%ae%9a%e7%be%a9%3c%2fh3%3e%0a%3cp%3e%e8%80%83%e6%85%ae%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%ef%bc%9a%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-c%22%20data-lang%3d%22c%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3ei%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3ei%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%80%99%e6%ae%b5%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc%e6%9c%80%e5%be%8c%20i%20%e5%80%bc%e7%84%a1%e6%b3%95%e9%a0%90%e6%9c%9f%ef%bc%8c%e5%9b%a0%e7%82%ba%e6%b2%92%e6%9c%89%e8%a6%8f%e5%ae%9a%20i%2b%2b%20%e5%92%8c%20%2b%2bi%20%e5%93%aa%e5%80%8b%e5%85%88%e5%9f%b7%e8%a1%8c%ef%bc%8c%e4%b8%8d%e4%b8%80%e6%a8%a3%e7%9a%84%e7%b7%a8%e8%ad%af%e5%99%a8%e5%8f%af%e8%83%bd%e6%9c%83%e6%9c%89%e4%b8%8d%e5%90%8c%e7%9a%84%e7%b5%90%e6%9e%9c%e3%80%82%3c%2fp%3e%0a%3cp%3e%e8%80%8c%e5%83%8f%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc%e4%b9%9f%e6%98%af%e9%8c%af%e8%aa%a4%e7%9a%84%e5%af%ab%e6%b3%95%3c%2fp%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e3%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20arr%5b%3cspan%20style%3d%22color%3a%23bd93f9%22%3e10%3c%2fspan%3e%5d%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20i%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3earr%5bi%5d%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20i%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2b%2b%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3ch3%20id%3d%222-%e9%99%a4%e4%bb%a5%e9%9b%b6%22%3e2.%20%e9%99%a4%e4%bb%a5%e9%9b%b6%3c%2fh3%3e%0a%3cdiv%20class%3d%22highlight%22%3e%3cdiv%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%0a%3ctable%20style%3d%22border-spacing%3a0%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%3ctr%3e%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e1%0a%3c%2fspan%3e%3cspan%20style%3d%22white-space%3apre%3b-webkit-user-select%3anone%3buser-select%3anone%3bmargin-right%3a0.4em%3bpadding%3a0%200.4em%200%200.4em%3bcolor%3a%237f7f7f%22%3e2%0a%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%0a%3ctd%20style%3d%22vertical-align%3atop%3bpadding%3a0%3bmargin%3a0%3bborder%3a0%3b%3bwidth%3a100%25%22%3e%0a%3cpre%20tabindex%3d%220%22%20style%3d%22color%3a%23f8f8f2%3bbackground-color%3a%23282a36%3b-moz-tab-size%3a4%3b-o-tab-size%3a4%3btab-size%3a4%3b-webkit-text-size-adjust%3anone%3b%22%3e%3ccode%20class%3d%22language-cpp%22%20data-lang%3d%22cpp%22%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e5%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3cspan%20style%3d%22display%3aflex%3b%22%3e%3cspan%3e%3cspan%20style%3d%22color%3a%238be9fd%22%3eint%3c%2fspan%3e%20q%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%3d%3c%2fspan%3e%20a%20%3cspan%20style%3d%22color%3a%23ff79c6%22%3e%2f%3c%2fspan%3e%20%3cspan%20style%3d%22color%3a%23bd93f9%22%3e0%3c%2fspan%3e%3b%0a%3c%2fspan%3e%3c%2fspan%3e%3c%2fcode%3e%3c%2fpre%3e%3c%2ftd%3e%3c%2ftr%3e%3c%2ftable%3e%0a%3c%2fdiv%3e%0a%3c%2fdiv%3e%3cp%3e%e9%99%a4%e4%bb%a5%e9%9b%b6%e6%98%af%e6%9c%aa%e5%ae%9a%e7%be%a9%e8%a1%8c%e7%82%ba%ef%bc%8c%e8%80%8c%e5%9c%a8%20float%e3%80%81double%e3%80%81long%20double%20%e9%a1%9e%e5%9e%8b%e9%99%a4%e4%bb%a5%e9%9b%b6%e7%9a%84%e7%b5%90%e6%9e%9c%ef%bc%8c%e6%a0%b9%e6%93%9a%20IEEE%20754%ef%bc%8c%e5%8f%af%e8%83%bd%e6%98%af%20inf%20%e6%88%96%20nan%28Not%20A%20Number%29%e3%80%82%3c%2fp%3e"
       aria-label="Tumblr"
     >
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
