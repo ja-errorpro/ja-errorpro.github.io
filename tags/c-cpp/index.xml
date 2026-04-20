@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C-Cpp on ErrorPro</title><link>https://ja-errorpro.codes/tags/c-cpp/</link><description>Recent content in C-Cpp on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 25 May 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/c-cpp/index.xml" rel="self" type="application/rss+xml"/><item><title>【CPE】2023-05-23 紀錄</title><link>https://ja-errorpro.codes/posts/2023/cpe_20230523/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cpe_20230523/</guid><description>&lt;h1 id="cpe大學程式能力檢定"&gt;CPE(大學程式能力檢定)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C-Cpp on ErrorPro</title><link>https://ja-errorpro.codes/tags/c-cpp/</link><description>Recent content in C-Cpp on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 25 May 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/c-cpp/index.xml" rel="self" type="application/rss+xml"/><item><title>【CPE】2023-05-23 紀錄</title><link>https://ja-errorpro.codes/posts/2023/cpe2023-05-23-%E7%B4%80%E9%8C%84/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cpe2023-05-23-%E7%B4%80%E9%8C%84/</guid><description>&lt;h1 id="cpe大學程式能力檢定"&gt;CPE(大學程式能力檢定)&lt;/h1&gt;
 &lt;p&gt;第一次考CPE，考前沒時間準備所以基本上就是裸考。&lt;/p&gt;
 &lt;p&gt;隨便寫寫，做了4題&lt;/p&gt;
 &lt;h2 id="pa---uva11934"&gt;pA - UVA11934&lt;/h2&gt;
@@ -51,7 +51,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pb---uva11349"&gt;pB - UVA11349&lt;/h2&gt;
 &lt;h3 id="題意-1"&gt;題意：&lt;/h3&gt;
-&lt;p&gt;給一個方矩陣問是否為對稱矩陣。&lt;/p&gt;</description></item><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</guid><description>&lt;h2 id="pre"&gt;Pre&lt;/h2&gt;
+&lt;p&gt;給一個方矩陣問是否為對稱矩陣。&lt;/p&gt;</description></item><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h2 id="pre"&gt;Pre&lt;/h2&gt;
 &lt;p&gt;題目提供以下資料結構與函式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
@@ -394,7 +394,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;時間複雜度 $O(n)$&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</guid><description>&lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;時間複雜度 $O(n)$&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E6%9C%AB%E6%A9%9F%E6%B8%AC/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E6%9C%AB%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-1"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-2"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="我看起來像標準答案嗎"&gt;我看起來像標準答案嗎&lt;/h1&gt;
@@ -669,7 +669,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pa-10"&gt;pA (10%)&lt;/h2&gt;
-&lt;p&gt;實作&lt;code&gt;bool CheckBarCodeFormatOK( Str30 barCode )&lt;/code&gt; function，如果barCode符合條碼格式則回傳true，反則false。&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</guid><description>&lt;h1 id="本人已放棄思考"&gt;(本人已放棄思考)&lt;/h1&gt;
+&lt;p&gt;實作&lt;code&gt;bool CheckBarCodeFormatOK( Str30 barCode )&lt;/code&gt; function，如果barCode符合條碼格式則回傳true，反則false。&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h1 id="本人已放棄思考"&gt;(本人已放棄思考)&lt;/h1&gt;
 &lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-1"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-2"&gt;答案僅供參考&lt;/h1&gt;
@@ -730,7 +730,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pc"&gt;pC&lt;/h2&gt;
-&lt;p&gt;實作&lt;code&gt;MonotonicSeries()&lt;/code&gt; function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。&lt;/p&gt;</description></item><item><title>VSCode設定C++教學(Code Runner)</title><link>https://ja-errorpro.codes/posts/2022/vscode_cpp_setup/</link><pubDate>Sun, 11 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vscode_cpp_setup/</guid><description>&lt;p&gt;遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。&lt;/p&gt;
+&lt;p&gt;實作&lt;code&gt;MonotonicSeries()&lt;/code&gt; function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。&lt;/p&gt;</description></item><item><title>VSCode設定C++教學(Code Runner)</title><link>https://ja-errorpro.codes/posts/2022/vscode%E8%A8%AD%E5%AE%9Ac-%E6%95%99%E5%AD%B8code-runner/</link><pubDate>Sun, 11 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vscode%E8%A8%AD%E5%AE%9Ac-%E6%95%99%E5%AD%B8code-runner/</guid><description>&lt;p&gt;遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。&lt;/p&gt;
 &lt;h2 id="前置"&gt;前置&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;環境(以撰寫此篇文時的環境為主)： Windows 11(64 bit) 22H2&lt;/li&gt;

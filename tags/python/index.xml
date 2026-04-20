@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on ErrorPro</title><link>https://ja-errorpro.codes/tags/python/</link><description>Recent content in Python on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>都 5202 年了，你還在用 pip 嗎？快來試試 uv！</title><link>https://ja-errorpro.codes/posts/2025/uv/</link><pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/uv/</guid><description>&lt;h2 id="why-uv"&gt;Why &lt;code&gt;uv&lt;/code&gt;?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on ErrorPro</title><link>https://ja-errorpro.codes/tags/python/</link><description>Recent content in Python on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>都 5202 年了，你還在用 pip 嗎？快來試試 uv！</title><link>https://ja-errorpro.codes/posts/2025/%E9%83%BD-5202-%E5%B9%B4%E4%BA%86%E4%BD%A0%E9%82%84%E5%9C%A8%E7%94%A8-pip-%E5%97%8E%E5%BF%AB%E4%BE%86%E8%A9%A6%E8%A9%A6-uv/</link><pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/%E9%83%BD-5202-%E5%B9%B4%E4%BA%86%E4%BD%A0%E9%82%84%E5%9C%A8%E7%94%A8-pip-%E5%97%8E%E5%BF%AB%E4%BE%86%E8%A9%A6%E8%A9%A6-uv/</guid><description>&lt;h2 id="why-uv"&gt;Why &lt;code&gt;uv&lt;/code&gt;?&lt;/h2&gt;
 &lt;p&gt;以前在使用 pip 時，經常遇到依賴衝突、速度慢等問題。隨著 Python 生態的發展，出現越來越多工具如：&lt;code&gt;venv&lt;/code&gt;、&lt;code&gt;poetry&lt;/code&gt;、&lt;code&gt;pipenv&lt;/code&gt; 等，而 &lt;code&gt;uv&lt;/code&gt; 則將上述的工具整合在一起，提供了一個更簡單、更高效的 Python 包管理體驗。&lt;/p&gt;
 &lt;h2 id="安裝"&gt;安裝&lt;/h2&gt;
 &lt;p&gt;根據 &lt;a href="https://docs.astral.sh/uv/getting-started/installation/"&gt;官方文件&lt;/a&gt;&lt;/p&gt;
@@ -127,7 +127,7 @@
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv &lt;span style="color:#8be9fd;font-style:italic"&gt;export&lt;/span&gt; --format requirements.txt &amp;gt; requirements.tx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>SQL 基本語法(sqlite3 in python)</title><link>https://ja-errorpro.codes/posts/2022/sql_basic/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/sql_basic/</guid><description>&lt;h1 id="環境"&gt;環境&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>SQL 基本語法(sqlite3 in python)</title><link>https://ja-errorpro.codes/posts/2022/sql-%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95sqlite3-in-python/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/sql-%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95sqlite3-in-python/</guid><description>&lt;h1 id="環境"&gt;環境&lt;/h1&gt;
 &lt;p&gt;市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SQLite&lt;/li&gt;
@@ -187,7 +187,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在 SQLite 中，資料類型有以下幾種：&lt;/p&gt;</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi"&gt;Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;在 SQLite 中，資料類型有以下幾種：&lt;/p&gt;</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discord-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA-discord-interactions.py-%E4%BB%8B%E7%B4%B9%E8%88%87%E9%96%8B%E5%A7%8B/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discord-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA-discord-interactions.py-%E4%BB%8B%E7%B4%B9%E8%88%87%E9%96%8B%E5%A7%8B/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi"&gt;Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1&gt;
 &lt;p&gt;支援更多操作如斜線指令、按鈕、選單，且簡單易懂&lt;/p&gt;
 &lt;h1 id="簡介"&gt;簡介&lt;/h1&gt;
 &lt;p&gt;經過大量搜尋資料，發現dcpi的介紹特別少，
@@ -239,7 +239,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bot&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;start()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;接著執行它&lt;/p&gt;</description></item><item><title>Python遊戲設計</title><link>https://ja-errorpro.codes/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/pythongame/</guid><description>&lt;!-- raw HTML omitted --&gt;
+&lt;/div&gt;&lt;p&gt;接著執行它&lt;/p&gt;</description></item><item><title>Python遊戲設計</title><link>https://ja-errorpro.codes/posts/2021/python%E9%81%8A%E6%88%B2%E8%A8%AD%E8%A8%88/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/python%E9%81%8A%E6%88%B2%E8%A8%AD%E8%A8%88/</guid><description>&lt;meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/&gt;
 &lt;h1 id="for-python遊戲設計"&gt;FOR Python遊戲設計&lt;/h1&gt;
 &lt;p&gt;檔案庫: &lt;a href="https://drive.google.com/drive/folders/1MlQkB7COIBu_EZDFaYExBuVVb_FxZpiW?usp=sharing"&gt;Here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python程式列表(全自寫): &lt;a href="./pythonprograms/list"&gt;LIST&lt;/a&gt;&lt;/p&gt;
@@ -255,7 +255,7 @@
 &lt;h2 id="第二堂"&gt;第二堂&lt;/h2&gt;
 &lt;p&gt;安裝Pycharm : &lt;a href="https://www.jetbrains.com/pycharm/"&gt;Pycharm&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code&gt;$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code&gt;)&lt;/p&gt;
@@ -270,4 +270,9 @@
 &lt;p&gt;&lt;strong&gt;插入模式&lt;/strong&gt;: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;底線命令模式&lt;/strong&gt;: 切換方式:按下:,可輸入指令操作內容,&lt;/p&gt;
 &lt;p&gt;離開: :q&lt;/p&gt;
-&lt;p&gt;強制離開: :q!&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;強制離開: :q!&lt;/p&gt;
+&lt;p&gt;存檔不離開: :w&lt;/p&gt;
+&lt;p&gt;強制存檔不離開: :w!&lt;/p&gt;
+&lt;p&gt;存檔並離開: :wq&lt;/p&gt;
+&lt;p&gt;強制存檔並離開: :wq!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;視覺模式&lt;/strong&gt;: 切換方式:按下v , 方便用於閱讀和強調&lt;/p&gt;</description></item></channel></rss>

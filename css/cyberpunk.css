@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Share+Tech+Mono&display=swap');
+
+/* 賽博龐克風格背景與字體、雜訊特效 */
+body {
+    font-family: 'Fira Code', 'Consolas', 'Menlo', 'Microsoft JhengHei', '微軟正黑體', monospace !important; /* 駭客風格等寬字體 */
+    background-color: #050510 !important; /* 深邃的藍黑科技背景 */
+    color: #e0e0e0 !important;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+/* 霓虹字體效果與英文標題科技風 */
+h1, h2, h3, h4, h5, h6, #logo {
+    font-family: 'Share Tech Mono', 'Fira Code', 'Microsoft JhengHei', monospace !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#header h1 a, .article-title {
+    color: #fff !important;
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+/* 連結霓虹效果 */
+a {
+    color: #00f0ff !important;
+    text-shadow: 0 0 2px #00f0ff;
+    transition: all 0.2s ease-in-out;
+}
+a:hover {
+    color: #ff003c !important;
+    text-shadow: 0 0 5px #ff003c, 0 0 10px #ff003c;
+}
+
+/* 模擬 CRT 掃描線 */
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 9999;
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none; /* 穿透點擊 */
+}
+
+/* 故障雜訊特效 (Glitch Animation) */
+@keyframes glitch-anim {
+    0% { clip-path: inset(10% 0 10% 0); transform: translate(-2px, 2px); }
+    20% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+    40% { clip-path: inset(40% 0 45% 0); transform: translate(-2px, -2px); }
+    60% { clip-path: inset(15% 0 80% 0); transform: translate(2px, 2px); }
+    80% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 2px); }
+    100% { clip-path: inset(30% 0 50% 0); transform: translate(2px, -2px); }
+}
+
+/* 將特效加載標題上 */
+.post .article-title:hover {
+    position: relative;
+}
+.post .article-title:hover::before,
+.post .article-title:hover::after {
+    content: attr(title); /* 需搭配 JS 或直接用固定的文字效果，這裡簡化為偽元素錯位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050510;
+}
+.post .article-title:hover::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff003c;
+    animation: glitch-anim 0.3s infinite linear alternate-reverse;
+}
+.post .article-title:hover::after {
+    left: -2px;
+    text-shadow: -1px 0 #00f0ff;
+    animation: glitch-anim 0.2s infinite linear alternate-reverse;
+}
+
+/* 漢堡選單 (Hamburger Menu) 動畫特效 */
+#header > #nav > ul > .icon > a > i,
+#menu-icon i, #menu-icon-tablet i {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.4s ease;
+}
+
+/* 當選單展開時 */
+#header > #nav > ul.responsive > .icon > a > i,
+#menu-icon.active i, #menu-icon-tablet.active i {
+    transform: rotate(180deg) scale(1.2);
+    color: #ff003c !important;
+    text-shadow: 0 0 5px #ff003c, 0 0 15px #ff003c;
+    animation: glitch-anim 0.3s 2 linear; /* 展開瞬間閃爍兩下 */
+}
+
+/* 稍微修改代碼區塊，加上一些賽博感邊框 */
+pre, .highlight {
+    border: 1px solid #00f0ff;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    border-radius: 0 !important; /* 賽博龐克喜歡直角 */
+}

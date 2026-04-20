@@ -16,7 +16,16 @@ $(document).ready(function () {
    * Shows the responsive navigation menu on mobile.
    */
   $("#header > #nav > ul > .icon").click(function () {
-    $("#header > #nav > ul").toggleClass("responsive");
+    var $ul = $("#header > #nav > ul");
+    $ul.toggleClass("responsive");
+    
+    // Toggle hamburger icon between bars and times (close)
+    var $icon = $(this).find("i");
+    if ($ul.hasClass("responsive")) {
+      $icon.removeClass("fa-bars").addClass("fa-times");
+    } else {
+      $icon.removeClass("fa-times").addClass("fa-bars");
+    }
   });
 
 
@@ -44,9 +53,11 @@ $(document).ready(function () {
       if (menu.css("visibility") === "hidden") {
         menu.css("visibility", "visible");
         menuIcon.addClass("active");
+        menuIcon.find('i').removeClass('fa-bars').addClass('fa-times');
       } else {
         menu.css("visibility", "hidden");
         menuIcon.removeClass("active");
+        menuIcon.find('i').removeClass('fa-times').addClass('fa-bars');
       }
       return false;
     });

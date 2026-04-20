@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ErrorPro</title><link>https://ja-errorpro.codes/tags/ctf/</link><description>Recent content in Ctf on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>ASUS AiCloud CVE-2025-59366 漏洞分析</title><link>https://ja-errorpro.codes/posts/2026/asus-rtbe92u-aicloud/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/asus-rtbe92u-aicloud/</guid><description>&lt;p&gt;在 2025 年 11 月 25 日，ASUS 公布多款路由器存在重大漏洞，導致未授權攻擊者執行特定功能。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ErrorPro</title><link>https://ja-errorpro.codes/tags/ctf/</link><description>Recent content in Ctf on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>ASUS AiCloud CVE-2025-59366 漏洞分析</title><link>https://ja-errorpro.codes/posts/2026/asus-aicloud-cve-2025-59366-%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/asus-aicloud-cve-2025-59366-%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/</guid><description>&lt;p&gt;在 2025 年 11 月 25 日，ASUS 公布多款路由器存在重大漏洞，導致未授權攻擊者執行特定功能。&lt;/p&gt;
 &lt;p&gt;網路上幾乎找不到 PoC 或相關文章，剛好最近參加資安營有機會研究這個漏洞。&lt;/p&gt;
 
  
@@ -448,7 +448,7 @@
  secretContainer.querySelector(".secret-desc").textContent =
  descList[randomIndex];
  });
-&lt;/script&gt;</description></item><item><title>VISA or MasterCard? 信用卡安全攻防</title><link>https://ja-errorpro.codes/posts/2026/credit-card-branding-attack/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/credit-card-branding-attack/</guid><description>&lt;div class="cf-secret-container" id="secret-credit-card-branding-attack-content"&gt;
+&lt;/script&gt;</description></item><item><title>VISA or MasterCard? 信用卡安全攻防</title><link>https://ja-errorpro.codes/posts/2026/visa-or-mastercard-%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/visa-or-mastercard-%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/</guid><description>&lt;div class="cf-secret-container" id="secret-credit-card-branding-attack-content"&gt;
  &lt;div class="cf-secret-lock"&gt;
  &lt;h3 class="secret-title"&gt;🔒&lt;/h3&gt;
  &lt;p class="secret-desc"&gt;&lt;/p&gt;
@@ -893,7 +893,7 @@
  secretContainer.querySelector(".secret-desc").textContent =
  descList[randomIndex];
  });
-&lt;/script&gt;</description></item><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon_2025/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon_2025/</guid><description>&lt;h1 id="前言"&gt;前言&lt;/h1&gt;
+&lt;/script&gt;</description></item><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon-2025-badusb-easy-medium-writeup/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon-2025-badusb-easy-medium-writeup/</guid><description>&lt;h1 id="前言"&gt;前言&lt;/h1&gt;
 &lt;p&gt;2024 年跟 25 年的 HITCON Badge 比起以往非常特別，是用 PCB 做的，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。&lt;/p&gt;
 &lt;p&gt;去年 BadUSB 我沒有參加到，所以今年有做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。&lt;/p&gt;
 &lt;h1 id="badusb"&gt;BadUSB&lt;/h1&gt;
@@ -1275,7 +1275,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;interactive()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/stack_overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/stack_overflow/</guid><description>&lt;h1 id="先備知識"&gt;先備知識&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8stack-overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8stack-overflow/</guid><description>&lt;h1 id="先備知識"&gt;先備知識&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/2023/asm/"&gt;【系統安全】組合語言&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/2023/linux_system_security/"&gt;【系統安全】Linux 安全機制&lt;/a&gt;&lt;/li&gt;
@@ -1309,7 +1309,7 @@
 &lt;h2 id="ret2shellcode"&gt;ret2shellcode&lt;/h2&gt;
 &lt;h2 id="ret2syscall"&gt;ret2syscall&lt;/h2&gt;
 &lt;h2 id="ret2libc"&gt;ret2libc&lt;/h2&gt;
-&lt;h2 id="got"&gt;GOT&lt;/h2&gt;</description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024"&gt;AIS3 Pre-Exam 2024&lt;/h1&gt;
+&lt;h2 id="got"&gt;GOT&lt;/h2&gt;</description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ctf-writeupais3-pre-exam-2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ctf-writeupais3-pre-exam-2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024"&gt;AIS3 Pre-Exam 2024&lt;/h1&gt;
 &lt;p&gt;先放結果&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result.png" alt="result"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result2.png" alt="result2"&gt;&lt;/p&gt;
@@ -1386,7 +1386,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; exit(&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p&gt;</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation"&gt;Heap Exploitation&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p&gt;</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctfheap-exploitationpart-1-overview-uaf/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctfheap-exploitationpart-1-overview-uaf/</guid><description>&lt;h1 id="heap-exploitation"&gt;Heap Exploitation&lt;/h1&gt;
 &lt;h2 id="預備知識"&gt;預備知識&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;需要注意glibc的版本&lt;/li&gt;
@@ -1666,7 +1666,7 @@
 &lt;ul&gt;
 &lt;li&gt;記憶體被釋放後還被使用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;三種情況：&lt;/p&gt;</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctf_tools/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_tools/</guid><description>&lt;h1 id="ctf工具集"&gt;CTF工具集&lt;/h1&gt;
+&lt;p&gt;三種情況：&lt;/p&gt;</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctfctf%E5%B7%A5%E5%85%B7%E9%9B%86/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctfctf%E5%B7%A5%E5%85%B7%E9%9B%86/</guid><description>&lt;h1 id="ctf工具集"&gt;CTF工具集&lt;/h1&gt;
 &lt;h2 id="基本工具"&gt;基本工具&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Python 2+3 &amp;amp; pip&lt;/li&gt;
@@ -1770,7 +1770,7 @@
  &lt;td&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/nmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/nmap/</guid><description>&lt;h1 id="nmap"&gt;Nmap&lt;/h1&gt;
+&lt;/table&gt;</description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/ctfnmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctfnmap/</guid><description>&lt;h1 id="nmap"&gt;Nmap&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://nmap.org/download.html"&gt;Nmap Download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Debian安裝&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
@@ -1800,7 +1800,7 @@
 &lt;li&gt;-Pn: 跳過Ping掃描，全當存活服務(避免防火牆拒絕)&lt;/li&gt;
 &lt;li&gt;-4: 強制使用IPv4&lt;/li&gt;
 &lt;li&gt;-6: 強制使用IPv6&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/rsa/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/rsa/</guid><description>&lt;h1 id="rsa加密演算法"&gt;RSA加密演算法&lt;/h1&gt;
+&lt;/ul&gt;</description></item><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/ctf%E5%AF%86%E7%A2%BC%E5%AD%B8-rsa%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf%E5%AF%86%E7%A2%BC%E5%AD%B8-rsa%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95/</guid><description>&lt;h1 id="rsa加密演算法"&gt;RSA加密演算法&lt;/h1&gt;
 &lt;h2 id="簡介"&gt;簡介&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。&lt;/li&gt;
@@ -1830,7 +1830,7 @@
 &lt;h2 id="攻擊"&gt;攻擊&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/aleaxit/gmpy"&gt;gmpy2&lt;/a&gt;
 &lt;a href="http://factordb.com"&gt;線上分解n&lt;/a&gt;
-&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool"&gt;RSACTFTool&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【系統安全】ELF檔案格式</title><link>https://ja-errorpro.codes/posts/2023/elf/</link><pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/elf/</guid><description>&lt;h1 id="elf檔案格式"&gt;ELF檔案格式&lt;/h1&gt;
+&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool"&gt;RSACTFTool&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【系統安全】ELF檔案格式</title><link>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8elf%E6%AA%94%E6%A1%88%E6%A0%BC%E5%BC%8F/</link><pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8elf%E6%AA%94%E6%A1%88%E6%A0%BC%E5%BC%8F/</guid><description>&lt;h1 id="elf檔案格式"&gt;ELF檔案格式&lt;/h1&gt;
 &lt;h2 id="elfexecutable-and-linkable-format"&gt;ELF(Executable and Linkable Format)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;可執行可連結格式&lt;/li&gt;
@@ -1895,7 +1895,7 @@
 &lt;h2 id="檔案結構"&gt;檔案結構&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;File Header&lt;/p&gt;</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/linux_system_security/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/linux_system_security/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr"&gt;Address space layout randomization(ASLR):&lt;/h2&gt;
+&lt;p&gt;File Header&lt;/p&gt;</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8linux-%E5%AE%89%E5%85%A8%E6%A9%9F%E5%88%B6/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8linux-%E5%AE%89%E5%85%A8%E6%A9%9F%E5%88%B6/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr"&gt;Address space layout randomization(ASLR):&lt;/h2&gt;
 &lt;p&gt;記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用&lt;/p&gt;
 &lt;p&gt;繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪&lt;/p&gt;
 &lt;h2 id="stack-canary"&gt;Stack Canary:&lt;/h2&gt;
@@ -1911,7 +1911,7 @@
 &lt;h2 id="fortify-source"&gt;Fortify Source:&lt;/h2&gt;
 &lt;p&gt;在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()&lt;/p&gt;
 &lt;h2 id="relrorelocation-read-only"&gt;RELRO(RELocation Read-Only):&lt;/h2&gt;
-&lt;p&gt;在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section&lt;/p&gt;</description></item><item><title>【系統安全】組合語言</title><link>https://ja-errorpro.codes/posts/2023/asm/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/asm/</guid><description>&lt;h1 id="組合語言"&gt;組合語言&lt;/h1&gt;
+&lt;p&gt;在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section&lt;/p&gt;</description></item><item><title>【系統安全】組合語言</title><link>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80/</guid><description>&lt;h1 id="組合語言"&gt;組合語言&lt;/h1&gt;
 &lt;h2 id="編譯流程"&gt;編譯流程&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;詞法分析 (Lexical Analysis)&lt;/li&gt;
@@ -1973,7 +1973,7 @@
 &lt;li&gt;行號記錄&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="編譯-compilation"&gt;編譯 (Compilation)&lt;/h3&gt;
-&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p&gt;題目：
+&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf-writeuppicoctf-heres-a-libc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf-writeuppicoctf-heres-a-libc/</guid><description>&lt;p&gt;題目：
 給你指定的libc與elf file請pwn掉它&lt;/p&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
 &lt;ul&gt;
@@ -2068,7 +2068,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在函式do_stuff()裡，&lt;code&gt;scanf(&amp;quot;%[^\n]&amp;quot;, str)&lt;/code&gt; 的意思是會一直讀到換行為止然後塞進 str，
-沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
+沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf-writeuppicoctf-file-run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf-writeuppicoctf-file-run2/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
@@ -2121,7 +2121,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;然而在執行時卻出現權限不足的訊息。&lt;/p&gt;</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb/</guid><description>&lt;h1 id="what-is-gdb"&gt;What is GDB?&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;然而在執行時卻出現權限不足的訊息。&lt;/p&gt;</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb-%E9%99%A4%E9%8C%AF%E5%B7%A5%E5%85%B7%E5%AD%B8%E7%BF%92/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb-%E9%99%A4%E9%8C%AF%E5%B7%A5%E5%85%B7%E5%AD%B8%E7%BF%92/</guid><description>&lt;h1 id="what-is-gdb"&gt;What is GDB?&lt;/h1&gt;
 &lt;p&gt;gdb全名為gnu debugger，是一種動態Debug的工具。&lt;/p&gt;
 &lt;h1 id="使用"&gt;使用&lt;/h1&gt;
 &lt;p&gt;我們可以先寫一個簡易的Hello World，並宣告一些變數&lt;/p&gt;
@@ -2239,7 +2239,7 @@
  &lt;td&gt;執行上一條指令&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
+&lt;/table&gt;</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf-writeupeasyctf-adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf-writeupeasyctf-adder/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;給你一個加法程式，找出Flag
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="https://ja-errorpro.codes/file/adder"&gt;adder&lt;/a&gt;&lt;/p&gt;

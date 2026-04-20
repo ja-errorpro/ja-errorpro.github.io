@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>自架 CodiMD 採坑記</title><link>https://ja-errorpro.codes/posts/2026/codimd/</link><pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/codimd/</guid><description>&lt;h1 id="codimd"&gt;CodiMD&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ErrorPro</title><link>https://ja-errorpro.codes/</link><description>Recent content on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/index.xml" rel="self" type="application/rss+xml"/><item><title>自架 CodiMD 採坑記</title><link>https://ja-errorpro.codes/posts/2026/%E8%87%AA%E6%9E%B6-codimd-%E6%8E%A1%E5%9D%91%E8%A8%98/</link><pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/%E8%87%AA%E6%9E%B6-codimd-%E6%8E%A1%E5%9D%91%E8%A8%98/</guid><description>&lt;h1 id="codimd"&gt;CodiMD&lt;/h1&gt;
 &lt;p&gt;可以把 CodiMD 想成自架的 HackMD，但 HackMD 的免費版只能支援 5 人同時編輯，而 CodiMD 沒有這個限制，所以如果需要多人協作的話，CodiMD 是一個不錯的選擇。&lt;/p&gt;
 &lt;h2 id="安裝"&gt;安裝&lt;/h2&gt;
 &lt;ul&gt;
@@ -330,7 +330,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# Nmap done at Tue Feb 17 00:01:45 2026 -- 1 IP address (1 host up) scanned in 50.99 seconds&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;add Remote_IP to /etc/hosts&lt;/p&gt;</description></item><item><title>淺讀 Chrome Elevator: 如何繞過 Chrome App-Bound Encryption 來竊取資料</title><link>https://ja-errorpro.codes/posts/2026/chrome-elevator/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/chrome-elevator/</guid><description>&lt;p&gt;最近剛推完研究所閒閒沒事，所以來玩一點黑黑的東西。有看到許多 Discord 帳號被盜的新聞，讓我思考如果今天換我是駭客，我要怎麼像他們一樣偷到 Discord 的 Cookie？&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;add Remote_IP to /etc/hosts&lt;/p&gt;</description></item><item><title>淺讀 Chrome Elevator: 如何繞過 Chrome App-Bound Encryption 來竊取資料</title><link>https://ja-errorpro.codes/posts/2026/%E6%B7%BA%E8%AE%80-chrome-elevator-%E5%A6%82%E4%BD%95%E7%B9%9E%E9%81%8E-chrome-app-bound-encryption-%E4%BE%86%E7%AB%8A%E5%8F%96%E8%B3%87%E6%96%99/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/%E6%B7%BA%E8%AE%80-chrome-elevator-%E5%A6%82%E4%BD%95%E7%B9%9E%E9%81%8E-chrome-app-bound-encryption-%E4%BE%86%E7%AB%8A%E5%8F%96%E8%B3%87%E6%96%99/</guid><description>&lt;p&gt;最近剛推完研究所閒閒沒事，所以來玩一點黑黑的東西。有看到許多 Discord 帳號被盜的新聞，讓我思考如果今天換我是駭客，我要怎麼像他們一樣偷到 Discord 的 Cookie？&lt;/p&gt;
 &lt;p&gt;於是我寫了一個小小的惡意程式，在這篇文章我將紀錄一下取得 Chrome 或 Brave 這種常見瀏覽器的敏感資料的原理以及繞過。&lt;/p&gt;
 &lt;p&gt;【此文純屬技術研究學習，請勿用於非法用途】&lt;/p&gt;
 &lt;h2 id="舊版本的-solution-dpapi"&gt;舊版本的 Solution: DPAPI&lt;/h2&gt;
@@ -355,7 +355,7 @@
 &lt;li&gt;用解開的金鑰去解密 Login Data 裡的密碼&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="新版本的-solution-app-bound-encryption"&gt;新版本的 Solution: App-Bound Encryption&lt;/h2&gt;
-&lt;p&gt;為了防堵 DPAPI 被濫用，Chrome 在新版中引入了 App-Bound Encryption 機制。&lt;/p&gt;</description></item><item><title>ASUS AiCloud CVE-2025-59366 漏洞分析</title><link>https://ja-errorpro.codes/posts/2026/asus-rtbe92u-aicloud/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/asus-rtbe92u-aicloud/</guid><description>&lt;p&gt;在 2025 年 11 月 25 日，ASUS 公布多款路由器存在重大漏洞，導致未授權攻擊者執行特定功能。&lt;/p&gt;
+&lt;p&gt;為了防堵 DPAPI 被濫用，Chrome 在新版中引入了 App-Bound Encryption 機制。&lt;/p&gt;</description></item><item><title>ASUS AiCloud CVE-2025-59366 漏洞分析</title><link>https://ja-errorpro.codes/posts/2026/asus-aicloud-cve-2025-59366-%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/asus-aicloud-cve-2025-59366-%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/</guid><description>&lt;p&gt;在 2025 年 11 月 25 日，ASUS 公布多款路由器存在重大漏洞，導致未授權攻擊者執行特定功能。&lt;/p&gt;
 &lt;p&gt;網路上幾乎找不到 PoC 或相關文章，剛好最近參加資安營有機會研究這個漏洞。&lt;/p&gt;
 
  
@@ -805,7 +805,7 @@
  secretContainer.querySelector(".secret-desc").textContent =
  descList[randomIndex];
  });
-&lt;/script&gt;</description></item><item><title>VISA or MasterCard? 信用卡安全攻防</title><link>https://ja-errorpro.codes/posts/2026/credit-card-branding-attack/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/credit-card-branding-attack/</guid><description>&lt;div class="cf-secret-container" id="secret-credit-card-branding-attack-content"&gt;
+&lt;/script&gt;</description></item><item><title>VISA or MasterCard? 信用卡安全攻防</title><link>https://ja-errorpro.codes/posts/2026/visa-or-mastercard-%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/</link><pubDate>Sun, 25 Jan 2026 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2026/visa-or-mastercard-%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2/</guid><description>&lt;div class="cf-secret-container" id="secret-credit-card-branding-attack-content"&gt;
  &lt;div class="cf-secret-lock"&gt;
  &lt;h3 class="secret-title"&gt;🔒&lt;/h3&gt;
  &lt;p class="secret-desc"&gt;&lt;/p&gt;
@@ -1250,7 +1250,7 @@
  secretContainer.querySelector(".secret-desc").textContent =
  descList[randomIndex];
  });
-&lt;/script&gt;</description></item><item><title>115 國立臺灣科技大學資訊工程所乙組推甄</title><link>https://ja-errorpro.codes/posts/2025/ntust_applicate/</link><pubDate>Sat, 08 Nov 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/ntust_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;/script&gt;</description></item><item><title>115 國立臺灣科技大學資訊工程所乙組推甄</title><link>https://ja-errorpro.codes/posts/2025/115-%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E8%B3%87%E8%A8%8A%E5%B7%A5%E7%A8%8B%E6%89%80%E4%B9%99%E7%B5%84%E6%8E%A8%E7%94%84/</link><pubDate>Sat, 08 Nov 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/115-%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E8%B3%87%E8%A8%8A%E5%B7%A5%E7%A8%8B%E6%89%80%E4%B9%99%E7%B5%84%E6%8E%A8%E7%94%84/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
 &lt;p&gt;參見上一篇的&lt;a href="../nycu_applicate/"&gt;交大推甄&lt;/a&gt;。交的東西都差不多，只差在不用準備分工表之類的。&lt;/p&gt;
 &lt;h2 id="面試"&gt;面試&lt;/h2&gt;
 &lt;p&gt;分兩關，&lt;/p&gt;
@@ -1271,7 +1271,7 @@
 &lt;p&gt;而且由於前一天被交大放榜影響，我的心情很放鬆，衣服還穿金盾獎 T，應該是全場穿得最隨便的。&lt;/p&gt;
 &lt;p&gt;總之，體驗比交大的面試還好很多。&lt;/p&gt;
 &lt;h2 id="最後結果"&gt;最後結果&lt;/h2&gt;
-&lt;p&gt;正取 8(放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 中央大學資工所軟體工程組推甄</title><link>https://ja-errorpro.codes/posts/2025/ncu_applicate/</link><pubDate>Fri, 31 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/ncu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;p&gt;正取 8(放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 中央大學資工所軟體工程組推甄</title><link>https://ja-errorpro.codes/posts/2025/115-%E4%B8%AD%E5%A4%AE%E5%A4%A7%E5%AD%B8%E8%B3%87%E5%B7%A5%E6%89%80%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B5%84%E6%8E%A8%E7%94%84/</link><pubDate>Fri, 31 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/115-%E4%B8%AD%E5%A4%AE%E5%A4%A7%E5%AD%B8%E8%B3%87%E5%B7%A5%E6%89%80%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E7%B5%84%E6%8E%A8%E7%94%84/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
 &lt;p&gt;參見上一篇的&lt;a href="../nycu_applicate/"&gt;交大推甄&lt;/a&gt;。交的東西都差不多，只差在不用準備分工表之類的。&lt;/p&gt;
 &lt;h2 id="筆試"&gt;筆試&lt;/h2&gt;
 &lt;p&gt;全手寫，三小時&lt;/p&gt;
@@ -1324,7 +1324,7 @@
 &lt;li&gt;Magic 153，輸入一個正整數 n，將 n 的每個位數立方和相加，重複此過程，判斷最後是否會回到 153。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="最後結果"&gt;最後結果&lt;/h2&gt;
-&lt;p&gt;備取 7(備上，放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/nycu_applicate/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/nycu_applicate/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
+&lt;p&gt;備取 7(備上，放棄，已報到交大)&lt;/p&gt;</description></item><item><title>115 陽明交大資工所丙戊組推甄</title><link>https://ja-errorpro.codes/posts/2025/115-%E9%99%BD%E6%98%8E%E4%BA%A4%E5%A4%A7%E8%B3%87%E5%B7%A5%E6%89%80%E4%B8%99%E6%88%8A%E7%B5%84%E6%8E%A8%E7%94%84/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/115-%E9%99%BD%E6%98%8E%E4%BA%A4%E5%A4%A7%E8%B3%87%E5%B7%A5%E6%89%80%E4%B8%99%E6%88%8A%E7%B5%84%E6%8E%A8%E7%94%84/</guid><description>&lt;h2 id="初審"&gt;初審&lt;/h2&gt;
 &lt;p&gt;交大有自己的系統，直接在上面填資料，重點是專題跟組隊比賽要有分工表，建議提早準備。&lt;/p&gt;
 &lt;p&gt;中原資工，在校成績：27%&lt;/p&gt;
 &lt;ul&gt;
@@ -1366,7 +1366,7 @@
 &lt;li&gt;設計一個 AI Agent 評分備審資料&lt;/li&gt;
 &lt;li&gt;設計一個產品分類與庫存管理系統&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;</description></item><item><title>VMWare 開啟內嵌虛擬化的一些坑</title><link>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</link><pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/vmware_intel_virtualized/</guid><description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;
+&lt;p&gt;後面兩題沒寫完。&lt;/p&gt;</description></item><item><title>VMWare 開啟內嵌虛擬化的一些坑</title><link>https://ja-errorpro.codes/posts/2025/vmware-%E9%96%8B%E5%95%9F%E5%85%A7%E5%B5%8C%E8%99%9B%E6%93%AC%E5%8C%96%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</link><pubDate>Thu, 02 Oct 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/vmware-%E9%96%8B%E5%95%9F%E5%85%A7%E5%B5%8C%E8%99%9B%E6%93%AC%E5%8C%96%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</guid><description>&lt;p&gt;最近需要在 VMWare 裡的虛擬機器跑 KVM，需要開啟內嵌虛擬化，但發現開啟後無法啟動虛擬機器，出現說 「VT-x is not available」之類的錯誤訊息。&lt;/p&gt;
 &lt;p&gt;這個狀況是在 BIOS 已經確認開啟 Intel VT-x 的情況下，Windows 已經關閉 Hyper-V 與 hypervisor 的情況下發生的。&lt;/p&gt;
 &lt;p&gt;後來發現，除了 Hyper-V 之外，還需要將 Virtual Machine Platform 這個 Windows 功能關閉，然後為了徹底關閉 Hyper-V，還需要在命令提示字元下執行以下指令：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
@@ -1391,7 +1391,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V-All
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;與&lt;/p&gt;</description></item><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon_2025/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon_2025/</guid><description>&lt;h1 id="前言"&gt;前言&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;與&lt;/p&gt;</description></item><item><title>HITCON 2025 BadUSB Easy+Medium WriteUp</title><link>https://ja-errorpro.codes/posts/2025/hitcon-2025-badusb-easy-medium-writeup/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/hitcon-2025-badusb-easy-medium-writeup/</guid><description>&lt;h1 id="前言"&gt;前言&lt;/h1&gt;
 &lt;p&gt;2024 年跟 25 年的 HITCON Badge 比起以往非常特別，是用 PCB 做的，可以寫 BadUSB 進去，不需要買什麼 Flipper Zero 還 Rubber Ducky，拿台電腦開起來就能寫了。&lt;/p&gt;
 &lt;p&gt;去年 BadUSB 我沒有參加到，所以今年有做了點研究，我成功在 D2 早上拿到 Easy 跟 Medium 難度的 First Blood，這篇就來寫下 WriteUp。&lt;/p&gt;
 &lt;h1 id="badusb"&gt;BadUSB&lt;/h1&gt;
@@ -1462,7 +1462,7 @@
 &lt;li&gt;SQLite 資料庫&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/htb/titanic/sqlite.png" alt="sqlite"&gt;&lt;/p&gt;
-&lt;p&gt;需要先轉換一下格式&lt;/p&gt;</description></item><item><title>都 5202 年了，你還在用 pip 嗎？快來試試 uv！</title><link>https://ja-errorpro.codes/posts/2025/uv/</link><pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/uv/</guid><description>&lt;h2 id="why-uv"&gt;Why &lt;code&gt;uv&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;需要先轉換一下格式&lt;/p&gt;</description></item><item><title>都 5202 年了，你還在用 pip 嗎？快來試試 uv！</title><link>https://ja-errorpro.codes/posts/2025/%E9%83%BD-5202-%E5%B9%B4%E4%BA%86%E4%BD%A0%E9%82%84%E5%9C%A8%E7%94%A8-pip-%E5%97%8E%E5%BF%AB%E4%BE%86%E8%A9%A6%E8%A9%A6-uv/</link><pubDate>Thu, 10 Jul 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/%E9%83%BD-5202-%E5%B9%B4%E4%BA%86%E4%BD%A0%E9%82%84%E5%9C%A8%E7%94%A8-pip-%E5%97%8E%E5%BF%AB%E4%BE%86%E8%A9%A6%E8%A9%A6-uv/</guid><description>&lt;h2 id="why-uv"&gt;Why &lt;code&gt;uv&lt;/code&gt;?&lt;/h2&gt;
 &lt;p&gt;以前在使用 pip 時，經常遇到依賴衝突、速度慢等問題。隨著 Python 生態的發展，出現越來越多工具如：&lt;code&gt;venv&lt;/code&gt;、&lt;code&gt;poetry&lt;/code&gt;、&lt;code&gt;pipenv&lt;/code&gt; 等，而 &lt;code&gt;uv&lt;/code&gt; 則將上述的工具整合在一起，提供了一個更簡單、更高效的 Python 包管理體驗。&lt;/p&gt;
 &lt;h2 id="安裝"&gt;安裝&lt;/h2&gt;
 &lt;p&gt;根據 &lt;a href="https://docs.astral.sh/uv/getting-started/installation/"&gt;官方文件&lt;/a&gt;&lt;/p&gt;
@@ -1591,7 +1591,7 @@
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv &lt;span style="color:#8be9fd;font-style:italic"&gt;export&lt;/span&gt; --format requirements.txt &amp;gt; requirements.tx
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>PL OurScheme Interpreter 專案三函數儲存可能思路</title><link>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</link><pubDate>Thu, 15 May 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/pl_project3_function_storage/</guid><description>&lt;h3 id="點我參考程式碼將於專案截止日後轉為公開-repo"&gt;&lt;a href="https://github.com/ja-errorpro/CYCS_OurScheme_Interpreter"&gt;點我參考程式碼(將於專案截止日後轉為公開 repo)&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;</description></item><item><title>PL OurScheme Interpreter 專案三函數儲存可能思路</title><link>https://ja-errorpro.codes/posts/2025/pl-ourscheme-interpreter-%E5%B0%88%E6%A1%88%E4%B8%89%E5%87%BD%E6%95%B8%E5%84%B2%E5%AD%98%E5%8F%AF%E8%83%BD%E6%80%9D%E8%B7%AF/</link><pubDate>Thu, 15 May 2025 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2025/pl-ourscheme-interpreter-%E5%B0%88%E6%A1%88%E4%B8%89%E5%87%BD%E6%95%B8%E5%84%B2%E5%AD%98%E5%8F%AF%E8%83%BD%E6%80%9D%E8%B7%AF/</guid><description>&lt;h3 id="點我參考程式碼將於專案截止日後轉為公開-repo"&gt;&lt;a href="https://github.com/ja-errorpro/CYCS_OurScheme_Interpreter"&gt;點我參考程式碼(將於專案截止日後轉為公開 repo)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;這邊統一一下對於 parameter 和 argument 的用詞定義：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Parameter: 定義函數時的參數變數&lt;/p&gt;
@@ -2206,7 +2206,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;p&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;interactive()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/stack_overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/stack_overflow/</guid><description>&lt;h1 id="先備知識"&gt;先備知識&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>【系統安全】Stack Overflow</title><link>https://ja-errorpro.codes/posts/2024/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8stack-overflow/</link><pubDate>Fri, 05 Jul 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8stack-overflow/</guid><description>&lt;h1 id="先備知識"&gt;先備知識&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/2023/asm/"&gt;【系統安全】組合語言&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/2023/linux_system_security/"&gt;【系統安全】Linux 安全機制&lt;/a&gt;&lt;/li&gt;
@@ -2240,7 +2240,7 @@ RHOST: 10.129.11.184
 &lt;h2 id="ret2shellcode"&gt;ret2shellcode&lt;/h2&gt;
 &lt;h2 id="ret2syscall"&gt;ret2syscall&lt;/h2&gt;
 &lt;h2 id="ret2libc"&gt;ret2libc&lt;/h2&gt;
-&lt;h2 id="got"&gt;GOT&lt;/h2&gt;</description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ais3_pre_exam_2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024"&gt;AIS3 Pre-Exam 2024&lt;/h1&gt;
+&lt;h2 id="got"&gt;GOT&lt;/h2&gt;</description></item><item><title>【CTF-WriteUp】AIS3 Pre-Exam 2024</title><link>https://ja-errorpro.codes/posts/2024/ctf-writeupais3-pre-exam-2024/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/ctf-writeupais3-pre-exam-2024/</guid><description>&lt;h1 id="ais3-pre-exam-2024"&gt;AIS3 Pre-Exam 2024&lt;/h1&gt;
 &lt;p&gt;先放結果&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result.png" alt="result"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/ctf/ais3_pre_exam_2024/result2.png" alt="result2"&gt;&lt;/p&gt;
@@ -2317,7 +2317,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; exit(&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/metasploitable3_writeup/</guid><description>&lt;h2 id="先備知識"&gt;先備知識&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;可以發現一定會生一個玩家必輸的局面，看看遊戲的操作選項&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable3 滲透測試實作（筆記）</title><link>https://ja-errorpro.codes/posts/2024/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable3-%E6%BB%B2%E9%80%8F%E6%B8%AC%E8%A9%A6%E5%AF%A6%E4%BD%9C%E7%AD%86%E8%A8%98/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2024/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable3-%E6%BB%B2%E9%80%8F%E6%B8%AC%E8%A9%A6%E5%AF%A6%E4%BD%9C%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="先備知識"&gt;先備知識&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;知道如何使用 VMware 或 VirtualBox&lt;/li&gt;
 &lt;li&gt;Kali Linux 基本操作&lt;/li&gt;
@@ -2392,7 +2392,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="analysis"&gt;Analysis&lt;/h2&gt;
-&lt;p&gt;丟到 IDA 分析程式碼&lt;/p&gt;</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctf_heap/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_heap/</guid><description>&lt;h1 id="heap-exploitation"&gt;Heap Exploitation&lt;/h1&gt;
+&lt;p&gt;丟到 IDA 分析程式碼&lt;/p&gt;</description></item><item><title>【CTF】Heap Exploitation(Part 1 - Overview, UAF)</title><link>https://ja-errorpro.codes/posts/2023/ctfheap-exploitationpart-1-overview-uaf/</link><pubDate>Thu, 16 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctfheap-exploitationpart-1-overview-uaf/</guid><description>&lt;h1 id="heap-exploitation"&gt;Heap Exploitation&lt;/h1&gt;
 &lt;h2 id="預備知識"&gt;預備知識&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;需要注意glibc的版本&lt;/li&gt;
@@ -2672,7 +2672,7 @@ RHOST: 10.129.11.184
 &lt;ul&gt;
 &lt;li&gt;記憶體被釋放後還被使用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;三種情況：&lt;/p&gt;</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctf_tools/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_tools/</guid><description>&lt;h1 id="ctf工具集"&gt;CTF工具集&lt;/h1&gt;
+&lt;p&gt;三種情況：&lt;/p&gt;</description></item><item><title>【CTF】CTF工具集</title><link>https://ja-errorpro.codes/posts/2023/ctfctf%E5%B7%A5%E5%85%B7%E9%9B%86/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctfctf%E5%B7%A5%E5%85%B7%E9%9B%86/</guid><description>&lt;h1 id="ctf工具集"&gt;CTF工具集&lt;/h1&gt;
 &lt;h2 id="基本工具"&gt;基本工具&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Python 2+3 &amp;amp; pip&lt;/li&gt;
@@ -2776,7 +2776,7 @@ RHOST: 10.129.11.184
  &lt;td&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/nmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/nmap/</guid><description>&lt;h1 id="nmap"&gt;Nmap&lt;/h1&gt;
+&lt;/table&gt;</description></item><item><title>【CTF】Nmap</title><link>https://ja-errorpro.codes/posts/2023/ctfnmap/</link><pubDate>Sun, 12 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctfnmap/</guid><description>&lt;h1 id="nmap"&gt;Nmap&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://nmap.org/download.html"&gt;Nmap Download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Debian安裝&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
@@ -2806,7 +2806,7 @@ RHOST: 10.129.11.184
 &lt;li&gt;-Pn: 跳過Ping掃描，全當存活服務(避免防火牆拒絕)&lt;/li&gt;
 &lt;li&gt;-4: 強制使用IPv4&lt;/li&gt;
 &lt;li&gt;-6: 強制使用IPv6&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/rsa/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/rsa/</guid><description>&lt;h1 id="rsa加密演算法"&gt;RSA加密演算法&lt;/h1&gt;
+&lt;/ul&gt;</description></item><item><title>【CTF】密碼學-RSA加密演算法</title><link>https://ja-errorpro.codes/posts/2023/ctf%E5%AF%86%E7%A2%BC%E5%AD%B8-rsa%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf%E5%AF%86%E7%A2%BC%E5%AD%B8-rsa%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95/</guid><description>&lt;h1 id="rsa加密演算法"&gt;RSA加密演算法&lt;/h1&gt;
 &lt;h2 id="簡介"&gt;簡介&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;由三位數學家Rivest、Shamir、Adleman所提出，RSA就是他們的姓氏第一個字母組成的。&lt;/li&gt;
@@ -2836,7 +2836,7 @@ RHOST: 10.129.11.184
 &lt;h2 id="攻擊"&gt;攻擊&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/aleaxit/gmpy"&gt;gmpy2&lt;/a&gt;
 &lt;a href="http://factordb.com"&gt;線上分解n&lt;/a&gt;
-&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool"&gt;RSACTFTool&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【系統安全】ELF檔案格式</title><link>https://ja-errorpro.codes/posts/2023/elf/</link><pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/elf/</guid><description>&lt;h1 id="elf檔案格式"&gt;ELF檔案格式&lt;/h1&gt;
+&lt;a href="https://github.com/RsaCtfTool/RsaCtfTool"&gt;RSACTFTool&lt;/a&gt;&lt;/p&gt;</description></item><item><title>【系統安全】ELF檔案格式</title><link>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8elf%E6%AA%94%E6%A1%88%E6%A0%BC%E5%BC%8F/</link><pubDate>Wed, 25 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8elf%E6%AA%94%E6%A1%88%E6%A0%BC%E5%BC%8F/</guid><description>&lt;h1 id="elf檔案格式"&gt;ELF檔案格式&lt;/h1&gt;
 &lt;h2 id="elfexecutable-and-linkable-format"&gt;ELF(Executable and Linkable Format)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;可執行可連結格式&lt;/li&gt;
@@ -2901,7 +2901,7 @@ RHOST: 10.129.11.184
 &lt;h2 id="檔案結構"&gt;檔案結構&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;File Header&lt;/p&gt;</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/linux_system_security/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/linux_system_security/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr"&gt;Address space layout randomization(ASLR):&lt;/h2&gt;
+&lt;p&gt;File Header&lt;/p&gt;</description></item><item><title>【系統安全】Linux 安全機制</title><link>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8linux-%E5%AE%89%E5%85%A8%E6%A9%9F%E5%88%B6/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8linux-%E5%AE%89%E5%85%A8%E6%A9%9F%E5%88%B6/</guid><description>&lt;h2 id="address-space-layout-randomizationaslr"&gt;Address space layout randomization(ASLR):&lt;/h2&gt;
 &lt;p&gt;記憶體隨機載入，會把.stack section, .so section, mmap()隨機化，可以防止攻擊者跳到指定記憶體任意利用&lt;/p&gt;
 &lt;p&gt;繞過：目前沒有很好的繞過方法，只能靠運氣猜記憶體在哪&lt;/p&gt;
 &lt;h2 id="stack-canary"&gt;Stack Canary:&lt;/h2&gt;
@@ -2917,7 +2917,7 @@ RHOST: 10.129.11.184
 &lt;h2 id="fortify-source"&gt;Fortify Source:&lt;/h2&gt;
 &lt;p&gt;在編譯時檢查是否存在buffer overflow，並將危險函式替換成安全函式，例如strcpy()會被替換成strncpy()&lt;/p&gt;
 &lt;h2 id="relrorelocation-read-only"&gt;RELRO(RELocation Read-Only):&lt;/h2&gt;
-&lt;p&gt;在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section&lt;/p&gt;</description></item><item><title>【系統安全】組合語言</title><link>https://ja-errorpro.codes/posts/2023/asm/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/asm/</guid><description>&lt;h1 id="組合語言"&gt;組合語言&lt;/h1&gt;
+&lt;p&gt;在Lazy Binding時，會將.got.plt section設為read-only，可以防止攻擊者修改.got.plt section&lt;/p&gt;</description></item><item><title>【系統安全】組合語言</title><link>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E7%B3%BB%E7%B5%B1%E5%AE%89%E5%85%A8%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80/</guid><description>&lt;h1 id="組合語言"&gt;組合語言&lt;/h1&gt;
 &lt;h2 id="編譯流程"&gt;編譯流程&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;詞法分析 (Lexical Analysis)&lt;/li&gt;
@@ -2979,7 +2979,7 @@ RHOST: 10.129.11.184
 &lt;li&gt;行號記錄&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="編譯-compilation"&gt;編譯 (Compilation)&lt;/h3&gt;
-&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf_picoctf_heresalibc/</guid><description>&lt;p&gt;題目：
+&lt;p&gt;組語格式：預設 AT&amp;amp;T 語法，可用 &lt;code&gt;-masm=intel&lt;/code&gt; 改成 Intel 語法&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-Here's a LIBC</title><link>https://ja-errorpro.codes/posts/2023/ctf-writeuppicoctf-heres-a-libc/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/ctf-writeuppicoctf-heres-a-libc/</guid><description>&lt;p&gt;題目：
 給你指定的libc與elf file請pwn掉它&lt;/p&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
 &lt;ul&gt;
@@ -3074,7 +3074,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在函式do_stuff()裡，&lt;code&gt;scanf(&amp;quot;%[^\n]&amp;quot;, str)&lt;/code&gt; 的意思是會一直讀到換行為止然後塞進 str，
-沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p&gt;</description></item><item><title>【CPE】2023-05-23 紀錄</title><link>https://ja-errorpro.codes/posts/2023/cpe_20230523/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cpe_20230523/</guid><description>&lt;h1 id="cpe大學程式能力檢定"&gt;CPE(大學程式能力檢定)&lt;/h1&gt;
+沒有限制輸入長度因此出現Buffer Overflow漏洞&lt;/p&gt;</description></item><item><title>【CPE】2023-05-23 紀錄</title><link>https://ja-errorpro.codes/posts/2023/cpe2023-05-23-%E7%B4%80%E9%8C%84/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cpe2023-05-23-%E7%B4%80%E9%8C%84/</guid><description>&lt;h1 id="cpe大學程式能力檢定"&gt;CPE(大學程式能力檢定)&lt;/h1&gt;
 &lt;p&gt;第一次考CPE，考前沒時間準備所以基本上就是裸考。&lt;/p&gt;
 &lt;p&gt;隨便寫寫，做了4題&lt;/p&gt;
 &lt;h2 id="pa---uva11934"&gt;pA - UVA11934&lt;/h2&gt;
@@ -3127,7 +3127,7 @@ RHOST: 10.129.11.184
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pb---uva11349"&gt;pB - UVA11349&lt;/h2&gt;
 &lt;h3 id="題意-1"&gt;題意：&lt;/h3&gt;
-&lt;p&gt;給一個方矩陣問是否為對稱矩陣。&lt;/p&gt;</description></item><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</guid><description>&lt;h2 id="pre"&gt;Pre&lt;/h2&gt;
+&lt;p&gt;給一個方矩陣問是否為對稱矩陣。&lt;/p&gt;</description></item><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h2 id="pre"&gt;Pre&lt;/h2&gt;
 &lt;p&gt;題目提供以下資料結構與函式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
@@ -3470,7 +3470,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;時間複雜度 $O(n)$&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</guid><description>&lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;時間複雜度 $O(n)$&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E6%9C%AB%E6%A9%9F%E6%B8%AC/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E6%9C%AB%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-1"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-2"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="我看起來像標準答案嗎"&gt;我看起來像標準答案嗎&lt;/h1&gt;
@@ -3745,7 +3745,7 @@ RHOST: 10.129.11.184
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pa-10"&gt;pA (10%)&lt;/h2&gt;
-&lt;p&gt;實作&lt;code&gt;bool CheckBarCodeFormatOK( Str30 barCode )&lt;/code&gt; function，如果barCode符合條碼格式則回傳true，反則false。&lt;/p&gt;</description></item><item><title>【普物】 Schrodinger Equation Derivation</title><link>https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/schrodinger_equation_derivation/</guid><description>&lt;h1 id="薛丁格方程"&gt;薛丁格方程&lt;/h1&gt;
+&lt;p&gt;實作&lt;code&gt;bool CheckBarCodeFormatOK( Str30 barCode )&lt;/code&gt; function，如果barCode符合條碼格式則回傳true，反則false。&lt;/p&gt;</description></item><item><title>【普物】 Schrodinger Equation Derivation</title><link>https://ja-errorpro.codes/posts/2023/%E6%99%AE%E7%89%A9-schrodinger-equation-derivation/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E6%99%AE%E7%89%A9-schrodinger-equation-derivation/</guid><description>&lt;h1 id="薛丁格方程"&gt;薛丁格方程&lt;/h1&gt;
 &lt;p&gt;試著找到一方程式描述能量與波函數的關係。&lt;/p&gt;
 &lt;h2 id="波函數"&gt;波函數&lt;/h2&gt;
 &lt;p&gt;已知波函數應形如
@@ -3758,7 +3758,7 @@ $$ \frac{\partial \psi}{\partial x} = i k A e^{i(kx-\omega t)} = i k \psi $$&lt;
 &lt;p&gt;對位置的二次微分，則有
 $$ \frac{\partial^2 \psi}{\partial x^2} = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;
 &lt;p&gt;寫成三維空間形式為
-$$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</description></item><item><title>SQL 基本語法(sqlite3 in python)</title><link>https://ja-errorpro.codes/posts/2022/sql_basic/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/sql_basic/</guid><description>&lt;h1 id="環境"&gt;環境&lt;/h1&gt;
+$$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</description></item><item><title>SQL 基本語法(sqlite3 in python)</title><link>https://ja-errorpro.codes/posts/2022/sql-%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95sqlite3-in-python/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/sql-%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95sqlite3-in-python/</guid><description>&lt;h1 id="環境"&gt;環境&lt;/h1&gt;
 &lt;p&gt;市面上有很多家 SQL，在效能、安全性、功能、語法上有些微差異，常見的有：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SQLite&lt;/li&gt;
@@ -3818,7 +3818,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在 SQLite 中，資料類型有以下幾種：&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable3_installation/</guid><description>&lt;h2 id="需求"&gt;需求&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;在 SQLite 中，資料類型有以下幾種：&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable3 環境建置(Windows VMware)</title><link>https://ja-errorpro.codes/posts/2022/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable3-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AEwindows-vmware/</link><pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable3-%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AEwindows-vmware/</guid><description>&lt;h2 id="需求"&gt;需求&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows 10 up&lt;/li&gt;
 &lt;li&gt;VMware Workstation Pro&lt;/li&gt;
@@ -3846,7 +3846,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;等待一段時間，完成後可以在&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;C:\Users\{username}\.vagrant.d\boxes\xxx\yyy\vmware_desktop\&lt;/code&gt; 下看到 box 檔案。&lt;/p&gt;
-&lt;p&gt;將 vmware_desktop 資料夾複製到適當的地方，接著打開 VMWare，在 Library 下按右鍵點選 Scan for Virtual Machines，選擇剛剛複製的資料夾，就可以使用 Metasploitable3 了。&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/metasploitable2_vsftpd/</guid><description>&lt;h2 id="先備知識"&gt;先備知識&lt;/h2&gt;
+&lt;p&gt;將 vmware_desktop 資料夾複製到適當的地方，接著打開 VMWare，在 Library 下按右鍵點選 Scan for Virtual Machines，選擇剛剛複製的資料夾，就可以使用 Metasploitable3 了。&lt;/p&gt;</description></item><item><title>【資訊安全】Metasploitable2 滲透測試實作(筆記)</title><link>https://ja-errorpro.codes/posts/2022/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable2-%E6%BB%B2%E9%80%8F%E6%B8%AC%E8%A9%A6%E5%AF%A6%E4%BD%9C%E7%AD%86%E8%A8%98/</link><pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8metasploitable2-%E6%BB%B2%E9%80%8F%E6%B8%AC%E8%A9%A6%E5%AF%A6%E4%BD%9C%E7%AD%86%E8%A8%98/</guid><description>&lt;h2 id="先備知識"&gt;先備知識&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;知道如何使用 VMware 或 VirtualBox&lt;/li&gt;
 &lt;li&gt;Kali Linux 基本操作&lt;/li&gt;
@@ -3901,7 +3901,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;msf6 exploit&lt;span style="color:#ff79c6"&gt;(&lt;/span&gt;unix/ftp/vsftpd_234_backdoor&lt;span style="color:#ff79c6"&gt;)&lt;/span&gt; &amp;gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;set&lt;/span&gt; RHOSTS 192.168.235.130
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_exploit.png" alt="use exploit"&gt;&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</guid><description>&lt;h1 id="本人已放棄思考"&gt;(本人已放棄思考)&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/metasploitable2/kali_linux_msf_exploit.png" alt="use exploit"&gt;&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h1 id="本人已放棄思考"&gt;(本人已放棄思考)&lt;/h1&gt;
 &lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-1"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-2"&gt;答案僅供參考&lt;/h1&gt;
@@ -3962,7 +3962,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pc"&gt;pC&lt;/h2&gt;
-&lt;p&gt;實作&lt;code&gt;MonotonicSeries()&lt;/code&gt; function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。&lt;/p&gt;</description></item><item><title>【Git】Git分支的打開方式</title><link>https://ja-errorpro.codes/posts/2022/git_branch/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/git_branch/</guid><description>&lt;p&gt;當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。&lt;/p&gt;
+&lt;p&gt;實作&lt;code&gt;MonotonicSeries()&lt;/code&gt; function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。&lt;/p&gt;</description></item><item><title>【Git】Git分支的打開方式</title><link>https://ja-errorpro.codes/posts/2022/gitgit%E5%88%86%E6%94%AF%E7%9A%84%E6%89%93%E9%96%8B%E6%96%B9%E5%BC%8F/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gitgit%E5%88%86%E6%94%AF%E7%9A%84%E6%89%93%E9%96%8B%E6%96%B9%E5%BC%8F/</guid><description>&lt;p&gt;當一個專案有許多人一起開發時，不能隨便commit，因此當需要增加功能、修正bug時可以開一個分支來進行，確認沒問題後再合併，就不會影響主要的生產線。&lt;/p&gt;
 &lt;h2 id="初始化local-repo"&gt;初始化Local Repo&lt;/h2&gt;
 &lt;p&gt;詳見 &lt;a href="https://ja-errorpro.codes/posts/2022/git_initial/"&gt;上一篇文章&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="查看現在有哪些分支"&gt;查看現在有哪些分支&lt;/h2&gt;
@@ -4020,7 +4020,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ git branch -d main &lt;span style="color:#6272a4"&gt;# 刪除main分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;這時候可能會看到 &lt;code&gt;error: The branch 'main' is not fully merged&lt;/code&gt;，因為main還沒被合併，不給刪除&lt;/p&gt;</description></item><item><title>【Git】Git初始設定與環境</title><link>https://ja-errorpro.codes/posts/2022/git_initial/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/git_initial/</guid><description>&lt;h2 id="what-is-git"&gt;What is Git?&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;這時候可能會看到 &lt;code&gt;error: The branch 'main' is not fully merged&lt;/code&gt;，因為main還沒被合併，不給刪除&lt;/p&gt;</description></item><item><title>【Git】Git初始設定與環境</title><link>https://ja-errorpro.codes/posts/2022/gitgit%E5%88%9D%E5%A7%8B%E8%A8%AD%E5%AE%9A%E8%88%87%E7%92%B0%E5%A2%83/</link><pubDate>Thu, 27 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gitgit%E5%88%9D%E5%A7%8B%E8%A8%AD%E5%AE%9A%E8%88%87%E7%92%B0%E5%A2%83/</guid><description>&lt;h2 id="what-is-git"&gt;What is Git?&lt;/h2&gt;
 &lt;p&gt;能夠紀錄更新歷史紀錄，進行復原(Rollback)、比較、合併(Merge)等等的分散式版本控制系統。
 讓開發者(群)能夠更好管理專案。&lt;/p&gt;
 &lt;h2 id="分散式與中央式版控系統"&gt;分散式與中央式版控系統&lt;/h2&gt;
@@ -4069,7 +4069,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="建立全新的repo"&gt;建立全新的Repo&lt;/h2&gt;
-&lt;p&gt;我們一步一步慢慢來，先在家目錄建立一個空的資料夾&lt;/p&gt;</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discordpy2_and_interactions/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi"&gt;Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1&gt;
+&lt;p&gt;我們一步一步慢慢來，先在家目錄建立一個空的資料夾&lt;/p&gt;</description></item><item><title>【Discord 聊天機器人】 - Discord interactions.py 介紹與開始</title><link>https://ja-errorpro.codes/posts/2022/discord-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA-discord-interactions.py-%E4%BB%8B%E7%B4%B9%E8%88%87%E9%96%8B%E5%A7%8B/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/discord-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA-discord-interactions.py-%E4%BB%8B%E7%B4%B9%E8%88%87%E9%96%8B%E5%A7%8B/</guid><description>&lt;h1 id="why-discord-py-interactions以下簡稱-dcpi"&gt;Why discord-py-interactions(以下簡稱 dcpi)?&lt;/h1&gt;
 &lt;p&gt;支援更多操作如斜線指令、按鈕、選單，且簡單易懂&lt;/p&gt;
 &lt;h1 id="簡介"&gt;簡介&lt;/h1&gt;
 &lt;p&gt;經過大量搜尋資料，發現dcpi的介紹特別少，
@@ -4121,7 +4121,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bot&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;start()
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;接著執行它&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_picoctf_file_run2/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;接著執行它&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】PicoCTF-file-run2</title><link>https://ja-errorpro.codes/posts/2022/ctf-writeuppicoctf-file-run2/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf-writeuppicoctf-file-run2/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;給你一個檔案，執行它時輸入&amp;quot;Hello!&amp;quot;(不含引號)。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="概念"&gt;概念：&lt;/h1&gt;
@@ -4174,7 +4174,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;然而在執行時卻出現權限不足的訊息。&lt;/p&gt;</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb/</guid><description>&lt;h1 id="what-is-gdb"&gt;What is GDB?&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;然而在執行時卻出現權限不足的訊息。&lt;/p&gt;</description></item><item><title>gdb 除錯工具學習</title><link>https://ja-errorpro.codes/posts/2022/gdb-%E9%99%A4%E9%8C%AF%E5%B7%A5%E5%85%B7%E5%AD%B8%E7%BF%92/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/gdb-%E9%99%A4%E9%8C%AF%E5%B7%A5%E5%85%B7%E5%AD%B8%E7%BF%92/</guid><description>&lt;h1 id="what-is-gdb"&gt;What is GDB?&lt;/h1&gt;
 &lt;p&gt;gdb全名為gnu debugger，是一種動態Debug的工具。&lt;/p&gt;
 &lt;h1 id="使用"&gt;使用&lt;/h1&gt;
 &lt;p&gt;我們可以先寫一個簡易的Hello World，並宣告一些變數&lt;/p&gt;
@@ -4292,7 +4292,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
  &lt;td&gt;執行上一條指令&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim_simple_tutorial/</guid><description>&lt;h2 id="簡介"&gt;簡介&lt;/h2&gt;
+&lt;/table&gt;</description></item><item><title>Vim 極簡教學</title><link>https://ja-errorpro.codes/posts/2022/vim-%E6%A5%B5%E7%B0%A1%E6%95%99%E5%AD%B8/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vim-%E6%A5%B5%E7%B0%A1%E6%95%99%E5%AD%B8/</guid><description>&lt;h2 id="簡介"&gt;簡介&lt;/h2&gt;
 &lt;p&gt;Vim是一種開源的編輯器，是Vi的進化版，由於操作方便，有許多人很愛用，是作為Linux OS主要的編輯器之一。&lt;/p&gt;
 &lt;h2 id="起步"&gt;起步&lt;/h2&gt;
 &lt;p&gt;若要使用vim編輯檔案，請在命令列中輸入 &lt;code&gt;vim xxx.yyy&lt;/code&gt;，如果xxx.yyy存在就會直接進入普通模式並可瀏覽檔案；&lt;/p&gt;
@@ -4319,7 +4319,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;p&gt;在普通模式按下 &lt;code&gt;i(Insert), o(Open), a(Append)&lt;/code&gt; 等鍵就會進入編輯模式，此時可以看到視窗最下方出現 &lt;code&gt;-- INSERT --&lt;/code&gt;，即可對檔案編輯&lt;/p&gt;
 &lt;p&gt;按下 &lt;code&gt;Esc&lt;/code&gt; 即可回到普通模式，此時 &lt;code&gt;-- INSERT --&lt;/code&gt; 會消失&lt;/p&gt;
 &lt;h3 id="視覺選取模式"&gt;視覺(選取)模式&lt;/h3&gt;
-&lt;p&gt;在普通模式按下 &lt;code&gt;v&lt;/code&gt; 即可進入視覺模式，此時可以看到視窗最下方出現 &lt;code&gt;-- VISUAL --&lt;/code&gt;，可以使用方向鍵選取文字，並使用 &lt;code&gt;w&lt;/code&gt; 選取下一個單字的開頭或 &lt;code&gt;$&lt;/code&gt; 選取後面整行。&lt;/p&gt;</description></item><item><title>VSCode設定C++教學(Code Runner)</title><link>https://ja-errorpro.codes/posts/2022/vscode_cpp_setup/</link><pubDate>Sun, 11 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vscode_cpp_setup/</guid><description>&lt;p&gt;遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。&lt;/p&gt;
+&lt;p&gt;在普通模式按下 &lt;code&gt;v&lt;/code&gt; 即可進入視覺模式，此時可以看到視窗最下方出現 &lt;code&gt;-- VISUAL --&lt;/code&gt;，可以使用方向鍵選取文字，並使用 &lt;code&gt;w&lt;/code&gt; 選取下一個單字的開頭或 &lt;code&gt;$&lt;/code&gt; 選取後面整行。&lt;/p&gt;</description></item><item><title>VSCode設定C++教學(Code Runner)</title><link>https://ja-errorpro.codes/posts/2022/vscode%E8%A8%AD%E5%AE%9Ac-%E6%95%99%E5%AD%B8code-runner/</link><pubDate>Sun, 11 Sep 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/vscode%E8%A8%AD%E5%AE%9Ac-%E6%95%99%E5%AD%B8code-runner/</guid><description>&lt;p&gt;遇到很多來問我VSC怎麼設定C/C++的問題，這裡直接寫篇文來說明我的作法。&lt;/p&gt;
 &lt;h2 id="前置"&gt;前置&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;環境(以撰寫此篇文時的環境為主)： Windows 11(64 bit) 22H2&lt;/li&gt;
@@ -4364,7 +4364,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt;&amp;#34;C_Cpp.default.compilerPath&amp;#34;&lt;/span&gt;: &lt;span style="color:#f1fa8c"&gt;&amp;#34;&amp;lt;編譯器路徑/bin/g++.exe&amp;gt;&amp;#34;&lt;/span&gt;, &lt;span style="color:#6272a4"&gt;// 請修改成g++.exe的路徑
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;完成後存檔&lt;/p&gt;</description></item><item><title>大學面試心得</title><link>https://ja-errorpro.codes/posts/2022/college_interview/</link><pubDate>Fri, 20 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/college_interview/</guid><description>&lt;h2 id="申請入學新課綱第一屆白老鼠"&gt;申請入學(新課綱第一屆白老鼠)&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;完成後存檔&lt;/p&gt;</description></item><item><title>大學面試心得</title><link>https://ja-errorpro.codes/posts/2022/%E5%A4%A7%E5%AD%B8%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97/</link><pubDate>Fri, 20 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E5%A4%A7%E5%AD%B8%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97/</guid><description>&lt;h2 id="申請入學新課綱第一屆白老鼠"&gt;申請入學(新課綱第一屆白老鼠)&lt;/h2&gt;
 &lt;p&gt;身為2003/9月出生的我，變成教育部爆改課綱的頭一批白老鼠orz&amp;hellip;，可謂生於SARS，死於武漢！&lt;/p&gt;
 &lt;p&gt;以為今年數學會比110簡單，結果更難😠，我的學測直接燒到只剩43級分。&lt;/p&gt;
 &lt;p&gt;聽到這成績後我還是硬著頭皮把六個志願全都填電資/資工，&lt;/p&gt;
@@ -4402,7 +4402,7 @@ $$ \nabla^2 \psi = -k^2 A e^{i(kx-\omega t)} = -k^2 \psi $$&lt;/p&gt;</descripti
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/college_interview/back.png" alt="封面"&gt;&lt;/p&gt;
 &lt;p&gt;^當事封面&lt;/p&gt;
 &lt;p&gt;P: 你還有報哪些科系，如果都上會選哪間&lt;/p&gt;
-&lt;p&gt;我回答比較保守，把每間優點都講出來後說再考慮&lt;/p&gt;</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>https://ja-errorpro.codes/posts/2022/tioj1903/</link><pubDate>Fri, 13 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/tioj1903/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;我回答比較保守，把每間優點都講出來後說再考慮&lt;/p&gt;</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>https://ja-errorpro.codes/posts/2022/tioj1903-%E4%BD%A0%E7%9A%84%E7%AC%91%E5%AE%B9%E7%94%B1%E6%88%91%E4%BE%86%E5%AE%88%E8%AD%B7-extreme/</link><pubDate>Fri, 13 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/tioj1903-%E4%BD%A0%E7%9A%84%E7%AC%91%E5%AE%B9%E7%94%B1%E6%88%91%E4%BE%86%E5%AE%88%E8%AD%B7-extreme/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;給一張$N$個點的無向圖，一開始有$M$條邊。
 接著$Q$個操作，有以下兩種：&lt;/p&gt;
 &lt;ul&gt;
@@ -4446,7 +4446,7 @@ D 2 1
 2
 3
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id="題解"&gt;題解：&lt;/h1&gt;
-&lt;p&gt;動態維護連通塊數量可以使用並查集(DSU)，但多了刪除的操作。&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf_easyctf_adder/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
+&lt;p&gt;動態維護連通塊數量可以使用並查集(DSU)，但多了刪除的操作。&lt;/p&gt;</description></item><item><title>【CTF-WriteUp】EasyCTF-adder</title><link>https://ja-errorpro.codes/posts/2022/ctf-writeupeasyctf-adder/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/ctf-writeupeasyctf-adder/</guid><description>&lt;p&gt;題目：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;給你一個加法程式，找出Flag
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="https://ja-errorpro.codes/file/adder"&gt;adder&lt;/a&gt;&lt;/p&gt;
@@ -4459,9 +4459,9 @@ D 2 1
 &lt;p&gt;開啟反編譯工具Ghidra對檔案反編譯，發現在main函式中的flag前綴，&lt;/p&gt;
 &lt;p&gt;而只要讓該行上面的if條件成立應該就能得到flag，顯然我們只要輸入三個數讓他加起來等於 0x539 即可。&lt;/p&gt;
 &lt;p&gt;透過簡單的進位換算，得$539_{16}\ =\ 1337_{10}$&lt;/p&gt;
-&lt;p&gt;開啟程式輸入1337 0 0 就可以拿到flag了~&lt;/p&gt;</description></item><item><title>網站搬家~</title><link>https://ja-errorpro.codes/posts/2022/newborn/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/newborn/</guid><description>&lt;h1 id="我把網站從jekyll改到hugo了"&gt;我把網站從Jekyll改到Hugo了&lt;/h1&gt;
+&lt;p&gt;開啟程式輸入1337 0 0 就可以拿到flag了~&lt;/p&gt;</description></item><item><title>網站搬家~</title><link>https://ja-errorpro.codes/posts/2022/%E7%B6%B2%E7%AB%99%E6%90%AC%E5%AE%B6~/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E7%B6%B2%E7%AB%99%E6%90%AC%E5%AE%B6~/</guid><description>&lt;h1 id="我把網站從jekyll改到hugo了"&gt;我把網站從Jekyll改到Hugo了&lt;/h1&gt;
 &lt;p&gt;因為111學測已經很久沒更新了，今天終於把網站搬遷成功，整個網站比以前看起來更舒服~&lt;/p&gt;
-&lt;p&gt;Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~&lt;/p&gt;</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>https://ja-errorpro.codes/posts/2022/codeserver/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/codeserver/</guid><description>&lt;p&gt;最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~&lt;/p&gt;
+&lt;p&gt;Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~&lt;/p&gt;</description></item><item><title>自架CodeServer，實現隨時隨地都能寫程式</title><link>https://ja-errorpro.codes/posts/2022/%E8%87%AA%E6%9E%B6codeserver%E5%AF%A6%E7%8F%BE%E9%9A%A8%E6%99%82%E9%9A%A8%E5%9C%B0%E9%83%BD%E8%83%BD%E5%AF%AB%E7%A8%8B%E5%BC%8F/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E8%87%AA%E6%9E%B6codeserver%E5%AF%A6%E7%8F%BE%E9%9A%A8%E6%99%82%E9%9A%A8%E5%9C%B0%E9%83%BD%E8%83%BD%E5%AF%AB%E7%A8%8B%E5%BC%8F/</guid><description>&lt;p&gt;最近架了一台CodeServer，那是一個具有VSCode的伺服器平台，要他支援什麼語言照著一般設定VSC2方式就行~&lt;/p&gt;
 &lt;h1 id="先備條件"&gt;先備條件：&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;會用Windows跟Ubuntu&lt;/li&gt;
@@ -4517,7 +4517,7 @@ D 2 1
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;restart&lt;/span&gt;: always
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;(1) version: 不用動他&lt;/p&gt;</description></item><item><title>區間詢問比K小的數量</title><link>https://ja-errorpro.codes/posts/2021/mergesorttree/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mergesorttree/</guid><description>&lt;p&gt;今天是資訊能競校內初選，沒把經典題做出來真的很可惜。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;(1) version: 不用動他&lt;/p&gt;</description></item><item><title>區間詢問比K小的數量</title><link>https://ja-errorpro.codes/posts/2021/%E5%8D%80%E9%96%93%E8%A9%A2%E5%95%8F%E6%AF%94k%E5%B0%8F%E7%9A%84%E6%95%B8%E9%87%8F/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/%E5%8D%80%E9%96%93%E8%A9%A2%E5%95%8F%E6%AF%94k%E5%B0%8F%E7%9A%84%E6%95%B8%E9%87%8F/</guid><description>&lt;p&gt;今天是資訊能競校內初選，沒把經典題做出來真的很可惜。&lt;/p&gt;
 &lt;p&gt;所以來刻點線段樹緩下心情(?&lt;/p&gt;
 &lt;p&gt;順便測試一下在網站中使用 $ \LaTeX $&lt;/p&gt;
 &lt;h1 id="先要基礎"&gt;先要基礎：&lt;/h1&gt;
@@ -4556,7 +4556,7 @@ D 2 1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id="note"&gt;Note:&lt;/h4&gt;
 &lt;p&gt;第一個詢問區間 $[1,10]，k=6$，其中比k小的元素有:$ {5,2,1,4,3} $，共$5$個。&lt;br&gt;
-第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。&lt;/p&gt;</description></item><item><title>103年彰雲嘉P5 - Infix to Postfix</title><link>https://ja-errorpro.codes/posts/2021/mtwcp103_5/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp103_5/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+第二個詢問區間 $[4,8]，k=7$，其中比k小的元素有:$ {4} $，只有$1$個。&lt;/p&gt;</description></item><item><title>103年彰雲嘉P5 - Infix to Postfix</title><link>https://ja-errorpro.codes/posts/2021/103%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p5-infix-to-postfix/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/103%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p5-infix-to-postfix/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;一般我們在表示運算式時，是使用中序式，是將運算子放在兩運算元中間， 
 比如 (A+B)*(C+D)。而在電腦中，需要將中序式轉成後序式以方便運算。 
 
@@ -4760,9 +4760,46 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;︽&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description></item><item><title>107年彰雲嘉p3 - GCD &amp; LCM</title><link>https://ja-errorpro.codes/posts/2021/mtwcp107_3/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp107_3/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;&lt;style&gt;
+
+.back-to-top {
+
+display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+
+position: fixed; /* 位置是固定的 */
+
+bottom: 20px; /* 顯示在頁面底部 */
+
+right: 30px; /* 顯示在頁面的右邊 */
+
+z-index: 99; /* 確保不被其他功能覆蓋 */
+
+border: 1px solid #5cb85c; /* 顯示邊框 */
+
+outline: none; /* 不顯示外框 */
+
+background-color: #fff; /* 設置背景背景顏色 */
+
+color: #5cb85c; /* 設置文本顏色 */
+
+cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+
+padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
+
+border-radius: 10px; /* 增加圓角 */
+
+}
+
+.back-to-top:hover {
+
+background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
+
+color: #fff;
+
+}
+
+&lt;/style&gt;
+&lt;p&gt;&lt;button class="js-back-to-top back-to-top" title="回到頭部"&gt;︽&lt;/button&gt;&lt;/p&gt;</description></item><item><title>107年彰雲嘉p3 - GCD &amp; LCM</title><link>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p3-gcd-lcm/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p3-gcd-lcm/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;給你一堆數字(&amp;gt;=0)，求他們的GCD(最大公因數)與LCM(最小公倍數)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="輸入"&gt;輸入：&lt;/h1&gt;
@@ -4794,7 +4831,7 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 可以根據歐幾里得算法 gcd(a,b-a) = gcd(a,b mod a), gcd(a,0) = |a| 	&lt;br&gt;
 (輾轉相除)來求GCD，	 &lt;br&gt;
 那LCM要怎麼求？我們知道 a | (a*b) 且 b | (a*b) (a*b必為ab公倍數)	&lt;br&gt;
-如果要得到最小公倍數，只要除以gcd(a,b)就行。&lt;/p&gt;</description></item><item><title>107年彰雲嘉P6 - 統一發票對獎程式</title><link>https://ja-errorpro.codes/posts/2021/mtwcp107_6/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp107_6/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+如果要得到最小公倍數，只要除以gcd(a,b)就行。&lt;/p&gt;</description></item><item><title>107年彰雲嘉P6 - 統一發票對獎程式</title><link>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p6-%E7%B5%B1%E4%B8%80%E7%99%BC%E7%A5%A8%E5%B0%8D%E7%8D%8E%E7%A8%8B%E5%BC%8F/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p6-%E7%B5%B1%E4%B8%80%E7%99%BC%E7%A5%A8%E5%B0%8D%E7%8D%8E%E7%A8%8B%E5%BC%8F/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/6_1.png" alt="1"&gt;&lt;/p&gt;
 &lt;h4 id="ex-1-input"&gt;Ex 1 Input:&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;73372972
@@ -4964,9 +5001,46 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;︽&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description></item><item><title>108年彰雲嘉上午P5 - 魔術三角形</title><link>https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;&lt;style&gt;
+
+.back-to-top {
+
+display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+
+position: fixed; /* 位置是固定的 */
+
+bottom: 20px; /* 顯示在頁面底部 */
+
+right: 30px; /* 顯示在頁面的右邊 */
+
+z-index: 99; /* 確保不被其他功能覆蓋 */
+
+border: 1px solid #5cb85c; /* 顯示邊框 */
+
+outline: none; /* 不顯示外框 */
+
+background-color: #fff; /* 設置背景背景顏色 */
+
+color: #5cb85c; /* 設置文本顏色 */
+
+cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+
+padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
+
+border-radius: 10px; /* 增加圓角 */
+
+}
+
+.back-to-top:hover {
+
+background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
+
+color: #fff;
+
+}
+
+&lt;/style&gt;
+&lt;p&gt;&lt;button class="js-back-to-top back-to-top" title="回到頭部"&gt;︽&lt;/button&gt;&lt;/p&gt;</description></item><item><title>108年彰雲嘉上午P5 - 魔術三角形</title><link>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p5-%E9%AD%94%E8%A1%93%E4%B8%89%E8%A7%92%E5%BD%A2/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p5-%E9%AD%94%E8%A1%93%E4%B8%89%E8%A7%92%E5%BD%A2/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;魔術三角形是一個由1到9的數字所形成之三角形， 
 每邊由4個數字組成，邊與邊之間會有1個數字共用，而且每個邊 
 4個數字相加之總和是一樣的，舉例來說，下圖是一個魔術三角形，三個邊的數字和均為19。 
@@ -5156,7 +5230,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>108年彰雲嘉上午P6 - Knight Moves</title><link>https://ja-errorpro.codes/posts/2021/mtwcp108_1_6/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp108_1_6/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>108年彰雲嘉上午P6 - Knight Moves</title><link>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p6-knight-moves/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p6-knight-moves/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;西洋棋騎士/象棋的馬每步可以沿日字對角走到另一對角， 
 現在有一個X*Y的棋盤，左下角座標(0,0)，右下為(X-1,0) 
 棋子的起始點為(a,b)，請求出走到(c,d)的最小步數。
@@ -5360,7 +5434,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>108年彰雲嘉下午P10 - Huffman</title><link>https://ja-errorpro.codes/posts/2021/mtwcp108_2_10/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp108_2_10/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>108年彰雲嘉下午P10 - Huffman</title><link>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8B%E5%8D%88p10-huffman/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8B%E5%8D%88p10-huffman/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Huffman ： &lt;a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81"&gt;維基百科&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下：
 	(1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。
@@ -5403,7 +5477,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;40 5 87%
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="題解"&gt;題解：&lt;/h1&gt;
-&lt;p&gt;題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。&lt;/p&gt;</description></item><item><title>Farmbot歷程</title><link>https://ja-errorpro.codes/posts/2021/farmbot/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/farmbot/</guid><description>&lt;p style="text-align:center"&gt;Farmbot&lt;/p&gt;
+&lt;p&gt;題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。&lt;/p&gt;</description></item><item><title>Farmbot歷程</title><link>https://ja-errorpro.codes/posts/2021/farmbot%E6%AD%B7%E7%A8%8B/</link><pubDate>Thu, 11 Feb 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/farmbot%E6%AD%B7%E7%A8%8B/</guid><description>&lt;p style="text-align:center"&gt;Farmbot&lt;/p&gt;
 &lt;p&gt;(本頁面在舊版網站發布，會有不少顯示問題)&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://paper.dropbox.com/doc/FarmBot-Repair-From-Yilan-to-Yunlin-6QJa3jqN15wj766oBaWnA"&gt;FBTUG共筆資料&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="什麼是farmbot"&gt;什麼是Farmbot?&lt;/h2&gt;
@@ -5594,7 +5668,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;*佔空比:組件使用時間的估計平均百分比&lt;/p&gt;</description></item><item><title>Python遊戲設計</title><link>https://ja-errorpro.codes/posts/2021/pythongame/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/pythongame/</guid><description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;*佔空比:組件使用時間的估計平均百分比&lt;/p&gt;</description></item><item><title>Python遊戲設計</title><link>https://ja-errorpro.codes/posts/2021/python%E9%81%8A%E6%88%B2%E8%A8%AD%E8%A8%88/</link><pubDate>Mon, 11 Jan 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/python%E9%81%8A%E6%88%B2%E8%A8%AD%E8%A8%88/</guid><description>&lt;meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/&gt;
 &lt;h1 id="for-python遊戲設計"&gt;FOR Python遊戲設計&lt;/h1&gt;
 &lt;p&gt;檔案庫: &lt;a href="https://drive.google.com/drive/folders/1MlQkB7COIBu_EZDFaYExBuVVb_FxZpiW?usp=sharing"&gt;Here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python程式列表(全自寫): &lt;a href="./pythonprograms/list"&gt;LIST&lt;/a&gt;&lt;/p&gt;
@@ -5610,7 +5684,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;h2 id="第二堂"&gt;第二堂&lt;/h2&gt;
 &lt;p&gt;安裝Pycharm : &lt;a href="https://www.jetbrains.com/pycharm/"&gt;Pycharm&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Community版為開源,免費 / Professional為完整版(30天免費試用)&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;需要先安裝Python (Ver. &amp;gt;3.7),Windows:可在Microsoft市集搜尋Python / MacOS可在官網上下載 / Linux有些版本已預安裝,安裝方式: (&lt;code&gt;$ apt update &amp;amp;&amp;amp; apt install python3&lt;/code&gt;)&lt;/p&gt;
@@ -5625,7 +5699,12 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;插入模式&lt;/strong&gt;: 切換方式:在命令模式中按下i,a,o等按鍵,可在游標位置插入需要的文字&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;底線命令模式&lt;/strong&gt;: 切換方式:按下:,可輸入指令操作內容,&lt;/p&gt;
 &lt;p&gt;離開: :q&lt;/p&gt;
-&lt;p&gt;強制離開: :q!&lt;/p&gt;</description></item><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p&gt;Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p&gt;
+&lt;p&gt;強制離開: :q!&lt;/p&gt;
+&lt;p&gt;存檔不離開: :w&lt;/p&gt;
+&lt;p&gt;強制存檔不離開: :w!&lt;/p&gt;
+&lt;p&gt;存檔並離開: :wq&lt;/p&gt;
+&lt;p&gt;強制存檔並離開: :wq!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;視覺模式&lt;/strong&gt;: 切換方式:按下v , 方便用於閱讀和強調&lt;/p&gt;</description></item><item><title>【計算機網路】CH1 作業</title><link>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/ComputerNetworking/Ch1_Homework/</guid><description>&lt;p&gt;Reference: Computer Networking: A Top-Down Approach, 8th Edition&lt;/p&gt;
 &lt;h1 id="此頁面中答案不保證為正確答案僅供參考"&gt;此頁面中答案不保證為正確答案，僅供參考。&lt;/h1&gt;
 &lt;h1 id="ch1-作業"&gt;CH1 作業&lt;/h1&gt;
 &lt;h2 id="review"&gt;Review&lt;/h2&gt;
@@ -7095,7 +7174,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
  theme="github-dark"
  crossorigin="anonymous"
  async
-&gt;&lt;/script&gt;</description></item><item><title>算法筆記-DP-LIS</title><link>https://ja-errorpro.codes/posts/1/algo-dp-lis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-dp-lis/</guid><description>&lt;ul&gt;
+&gt;&lt;/script&gt;</description></item><item><title>算法筆記-DP-LIS</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-dp-lis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-dp-lis/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="最長遞增子列longest-increasing-subsequence"&gt;最長遞增子列(Longest Increasing Subsequence)&lt;/h2&gt;
@@ -7200,7 +7279,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;總複雜度： $O(n^2)$&lt;/p&gt;</description></item><item><title>算法筆記-初階資料結構</title><link>https://ja-errorpro.codes/posts/1/algo-primary-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-primary-structure/</guid><description>&lt;ul&gt;
+&lt;/div&gt;&lt;p&gt;總複雜度： $O(n^2)$&lt;/p&gt;</description></item><item><title>算法筆記-初階資料結構</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%88%9D%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%88%9D%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="初階資料結構"&gt;初階資料結構&lt;/h1&gt;
@@ -7300,7 +7379,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="懶人標記"&gt;懶人標記&lt;/h3&gt;
 &lt;p&gt;如果想在[l,r]中的所有元素加值怎麼辦？
-不可能一個一個呼叫modify吧。&lt;/p&gt;</description></item><item><title>算法筆記-基本資料結構</title><link>https://ja-errorpro.codes/posts/1/algo-basic-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-basic-structure/</guid><description>&lt;ul&gt;
+不可能一個一個呼叫modify吧。&lt;/p&gt;</description></item><item><title>算法筆記-基本資料結構</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%9F%BA%E6%9C%AC%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%9F%BA%E6%9C%AC%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="基礎資料結構"&gt;基礎資料結構&lt;/h1&gt;
@@ -7339,7 +7418,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 
 -- vector.clear() 刪除所有元素 
 -- vector.swap(vector2) 交換兩個vector 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以下是一個使用vector的範例：&lt;/p&gt;</description></item><item><title>算法筆記-常數優化</title><link>https://ja-errorpro.codes/posts/1/algo-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-io/</guid><description>&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以下是一個使用vector的範例：&lt;/p&gt;</description></item><item><title>算法筆記-常數優化</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%B8%B8%E6%95%B8%E5%84%AA%E5%8C%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%B8%B8%E6%95%B8%E5%84%AA%E5%8C%96/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="編譯器優化"&gt;編譯器優化&lt;/h2&gt;
@@ -7382,7 +7461,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 絕對不要再混用。&lt;/p&gt;
 &lt;p&gt;C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 &lt;code&gt;cout &amp;lt;&amp;lt; endl&lt;/code&gt; 相當於 &lt;code&gt;cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush&lt;/code&gt;&lt;br&gt;
 也就是它順便把內存清空了，做了多餘的動作。&lt;br&gt;
-之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 &lt;del&gt;或放個 &lt;code&gt;#define endl '\n'&lt;/code&gt;&lt;/del&gt;&lt;/p&gt;</description></item><item><title>算法筆記-排序</title><link>https://ja-errorpro.codes/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-sorting/</guid><description>&lt;ul&gt;
+之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 &lt;del&gt;或放個 &lt;code&gt;#define endl '\n'&lt;/code&gt;&lt;/del&gt;&lt;/p&gt;</description></item><item><title>算法筆記-排序</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%8E%92%E5%BA%8F/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%8E%92%E5%BA%8F/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="排序"&gt;排序&lt;/h1&gt;
@@ -7418,7 +7497,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;然而氣泡排序法的時間複雜度太高了(成本太高)，如果資料達到數百萬筆就不適合使用此排序法。&lt;/p&gt;</description></item><item><title>算法筆記-數論</title><link>https://ja-errorpro.codes/posts/1/algo-number-theory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-number-theory/</guid><description>&lt;ul&gt;
+&lt;/div&gt;&lt;p&gt;然而氣泡排序法的時間複雜度太高了(成本太高)，如果資料達到數百萬筆就不適合使用此排序法。&lt;/p&gt;</description></item><item><title>算法筆記-數論</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%95%B8%E8%AB%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%95%B8%E8%AB%96/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="什麼是數論"&gt;什麼是數論&lt;/h2&gt;
@@ -7437,7 +7516,7 @@ ostream/ clog、wclog ： 標準錯誤輸出流(有緩衝)&lt;/p&gt;
 &lt;p&gt;兩式相減得 $a-b = k(s-t)$&lt;/p&gt;
 &lt;p&gt;證明結束&lt;/p&gt;
 &lt;h3 id="加乘法性質"&gt;加乘法性質&lt;/h3&gt;
-&lt;p&gt;如果 $a \equiv b \pmod n $, $c \equiv d \pmod n $&lt;/p&gt;</description></item><item><title>算法筆記-時間複雜度概述</title><link>https://ja-errorpro.codes/posts/1/algo-runtime/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-runtime/</guid><description>&lt;ul&gt;
+&lt;p&gt;如果 $a \equiv b \pmod n $, $c \equiv d \pmod n $&lt;/p&gt;</description></item><item><title>算法筆記-時間複雜度概述</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6%E6%A6%82%E8%BF%B0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6%E6%A6%82%E8%BF%B0/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;時間複雜度在競程中是個非常重要且最基本的工具，&lt;br&gt;
@@ -7463,7 +7542,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。&lt;/p&gt;
 &lt;p&gt;&amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。&lt;br&gt;
 即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$&lt;/p&gt;
-&lt;p&gt;&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。&lt;/p&gt;</description></item><item><title>算法筆記-枚舉與搜尋</title><link>https://ja-errorpro.codes/posts/1/algo-enum-and-searching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-enum-and-searching/</guid><description>&lt;ul&gt;
+&lt;p&gt;&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。&lt;/p&gt;</description></item><item><title>算法筆記-枚舉與搜尋</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%9E%9A%E8%88%89%E8%88%87%E6%90%9C%E5%B0%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%9E%9A%E8%88%89%E8%88%87%E6%90%9C%E5%B0%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="枚舉與搜尋"&gt;枚舉與搜尋&lt;/h1&gt;
@@ -7503,7 +7582,7 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/algo-number-theory/"&gt;數論&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/algo-primary-structure/"&gt;初階資料結構&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/algo-greedy/"&gt;貪心&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>算法筆記-群論</title><link>https://ja-errorpro.codes/posts/1/algo-group-theory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-group-theory/</guid><description>&lt;ul&gt;
+&lt;/ul&gt;</description></item><item><title>算法筆記-群論</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E7%BE%A4%E8%AB%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E7%BE%A4%E8%AB%96/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="群"&gt;群&lt;/h2&gt;
@@ -7540,13 +7619,13 @@ $$&lt;/p&gt;
 &lt;p&gt;加法的逆元是負號，乘法的逆元是倒數。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果 $G$ 中存在一個元素 $g$ 使得對 $G$ 中的任意元素 $a$ 都有 $a = g^n $，則稱 $(G,\cdot)$ 為循環群，也說 $G$ 由 $g$ 生成、$g$ 是 $G$ 的生成元，記作 $G = \langle g \rangle$，其中 $\langle g \rangle$ 稱為 $g$ 的生成集合(Span)。&lt;/p&gt;</description></item><item><title>算法筆記-貪心</title><link>https://ja-errorpro.codes/posts/1/algo-greedy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-greedy/</guid><description>&lt;ul&gt;
+&lt;p&gt;如果 $G$ 中存在一個元素 $g$ 使得對 $G$ 中的任意元素 $a$ 都有 $a = g^n $，則稱 $(G,\cdot)$ 為循環群，也說 $G$ 由 $g$ 生成、$g$ 是 $G$ 的生成元，記作 $G = \langle g \rangle$，其中 $\langle g \rangle$ 稱為 $g$ 的生成集合(Span)。&lt;/p&gt;</description></item><item><title>算法筆記-貪心</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E8%B2%AA%E5%BF%83/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E8%B2%AA%E5%BF%83/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="貪心"&gt;貪心&lt;/h2&gt;
 &lt;p&gt;貪心就是在每一步都選擇當下看起來最好的選擇，直到結束。&lt;/p&gt;
 &lt;p&gt;經典題如：換錢問題、排程問題都是貪心的典型題目。&lt;/p&gt;
-&lt;p&gt;在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。&lt;/p&gt;</description></item><item><title>算法筆記-進階資料結構</title><link>https://ja-errorpro.codes/posts/1/algo-advanced-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-advanced-structure/</guid><description>&lt;ul&gt;
+&lt;p&gt;在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。&lt;/p&gt;</description></item><item><title>算法筆記-進階資料結構</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="進階資料結構"&gt;進階資料結構&lt;/h1&gt;

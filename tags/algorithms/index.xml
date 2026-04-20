@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithms on ErrorPro</title><link>https://ja-errorpro.codes/tags/algorithms/</link><description>Recent content in Algorithms on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 25 May 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>【CPE】2023-05-23 紀錄</title><link>https://ja-errorpro.codes/posts/2023/cpe_20230523/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cpe_20230523/</guid><description>&lt;h1 id="cpe大學程式能力檢定"&gt;CPE(大學程式能力檢定)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithms on ErrorPro</title><link>https://ja-errorpro.codes/tags/algorithms/</link><description>Recent content in Algorithms on ErrorPro</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 25 May 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://ja-errorpro.codes/tags/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>【CPE】2023-05-23 紀錄</title><link>https://ja-errorpro.codes/posts/2023/cpe2023-05-23-%E7%B4%80%E9%8C%84/</link><pubDate>Thu, 25 May 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cpe2023-05-23-%E7%B4%80%E9%8C%84/</guid><description>&lt;h1 id="cpe大學程式能力檢定"&gt;CPE(大學程式能力檢定)&lt;/h1&gt;
 &lt;p&gt;第一次考CPE，考前沒時間準備所以基本上就是裸考。&lt;/p&gt;
 &lt;p&gt;隨便寫寫，做了4題&lt;/p&gt;
 &lt;h2 id="pa---uva11934"&gt;pA - UVA11934&lt;/h2&gt;
@@ -51,7 +51,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pb---uva11349"&gt;pB - UVA11349&lt;/h2&gt;
 &lt;h3 id="題意-1"&gt;題意：&lt;/h3&gt;
-&lt;p&gt;給一個方矩陣問是否為對稱矩陣。&lt;/p&gt;</description></item><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_1112_midterm/</guid><description>&lt;h2 id="pre"&gt;Pre&lt;/h2&gt;
+&lt;p&gt;給一個方矩陣問是否為對稱矩陣。&lt;/p&gt;</description></item><item><title>中原111資工計概下學期期中機測</title><link>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h2 id="pre"&gt;Pre&lt;/h2&gt;
 &lt;p&gt;題目提供以下資料結構與函式&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
@@ -394,7 +394,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;時間複雜度 $O(n)$&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/cycu_cal_111_finalexam/</guid><description>&lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;時間複雜度 $O(n)$&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期末機測</title><link>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E6%9C%AB%E6%A9%9F%E6%B8%AC/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2023/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E6%9C%AB%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-1"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-2"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="我看起來像標準答案嗎"&gt;我看起來像標準答案嗎&lt;/h1&gt;
@@ -669,7 +669,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pa-10"&gt;pA (10%)&lt;/h2&gt;
-&lt;p&gt;實作&lt;code&gt;bool CheckBarCodeFormatOK( Str30 barCode )&lt;/code&gt; function，如果barCode符合條碼格式則回傳true，反則false。&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/cycu_cal111_midterm/</guid><description>&lt;h1 id="本人已放棄思考"&gt;(本人已放棄思考)&lt;/h1&gt;
+&lt;p&gt;實作&lt;code&gt;bool CheckBarCodeFormatOK( Str30 barCode )&lt;/code&gt; function，如果barCode符合條碼格式則回傳true，反則false。&lt;/p&gt;</description></item><item><title>中原111資工計概上學期期中機測</title><link>https://ja-errorpro.codes/posts/2022/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/%E4%B8%AD%E5%8E%9F111%E8%B3%87%E5%B7%A5%E8%A8%88%E6%A6%82%E4%B8%8A%E5%AD%B8%E6%9C%9F%E6%9C%9F%E4%B8%AD%E6%A9%9F%E6%B8%AC/</guid><description>&lt;h1 id="本人已放棄思考"&gt;(本人已放棄思考)&lt;/h1&gt;
 &lt;h1 id="答案僅供參考"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-1"&gt;答案僅供參考&lt;/h1&gt;
 &lt;h1 id="答案僅供參考-2"&gt;答案僅供參考&lt;/h1&gt;
@@ -730,7 +730,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="pc"&gt;pC&lt;/h2&gt;
-&lt;p&gt;實作&lt;code&gt;MonotonicSeries()&lt;/code&gt; function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。&lt;/p&gt;</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>https://ja-errorpro.codes/posts/2022/tioj1903/</link><pubDate>Fri, 13 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/tioj1903/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;實作&lt;code&gt;MonotonicSeries()&lt;/code&gt; function，讀入若干個整數，直到-99999，如果數組(不含-99999)非單調遞增或遞減則回傳false，否則或如果只有一個數則回傳true。&lt;/p&gt;</description></item><item><title>【TIOJ】1903-你的笑容由我來守護-EXTREME</title><link>https://ja-errorpro.codes/posts/2022/tioj1903-%E4%BD%A0%E7%9A%84%E7%AC%91%E5%AE%B9%E7%94%B1%E6%88%91%E4%BE%86%E5%AE%88%E8%AD%B7-extreme/</link><pubDate>Fri, 13 May 2022 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2022/tioj1903-%E4%BD%A0%E7%9A%84%E7%AC%91%E5%AE%B9%E7%94%B1%E6%88%91%E4%BE%86%E5%AE%88%E8%AD%B7-extreme/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;給一張$N$個點的無向圖，一開始有$M$條邊。
 接著$Q$個操作，有以下兩種：&lt;/p&gt;
 &lt;ul&gt;
@@ -774,7 +774,7 @@ D 2 1
 2
 3
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id="題解"&gt;題解：&lt;/h1&gt;
-&lt;p&gt;動態維護連通塊數量可以使用並查集(DSU)，但多了刪除的操作。&lt;/p&gt;</description></item><item><title>103年彰雲嘉P5 - Infix to Postfix</title><link>https://ja-errorpro.codes/posts/2021/mtwcp103_5/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp103_5/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;動態維護連通塊數量可以使用並查集(DSU)，但多了刪除的操作。&lt;/p&gt;</description></item><item><title>103年彰雲嘉P5 - Infix to Postfix</title><link>https://ja-errorpro.codes/posts/2021/103%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p5-infix-to-postfix/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/103%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p5-infix-to-postfix/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;一般我們在表示運算式時，是使用中序式，是將運算子放在兩運算元中間， 
 比如 (A+B)*(C+D)。而在電腦中，需要將中序式轉成後序式以方便運算。 
 
@@ -978,9 +978,46 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;︽&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description></item><item><title>107年彰雲嘉p3 - GCD &amp; LCM</title><link>https://ja-errorpro.codes/posts/2021/mtwcp107_3/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp107_3/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;&lt;style&gt;
+
+.back-to-top {
+
+display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+
+position: fixed; /* 位置是固定的 */
+
+bottom: 20px; /* 顯示在頁面底部 */
+
+right: 30px; /* 顯示在頁面的右邊 */
+
+z-index: 99; /* 確保不被其他功能覆蓋 */
+
+border: 1px solid #5cb85c; /* 顯示邊框 */
+
+outline: none; /* 不顯示外框 */
+
+background-color: #fff; /* 設置背景背景顏色 */
+
+color: #5cb85c; /* 設置文本顏色 */
+
+cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+
+padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
+
+border-radius: 10px; /* 增加圓角 */
+
+}
+
+.back-to-top:hover {
+
+background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
+
+color: #fff;
+
+}
+
+&lt;/style&gt;
+&lt;p&gt;&lt;button class="js-back-to-top back-to-top" title="回到頭部"&gt;︽&lt;/button&gt;&lt;/p&gt;</description></item><item><title>107年彰雲嘉p3 - GCD &amp; LCM</title><link>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p3-gcd-lcm/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p3-gcd-lcm/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;給你一堆數字(&amp;gt;=0)，求他們的GCD(最大公因數)與LCM(最小公倍數)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="輸入"&gt;輸入：&lt;/h1&gt;
@@ -1012,7 +1049,7 @@ A*(B+C)-D*E+F 的後序式為 ABC+*DE*-F+ 。
 可以根據歐幾里得算法 gcd(a,b-a) = gcd(a,b mod a), gcd(a,0) = |a| 	&lt;br&gt;
 (輾轉相除)來求GCD，	 &lt;br&gt;
 那LCM要怎麼求？我們知道 a | (a*b) 且 b | (a*b) (a*b必為ab公倍數)	&lt;br&gt;
-如果要得到最小公倍數，只要除以gcd(a,b)就行。&lt;/p&gt;</description></item><item><title>107年彰雲嘉P6 - 統一發票對獎程式</title><link>https://ja-errorpro.codes/posts/2021/mtwcp107_6/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp107_6/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+如果要得到最小公倍數，只要除以gcd(a,b)就行。&lt;/p&gt;</description></item><item><title>107年彰雲嘉P6 - 統一發票對獎程式</title><link>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p6-%E7%B5%B1%E4%B8%80%E7%99%BC%E7%A5%A8%E5%B0%8D%E7%8D%8E%E7%A8%8B%E5%BC%8F/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/107%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89p6-%E7%B5%B1%E4%B8%80%E7%99%BC%E7%A5%A8%E5%B0%8D%E7%8D%8E%E7%A8%8B%E5%BC%8F/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/6_1.png" alt="1"&gt;&lt;/p&gt;
 &lt;h4 id="ex-1-input"&gt;Ex 1 Input:&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;73372972
@@ -1182,9 +1219,46 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;︽&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description></item><item><title>108年彰雲嘉上午P5 - 魔術三角形</title><link>https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp108_1_5/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;&lt;style&gt;
+
+.back-to-top {
+
+display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+
+position: fixed; /* 位置是固定的 */
+
+bottom: 20px; /* 顯示在頁面底部 */
+
+right: 30px; /* 顯示在頁面的右邊 */
+
+z-index: 99; /* 確保不被其他功能覆蓋 */
+
+border: 1px solid #5cb85c; /* 顯示邊框 */
+
+outline: none; /* 不顯示外框 */
+
+background-color: #fff; /* 設置背景背景顏色 */
+
+color: #5cb85c; /* 設置文本顏色 */
+
+cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+
+padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
+
+border-radius: 10px; /* 增加圓角 */
+
+}
+
+.back-to-top:hover {
+
+background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
+
+color: #fff;
+
+}
+
+&lt;/style&gt;
+&lt;p&gt;&lt;button class="js-back-to-top back-to-top" title="回到頭部"&gt;︽&lt;/button&gt;&lt;/p&gt;</description></item><item><title>108年彰雲嘉上午P5 - 魔術三角形</title><link>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p5-%E9%AD%94%E8%A1%93%E4%B8%89%E8%A7%92%E5%BD%A2/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p5-%E9%AD%94%E8%A1%93%E4%B8%89%E8%A7%92%E5%BD%A2/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;魔術三角形是一個由1到9的數字所形成之三角形， 
 每邊由4個數字組成，邊與邊之間會有1個數字共用，而且每個邊 
 4個數字相加之總和是一樣的，舉例來說，下圖是一個魔術三角形，三個邊的數字和均為19。 
@@ -1374,7 +1448,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>108年彰雲嘉上午P6 - Knight Moves</title><link>https://ja-errorpro.codes/posts/2021/mtwcp108_1_6/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp108_1_6/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>108年彰雲嘉上午P6 - Knight Moves</title><link>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p6-knight-moves/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8A%E5%8D%88p6-knight-moves/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;西洋棋騎士/象棋的馬每步可以沿日字對角走到另一對角， 
 現在有一個X*Y的棋盤，左下角座標(0,0)，右下為(X-1,0) 
 棋子的起始點為(a,b)，請求出走到(c,d)的最小步數。
@@ -1578,7 +1652,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>108年彰雲嘉下午P10 - Huffman</title><link>https://ja-errorpro.codes/posts/2021/mtwcp108_2_10/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/mtwcp108_2_10/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
+&lt;/div&gt;</description></item><item><title>108年彰雲嘉下午P10 - Huffman</title><link>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8B%E5%8D%88p10-huffman/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0800</pubDate><guid>https://ja-errorpro.codes/posts/2021/108%E5%B9%B4%E5%BD%B0%E9%9B%B2%E5%98%89%E4%B8%8B%E5%8D%88p10-huffman/</guid><description>&lt;h1 id="題目"&gt;&lt;strong&gt;題目：&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Huffman ： &lt;a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81"&gt;維基百科&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;霍夫曼樹經常被用來作資料壓縮，將字串資料轉成霍夫曼碼以減少字串資料所佔的空間大小，其詳細作法如下：
 	(1)字串中所有的字母元素都放在最底層的葉節點上，節點中的值為此字母的出現次數。
@@ -1621,7 +1695,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;40 5 87%
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id="題解"&gt;題解：&lt;/h1&gt;
-&lt;p&gt;題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。&lt;/p&gt;</description></item><item><title>算法筆記-DP-LIS</title><link>https://ja-errorpro.codes/posts/1/algo-dp-lis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-dp-lis/</guid><description>&lt;ul&gt;
+&lt;p&gt;題目沒說字串中大小寫是否要算成同一字母，因此先視為不同的來處理。&lt;/p&gt;</description></item><item><title>算法筆記-DP-LIS</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-dp-lis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-dp-lis/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="最長遞增子列longest-increasing-subsequence"&gt;最長遞增子列(Longest Increasing Subsequence)&lt;/h2&gt;
@@ -1726,7 +1800,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;總複雜度： $O(n^2)$&lt;/p&gt;</description></item><item><title>算法筆記-初階資料結構</title><link>https://ja-errorpro.codes/posts/1/algo-primary-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-primary-structure/</guid><description>&lt;ul&gt;
+&lt;/div&gt;&lt;p&gt;總複雜度： $O(n^2)$&lt;/p&gt;</description></item><item><title>算法筆記-初階資料結構</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%88%9D%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%88%9D%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="初階資料結構"&gt;初階資料結構&lt;/h1&gt;
@@ -1826,7 +1900,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id="懶人標記"&gt;懶人標記&lt;/h3&gt;
 &lt;p&gt;如果想在[l,r]中的所有元素加值怎麼辦？
-不可能一個一個呼叫modify吧。&lt;/p&gt;</description></item><item><title>算法筆記-基本資料結構</title><link>https://ja-errorpro.codes/posts/1/algo-basic-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-basic-structure/</guid><description>&lt;ul&gt;
+不可能一個一個呼叫modify吧。&lt;/p&gt;</description></item><item><title>算法筆記-基本資料結構</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%9F%BA%E6%9C%AC%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%9F%BA%E6%9C%AC%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="基礎資料結構"&gt;基礎資料結構&lt;/h1&gt;
@@ -1865,7 +1939,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 -- vector.erase(it,(it2)) 刪除疊代器it~it2的元素 
 -- vector.clear() 刪除所有元素 
 -- vector.swap(vector2) 交換兩個vector 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以下是一個使用vector的範例：&lt;/p&gt;</description></item><item><title>算法筆記-常數優化</title><link>https://ja-errorpro.codes/posts/1/algo-io/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-io/</guid><description>&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以下是一個使用vector的範例：&lt;/p&gt;</description></item><item><title>算法筆記-常數優化</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%B8%B8%E6%95%B8%E5%84%AA%E5%8C%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E5%B8%B8%E6%95%B8%E5%84%AA%E5%8C%96/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="編譯器優化"&gt;編譯器優化&lt;/h2&gt;
@@ -1908,7 +1982,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 絕對不要再混用。&lt;/p&gt;
 &lt;p&gt;C++的換行可以是endl或&amp;rsquo;\n&amp;rsquo;，而其實 &lt;code&gt;cout &amp;lt;&amp;lt; endl&lt;/code&gt; 相當於 &lt;code&gt;cout &amp;lt;&amp;lt; '\n' &amp;lt;&amp;lt; flush&lt;/code&gt;&lt;br&gt;
 也就是它順便把內存清空了，做了多餘的動作。&lt;br&gt;
-之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 &lt;del&gt;或放個 &lt;code&gt;#define endl '\n'&lt;/code&gt;&lt;/del&gt;&lt;/p&gt;</description></item><item><title>算法筆記-排序</title><link>https://ja-errorpro.codes/posts/1/algo-sorting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-sorting/</guid><description>&lt;ul&gt;
+之後記得要換行的話就用&amp;rsquo;\n&amp;rsquo;別再用endl了。 &lt;del&gt;或放個 &lt;code&gt;#define endl '\n'&lt;/code&gt;&lt;/del&gt;&lt;/p&gt;</description></item><item><title>算法筆記-排序</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%8E%92%E5%BA%8F/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%8E%92%E5%BA%8F/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="排序"&gt;排序&lt;/h1&gt;
@@ -1944,7 +2018,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;然而氣泡排序法的時間複雜度太高了(成本太高)，如果資料達到數百萬筆就不適合使用此排序法。&lt;/p&gt;</description></item><item><title>算法筆記-數論</title><link>https://ja-errorpro.codes/posts/1/algo-number-theory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-number-theory/</guid><description>&lt;ul&gt;
+&lt;/div&gt;&lt;p&gt;然而氣泡排序法的時間複雜度太高了(成本太高)，如果資料達到數百萬筆就不適合使用此排序法。&lt;/p&gt;</description></item><item><title>算法筆記-數論</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%95%B8%E8%AB%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%95%B8%E8%AB%96/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="什麼是數論"&gt;什麼是數論&lt;/h2&gt;
@@ -1963,7 +2037,7 @@ string直接s.size()，而int你可以透過除以1000 == 0? 判別。&lt;/p&gt;
 &lt;p&gt;兩式相減得 $a-b = k(s-t)$&lt;/p&gt;
 &lt;p&gt;證明結束&lt;/p&gt;
 &lt;h3 id="加乘法性質"&gt;加乘法性質&lt;/h3&gt;
-&lt;p&gt;如果 $a \equiv b \pmod n $, $c \equiv d \pmod n $&lt;/p&gt;</description></item><item><title>算法筆記-時間複雜度概述</title><link>https://ja-errorpro.codes/posts/1/algo-runtime/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-runtime/</guid><description>&lt;ul&gt;
+&lt;p&gt;如果 $a \equiv b \pmod n $, $c \equiv d \pmod n $&lt;/p&gt;</description></item><item><title>算法筆記-時間複雜度概述</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6%E6%A6%82%E8%BF%B0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6%E6%A6%82%E8%BF%B0/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;時間複雜度在競程中是個非常重要且最基本的工具，&lt;br&gt;
@@ -1989,7 +2063,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&amp;ndash; 1.常數倍數不計( $O(2n) = O(n) = O(3n)$ )。&lt;/p&gt;
 &lt;p&gt;&amp;ndash; 2.若將程式分成兩段複雜度為$O(f(n)),\ O(g(n))$,總複雜度就取複雜度比較大的那段。&lt;br&gt;
 即$O(f(n)+g(n)) = O(f(n)) &amp;gt; O(g(n)) ? O(f(n)) : O(g(n))$&lt;/p&gt;
-&lt;p&gt;&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。&lt;/p&gt;</description></item><item><title>算法筆記-枚舉與搜尋</title><link>https://ja-errorpro.codes/posts/1/algo-enum-and-searching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-enum-and-searching/</guid><description>&lt;ul&gt;
+&lt;p&gt;&amp;ndash; 3.若有一段程式複雜度為$O(f(n))$執行$g(n)$次，總複雜度是$O(f(n)*g(n))$。&lt;/p&gt;</description></item><item><title>算法筆記-枚舉與搜尋</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%9E%9A%E8%88%89%E8%88%87%E6%90%9C%E5%B0%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E6%9E%9A%E8%88%89%E8%88%87%E6%90%9C%E5%B0%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="枚舉與搜尋"&gt;枚舉與搜尋&lt;/h1&gt;
@@ -2029,7 +2103,7 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/algo-number-theory/"&gt;數論&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/algo-primary-structure/"&gt;初階資料結構&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/1/algo-greedy/"&gt;貪心&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>算法筆記-群論</title><link>https://ja-errorpro.codes/posts/1/algo-group-theory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-group-theory/</guid><description>&lt;ul&gt;
+&lt;/ul&gt;</description></item><item><title>算法筆記-群論</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E7%BE%A4%E8%AB%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E7%BE%A4%E8%AB%96/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="群"&gt;群&lt;/h2&gt;
@@ -2066,13 +2140,13 @@ $$&lt;/p&gt;
 &lt;p&gt;加法的逆元是負號，乘法的逆元是倒數。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果 $G$ 中存在一個元素 $g$ 使得對 $G$ 中的任意元素 $a$ 都有 $a = g^n $，則稱 $(G,\cdot)$ 為循環群，也說 $G$ 由 $g$ 生成、$g$ 是 $G$ 的生成元，記作 $G = \langle g \rangle$，其中 $\langle g \rangle$ 稱為 $g$ 的生成集合(Span)。&lt;/p&gt;</description></item><item><title>算法筆記-貪心</title><link>https://ja-errorpro.codes/posts/1/algo-greedy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-greedy/</guid><description>&lt;ul&gt;
+&lt;p&gt;如果 $G$ 中存在一個元素 $g$ 使得對 $G$ 中的任意元素 $a$ 都有 $a = g^n $，則稱 $(G,\cdot)$ 為循環群，也說 $G$ 由 $g$ 生成、$g$ 是 $G$ 的生成元，記作 $G = \langle g \rangle$，其中 $\langle g \rangle$ 稱為 $g$ 的生成集合(Span)。&lt;/p&gt;</description></item><item><title>算法筆記-貪心</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E8%B2%AA%E5%BF%83/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E8%B2%AA%E5%BF%83/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="貪心"&gt;貪心&lt;/h2&gt;
 &lt;p&gt;貪心就是在每一步都選擇當下看起來最好的選擇，直到結束。&lt;/p&gt;
 &lt;p&gt;經典題如：換錢問題、排程問題都是貪心的典型題目。&lt;/p&gt;
-&lt;p&gt;在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。&lt;/p&gt;</description></item><item><title>算法筆記-進階資料結構</title><link>https://ja-errorpro.codes/posts/1/algo-advanced-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/algo-advanced-structure/</guid><description>&lt;ul&gt;
+&lt;p&gt;在之後的圖論中如最小生成樹、最短路徑問題也都是利用貪心解。&lt;/p&gt;</description></item><item><title>算法筆記-進階資料結構</title><link>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/posts/1/%E7%AE%97%E6%B3%95%E7%AD%86%E8%A8%98-%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://ja-errorpro.codes/posts/algo-index/"&gt;算法筆記目錄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="進階資料結構"&gt;進階資料結構&lt;/h1&gt;
