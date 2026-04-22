@@ -1,4 +1,41 @@
-<script type="text/javascript" src={{ "/js/nest.js" | relURL }} count=80 color="255,255,255" opacity=0.7>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<style>
+  #vanta-bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* 避免特效擋住網頁點擊 */
+    opacity: 0.3; /* 降低特效的不透明度 */
+  }
+</style>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // 建立一個固定的全螢幕背景容器，避免針對 html 渲染時長度不夠的問題
+    const vantaContainer = document.createElement('div');
+    vantaContainer.id = 'vanta-bg';
+    document.body.prepend(vantaContainer);
+
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x44bb44,
+      backgroundColor: 0x000000,
+      backgroundAlpha: 0.0,
+      points: 12.00,
+      maxDistance: 20.00,
+      spacing: 16.00
+    })
+  })
 </script>
 
 <script type="text/javascript" src={{ "/js/focus-capture.js" | relURL }}></script>
