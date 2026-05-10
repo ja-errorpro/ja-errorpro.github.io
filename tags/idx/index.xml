@@ -3,7 +3,16 @@
 &lt;p&gt;Hugo比起Jekyll更容易客製化，可以使用更多插件，之後有空就把留言系統加一加ㄅ~~&lt;/p&gt;</description></item><item><title>About</title><link>https://ja-errorpro.codes/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/about/</guid><description>&lt;h1 id="我是誰"&gt;我是誰&lt;/h1&gt;
 &lt;p&gt;&lt;img src="https://ja-errorpro.codes/images/about/head.gif" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;黃乙家&lt;/p&gt;
-&lt;p&gt;A common student studying in &lt;a href="https://www1.cycu.edu.tw/"&gt;Chung Yuan Christian University&lt;/a&gt; Department of Information and Computer Engineering&lt;/p&gt;
+&lt;div style="border-left:3px solid #0073cf;padding:6px 14px;margin:6px 0"&gt;
+&lt;strong&gt;Bachelor of Science &amp;middot; 2022&amp;ndash;2026&lt;/strong&gt;&lt;br&gt;
+&lt;a href="https://www.cycu.edu.tw/"&gt;Chung Yuan Christian University&lt;/a&gt;&lt;br&gt;
+&lt;small&gt;Department of Information and Computer Engineering&lt;/small&gt;
+&lt;/div&gt;
+&lt;div style="border-left:3px solid #c0392b;padding:6px 14px;margin:6px 0"&gt;
+&lt;strong&gt;Master of Science &amp;middot; 2026&amp;ndash;Now&lt;/strong&gt;&lt;br&gt;
+&lt;a href="https://www.nycu.edu.tw/"&gt;National Yang Ming Chiao Tung University&lt;/a&gt;&lt;br&gt;
+&lt;small&gt;Institute of Computer Science and Engineering&lt;/small&gt;
+&lt;/div&gt;
 
 &lt;p&gt;
  Find me on 
@@ -87,65 +96,7 @@
  &lt;i class="fas fa-envelope" aria-hidden="true"&gt;&lt;/i&gt;
  &lt;/a&gt;
  . 
-&lt;/p&gt;
-
-
-&lt;hr&gt;
-&lt;h3 id="experience"&gt;Experience&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;TaiwanHolyHigh 2021&lt;/li&gt;
-&lt;li&gt;高中資訊能力競賽 2021&lt;/li&gt;
-&lt;li&gt;First Robot Competition 8176 Programmer 2021&lt;/li&gt;
-&lt;li&gt;APCSCamp 2021&lt;/li&gt;
-&lt;li&gt;IOICamp 2021&lt;/li&gt;
-&lt;li&gt;HITCON 2021 Attendee&lt;/li&gt;
-&lt;li&gt;SITCON 2021 Attendee&lt;/li&gt;
-&lt;li&gt;AIS3 EOF 2022&lt;/li&gt;
-&lt;li&gt;HITCON 2022 Attendee&lt;/li&gt;
-&lt;li&gt;SITCON 2022 Attendee&lt;/li&gt;
-&lt;li&gt;Google Developer Student Clubs 2022 Core Team &amp;amp; Speaker&lt;/li&gt;
-&lt;li&gt;Google Developer Student Clubs 2023 Core Team &amp;amp; Speaker&lt;/li&gt;
-&lt;li&gt;HITCON 2023 Attendee&lt;/li&gt;
-&lt;li&gt;COSCUP 2023 Attendee&lt;/li&gt;
-&lt;li&gt;Collegiate Programming Examination 2023 4/7&lt;/li&gt;
-&lt;li&gt;Cyber Security Competition 2023&lt;/li&gt;
-&lt;li&gt;Google CTF 2023&lt;/li&gt;
-&lt;li&gt;Google DevFest Taipei 2023 Attendee&lt;/li&gt;
-&lt;li&gt;Google CTF 2024&lt;/li&gt;
-&lt;li&gt;Cyber Security Competition 2024&lt;/li&gt;
-&lt;li&gt;MyFirstCTF 2024&lt;/li&gt;
-&lt;li&gt;AIS3 Pre-Exam 2024&lt;/li&gt;
-&lt;li&gt;AIS3 Camp 2024&lt;/li&gt;
-&lt;li&gt;HITCON 2024 Attendee&lt;/li&gt;
-&lt;li&gt;Google DevFest Taipei 2024 Attendee&lt;/li&gt;
-&lt;li&gt;Google DevFest Taoyuan 2024 Attendee&lt;/li&gt;
-&lt;li&gt;SITCON 2024 Volunteer&lt;/li&gt;
-&lt;li&gt;Google Developer Groups on Campus CYCU 2024 Organizer &amp;amp; Speaker&lt;/li&gt;
-&lt;li&gt;DEVCORE Conference 2025 Attendee&lt;/li&gt;
-&lt;li&gt;SITCON 2025 Attendee&lt;/li&gt;
-&lt;li&gt;COSCUP 2025 Attendee&lt;/li&gt;
-&lt;li&gt;HITCON 2025 Attendee&lt;/li&gt;
-&lt;li&gt;CYCU IT Department Part-time Assistant&lt;/li&gt;
-&lt;li&gt;Google Developer Groups On Campus CYCU 2025 Core Team&lt;/li&gt;
-&lt;li&gt;TeamT5 Camp 2026&lt;/li&gt;
-&lt;li&gt;Taiwan Security Club 2026 Staff&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id="i-want-to-learn"&gt;I want to learn&amp;hellip;&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://img.shields.io/badge/-C-00599c?style=flat&amp;amp;logo=C" alt="C"&gt;
-&lt;img src="https://img.shields.io/badge/C%2B%2B-00599c?logo=c%2B%2B&amp;amp;style=flat" alt="C++"&gt;
-&lt;img src="https://img.shields.io/badge/-Python-yellow?logo=Python&amp;amp;style=flat" alt="Python"&gt;
-&lt;img src="https://img.shields.io/badge/Java-ed8b00?logo=java&amp;amp;style=flat&amp;amp;logoColor=white" alt="Java"&gt;
-&lt;img src="https://img.shields.io/badge/C%23-239120?logo=c-sharp&amp;amp;style=flat" alt="C#"&gt;
-&lt;img src="https://img.shields.io/badge/GoLang-00add8?logo=Go&amp;amp;style=flat&amp;amp;logoColor=white" alt="Go"&gt;
-&lt;img src="https://img.shields.io/badge/R-2e6dc3?logo=R&amp;amp;style=flat" alt="R"&gt;
-&lt;img src="https://img.shields.io/badge/Javascript-ffb13b?logo=javascript&amp;amp;style=flat&amp;amp;logoColor=white" alt="Javascript"&gt;
-&lt;img src="https://img.shields.io/badge/Kotlin-0095d5?logo=Kotlin&amp;amp;style=flat" alt="Kotlin"&gt;
-&lt;img src="https://img.shields.io/badge/SQLite-07405E?logo=SQLite&amp;amp;style=flat" alt="SQLite"&gt;
-&lt;img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&amp;amp;logo=Docker&amp;amp;logoColor=white" alt="Docker"&gt;
-&lt;img src="https://img.shields.io/badge/Algorithms-2e6dc3?logo=TheAlgorithms&amp;amp;style=flat&amp;amp;logoColor=white" alt="Algorithms"&gt;
-&lt;img src="https://img.shields.io/badge/Data%20Structure-red?logo=Task&amp;amp;style=flat&amp;amp;logoColor=white" alt="DataStructure"&gt;
-&lt;img src="https://img.shields.io/badge/IT%20Security-154700?logo=HackClub&amp;amp;style=flat&amp;amp;logoColor=white" alt="IT Security"&gt;&lt;/p&gt;</description></item><item><title>留言區</title><link>https://ja-errorpro.codes/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/comment/</guid><description>&lt;script
+&lt;/p&gt;</description></item><item><title>留言區</title><link>https://ja-errorpro.codes/comment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ja-errorpro.codes/comment/</guid><description>&lt;script
  src="https://utteranc.es/client.js"
  repo="ja-errorpro/ja-errorpro-website-discussions"
  issue-term="pathname"
