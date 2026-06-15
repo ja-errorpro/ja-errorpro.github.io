@@ -38,7 +38,6 @@ title: "資源"
 - [APCS 大學先修程式設計能力檢定](https://apcs.csie.ntnu.edu.tw)
 - [國際資訊奧林匹克競賽](https://ioinformatics.org "https://ioinformatics.org/icons/ioi_yellow_small_v2020.png")
 - [資訊之芽](https://sprout.tw/spt/)
-- [NHDK 四校聯合初學者程式設計競賽](https://www.facebook.com/NHDK-%E5%9B%9B%E6%A0%A1%E8%81%AF%E5%90%88%E5%88%9D%E5%AD%B8%E8%80%85%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88%E7%B7%B4%E7%BF%92%E8%B3%BD-100900825156112)
 - [YTP 少年圖靈計畫](https://tw-ytp.org)
   {{< /link-grid >}}
 - 各校資訊學科能力競賽校隊選拔
@@ -54,5 +53,20 @@ title: "資源"
 - [Facebook Hacker Cup](https://www.facebook.com/hackercup)
 - [Codewars](https://www.codewars.com)
 - [NCPC 全國大專電腦軟體設計競賽](https://ncpc.nsysu.edu.tw/)
+
+{{< /link-grid >}}
+
+# 資安相關
+
+{{< link-grid >}}
+
+- [台灣資安 / CTF 學習資源整理](https://github.com/Ice1187/TW-Security-and-CTF-Resource)
+- [CTFtime](https://ctftime.org)
+- [Hack The Box](https://www.hackthebox.eu)
+- [TryHackMe](https://tryhackme.com)
+- [Pwnable.kr](http://pwnable.kr)
+- [PicoCTF](https://picoctf.org)
+- [MyFirstCTF](https://ais3.org/mfctf/)
+- [AIS3](https://ais3.org/)
 
 {{< /link-grid >}}
