@@ -103,3 +103,153 @@ pre, .highlight {
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
     border-radius: 0 !important; /* 賽博龐克喜歡直角 */
 }
+
+/* ------------------------------------------------------------------ */
+/* 超連結故障文字 (Glitch Text on hover)                                */
+/* 移植自 React Bits GlitchText 的 enable-on-hover 模式，改為只在滑鼠   */
+/* 移到連結上時才觸發。文字由 glitch-links.js 寫進 data-text。          */
+/* hover 時疊上兩個可見的文字副本（青色往左、紅色往右），以動畫          */
+/* clip-path 切成橫向條塊閃爍，形成明顯的 RGB 分離故障效果。            */
+/* ------------------------------------------------------------------ */
+a.glitch-link {
+    position: relative;
+}
+a.glitch-link::before,
+a.glitch-link::after {
+    content: '';                    /* 平時不生成文字副本，避免撐出水平捲動 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;                /* 保險：hover 時副本不超出連結寬度 */
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+a.glitch-link:hover::before {
+    content: attr(data-text);       /* 只在 hover 時才產生文字副本 */
+    opacity: 0.9;
+    left: -3px;
+    color: #00f0ff;                 /* 可見青色副本 */
+    text-shadow: 0 0 4px #00f0ff;
+    animation: glitch-link-anim 0.5s infinite linear alternate-reverse;
+}
+a.glitch-link:hover::after {
+    content: attr(data-text);
+    opacity: 0.9;
+    left: 3px;
+    color: #ff003c;                 /* 可見霓虹紅副本 */
+    text-shadow: 0 0 4px #ff003c;
+    animation: glitch-link-anim 0.4s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-link-anim {
+    0%   { clip-path: inset(20% 0 50% 0); }
+    5%   { clip-path: inset(10% 0 60% 0); }
+    10%  { clip-path: inset(15% 0 55% 0); }
+    15%  { clip-path: inset(25% 0 35% 0); }
+    20%  { clip-path: inset(30% 0 40% 0); }
+    25%  { clip-path: inset(40% 0 20% 0); }
+    30%  { clip-path: inset(10% 0 60% 0); }
+    35%  { clip-path: inset(15% 0 55% 0); }
+    40%  { clip-path: inset(25% 0 35% 0); }
+    45%  { clip-path: inset(30% 0 40% 0); }
+    50%  { clip-path: inset(20% 0 50% 0); }
+    55%  { clip-path: inset(10% 0 60% 0); }
+    60%  { clip-path: inset(15% 0 55% 0); }
+    65%  { clip-path: inset(25% 0 35% 0); }
+    70%  { clip-path: inset(30% 0 40% 0); }
+    75%  { clip-path: inset(40% 0 20% 0); }
+    80%  { clip-path: inset(20% 0 50% 0); }
+    85%  { clip-path: inset(10% 0 60% 0); }
+    90%  { clip-path: inset(15% 0 55% 0); }
+    95%  { clip-path: inset(25% 0 35% 0); }
+    100% { clip-path: inset(30% 0 40% 0); }
+}
+
+/* ------------------------------------------------------------------ */
+/* 開場動畫：駭客終端機開機（由 footerInclude 內嵌腳本建立 #boot-intro）*/
+/* 全螢幕不透明覆蓋、打字跑訊息 → ACCESS GRANTED → glitch 淡出。        */
+/* ------------------------------------------------------------------ */
+#boot-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;               /* 蓋過 CRT 掃描線 (9999) 與所有內容 */
+    background: #050510;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', 'Fira Code', monospace;
+}
+#boot-intro .boot-inner {
+    width: min(94vw, 760px);
+    min-width: 0;                  /* flex 項預設 min-width:auto 會被內容撐破 */
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 24px;
+}
+#boot-intro #boot-log {
+    max-height: 82vh;
+    overflow: hidden;
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+#boot-intro .cur {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    margin-left: 1px;
+    vertical-align: -2px;
+    background: #00f0ff;
+    box-shadow: 0 0 6px #00f0ff;
+    animation: boot-cur 0.8s steps(1) infinite;
+}
+#boot-intro .boot-line { color: #8fa3b8; }               /* 一般程式碼 */
+#boot-intro .boot-line.cmd { color: #eaeaea; text-shadow: 0 0 4px rgba(0, 240, 255, 0.5); } /* 指令列 */
+#boot-intro .boot-line.out { color: #7f95a8; }           /* 執行輸出 */
+#boot-intro .code .pp { color: #c792ea; }                /* 前置處理 */
+#boot-intro .code .cm { color: #5fbf7f; font-style: italic; } /* 註解 */
+#boot-intro .code .st { color: #ffcb6b; word-break: break-all; } /* 字串 */
+#boot-intro .code .kw { color: #00f0ff; }                /* 關鍵字 / 型別 */
+#boot-intro .code .num { color: #f78c6c; }               /* 數字 / 位址 */
+#boot-intro .ok { color: #44ff99; text-shadow: 0 0 6px #44ff99; }
+#boot-intro .granted {
+    color: #00f0ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 6px #00f0ff, 0 0 16px #00f0ff;
+}
+#boot-intro .boot-skip {
+    margin-top: 1.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    color: #55606b;
+}
+#boot-intro::after {               /* CRT 掃描線 */
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 50%);
+    background-size: 100% 4px;
+}
+#boot-intro.boot-flash { animation: boot-flash 0.18s steps(2) 1; }
+#boot-intro.boot-done  { animation: boot-out 0.4s forwards; }
+@keyframes boot-cur   { 50% { opacity: 0; } }
+@keyframes boot-flash { 50% { background: #0a1e3a; } }
+@keyframes boot-out {
+    0%   { opacity: 1; transform: translateX(0);  filter: none; }
+    25%  { transform: translateX(-5px); filter: hue-rotate(60deg) saturate(2); }
+    45%  { transform: translateX(4px); }
+    100% { opacity: 0; transform: translateX(0); visibility: hidden; }
+}
+/* 小螢幕：縮小開場程式碼字級與內距，避免橫向溢出 */
+@media (max-width: 480px) {
+    #boot-intro .boot-inner { padding: 0 12px; }
+    #boot-intro #boot-log { font-size: 0.7rem; line-height: 1.5; }
+}
