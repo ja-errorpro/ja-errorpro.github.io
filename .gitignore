@@ -6,6 +6,7 @@ Thumbs.db
 # Hugo
 .hugo_build.lock
 resources/_gen/
+public/
 
 # Cloudflare Worker & Node.js
 node_modules/
