@@ -253,3 +253,44 @@ a.glitch-link:hover::after {
     #boot-intro .boot-inner { padding: 0 12px; }
     #boot-intro #boot-log { font-size: 0.7rem; line-height: 1.5; }
 }
+
+/* ------------------------------------------------------------------ */
+/* 相鄰的 code block 要有間隔                                          */
+/* chroma 產生的 .highlight 是純 div、沒有 margin，兩個連續的 code      */
+/* block 底色會直接黏在一起，看起來像同一塊；pre 預設的 1em 下邊界又   */
+/* 落在底色「裡面」，變成塊內留白、塊間無縫。這裡把留白搬到塊之間。      */
+/* ------------------------------------------------------------------ */
+.content .highlight {
+    margin: 1.5rem 0;
+}
+.content .highlight > div {
+    margin: 0;
+}
+.content .highlight table,
+.content .highlight pre {
+    margin: 0;                  /* 去掉 pre 落在底色內部的預設邊界 */
+}
+.content pre {
+    margin: 1.5rem 0;           /* 沒有被 .highlight 包住的 pre */
+}
+
+/* ------------------------------------------------------------------ */
+/* 表格：修正背景比表格本體寬的渲染問題                                 */
+/* 主題的 table{display:block;width:100%} 讓背景色 (#282a36) 撐滿整個   */
+/* 內容欄，但 cell 只有內容寬度，右半邊就是一片空底色。改回             */
+/* display:table 讓背景與框線對齊，橫向捲動交給 render hook 產生的      */
+/* .table-wrap（layouts/_default/_markup/render-table.html）。          */
+/* ------------------------------------------------------------------ */
+.content .table-wrap {
+    margin: 1.5rem 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.content .table-wrap > table,
+.cf-content table {             /* cf-secret 由 marked.js 於前端渲染，沒有 wrapper */
+    display: table;
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    overflow: visible;
+}

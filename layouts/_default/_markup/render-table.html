@@ -1,0 +1,39 @@
+{{- /*
+  Markdown 表格 render hook。
+
+  cactus 主題把 table 設成 display:block + overflow:auto（為了讓過寬的表格
+  可以橫向捲動），副作用是 table 的背景色會撐滿整個內容欄，而真正的表格
+  只有內容寬度，看起來就像一大塊底色右邊空一半。
+
+  這裡把表格包進 .table-wrap 捲動容器，表格本身就能保持 display:table，
+  背景與框線一致。樣式見 static/css/cyberpunk.css。
+*/ -}}
+<div class="table-wrap">
+  <table
+  {{- range $k, $v := .Attributes }}
+    {{- if $v }} {{ $k }}="{{ $v }}"{{ end }}
+  {{- end }}>
+    {{- with .THead }}
+    <thead>
+      {{- range . }}
+      <tr>
+        {{- range . }}
+        <th{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</th>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </thead>
+    {{- end }}
+    {{- with .TBody }}
+    <tbody>
+      {{- range . }}
+      <tr>
+        {{- range . }}
+        <td{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</td>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+    {{- end }}
+  </table>
+</div>
