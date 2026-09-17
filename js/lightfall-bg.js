@@ -205,8 +205,37 @@
     '}'
   ].join('\n');
 
+  // ---- Capability gate -----------------------------------------------------
+  // This is a full-screen per-pixel fragment shader. On a desktop GPU it is free
+  // (Lighthouse desktop: perf 92, TBT 0ms), but on a throttled phone it measured
+  // 12.8s of main-thread time and 2.9s of Total Blocking Time — single-handedly
+  // the reason mobile scored 30. So it runs where it is cheap and is skipped
+  // where it would dominate the page load.
+  //
+  // Note: prefers-reduced-motion is still deliberately NOT checked here, per the
+  // site owner's choice (see the note at the top of this file).
+  function canAffordShader() {
+    // Viewport width is the primary signal. '(pointer: coarse)' on its own would
+    // also catch touchscreen laptops, which handle the shader fine.
+    var w = window.innerWidth || document.documentElement.clientWidth || 0;
+    if (w < 1024) return false;
+
+    // Low-core / low-memory machines struggle with a full-screen shader even on
+    // a wide viewport. Both hints are absent on Safari, where we let it through.
+    if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) return false;
+    if (navigator.deviceMemory && navigator.deviceMemory < 4) return false;
+
+    // Respect Data Saver: the shader pulls ~40KB of OGL from a CDN.
+    var conn = navigator.connection;
+    if (conn && conn.saveData) return false;
+
+    return true;
+  }
+
   // ---- Bootstrap -----------------------------------------------------------
   function start() {
+    if (!canAffordShader()) return;
+
     var container = document.createElement('div');
     container.id = 'lightfall-bg';
     document.body.prepend(container);
