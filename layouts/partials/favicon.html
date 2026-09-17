@@ -1,0 +1,7 @@
+{{/*
+  專案層級覆寫。主題版本是 <link rel="icon" type="image/png" href="…favicon.ico">，
+  型別宣告與副檔名不符，而且原本的 favicon.ico 含 256/128/64 三張大圖共 122KB。
+  現在的 favicon.ico 只留 16/32/48（6.4KB），另補 apple-touch-icon。
+*/}}
+<link rel="icon" href="{{ "images/favicon.ico" | absURL }}" sizes="any" />
+<link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | absURL }}" />

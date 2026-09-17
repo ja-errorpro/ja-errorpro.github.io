@@ -101,17 +101,33 @@
   </div>
 </body>
 
-<link rel="stylesheet" href={{ "/lib/font-awesome/css/all.min.css" | relURL }}>
+{{/* 這裡原本還會再載入主題自帶的 Font Awesome 5 完整版
+     （/lib/font-awesome/css/all.min.css 59KB + fa-solid-900.woff2 80KB）。
+     head.html 已經載入自架子集 /css/fa-subset.css，涵蓋所有模板用到的 icon，
+     所以這份是純粹重複下載的 139KB，移除。 */}}
 <script src={{ "/lib/jquery/jquery.min.js" | relURL }}></script>
 <script src={{ "/js/main.js" | relURL }}></script>
 {{ if not (isset site.Params "disablecopy") }}
 <script src={{ "js/code-copy.js"  | relURL }}></script>
 {{ end }}
+{{/* MathJax 是全站最大的單一資源（jsDelivr 上的 tex-mml-chtml.js 約 257KB，
+     還要 350ms 執行），但 100 篇文章裡真正寫數學式的只有 8 篇左右。
+     站台層級的 mathjax = true 現在改成「允許自動偵測」而不是「一律載入」：
+     內容真的出現數學分隔符才載。判斷偏寬鬆，寧可多載也不要漏掉。
+
+     偵測 $$…$$、\(…\)、\[…\]、\begin{…}，以及含有 LaTeX 字元（\ ^ _ {）的
+     單行 $…$。最後一條會把程式碼區塊裡的 $ 一起掃進來，實測 105 篇中誤判 7 篇；
+     寧可多載那 7 篇，也不要讓任何一篇的數學式變成生文字（實測漏判 0 篇）。
+
+     - 單篇 front matter 寫 mathjax: true / false 一律優先，是明確的逃生門。
+     - cf-secret 的內容是前端解密後才 render 的，Hugo 看不到明文，
+       所以只要用了這個 shortcode 就無條件載入。 */}}
 {{ $mathjax := false }}
 {{ if isset .Params "mathjax" }}
   {{ $mathjax = .Params.mathjax }}
-{{ else if isset .Site.Params "mathjax" }}
-  {{ $mathjax = .Site.Params.mathjax }}
+{{ else if .Site.Params.mathjax }}
+  {{ $hasMath := findRE `\$\$|\\\(|\\\[|\\begin\{|\$[^$\n]*[\\^_{][^$\n]*\$` .RawContent 1 }}
+  {{ $mathjax = or (gt (len $hasMath) 0) (.HasShortcode "cf-secret") }}
 {{ end }}
 {{ if $mathjax }}
 <script>

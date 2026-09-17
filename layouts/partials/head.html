@@ -1,0 +1,82 @@
+<head>
+  {{/*
+    專案層級覆寫 themes/cactus/layouts/partials/head.html。
+    主題是 git submodule（CI 由遠端 checkout），改主題不會進到部署，
+    所以效能相關的 head 調整都放在這裡。與主題版本的差異：
+
+    1. JetBrainsMono-Regular.woff2 的 preload 改成有條件。cyberpunk.css 用
+       !important 把 body 字體換成 Fira Code，JetBrains Mono 只剩程式碼區塊
+       （pre / code / .code-copy-btn）在用，首頁這類沒有 code block 的頁面
+       preload 它等於白下載 45KB。
+    2. Fira Code / Share Tech Mono 改為自架並 preload。原本在 cyberpunk.css 用
+       @import 拉 Google Fonts，會形成 HTML → cyberpunk.css → fonts.googleapis.com
+       → fonts.gstatic.com 的四層串連，光樣式表就擋住 render 約 869ms，而且第三方
+       字體檔無法 preload，字體套用晚於首屏繪製，內文被重排（CLS）。
+    3. Font Awesome 從 jsDelivr 的完整 CSS（20KB、98% 未使用、第三方 origin、
+       render-blocking 940ms）換成自架子集 /css/fa-subset.css，只含模板用到的
+       28 個 icon。
+  */}}
+  <link rel="preload" href="{{ "fonts/firacode-latin.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="{{ "fonts/sharetechmono-latin.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+  {{/* JetBrains Mono 只有程式碼區塊在用（主題的 $font-family-mono）。以前是無條件
+       preload，首頁這種沒有任何 code block 的頁面也要白下載 45KB；但文章頁若不
+       preload，字體會晚於首屏抵達，程式碼區塊換行高度重算，反而製造 CLS。
+       所以改成有 code block 才 preload。 */}}
+  {{ if and .IsPage (strings.Contains .RawContent "```") }}
+  <link rel="preload" href="{{ "lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+  {{ end }}
+  {{ if eq .Site.Params.Comments.enabled true }}
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  {{ end }}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ if .IsPage }}
+  <meta
+    name="description"
+    content="{{ .Description | default .Summary | default .Site.Params.description }}"
+  />
+  {{ else }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  {{ end }} {{ if .Params.keywords }} <meta name="keywords" content="{{ delimit
+  .Params.keywords ", " }}" /> {{ end }}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all,follow" />
+  <meta name="googlebot" content="index,follow,snippet,archive" />
+  {{ template "_internal/opengraph.html" . }} {{ template
+  "_internal/twitter_cards.html" . }} {{ .Scratch.Set "colortheme" "white"}} {{
+  if .Site.Params.Colortheme }} {{ .Scratch.Set "colortheme"
+  .Site.Params.Colortheme }} {{ end }} {{ $colortheme := .Scratch.Get
+  "colortheme" }} {{- $options := (dict "targetPath" "css/styles.css"
+  "outputStyle" "compressed" "enableSourceMap" "true") -}} {{- $styles :=
+  resources.Get "scss/style.scss" | resources.ExecuteAsTemplate
+  "scss/style.scss" . | toCSS $options | resources.Fingerprint "sha512" }}
+  <link
+    rel="stylesheet"
+    href="{{ $styles.Permalink }}"
+    integrity="{{ $styles.Data.Integrity }}"
+  />
+
+  <!-- 自架 Font Awesome 子集（取代 jsDelivr 的完整 all.min.css） -->
+  <link rel="stylesheet" href="{{ "css/fa-subset.css" | absURL }}" />
+
+  {{/* Fira Code / Share Tech Mono 已改為自架，@font-face 寫在 cyberpunk.css，
+       字體檔由上面的 preload 與樣式表並行取得，不再連 fonts.googleapis.com。 */}}
+
+  <!-- Custom CSS -->
+  {{ range .Site.Params.css }}
+  <link rel="stylesheet" href="{{ . | absURL }}" />
+  {{ end }} {{ `
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  ` | safeHTML }} {{ partial "favicon.html" . }} {{ if .Site.Params.rss }} {{
+  with .OutputFormats.Get "RSS" }} {{ printf `
+  <link href="%s" rel="%s" type="%s" title="%s" />
+  ` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }} {{ end }} {{ end
+  }} {{ if .Site.Config.Services.GoogleAnalytics.ID }} {{ template
+  "_internal/google_analytics.html" . }} {{ end }}
+</head>

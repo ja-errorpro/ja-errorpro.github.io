@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Share+Tech+Mono&display=swap');
+/* ------------------------------------------------------------------ */
+/* 字體：改為自架                                                      */
+/* 原本這裡是 @import url('https://fonts.googleapis.com/css2?...')，     */
+/* 會排成 HTML → cyberpunk.css → fonts.googleapis.com → fonts.gstatic   */
+/* 四層串連請求，光是那份樣式表就擋住 render 約 869ms。而且第三方字體    */
+/* 檔無法 preload，字體都是在首屏畫完之後才套上去，內文整串重排。        */
+/*                                                                     */
+/* 現在字體檔放在 static/fonts/（以 fontTools 子集化為 latin 範圍，      */
+/* 與 Google 線上版的 unicode-range 相同），由 head 的 <link rel=preload> */
+/* 與樣式表並行下載，第一次繪製時就已就緒。授權見 static/fonts/LICENSE。 */
+/* ------------------------------------------------------------------ */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 300 700;          /* variable font，wght 軸 300–700 */
+    font-display: swap;
+    src: url('/fonts/firacode-latin.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Share Tech Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/sharetechmono-latin.woff2') format('woff2');
+}
 
 /* 賽博龐克風格背景與字體、雜訊特效 */
 body {
@@ -183,15 +207,25 @@ a.glitch-link:hover::after {
     cursor: pointer;
     font-family: 'Share Tech Mono', 'Fira Code', monospace;
 }
+/* 固定高度是為了 CLS：外層 #boot-intro 是 align-items:center 的 flex，
+   .boot-inner 以前會隨著逐行 append 一直長高，每長一行整塊就重新置中一次，
+   已經畫出來的文字全部位移 —— 首頁 CLS 0.215 裡的 14 次位移全部來自這裡。
+   高度寫死之後，新的一行只是往下接（超出範圍由 #boot-log 捲動處理），
+   既有文字不再移動。捲動不算 layout shift。 */
 #boot-intro .boot-inner {
     width: min(94vw, 760px);
+    height: 88vh;
     min-width: 0;                  /* flex 項預設 min-width:auto 會被內容撐破 */
     max-width: 100%;
     box-sizing: border-box;
     padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    contain: layout;               /* 內部重排不外溢到頁面其他部分 */
 }
 #boot-intro #boot-log {
-    max-height: 82vh;
+    flex: 1 1 auto;
+    min-height: 0;                 /* 沒有這行 flex 子項不會縮，overflow 失效 */
     overflow: hidden;
     text-align: left;
     white-space: pre-wrap;
@@ -251,7 +285,9 @@ a.glitch-link:hover::after {
 /* 小螢幕：縮小開場程式碼字級與內距，避免橫向溢出 */
 @media (max-width: 480px) {
     #boot-intro .boot-inner { padding: 0 12px; }
-    #boot-intro #boot-log { font-size: 0.7rem; line-height: 1.5; }
+    /* 0.7rem 只有 11.2px，低於可讀下限（Lighthouse best-practices: font-size）。
+       0.78rem = 12.5px，仍然塞得下 ret2sc.cpp 最長的那幾行。 */
+    #boot-intro #boot-log { font-size: 0.78rem; line-height: 1.5; }
 }
 
 /* ------------------------------------------------------------------ */
@@ -293,4 +329,79 @@ a.glitch-link:hover::after {
     margin: 0;
     border-collapse: collapse;
     overflow: visible;
+}
+
+/* ------------------------------------------------------------------ */
+/* 無障礙修正（Lighthouse accessibility / best-practices）              */
+/* ------------------------------------------------------------------ */
+
+/* 文章日期、頁尾版權等次要文字：主題的 $color-meta 是 #666，配上本檔把 body
+   背景壓到 #050510 之後對比只有 3.5:1，低於 WCAG AA 的 4.5:1。改成偏藍的
+   #7d8da0（5.8:1），維持「次要資訊」的視覺層級但讀得到。 */
+.meta,
+.meta *,
+.post-item .meta time,
+.archive-item .meta time,
+#footer .footer-left {
+    color: #7d8da0 !important;
+}
+
+/* 標籤雲：字級已在 layouts/index.html 收斂到 1.0rem 以上，這裡再補足
+   觸控目標。WCAG 2.2 的最小可點擊區域是 24x24 CSS px。 */
+.widget.tagcloud a {
+    display: inline-block;
+    padding: 3px 5px;
+    line-height: 1.5;
+}
+
+/* 桌機版水平選單的連結同樣不到 24x24：主題把 #header #nav ul 的 line-height
+   壓到 15px，連結實際高度只有 15px。補 5px 上下內距拉到 25px。
+   手機版是漢堡選單、本來就過關，所以不動它。 */
+@media screen and (min-width: 481px) {
+    #header #nav ul li a {
+        display: inline-block;
+        padding-block: 5px;
+    }
+}
+
+/* header 的 logo 用 <picture> 包起來以提供 WebP。display:contents 讓
+   <picture> 本身不產生 box，主題 SCSS 針對 #logo 寫的 float / 尺寸 /
+   grayscale 規則就能維持原本的行為。 */
+#header picture {
+    display: contents;
+}
+
+/* ------------------------------------------------------------------ */
+/* 程式碼區塊自動換行                                                   */
+/* 這幾條原本是 fix-code-block.js 在 DOMContentLoaded 之後用 inline      */
+/* style 逐一套上去的，等於首屏先畫出「不換行」的版本，再整批重排成      */
+/* 「換行」版本 —— 文章頁 CLS 0.118 幾乎全部來自這裡。改成 CSS 之後      */
+/* 解析當下就生效，不會有第二次排版。                                   */
+/* 附帶好處：cf-secret 那類前端才 render 的內容也會自動吃到，不像原本    */
+/* 的 JS 只在 DOMContentLoaded 跑一次。                                 */
+/* ------------------------------------------------------------------ */
+pre,
+pre > code,
+.highlight code,
+.chroma code,
+code[class^="language-"] {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* 複製按鈕：#fff 配 #8c8c8c 只有 3.36:1，把底色壓深到 4.5:1 以上。 */
+pre .code-copy-btn {
+    background-color: #5f5f5f;
+}
+
+/* 程式碼區塊的行號：chroma（noClasses=true）把行號寫成 inline style 的
+   #7f7f7f，配 #282a36 底只有 3.55:1。行號是排版元素不是語法色，調亮到
+   #9a9a9a（5.1:1）。用 user-select:none 這個特徵挑出行號 span —— 只有
+   行號會帶這個屬性，語法上色的 span 不會被影響。
+   兩種寫法都要列：Hugo 產生的 HTML 是壓縮過的（冒號後無空白），而
+   cf-secret 由前端 render 的內容經過瀏覽器重新序列化，冒號後會有空白。 */
+code span[style*="user-select:none"],
+code span[style*="user-select: none"] {
+    color: #9a9a9a !important;
 }

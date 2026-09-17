@@ -1,0 +1,58 @@
+{{/*
+  專案層級覆寫 themes/cactus/layouts/partials/header.html。與主題版本的差異：
+
+  1. logo 改用 <picture>：原本直接送 256x256 的 logo.png（19KB），但版面只顯示
+     50x50。現在優先給 100x100 的 WebP（3.5KB），後備 100x100 PNG（3.2KB）。
+     <picture> 由 cyberpunk.css 的 `display: contents` 攤平，#logo 的 float 與
+     尺寸樣式維持原樣。
+  2. 補上 width/height，瀏覽器在圖片下載完成前就能保留版位，避免 layout shift。
+  3. alt 改為空字串。logo 與同一個 <a> 裡的 <h1>{{ .Site.Title }}</h1> 內容重複，
+     讀螢幕軟體會把站名唸兩次（Lighthouse: image-redundant-alt）。
+*/}}
+<header id="header">
+  <a href="{{ .Site.BaseURL }}">
+    {{ if (isset .Site.Params "gravatar") }}
+    <img
+      id="logo"
+      src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon"
+      width="50"
+      height="50"
+      alt=""
+    />
+    {{ else if (isset .Site.Params "logo") }}
+    <img
+      id="logo"
+      src="{{ .Site.Params.logo | absURL }}"
+      width="50"
+      height="50"
+      alt=""
+    />
+    {{ else }}
+    <picture>
+      <source srcset="{{ "images/logo.webp" | absURL }}" type="image/webp" />
+      <img
+        id="logo"
+        src="{{ "images/logo-100.png" | absURL }}"
+        width="50"
+        height="50"
+        alt=""
+      />
+    </picture>
+    {{ end }}
+    <div id="title">
+      <h1>{{ .Site.Title }}</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"
+          ><i class="fas fa-bars fa-2x" aria-hidden="true"></i
+        ></a>
+      </li>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</header>

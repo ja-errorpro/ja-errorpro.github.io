@@ -9,9 +9,12 @@
     <div id="prompt" class="prompt-color"></div>
     &nbsp;
     <div>
+      <!-- aria-label：這個輸入框視覺上只靠前面的 prompt 表示用途，沒有 <label>，
+           讀螢幕軟體會報成沒有名字的欄位（Lighthouse: label）。 -->
       <input
         type="text"
         id="cmdline"
+        aria-label="終端機指令輸入"
         autocomplete="off"
         autocorrect="off"
         autocapitalize="off"

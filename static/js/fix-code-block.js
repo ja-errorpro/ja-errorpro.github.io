@@ -1,22 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Select code blocks to enable wrapping
-    // We target both specific language blocks, generic blocks, and raw pre blocks
-    // Note: pre > code targets standard markdown code blocks
-    const codeBlocks = document.querySelectorAll('code[class^="language-"], .chroma code, .highlight code, pre > code');
-    codeBlocks.forEach(codeBlock => {
-        codeBlock.style.whiteSpace = 'pre-wrap';
-        codeBlock.style.wordBreak = 'break-word';
-        codeBlock.style.overflowWrap = 'anywhere'; // Improves breaking on long URLs/strings
-    });
-
-    // Also style the parent PRE to ensure it doesn't force horizontal scroll if code wraps
-    const preBlocks = document.querySelectorAll('pre');
-    preBlocks.forEach(pre => {
-        pre.style.whiteSpace = 'pre-wrap';
-        pre.style.wordBreak = 'break-word';
-        pre.style.overflowWrap = 'anywhere';
-    });
-
+// The wrapping rules (white-space / word-break / overflow-wrap on pre and code)
+// used to be applied here as inline styles on DOMContentLoaded. That painted the
+// non-wrapping layout first and then reflowed every code block into the wrapping
+// one — worth 0.118 of CLS on a code-heavy post, on its own. They now live in
+// cyberpunk.css, so they apply at parse time. CSS also covers content rendered
+// later on the client (cf-secret), which this one-shot listener never did.
+(function () {
     function syncLineHeight() {
         const tables = document.querySelectorAll('table.lntable, .highlight table');
 
@@ -70,7 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Run straight away rather than on DOMContentLoaded. This script tag sits at
+    // the very end of the document, so every code block is already parsed, and
+    // doing the work here means the spans go block + get their heights before the
+    // first paint. Waiting for DOMContentLoaded painted the un-synced layout first
+    // and then reflowed it — 0.18 of CLS on a code-heavy post.
     syncLineHeight();
+
+    // Re-sync once the webfont is in: metrics change when JetBrains Mono replaces
+    // the fallback, and after any resize.
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(syncLineHeight);
+    }
     window.addEventListener('resize', syncLineHeight);
-});
+})();
 

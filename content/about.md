@@ -6,7 +6,7 @@ tags:
 
 # 我是誰
 
-![](/images/about/head.gif)
+<video src="/images/about/head.mp4" width="720" height="404" autoplay muted loop playsinline aria-label="關於我的動畫"></video>
 
 黃乙家
 
