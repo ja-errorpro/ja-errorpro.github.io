@@ -206,11 +206,17 @@
   ].join('\n');
 
   // ---- Capability gate -----------------------------------------------------
-  // This is a full-screen per-pixel fragment shader. On a desktop GPU it is free
-  // (Lighthouse desktop: perf 92, TBT 0ms), but on a throttled phone it measured
-  // 12.8s of main-thread time and 2.9s of Total Blocking Time — single-handedly
-  // the reason mobile scored 30. So it runs where it is cheap and is skipped
-  // where it would dominate the page load.
+  // This is a full-screen per-pixel fragment shader. On real GPU hardware it is
+  // essentially free; everywhere else it is ruinous, and the cost lands on the
+  // main thread as Total Blocking Time:
+  //
+  //   throttled phone CPU ......... 12.8s main thread, 2.9s TBT  (mobile perf 30)
+  //   no GPU / software raster .... 43.4s main thread, 6.1s TBT  (desktop perf 59)
+  //
+  // The second case is what PageSpeed Insights sees: it runs on Google's servers
+  // with no GPU, so WebGL falls back to SwiftShader and every pixel of the shader
+  // is computed on the CPU. A wide viewport and plenty of cores say nothing about
+  // whether there is a GPU behind them, so that has to be probed separately.
   //
   // Note: prefers-reduced-motion is still deliberately NOT checked here, per the
   // site owner's choice (see the note at the top of this file).
@@ -229,7 +235,50 @@
     var conn = navigator.connection;
     if (conn && conn.saveData) return false;
 
-    return true;
+    return hasRealGPU();
+  }
+
+  // Is there hardware acceleration behind WebGL, or would we be rasterising the
+  // shader on the CPU? Probed on a throwaway canvas so nothing is committed if
+  // the answer is no.
+  function hasRealGPU() {
+    var gl = null;
+    try {
+      var canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 1;
+      var get = function (attrs) {
+        return canvas.getContext('webgl2', attrs) || canvas.getContext('webgl', attrs);
+      };
+
+      // failIfMajorPerformanceCaveat asks exactly this question: the browser hands
+      // back null rather than a context it knows is software-backed. A context here
+      // is a definitive yes.
+      gl = get({ failIfMajorPerformanceCaveat: true, alpha: true, antialias: false });
+      if (gl) return true;
+
+      // Null is not a definitive no — some browsers apply the flag more strictly
+      // than the hardware warrants, and losing the background on a machine that
+      // could run it would be a worse bug than the one being fixed. Ask again
+      // without the flag and judge by who is actually rendering.
+      gl = get({ alpha: true, antialias: false });
+      if (!gl) return false;                       // no WebGL at all
+
+      var ext = gl.getExtension('WEBGL_debug_renderer_info');
+      if (!ext) return true;                       // masked (e.g. Firefox RFP) → let
+                                                   // the frame watchdog decide
+      var name = String(gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || '');
+      return !/swiftshader|llvmpipe|softpipe|software|basic render|paravirtual/i.test(name);
+    } catch (e) {
+      return false;                                // WebGL blocked or throwing
+    } finally {
+      // Release the probe context immediately; browsers cap how many can be live.
+      try {
+        if (gl) {
+          var lose = gl.getExtension('WEBGL_lose_context');
+          if (lose) lose.loseContext();
+        }
+      } catch (e2) { /* nothing to do */ }
+    }
   }
 
   // ---- Bootstrap -----------------------------------------------------------
@@ -330,9 +379,38 @@
     var hidden = false;
     document.addEventListener('visibilitychange', function () { hidden = document.hidden; });
 
+    // ---- Frame-time watchdog -------------------------------------------------
+    // Last line of defence behind hasRealGPU(). A virtualised or very weak GPU can
+    // pass the context probe and still take hundreds of ms per frame; rather than
+    // trust the probe, measure what the frames actually cost and shut down if the
+    // shader turns out to be unaffordable here. SLOW_FRAME_MS is well past any
+    // normal hitch, and consecutive slow frames are required, so an ordinary
+    // stutter never trips it.
+    var SLOW_FRAME_MS = 80;      // ~12fps; a healthy GPU renders this in single digits
+    var SLOW_FRAME_LIMIT = 5;    // consecutive slow frames before giving up
+    var slowFrames = 0;
+    var frameId = 0;
+    var stopped = false;
+    var now = (window.performance && window.performance.now)
+      ? function () { return window.performance.now(); }
+      : function () { return Date.now(); };
+
+    function shutDown(reason) {
+      stopped = true;
+      if (frameId) cancelAnimationFrame(frameId);
+      try {
+        var lose = gl.getExtension('WEBGL_lose_context');
+        if (lose) lose.loseContext();
+      } catch (e) { /* nothing to do */ }
+      if (container.parentNode) container.parentNode.removeChild(container);
+      console.warn('[lightfall] disabled (' + reason + ')');
+    }
+
     function loop(t) {
-      requestAnimationFrame(loop);
+      if (stopped) return;
+      frameId = requestAnimationFrame(loop);
       if (hidden) return; // don't burn GPU while the tab is in the background
+
       uniforms.iTime.value = t * 0.001;
       if (PROPS.mouseDampening > 0) {
         if (!lastTime) lastTime = t;
@@ -347,9 +425,23 @@
       } else {
         lastTime = t;
       }
+      var drawStart = now();
       try { renderer.render({ scene: mesh }); } catch (e) { /* ignore transient GL errors */ }
+      var drawMs = now() - drawStart;
+
+      // On a real GPU the draw call returns immediately and the work happens
+      // asynchronously, so this stays near zero. Under software rasterisation the
+      // pixels are computed inline and the cost shows up right here — which is the
+      // case worth bailing out of.
+      if (drawMs > SLOW_FRAME_MS) {
+        if (++slowFrames >= SLOW_FRAME_LIMIT) {
+          shutDown('frames cost ~' + Math.round(drawMs) + 'ms; GPU too slow for this shader');
+        }
+      } else if (slowFrames) {
+        slowFrames = 0;
+      }
     }
-    requestAnimationFrame(loop);
+    frameId = requestAnimationFrame(loop);
   }
 
   if (document.readyState === 'loading') {
